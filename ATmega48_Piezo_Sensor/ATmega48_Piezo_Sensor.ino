@@ -102,7 +102,7 @@ void adjustVoltage() {
   if  (ADJ_STATE < 0) {
     ERR_STATE = 1;
   }
-  if (ADJ_STATE = 0) {
+  if (ADJ_STATE == 0) {
     pinMode(VADJ_R3, INPUT);
     pinMode(VADJ_R2, INPUT);
     pinMode(VADJ_R1, INPUT);
