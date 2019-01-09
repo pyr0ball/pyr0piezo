@@ -141,11 +141,11 @@ void adjustVoltage() {
 }
 
 void checkError () {
-  if (ERR_STATE = 1) {
+  if (ERR_STATE == 1) {
     digitalWrite(ERR_LED, BlinkState);
     BlinkState = !BlinkState;
   }
-  if (ERR_STATE = 0) {
+  if (ERR_STATE == 0) {
     BlinkState = LOW;
     digitalWrite(ERR_LED, BlinkState);
   }
