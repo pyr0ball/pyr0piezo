@@ -100,9 +100,6 @@ void adjustState() {
 void adjustVoltage() {
 
   if  (ADJ_STATE < 0) {
-    Serial.print("adjustVoltage:");
-    Serial.println(ADJ_STATE);
-    Serial.println("--------------------");
     ERR_STATE = 1;
   }
   if (ADJ_STATE = 0) {
@@ -110,9 +107,6 @@ void adjustVoltage() {
     pinMode(VADJ_R2, INPUT);
     pinMode(VADJ_R1, INPUT);
     pinMode(VADJ_R0, INPUT);
-    Serial.print("adjustVoltage:");
-    Serial.println(ADJ_STATE);
-    Serial.println("--------------------");
     ERR_STATE = 0;
   }
   if (ADJ_STATE > 0) {
@@ -121,9 +115,6 @@ void adjustVoltage() {
     pinMode(VADJ_R2, INPUT);
     pinMode(VADJ_R1, INPUT);
     pinMode(VADJ_R0, INPUT);
-    Serial.print("adjustVoltage:");
-    Serial.println(ADJ_STATE);
-    Serial.println("--------------------");
     ERR_STATE = 0;
   }
   if (ADJ_STATE > 1) {
@@ -131,32 +122,20 @@ void adjustVoltage() {
     digitalWrite(VADJ_R2, LOW);
     pinMode(VADJ_R1, INPUT);
     pinMode(VADJ_R0, INPUT);
-    Serial.print("adjustVoltage:");
-    Serial.println(ADJ_STATE);
-    Serial.println("--------------------");
     ERR_STATE = 0;
   }
   if (ADJ_STATE > 2) {
     pinMode(VADJ_R1, OUTPUT);
     digitalWrite(VADJ_R1, LOW);
     pinMode(VADJ_R0, INPUT);
-    Serial.print("adjustVoltage:");
-    Serial.println(ADJ_STATE);
-    Serial.println("--------------------");
     ERR_STATE = 0;
   }
   if (ADJ_STATE > 3) {
     pinMode(VADJ_R0, OUTPUT);
     digitalWrite(VADJ_R0, LOW);
-    Serial.print("adjustVoltage:");
-    Serial.println(ADJ_STATE);
-    Serial.println("--------------------");
     ERR_STATE = 0;
   }
   if  (ADJ_STATE > 4) {
-    Serial.print("adjustVoltage:");
-    Serial.println(ADJ_STATE);
-    Serial.println("--------------------");
     ERR_STATE = 1;
   }
 }
@@ -185,9 +164,9 @@ void loop() {
 
   // Check voltage of first and second stages and compare against thresholds
   folRead = analogRead(V_FOLLOW_PIN);
-  VRef = folRead * (5.0 / 1023.0);
+  VRef = (folRead * 5.0) / 1024.0;
   vadjRead = analogRead(VADJ_SENSE_PIN);
-  VAdj = vadjRead * (5.0 / 1023.0);
+  VAdj = (vadjRead * 5.0) / 1024.0;
   diffAdjL = VAdj - senseLowThrs;
   diffAdjH = senseHighThrs - VAdj;
   
