@@ -25,8 +25,6 @@
   http://www.circuitbasics.com/arduino-ohm-meter/
 */
 
-//#include <avr/interrupt.h>
-//#include <PinChangeInterrupt.h>
 
 // Set variables for working parameters
 const int TRG_OUT = 9;         // LED and Z-Min trigger output connected to digital pin 10
@@ -34,7 +32,7 @@ const int TRG_OUT = 9;         // LED and Z-Min trigger output connected to digi
 //#define Z_TRG 0                // the piezo is connected to INT0 / digital pin 2
 const byte Z_TRG = 2;
 int ERR_LED = 3;               // LED will blink if optimal voltage range cannot be achieved
-int InitCount = 10;             // Number of times to blink the LED on start
+int InitCount = 6;             // Number of times to blink the LED on start
 int V_FOLLOW_PIN = A0;             // Sense pin to check first amp stage voltage output
 int VADJ_SENSE_PIN = A1;           // Sense pin to check comparator stage voltage
 int TRG_DUR = 120;             // duration of the Z-axis pulse sent, in ms
@@ -70,8 +68,12 @@ void setup() {
   pinMode(VADJ_R2, INPUT); // declare input to break pull to ground
   pinMode(VADJ_R3, INPUT); // declare input to break pull to ground
   Serial.begin(9600);
- 
+
+  // Uncomment the following lines to use PCInt pins instead of hardware interrupt
+  //#include <PinChangeInterrupt.h>
   //attachPCINT(digitalPinToPCINT(Z_TRG), pulse, FALLING);
+
+  // Uncomment the followoing line to use hardware interrupt pin
   attachInterrupt(digitalPinToInterrupt(Z_TRG), pulse, FALLING);
 
   Serial.println("Initializing Piezo Sensor...");
@@ -159,7 +161,7 @@ void loop() {
     digitalWrite(ERR_LED, BlinkState);
     digitalWrite(TRG_OUT, BlinkState);
     delay(150);
-    BlinkCount = --BlinkCount;
+    --BlinkCount;
   }
 
   // Check voltage of first and second stages and compare against thresholds
