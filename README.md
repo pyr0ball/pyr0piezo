@@ -24,8 +24,11 @@ This page may be updated less frequently than the github project, so for the lat
 https://github.com/pyr0ball/pyr0piezo
 
 Legacy links:
+
 [Original Mount (Doesn't work as well as I'd like)](https://www.thingiverse.com/thing:2712439)
+
 [Original Mount v1 (Doesnt work at all)](https://www.thingiverse.com/thing:2675788)
+
 [Original Piezo + FFC board](https://www.thingiverse.com/thing:2618717)
 
 This is a complete redesign from the ground up, but was based on principles and methodologies developed by [PrecisionPiezoUK](https://precisionpiezo.co.uk/resources-osh)
