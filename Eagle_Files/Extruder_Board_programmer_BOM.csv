@@ -1,0 +1,12 @@
+"Qty";"Value";"Device";"Package";"Parts";"Description";"DESCRIPTION";"DIGI-KEY_PART_NUMBER";"DIGI-KEY_PURCHASE_URL";"MF";"MP";"MPN";"PACKAGE";"VALUE";
+"3";"";"SEEED-LED_SMD-LED-CLEAR-BLUE(0603)LED_0603";"SEEED-LED_LED-0603";"PWR, RX, TX";"304090045";"";"";"";"";"";"";"";"";
+"1";"";"SEEED-SWITCH_SMD-BUTTON(2P-3.0X2.5X1.2+0.4MM)SW2-2.6-3X2.5X1.2";"SEEED-SWITCH_SW2-2.6-3.0X2.5X1.2+0.4MM";"RESET";"311020047";"";"";"";"";"";"";"";"";
+"2";"";"SMD-RES-0R-5%-1/16W(0402)";"R0402";"R3, R8";"301010000";"";"";"";"";"";"RC0402JR-070RL";"";"0R";
+"1";"10118192-0001LF";"10118192-0001LF";"AMPHENOL_10118192-0001LF";"J1";"Single Port 5 Contact Horizontal Right Angle Shielded Micro B USB 2.0 Connector";" Conn Micro USB Type B RCP 5 POS 0.65mm Solder RA SMD 5 Terminal 1 Port T/R ";"609-4613-1-ND";"https://www.digikey.com/product-detail/en/amphenol-fci/10118192-0001LF/609-4613-1-ND/2785378?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol";"Amphenol FCI";"10118192-0001LF";"";"None";"";
+"1";"22K";"SMD-RES-0R-5%-1/16W(0402)";"R0402";"R1";"301010000";"";"";"";"";"";"RC0402JR-070RL";"";"0R";
+"1";"47K";"SMD-RES-0R-5%-1/16W(0402)";"R0402";"R2";"301010000";"";"";"";"";"";"RC0402JR-070RL";"";"0R";
+"1";"CP2102N-A01-GQFN20";"CP2102N-A01-GQFN20";"SILABS_QFN20";"U1";"Ic Bridge Usb To Uart 20qfn";" Usb-Uart Interface Bridge, Qfn-20 ";"336-3692-ND";"https://www.digikey.com/product-detail/en/silicon-labs/CP2102N-A01-GQFN20/336-3692-ND/6012517?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol";"Silicon Labs";"CP2102N-A01-GQFN20";"";"QFN-20 Silicon Labs";"";
+"3";"HOLES_MOUNT-PAD-ROUND2.8";"HOLES_MOUNT-PAD-ROUND2.8";"HOLES_2,8-PAD";"H1, H2, H3";"MOUNTING PAD, round";"";"";"";"";"";"";"";"";
+"1";"JST-2.54MM_5P-2.54JST_2.54MM_5P_F";"JST-2.54MM_5P-2.54JST_2.54MM_5P_F";"HDRVR5W64P254_1X5_1270X254X575B";"TTL";"";"";"";"";"";"";"";"";"";
+"1";"SP0503BAHTG";"SP0503BAHTG";"SOT143";"D1";"TVS DIODE 5.5VWM 8.5VC SOT143";" SP050xBA Series 8 V 30 pF Uni-Directional SMT TVS Avalanche Diode Array SOT-143 ";"F2715CT-ND";"https://www.digikey.com/product-detail/en/littelfuse-inc/SP0503BAHTG/F2715CT-ND/1154322?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol";"Littelfuse Inc.";"SP0503BAHTG";"";"SOT-143 Littelfuse";"";
+"5";"TP";"TP";"TP13SQ-HOLE";"+5V, GND, RST., RXD, TXD";"Test pad";"";"";"";"";"";"";"";"";
