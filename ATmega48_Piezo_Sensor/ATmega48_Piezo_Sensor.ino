@@ -1,5 +1,5 @@
 /*
-  Piezoelectric Z-Axis sensor using AtMega48/88
+  Piezoelectric Z-Axis sensor using AtMega88/168/328 (AtMega 48 doesnt have enough memory for this version)
 
   This sketch reads a piezo element to detect a touch of the printer's nozzle to the bed.
   The sense pin is tied to an interrupt, which is pulled high by internal pullup resistor.
