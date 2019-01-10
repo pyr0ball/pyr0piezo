@@ -3,7 +3,7 @@
 <eagle version="9.2.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
@@ -187,7 +187,7 @@
 <text x="10.7" y="58.9" size="2.1844" layer="21" font="vector" ratio="11" rot="R90">- S</text>
 <text x="9.7" y="67.4" size="1.016" layer="21" font="vector" ratio="11" rot="R90">1B  1A  2A  2B</text>
 <text x="10.4" y="82.5" size="1.778" layer="21">Pyr0-Piezo FFC Board Rev.A</text>
-<text x="10.5" y="80.4" size="1.15" layer="21">Copywrite 2018 Alan "pyr0ball" Weinstock</text>
+<text x="10.5" y="80.7" size="1.15" layer="21">Copyright 2018 Alan "pyr0ball" Weinstock</text>
 </plain>
 <libraries>
 <library name="PiezoFFC" urn="urn:adsk.eagle:library:6897166">
