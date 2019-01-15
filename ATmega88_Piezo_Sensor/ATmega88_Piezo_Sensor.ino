@@ -39,10 +39,9 @@ int TRG_DUR = 120;             // duration of the Z-axis pulse sent, in ms
 int Vin = 5;                   // input reference voltage
 float senseHighThrs = 2.47;    // Upper threshold voltage of amp circuit before adjustment
 float senseLowThrs = 1.90;     // Lower threshold voltage of amp circuit before adjustment
-const int VADJ_R0 = 20;        // Auto-adjust ladder pin assignments
-const int VADJ_R1 = 21;
-const int VADJ_R2 = 5;
-const int VADJ_R3 = 6;
+int VADJ_R[] = {20, 21, 5, 6};        // Auto-adjust ladder pin assignments
+
+int nAdjBits = sizeof(VADJ_R);
 
 // these variables will change on their own. Do not edit them
 volatile int sensorHReading = 0;      // variable to store the value read from the sensor pin
@@ -63,10 +62,9 @@ void setup() {
   pinMode(Z_TRG, INPUT_PULLUP); // declare z-sense input with pullup
   pinMode(V_FOLLOW_PIN, INPUT);
   pinMode(VADJ_SENSE_PIN, INPUT);
-  pinMode(VADJ_R0, INPUT); // declare input to break pull to ground
-  pinMode(VADJ_R1, INPUT); // declare input to break pull to ground
-  pinMode(VADJ_R2, INPUT); // declare input to break pull to ground
-  pinMode(VADJ_R3, INPUT); // declare input to break pull to ground
+  for (byte i = 0; i < nAdjBits; i++) {
+    pinMode(VADJ_R[i], OUTPUT);
+  }
   Serial.begin(9600);
 
   // Uncomment the following lines to use PCInt pins instead of hardware interrupt
@@ -99,50 +97,25 @@ void adjustState() {
   Serial.println("--------------------");
 }
 
-void adjustVoltage() {
-
-  if  (ADJ_STATE < 0) {
-    ERR_STATE = 1;
-  }
-  if (ADJ_STATE == 0) {
-    pinMode(VADJ_R3, INPUT);
-    pinMode(VADJ_R2, INPUT);
-    pinMode(VADJ_R1, INPUT);
-    pinMode(VADJ_R0, INPUT);
-    ERR_STATE = 0;
-  }
-  if (ADJ_STATE > 0) {
-    pinMode(VADJ_R3, OUTPUT);
-    digitalWrite(VADJ_R3, LOW);
-    pinMode(VADJ_R2, INPUT);
-    pinMode(VADJ_R1, INPUT);
-    pinMode(VADJ_R0, INPUT);
-    ERR_STATE = 0;
-  }
-  if (ADJ_STATE > 1) {
-    pinMode(VADJ_R2, OUTPUT);
-    digitalWrite(VADJ_R2, LOW);
-    pinMode(VADJ_R1, INPUT);
-    pinMode(VADJ_R0, INPUT);
-    ERR_STATE = 0;
-  }
-  if (ADJ_STATE > 2) {
-    pinMode(VADJ_R1, OUTPUT);
-    digitalWrite(VADJ_R1, LOW);
-    pinMode(VADJ_R0, INPUT);
-    ERR_STATE = 0;
-  }
-  if (ADJ_STATE > 3) {
-    pinMode(VADJ_R0, OUTPUT);
-    digitalWrite(VADJ_R0, LOW);
-    ERR_STATE = 0;
-  }
-  if  (ADJ_STATE > 4) {
-    ERR_STATE = 1;
+void adjustVoltage(byte AdjPoint) {
+  for (byte i =0; i < nAdjBits; i++) {
+    if (bitRead(AdjPoint, i)==1) {
+      digitalWrite(VADJ_R[i], HIGH);
+    }
+    else {
+      digitalWrite(VADJ_R[i], LOW);
+    }
   }
 }
 
 void checkError () {
+
+  if  (ADJ_STATE < 0) {
+    ERR_STATE = 1;
+  }
+  if  (ADJ_STATE > 16) {
+    ERR_STATE = 1;
+  }
   if (ERR_STATE == 1) {
     digitalWrite(ERR_LED, BlinkState);
     BlinkState = !BlinkState;
@@ -176,7 +149,7 @@ void loop() {
   adjustState();
 
   // Voltage divider adjustment
-  adjustVoltage();
+  adjustVoltage(ADJ_STATE);
   
   // Check for error state
   checkError();
