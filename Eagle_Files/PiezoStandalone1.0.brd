@@ -170,7 +170,7 @@
 <layer number="255" name="Accent" color="7" fill="1" visible="no" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyYTEyMDdh" projecturn="a.cGVyc29uYWw6dWUyYTEyMDdhIzIwMTgxMTI5MTYyOTY3NjMx" f3durn="urn:adsk.wipprod:dm.lineage:LEMpux1LQZyWqHM9dk_A9Q" pcbguid="c97c717a-ec16-4e61-b260-32bb31f525e1" lastpulledtime="" lastsyncedchangeguid="72f6ea3f-92c2-75dc-6032-bd0a9a4d831e"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyYTEyMDdh" projecturn="a.cGVyc29uYWw6dWUyYTEyMDdhIzIwMTgxMTI5MTYyOTY3NjMx" f3durn="urn:adsk.wipprod:dm.lineage:LEMpux1LQZyWqHM9dk_A9Q" pcbguid="c97c717a-ec16-4e61-b260-32bb31f525e1" lastpulledtime="" lastsyncedchangeguid="78a5bf89-66aa-9fd0-0994-a449e424185a"/>
 <plain>
 <text x="35.604253125" y="9.78433125" size="1.27" layer="22" ratio="11" rot="R180">-      +</text>
 <text x="34.518234375" y="14.268046875" size="1.27" layer="22" font="vector" ratio="11" rot="MR180" align="bottom-right">PZ1</text>
@@ -326,7 +326,7 @@
 <text x="-2.794" y="1.4478" size="1.27" layer="51" ratio="6" rot="SR0">*</text>
 <text x="-2.0066" y="2.54" size="1.016" layer="25" font="vector" ratio="11" rot="SR0">&gt;Name</text>
 </package>
-<package name="SOT89" urn="urn:adsk.eagle:footprint:6899240/3" library_version="15">
+<package name="SOT89" urn="urn:adsk.eagle:footprint:6899240/4" library_version="32">
 <wire x1="2.235" y1="-1.245" x2="-2.235" y2="-1.245" width="0.127" layer="51"/>
 <wire x1="2.235" y1="1.219" x2="2.235" y2="-1.245" width="0.127" layer="51"/>
 <wire x1="-2.235" y1="-1.245" x2="-2.235" y2="1.219" width="0.127" layer="51"/>
@@ -342,6 +342,7 @@
 <rectangle x1="-1.727390625" y1="-2.10843125" x2="-1.27" y2="-1.27" layer="51"/>
 <rectangle x1="1.270140625" y1="-2.108440625" x2="1.7272" y2="-1.27" layer="51"/>
 <rectangle x1="-0.27983125" y1="-2.111440625" x2="0.2794" y2="-1.27" layer="51"/>
+<rectangle x1="-0.5" y1="-2.8" x2="0.5" y2="-1.2" layer="29"/>
 <polygon width="0.1998" layer="51">
 <vertex x="-0.7874" y="1.3208"/>
 <vertex x="-0.7874" y="1.5748"/>
@@ -433,7 +434,7 @@
 <smd name="8" x="1.02" y="0.75" dx="0.74" dy="0.26" layer="1" roundness="7" rot="R180"/>
 <smd name="9" x="0" y="0" dx="1.6" dy="0.9" layer="1" rot="R270"/>
 </package>
-<package name="53048-03" library_version="27" library_locally_modified="yes">
+<package name="53048-03" urn="urn:adsk.eagle:footprint:7192334/1" library_version="32">
 <description>&lt;b&gt;1.25mm Pitch PicoBlade™ Header, Right Angle, 3 Circuits&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/530480310_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <wire x1="-2.65" y1="-2.25" x2="-2.125" y2="-2.25" width="0.2032" layer="21"/>
 <wire x1="2.125" y1="-2.25" x2="2.65" y2="-2.25" width="0.2032" layer="21"/>
@@ -571,7 +572,7 @@
 <packageinstance name="28M1-L"/>
 </packageinstances>
 </package3d>
-<package3d name="SOT89" urn="urn:adsk.eagle:package:6899241/4" type="model" library_version="15">
+<package3d name="SOT89" urn="urn:adsk.eagle:package:6899241/5" type="model" library_version="32">
 <packageinstances>
 <packageinstance name="SOT89"/>
 </packageinstances>
@@ -615,6 +616,12 @@
 <description>TEST PAD</description>
 <packageinstances>
 <packageinstance name="TP13SQ"/>
+</packageinstances>
+</package3d>
+<package3d name="53048-03" urn="urn:adsk.eagle:package:7192338/2" type="model" library_version="32">
+<description>&lt;b&gt;1.25mm Pitch PicoBlade™ Header, Right Angle, 3 Circuits&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/530480310_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<packageinstances>
+<packageinstance name="53048-03"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -860,7 +867,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="16.290003125" y="6.258609375" size="1.016" layer="25" font="vector" ratio="11" rot="SR90"/>
 <attribute name="VENDOR" value="Atmel" x="35.2587875" y="-27.88249375" size="1.778" layer="27" display="off"/>
 </element>
-<element name="U2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="SOT89" package3d_urn="urn:adsk.eagle:package:6899241/4" value="L78L05ACU" x="10.429796875" y="4.2175" smashed="yes" rot="R180">
+<element name="U2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="SOT89" package3d_urn="urn:adsk.eagle:package:6899241/5" value="L78L05ACU" x="10.429796875" y="4.2175" smashed="yes" rot="R180">
 <attribute name="AVAILABILITY" value="Unavailable" x="-7.35020625" y="8.027496875" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DESCRIPTION" value=" Voltage regulator; fixed; 5V; 0.1A; SOT89; SMD; Package: reel, tape " x="-7.35020625" y="8.027496875" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MF" value="STMicroelectronics" x="-7.35020625" y="8.027496875" size="1.778" layer="27" rot="R180" display="off"/>
@@ -995,7 +1002,7 @@ design rules under a new name.</description>
 <element name="D8" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="SOT23" package3d_urn="urn:adsk.eagle:package:6899267/1" value="BAV199" x="33.4732375" y="6.36584375" smashed="yes" rot="R45">
 <attribute name="NAME" x="35.06316875" y="7.2082375" size="0.8128" layer="25" font="vector" rot="R315"/>
 </element>
-<element name="J1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="53048-03" value="CON-MOLEX-3P-1.25MM048" x="7.429" y="9.764" smashed="yes" rot="R45">
+<element name="J1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="53048-03" package3d_urn="urn:adsk.eagle:package:7192338/2" value="CON-MOLEX-3P-1.25MM048" x="7.429" y="9.764" smashed="yes" rot="R45">
 <attribute name="MF" value="WALDOM/MOLEX" x="7.429" y="9.764" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="MPN" value="53048-0310" x="7.429" y="9.764" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="NAME" x="11.356978125" y="10.29291875" size="1.27" layer="25" rot="R45"/>

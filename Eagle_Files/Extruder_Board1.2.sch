@@ -675,7 +675,7 @@
 <vertex x="-4.7625" y="5.08"/>
 </polygon>
 </package>
-<package name="HDRRAR4W64P254_2X2_556X736X556B" urn="urn:adsk.eagle:footprint:6905204/1" library_version="30">
+<package name="HDRRAR4W64P254_2X2_556X736X556B" urn="urn:adsk.eagle:footprint:6905204/1" library_version="32">
 <description>Double-row, 4-pin Receptacle Header (Female) Right Angle, 2.54 mm (0.10 in) pitch, 7.36 mm insulator length, 5.56 X 7.36 X 5.56 mm body
 &lt;p&gt;Double-row (2X2), 4-pin Receptacle Header (Female) Right Angle package with 2.54 mm (0.10 in) pitch, 0.64 mm lead width, 3.00 mm tail length and 7.36 mm insulator length with body size 5.56 X 7.36 X 5.56 mm, pin pattern - counter-clockwise from bottom left&lt;/p&gt;</description>
 <circle x="-1.3565" y="0" radius="0.25" width="0" layer="21"/>
@@ -1779,7 +1779,7 @@ diameter 2 mm, horizontal, grid 7.62 mm</description>
 <packageinstance name="15-91-04"/>
 </packageinstances>
 </package3d>
-<package3d name="HDRRAR4W64P254_2X2_556X736X556B" urn="urn:adsk.eagle:package:6905202/1" type="model" library_version="30">
+<package3d name="HDRRAR4W64P254_2X2_556X736X556B" urn="urn:adsk.eagle:package:6905202/1" type="model" library_version="32">
 <description>Double-row, 4-pin Receptacle Header (Female) Right Angle, 2.54 mm (0.10 in) pitch, 7.36 mm insulator length, 5.56 X 7.36 X 5.56 mm body
 &lt;p&gt;Double-row (2X2), 4-pin Receptacle Header (Female) Right Angle package with 2.54 mm (0.10 in) pitch, 0.64 mm lead width, 3.00 mm tail length and 7.36 mm insulator length with body size 5.56 X 7.36 X 5.56 mm, pin pattern - counter-clockwise from bottom left&lt;/p&gt;</description>
 <packageinstances>
@@ -2512,7 +2512,7 @@ diameter 2 mm, horizontal, grid 7.62 mm</description>
 <text x="1.27" y="-1.27" size="1.778" layer="97">&gt;TP_SIGNAL_NAME</text>
 <pin name="TP" x="0" y="-2.54" visible="off" length="short" direction="in" rot="R90"/>
 </symbol>
-<symbol name="MCP6001T-I/OT" urn="urn:adsk.eagle:symbol:6973853/2" locally_modified="yes" library_version="30" library_locally_modified="yes">
+<symbol name="MCP6001T-I/OT" urn="urn:adsk.eagle:symbol:6973853/3" library_version="32">
 <pin name="VOUT" x="17.78" y="0" visible="pad" length="middle" direction="pas" rot="R180"/>
 <pin name="VSS" x="2.54" y="-12.7" length="middle" direction="pas" rot="R90"/>
 <pin name="VIN+" x="-10.16" y="5.08" visible="pad" length="middle" direction="pas"/>
@@ -2919,7 +2919,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="JST-2.54-2X2" urn="urn:adsk.eagle:component:6905208/1" library_version="30">
+<deviceset name="JST-2.54-2X2" urn="urn:adsk.eagle:component:6905208/1" library_version="32">
 <gates>
 <gate name="A" symbol="M" x="0" y="5.08"/>
 <gate name="B" symbol="M" x="0" y="2.54"/>
@@ -3835,7 +3835,7 @@ high speed (Philips)</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="MCP6001T-I/OT" urn="urn:adsk.eagle:component:6973861/2" locally_modified="yes" prefix="U" library_version="30" library_locally_modified="yes">
+<deviceset name="MCP6001T-I/OT" urn="urn:adsk.eagle:component:6973861/3" prefix="U" library_version="32">
 <gates>
 <gate name="A" symbol="MCP6001T-I/OT" x="0" y="0"/>
 </gates>
