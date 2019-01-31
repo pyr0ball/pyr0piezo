@@ -773,7 +773,7 @@
 <text x="0" y="0.5179" size="0.4064" layer="25" font="vector" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-0.5179" size="0.4064" layer="27" font="vector" align="top-center">&gt;VALUE</text>
 </package>
-<package name="HDRV6W50P200_3X2_400X600X550B" urn="urn:adsk.eagle:footprint:8324095/1" locally_modified="yes" library_version="35" library_locally_modified="yes">
+<package name="HDRV6W50P200_3X2_400X600X550B" urn="urn:adsk.eagle:footprint:8324095/2" library_version="48" library_locally_modified="yes">
 <description>Three-row, 6-pin Pin Header (Male) Straight, 2.00 mm (0.08 in) row pitch, 2.00 mm (0.08 in) col pitch, 4.00 mm mating length, 4.00 X 6.00 X 5.50 mm body
 &lt;p&gt;Three-row (3X2), 6-pin Pin Header (Male) Straight package with 2.00 mm (0.08 in) row pitch, 2.00 mm (0.08 in) col pitch, 0.50 mm lead width, 2.60 mm tail length and 4.00 mm mating length with overall size 4.00 X 6.00 X 5.50 mm, pin pattern - counter-clockwise from bottom left&lt;/p&gt;</description>
 <circle x="0" y="-1.5116" radius="0.25" width="0" layer="21"/>
@@ -793,7 +793,7 @@
 <pad name="6" x="2" y="4" drill="0.9071" diameter="1.5071" shape="square"/>
 <text x="-1.0706" y="-1.016" size="1.27" layer="25" font="vector" ratio="11" rot="R90">&gt;NAME</text>
 </package>
-<package name="HDRRA6W64P254_2X3_762X254X508B" urn="urn:adsk.eagle:footprint:8324117/1" locally_modified="yes" library_version="35" library_locally_modified="yes">
+<package name="HDRRA6W64P254_2X3_762X254X508B" urn="urn:adsk.eagle:footprint:8324117/2" library_version="48" library_locally_modified="yes">
 <description>Double-row, 6-pin Pin Header (Male) Right Angle, 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 5.84 mm mating length, 7.62 X 2.54 X 5.08 mm body
 &lt;p&gt;Double-row (2X3), 6-pin Pin Header (Male) Right Angle package with 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 0.64 mm lead width, 3.00 mm tail length and 5.84 mm mating length with body size 7.62 X 2.54 X 5.08 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
 <circle x="-1.3565" y="0" radius="0.25" width="0" layer="21"/>
@@ -815,26 +815,6 @@
 <pad name="5" x="2.54" y="-2.54" drill="1.1051" diameter="1.7051"/>
 <pad name="6" x="0" y="-2.54" drill="1.1051" diameter="1.7051"/>
 <text x="-1.27" y="1.4875" size="1.27" layer="25" font="vector" ratio="11">&gt;NAME</text>
-</package>
-<package name="HDRV6W64P254_3X2_508X762X838B" urn="urn:adsk.eagle:footprint:8324108/1" locally_modified="yes" library_version="35" library_locally_modified="yes">
-<description>Three-row, 6-pin Pin Header (Male) Straight, 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 5.84 mm mating length, 5.08 X 7.62 X 8.38 mm body
-&lt;p&gt;Three-row (3X2), 6-pin Pin Header (Male) Straight package with 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 0.64 mm lead width, 3.00 mm tail length and 5.84 mm mating length with overall size 5.08 X 7.62 X 8.38 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
-<circle x="0" y="1.774" radius="0.25" width="0" layer="21"/>
-<wire x1="3.81" y1="-6.35" x2="-1.27" y2="-6.35" width="0.12" layer="21"/>
-<wire x1="-1.27" y1="-6.35" x2="-1.27" y2="1.27" width="0.12" layer="21"/>
-<wire x1="-1.27" y1="1.27" x2="3.81" y2="1.27" width="0.12" layer="21"/>
-<wire x1="3.81" y1="1.27" x2="3.81" y2="-6.35" width="0.12" layer="21"/>
-<wire x1="3.81" y1="-6.35" x2="-1.27" y2="-6.35" width="0.12" layer="51"/>
-<wire x1="-1.27" y1="-6.35" x2="-1.27" y2="1.27" width="0.12" layer="51"/>
-<wire x1="-1.27" y1="1.27" x2="3.81" y2="1.27" width="0.12" layer="51"/>
-<wire x1="3.81" y1="1.27" x2="3.81" y2="-6.35" width="0.12" layer="51"/>
-<pad name="1" x="0" y="0" drill="1.1051" diameter="1.7051"/>
-<pad name="2" x="2.54" y="0" drill="1.1051" diameter="1.7051"/>
-<pad name="3" x="2.54" y="-2.54" drill="1.1051" diameter="1.7051"/>
-<pad name="4" x="0" y="-2.54" drill="1.1051" diameter="1.7051"/>
-<pad name="5" x="0" y="-5.08" drill="1.1051" diameter="1.7051"/>
-<pad name="6" x="2.54" y="-5.08" drill="1.1051" diameter="1.7051"/>
-<text x="-1.389" y="-6.35" size="1.27" layer="25" font="vector" ratio="11" rot="R90">&gt;NAME</text>
 </package>
 <package name="SC-74-6" urn="urn:adsk.eagle:footprint:8452335/2" library_version="45">
 <wire x1="-0.5588" y1="-1.5494" x2="0.5588" y2="-1.5494" width="0.1524" layer="21"/>
@@ -891,6 +871,26 @@
 <smd name="5" x="1.27" y="0" dx="1.3208" dy="0.5588" layer="1"/>
 <smd name="6" x="1.27" y="0.9398" dx="1.3208" dy="0.5588" layer="1"/>
 </package>
+<package name="HDRV6W64P254_3X2_508X762X838B" urn="urn:adsk.eagle:footprint:8324108/2" library_version="48" library_locally_modified="yes">
+<description>Three-row, 6-pin Pin Header (Male) Straight, 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 5.84 mm mating length, 5.08 X 7.62 X 8.38 mm body
+&lt;p&gt;Three-row (3X2), 6-pin Pin Header (Male) Straight package with 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 0.64 mm lead width, 3.00 mm tail length and 5.84 mm mating length with overall size 5.08 X 7.62 X 8.38 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
+<circle x="0" y="1.774" radius="0.25" width="0" layer="21"/>
+<wire x1="3.81" y1="-6.35" x2="-1.27" y2="-6.35" width="0.12" layer="21"/>
+<wire x1="-1.27" y1="-6.35" x2="-1.27" y2="1.27" width="0.12" layer="21"/>
+<wire x1="-1.27" y1="1.27" x2="3.81" y2="1.27" width="0.12" layer="21"/>
+<wire x1="3.81" y1="1.27" x2="3.81" y2="-6.35" width="0.12" layer="21"/>
+<wire x1="3.81" y1="-6.35" x2="-1.27" y2="-6.35" width="0.12" layer="51"/>
+<wire x1="-1.27" y1="-6.35" x2="-1.27" y2="1.27" width="0.12" layer="51"/>
+<wire x1="-1.27" y1="1.27" x2="3.81" y2="1.27" width="0.12" layer="51"/>
+<wire x1="3.81" y1="1.27" x2="3.81" y2="-6.35" width="0.12" layer="51"/>
+<pad name="1" x="0" y="0" drill="1.1051" diameter="1.7051"/>
+<pad name="2" x="2.54" y="0" drill="1.1051" diameter="1.7051"/>
+<pad name="3" x="2.54" y="-2.54" drill="1.1051" diameter="1.7051"/>
+<pad name="4" x="0" y="-2.54" drill="1.1051" diameter="1.7051"/>
+<pad name="5" x="0" y="-5.08" drill="1.1051" diameter="1.7051"/>
+<pad name="6" x="2.54" y="-5.08" drill="1.1051" diameter="1.7051"/>
+<text x="-1.389" y="-6.35" size="1.27" layer="25" font="vector" ratio="11" rot="R90">&gt;NAME</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="R0402" urn="urn:adsk.eagle:package:7115182/2" type="model" library_version="18" library_locally_modified="yes">
@@ -907,18 +907,6 @@
 <description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 2.8 mm, round</description>
 <packageinstances>
 <packageinstance name="HOLES_2,8-PAD"/>
-</packageinstances>
-</package3d>
-<package3d name="HOLES_3,0-PAD" urn="urn:adsk.eagle:package:5224589/1" type="box" library_version="12">
-<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.0 mm, round</description>
-<packageinstances>
-<packageinstance name="HOLES_3,0-PAD"/>
-</packageinstances>
-</package3d>
-<package3d name="HOLES_3,2-PAD" urn="urn:adsk.eagle:package:5224590/1" type="box" library_version="12">
-<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.2 mm, round</description>
-<packageinstances>
-<packageinstance name="HOLES_3,2-PAD"/>
 </packageinstances>
 </package3d>
 <package3d name="HOLES_3,3-PAD" urn="urn:adsk.eagle:package:5224591/1" type="box" library_version="12">
@@ -967,12 +955,6 @@
 <description>TEST PAD</description>
 <packageinstances>
 <packageinstance name="P1-13"/>
-</packageinstances>
-</package3d>
-<package3d name="B1,27" urn="urn:adsk.eagle:package:27944/1" type="box" library_version="22" library_locally_modified="yes">
-<description>TEST PAD</description>
-<packageinstances>
-<packageinstance name="B1,27"/>
 </packageinstances>
 </package3d>
 <package3d name="B2,54" urn="urn:adsk.eagle:package:27948/1" type="box" library_version="22" library_locally_modified="yes">
@@ -1191,7 +1173,7 @@
 <packageinstance name="TP20SQ"/>
 </packageinstances>
 </package3d>
-<package3d name="TP13SQ-HOLE" urn="urn:adsk.eagle:package:7170913/2" type="model" library_version="32">
+<package3d name="TP13SQ-HOLE" urn="urn:adsk.eagle:package:7170913/3" type="model" library_version="48" library_locally_modified="yes">
 <description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
 <packageinstances>
 <packageinstance name="TP13SQ-HOLE"/>
@@ -1231,30 +1213,48 @@
 <packageinstance name="CAPC1005X50"/>
 </packageinstances>
 </package3d>
-<package3d name="HDRV6W50P200_3X2_400X600X550B" urn="urn:adsk.eagle:package:8324077/1" locally_modified="yes" type="model" library_version="35" library_locally_modified="yes">
+<package3d name="HDRV6W50P200_3X2_400X600X550B" urn="urn:adsk.eagle:package:8324077/2" type="model" library_version="48" library_locally_modified="yes">
 <description>Three-row, 6-pin Pin Header (Male) Straight, 2.00 mm (0.08 in) row pitch, 2.00 mm (0.08 in) col pitch, 4.00 mm mating length, 4.00 X 6.00 X 5.50 mm body
 &lt;p&gt;Three-row (3X2), 6-pin Pin Header (Male) Straight package with 2.00 mm (0.08 in) row pitch, 2.00 mm (0.08 in) col pitch, 0.50 mm lead width, 2.60 mm tail length and 4.00 mm mating length with overall size 4.00 X 6.00 X 5.50 mm, pin pattern - counter-clockwise from bottom left&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="HDRV6W50P200_3X2_400X600X550B"/>
 </packageinstances>
 </package3d>
-<package3d name="HDRRA6W64P254_2X3_762X254X508B" urn="urn:adsk.eagle:package:8324115/1" locally_modified="yes" type="model" library_version="35" library_locally_modified="yes">
+<package3d name="HDRRA6W64P254_2X3_762X254X508B" urn="urn:adsk.eagle:package:8324115/2" type="model" library_version="48" library_locally_modified="yes">
 <description>Double-row, 6-pin Pin Header (Male) Right Angle, 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 5.84 mm mating length, 7.62 X 2.54 X 5.08 mm body
 &lt;p&gt;Double-row (2X3), 6-pin Pin Header (Male) Right Angle package with 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 0.64 mm lead width, 3.00 mm tail length and 5.84 mm mating length with body size 7.62 X 2.54 X 5.08 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="HDRRA6W64P254_2X3_762X254X508B"/>
 </packageinstances>
 </package3d>
-<package3d name="HDRV6W64P254_3X2_508X762X838B" urn="urn:adsk.eagle:package:8324106/1" locally_modified="yes" type="model" library_version="35" library_locally_modified="yes">
+<package3d name="SOT95P275X110-6N" urn="urn:adsk.eagle:package:8452336/3" type="model" library_version="45">
+<packageinstances>
+<packageinstance name="SC-74-6"/>
+</packageinstances>
+</package3d>
+<package3d name="HOLES_3,0-PAD" urn="urn:adsk.eagle:package:5224589/2" type="model" library_version="48" library_locally_modified="yes">
+<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.0 mm, round</description>
+<packageinstances>
+<packageinstance name="HOLES_3,0-PAD"/>
+</packageinstances>
+</package3d>
+<package3d name="HOLES_3,2-PAD" urn="urn:adsk.eagle:package:5224590/2" type="model" library_version="48" library_locally_modified="yes">
+<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.2 mm, round</description>
+<packageinstances>
+<packageinstance name="HOLES_3,2-PAD"/>
+</packageinstances>
+</package3d>
+<package3d name="B1,27" urn="urn:adsk.eagle:package:27944/2" type="box" library_version="48" library_locally_modified="yes">
+<description>TEST PAD</description>
+<packageinstances>
+<packageinstance name="B1,27"/>
+</packageinstances>
+</package3d>
+<package3d name="HDRV6W64P254_3X2_508X762X838B" urn="urn:adsk.eagle:package:8324106/2" type="model" library_version="48" library_locally_modified="yes">
 <description>Three-row, 6-pin Pin Header (Male) Straight, 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 5.84 mm mating length, 5.08 X 7.62 X 8.38 mm body
 &lt;p&gt;Three-row (3X2), 6-pin Pin Header (Male) Straight package with 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 0.64 mm lead width, 3.00 mm tail length and 5.84 mm mating length with overall size 5.08 X 7.62 X 8.38 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="HDRV6W64P254_3X2_508X762X838B"/>
-</packageinstances>
-</package3d>
-<package3d name="SOT95P275X110-6N" urn="urn:adsk.eagle:package:8452336/3" type="model" library_version="45">
-<packageinstances>
-<packageinstance name="SC-74-6"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -1558,7 +1558,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="HOLES_MOUNT-PAD-ROUND" urn="urn:adsk.eagle:component:6905305/1" prefix="H" library_version="12">
+<deviceset name="HOLES_MOUNT-PAD-ROUND" urn="urn:adsk.eagle:component:6905305/3" prefix="H" library_version="48" library_locally_modified="yes">
 <description>&lt;b&gt;MOUNTING PAD&lt;/b&gt;, round</description>
 <gates>
 <gate name="G$1" symbol="HOLES_MOUNT-PAD" x="0" y="0"/>
@@ -1580,7 +1580,7 @@
 <connect gate="G$1" pin="MOUNT" pad="B3,0"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:5224589/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5224589/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -1591,7 +1591,7 @@
 <connect gate="G$1" pin="MOUNT" pad="B3,2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:5224590/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5224590/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -1687,7 +1687,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="TP" urn="urn:adsk.eagle:component:7170914/2" prefix="TP" library_version="32">
+<deviceset name="TP" urn="urn:adsk.eagle:component:7170914/4" prefix="TP" library_version="48" library_locally_modified="yes">
 <description>&lt;b&gt;Test pad&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="TP" x="0" y="0"/>
@@ -1698,7 +1698,7 @@
 <connect gate="G$1" pin="TP" pad="TP"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:27944/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27944/2"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -2192,7 +2192,7 @@
 <connect gate="G$1" pin="TP" pad="TP"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:7170913/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:7170913/3"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -2386,7 +2386,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="ICSP_HEADER" urn="urn:adsk.eagle:component:8324124/1" locally_modified="yes" prefix="J" library_version="35" library_locally_modified="yes">
+<deviceset name="ICSP_HEADER" urn="urn:adsk.eagle:component:8324124/2" prefix="J" library_version="48" library_locally_modified="yes">
 <gates>
 <gate name="G$1" symbol="ICSP" x="0" y="0"/>
 </gates>
@@ -2401,7 +2401,7 @@
 <connect gate="G$1" pin="VCC" pad="6"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8324077/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8324077/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -2417,7 +2417,7 @@
 <connect gate="G$1" pin="VCC" pad="2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8324106/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8324106/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -2433,7 +2433,7 @@
 <connect gate="G$1" pin="VCC" pad="1"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8324115/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8324115/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -2523,12 +2523,12 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="R3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2"/>
-<part name="RXD" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="" package3d_urn="urn:adsk.eagle:package:7170913/2" value="TP"/>
-<part name="TXD" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="" package3d_urn="urn:adsk.eagle:package:7170913/2" value="TP"/>
-<part name="GND" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="" package3d_urn="urn:adsk.eagle:package:7170913/2" value="TP"/>
-<part name="+5V" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="" package3d_urn="urn:adsk.eagle:package:7170913/2" value="TP"/>
+<part name="RXD" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="" package3d_urn="urn:adsk.eagle:package:7170913/3" value="TP"/>
+<part name="TXD" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="" package3d_urn="urn:adsk.eagle:package:7170913/3" value="TP"/>
+<part name="GND" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="" package3d_urn="urn:adsk.eagle:package:7170913/3" value="TP"/>
+<part name="+5V" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="" package3d_urn="urn:adsk.eagle:package:7170913/3" value="TP"/>
 <part name="SUPPLY7" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="RST." library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="" package3d_urn="urn:adsk.eagle:package:7170913/2" value="TP"/>
+<part name="RST." library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="" package3d_urn="urn:adsk.eagle:package:7170913/3" value="TP"/>
 <part name="PWR" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-LED_SMD-LED-CLEAR-BLUE(0603)" device="LED_0603" package3d_urn="urn:adsk.eagle:package:5224536/3"/>
 <part name="R8" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2"/>
 <part name="D1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SP0503BAHTG" device="" package3d_urn="urn:adsk.eagle:package:7172834/2"/>
@@ -2542,8 +2542,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="R4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="10K"/>
 <part name="C1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="0.1uF"/>
 <part name="C2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="0.1uF"/>
-<part name="ICSP1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ICSP_HEADER" device="ICSP_2.54MM_RIGHT" package3d_urn="urn:adsk.eagle:package:8324115/1"/>
-<part name="ICSP0" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ICSP_HEADER" device="ICSP-2MM" package3d_urn="urn:adsk.eagle:package:8324077/1"/>
+<part name="ICSP1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ICSP_HEADER" device="ICSP_2.54MM_RIGHT" package3d_urn="urn:adsk.eagle:package:8324115/2"/>
+<part name="ICSP0" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ICSP_HEADER" device="ICSP-2MM" package3d_urn="urn:adsk.eagle:package:8324077/2"/>
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="D2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TVS_DIODE_CM1293A" device="" package3d_urn="urn:adsk.eagle:package:8452336/3"/>
 </parts>

@@ -170,7 +170,7 @@
 <layer number="255" name="Accent" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyYTEyMDdh" projecturn="a.cGVyc29uYWw6dWUyYTEyMDdhIzIwMTgxMTI5MTYyOTY3NjMx" f3durn="urn:adsk.wipprod:dm.lineage:sOeqOLAvSQadQke4uLqNxA" pcbguid="7e5e2b11-c562-4c70-8420-75498e3927f9" lastpulledtime="" lastsyncedchangeguid="69f797d1-201b-1ebb-cf80-15512169d8d6"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyYTEyMDdh" projecturn="a.cGVyc29uYWw6dWUyYTEyMDdhIzIwMTgxMTI5MTYyOTY3NjMx" f3durn="urn:adsk.wipprod:dm.lineage:sOeqOLAvSQadQke4uLqNxA" pcbguid="7e5e2b11-c562-4c70-8420-75498e3927f9" lastpulledtime="" lastsyncedchangeguid="6e35f08a-efb6-7653-8ef8-3e5a652cc735"/>
 <plain>
 <text x="26.821" y="29.324" size="1.27" layer="22" ratio="11" rot="R315">-      +</text>
 <wire x1="0" y1="4" x2="0" y2="43" width="0.1524" layer="20"/>
@@ -6354,7 +6354,7 @@
 <text x="0" y="0.5179" size="0.4064" layer="25" font="vector" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-0.5179" size="0.4064" layer="27" font="vector" align="top-center">&gt;VALUE</text>
 </package>
-<package name="HDRRA6W64P254_2X3_762X254X508B" urn="urn:adsk.eagle:footprint:8324117/1" locally_modified="yes" library_version="35" library_locally_modified="yes">
+<package name="HDRRA6W64P254_2X3_762X254X508B" urn="urn:adsk.eagle:footprint:8324117/2" library_version="48" library_locally_modified="yes">
 <description>Double-row, 6-pin Pin Header (Male) Right Angle, 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 5.84 mm mating length, 7.62 X 2.54 X 5.08 mm body
 &lt;p&gt;Double-row (2X3), 6-pin Pin Header (Male) Right Angle package with 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 0.64 mm lead width, 3.00 mm tail length and 5.84 mm mating length with body size 7.62 X 2.54 X 5.08 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
 <circle x="-1.3565" y="0" radius="0.25" width="0" layer="21"/>
@@ -6377,7 +6377,7 @@
 <pad name="6" x="0" y="-2.54" drill="1.1051" diameter="1.7051"/>
 <text x="-1.27" y="1.4875" size="1.27" layer="25" font="vector" ratio="11">&gt;NAME</text>
 </package>
-<package name="HDRV6W50P200_3X2_400X600X550B" urn="urn:adsk.eagle:footprint:8324095/1" locally_modified="yes" library_version="35" library_locally_modified="yes">
+<package name="HDRV6W50P200_3X2_400X600X550B" urn="urn:adsk.eagle:footprint:8324095/2" library_version="48" library_locally_modified="yes">
 <description>Three-row, 6-pin Pin Header (Male) Straight, 2.00 mm (0.08 in) row pitch, 2.00 mm (0.08 in) col pitch, 4.00 mm mating length, 4.00 X 6.00 X 5.50 mm body
 &lt;p&gt;Three-row (3X2), 6-pin Pin Header (Male) Straight package with 2.00 mm (0.08 in) row pitch, 2.00 mm (0.08 in) col pitch, 0.50 mm lead width, 2.60 mm tail length and 4.00 mm mating length with overall size 4.00 X 6.00 X 5.50 mm, pin pattern - counter-clockwise from bottom left&lt;/p&gt;</description>
 <circle x="0" y="-1.5116" radius="0.25" width="0" layer="21"/>
@@ -6475,7 +6475,7 @@
 <packageinstance name="LOGO-PYR0BALL-SS-20MM"/>
 </packageinstances>
 </package3d>
-<package3d name="TP13SQ-HOLE" urn="urn:adsk.eagle:package:7170913/2" type="model" library_version="32">
+<package3d name="TP13SQ-HOLE" urn="urn:adsk.eagle:package:7170913/3" type="model" library_version="48" library_locally_modified="yes">
 <description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
 <packageinstances>
 <packageinstance name="TP13SQ-HOLE"/>
@@ -6515,14 +6515,14 @@
 <packageinstance name="CAPC1005X50"/>
 </packageinstances>
 </package3d>
-<package3d name="HDRRA6W64P254_2X3_762X254X508B" urn="urn:adsk.eagle:package:8324115/1" locally_modified="yes" type="model" library_version="35" library_locally_modified="yes">
+<package3d name="HDRRA6W64P254_2X3_762X254X508B" urn="urn:adsk.eagle:package:8324115/2" type="model" library_version="48" library_locally_modified="yes">
 <description>Double-row, 6-pin Pin Header (Male) Right Angle, 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 5.84 mm mating length, 7.62 X 2.54 X 5.08 mm body
 &lt;p&gt;Double-row (2X3), 6-pin Pin Header (Male) Right Angle package with 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 0.64 mm lead width, 3.00 mm tail length and 5.84 mm mating length with body size 7.62 X 2.54 X 5.08 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="HDRRA6W64P254_2X3_762X254X508B"/>
 </packageinstances>
 </package3d>
-<package3d name="HDRV6W50P200_3X2_400X600X550B" urn="urn:adsk.eagle:package:8324077/1" locally_modified="yes" type="model" library_version="35" library_locally_modified="yes">
+<package3d name="HDRV6W50P200_3X2_400X600X550B" urn="urn:adsk.eagle:package:8324077/2" type="model" library_version="48" library_locally_modified="yes">
 <description>Three-row, 6-pin Pin Header (Male) Straight, 2.00 mm (0.08 in) row pitch, 2.00 mm (0.08 in) col pitch, 4.00 mm mating length, 4.00 X 6.00 X 5.50 mm body
 &lt;p&gt;Three-row (3X2), 6-pin Pin Header (Male) Straight package with 2.00 mm (0.08 in) row pitch, 2.00 mm (0.08 in) col pitch, 0.50 mm lead width, 2.60 mm tail length and 4.00 mm mating length with overall size 4.00 X 6.00 X 5.50 mm, pin pattern - counter-clockwise from bottom left&lt;/p&gt;</description>
 <packageinstances>
@@ -6743,23 +6743,23 @@ design rules under a new name.</description>
 <attribute name="NAME" x="33.755315625" y="38.819815625" size="0.6096" layer="25" font="vector" ratio="11" rot="R315" align="bottom-center"/>
 <attribute name="VALUE" value="0R" x="32.428290625" y="38.71315625" size="0.6096" layer="27" font="vector" ratio="11" rot="R225" align="top-center" display="off"/>
 </element>
-<element name="RXD" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP13SQ-HOLE" package3d_urn="urn:adsk.eagle:package:7170913/2" value="TP" x="22.461" y="38.1235" smashed="yes" rot="MR135">
+<element name="RXD" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP13SQ-HOLE" package3d_urn="urn:adsk.eagle:package:7170913/3" value="TP" x="22.461" y="38.1235" smashed="yes" rot="MR135">
 <attribute name="NAME" x="22.20564375" y="37.35539375" size="0.6096" layer="26" font="vector" ratio="11" rot="MR315"/>
 <attribute name="VALUE" x="21.832384375" y="38.2133" size="0.0254" layer="28" rot="MR135"/>
 </element>
-<element name="TXD" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP13SQ-HOLE" package3d_urn="urn:adsk.eagle:package:7170913/2" value="TP" x="21.238" y="39.3495" smashed="yes" rot="MR135">
+<element name="TXD" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP13SQ-HOLE" package3d_urn="urn:adsk.eagle:package:7170913/3" value="TP" x="21.238" y="39.3495" smashed="yes" rot="MR135">
 <attribute name="NAME" x="20.85164375" y="38.65639375" size="0.6096" layer="26" font="vector" ratio="11" rot="MR315"/>
 <attribute name="VALUE" x="20.609384375" y="39.4393" size="0.0254" layer="28" rot="MR135"/>
 </element>
-<element name="GND" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP13SQ-HOLE" package3d_urn="urn:adsk.eagle:package:7170913/2" value="TP" x="28.4525" y="32.2185" smashed="yes" rot="MR315">
+<element name="GND" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP13SQ-HOLE" package3d_urn="urn:adsk.eagle:package:7170913/3" value="TP" x="28.4525" y="32.2185" smashed="yes" rot="MR315">
 <attribute name="NAME" x="28.16314375" y="31.43039375" size="0.6096" layer="26" font="vector" ratio="11" rot="MR315"/>
 <attribute name="VALUE" x="29.081115625" y="32.1287" size="0.0254" layer="28" rot="MR315"/>
 </element>
-<element name="+5V" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP13SQ-HOLE" package3d_urn="urn:adsk.eagle:package:7170913/2" value="TP" x="24.8645" y="35.755" smashed="yes" rot="MR135">
+<element name="+5V" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP13SQ-HOLE" package3d_urn="urn:adsk.eagle:package:7170913/3" value="TP" x="24.8645" y="35.755" smashed="yes" rot="MR135">
 <attribute name="NAME" x="24.49514375" y="34.97089375" size="0.6096" layer="26" font="vector" ratio="11" rot="MR315"/>
 <attribute name="VALUE" x="24.235884375" y="35.8448" size="0.0254" layer="28" rot="MR135"/>
 </element>
-<element name="RST." library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP13SQ-HOLE" package3d_urn="urn:adsk.eagle:package:7170913/2" value="TP" x="23.6725" y="36.8985" smashed="yes" rot="MR315">
+<element name="RST." library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP13SQ-HOLE" package3d_urn="urn:adsk.eagle:package:7170913/3" value="TP" x="23.6725" y="36.8985" smashed="yes" rot="MR315">
 <attribute name="NAME" x="23.32314375" y="36.16139375" size="0.6096" layer="26" font="vector" ratio="11" rot="MR315"/>
 <attribute name="VALUE" x="24.301115625" y="36.8087" size="0.0254" layer="27" rot="R180"/>
 </element>
@@ -6829,10 +6829,10 @@ design rules under a new name.</description>
 <attribute name="NAME" x="16.746709375" y="20.2437125" size="0.8128" layer="26" font="vector" ratio="11" rot="MR45" align="bottom-center"/>
 <attribute name="VALUE" x="16.0142875" y="19.511290625" size="0.4064" layer="28" font="vector" rot="MR45" align="top-center"/>
 </element>
-<element name="ICSP1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="HDRRA6W64P254_2X3_762X254X508B" package3d_urn="urn:adsk.eagle:package:8324115/1" value="ICSP_HEADERICSP_2.54MM_RIGHT" x="4.8095" y="14.635" smashed="yes" rot="R270">
+<element name="ICSP1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="HDRRA6W64P254_2X3_762X254X508B" package3d_urn="urn:adsk.eagle:package:8324115/2" value="ICSP_HEADERICSP_2.54MM_RIGHT" x="4.8095" y="14.635" smashed="yes" rot="R270">
 <attribute name="NAME" x="5.1895" y="8.562" size="0.8128" layer="25" font="vector" ratio="11" rot="R180"/>
 </element>
-<element name="ICSP0" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="HDRV6W50P200_3X2_400X600X550B" package3d_urn="urn:adsk.eagle:package:8324077/1" value="ICSP_HEADERICSP-2MM" x="11.935" y="4.555" smashed="yes">
+<element name="ICSP0" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="HDRV6W50P200_3X2_400X600X550B" package3d_urn="urn:adsk.eagle:package:8324077/2" value="ICSP_HEADERICSP-2MM" x="11.935" y="4.555" smashed="yes">
 <attribute name="NAME" x="11.555" y="9.7076" size="0.8128" layer="25" font="vector"/>
 </element>
 <element name="D2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="SC-74-6" package3d_urn="urn:adsk.eagle:package:8452336/3" value="TVS_DIODE_CM1293A" x="24" y="19" smashed="yes" rot="MR135">
@@ -6880,7 +6880,7 @@ design rules under a new name.</description>
 <via x="3.8415" y="16.431" extent="1-16" drill="0.3"/>
 <via x="19.6215" y="20.0025" extent="1-16" drill="0.3"/>
 <via x="24.9555" y="15.3035" extent="1-16" drill="0.3"/>
-<via x="16.764" y="23.241" extent="1-16" drill="0.3"/>
+<via x="18.764" y="25.241" extent="1-16" drill="0.3"/>
 <via x="11.2395" y="21.971" extent="1-16" drill="0.3"/>
 <via x="16.8125" y="18.465" extent="1-16" drill="0.3"/>
 <via x="6.8" y="16.4375" extent="1-16" drill="0.3"/>
@@ -6923,7 +6923,9 @@ design rules under a new name.</description>
 <contactref element="ICSP1" pad="3"/>
 <contactref element="ICSP0" pad="2"/>
 <contactref element="D2" pad="2"/>
-<wire x1="16.387828125" y1="22.81178125" x2="14.3655" y2="24.127" width="0" layer="19" extent="16-16"/>
+<wire x1="16.387828125" y1="22.81178125" x2="15.199609375" y2="24" width="0.1524" layer="16"/>
+<wire x1="14.4925" y1="24" x2="14.3655" y2="24.127" width="0.1524" layer="16"/>
+<wire x1="15.199609375" y1="24" x2="14.4925" y2="24" width="0.1524" layer="16"/>
 </signal>
 <signal name="5V_DC">
 <contactref element="R3" pad="1"/>
@@ -6944,18 +6946,13 @@ design rules under a new name.</description>
 <wire x1="33.052465625" y1="33.304034375" x2="33.0844625" y2="33.304034375" width="0.1524" layer="1"/>
 <wire x1="25.887459375" y1="22.47310625" x2="25.707178125" y2="22.292825" width="0.1524" layer="1"/>
 <wire x1="25.707178125" y1="22.292825" x2="25.604875" y2="22.190521875" width="0.1524" layer="1"/>
-<wire x1="25.604875" y1="22.190521875" x2="23.343396875" y2="22.190521875" width="0.1524" layer="1"/>
-<wire x1="23.343396875" y1="22.190521875" x2="23.244" y2="22.091125" width="0.1524" layer="1"/>
-<wire x1="23.241903125" y1="18.257503125" x2="23.241903125" y2="20.884625" width="0.4064" layer="1"/>
 <contactref element="R1" pad="2"/>
-<wire x1="23.244" y1="20.4655" x2="23.244" y2="20.884625" width="0.1524" layer="1"/>
-<wire x1="23.244" y1="20.884625" x2="23.244" y2="22.091125" width="0.1524" layer="1"/>
+<wire x1="23.244" y1="20.884625" x2="23.244" y2="20.886721875" width="0.1524" layer="1"/>
 <wire x1="20" y1="15.0156" x2="20" y2="14" width="0.4064" layer="1"/>
 <wire x1="20" y1="15.0156" x2="23.241903125" y2="18.257503125" width="0.4064" layer="1"/>
-<wire x1="23.241903125" y1="30.417403125" x2="23.241903125" y2="20.6825" width="0.4064" layer="1"/>
+<wire x1="23.241903125" y1="30.417403125" x2="23.241903125" y2="21" width="0.4064" layer="1"/>
 <wire x1="24.8645" y1="32.04" x2="24.8645" y2="35.755" width="0.4064" layer="1"/>
 <wire x1="23.241903125" y1="30.417403125" x2="24.8645" y2="32.04" width="0.4064" layer="1"/>
-<wire x1="23.241903125" y1="20.884625" x2="23.244" y2="20.884625" width="0.1524" layer="1"/>
 <wire x1="14.7855" y1="19.3525" x2="14.7955" y2="19.3625" width="0.1524" layer="16"/>
 <wire x1="14.7955" y1="19.3625" x2="14.7955" y2="19.431" width="0.1524" layer="16"/>
 <contactref element="TTL" pad="1"/>
@@ -6970,9 +6967,19 @@ design rules under a new name.</description>
 <wire x1="24.898028125" y1="19.898025" x2="25.707178125" y2="20.707175" width="0.1524" layer="16"/>
 <wire x1="25.707178125" y1="20.707175" x2="25.707178125" y2="22.292825" width="0.1524" layer="16"/>
 <via x="25.707178125" y="22.292825" extent="1-16" drill="0.35"/>
-<wire x1="23.244" y1="20.884625" x2="23.241903125" y2="20.6825" width="0" layer="19" extent="1-1"/>
-<wire x1="21.750259375" y1="12.225259375" x2="21.750259375" y2="12.2252625" width="0" layer="19" extent="1-1"/>
-<wire x1="16.026946875" y1="20.231053125" x2="14.75" y2="19.4765" width="0" layer="19" extent="16-16"/>
+<wire x1="16.026946875" y1="20.231053125" x2="15.22689375" y2="19.431" width="0.1524" layer="16"/>
+<wire x1="15.22689375" y1="19.431" x2="14.7955" y2="19.431" width="0.1524" layer="16"/>
+<wire x1="23.241903125" y1="20.884625" x2="23.244" y2="20.886721875" width="0.1524" layer="1"/>
+<wire x1="23.241903125" y1="20.884625" x2="23.244" y2="20.884625" width="0.1524" layer="1"/>
+<wire x1="23.241903125" y1="18.257503125" x2="23.241903125" y2="20.884625" width="0.4064" layer="1"/>
+<via x="23.241903125" y="21" extent="1-16" drill="0.35"/>
+<wire x1="23.869390625" y1="19.669425" x2="23.26385" y2="20.274965625" width="0.1524" layer="16"/>
+<wire x1="23.26385" y1="20.978053125" x2="23.241903125" y2="21" width="0.1524" layer="16"/>
+<wire x1="23.26385" y1="20.274965625" x2="23.26385" y2="20.978053125" width="0.1524" layer="16"/>
+<wire x1="24.898028125" y1="19.898025" x2="24.669428125" y2="19.669425" width="0.1524" layer="16"/>
+<wire x1="24.669428125" y1="19.669425" x2="23.869390625" y2="19.669425" width="0.1524" layer="16"/>
+<wire x1="23.241903125" y1="21" x2="23.241903125" y2="20.884625" width="0.1524" layer="1"/>
+<wire x1="21.750259375" y1="12.225259375" x2="21.750259375" y2="12.2252625" width="0.1524" layer="1"/>
 </signal>
 <signal name="LED_VCC">
 <contactref element="RX" pad="+"/>
@@ -7107,16 +7114,16 @@ design rules under a new name.</description>
 <wire x1="21.0185" y1="15.31991875" x2="21.0185" y2="14.2875" width="0.1524" layer="1"/>
 <wire x1="24.247390625" y1="18.548809375" x2="21.0185" y2="15.31991875" width="0.1524" layer="1"/>
 <contactref element="U1" pad="5"/>
-<wire x1="21.0185" y1="16.9545" x2="16.1925" y2="21.7805" width="0.1524" layer="16"/>
-<wire x1="16.1925" y1="21.7805" x2="16.129" y2="21.7805" width="0.1524" layer="16"/>
+<wire x1="16.1925" y1="21.7805" x2="21.0185" y2="16.9545" width="0.1524" layer="16"/>
 <contactref element="D2" pad="1"/>
 <wire x1="23.766515625" y1="17.437434375" x2="23.512515625" y2="17.437434375" width="0.1524" layer="16"/>
 <wire x1="23.512515625" y1="17.437434375" x2="22.4663" y2="16.39121875" width="0.1524" layer="16"/>
 <wire x1="22.4663" y1="16.39121875" x2="22.4663" y2="14.9487875" width="0.1524" layer="16"/>
 <wire x1="21.8050125" y1="14.2875" x2="21.0185" y2="14.2875" width="0.1524" layer="16"/>
 <wire x1="22.4663" y1="14.9487875" x2="21.8050125" y2="14.2875" width="0.1524" layer="16"/>
-<wire x1="16.129" y1="21.7805" x2="15.68071875" y2="22.104671875" width="0" layer="19" extent="16-16"/>
-<wire x1="22.209878125" y1="12.684878125" x2="22.209878125" y2="12.68488125" width="0" layer="19" extent="1-1"/>
+<wire x1="15.68071875" y1="22.104671875" x2="16.004890625" y2="21.7805" width="0.1524" layer="16"/>
+<wire x1="16.004890625" y1="21.7805" x2="16.1925" y2="21.7805" width="0.1524" layer="16"/>
+<wire x1="22.209878125" y1="12.684878125" x2="22.209878125" y2="12.68488125" width="0.1524" layer="1"/>
 </signal>
 <signal name="D+">
 <contactref element="J1" pad="3"/>
@@ -7141,7 +7148,6 @@ design rules under a new name.</description>
 <signal name="VBUS">
 <contactref element="R1" pad="1"/>
 <contactref element="R2" pad="2"/>
-<wire x1="13.8605" y1="19.4485" x2="13.8605" y2="19.3525" width="0.1524" layer="16"/>
 <wire x1="13.877" y1="18.384" x2="13.877" y2="19.336" width="0.1524" layer="16"/>
 <wire x1="13.877" y1="19.336" x2="13.8605" y2="19.3525" width="0.1524" layer="16"/>
 <contactref element="TTL" pad="5"/>
@@ -7155,7 +7161,6 @@ design rules under a new name.</description>
 <via x="11.9205" y="19.9215" extent="1-16" drill="0.35"/>
 <wire x1="13.757390625" y1="21.397565625" x2="13.335" y2="20.975175" width="0.1524" layer="16"/>
 <wire x1="13.335" y1="20.975175" x2="13.335" y2="20.5105" width="0.1524" layer="16"/>
-<wire x1="13.335" y1="20.5105" x2="13.843" y2="20.0025" width="0.1524" layer="16"/>
 <contactref element="ICSP1" pad="1"/>
 <contactref element="ICSP0" pad="6"/>
 <wire x1="13.22195" y1="9.26805" x2="13.22195" y2="9.52949375" width="0.1524" layer="1"/>
@@ -7171,7 +7176,8 @@ design rules under a new name.</description>
 <wire x1="15.197" y1="9.817" x2="15.197" y2="16.68" width="0.1524" layer="1"/>
 <wire x1="11.9555" y1="19.9215" x2="11.9205" y2="19.9215" width="0.1524" layer="1"/>
 <wire x1="15.197" y1="16.68" x2="11.9555" y2="19.9215" width="0.1524" layer="1"/>
-<wire x1="13.8605" y1="19.4485" x2="13.843" y2="20.0025" width="0" layer="19" extent="16-16"/>
+<wire x1="13.335" y1="20.5105" x2="13.8605" y2="19.985" width="0.1524" layer="16"/>
+<wire x1="13.8605" y1="19.985" x2="13.8605" y2="19.3525" width="0.1524" layer="16"/>
 </signal>
 <signal name="VDD">
 <contactref element="U1" pad="6"/>
@@ -7181,7 +7187,13 @@ design rules under a new name.</description>
 <contactref element="U1" pad="28"/>
 <contactref element="C1" pad="2"/>
 <wire x1="14.5" y1="22" x2="13.4625" y2="22" width="0.1524" layer="1"/>
-<wire x1="14.5" y1="22" x2="17.094934375" y2="24.735109375" width="0" layer="19" extent="1-16"/>
+<wire x1="17.094934375" y1="24.735109375" x2="17.264890625" y2="24.735109375" width="0.1524" layer="16"/>
+<wire x1="17.264890625" y1="24.735109375" x2="18" y2="24" width="0.1524" layer="16"/>
+<via x="18" y="24" extent="1-16" drill="0.35"/>
+<wire x1="18" y1="24" x2="17" y2="23" width="0.1524" layer="1"/>
+<wire x1="17" y1="23" x2="15" y2="23" width="0.1524" layer="1"/>
+<wire x1="15" y1="23" x2="14.5" y2="22.5" width="0.1524" layer="1"/>
+<wire x1="14.5" y1="22.5" x2="14.5" y2="22" width="0.1524" layer="1"/>
 </signal>
 <signal name="SPI_MOSI">
 <contactref element="ICSP0" pad="3"/>
@@ -7239,6 +7251,27 @@ design rules under a new name.</description>
 <approved hash="19,1,ed2aeaa250bc5734"/>
 <approved hash="19,16,800c82164ef04cea"/>
 <approved hash="19,16,524a5bff6f77c0ff"/>
+<approved hash="4,1,dab85e553827e6f2"/>
+<approved hash="4,1,40b67a003a40ecc5"/>
+<approved hash="4,1,4e449c3243f137c0"/>
+<approved hash="4,1,f7b9e841247d1cdc"/>
+<approved hash="4,1,418c52ea7d66976f"/>
+<approved hash="4,1,90c71fc28a5c3bb8"/>
+<approved hash="4,1,01850799f5fc368e"/>
+<approved hash="4,1,6d98aa3ad0e31af9"/>
+<approved hash="4,1,c6fe27abba6d26c0"/>
+<approved hash="4,1,31484eb6a4a07745"/>
+<approved hash="4,16,40b67a003a40ecc5"/>
+<approved hash="4,16,4e449c3243f137c0"/>
+<approved hash="4,16,dab85e553827e6f2"/>
+<approved hash="4,16,c6fe27abba6d26c0"/>
+<approved hash="4,16,31484eb6a4a07745"/>
+<approved hash="4,16,01850799f5fc368e"/>
+<approved hash="19,1,01961fc01b3e0568"/>
+<approved hash="19,1,ce4ecaed3bf33f50"/>
+<approved hash="19,1,b4fdbdcd597fcc11"/>
+<approved hash="19,1,d62ed3cf44d14130"/>
+<approved hash="19,1,faf7fde2191c1e09"/>
 </errors>
 </board>
 </drawing>
