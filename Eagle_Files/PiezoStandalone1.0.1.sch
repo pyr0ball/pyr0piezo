@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1.27" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.127" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -1578,7 +1578,7 @@ Metric Code Size 1608</description>
 <vertex x="-0.254" y="-0.635"/>
 </polygon>
 </package>
-<package name="FUSE_0402" urn="urn:adsk.eagle:footprint:8452832/1" locally_modified="yes" library_version="48" library_locally_modified="yes">
+<package name="FUSE_0402" urn="urn:adsk.eagle:footprint:8452832/2" library_version="52">
 <description>Chip, 1.00 X 0.50 X 0.39 mm body
 &lt;p&gt;Chip package with body size 1.00 X 0.50 X 0.39 mm&lt;/p&gt;</description>
 <wire x1="0.5" y1="0.4929" x2="-0.5" y2="0.4929" width="0.12" layer="21"/>
@@ -2035,7 +2035,7 @@ Metric Code Size 1608</description>
 <packageinstance name="TP13SQ-HOLE"/>
 </packageinstances>
 </package3d>
-<package3d name="RESC1005X39" urn="urn:adsk.eagle:package:8452831/1" locally_modified="yes" type="model" library_version="48" library_locally_modified="yes">
+<package3d name="RESC1005X39" urn="urn:adsk.eagle:package:8452831/2" type="model" library_version="52">
 <description>Chip, 1.00 X 0.50 X 0.39 mm body
 &lt;p&gt;Chip package with body size 1.00 X 0.50 X 0.39 mm&lt;/p&gt;</description>
 <packageinstances>
@@ -3588,7 +3588,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="FUSE_0402" urn="urn:adsk.eagle:component:8452816/1" locally_modified="yes" prefix="F" library_version="48" library_locally_modified="yes">
+<deviceset name="FUSE_0402" urn="urn:adsk.eagle:component:8452816/2" prefix="F" library_version="52">
 <description>https://www.digikey.com/product-detail/en/ERB-RD0R50X/P15122CT-ND/2796798/?itemSeq=282912571</description>
 <gates>
 <gate name="G$1" symbol="FUSE" x="0" y="0"/>
@@ -3600,7 +3600,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 <connect gate="G$1" pin="P$2" pad="2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8452831/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8452831/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -4805,7 +4805,7 @@ DIN A3, landscape with location and doc. field</description>
 <part name="ERR" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-LED_SMD-LED-CLEAR-BLUE(0603)" device="LED_0603" package3d_urn="urn:adsk.eagle:package:5224536/3"/>
 <part name="R16" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2"/>
 <part name="D1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ZENER_DIODE_PLZ5V1C" device="" package3d_urn="urn:adsk.eagle:package:8452796/2"/>
-<part name="F1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="FUSE_0402" device="FUSE_0402" package3d_urn="urn:adsk.eagle:package:8452831/1"/>
+<part name="F1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="FUSE_0402" device="FUSE_0402" package3d_urn="urn:adsk.eagle:package:8452831/2"/>
 </parts>
 <sheets>
 <sheet>
