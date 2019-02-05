@@ -7,6 +7,8 @@ The Pyr0-Piezo Z-Axis Sensor
 **What's this for?**
 --------------------
 
+This is a Z-axis sensor for 3D printers.
+
 This design incorporates two different enhancements:
 
 1. An Ultra-Sensitive Z-Axis sensor utilizing the mechanical force of the nozzle touching the bed, giving a direct measurement with no offsets or referential assumptions to consider
