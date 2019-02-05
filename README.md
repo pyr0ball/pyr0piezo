@@ -4,7 +4,31 @@ Presenting...
 The Pyr0-Piezo Z-Axis Sensor
 ===================
 
+**What's this for?**
+--------------------
+
+This design incorporates two different enhancements:
+
+1. An Ultra-Sensitive Z-Axis sensor utilizing the mechanical force of the nozzle touching the bed, giving a direct measurement with no offsets or referential assumptions to consider
+
+2. (Optional) An FFC Cable chain [(Flat Flexible Cable)](https://en.wikipedia.org/wiki/Flexible_flat_cable) that can carry the entire print-head's signals and current in a clean and organized way
+
+**Why is this better than X sensor?**
+
+ - Vs. Inductive / capacitative sensors: No Offset, more accurate, doesn't require special surface
+
+ - Vs. Mechanical touch (BL-Touch, servo mounted endstops): No Offset, more accurate
+
+ - Vs. removable pressure sensor: More accurate, no need for attaching a device only for levelling
+
+ - Vs. Optical rangefinder / Time of Flight: Much more accurate, doesnt require specific surface
+
+ - Vs. Mechanical endstops: All the things
+
+ - Vs [PrecisionPiezoUK](https://www.precisionpiezo.co.uk/resources-osh) version: No potentiometer calibration required, better false-signal filtering
+ 
 Features:
+
  - Self-calibrating (no more fiddling with tiny potentiometers!)
  - Ultra-precise z-height measurements
  - Zero offset (The nozzle itself is the sensor!)
