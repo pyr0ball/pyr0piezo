@@ -4528,6 +4528,7 @@ DIN A3, landscape with location and doc. field</description>
 <part name="D1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ZENER_DIODE_PLZ5V1C" device="" package3d_urn="urn:adsk.eagle:package:8452796/2"/>
 <part name="F1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="500mA"/>
 <part name="SJ1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SJ" device="M"/>
+<part name="C4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="0.1uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -4652,8 +4653,8 @@ DIN A3, landscape with location and doc. field</description>
 <attribute name="TP_SIGNAL_NAME" x="240.03" y="88.9" size="1.778" layer="97" rot="R270"/>
 </instance>
 <instance part="C1" gate="G$1" x="96.52" y="123.19" smashed="yes" rot="R90">
-<attribute name="NAME" x="95.25" y="119.38" size="1.27" layer="95" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="99.06" y="119.38" size="1.27" layer="96" ratio="10" rot="R90"/>
+<attribute name="NAME" x="95.758" y="124.587" size="1.27" layer="95" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="98.171" y="124.333" size="1.27" layer="96" ratio="10" rot="R90"/>
 </instance>
 <instance part="C2" gate="G$1" x="50.8" y="123.19" smashed="yes" rot="R90">
 <attribute name="NAME" x="49.53" y="119.38" size="1.27" layer="95" ratio="10" rot="R90"/>
@@ -4824,6 +4825,10 @@ DIN A3, landscape with location and doc. field</description>
 <attribute name="NAME" x="68.58" y="148.59" size="1.778" layer="95"/>
 <attribute name="VALUE" x="68.58" y="142.24" size="1.778" layer="96"/>
 </instance>
+<instance part="C4" gate="G$1" x="99.06" y="120.65" smashed="yes" rot="R90">
+<attribute name="NAME" x="98.552" y="117.221" size="1.27" layer="95" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="100.711" y="114.935" size="1.27" layer="96" ratio="10" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -4861,6 +4866,10 @@ DIN A3, landscape with location and doc. field</description>
 <pinref part="D1" gate="G$1" pin="A"/>
 <wire x1="92.71" y1="119.38" x2="92.71" y2="110.49" width="0.1524" layer="91"/>
 <junction x="92.71" y="110.49"/>
+<pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="99.06" y1="116.84" x2="99.06" y2="110.49" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="110.49" x2="96.52" y2="110.49" width="0.1524" layer="91"/>
+<junction x="96.52" y="110.49"/>
 </segment>
 <segment>
 <pinref part="SUPPLY5" gate="GND" pin="GND"/>
@@ -5184,6 +5193,9 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="76.2" y1="146.05" x2="78.74" y2="146.05" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="146.05" x2="78.74" y2="130.81" width="0.1524" layer="91"/>
 <junction x="78.74" y="130.81"/>
+<pinref part="C4" gate="G$1" pin="2"/>
+<wire x1="99.06" y1="124.46" x2="99.06" y2="128.27" width="0.1524" layer="91"/>
+<junction x="99.06" y="128.27"/>
 </segment>
 <segment>
 <wire x1="337.82" y1="220.98" x2="337.82" y2="207.01" width="0.1524" layer="91"/>
