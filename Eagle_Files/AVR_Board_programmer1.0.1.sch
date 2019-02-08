@@ -8,34 +8,34 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="2" name="Route2" color="16" fill="1" visible="yes" active="no"/>
-<layer number="3" name="Route3" color="17" fill="1" visible="yes" active="no"/>
-<layer number="4" name="Route4" color="18" fill="1" visible="yes" active="no"/>
-<layer number="5" name="Route5" color="19" fill="1" visible="yes" active="no"/>
-<layer number="6" name="Route6" color="25" fill="1" visible="yes" active="no"/>
-<layer number="7" name="Route7" color="26" fill="1" visible="yes" active="no"/>
-<layer number="8" name="Route8" color="27" fill="1" visible="yes" active="no"/>
-<layer number="9" name="Route9" color="28" fill="1" visible="yes" active="no"/>
-<layer number="10" name="Route10" color="29" fill="1" visible="yes" active="no"/>
-<layer number="11" name="Route11" color="30" fill="1" visible="yes" active="no"/>
-<layer number="12" name="Route12" color="20" fill="1" visible="yes" active="no"/>
-<layer number="13" name="Route13" color="21" fill="1" visible="yes" active="no"/>
-<layer number="14" name="Route14" color="22" fill="1" visible="yes" active="no"/>
-<layer number="15" name="Route15" color="23" fill="1" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
+<layer number="3" name="Route3" color="17" fill="1" visible="no" active="no"/>
+<layer number="4" name="Route4" color="18" fill="1" visible="no" active="no"/>
+<layer number="5" name="Route5" color="19" fill="1" visible="no" active="no"/>
+<layer number="6" name="Route6" color="25" fill="1" visible="no" active="no"/>
+<layer number="7" name="Route7" color="26" fill="1" visible="no" active="no"/>
+<layer number="8" name="Route8" color="27" fill="1" visible="no" active="no"/>
+<layer number="9" name="Route9" color="28" fill="1" visible="no" active="no"/>
+<layer number="10" name="Route10" color="29" fill="1" visible="no" active="no"/>
+<layer number="11" name="Route11" color="30" fill="1" visible="no" active="no"/>
+<layer number="12" name="Route12" color="20" fill="1" visible="no" active="no"/>
+<layer number="13" name="Route13" color="21" fill="1" visible="no" active="no"/>
+<layer number="14" name="Route14" color="22" fill="1" visible="no" active="no"/>
+<layer number="15" name="Route15" color="23" fill="1" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="24" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -44,8 +44,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -53,19 +53,19 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="1" visible="yes" active="no"/>
-<layer number="54" name="bGND_GNDA" color="7" fill="1" visible="yes" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
-<layer number="59" name="tCarbon" color="7" fill="1" visible="yes" active="no"/>
-<layer number="60" name="bCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="1" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="7" fill="1" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
@@ -612,29 +612,6 @@
 <text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
 <pad name="TP" x="0" y="0" drill="0.8" shape="square"/>
 </package>
-<package name="SOT143" urn="urn:adsk.eagle:footprint:7172832/1" library_version="24">
-<wire x1="-1.52" y1="0.7" x2="-1.52" y2="-0.7" width="0.127" layer="51"/>
-<wire x1="-1.52" y1="-0.7" x2="1.52" y2="-0.7" width="0.127" layer="51"/>
-<wire x1="1.52" y1="-0.7" x2="1.52" y2="0.7" width="0.127" layer="51"/>
-<wire x1="1.52" y1="0.7" x2="-1.52" y2="0.7" width="0.127" layer="51"/>
-<wire x1="-1.52" y1="0.7" x2="-1.52" y2="-0.7" width="0.127" layer="21"/>
-<wire x1="1.52" y1="0.7" x2="1.52" y2="-0.7" width="0.127" layer="21"/>
-<wire x1="-1.52" y1="0.7" x2="-1.42" y2="0.7" width="0.127" layer="21"/>
-<wire x1="-1.52" y1="-0.7" x2="-1.42" y2="-0.7" width="0.127" layer="21"/>
-<wire x1="1.52" y1="0.7" x2="1.42" y2="0.7" width="0.127" layer="21"/>
-<wire x1="1.52" y1="-0.7" x2="1.42" y2="-0.7" width="0.127" layer="21"/>
-<wire x1="-1.77" y1="1.93" x2="-1.77" y2="-1.93" width="0.05" layer="39"/>
-<wire x1="-1.77" y1="-1.93" x2="1.77" y2="-1.93" width="0.05" layer="39"/>
-<wire x1="1.77" y1="-1.93" x2="1.77" y2="1.93" width="0.05" layer="39"/>
-<wire x1="1.77" y1="1.93" x2="-1.77" y2="1.93" width="0.05" layer="39"/>
-<circle x="-0.827" y="-2.1" radius="0.1" width="0.2" layer="21"/>
-<text x="-1.908490625" y="2.16295" size="0.651190625" layer="25">&gt;NAME</text>
-<text x="-1.90533125" y="-3.04853125" size="0.6501125" layer="27">&gt;VALUE</text>
-<smd name="1" x="-0.76" y="-1.025" dx="0.99" dy="1.3" layer="1" roundness="15"/>
-<smd name="2" x="0.96" y="-1.025" dx="0.59" dy="1.3" layer="1" roundness="15"/>
-<smd name="3" x="0.96" y="1.025" dx="0.59" dy="1.3" layer="1" roundness="15"/>
-<smd name="4" x="-0.96" y="1.025" dx="0.59" dy="1.3" layer="1" roundness="15"/>
-</package>
 <package name="AMPHENOL_10118192-0001LF" urn="urn:adsk.eagle:footprint:7172901/1" library_version="25">
 <wire x1="-3.75" y1="0.225" x2="3.75" y2="0.225" width="0.127" layer="51"/>
 <wire x1="3.75" y1="0.225" x2="3.75" y2="-4.125" width="0.127" layer="51"/>
@@ -773,7 +750,7 @@
 <text x="0" y="0.5179" size="0.4064" layer="25" font="vector" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-0.5179" size="0.4064" layer="27" font="vector" align="top-center">&gt;VALUE</text>
 </package>
-<package name="HDRV6W50P200_3X2_400X600X550B" urn="urn:adsk.eagle:footprint:8324095/2" library_version="48" library_locally_modified="yes">
+<package name="ICSP_3X2_2MM_STRAIGHT" urn="urn:adsk.eagle:footprint:8324095/3" library_version="54" library_locally_modified="yes">
 <description>Three-row, 6-pin Pin Header (Male) Straight, 2.00 mm (0.08 in) row pitch, 2.00 mm (0.08 in) col pitch, 4.00 mm mating length, 4.00 X 6.00 X 5.50 mm body
 &lt;p&gt;Three-row (3X2), 6-pin Pin Header (Male) Straight package with 2.00 mm (0.08 in) row pitch, 2.00 mm (0.08 in) col pitch, 0.50 mm lead width, 2.60 mm tail length and 4.00 mm mating length with overall size 4.00 X 6.00 X 5.50 mm, pin pattern - counter-clockwise from bottom left&lt;/p&gt;</description>
 <circle x="0" y="-1.5116" radius="0.25" width="0" layer="21"/>
@@ -793,7 +770,7 @@
 <pad name="6" x="2" y="4" drill="0.9071" diameter="1.5071" shape="square"/>
 <text x="-1.0706" y="-1.016" size="1.27" layer="25" font="vector" ratio="11" rot="R90">&gt;NAME</text>
 </package>
-<package name="HDRRA6W64P254_2X3_762X254X508B" urn="urn:adsk.eagle:footprint:8324117/2" library_version="48" library_locally_modified="yes">
+<package name="ICSP_2X3_2.54_RIGHT" urn="urn:adsk.eagle:footprint:8324117/3" library_version="54" library_locally_modified="yes">
 <description>Double-row, 6-pin Pin Header (Male) Right Angle, 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 5.84 mm mating length, 7.62 X 2.54 X 5.08 mm body
 &lt;p&gt;Double-row (2X3), 6-pin Pin Header (Male) Right Angle package with 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 0.64 mm lead width, 3.00 mm tail length and 5.84 mm mating length with body size 7.62 X 2.54 X 5.08 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
 <circle x="-1.3565" y="0" radius="0.25" width="0" layer="21"/>
@@ -871,26 +848,6 @@
 <smd name="5" x="1.27" y="0" dx="1.3208" dy="0.5588" layer="1"/>
 <smd name="6" x="1.27" y="0.9398" dx="1.3208" dy="0.5588" layer="1"/>
 </package>
-<package name="HDRV6W64P254_3X2_508X762X838B" urn="urn:adsk.eagle:footprint:8324108/2" library_version="48" library_locally_modified="yes">
-<description>Three-row, 6-pin Pin Header (Male) Straight, 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 5.84 mm mating length, 5.08 X 7.62 X 8.38 mm body
-&lt;p&gt;Three-row (3X2), 6-pin Pin Header (Male) Straight package with 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 0.64 mm lead width, 3.00 mm tail length and 5.84 mm mating length with overall size 5.08 X 7.62 X 8.38 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
-<circle x="0" y="1.774" radius="0.25" width="0" layer="21"/>
-<wire x1="3.81" y1="-6.35" x2="-1.27" y2="-6.35" width="0.12" layer="21"/>
-<wire x1="-1.27" y1="-6.35" x2="-1.27" y2="1.27" width="0.12" layer="21"/>
-<wire x1="-1.27" y1="1.27" x2="3.81" y2="1.27" width="0.12" layer="21"/>
-<wire x1="3.81" y1="1.27" x2="3.81" y2="-6.35" width="0.12" layer="21"/>
-<wire x1="3.81" y1="-6.35" x2="-1.27" y2="-6.35" width="0.12" layer="51"/>
-<wire x1="-1.27" y1="-6.35" x2="-1.27" y2="1.27" width="0.12" layer="51"/>
-<wire x1="-1.27" y1="1.27" x2="3.81" y2="1.27" width="0.12" layer="51"/>
-<wire x1="3.81" y1="1.27" x2="3.81" y2="-6.35" width="0.12" layer="51"/>
-<pad name="1" x="0" y="0" drill="1.1051" diameter="1.7051"/>
-<pad name="2" x="2.54" y="0" drill="1.1051" diameter="1.7051"/>
-<pad name="3" x="2.54" y="-2.54" drill="1.1051" diameter="1.7051"/>
-<pad name="4" x="0" y="-2.54" drill="1.1051" diameter="1.7051"/>
-<pad name="5" x="0" y="-5.08" drill="1.1051" diameter="1.7051"/>
-<pad name="6" x="2.54" y="-5.08" drill="1.1051" diameter="1.7051"/>
-<text x="-1.389" y="-6.35" size="1.27" layer="25" font="vector" ratio="11" rot="R90">&gt;NAME</text>
-</package>
 <package name="CAPC2012X130" urn="urn:adsk.eagle:footprint:5225118/2" library_version="52">
 <description>Chip, 2.00 X 1.25 X 1.30 mm body
 &lt;p&gt;Chip package with body size 2.00 X 1.25 X 1.30 mm&lt;/p&gt;</description>
@@ -939,6 +896,105 @@ Metric Code Size 1608</description>
 <vertex x="0.381" y="0"/>
 <vertex x="-0.254" y="0.635"/>
 <vertex x="-0.254" y="-0.635"/>
+</polygon>
+</package>
+<package name="ICSP_3X2_2.54_STRAIGHT" urn="urn:adsk.eagle:footprint:8324108/3" library_version="54" library_locally_modified="yes">
+<description>Three-row, 6-pin Pin Header (Male) Straight, 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 5.84 mm mating length, 5.08 X 7.62 X 8.38 mm body
+&lt;p&gt;Three-row (3X2), 6-pin Pin Header (Male) Straight package with 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 0.64 mm lead width, 3.00 mm tail length and 5.84 mm mating length with overall size 5.08 X 7.62 X 8.38 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
+<circle x="0" y="1.774" radius="0.25" width="0" layer="21"/>
+<wire x1="3.81" y1="-6.35" x2="-1.27" y2="-6.35" width="0.12" layer="21"/>
+<wire x1="-1.27" y1="-6.35" x2="-1.27" y2="1.27" width="0.12" layer="21"/>
+<wire x1="-1.27" y1="1.27" x2="3.81" y2="1.27" width="0.12" layer="21"/>
+<wire x1="3.81" y1="1.27" x2="3.81" y2="-6.35" width="0.12" layer="21"/>
+<wire x1="3.81" y1="-6.35" x2="-1.27" y2="-6.35" width="0.12" layer="51"/>
+<wire x1="-1.27" y1="-6.35" x2="-1.27" y2="1.27" width="0.12" layer="51"/>
+<wire x1="-1.27" y1="1.27" x2="3.81" y2="1.27" width="0.12" layer="51"/>
+<wire x1="3.81" y1="1.27" x2="3.81" y2="-6.35" width="0.12" layer="51"/>
+<pad name="1" x="0" y="0" drill="1.1051" diameter="1.7051"/>
+<pad name="2" x="2.54" y="0" drill="1.1051" diameter="1.7051"/>
+<pad name="3" x="2.54" y="-2.54" drill="1.1051" diameter="1.7051"/>
+<pad name="4" x="0" y="-2.54" drill="1.1051" diameter="1.7051"/>
+<pad name="5" x="0" y="-5.08" drill="1.1051" diameter="1.7051"/>
+<pad name="6" x="2.54" y="-5.08" drill="1.1051" diameter="1.7051"/>
+<text x="-1.389" y="-6.35" size="1.27" layer="25" font="vector" ratio="11" rot="R90">&gt;NAME</text>
+</package>
+<package name="ICSP_3X2_2X1.5_SPRING_CONTACTS" urn="urn:adsk.eagle:footprint:8763830/1" library_version="55">
+<description>Three-row, 6-pin Pin Header (Male) Straight, 2.00 mm (0.08 in) row pitch, 2.00 mm (0.08 in) col pitch, 4.00 mm mating length, 4.00 X 6.00 X 5.50 mm body
+&lt;p&gt;Three-row (3X2), 6-pin Pin Header (Male) Straight package with 2.00 mm (0.08 in) row pitch, 2.00 mm (0.08 in) col pitch, 0.50 mm lead width, 2.60 mm tail length and 4.00 mm mating length with overall size 4.00 X 6.00 X 5.50 mm, pin pattern - counter-clockwise from bottom left&lt;/p&gt;</description>
+<circle x="0" y="-1.5116" radius="0.25" width="0" layer="21"/>
+<wire x1="3.0076" y1="-1.0076" x2="-1.0076" y2="-1.0076" width="0.12" layer="21"/>
+<wire x1="-1.0076" y1="-1.0076" x2="-1.0076" y2="5.0076" width="0.12" layer="21"/>
+<wire x1="-1.0076" y1="5.0076" x2="3.0076" y2="5.0076" width="0.12" layer="21"/>
+<wire x1="3.0076" y1="5.0076" x2="3.0076" y2="-1.0076" width="0.12" layer="21"/>
+<wire x1="3" y1="-1" x2="-1" y2="-1" width="0.12" layer="51"/>
+<wire x1="-1" y1="-1" x2="-1" y2="5" width="0.12" layer="51"/>
+<wire x1="-1" y1="5" x2="3" y2="5" width="0.12" layer="51"/>
+<wire x1="3" y1="5" x2="3" y2="-1" width="0.12" layer="51"/>
+<pad name="1" x="0" y="0" drill="0.7" diameter="1.25" shape="square"/>
+<pad name="2" x="2" y="0" drill="0.7" diameter="1.25" shape="square"/>
+<pad name="3" x="2" y="2" drill="0.7" diameter="1.25" shape="square"/>
+<pad name="4" x="0" y="2" drill="0.7" diameter="1.25" shape="square"/>
+<pad name="5" x="0" y="4" drill="0.7" diameter="1.25" shape="square"/>
+<pad name="6" x="2" y="4" drill="0.7" diameter="1.25" shape="square"/>
+<text x="-2.0866" y="-0.762" size="1.27" layer="25" font="vector" ratio="11" rot="R90">&gt;NAME</text>
+<smd name="P$1" x="-0.508" y="0" dx="2.5" dy="1.5" layer="1" roundness="10"/>
+<smd name="P$2" x="2.50825" y="0" dx="2.5" dy="1.5" layer="1" roundness="10"/>
+<smd name="P$3" x="2.50825" y="2.00025" dx="2.5" dy="1.5" layer="1" roundness="10"/>
+<smd name="P$4" x="-0.508" y="2.00025" dx="2.5" dy="1.5" layer="1" roundness="10"/>
+<smd name="P$5" x="-0.508" y="4.0005" dx="2.5" dy="1.5" layer="1" roundness="10"/>
+<smd name="P$6" x="2.50825" y="4.0005" dx="2.5" dy="1.5" layer="1" roundness="10"/>
+</package>
+<package name="ICSP_3X2_3.48X1.1_SPRING_CONTACTS" urn="urn:adsk.eagle:footprint:8763831/1" library_version="55">
+<description>Three-row, 6-pin Pin Header (Male) Straight, 2.00 mm (0.08 in) row pitch, 2.00 mm (0.08 in) col pitch, 4.00 mm mating length, 4.00 X 6.00 X 5.50 mm body
+&lt;p&gt;Three-row (3X2), 6-pin Pin Header (Male) Straight package with 2.00 mm (0.08 in) row pitch, 2.00 mm (0.08 in) col pitch, 0.50 mm lead width, 2.60 mm tail length and 4.00 mm mating length with overall size 4.00 X 6.00 X 5.50 mm, pin pattern - counter-clockwise from bottom left&lt;/p&gt;</description>
+<circle x="0" y="-1.5116" radius="0.25" width="0" layer="21"/>
+<wire x1="3.0076" y1="-1.0076" x2="-1.0076" y2="-1.0076" width="0.12" layer="21"/>
+<wire x1="-1.0076" y1="-1.0076" x2="-1.0076" y2="5.0076" width="0.12" layer="21"/>
+<wire x1="-1.0076" y1="5.0076" x2="3.0076" y2="5.0076" width="0.12" layer="21"/>
+<wire x1="3.0076" y1="5.0076" x2="3.0076" y2="-1.0076" width="0.12" layer="21"/>
+<wire x1="3" y1="-1" x2="-1" y2="-1" width="0.12" layer="51"/>
+<wire x1="-1" y1="-1" x2="-1" y2="5" width="0.12" layer="51"/>
+<wire x1="-1" y1="5" x2="3" y2="5" width="0.12" layer="51"/>
+<wire x1="3" y1="5" x2="3" y2="-1" width="0.12" layer="51"/>
+<pad name="1" x="0" y="0" drill="0.7" diameter="1.25" shape="square"/>
+<pad name="2" x="2" y="0" drill="0.7" diameter="1.25" shape="square"/>
+<pad name="3" x="2" y="2" drill="0.7" diameter="1.25" shape="square"/>
+<pad name="4" x="0" y="2" drill="0.7" diameter="1.25" shape="square"/>
+<pad name="5" x="0" y="4" drill="0.7" diameter="1.25" shape="square"/>
+<pad name="6" x="2" y="4" drill="0.7" diameter="1.25" shape="square"/>
+<text x="-1.8326" y="-0.889" size="1.27" layer="25" font="vector" ratio="11" rot="R90">&gt;NAME</text>
+<smd name="P$1" x="-0.254" y="0" dx="1.75" dy="1.3" layer="1" roundness="10"/>
+<smd name="P$2" x="2.25425" y="0" dx="1.75" dy="1.3" layer="1" roundness="10"/>
+<smd name="P$3" x="2.25425" y="2.00025" dx="1.75" dy="1.3" layer="1" roundness="10"/>
+<smd name="P$4" x="-0.254" y="2.00025" dx="1.75" dy="1.3" layer="1" roundness="10"/>
+<smd name="P$5" x="-0.254" y="4.0005" dx="1.75" dy="1.3" layer="1" roundness="10"/>
+<smd name="P$6" x="2.25425" y="4.0005" dx="1.75" dy="1.3" layer="1" roundness="10"/>
+</package>
+<package name="SPRING_CONTACT_2.5X1.5" urn="urn:adsk.eagle:footprint:8763768/1" library_version="56" library_locally_modified="yes">
+<description>Spring loaded contact
+https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</description>
+<smd name="TP" x="0" y="0" dx="2" dy="1.5" layer="1"/>
+<pad name="TH" x="0" y="0" drill="0.7" shape="square"/>
+<wire x1="-1.0795" y1="0.889" x2="1.651" y2="0.889" width="0.127" layer="21"/>
+<wire x1="1.651" y1="0.889" x2="1.651" y2="-0.889" width="0.127" layer="21"/>
+<wire x1="1.651" y1="-0.889" x2="-1.0795" y2="-0.889" width="0.127" layer="21"/>
+<wire x1="-1.0795" y1="-0.889" x2="-1.0795" y2="0.889" width="0.127" layer="21"/>
+</package>
+<package name="SPRING_CONTACT_3.48X1.10" urn="urn:adsk.eagle:footprint:8763767/1" library_version="56" library_locally_modified="yes">
+<description>Spring loaded contact
+https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</description>
+<smd name="TP" x="0" y="0" dx="1.75" dy="1.25" layer="1"/>
+<pad name="TH" x="0" y="0" drill="0.7" shape="square"/>
+<wire x1="-0.9525" y1="0.762" x2="2.54" y2="0.762" width="0.127" layer="21"/>
+<wire x1="2.54" y1="0.762" x2="2.54" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="2.54" y1="-0.762" x2="-0.9525" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="-0.9525" y1="-0.762" x2="-0.9525" y2="0.762" width="0.127" layer="21"/>
+<polygon width="0.127" layer="21">
+<vertex x="2.54" y="0.762"/>
+<vertex x="2.54" y="-0.762"/>
+<vertex x="1.905" y="-0.762"/>
+<vertex x="1.8415" y="-0.762"/>
+<vertex x="1.8415" y="0.762"/>
 </polygon>
 </package>
 </packages>
@@ -1229,11 +1285,6 @@ Metric Code Size 1608</description>
 <packageinstance name="TP13SQ-HOLE"/>
 </packageinstances>
 </package3d>
-<package3d name="SOT143" urn="urn:adsk.eagle:package:7172834/2" type="model" library_version="26">
-<packageinstances>
-<packageinstance name="SOT143"/>
-</packageinstances>
-</package3d>
 <package3d name="AMPHENOL_10118192-0001LF" urn="urn:adsk.eagle:package:7172902/2" type="model" library_version="26">
 <packageinstances>
 <packageinstance name="AMPHENOL_10118192-0001LF"/>
@@ -1263,18 +1314,18 @@ Metric Code Size 1608</description>
 <packageinstance name="CAPC1005X50"/>
 </packageinstances>
 </package3d>
-<package3d name="HDRV6W50P200_3X2_400X600X550B" urn="urn:adsk.eagle:package:8324077/2" type="model" library_version="48" library_locally_modified="yes">
+<package3d name="HDRV6W50P200_3X2_400X600X550B" urn="urn:adsk.eagle:package:8324077/3" type="model" library_version="54" library_locally_modified="yes">
 <description>Three-row, 6-pin Pin Header (Male) Straight, 2.00 mm (0.08 in) row pitch, 2.00 mm (0.08 in) col pitch, 4.00 mm mating length, 4.00 X 6.00 X 5.50 mm body
 &lt;p&gt;Three-row (3X2), 6-pin Pin Header (Male) Straight package with 2.00 mm (0.08 in) row pitch, 2.00 mm (0.08 in) col pitch, 0.50 mm lead width, 2.60 mm tail length and 4.00 mm mating length with overall size 4.00 X 6.00 X 5.50 mm, pin pattern - counter-clockwise from bottom left&lt;/p&gt;</description>
 <packageinstances>
-<packageinstance name="HDRV6W50P200_3X2_400X600X550B"/>
+<packageinstance name="ICSP_3X2_2MM_STRAIGHT"/>
 </packageinstances>
 </package3d>
-<package3d name="HDRRA6W64P254_2X3_762X254X508B" urn="urn:adsk.eagle:package:8324115/2" type="model" library_version="48" library_locally_modified="yes">
+<package3d name="HDRRA6W64P254_2X3_762X254X508B" urn="urn:adsk.eagle:package:8324115/3" type="model" library_version="54" library_locally_modified="yes">
 <description>Double-row, 6-pin Pin Header (Male) Right Angle, 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 5.84 mm mating length, 7.62 X 2.54 X 5.08 mm body
 &lt;p&gt;Double-row (2X3), 6-pin Pin Header (Male) Right Angle package with 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 0.64 mm lead width, 3.00 mm tail length and 5.84 mm mating length with body size 7.62 X 2.54 X 5.08 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
 <packageinstances>
-<packageinstance name="HDRRA6W64P254_2X3_762X254X508B"/>
+<packageinstance name="ICSP_2X3_2.54_RIGHT"/>
 </packageinstances>
 </package3d>
 <package3d name="SOT95P275X110-6N" urn="urn:adsk.eagle:package:8452336/3" type="model" library_version="45">
@@ -1298,13 +1349,6 @@ Metric Code Size 1608</description>
 <description>TEST PAD</description>
 <packageinstances>
 <packageinstance name="B1,27"/>
-</packageinstances>
-</package3d>
-<package3d name="HDRV6W64P254_3X2_508X762X838B" urn="urn:adsk.eagle:package:8324106/2" type="model" library_version="48" library_locally_modified="yes">
-<description>Three-row, 6-pin Pin Header (Male) Straight, 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 5.84 mm mating length, 5.08 X 7.62 X 8.38 mm body
-&lt;p&gt;Three-row (3X2), 6-pin Pin Header (Male) Straight package with 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 0.64 mm lead width, 3.00 mm tail length and 5.84 mm mating length with overall size 5.08 X 7.62 X 8.38 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
-<packageinstances>
-<packageinstance name="HDRV6W64P254_3X2_508X762X838B"/>
 </packageinstances>
 </package3d>
 <package3d name="CAPC2012X130" urn="urn:adsk.eagle:package:5225034/2" type="model" library_version="52">
@@ -1331,6 +1375,41 @@ Metric Code Size 1608</description>
 <package3d name="DO-219AC" urn="urn:adsk.eagle:package:8452796/2" type="model" library_version="52">
 <packageinstances>
 <packageinstance name="DO-219AC"/>
+</packageinstances>
+</package3d>
+<package3d name="HDRV6W64P254_3X2_508X762X838B" urn="urn:adsk.eagle:package:8324106/3" type="model" library_version="54" library_locally_modified="yes">
+<description>Three-row, 6-pin Pin Header (Male) Straight, 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 5.84 mm mating length, 5.08 X 7.62 X 8.38 mm body
+&lt;p&gt;Three-row (3X2), 6-pin Pin Header (Male) Straight package with 2.54 mm (0.10 in) row pitch, 2.54 mm (0.10 in) col pitch, 0.64 mm lead width, 3.00 mm tail length and 5.84 mm mating length with overall size 5.08 X 7.62 X 8.38 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="ICSP_3X2_2.54_STRAIGHT"/>
+</packageinstances>
+</package3d>
+<package3d name="ICSP_3X2_3.48X1.1_SPRING_CONTACTS" urn="urn:adsk.eagle:package:8763833/2" type="model" library_version="56">
+<description>Three-row, 6-pin Pin Header (Male) Straight, 2.00 mm (0.08 in) row pitch, 2.00 mm (0.08 in) col pitch, 4.00 mm mating length, 4.00 X 6.00 X 5.50 mm body
+&lt;p&gt;Three-row (3X2), 6-pin Pin Header (Male) Straight package with 2.00 mm (0.08 in) row pitch, 2.00 mm (0.08 in) col pitch, 0.50 mm lead width, 2.60 mm tail length and 4.00 mm mating length with overall size 4.00 X 6.00 X 5.50 mm, pin pattern - counter-clockwise from bottom left&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="ICSP_3X2_3.48X1.1_SPRING_CONTACTS"/>
+</packageinstances>
+</package3d>
+<package3d name="ICSP_3X2_2X1.5_SPRING_CONTACTS" urn="urn:adsk.eagle:package:8763832/2" type="model" library_version="56">
+<description>Three-row, 6-pin Pin Header (Male) Straight, 2.00 mm (0.08 in) row pitch, 2.00 mm (0.08 in) col pitch, 4.00 mm mating length, 4.00 X 6.00 X 5.50 mm body
+&lt;p&gt;Three-row (3X2), 6-pin Pin Header (Male) Straight package with 2.00 mm (0.08 in) row pitch, 2.00 mm (0.08 in) col pitch, 0.50 mm lead width, 2.60 mm tail length and 4.00 mm mating length with overall size 4.00 X 6.00 X 5.50 mm, pin pattern - counter-clockwise from bottom left&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="ICSP_3X2_2X1.5_SPRING_CONTACTS"/>
+</packageinstances>
+</package3d>
+<package3d name="SPRING_CONTACT_2.5X1.5" urn="urn:adsk.eagle:package:8763771/3" type="model" library_version="56" library_locally_modified="yes">
+<description>Spring loaded contact
+https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</description>
+<packageinstances>
+<packageinstance name="SPRING_CONTACT_2.5X1.5"/>
+</packageinstances>
+</package3d>
+<package3d name="SPRING_CONTACT_3.48X1.10" urn="urn:adsk.eagle:package:8763770/2" type="model" library_version="56" library_locally_modified="yes">
+<description>Spring loaded contact
+https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</description>
+<packageinstances>
+<packageinstance name="SPRING_CONTACT_3.48X1.10"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -1372,58 +1451,13 @@ Metric Code Size 1608</description>
 <pin name="MOUNT" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 <text x="-2.286" y="3.1242" size="1.778" layer="95">&gt;NAME</text>
 </symbol>
-<symbol name="TP" urn="urn:adsk.eagle:symbol:7170910/1" library_version="23">
+<symbol name="TP" urn="urn:adsk.eagle:symbol:7170910/1" locally_modified="yes" library_version="56" library_locally_modified="yes">
 <wire x1="-0.762" y1="-0.762" x2="0" y2="0" width="0.254" layer="94"/>
 <wire x1="0" y1="0" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
 <wire x1="0.762" y1="-0.762" x2="0" y2="-1.524" width="0.254" layer="94"/>
 <wire x1="0" y1="-1.524" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
 <text x="-1.27" y="1.27" size="1.778" layer="95">&gt;NAME</text>
-<text x="1.27" y="-1.27" size="1.778" layer="97">&gt;TP_SIGNAL_NAME</text>
 <pin name="TP" x="0" y="-2.54" visible="off" length="short" direction="in" rot="R90"/>
-</symbol>
-<symbol name="SP0503BAHTG" urn="urn:adsk.eagle:symbol:7172829/1" library_version="24">
-<wire x1="-5.08" y1="5.08" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-5.08" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="5.08" y2="5.08" width="0.254" layer="94"/>
-<wire x1="5.08" y1="5.08" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
-<wire x1="2.54" y1="2.54" x2="2.54" y2="3.81" width="0.254" layer="94"/>
-<wire x1="2.54" y1="2.54" x2="2.54" y2="1.27" width="0.254" layer="94"/>
-<wire x1="2.54" y1="1.27" x2="3.81" y2="2.54" width="0.254" layer="94"/>
-<wire x1="3.81" y1="2.54" x2="2.54" y2="3.81" width="0.254" layer="94"/>
-<wire x1="3.81" y1="3.81" x2="3.81" y2="2.54" width="0.254" layer="94"/>
-<wire x1="3.81" y1="2.54" x2="3.81" y2="1.27" width="0.254" layer="94"/>
-<wire x1="3.81" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-2.54" x2="-3.81" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-3.81" y1="-2.54" x2="-3.81" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="-3.81" y1="-2.54" x2="-3.81" y2="-3.81" width="0.254" layer="94"/>
-<wire x1="-3.81" y1="-2.54" x2="-2.54" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-1.27" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="-3.81" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-3.81" x2="-3.81" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="-2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-2.54" x2="2.54" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-2.54" x2="2.54" y2="-3.81" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-3.81" x2="3.81" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="3.81" y1="-2.54" x2="2.54" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="3.81" y1="-1.27" x2="3.81" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="3.81" y1="-2.54" x2="3.81" y2="-3.81" width="0.254" layer="94"/>
-<wire x1="3.81" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
-<text x="-5.40571875" y="5.60593125" size="1.801909375" layer="95">&gt;NAME</text>
-<text x="-5.602359375" y="-7.503159375" size="1.800759375" layer="96">&gt;VALUE</text>
-<circle x="0" y="2.54" radius="0.254" width="0.254" layer="94"/>
-<circle x="0" y="-2.54" radius="0.254" width="0.254" layer="94"/>
-<pin name="1" x="-10.16" y="2.54" visible="pad" length="middle" direction="pas"/>
-<pin name="2" x="-10.16" y="-2.54" visible="pad" length="middle" direction="pas"/>
-<pin name="4" x="10.16" y="2.54" visible="pad" length="middle" direction="pas" rot="R180"/>
-<pin name="3" x="10.16" y="-2.54" visible="pad" length="middle" direction="pas" rot="R180"/>
 </symbol>
 <symbol name="10118192-0001LF" urn="urn:adsk.eagle:symbol:7172899/1" library_version="25">
 <wire x1="-5.08" y1="10.16" x2="5.08" y2="10.16" width="0.1524" layer="94"/>
@@ -1790,7 +1824,7 @@ Metric Code Size 1608</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="TP" urn="urn:adsk.eagle:component:7170914/4" prefix="TP" library_version="48" library_locally_modified="yes">
+<deviceset name="TP" urn="urn:adsk.eagle:component:7170914/4" locally_modified="yes" prefix="TP" library_version="56" library_locally_modified="yes">
 <description>&lt;b&gt;Test pad&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="TP" x="0" y="0"/>
@@ -2301,33 +2335,26 @@ Metric Code Size 1608</description>
 <technology name=""/>
 </technologies>
 </device>
-</devices>
-</deviceset>
-<deviceset name="SP0503BAHTG" urn="urn:adsk.eagle:component:7172835/2" prefix="D" library_version="26">
-<description>TVS DIODE 5.5VWM 8.5VC SOT143</description>
-<gates>
-<gate name="G$1" symbol="SP0503BAHTG" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SOT143">
+<device name="SPRING_CONTACT_2X1.5" package="SPRING_CONTACT_2.5X1.5">
 <connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="TP" pad="TH TP"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:7172834/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8763771/3"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="DESCRIPTION" value=" SP050xBA Series 8 V 30 pF Uni-Directional SMT TVS Avalanche Diode Array SOT-143 "/>
-<attribute name="DIGI-KEY_PART_NUMBER" value="F2715CT-ND"/>
-<attribute name="DIGI-KEY_PURCHASE_URL" value="https://www.digikey.com/product-detail/en/littelfuse-inc/SP0503BAHTG/F2715CT-ND/1154322?utm_source=snapeda&amp;utm_medium=aggregator&amp;utm_campaign=symbol"/>
-<attribute name="MF" value="Littelfuse Inc."/>
-<attribute name="MP" value="SP0503BAHTG"/>
-<attribute name="PACKAGE" value="SOT-143 Littelfuse"/>
-</technology>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SPRING_CONTACT_3.5X1.1" package="SPRING_CONTACT_3.48X1.10">
+<connects>
+<connect gate="G$1" pin="TP" pad="TH TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8763770/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -2489,12 +2516,12 @@ Metric Code Size 1608</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="ICSP_HEADER" urn="urn:adsk.eagle:component:8324124/2" prefix="J" library_version="48" library_locally_modified="yes">
+<deviceset name="ICSP_HEADER" urn="urn:adsk.eagle:component:8324124/5" prefix="J" library_version="56">
 <gates>
 <gate name="G$1" symbol="ICSP" x="0" y="0"/>
 </gates>
 <devices>
-<device name="ICSP-2MM" package="HDRV6W50P200_3X2_400X600X550B">
+<device name="ICSP-2MM" package="ICSP_3X2_2MM_STRAIGHT">
 <connects>
 <connect gate="G$1" pin="GND" pad="2"/>
 <connect gate="G$1" pin="MISO" pad="5"/>
@@ -2504,13 +2531,13 @@ Metric Code Size 1608</description>
 <connect gate="G$1" pin="VCC" pad="6"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8324077/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8324077/3"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
 </device>
-<device name="ICSP-2.54MM" package="HDRV6W64P254_3X2_508X762X838B">
+<device name="ICSP-2.54MM" package="ICSP_3X2_2.54_STRAIGHT">
 <connects>
 <connect gate="G$1" pin="GND" pad="6"/>
 <connect gate="G$1" pin="MISO" pad="1"/>
@@ -2520,13 +2547,13 @@ Metric Code Size 1608</description>
 <connect gate="G$1" pin="VCC" pad="2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8324106/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8324106/3"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
 </device>
-<device name="ICSP_2.54MM_RIGHT" package="HDRRA6W64P254_2X3_762X254X508B">
+<device name="ICSP_2.54MM_RIGHT" package="ICSP_2X3_2.54_RIGHT">
 <connects>
 <connect gate="G$1" pin="GND" pad="3"/>
 <connect gate="G$1" pin="MISO" pad="6"/>
@@ -2536,7 +2563,39 @@ Metric Code Size 1608</description>
 <connect gate="G$1" pin="VCC" pad="1"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8324115/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8324115/3"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SPRING_2X1.5" package="ICSP_3X2_2X1.5_SPRING_CONTACTS">
+<connects>
+<connect gate="G$1" pin="GND" pad="2 P$2"/>
+<connect gate="G$1" pin="MISO" pad="5 P$5"/>
+<connect gate="G$1" pin="MOSI" pad="3 P$3"/>
+<connect gate="G$1" pin="RST" pad="1 P$1"/>
+<connect gate="G$1" pin="SCK" pad="4 P$4"/>
+<connect gate="G$1" pin="VCC" pad="6 P$6"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8763832/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SPRING_3.48X1.1" package="ICSP_3X2_3.48X1.1_SPRING_CONTACTS">
+<connects>
+<connect gate="G$1" pin="GND" pad="1 P$1"/>
+<connect gate="G$1" pin="MISO" pad="6 P$6"/>
+<connect gate="G$1" pin="MOSI" pad="4 P$4"/>
+<connect gate="G$1" pin="RST" pad="2 P$2" route="any"/>
+<connect gate="G$1" pin="SCK" pad="3 P$3"/>
+<connect gate="G$1" pin="VCC" pad="5 P$5" route="any"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8763833/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -2701,15 +2760,14 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="R3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2"/>
-<part name="RXD" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="" package3d_urn="urn:adsk.eagle:package:7170913/3" value="TP"/>
-<part name="TXD" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="" package3d_urn="urn:adsk.eagle:package:7170913/3" value="TP"/>
-<part name="GND" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="" package3d_urn="urn:adsk.eagle:package:7170913/3" value="TP"/>
-<part name="+5V" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="" package3d_urn="urn:adsk.eagle:package:7170913/3" value="TP"/>
+<part name="RXD" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/2" value="TPSPRING_CONTACT_3.5X1.1"/>
+<part name="TXD" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/2" value="TPSPRING_CONTACT_3.5X1.1"/>
+<part name="GND" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/2" value="TPSPRING_CONTACT_3.5X1.1"/>
+<part name="+5V" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/2" value="TPSPRING_CONTACT_3.5X1.1"/>
 <part name="SUPPLY7" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="RST." library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="" package3d_urn="urn:adsk.eagle:package:7170913/3" value="TP"/>
+<part name="RST." library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/2" value="TPSPRING_CONTACT_3.5X1.1"/>
 <part name="PWR" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-LED_SMD-LED-CLEAR-BLUE(0603)" device="LED_0603" package3d_urn="urn:adsk.eagle:package:5224536/3"/>
 <part name="R8" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2"/>
-<part name="D1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SP0503BAHTG" device="" package3d_urn="urn:adsk.eagle:package:7172834/2"/>
 <part name="J1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="10118192-0001LF" device="" package3d_urn="urn:adsk.eagle:package:7172902/2"/>
 <part name="RESET" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-SWITCH_SMD-BUTTON(2P-3.0X2.5X1.2+0.4MM)" device="SW2-2.6-3X2.5X1.2" package3d_urn="urn:adsk.eagle:package:5224532/4"/>
 <part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -2720,11 +2778,11 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="R4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="10K"/>
 <part name="C1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="0.1uF"/>
 <part name="C2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="0.1uF"/>
-<part name="ICSP1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ICSP_HEADER" device="ICSP_2.54MM_RIGHT" package3d_urn="urn:adsk.eagle:package:8324115/2"/>
-<part name="ICSP0" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ICSP_HEADER" device="ICSP-2MM" package3d_urn="urn:adsk.eagle:package:8324077/2"/>
+<part name="ICSP1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ICSP_HEADER" device="ICSP_2.54MM_RIGHT" package3d_urn="urn:adsk.eagle:package:8324115/3"/>
+<part name="ICSP0" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ICSP_HEADER" device="SPRING_3.48X1.1" package3d_urn="urn:adsk.eagle:package:8763833/2" value="ICSP_HEADERSPRING_3.48X1.1"/>
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="D2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TVS_DIODE_CM1293A" device="" package3d_urn="urn:adsk.eagle:package:8452336/3"/>
-<part name="ICSP2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ICSP_HEADER" device="ICSP-2MM" package3d_urn="urn:adsk.eagle:package:8324077/2" value="ICSP_HEADERICSP-2MM"/>
+<part name="ICSP2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ICSP_HEADER" device="SPRING_3.48X1.1" package3d_urn="urn:adsk.eagle:package:8763833/2" value="ICSP_HEADERSPRING_3.48X1.1"/>
 <part name="C3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="0.1uF"/>
 <part name="C4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-CAPACITOR_CERAMIC-10UF-25V-10%-X5R(0805)" device="CAP_0805-3D" package3d_urn="urn:adsk.eagle:package:5225034/2" value="4.7uF"/>
 <part name="C5" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-CAPACITOR_CERAMIC-10UF-25V-10%-X5R(0805)" device="CAP_0805-3D" package3d_urn="urn:adsk.eagle:package:5225034/2" value="4.7uF"/>
@@ -2788,10 +2846,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="R8" gate="G$1" x="-17.78" y="-104.14" smashed="yes">
 <attribute name="NAME" x="-21.59" y="-102.87" size="1.27" layer="95" ratio="10"/>
 <attribute name="VALUE" x="-21.59" y="-106.68" size="1.27" layer="96" ratio="10"/>
-</instance>
-<instance part="D1" gate="G$1" x="-12.7" y="33.02" smashed="yes" rot="R180">
-<attribute name="NAME" x="-7.29428125" y="27.41406875" size="1.801909375" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-7.097640625" y="40.523159375" size="1.800759375" layer="96" rot="R180"/>
 </instance>
 <instance part="J1" gate="G$1" x="-96.52" y="-17.78" smashed="yes" rot="MR0">
 <attribute name="NAME" x="-91.43381875" y="-7.099" size="1.780159375" layer="95" rot="MR0"/>
@@ -2913,8 +2967,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <junction x="-76.2" y="-2.54"/>
 </segment>
 <segment>
-<pinref part="D1" gate="G$1" pin="1"/>
-<wire x1="-2.54" y1="30.48" x2="0" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="0" y1="30.48" x2="10.16" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="30.48" x2="10.16" y2="-17.78" width="0.1524" layer="91"/>
 <pinref part="SUPPLY1" gate="GND" pin="GND"/>
@@ -2937,7 +2989,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="D2" gate="G$1" pin="V-"/>
 <wire x1="-17.78" y1="58.42" x2="0" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="0" y1="58.42" x2="0" y2="30.48" width="0.1524" layer="91"/>
-<junction x="0" y="30.48"/>
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="12.7" y1="-6.35" x2="12.7" y2="-17.78" width="0.1524" layer="91"/>
 <junction x="12.7" y="-17.78"/>
@@ -2967,12 +3018,12 @@ In this library the device names are the same as the pin names of the symbols, t
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="-31.75" y1="-66.04" x2="-33.02" y2="-66.04" width="0.1524" layer="91"/>
-<label x="-43.18" y="-66.04" size="1.778" layer="95"/>
 <pinref part="R8" gate="G$1" pin="1"/>
 <wire x1="-33.02" y1="-66.04" x2="-43.18" y2="-66.04" width="0.1524" layer="91"/>
 <wire x1="-21.59" y1="-104.14" x2="-33.02" y2="-104.14" width="0.1524" layer="91"/>
 <wire x1="-33.02" y1="-104.14" x2="-33.02" y2="-66.04" width="0.1524" layer="91"/>
 <junction x="-33.02" y="-66.04"/>
+<label x="-43.18" y="-66.04" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="VUSB"/>
@@ -3000,17 +3051,10 @@ In this library the device names are the same as the pin names of the symbols, t
 <junction x="-60.96" y="22.86"/>
 <pinref part="+5V" gate="G$1" pin="TP"/>
 <wire x1="40.64" y1="12.7" x2="22.86" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="D1" gate="G$1" pin="2"/>
 <wire x1="22.86" y1="12.7" x2="12.7" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="-2.54" y1="35.56" x2="12.7" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="35.56" x2="12.7" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="22.86" x2="12.7" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="12.7" x2="5.08" y2="12.7" width="0.1524" layer="91"/>
 <junction x="12.7" y="12.7"/>
-<wire x1="12.7" y1="35.56" x2="12.7" y2="43.18" width="0.1524" layer="91"/>
-<junction x="12.7" y="35.56"/>
-<wire x1="12.7" y1="43.18" x2="2.54" y2="43.18" width="0.1524" layer="91"/>
-<label x="5.08" y="43.18" size="1.778" layer="95"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="16.51" y1="22.86" x2="12.7" y2="22.86" width="0.1524" layer="91"/>
 <junction x="12.7" y="22.86"/>
@@ -3021,12 +3065,15 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-38.1" y1="58.42" x2="-38.1" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="66.04" x2="12.7" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="66.04" x2="12.7" y2="43.18" width="0.1524" layer="91"/>
-<junction x="12.7" y="43.18"/>
 <pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="12.7" y1="43.18" x2="12.7" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="1.27" x2="22.86" y2="12.7" width="0.1524" layer="91"/>
 <junction x="22.86" y="12.7"/>
 <pinref part="C3" gate="G$1" pin="2"/>
 <wire x1="12.7" y1="1.27" x2="12.7" y2="12.7" width="0.1524" layer="91"/>
+<label x="22.86" y="43.18" size="1.778" layer="95" xref="yes"/>
+<wire x1="12.7" y1="43.18" x2="22.86" y2="43.18" width="0.1524" layer="91"/>
+<junction x="12.7" y="43.18"/>
 </segment>
 <segment>
 <pinref part="ICSP1" gate="G$1" pin="VCC"/>
@@ -3065,7 +3112,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <segment>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="-62.23" y1="-7.62" x2="-63.5" y2="-7.62" width="0.1524" layer="91"/>
-<label x="-63.5" y="-7.62" size="1.778" layer="95"/>
+<label x="-63.5" y="-7.62" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="ICSP1" gate="G$1" pin="RST"/>
@@ -3116,26 +3163,26 @@ In this library the device names are the same as the pin names of the symbols, t
 </net>
 <net name="RXT" class="0">
 <segment>
-<wire x1="7.62" y1="-2.54" x2="-5.08" y2="-2.54" width="0.1524" layer="91"/>
-<label x="2.54" y="-2.54" size="1.778" layer="95"/>
+<wire x1="2.54" y1="-2.54" x2="-5.08" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="GPIO.0/TXT"/>
+<label x="2.54" y="-2.54" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="RX" gate="G$1" pin="-"/>
 <wire x1="-1.27" y1="-66.04" x2="12.7" y2="-66.04" width="0.1524" layer="91"/>
-<label x="7.62" y="-66.04" size="1.778" layer="95"/>
+<label x="12.7" y="-66.04" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="TXT" class="0">
 <segment>
-<wire x1="7.62" y1="-5.08" x2="-5.08" y2="-5.08" width="0.1524" layer="91"/>
-<label x="2.54" y="-5.08" size="1.778" layer="95"/>
+<wire x1="2.54" y1="-5.08" x2="-5.08" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="GPIO.1/RXT"/>
+<label x="2.54" y="-5.08" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="TX" gate="G$1" pin="-"/>
 <wire x1="-1.27" y1="-81.28" x2="12.7" y2="-81.28" width="0.1524" layer="91"/>
-<label x="7.62" y="-81.28" size="1.778" layer="95"/>
+<label x="12.7" y="-81.28" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="D-" class="0">
@@ -3145,16 +3192,13 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="-81.28" y="-12.7" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="D1" gate="G$1" pin="3"/>
-<wire x1="-22.86" y1="35.56" x2="-27.94" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="-27.94" y1="35.56" x2="-68.58" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="-68.58" y1="35.56" x2="-68.58" y2="-17.78" width="0.1524" layer="91"/>
 <wire x1="-68.58" y1="-17.78" x2="-50.8" y2="-17.78" width="0.1524" layer="91"/>
-<label x="-60.96" y="-17.78" size="1.778" layer="95"/>
+<label x="-55.88" y="-17.78" size="1.778" layer="95"/>
 <pinref part="U1" gate="G$1" pin="D-"/>
 <pinref part="D2" gate="G$1" pin="CH$1"/>
 <wire x1="-27.94" y1="45.72" x2="-27.94" y2="35.56" width="0.1524" layer="91"/>
-<junction x="-27.94" y="35.56"/>
 </segment>
 </net>
 <net name="D+" class="0">
@@ -3164,16 +3208,13 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="-81.28" y="-15.24" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="D1" gate="G$1" pin="4"/>
-<wire x1="-22.86" y1="30.48" x2="-48.26" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="30.48" x2="-66.04" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="30.48" x2="-66.04" y2="-15.24" width="0.1524" layer="91"/>
-<label x="-60.96" y="-15.24" size="1.778" layer="95"/>
+<label x="-55.88" y="-15.24" size="1.778" layer="95"/>
 <pinref part="U1" gate="G$1" pin="D+"/>
 <wire x1="-66.04" y1="-15.24" x2="-50.8" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="D2" gate="G$2" pin="CH$1"/>
 <wire x1="-48.26" y1="45.72" x2="-48.26" y2="30.48" width="0.1524" layer="91"/>
-<junction x="-48.26" y="30.48"/>
 </segment>
 </net>
 <net name="PGM_RST" class="0">
@@ -3255,13 +3296,12 @@ In this library the device names are the same as the pin names of the symbols, t
 <net name="VDD" class="0">
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="-62.23" y1="-22.86" x2="-68.58" y2="-22.86" width="0.1524" layer="91"/>
-<label x="-68.58" y="-22.86" size="1.778" layer="95"/>
+<wire x1="-62.23" y1="-22.86" x2="-63.5" y2="-22.86" width="0.1524" layer="91"/>
+<label x="-63.5" y="-22.86" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="VDD"/>
 <wire x1="-5.08" y1="15.24" x2="0" y2="15.24" width="0.1524" layer="91"/>
-<label x="-5.08" y="15.24" size="1.778" layer="95"/>
 <wire x1="0" y1="15.24" x2="0" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="0" y1="17.78" x2="17.78" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="2"/>
@@ -3270,6 +3310,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="17.78" y1="17.78" x2="27.94" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="17.78" x2="27.94" y2="1.27" width="0.1524" layer="91"/>
 <junction x="17.78" y="17.78"/>
+<label x="0" y="17.78" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 </nets>
