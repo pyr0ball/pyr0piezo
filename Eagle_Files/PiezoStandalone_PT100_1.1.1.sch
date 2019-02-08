@@ -1332,7 +1332,7 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <rectangle x1="-1.4625" y1="2.2425" x2="-1.1375" y2="3.315" layer="51"/>
 <rectangle x1="-2.1125" y1="2.2425" x2="-1.7875" y2="3.315" layer="51"/>
 </package>
-<package name="QFN16" urn="urn:adsk.eagle:footprint:8766126/1" library_version="59" library_locally_modified="yes">
+<package name="QFN16" urn="urn:adsk.eagle:footprint:8766126/1" library_version="60">
 <description>&lt;b&gt;RTE (S-PQFP-N16)&lt;/b&gt; 3x3 mm&lt;p&gt;
 Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.1016" layer="51"/>
@@ -2027,7 +2027,7 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <packageinstance name="SSOP14"/>
 </packageinstances>
 </package3d>
-<package3d name="QFN16" urn="urn:adsk.eagle:package:8766128/1" type="box" library_version="59" library_locally_modified="yes">
+<package3d name="QFN16" urn="urn:adsk.eagle:package:8766128/2" type="model" library_version="60">
 <description>&lt;b&gt;RTE (S-PQFP-N16)&lt;/b&gt; 3x3 mm&lt;p&gt;
 Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <packageinstances>
@@ -2320,7 +2320,7 @@ low-leakage double diode</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="CON-MOLEX-2P-1.27MM" urn="urn:adsk.eagle:component:6897184/3" locally_modified="yes" prefix="X" library_version="59" library_locally_modified="yes">
+<deviceset name="CON-MOLEX-2P-1.27MM" urn="urn:adsk.eagle:component:6897184/4" prefix="X" library_version="60">
 <description>&lt;b&gt;CONNECTOR&lt;/b&gt;&lt;p&gt;
 wire to board 1.25 mm (.049 inch) pitch header</description>
 <gates>
@@ -2789,7 +2789,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="CON-MOLEX-4P-1.25MM" urn="urn:adsk.eagle:component:8771185/1" prefix="X" library_version="59" library_locally_modified="yes">
+<deviceset name="CON-MOLEX-4P-1.25MM" urn="urn:adsk.eagle:component:8771185/1" prefix="X" library_version="60">
 <description>&lt;b&gt;CONNECTOR&lt;/b&gt;&lt;p&gt;
 wire to board 1.25 mm (.049 inch) pitch header</description>
 <gates>
@@ -3508,7 +3508,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="LM2902" urn="urn:adsk.eagle:component:8766129/2" prefix="U" library_version="59" library_locally_modified="yes">
+<deviceset name="LM2902" urn="urn:adsk.eagle:component:8766129/3" prefix="U" library_version="60">
 <description>&lt;b&gt;Low power quad operational amplifier&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00000533.pdf"&gt; Data sgeet &lt;/a&gt;</description>
 <gates>
@@ -3609,7 +3609,7 @@ Source: &lt;a href="http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL
 <connect gate="P" pin="V-" pad="11"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8766128/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8766128/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -4835,7 +4835,7 @@ DIN A3, landscape with location and doc. field</description>
 <part name="F1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="500mA"/>
 <part name="SJ1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SJ" device="M" package3d_urn="urn:adsk.eagle:package:8763769/1"/>
 <part name="C4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="0.1uF"/>
-<part name="U3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="LM2902" device="QT" package3d_urn="urn:adsk.eagle:package:8766128/1"/>
+<part name="U3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="LM2902" device="QT" package3d_urn="urn:adsk.eagle:package:8766128/2"/>
 <part name="PT100" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CON-MOLEX-2P-1.27MM" device="048" package3d_urn="urn:adsk.eagle:package:5807562/3"/>
 <part name="C5" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="0.1uF"/>
 <part name="C6" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="0.1uF"/>
