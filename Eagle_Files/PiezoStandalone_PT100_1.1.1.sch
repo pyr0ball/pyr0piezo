@@ -768,7 +768,7 @@ Metric Code Size 1608</description>
 <text x="-2.921" y="1.4478" size="1.27" layer="51" ratio="6" rot="SR0">*</text>
 <text x="-2.0066" y="2.54" size="1.016" layer="25" font="vector" ratio="11" rot="SR0">&gt;Name</text>
 </package>
-<package name="53048-04" urn="urn:adsk.eagle:footprint:8078192/1" library_version="59">
+<package name="53048-04" urn="urn:adsk.eagle:footprint:8784782/1" library_version="66">
 <description>&lt;b&gt;1.25mm Pitch PicoBlade™ Header, Right Angle, 4 Circuits&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/530480410_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <wire x1="-3.275" y1="-2.25" x2="-2.75" y2="-2.25" width="0.2032" layer="21"/>
 <wire x1="2.75" y1="-2.25" x2="3.275" y2="-2.25" width="0.2032" layer="21"/>
@@ -819,8 +819,7 @@ Metric Code Size 1608</description>
 <pad name="2" x="0.625" y="-1.25" drill="0.5" diameter="0.6984" shape="long" rot="R90"/>
 <pad name="3" x="-0.625" y="-1.25" drill="0.5" diameter="0.6984" shape="long" rot="R90"/>
 <pad name="4" x="-1.875" y="-1.25" drill="0.5" diameter="0.6984" shape="long" rot="R90"/>
-<text x="-1.875" y="3.375" size="1.27" layer="25">&gt;NAME</text>
-<text x="-3.25" y="-3.75" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-3.272" y="3.375" size="1.016" layer="25" font="vector" ratio="11">&gt;NAME</text>
 <rectangle x1="-2.125" y1="-1.5" x2="-1.625" y2="-1" layer="51"/>
 <rectangle x1="-0.875" y1="-1.5" x2="-0.375" y2="-1" layer="51"/>
 <rectangle x1="0.375" y1="-1.5" x2="0.875" y2="-1" layer="51"/>
@@ -1442,7 +1441,17 @@ Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <rectangle x1="-0.6" y1="1.35" x2="0.1" y2="1.75" layer="29" rot="R270"/>
 <rectangle x1="-1.1" y1="1.35" x2="-0.4" y2="1.75" layer="29" rot="R270"/>
 </package>
-<package name="53047-04" urn="urn:adsk.eagle:footprint:8078150/1" library_version="59">
+<package name="SEEED-RESISTOR_R0603" urn="urn:adsk.eagle:footprint:5224469/2" library_version="59" library_locally_modified="yes">
+<wire x1="0.635" y1="1.397" x2="0.635" y2="-1.397" width="0.127" layer="21"/>
+<wire x1="0.635" y1="-1.397" x2="-0.635" y2="-1.397" width="0.127" layer="21"/>
+<wire x1="-0.635" y1="-1.397" x2="-0.635" y2="1.397" width="0.127" layer="21"/>
+<wire x1="-0.635" y1="1.397" x2="0.635" y2="1.397" width="0.127" layer="21"/>
+<smd name="1" x="0" y="0.762" dx="0.889" dy="0.889" layer="1" roundness="25" rot="R270"/>
+<smd name="2" x="0" y="-0.762" dx="0.889" dy="0.889" layer="1" roundness="25" rot="R270"/>
+<text x="-0.762" y="0" size="0.6096" layer="25" font="vector" ratio="11" rot="R90" align="bottom-center">&gt;NAME</text>
+<text x="0.8" y="0.046" size="0.6096" layer="27" font="vector" ratio="11" rot="R90" align="top-center">&gt;VALUE</text>
+</package>
+<package name="53047-04" urn="urn:adsk.eagle:footprint:8784779/1" library_version="66">
 <description>&lt;b&gt;1.25mm Pitch PicoBlade™ Wire-to-Board Header, Vertical, with Friction Lock, 4 Circuits&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/530470410_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <wire x1="-3.275" y1="-1.5" x2="3.275" y2="-1.5" width="0.2032" layer="21"/>
 <wire x1="3.275" y1="-1.5" x2="3.275" y2="1.5" width="0.2032" layer="21"/>
@@ -1463,11 +1472,10 @@ Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <pad name="2" x="0.625" y="0.45" drill="0.5" diameter="0.6984" shape="long" rot="R90"/>
 <pad name="3" x="-0.625" y="0.45" drill="0.5" diameter="0.6984" shape="long" rot="R90"/>
 <pad name="4" x="-1.875" y="0.45" drill="0.5" diameter="0.6984" shape="long" rot="R90"/>
-<text x="-3.125" y="1.75" size="1.27" layer="25">&gt;NAME</text>
-<text x="-2.625" y="-3.25" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-3.125" y="1.75" size="1.016" layer="25" font="vector" ratio="11">&gt;NAME</text>
 <rectangle x1="-3.25" y1="-1.5" x2="3.25" y2="-1.125" layer="21"/>
 </package>
-<package name="53261-04" urn="urn:adsk.eagle:footprint:8078165/1" library_version="59">
+<package name="53261-04" urn="urn:adsk.eagle:footprint:8784780/1" library_version="66">
 <description>&lt;b&gt;1.25mm Pitch PicoBlade™ Header, Surface Mount, Right Angle, 4 Circuits&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/532610471_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <wire x1="-3.275" y1="-1.375" x2="-2.75" y2="-1.375" width="0.2032" layer="21"/>
 <wire x1="-2.75" y1="-1.375" x2="2.75" y2="-1.375" width="0.2032" layer="21"/>
@@ -1517,15 +1525,14 @@ Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <smd name="4" x="-1.875" y="-2.5" dx="0.8" dy="2" layer="1"/>
 <smd name="S1" x="4.375" y="0.625" dx="2.1" dy="3" layer="1"/>
 <smd name="S2" x="-4.375" y="0.625" dx="2.1" dy="3" layer="1"/>
-<text x="-3.125" y="2.875" size="1.27" layer="25">&gt;NAME</text>
-<text x="-2.75" y="-0.5" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-3.125" y="2.875" size="1.016" layer="25" font="vector" ratio="11">&gt;NAME</text>
 <text x="3.75" y="-0.25" size="1.9304" layer="51">1</text>
 <rectangle x1="-2.125" y1="1" x2="-1.625" y2="1.875" layer="21"/>
 <rectangle x1="-0.875" y1="1" x2="-0.375" y2="1.875" layer="21"/>
 <rectangle x1="0.375" y1="1" x2="0.875" y2="1.875" layer="21"/>
 <rectangle x1="1.625" y1="1" x2="2.125" y2="1.875" layer="21"/>
 </package>
-<package name="53398-04" urn="urn:adsk.eagle:footprint:8078179/1" library_version="59">
+<package name="53398-04" urn="urn:adsk.eagle:footprint:8784781/1" library_version="66">
 <description>&lt;b&gt;1.25mm Pitch PicoBlade™ Header, Surface Mount, Vertical, 4 Circuits&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/533980471_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <wire x1="-3.275" y1="-1.375" x2="-2.5" y2="-1.375" width="0.2032" layer="21"/>
 <wire x1="-2.5" y1="-1.375" x2="2.5" y2="-1.375" width="0.0508" layer="21"/>
@@ -1564,23 +1571,12 @@ Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <smd name="4" x="-1.875" y="-2.5" dx="0.8" dy="1.8" layer="1"/>
 <smd name="S1" x="4.375" y="0.625" dx="2.1" dy="3" layer="1"/>
 <smd name="S2" x="-4.375" y="0.625" dx="2.1" dy="3" layer="1"/>
-<text x="-3" y="2.375" size="1.27" layer="25">&gt;NAME</text>
-<text x="-3.75" y="-3.5" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-3" y="2.375" size="1.016" layer="25" font="vector" ratio="11">&gt;NAME</text>
 <text x="3.75" y="-0.25" size="1.9304" layer="51">1</text>
 <rectangle x1="-2.125" y1="0.375" x2="-1.625" y2="1" layer="21"/>
 <rectangle x1="-0.875" y1="0.375" x2="-0.375" y2="1" layer="21"/>
 <rectangle x1="0.375" y1="0.375" x2="0.875" y2="1" layer="21"/>
 <rectangle x1="1.625" y1="0.375" x2="2.125" y2="1" layer="21"/>
-</package>
-<package name="SEEED-RESISTOR_R0603" urn="urn:adsk.eagle:footprint:5224469/2" library_version="59" library_locally_modified="yes">
-<wire x1="0.635" y1="1.397" x2="0.635" y2="-1.397" width="0.127" layer="21"/>
-<wire x1="0.635" y1="-1.397" x2="-0.635" y2="-1.397" width="0.127" layer="21"/>
-<wire x1="-0.635" y1="-1.397" x2="-0.635" y2="1.397" width="0.127" layer="21"/>
-<wire x1="-0.635" y1="1.397" x2="0.635" y2="1.397" width="0.127" layer="21"/>
-<smd name="1" x="0" y="0.762" dx="0.889" dy="0.889" layer="1" roundness="25" rot="R270"/>
-<smd name="2" x="0" y="-0.762" dx="0.889" dy="0.889" layer="1" roundness="25" rot="R270"/>
-<text x="-0.762" y="0" size="0.6096" layer="25" font="vector" ratio="11" rot="R90" align="bottom-center">&gt;NAME</text>
-<text x="0.8" y="0.046" size="0.6096" layer="27" font="vector" ratio="11" rot="R90" align="top-center">&gt;VALUE</text>
 </package>
 </packages>
 <packages3d>
@@ -1656,12 +1652,6 @@ Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 4.1 mm, round</description>
 <packageinstances>
 <packageinstance name="HOLES_4,1-PAD"/>
-</packageinstances>
-</package3d>
-<package3d name="HOLES_4,3-PAD" urn="urn:adsk.eagle:package:5224594/1" type="box" library_version="12">
-<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 4.3 mm, round</description>
-<packageinstances>
-<packageinstance name="HOLES_4,3-PAD"/>
 </packageinstances>
 </package3d>
 <package3d name="HOLES_4,5-PAD" urn="urn:adsk.eagle:package:5224595/1" type="box" library_version="12">
@@ -1942,7 +1932,7 @@ Metric Code Size 1608</description>
 <packageinstance name="TP20SQ"/>
 </packageinstances>
 </package3d>
-<package3d name="53048-04" urn="urn:adsk.eagle:package:8078564/1" type="box" library_version="59">
+<package3d name="53048-04" urn="urn:adsk.eagle:package:8784810/2" type="model" library_version="66">
 <description>&lt;b&gt;1.25mm Pitch PicoBlade™ Header, Right Angle, 4 Circuits&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/530480410_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <packageinstances>
 <packageinstance name="53048-04"/>
@@ -2003,7 +1993,7 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <packageinstance name="SPRING_CONTACT_3.48X1.10"/>
 </packageinstances>
 </package3d>
-<package3d name="SJM" urn="urn:adsk.eagle:package:8763769/1" type="box" library_version="57">
+<package3d name="SJM" urn="urn:adsk.eagle:package:8763769/2" type="box" library_version="66">
 <description>&lt;b&gt;Solder jumper&lt;/b&gt;</description>
 <packageinstances>
 <packageinstance name="SJM"/>
@@ -2034,27 +2024,33 @@ Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <packageinstance name="QFN16"/>
 </packageinstances>
 </package3d>
-<package3d name="53047-04" urn="urn:adsk.eagle:package:8078513/1" type="box" library_version="59">
+<package3d name="SEEED-RESISTOR_R0603" urn="urn:adsk.eagle:package:5224535/3" type="model" library_version="59" library_locally_modified="yes">
+<packageinstances>
+<packageinstance name="SEEED-RESISTOR_R0603"/>
+</packageinstances>
+</package3d>
+<package3d name="HOLES_4,3-PAD" urn="urn:adsk.eagle:package:5224594/2" type="box" library_version="66">
+<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 4.3 mm, round</description>
+<packageinstances>
+<packageinstance name="HOLES_4,3-PAD"/>
+</packageinstances>
+</package3d>
+<package3d name="53047-04" urn="urn:adsk.eagle:package:8784807/2" type="model" library_version="66">
 <description>&lt;b&gt;1.25mm Pitch PicoBlade™ Wire-to-Board Header, Vertical, with Friction Lock, 4 Circuits&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/530470410_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <packageinstances>
 <packageinstance name="53047-04"/>
 </packageinstances>
 </package3d>
-<package3d name="53261-04" urn="urn:adsk.eagle:package:8078535/1" type="box" library_version="59">
+<package3d name="53261-04" urn="urn:adsk.eagle:package:8784808/2" type="model" library_version="66">
 <description>&lt;b&gt;1.25mm Pitch PicoBlade™ Header, Surface Mount, Right Angle, 4 Circuits&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/532610471_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <packageinstances>
 <packageinstance name="53261-04"/>
 </packageinstances>
 </package3d>
-<package3d name="53398-04" urn="urn:adsk.eagle:package:8078549/1" type="box" library_version="59">
+<package3d name="53398-04" urn="urn:adsk.eagle:package:8784809/2" type="model" library_version="66">
 <description>&lt;b&gt;1.25mm Pitch PicoBlade™ Header, Surface Mount, Vertical, 4 Circuits&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/533980471_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <packageinstances>
 <packageinstance name="53398-04"/>
-</packageinstances>
-</package3d>
-<package3d name="SEEED-RESISTOR_R0603" urn="urn:adsk.eagle:package:5224535/3" type="model" library_version="59" library_locally_modified="yes">
-<packageinstances>
-<packageinstance name="SEEED-RESISTOR_R0603"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -2604,7 +2600,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="HOLES_MOUNT-PAD-ROUND" urn="urn:adsk.eagle:component:6905305/3" prefix="H" library_version="49">
+<deviceset name="HOLES_MOUNT-PAD-ROUND" urn="urn:adsk.eagle:component:6905305/5" prefix="H" library_version="66">
 <description>&lt;b&gt;MOUNTING PAD&lt;/b&gt;, round</description>
 <gates>
 <gate name="G$1" symbol="HOLES_MOUNT-PAD" x="0" y="0"/>
@@ -2681,7 +2677,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 <connect gate="G$1" pin="MOUNT" pad="B4,3"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:5224594/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5224594/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -2789,7 +2785,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="CON-MOLEX-4P-1.25MM" urn="urn:adsk.eagle:component:8771185/1" prefix="X" library_version="60">
+<deviceset name="CON-MOLEX-4P-1.25MM" urn="urn:adsk.eagle:component:8771185/4" prefix="X" library_version="66">
 <description>&lt;b&gt;CONNECTOR&lt;/b&gt;&lt;p&gt;
 wire to board 1.25 mm (.049 inch) pitch header</description>
 <gates>
@@ -2807,7 +2803,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 <connect gate="-4" pin="S" pad="4"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8078513/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8784807/2"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -2826,7 +2822,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 <connect gate="-4" pin="S" pad="4"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8078564/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8784810/2"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -2845,7 +2841,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 <connect gate="-4" pin="S" pad="4"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8078535/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8784808/2"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -2864,7 +2860,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 <connect gate="-4" pin="S" pad="4"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8078549/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8784809/2"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -3464,7 +3460,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SJ" urn="urn:adsk.eagle:component:8763772/1" prefix="SJ" uservalue="yes" library_version="57">
+<deviceset name="SJ" urn="urn:adsk.eagle:component:8763772/2" prefix="SJ" uservalue="yes" library_version="66">
 <description>SMD solder &lt;b&gt;JUMPER&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="SJ" x="0" y="0"/>
@@ -3500,7 +3496,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 <connect gate="1" pin="2" pad="2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8763769/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8763769/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -4809,7 +4805,7 @@ DIN A3, landscape with location and doc. field</description>
 <part name="SUPPLY9" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="D8" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="BAV199" device="" package3d_urn="urn:adsk.eagle:package:6899267/1"/>
 <part name="SUPPLY10" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="J1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CON-MOLEX-4P-1.25MM" device="048" package3d_urn="urn:adsk.eagle:package:8078564/1"/>
+<part name="J1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CON-MOLEX-4P-1.25MM" device="048" package3d_urn="urn:adsk.eagle:package:8784810/2"/>
 <part name="P+1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="+5V" device=""/>
 <part name="P+3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="+5V" device=""/>
 <part name="P+5" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="+5V" device=""/>
@@ -4833,7 +4829,7 @@ DIN A3, landscape with location and doc. field</description>
 <part name="R16" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2"/>
 <part name="D1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ZENER_DIODE_PLZ5V1C" device="" package3d_urn="urn:adsk.eagle:package:8452796/2"/>
 <part name="F1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="500mA"/>
-<part name="SJ1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SJ" device="M" package3d_urn="urn:adsk.eagle:package:8763769/1"/>
+<part name="SJ1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SJ" device="M" package3d_urn="urn:adsk.eagle:package:8763769/2"/>
 <part name="C4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="0.1uF"/>
 <part name="U3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="LM2902" device="QT" package3d_urn="urn:adsk.eagle:package:8766128/2"/>
 <part name="PT100" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CON-MOLEX-2P-1.27MM" device="048" package3d_urn="urn:adsk.eagle:package:5807562/3"/>
