@@ -3,7 +3,7 @@
 <eagle version="9.3.0">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="2.5" altunitdist="mil" altunit="mm"/>
@@ -7261,13 +7261,11 @@ design rules under a new name.</description>
 <wire x1="21.99239375" y1="14.47488125" x2="21.87665" y2="14.3591375" width="0.1524" layer="16"/>
 <wire x1="21.37395" y1="14.3591375" x2="21.87665" y2="14.3591375" width="0.1524" layer="16"/>
 <wire x1="21.0185" y1="16.766890625" x2="21.0185" y2="14.7145875" width="0.1524" layer="16"/>
-<wire x1="24.13" y1="17.701" x2="24.1145" y2="17.7165" width="0.1524" layer="1"/>
 <wire x1="24.13" y1="17.701" x2="24.03008125" y2="17.701" width="0.1524" layer="16"/>
 <wire x1="24.03008125" y1="17.701" x2="23.766515625" y2="17.437434375" width="0.1524" layer="16"/>
 <wire x1="21.0185" y1="14.7145875" x2="21.37395" y2="14.3591375" width="0.1524" layer="16"/>
 <wire x1="23.766515625" y1="17.437434375" x2="22.258359375" y2="15.929278125" width="0.1524" layer="16"/>
 <wire x1="22.258359375" y1="15.929278125" x2="22.258359375" y2="14.47488125" width="0.1524" layer="16"/>
-<wire x1="24.13" y1="17.701" x2="24.13" y2="17.701" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="D+">
 <contactref element="J1" pad="3"/>
