@@ -45,6 +45,9 @@ Credit must be given to precisionpiezo.co.uk for getting me started on this proj
 
 I've since started from scratch using my own BOM and designs, while including an onboard microcontroller to handle auto-calibration. Given that every 3D printer is different, I wanted this sensor to be as easy and stable as other sensors available on the market, but with the increased performance of a piezo sensor.
 
+[Discord for support and discussion](https://discordapp.com/widget?id=544587989536473099&theme=dark)
+---------------------------
+
 Legacy links:
 
 [Original Mount (Doesn't work as well as I'd like)](https://www.thingiverse.com/thing:2712439)
