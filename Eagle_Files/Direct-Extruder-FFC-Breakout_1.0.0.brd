@@ -3,7 +3,7 @@
 <eagle version="9.3.0">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="1.27" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
@@ -170,6 +170,7 @@
 <layer number="255" name="Accent" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <board>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyYTEyMDdh" projecturn="a.cGVyc29uYWw6dWUyYTEyMDdhIzIwMTgxMTI5MTYyOTY3NjMx" f3durn="urn:adsk.wipprod:dm.lineage:wo6DI1xnTZiHoJQyXTvptQ" pcbguid="ae4932e1-5770-4e72-9a0b-d0260729ebfe" lastpulledtime="" lastsyncedchangeguid="dc139d55-2c5f-4e3e-f219-ecdec59bb68f"/>
 <plain>
 <wire x1="48.2" y1="0" x2="5" y2="0" width="0.1524" layer="20"/>
 <wire x1="5" y1="0" x2="0" y2="5" width="0.1524" layer="20" curve="-90"/>
@@ -182,7 +183,7 @@
 <text x="13.2" y="46.8" size="2.54" layer="21" font="vector" ratio="11" rot="R90">-  +</text>
 <text x="10.34" y="10.1" size="2.54" layer="21" font="vector" ratio="11" rot="R90">-   +</text>
 <text x="10.34" y="19.4" size="2.54" layer="21" font="vector" ratio="11" rot="R90">-   +</text>
-<text x="28.1" y="17.7" size="2.1844" layer="21" font="vector" ratio="11" rot="R180">S -</text>
+<text x="26" y="14.6" size="2.1844" layer="21" font="vector" ratio="11" rot="R180">S -</text>
 <text x="30.7" y="11.5" size="1.016" layer="21" font="vector" ratio="11">1B  1A  2A  2B</text>
 <text x="10.4" y="57.5" size="1.778" layer="21">Pyr0-Piezo FFC Rev.1.0.0</text>
 <text x="10.5" y="55.7" size="1.15" layer="21">Copyright 2019 Alan "pyr0ball" Weinstock</text>
@@ -239,7 +240,7 @@
 <wire x1="-8" y1="1.5" x2="-7" y2="1.5" width="0.127" layer="21"/>
 <text x="-3.2766" y="2.1336" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
 </package>
-<package name="SOT230P700X180-4N" library_version="29" library_locally_modified="yes">
+<package name="SOT230P700X180-4N" urn="urn:adsk.eagle:footprint:7346245/1" library_version="66">
 <wire x1="-1.8542" y1="1.8796" x2="-1.8542" y2="2.7432" width="0.1524" layer="51"/>
 <wire x1="-1.8542" y1="2.7432" x2="-3.6576" y2="2.7432" width="0.1524" layer="51"/>
 <wire x1="-3.6576" y1="2.7432" x2="-3.6576" y2="1.8796" width="0.1524" layer="51"/>
@@ -271,7 +272,7 @@
 <smd name="3" x="-3.2004" y="-2.3114" dx="1.6256" dy="0.889" layer="1"/>
 <smd name="4" x="3.2004" y="0" dx="1.6256" dy="3.175" layer="1"/>
 </package>
-<package name="SEEED-SWITCH_SW6-2.54-9.0X3.5X3.2+2.0MM" urn="urn:adsk.eagle:footprint:5224473/1" library_version="29" library_locally_modified="yes">
+<package name="SEEED-SWITCH_SW6-2.54-9.0X3.5X3.2+2.0MM" urn="urn:adsk.eagle:footprint:5224473/2" library_version="66">
 <wire x1="-4.55" y1="-1.75" x2="-4.55" y2="1.75" width="0.127" layer="21"/>
 <wire x1="-4.55" y1="1.75" x2="4.55" y2="1.75" width="0.127" layer="51"/>
 <wire x1="4.55" y1="1.75" x2="4.55" y2="-1.75" width="0.127" layer="21"/>
@@ -291,8 +292,7 @@
 <pad name="CH2B" x="2.54" y="1.6" drill="0.8128" diameter="1.27" rot="R90"/>
 <pad name="COM1" x="0" y="-1.6" drill="0.8128" diameter="1.27" shape="octagon" rot="R90"/>
 <pad name="COM2" x="0" y="1.524" drill="0.8128" diameter="1.27" shape="octagon" rot="R90"/>
-<text x="-2.54" y="2.54" size="0.889" layer="25" ratio="11">&gt;NAME</text>
-<text x="-2.54" y="-0.635" size="0.889" layer="27" ratio="11">&gt;VALUE</text>
+<text x="0" y="2.54" size="0.8128" layer="25" font="vector" ratio="11" align="bottom-center">&gt;NAME</text>
 </package>
 <package name="70553-04" urn="urn:adsk.eagle:footprint:6902609/1" library_version="29" library_locally_modified="yes">
 <description>&lt;b&gt;2.54mm Pitch SL™ Header, Low Profile, Single Row, Right Angle, 3.05mm Pocket, Shrouded, 5 Circuits, 0.38µm Gold (Au) Selective Plating, Tin (Sn) PC Tail Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/705530004_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
@@ -364,7 +364,7 @@
 <vertex x="-4.7625" y="5.8737"/>
 </polygon>
 </package>
-<package name="70553-02" library_version="29" library_locally_modified="yes">
+<package name="70553-02" urn="urn:adsk.eagle:footprint:7346247/1" library_version="66">
 <description>&lt;b&gt;2.54mm Pitch SL™ Header, Low Profile, Single Row, Right Angle, 3.05mm Pocket, Shrouded, 3 Circuits, 0.38µm Gold (Au) Selective Plating, Tin (Sn) PC Tail Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/705530002_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <wire x1="3.9688" y1="5.8738" x2="-3.9688" y2="5.8738" width="0.254" layer="21"/>
 <wire x1="-1.27" y1="2.54" x2="-1.27" y2="-3.175" width="0.254" layer="21"/>
@@ -416,7 +416,7 @@
 <vertex x="-2.8575" y="5.8738"/>
 </polygon>
 </package>
-<package name="KK-156-2" library_version="29" library_locally_modified="yes">
+<package name="KK-156-2" urn="urn:adsk.eagle:footprint:7346254/1" library_version="66">
 <description>&lt;b&gt;KK® 396 Header, Vertical, Friction Lock, 2 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/026604020_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <wire x1="3.81" y1="4.95" x2="2.01" y2="4.95" width="0.2032" layer="21"/>
 <wire x1="2.01" y1="4.95" x2="-1.985" y2="4.95" width="0.2032" layer="21"/>
@@ -458,7 +458,7 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 <rectangle x1="-0.675" y1="0.45" x2="0.675" y2="1.05" layer="51"/>
 <rectangle x1="-0.675" y1="-1.05" x2="0.675" y2="-0.45" layer="51"/>
 </package>
-<package name="SOT89" urn="urn:adsk.eagle:footprint:6899240/3" locally_modified="yes" library_version="29" library_locally_modified="yes">
+<package name="SOT89" urn="urn:adsk.eagle:footprint:6899240/4" library_version="66">
 <wire x1="2.235" y1="-1.245" x2="-2.235" y2="-1.245" width="0.127" layer="51"/>
 <wire x1="2.235" y1="1.219" x2="2.235" y2="-1.245" width="0.127" layer="51"/>
 <wire x1="-2.235" y1="-1.245" x2="-2.235" y2="1.219" width="0.127" layer="51"/>
@@ -474,6 +474,7 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 <rectangle x1="-1.727390625" y1="-2.10843125" x2="-1.27" y2="-1.27" layer="51"/>
 <rectangle x1="1.270140625" y1="-2.108440625" x2="1.7272" y2="-1.27" layer="51"/>
 <rectangle x1="-0.27983125" y1="-2.111440625" x2="0.2794" y2="-1.27" layer="51"/>
+<rectangle x1="-0.5" y1="-2.8" x2="0.5" y2="-1.2" layer="29"/>
 <polygon width="0.1998" layer="51">
 <vertex x="-0.7874" y="1.3208"/>
 <vertex x="-0.7874" y="1.5748"/>
@@ -488,7 +489,6 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 <smd name="3" x="1.499" y="-1.981" dx="0.8" dy="1.4" layer="1"/>
 <smd name="2" x="0" y="-1.727" dx="0.8" dy="1.9" layer="1" stop="no" cream="no"/>
 <smd name="PAD" x="0" y="0.94" dx="2.032" dy="3.65" layer="1" roundness="75"/>
-<rectangle x1="-0.5" y1="-2.8" x2="0.5" y2="-1.2" layer="29"/>
 </package>
 <package name="TO92" urn="urn:adsk.eagle:footprint:28459/1" library_version="29" library_locally_modified="yes">
 <description>&lt;b&gt;TO 92&lt;/b&gt;</description>
@@ -511,40 +511,49 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 <text x="-2.159" y="0" size="1.27" layer="51" ratio="10">3</text>
 <text x="1.143" y="0" size="1.27" layer="51" ratio="10">1</text>
 </package>
-<package name="R0805" urn="urn:adsk.eagle:footprint:32784/1" library_version="29" library_locally_modified="yes">
-<wire x1="0.889" y1="-1.651" x2="-0.889" y2="-1.651" width="0.127" layer="21"/>
-<wire x1="-0.889" y1="-1.651" x2="-0.889" y2="1.651" width="0.127" layer="21"/>
-<wire x1="-0.889" y1="1.651" x2="0.889" y2="1.651" width="0.127" layer="21"/>
-<wire x1="0.889" y1="1.651" x2="0.889" y2="-1.651" width="0.127" layer="21"/>
-<smd name="1" x="0" y="0.889" dx="1.016" dy="1.397" layer="1" roundness="25" rot="R270"/>
-<smd name="2" x="0" y="-0.889" dx="1.016" dy="1.397" layer="1" roundness="25" rot="R270"/>
-<text x="1.016" y="1.905" size="0.889" layer="25" font="vector" ratio="11" rot="R270">&gt;NAME</text>
-<text x="-1.905" y="1.905" size="0.889" layer="27" ratio="11" rot="R270">&gt;VALUE</text>
+<package name="R0805" urn="urn:adsk.eagle:footprint:8443790/1" library_version="66">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
+chip</description>
+<wire x1="-0.41" y1="0.635" x2="0.41" y2="0.635" width="0.1524" layer="51"/>
+<wire x1="-0.41" y1="-0.635" x2="0.41" y2="-0.635" width="0.1524" layer="51"/>
+<rectangle x1="0.4064" y1="-0.6985" x2="1.0564" y2="0.7015" layer="51"/>
+<rectangle x1="-1.0668" y1="-0.6985" x2="-0.4168" y2="0.7015" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.5001" x2="0.1999" y2="0.5001" layer="35"/>
+<smd name="1" x="-0.85" y="0" dx="1" dy="1.5" layer="1"/>
+<smd name="2" x="0.85" y="0" dx="1" dy="1.5" layer="1"/>
+<text x="-1.387" y="1.016" size="0.8128" layer="25" font="vector" ratio="11">&gt;NAME</text>
+<text x="-1.387" y="-1.036" size="0.8128" layer="27" font="vector" ratio="11" align="top-left">&gt;VALUE</text>
 </package>
-<package name="PC-D5.3MM" urn="urn:adsk.eagle:footprint:32377/1" library_version="29" library_locally_modified="yes">
+<package name="ALU-C-D5.3MM_LEFT" urn="urn:adsk.eagle:footprint:8885149/3" library_version="69">
 <circle x="0" y="0" radius="2.65" width="0.127" layer="21"/>
 <circle x="0" y="0" radius="2.694" width="0.127" layer="39"/>
 <pad name="+" x="-1" y="0" drill="0.8" diameter="1.35" shape="square"/>
 <pad name="-" x="1" y="0" drill="0.8" diameter="1.35"/>
-<text x="-1.905" y="2.921" size="0.889" layer="25" ratio="11">&gt;NAME</text>
-<text x="-1.524" y="-4.191" size="0.635" layer="27" ratio="10">&gt;VALUE</text>
+<text x="3.048" y="1.524" size="0.889" layer="25" font="vector" ratio="11" rot="R270">&gt;NAME</text>
+<text x="-1.524" y="-2.921" size="0.635" layer="27" font="vector" ratio="10" align="top-left">&gt;VALUE</text>
 <wire x1="-4.445" y1="0" x2="-3.81" y2="0" width="0.127" layer="21"/>
 <wire x1="-3.175" y1="0" x2="-3.81" y2="0" width="0.127" layer="21"/>
 <wire x1="-3.81" y1="0" x2="-3.81" y2="0.635" width="0.127" layer="21"/>
 <wire x1="-3.81" y1="0" x2="-3.81" y2="-0.635" width="0.127" layer="21"/>
-<wire x1="0" y1="2.667" x2="0" y2="1.651" width="0.127" layer="21"/>
+<wire x1="0" y1="2.667" x2="0" y2="2.286" width="0.127" layer="21"/>
+<wire x1="0" y1="2.286" x2="0" y2="1.651" width="0.127" layer="21"/>
 <wire x1="0" y1="1.651" x2="0" y2="1.016" width="0.127" layer="21"/>
 <wire x1="0" y1="1.016" x2="0" y2="0.381" width="0.127" layer="21"/>
-<wire x1="0" y1="0.381" x2="0" y2="-1.524" width="0.127" layer="21"/>
-<wire x1="0" y1="-1.524" x2="0" y2="-2.286" width="0.127" layer="21"/>
-<wire x1="0" y1="-2.286" x2="0" y2="-2.667" width="0.127" layer="21"/>
-<wire x1="0" y1="-2.286" x2="2.286" y2="-1.27" width="0.127" layer="21"/>
-<wire x1="0" y1="-1.524" x2="2.54" y2="-0.381" width="0.127" layer="21"/>
-<wire x1="1.5875" y1="0.635" x2="2.413" y2="1.016" width="0.127" layer="21"/>
+<wire x1="0" y1="0.381" x2="0" y2="-0.381" width="0.127" layer="21"/>
+<wire x1="0" y1="-0.381" x2="0" y2="-1.143" width="0.127" layer="21"/>
+<wire x1="0" y1="-1.143" x2="0" y2="-1.905" width="0.127" layer="21"/>
+<wire x1="0" y1="-1.905" x2="0" y2="-2.667" width="0.127" layer="21"/>
 <wire x1="0" y1="0.381" x2="2.159" y2="1.524" width="0.127" layer="21"/>
 <wire x1="0" y1="1.016" x2="1.778" y2="1.9685" width="0.127" layer="21"/>
 <wire x1="0" y1="1.651" x2="1.27" y2="2.3495" width="0.127" layer="21"/>
-<wire x1="1.75" y1="0" x2="2.413" y2="0.381" width="0.127" layer="21"/>
+<wire x1="0" y1="-0.381" x2="2.413" y2="0.889" width="0.127" layer="21"/>
+<wire x1="0" y1="-1.143" x2="2.54" y2="0.127" width="0.127" layer="21"/>
+<wire x1="0" y1="-1.905" x2="2.54" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="0.381" y1="-2.54" x2="1.905" y2="-1.778" width="0.127" layer="21"/>
+<wire x1="0" y1="2.286" x2="0.508" y2="2.54" width="0.127" layer="21"/>
+<wire x1="2.667" y1="0" x2="2.667" y2="10.082" width="0.127" layer="21"/>
+<wire x1="2.667" y1="10.082" x2="-2.667" y2="10.082" width="0.127" layer="21"/>
+<wire x1="-2.667" y1="10.082" x2="-2.667" y2="0" width="0.127" layer="21"/>
 </package>
 <package name="CAPC2012X130" urn="urn:adsk.eagle:footprint:5225118/2" library_version="29" library_locally_modified="yes">
 <description>Chip, 2.00 X 1.25 X 1.30 mm body
@@ -6518,6 +6527,37 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 <vertex x="8.099321875" y="13.931034375"/>
 </polygon>
 </package>
+<package name="ALU-C-D5.3MM_RIGHT" urn="urn:adsk.eagle:footprint:8885514/2" library_version="69">
+<circle x="0" y="0" radius="2.65" width="0.127" layer="21"/>
+<circle x="0" y="0" radius="2.694" width="0.127" layer="39"/>
+<pad name="+" x="-1" y="0" drill="0.8" diameter="1.35" shape="square"/>
+<pad name="-" x="1" y="0" drill="0.8" diameter="1.35"/>
+<text x="3.048" y="1.524" size="0.889" layer="25" font="vector" ratio="11" rot="R270">&gt;NAME</text>
+<text x="-1.524" y="-2.921" size="0.635" layer="27" font="vector" ratio="10" align="top-left">&gt;VALUE</text>
+<wire x1="-4.445" y1="0" x2="-3.81" y2="0" width="0.127" layer="21"/>
+<wire x1="-3.175" y1="0" x2="-3.81" y2="0" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="0" x2="-3.81" y2="0.635" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="0" x2="-3.81" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="0" y1="2.667" x2="0" y2="2.286" width="0.127" layer="21"/>
+<wire x1="0" y1="2.286" x2="0" y2="1.651" width="0.127" layer="21"/>
+<wire x1="0" y1="1.651" x2="0" y2="1.016" width="0.127" layer="21"/>
+<wire x1="0" y1="1.016" x2="0" y2="0.381" width="0.127" layer="21"/>
+<wire x1="0" y1="0.381" x2="0" y2="-0.381" width="0.127" layer="21"/>
+<wire x1="0" y1="-0.381" x2="0" y2="-1.143" width="0.127" layer="21"/>
+<wire x1="0" y1="-1.143" x2="0" y2="-1.905" width="0.127" layer="21"/>
+<wire x1="0" y1="-1.905" x2="0" y2="-2.667" width="0.127" layer="21"/>
+<wire x1="0" y1="0.381" x2="2.159" y2="1.524" width="0.127" layer="21"/>
+<wire x1="0" y1="1.016" x2="1.778" y2="1.9685" width="0.127" layer="21"/>
+<wire x1="0" y1="1.651" x2="1.27" y2="2.3495" width="0.127" layer="21"/>
+<wire x1="0" y1="-0.381" x2="2.413" y2="0.889" width="0.127" layer="21"/>
+<wire x1="0" y1="-1.143" x2="2.54" y2="0.127" width="0.127" layer="21"/>
+<wire x1="0" y1="-1.905" x2="2.54" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="0.381" y1="-2.54" x2="1.905" y2="-1.778" width="0.127" layer="21"/>
+<wire x1="0" y1="2.286" x2="0.508" y2="2.54" width="0.127" layer="21"/>
+<wire x1="2.667" y1="0" x2="2.667" y2="-10.065" width="0.127" layer="21"/>
+<wire x1="2.667" y1="-10.065" x2="-2.667" y2="-10.065" width="0.127" layer="21"/>
+<wire x1="-2.667" y1="-10.065" x2="-2.667" y2="0" width="0.127" layer="21"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="CON24_1X24_DRB_SFW" urn="urn:adsk.eagle:package:6899317/2" type="model" library_version="29">
@@ -6525,7 +6565,7 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 <packageinstance name="CON24_1X24_DRB_SFW"/>
 </packageinstances>
 </package3d>
-<package3d name="SEEED-SWITCH_SW6-2.54-9.0X3.5X3.2+2.0MM" urn="urn:adsk.eagle:package:5224531/3" type="model" library_version="29" library_locally_modified="yes">
+<package3d name="SEEED-SWITCH_SW6-2.54-9.0X3.5X3.2+2.0MM" urn="urn:adsk.eagle:package:5224531/4" type="model" library_version="66">
 <packageinstances>
 <packageinstance name="SEEED-SWITCH_SW6-2.54-9.0X3.5X3.2+2.0MM"/>
 </packageinstances>
@@ -6549,7 +6589,7 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 <packageinstance name="CHIP-LED0805"/>
 </packageinstances>
 </package3d>
-<package3d name="SOT89" urn="urn:adsk.eagle:package:6899241/4" locally_modified="yes" type="model" library_version="29" library_locally_modified="yes">
+<package3d name="SOT89" urn="urn:adsk.eagle:package:6899241/5" type="model" library_version="66">
 <packageinstances>
 <packageinstance name="SOT89"/>
 </packageinstances>
@@ -6560,14 +6600,16 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 <packageinstance name="TO92"/>
 </packageinstances>
 </package3d>
-<package3d name="R0805" urn="urn:adsk.eagle:package:32799/1" type="box" library_version="29" library_locally_modified="yes">
+<package3d name="R0805" urn="urn:adsk.eagle:package:8443791/2" type="model" library_version="66">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
+chip</description>
 <packageinstances>
 <packageinstance name="R0805"/>
 </packageinstances>
 </package3d>
-<package3d name="PC-D5.3MM" urn="urn:adsk.eagle:package:32406/1" type="box" library_version="29" library_locally_modified="yes">
+<package3d name="PC-D5.3MM" urn="urn:adsk.eagle:package:8885168/4" type="model" library_version="69">
 <packageinstances>
-<packageinstance name="PC-D5.3MM"/>
+<packageinstance name="ALU-C-D5.3MM_LEFT"/>
 </packageinstances>
 </package3d>
 <package3d name="CAPC2012X130" urn="urn:adsk.eagle:package:5225034/2" type="model" library_version="29" library_locally_modified="yes">
@@ -6577,7 +6619,7 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 <packageinstance name="CAPC2012X130"/>
 </packageinstances>
 </package3d>
-<package3d name="HOLES_3,2-PAD" urn="urn:adsk.eagle:package:5224590/1" type="box" library_version="29" library_locally_modified="yes">
+<package3d name="HOLES_3,2-PAD" urn="urn:adsk.eagle:package:5224590/2" type="model" library_version="66">
 <description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.2 mm, round</description>
 <packageinstances>
 <packageinstance name="HOLES_3,2-PAD"/>
@@ -6586,6 +6628,28 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 <package3d name="LOGO-PYR0BALL" urn="urn:adsk.eagle:package:5521977/1" type="box" library_version="63">
 <packageinstances>
 <packageinstance name="LOGO-PYR0BALL"/>
+</packageinstances>
+</package3d>
+<package3d name="SOT230P700X180-4N" urn="urn:adsk.eagle:package:7346255/2" type="model" library_version="66">
+<packageinstances>
+<packageinstance name="SOT230P700X180-4N"/>
+</packageinstances>
+</package3d>
+<package3d name="70553-02" urn="urn:adsk.eagle:package:7346257/2" type="model" library_version="66">
+<description>&lt;b&gt;2.54mm Pitch SL™ Header, Low Profile, Single Row, Right Angle, 3.05mm Pocket, Shrouded, 3 Circuits, 0.38µm Gold (Au) Selective Plating, Tin (Sn) PC Tail Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/705530002_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<packageinstances>
+<packageinstance name="70553-02"/>
+</packageinstances>
+</package3d>
+<package3d name="KK-156-2" urn="urn:adsk.eagle:package:7346264/2" type="model" library_version="66">
+<description>&lt;b&gt;KK® 396 Header, Vertical, Friction Lock, 2 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/026604020_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<packageinstances>
+<packageinstance name="KK-156-2"/>
+</packageinstances>
+</package3d>
+<package3d name="ALU-C-D5.3MM_RIGHT" urn="urn:adsk.eagle:package:8885515/3" type="model" library_version="69">
+<packageinstances>
+<packageinstance name="ALU-C-D5.3MM_RIGHT"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -6788,7 +6852,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="46.5836" y="35.2234" size="1.27" layer="26" ratio="6" rot="SMR90"/>
 <attribute name="VENDOR" value="FCI" x="43.18" y="66.44" size="1.778" layer="28" rot="MR90" display="off"/>
 </element>
-<element name="U1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="SOT230P700X180-4N" value="LM317DCY" x="26.56" y="34.6" smashed="yes">
+<element name="U1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="SOT230P700X180-4N" package3d_urn="urn:adsk.eagle:package:7346255/2" value="LM317DCY" x="26.56" y="34.6" smashed="yes">
 <attribute name="AVAILABILITY" value="Unavailable" x="26.56" y="34.6" size="1.778" layer="27" display="off"/>
 <attribute name="DESCRIPTION" value=" IC Regulator LM317/SOT223/LM317DCY TEXAS INSTRUMENT RoHS Ampere=1.5 SOT223 " x="26.56" y="34.6" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="Texas Instruments" x="26.56" y="34.6" size="1.778" layer="27" display="off"/>
@@ -6797,7 +6861,7 @@ design rules under a new name.</description>
 <attribute name="PACKAGE" value="SOT-223-4 Texas Instruments" x="26.56" y="34.6" size="1.778" layer="27" display="off"/>
 <attribute name="PRICE" value="None" x="26.56" y="34.6" size="1.778" layer="27" display="off"/>
 </element>
-<element name="SW1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="SEEED-SWITCH_SW6-2.54-9.0X3.5X3.2+2.0MM" package3d_urn="urn:adsk.eagle:package:5224531/3" value="" x="26.56" y="43.49" smashed="yes">
+<element name="SW1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="SEEED-SWITCH_SW6-2.54-9.0X3.5X3.2+2.0MM" package3d_urn="urn:adsk.eagle:package:5224531/4" value="" x="26.56" y="43.49" smashed="yes">
 <attribute name="NAME" x="25.29" y="46.03" size="0.889" layer="25" font="vector" ratio="11"/>
 <attribute name="VALUE" x="24.02" y="42.855" size="0.889" layer="27" ratio="11"/>
 </element>
@@ -6808,42 +6872,42 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="35.61" y="1.73" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="35.61" y="1.73" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="Z_MIN" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="70553-02" value="C-GRID-02-70553" x="24.04" y="1.73" smashed="yes" rot="R180">
+<element name="Z_MIN" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="70553-02" package3d_urn="urn:adsk.eagle:package:7346257/2" value="C-GRID-02-70553" x="24.04" y="1.73" smashed="yes" rot="R180">
 <attribute name="MF" value="MOLEX" x="24.04" y="1.73" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="24.04" y="1.73" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="21.855" y="11.585" size="1.016" layer="25" ratio="10"/>
 <attribute name="OC_FARNELL" value="unknown" x="24.04" y="1.73" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="24.04" y="1.73" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="FAN1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="70553-02" value="C-GRID-02-70553" x="-2.27" y="13.78" smashed="yes" rot="R90">
+<element name="FAN1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="70553-02" package3d_urn="urn:adsk.eagle:package:7346257/2" value="C-GRID-02-70553" x="-2.27" y="13.78" smashed="yes" rot="R90">
 <attribute name="MF" value="MOLEX" x="-2.27" y="13.78" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="-2.27" y="13.78" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="8.795" y="12.265" size="1.016" layer="25" ratio="10" rot="R90" align="top-left"/>
 <attribute name="OC_FARNELL" value="unknown" x="-2.27" y="13.78" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-2.27" y="13.78" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="FAN0" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="70553-02" value="C-GRID-02-70553" x="-2.27" y="23.07" smashed="yes" rot="R90">
+<element name="FAN0" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="70553-02" package3d_urn="urn:adsk.eagle:package:7346257/2" value="C-GRID-02-70553" x="-2.27" y="23.07" smashed="yes" rot="R90">
 <attribute name="MF" value="MOLEX" x="-2.27" y="23.07" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="-2.27" y="23.07" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="8.805" y="21.445" size="1.016" layer="25" ratio="10" rot="R90" align="top-left"/>
 <attribute name="OC_FARNELL" value="unknown" x="-2.27" y="23.07" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-2.27" y="23.07" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="TH1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="70553-02" value="C-GRID-02-70553" x="-2.27" y="32.29" smashed="yes" rot="R90">
+<element name="TH1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="70553-02" package3d_urn="urn:adsk.eagle:package:7346257/2" value="C-GRID-02-70553" x="-2.27" y="32.29" smashed="yes" rot="R90">
 <attribute name="MF" value="MOLEX" x="-2.27" y="32.29" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="-2.27" y="32.29" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="8.815" y="31.055" size="1.016" layer="25" ratio="10" rot="R90" align="top-left"/>
 <attribute name="OC_FARNELL" value="unknown" x="-2.27" y="32.29" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-2.27" y="32.29" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="HE0" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="KK-156-2" value="" x="5.35" y="41.13" smashed="yes" rot="R90">
+<element name="HE0" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="KK-156-2" package3d_urn="urn:adsk.eagle:package:7346264/2" value="" x="5.35" y="41.13" smashed="yes" rot="R90">
 <attribute name="MF" value="MOLEX" x="5.35" y="41.13" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="5.35" y="41.13" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="10.561" y="42.837" size="1.27" layer="25" font="vector" ratio="11" rot="R270"/>
 <attribute name="OC_FARNELL" value="unknown" x="5.35" y="41.13" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="5.35" y="41.13" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="PWR" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="KK-156-2" value="" x="5.35" y="49.97" smashed="yes" rot="R90">
+<element name="PWR" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="KK-156-2" package3d_urn="urn:adsk.eagle:package:7346264/2" value="" x="5.35" y="49.97" smashed="yes" rot="R90">
 <attribute name="MF" value="MOLEX" x="5.35" y="49.97" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="5.35" y="49.97" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="10.51" y="51.595" size="1.27" layer="25" font="vector" ratio="11" rot="R270"/>
@@ -6875,7 +6939,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="34.18" y="44.76" size="1.27" layer="25" font="vector" ratio="11" rot="R270"/>
 <attribute name="VALUE" x="30.37" y="44.76" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="U2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="SOT89" package3d_urn="urn:adsk.eagle:package:6899241/4" value="L78L05ACU" x="22.723" y="17.828" smashed="yes" rot="R180">
+<element name="U2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="SOT89" package3d_urn="urn:adsk.eagle:package:6899241/5" value="L78L05ACU" x="22.723" y="17.828" smashed="yes" rot="R180">
 <attribute name="AVAILABILITY" value="Unavailable" x="22.723" y="17.828" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DESCRIPTION" value=" Voltage regulator; fixed; 5V; 0.1A; SOT89; SMD; Package: reel, tape " x="22.723" y="17.828" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MF" value="STMicroelectronics" x="22.723" y="17.828" size="1.778" layer="27" rot="R180" display="off"/>
@@ -6887,27 +6951,25 @@ design rules under a new name.</description>
 <element name="Q2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TO92" package3d_urn="urn:adsk.eagle:package:28523/2" value="2N2907" x="19.386" y="26.337" smashed="yes">
 <attribute name="NAME" x="20.321" y="30.532" size="1.27" layer="25" font="vector" ratio="11" rot="R180"/>
 </element>
-<element name="R6" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0805" package3d_urn="urn:adsk.eagle:package:32799/1" value="1R" x="16.576" y="19.86" smashed="yes" rot="R90">
-<attribute name="MPN" value="RC0805JR-072KL" x="10.226" y="13.51" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="14.671" y="19.225" size="0.889" layer="25" font="vector" ratio="11" rot="R90"/>
-<attribute name="VALUE" x="17.211" y="18.717" size="0.889" layer="21" font="vector" ratio="11" rot="R180"/>
+<element name="R6" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0805" package3d_urn="urn:adsk.eagle:package:8443791/2" value="1R" x="16.56" y="19.824" smashed="yes">
+<attribute name="MPN" value="RC0805JR-072KL" x="10.21" y="26.174" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="16.425" y="20.829" size="0.889" layer="25" font="vector" ratio="11"/>
+<attribute name="VALUE" x="17.511" y="18.917" size="0.889" layer="21" font="vector" ratio="11" rot="R180"/>
 </element>
-<element name="R7" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0805" package3d_urn="urn:adsk.eagle:package:32799/1" value="10R" x="19.386" y="21.13" smashed="yes" rot="R180">
-<attribute name="MPN" value="RC0805JR-072KL" x="25.736" y="13.51" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="20.021" y="19.225" size="0.889" layer="25" font="vector" ratio="11" rot="R180"/>
-<attribute name="VALUE" x="20.402" y="23.019" size="0.889" layer="21" font="vector" ratio="11" rot="R270"/>
+<element name="R7" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0805" package3d_urn="urn:adsk.eagle:package:8443791/2" value="10R" x="19.33" y="21.234" smashed="yes" rot="R90">
+<attribute name="MPN" value="RC0805JR-072KL" x="11.71" y="14.884" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="20.175" y="22.601" size="0.889" layer="25" font="vector" ratio="11" rot="R270"/>
+<attribute name="VALUE" x="18.681" y="22.682" size="0.889" layer="21" font="vector" ratio="11"/>
 </element>
-<element name="C2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="PC-D5.3MM" package3d_urn="urn:adsk.eagle:package:32406/1" value="220uf" x="17.81" y="50.886" smashed="yes" rot="R270">
+<element name="C2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="ALU-C-D5.3MM_LEFT" package3d_urn="urn:adsk.eagle:package:8885168/4" value="100uf" x="17.81" y="50.886" smashed="yes" rot="R270">
 <attribute name="MPN" value="KS 100uF/16V" x="27.97" y="58.506" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="18.391" y="47.869" size="0.889" layer="25" ratio="11" rot="R180"/>
 <attribute name="VALUE" x="20.919" y="51.91" size="0.635" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="C3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="PC-D5.3MM" package3d_urn="urn:adsk.eagle:package:32406/1" value="220uf" x="25.586" y="25.275" smashed="yes" rot="R90">
-<attribute name="MPN" value="KS 100uF/16V" x="15.426" y="17.655" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="C3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="ALU-C-D5.3MM_RIGHT" package3d_urn="urn:adsk.eagle:package:8885515/3" value="100uf" x="25.586" y="25.275" smashed="yes" rot="R90">
 <attribute name="NAME" x="28.542" y="25.86" size="0.889" layer="25" font="vector" ratio="11" rot="R270"/>
-<attribute name="VALUE" x="26.729" y="28.831" size="0.635" layer="21" font="vector" ratio="11" rot="R180"/>
 </element>
-<element name="C4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="PC-D5.3MM" package3d_urn="urn:adsk.eagle:package:32406/1" value="220uf" x="39.21" y="38.72" smashed="yes">
+<element name="C4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="ALU-C-D5.3MM_LEFT" package3d_urn="urn:adsk.eagle:package:8885168/4" value="100uf" x="39.21" y="38.72" smashed="yes">
 <attribute name="MPN" value="KS 100uF/16V" x="31.59" y="48.88" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="43.147" y="38.085" size="0.889" layer="25" font="vector" ratio="11" rot="R90"/>
 <attribute name="VALUE" x="38.321" y="34.91" size="0.635" layer="21" font="vector" ratio="11"/>
@@ -6916,14 +6978,14 @@ design rules under a new name.</description>
 <attribute name="NAME" x="33.8849" y="35.52" size="0.8128" layer="21" font="vector" ratio="11" rot="R270" align="bottom-center"/>
 <attribute name="VALUE" x="32.29" y="36.5549" size="0.6096" layer="21" font="vector" ratio="11" rot="R180" align="top-center"/>
 </element>
-<element name="H1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="HOLES_3,2-PAD" package3d_urn="urn:adsk.eagle:package:5224590/1" value="HOLES_MOUNT-PAD-ROUND3.2" x="5.08" y="5.08" smashed="yes"/>
-<element name="H2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="HOLES_3,2-PAD" package3d_urn="urn:adsk.eagle:package:5224590/1" value="HOLES_MOUNT-PAD-ROUND3.2" x="5.08" y="58.82" smashed="yes"/>
-<element name="H3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="HOLES_3,2-PAD" package3d_urn="urn:adsk.eagle:package:5224590/1" value="HOLES_MOUNT-PAD-ROUND3.2" x="48.26" y="5.18" smashed="yes"/>
-<element name="H4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="HOLES_3,2-PAD" package3d_urn="urn:adsk.eagle:package:5224590/1" value="HOLES_MOUNT-PAD-ROUND3.2" x="48.26" y="58.82" smashed="yes"/>
-<element name="F1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0805" package3d_urn="urn:adsk.eagle:package:32799/1" value="500mA" x="29" y="20" smashed="yes" rot="R270">
-<attribute name="MPN" value="RC0805JR-072KL" x="36" y="26" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="30.905" y="18.984" size="0.889" layer="25" font="vector" ratio="11" rot="R180"/>
-<attribute name="VALUE" x="30.905" y="21.905" size="0.889" layer="27" ratio="11" rot="R180"/>
+<element name="H1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="HOLES_3,2-PAD" package3d_urn="urn:adsk.eagle:package:5224590/2" value="HOLES_MOUNT-PAD-ROUND3.2" x="5.08" y="5.08" smashed="yes"/>
+<element name="H2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="HOLES_3,2-PAD" package3d_urn="urn:adsk.eagle:package:5224590/2" value="HOLES_MOUNT-PAD-ROUND3.2" x="5.08" y="58.82" smashed="yes"/>
+<element name="H3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="HOLES_3,2-PAD" package3d_urn="urn:adsk.eagle:package:5224590/2" value="HOLES_MOUNT-PAD-ROUND3.2" x="48.26" y="5.18" smashed="yes"/>
+<element name="H4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="HOLES_3,2-PAD" package3d_urn="urn:adsk.eagle:package:5224590/2" value="HOLES_MOUNT-PAD-ROUND3.2" x="48.26" y="58.82" smashed="yes"/>
+<element name="F1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0805" package3d_urn="urn:adsk.eagle:package:8443791/2" value="500mA" x="28.5" y="20" smashed="yes" rot="R180">
+<attribute name="MPN" value="RC0805JR-072KL" x="34.5" y="13" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="27.895" y="20.916" size="0.889" layer="25" font="vector" ratio="11"/>
+<attribute name="VALUE" x="29.895" y="21.805" size="0.889" layer="27" ratio="11" rot="R270"/>
 </element>
 <element name="U$1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="LOGO-PYR0BALL" package3d_urn="urn:adsk.eagle:package:5521977/1" value="" x="28" y="10" smashed="yes"/>
 </elements>
@@ -6972,8 +7034,8 @@ design rules under a new name.</description>
 <contactref element="F1" pad="1"/>
 <contactref element="J1" pad="16"/>
 <wire x1="47.2059" y1="35" x2="44.889" y2="35" width="0.508" layer="16"/>
-<wire x1="44.889" y1="35" x2="29.889" y2="20" width="0.508" layer="16" curve="90"/>
-<via x="29.889" y="20" extent="1-16" drill="0.35"/>
+<wire x1="44.889" y1="35" x2="29.35" y2="20" width="0.508" layer="16" curve="90"/>
+<via x="29.35" y="20" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="V_INT">
 <contactref element="U1" pad="4"/>
@@ -7082,9 +7144,9 @@ design rules under a new name.</description>
 <wire x1="5.35" y1="43.11" x2="1.91" y2="43.11" width="1.27" layer="1"/>
 <wire x1="1.91" y1="43.11" x2="1.8" y2="43" width="1.27" layer="1" curve="90"/>
 <wire x1="2.14" y1="24.34" x2="1.8" y2="24" width="1.27" layer="1" curve="90"/>
-<wire x1="15.687" y1="19.86" x2="10.877" y2="15.05" width="0.6096" layer="1" curve="-90"/>
+<wire x1="15.71" y1="19.824" x2="10.877" y2="15.05" width="0.6096" layer="1" curve="-90"/>
 <wire x1="18.116" y1="26.337" x2="15.687" y2="23.908" width="0.6096" layer="1" curve="90"/>
-<wire x1="15.687" y1="23.908" x2="15.687" y2="19.86" width="0.6096" layer="1"/>
+<wire x1="15.687" y1="23.908" x2="15.71" y2="19.824" width="0.6096" layer="1"/>
 <wire x1="5.35" y1="51.95" x2="17.746" y2="51.95" width="1.27" layer="16"/>
 <wire x1="17.746" y1="51.95" x2="17.81" y2="51.886" width="1.27" layer="16" curve="-90"/>
 <wire x1="47.2059" y1="50" x2="47.2059" y2="49.53" width="0.1524" layer="16"/>
@@ -7164,7 +7226,7 @@ design rules under a new name.</description>
 <wire x1="20.656" y1="26.337" x2="24.222" y2="22.771" width="0.6096" layer="1" curve="-90"/>
 <wire x1="24.222" y1="22.771" x2="24.222" y2="19.809" width="0.6096" layer="1"/>
 <wire x1="24.222" y1="19.809" x2="24.413" y2="20" width="0.6096" layer="1" curve="-90"/>
-<wire x1="24.413" y1="20" x2="28.111" y2="20" width="0.6096" layer="1"/>
+<wire x1="24.413" y1="20" x2="27.65" y2="20" width="0.6096" layer="1"/>
 <wire x1="25.586" y1="24.275" x2="25.111" y2="23.8" width="0.508" layer="1"/>
 <wire x1="25.111" y1="23.8" x2="24.222" y2="23.8" width="0.508" layer="1"/>
 <wire x1="24.222" y1="23.8" x2="24.222" y2="22.771" width="0.508" layer="1"/>
@@ -7212,16 +7274,18 @@ design rules under a new name.</description>
 <contactref element="R6" pad="2"/>
 <contactref element="U2" pad="3"/>
 <contactref element="R7" pad="1"/>
-<wire x1="17.465" y1="19.86" x2="20" y2="19.86" width="0.508" layer="1"/>
 <wire x1="20" y1="19.86" x2="21.173" y2="19.86" width="0.508" layer="1"/>
 <wire x1="21.173" y1="19.86" x2="21.224" y2="19.809" width="0.508" layer="1" curve="-90"/>
-<wire x1="19.386" y1="20.241" x2="19.619" y2="20.241" width="0.1524" layer="1"/>
-<wire x1="19.619" y1="20.241" x2="20" y2="19.86" width="0.1524" layer="1" curve="-90"/>
+<wire x1="19.33" y1="20.384" x2="19.493703125" y2="20.366296875" width="0.1524" layer="1"/>
+<wire x1="19.493703125" y1="20.366296875" x2="20" y2="19.86" width="0.1524" layer="1" curve="-90"/>
+<wire x1="17.41" y1="19.824" x2="17.446" y2="19.86" width="0.508" layer="1"/>
+<wire x1="17.446" y1="19.86" x2="20" y2="19.86" width="0.508" layer="1"/>
 </signal>
 <signal name="BYP_GATE">
 <contactref element="R7" pad="2"/>
 <contactref element="Q2" pad="2"/>
-<wire x1="19.386" y1="28.242" x2="19.386" y2="22.019" width="0.1524" layer="1"/>
+<wire x1="19.386" y1="28.242" x2="19.386" y2="22.085459375" width="0.1524" layer="1"/>
+<wire x1="19.386" y1="22.085459375" x2="19.33" y2="22.084" width="0.1524" layer="1"/>
 </signal>
 <signal name="IND_LED">
 <contactref element="R4" pad="1"/>
@@ -7248,6 +7312,11 @@ design rules under a new name.</description>
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
 with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports Fusion synchronisation.
+This feature will not be available in this version and saving
+the document will break the link to the Fusion PCB feature.
 </note>
 <note version="8.3" severity="warning">
 Since Version 8.3, EAGLE supports URNs for individual library

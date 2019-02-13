@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1.27" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -270,7 +270,7 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="-8" y1="1.5" x2="-7" y2="1.5" width="0.127" layer="21"/>
 <text x="-3.2766" y="2.1336" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
 </package>
-<package name="SOT230P700X180-4N" library_version="29" library_locally_modified="yes">
+<package name="SOT230P700X180-4N" urn="urn:adsk.eagle:footprint:7346245/1" library_version="66">
 <wire x1="-1.8542" y1="1.8796" x2="-1.8542" y2="2.7432" width="0.1524" layer="51"/>
 <wire x1="-1.8542" y1="2.7432" x2="-3.6576" y2="2.7432" width="0.1524" layer="51"/>
 <wire x1="-3.6576" y1="2.7432" x2="-3.6576" y2="1.8796" width="0.1524" layer="51"/>
@@ -302,7 +302,7 @@ DIN A3, landscape with location and doc. field</description>
 <smd name="3" x="-3.2004" y="-2.3114" dx="1.6256" dy="0.889" layer="1"/>
 <smd name="4" x="3.2004" y="0" dx="1.6256" dy="3.175" layer="1"/>
 </package>
-<package name="SEEED-SWITCH_SW6-2.54-9.0X3.5X3.2+2.0MM" urn="urn:adsk.eagle:footprint:5224473/1" library_version="29" library_locally_modified="yes">
+<package name="SEEED-SWITCH_SW6-2.54-9.0X3.5X3.2+2.0MM" urn="urn:adsk.eagle:footprint:5224473/2" library_version="66">
 <wire x1="-4.55" y1="-1.75" x2="-4.55" y2="1.75" width="0.127" layer="21"/>
 <wire x1="-4.55" y1="1.75" x2="4.55" y2="1.75" width="0.127" layer="51"/>
 <wire x1="4.55" y1="1.75" x2="4.55" y2="-1.75" width="0.127" layer="21"/>
@@ -322,8 +322,7 @@ DIN A3, landscape with location and doc. field</description>
 <pad name="CH2B" x="2.54" y="1.6" drill="0.8128" diameter="1.27" rot="R90"/>
 <pad name="COM1" x="0" y="-1.6" drill="0.8128" diameter="1.27" shape="octagon" rot="R90"/>
 <pad name="COM2" x="0" y="1.524" drill="0.8128" diameter="1.27" shape="octagon" rot="R90"/>
-<text x="-2.54" y="2.54" size="0.889" layer="25" ratio="11">&gt;NAME</text>
-<text x="-2.54" y="-0.635" size="0.889" layer="27" ratio="11">&gt;VALUE</text>
+<text x="0" y="2.54" size="0.8128" layer="25" font="vector" ratio="11" align="bottom-center">&gt;NAME</text>
 </package>
 <package name="70543-04" urn="urn:adsk.eagle:footprint:6902608/1" library_version="29" library_locally_modified="yes">
 <description>&lt;b&gt;2.54mm Pitch SL™ Header, Single Row, Vertical, 3.05mm Pocket, Shrouded, 5 Circuits, 0.38µm Gold (Au) Selective Plating, Tin (Sn) PC Tail Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/705430004_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
@@ -531,34 +530,7 @@ DIN A3, landscape with location and doc. field</description>
 <vertex x="-4.7625" y="5.08"/>
 </polygon>
 </package>
-<package name="70543-02" library_version="29" library_locally_modified="yes">
-<description>&lt;b&gt;2.54mm Pitch SL™ Header, Single Row, Vertical, 3.05mm Pocket, Shrouded, 3 Circuits, 0.38µm Gold (Au) Selective Plating, Tin (Sn) PC Tail Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/705430002_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
-<wire x1="3.81" y1="-2.8575" x2="3.81" y2="2.8575" width="0.254" layer="21"/>
-<wire x1="3.81" y1="2.8575" x2="-3.81" y2="2.8575" width="0.254" layer="21"/>
-<wire x1="-3.81" y1="2.8575" x2="-3.81" y2="-2.8575" width="0.254" layer="21"/>
-<wire x1="-3.81" y1="-2.8575" x2="-3.4925" y2="-2.8575" width="0.254" layer="21"/>
-<wire x1="-3.4925" y1="-2.8575" x2="-3.4925" y2="-3.81" width="0.254" layer="21"/>
-<wire x1="-3.4925" y1="-3.81" x2="3.4925" y2="-3.81" width="0.254" layer="21"/>
-<wire x1="3.4925" y1="-3.81" x2="3.4925" y2="-2.8575" width="0.254" layer="21"/>
-<wire x1="3.4925" y1="-2.8575" x2="3.81" y2="-2.8575" width="0.254" layer="21"/>
-<wire x1="-3.175" y1="2.2225" x2="-3.175" y2="-2.2225" width="0.0508" layer="51"/>
-<wire x1="3.175" y1="2.2225" x2="3.175" y2="-2.2225" width="0.0508" layer="51"/>
-<wire x1="-3.175" y1="2.2225" x2="3.175" y2="2.2225" width="0.0508" layer="51"/>
-<wire x1="-3.175" y1="-2.2225" x2="-2.8575" y2="-2.2225" width="0.0508" layer="51"/>
-<wire x1="-2.8575" y1="-2.2225" x2="2.8575" y2="-2.2225" width="0.0508" layer="51"/>
-<wire x1="2.8575" y1="-2.2225" x2="3.175" y2="-2.2225" width="0.0508" layer="51"/>
-<wire x1="2.8575" y1="-3.175" x2="-2.8575" y2="-3.175" width="0.0508" layer="51"/>
-<wire x1="-2.8575" y1="-2.2225" x2="-2.8575" y2="-3.175" width="0.0508" layer="51"/>
-<wire x1="2.8575" y1="-2.2225" x2="2.8575" y2="-3.175" width="0.0508" layer="51"/>
-<pad name="2" x="1.27" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="1" x="-1.27" y="0" drill="1.016" shape="long" rot="R90"/>
-<text x="-4.445" y="-2.54" size="1.016" layer="25" ratio="10" rot="R90">&gt;NAME</text>
-<text x="-3.4925" y="3.4925" size="0.8128" layer="27" ratio="10">&gt;VALUE</text>
-<text x="-2.8575" y="-1.5875" size="1.016" layer="51" ratio="10">1</text>
-<rectangle x1="1.0319" y1="-0.2381" x2="1.5081" y2="0.2381" layer="51"/>
-<rectangle x1="-1.5081" y1="-0.2381" x2="-1.0319" y2="0.2381" layer="51"/>
-</package>
-<package name="70553-02" library_version="29" library_locally_modified="yes">
+<package name="70553-02" urn="urn:adsk.eagle:footprint:7346247/1" library_version="66">
 <description>&lt;b&gt;2.54mm Pitch SL™ Header, Low Profile, Single Row, Right Angle, 3.05mm Pocket, Shrouded, 3 Circuits, 0.38µm Gold (Au) Selective Plating, Tin (Sn) PC Tail Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/705530002_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <wire x1="3.9688" y1="5.8738" x2="-3.9688" y2="5.8738" width="0.254" layer="21"/>
 <wire x1="-1.27" y1="2.54" x2="-1.27" y2="-3.175" width="0.254" layer="21"/>
@@ -610,63 +582,7 @@ DIN A3, landscape with location and doc. field</description>
 <vertex x="-2.8575" y="5.8738"/>
 </polygon>
 </package>
-<package name="15-91-02" library_version="29" library_locally_modified="yes">
-<description>&lt;b&gt;2.54mm Pitch SL™ Wire-to-Board Header, Low Profile, Surface Mount, Single Row, Right Angle, 3.05mm Pocket, Shrouded, with Press-fit Plastic Peg, 2 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/015913024_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
-<wire x1="3.9688" y1="5.08" x2="-3.9688" y2="5.08" width="0.254" layer="21"/>
-<wire x1="-1.27" y1="1.905" x2="-1.27" y2="-3.81" width="0.254" layer="51"/>
-<wire x1="-1.27" y1="-3.81" x2="1.27" y2="-3.81" width="0.254" layer="51"/>
-<wire x1="1.27" y1="-3.81" x2="1.27" y2="1.905" width="0.254" layer="51"/>
-<wire x1="-3.9688" y1="5.08" x2="-3.9688" y2="2.2225" width="0.254" layer="21"/>
-<wire x1="-3.9688" y1="2.2225" x2="-3.9688" y2="1.905" width="0.254" layer="51"/>
-<wire x1="-3.9688" y1="1.905" x2="-3.175" y2="1.905" width="0.254" layer="51"/>
-<wire x1="-3.175" y1="1.905" x2="-1.27" y2="1.905" width="0.254" layer="51"/>
-<wire x1="1.27" y1="1.905" x2="3.175" y2="1.905" width="0.254" layer="51"/>
-<wire x1="3.175" y1="1.905" x2="3.9688" y2="1.905" width="0.254" layer="51"/>
-<wire x1="3.9688" y1="1.905" x2="3.9688" y2="2.2225" width="0.254" layer="51"/>
-<wire x1="3.9688" y1="2.2225" x2="3.9688" y2="5.08" width="0.254" layer="21"/>
-<wire x1="-3.175" y1="1.905" x2="-3.175" y2="2.54" width="0.254" layer="51"/>
-<wire x1="-3.175" y1="2.54" x2="-1.905" y2="3.81" width="0.254" layer="51" curve="-90"/>
-<wire x1="-1.905" y1="3.81" x2="1.905" y2="3.81" width="0.254" layer="51"/>
-<wire x1="1.905" y1="3.81" x2="3.175" y2="2.54" width="0.254" layer="51" curve="-90"/>
-<wire x1="3.175" y1="2.54" x2="3.175" y2="1.905" width="0.254" layer="51"/>
-<wire x1="-3.9688" y1="-0.635" x2="-3.9688" y2="-6.35" width="0.254" layer="21"/>
-<wire x1="-3.9688" y1="-6.35" x2="3.9688" y2="-6.35" width="0.254" layer="21"/>
-<wire x1="3.9688" y1="-6.35" x2="3.9688" y2="-0.635" width="0.254" layer="21"/>
-<wire x1="-2.54" y1="-6.35" x2="-2.54" y2="-8.5725" width="0.254" layer="51"/>
-<wire x1="2.54" y1="-8.5725" x2="2.54" y2="-6.35" width="0.254" layer="51"/>
-<wire x1="-2.54" y1="-6.985" x2="-1.905" y2="-6.985" width="0.254" layer="51"/>
-<wire x1="-0.635" y1="-6.985" x2="0.635" y2="-6.985" width="0.254" layer="51"/>
-<wire x1="1.905" y1="-6.985" x2="2.54" y2="-6.985" width="0.254" layer="51"/>
-<wire x1="-1.905" y1="-6.985" x2="-1.905" y2="-8.3185" width="0.254" layer="51"/>
-<wire x1="-1.905" y1="-8.3185" x2="-2.159" y2="-8.5725" width="0.254" layer="51" curve="-90"/>
-<wire x1="-2.159" y1="-8.5725" x2="-2.54" y2="-8.5725" width="0.254" layer="51"/>
-<wire x1="0.635" y1="-6.985" x2="0.635" y2="-8.3185" width="0.254" layer="51"/>
-<wire x1="0.635" y1="-8.3185" x2="0.381" y2="-8.5725" width="0.254" layer="51" curve="-90"/>
-<wire x1="0.381" y1="-8.5725" x2="-0.381" y2="-8.5725" width="0.254" layer="51"/>
-<wire x1="-0.381" y1="-8.5725" x2="-0.635" y2="-8.3185" width="0.254" layer="51" curve="-90"/>
-<wire x1="-0.635" y1="-8.3185" x2="-0.635" y2="-6.985" width="0.254" layer="51"/>
-<wire x1="1.905" y1="-6.985" x2="1.905" y2="-8.3185" width="0.254" layer="51"/>
-<wire x1="1.905" y1="-8.3185" x2="2.159" y2="-8.5725" width="0.254" layer="51" curve="90"/>
-<wire x1="2.159" y1="-8.5725" x2="2.54" y2="-8.5725" width="0.254" layer="51"/>
-<wire x1="-3.9688" y1="-0.635" x2="-3.9688" y2="1.905" width="0.254" layer="51"/>
-<wire x1="3.9688" y1="-0.635" x2="3.9688" y2="1.905" width="0.254" layer="51"/>
-<wire x1="-1.905" y1="-6.985" x2="-0.635" y2="-6.985" width="0.254" layer="51"/>
-<wire x1="0.635" y1="-6.985" x2="1.905" y2="-6.985" width="0.254" layer="51"/>
-<smd name="1" x="-1.27" y="-10.795" dx="5.334" dy="1.651" layer="1" rot="R90"/>
-<smd name="2" x="1.27" y="-10.795" dx="5.334" dy="1.651" layer="1" rot="R90"/>
-<text x="-4.445" y="-6.35" size="1.016" layer="25" ratio="10" rot="R90">&gt;NAME</text>
-<text x="5.715" y="-6.35" size="0.8128" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
-<rectangle x1="-1.5875" y1="-10.795" x2="-0.9525" y2="-6.985" layer="51"/>
-<rectangle x1="0.9525" y1="-10.795" x2="1.5875" y2="-6.985" layer="51"/>
-<hole x="-2.667" y="0.8382" drill="3.4036"/>
-<hole x="2.667" y="0.8382" drill="3.4036"/>
-<polygon width="0.2032" layer="21">
-<vertex x="-3.81" y="5.08"/>
-<vertex x="-3.3337" y="3.4926"/>
-<vertex x="-2.8575" y="5.08"/>
-</polygon>
-</package>
-<package name="KK-156-2" library_version="29" library_locally_modified="yes">
+<package name="KK-156-2" urn="urn:adsk.eagle:footprint:7346254/1" library_version="66">
 <description>&lt;b&gt;KK® 396 Header, Vertical, Friction Lock, 2 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/026604020_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <wire x1="3.81" y1="4.95" x2="2.01" y2="4.95" width="0.2032" layer="21"/>
 <wire x1="2.01" y1="4.95" x2="-1.985" y2="4.95" width="0.2032" layer="21"/>
@@ -1746,7 +1662,7 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <rectangle x1="-0.4" y1="0.175" x2="0" y2="0.4" layer="51"/>
 <rectangle x1="-0.25" y1="0.175" x2="0" y2="0.4" layer="21"/>
 </package>
-<package name="SOT89" urn="urn:adsk.eagle:footprint:6899240/3" locally_modified="yes" library_version="29" library_locally_modified="yes">
+<package name="SOT89" urn="urn:adsk.eagle:footprint:6899240/4" library_version="66">
 <wire x1="2.235" y1="-1.245" x2="-2.235" y2="-1.245" width="0.127" layer="51"/>
 <wire x1="2.235" y1="1.219" x2="2.235" y2="-1.245" width="0.127" layer="51"/>
 <wire x1="-2.235" y1="-1.245" x2="-2.235" y2="1.219" width="0.127" layer="51"/>
@@ -1762,6 +1678,7 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <rectangle x1="-1.727390625" y1="-2.10843125" x2="-1.27" y2="-1.27" layer="51"/>
 <rectangle x1="1.270140625" y1="-2.108440625" x2="1.7272" y2="-1.27" layer="51"/>
 <rectangle x1="-0.27983125" y1="-2.111440625" x2="0.2794" y2="-1.27" layer="51"/>
+<rectangle x1="-0.5" y1="-2.8" x2="0.5" y2="-1.2" layer="29"/>
 <polygon width="0.1998" layer="51">
 <vertex x="-0.7874" y="1.3208"/>
 <vertex x="-0.7874" y="1.5748"/>
@@ -1776,7 +1693,6 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <smd name="3" x="1.499" y="-1.981" dx="0.8" dy="1.4" layer="1"/>
 <smd name="2" x="0" y="-1.727" dx="0.8" dy="1.9" layer="1" stop="no" cream="no"/>
 <smd name="PAD" x="0" y="0.94" dx="2.032" dy="3.65" layer="1" roundness="75"/>
-<rectangle x1="-0.5" y1="-2.8" x2="0.5" y2="-1.2" layer="29"/>
 </package>
 <package name="TO92" urn="urn:adsk.eagle:footprint:28459/1" library_version="29" library_locally_modified="yes">
 <description>&lt;b&gt;TO 92&lt;/b&gt;</description>
@@ -1799,40 +1715,49 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <text x="-2.159" y="0" size="1.27" layer="51" ratio="10">3</text>
 <text x="1.143" y="0" size="1.27" layer="51" ratio="10">1</text>
 </package>
-<package name="R0805" urn="urn:adsk.eagle:footprint:32784/1" library_version="29" library_locally_modified="yes">
-<wire x1="0.889" y1="-1.651" x2="-0.889" y2="-1.651" width="0.127" layer="21"/>
-<wire x1="-0.889" y1="-1.651" x2="-0.889" y2="1.651" width="0.127" layer="21"/>
-<wire x1="-0.889" y1="1.651" x2="0.889" y2="1.651" width="0.127" layer="21"/>
-<wire x1="0.889" y1="1.651" x2="0.889" y2="-1.651" width="0.127" layer="21"/>
-<smd name="1" x="0" y="0.889" dx="1.016" dy="1.397" layer="1" roundness="25" rot="R270"/>
-<smd name="2" x="0" y="-0.889" dx="1.016" dy="1.397" layer="1" roundness="25" rot="R270"/>
-<text x="1.016" y="1.905" size="0.889" layer="25" font="vector" ratio="11" rot="R270">&gt;NAME</text>
-<text x="-1.905" y="1.905" size="0.889" layer="27" ratio="11" rot="R270">&gt;VALUE</text>
+<package name="R0805" urn="urn:adsk.eagle:footprint:8443790/1" library_version="66">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
+chip</description>
+<wire x1="-0.41" y1="0.635" x2="0.41" y2="0.635" width="0.1524" layer="51"/>
+<wire x1="-0.41" y1="-0.635" x2="0.41" y2="-0.635" width="0.1524" layer="51"/>
+<rectangle x1="0.4064" y1="-0.6985" x2="1.0564" y2="0.7015" layer="51"/>
+<rectangle x1="-1.0668" y1="-0.6985" x2="-0.4168" y2="0.7015" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.5001" x2="0.1999" y2="0.5001" layer="35"/>
+<smd name="1" x="-0.85" y="0" dx="1" dy="1.5" layer="1"/>
+<smd name="2" x="0.85" y="0" dx="1" dy="1.5" layer="1"/>
+<text x="-1.387" y="1.016" size="0.8128" layer="25" font="vector" ratio="11">&gt;NAME</text>
+<text x="-1.387" y="-1.036" size="0.8128" layer="27" font="vector" ratio="11" align="top-left">&gt;VALUE</text>
 </package>
-<package name="PC-D5.3MM" urn="urn:adsk.eagle:footprint:32377/1" library_version="29" library_locally_modified="yes">
+<package name="ALU-C-D5.3MM_LEFT" urn="urn:adsk.eagle:footprint:8885149/3" library_version="69">
 <circle x="0" y="0" radius="2.65" width="0.127" layer="21"/>
 <circle x="0" y="0" radius="2.694" width="0.127" layer="39"/>
 <pad name="+" x="-1" y="0" drill="0.8" diameter="1.35" shape="square"/>
 <pad name="-" x="1" y="0" drill="0.8" diameter="1.35"/>
-<text x="-1.905" y="2.921" size="0.889" layer="25" ratio="11">&gt;NAME</text>
-<text x="-1.524" y="-4.191" size="0.635" layer="27" ratio="10">&gt;VALUE</text>
+<text x="3.048" y="1.524" size="0.889" layer="25" font="vector" ratio="11" rot="R270">&gt;NAME</text>
+<text x="-1.524" y="-2.921" size="0.635" layer="27" font="vector" ratio="10" align="top-left">&gt;VALUE</text>
 <wire x1="-4.445" y1="0" x2="-3.81" y2="0" width="0.127" layer="21"/>
 <wire x1="-3.175" y1="0" x2="-3.81" y2="0" width="0.127" layer="21"/>
 <wire x1="-3.81" y1="0" x2="-3.81" y2="0.635" width="0.127" layer="21"/>
 <wire x1="-3.81" y1="0" x2="-3.81" y2="-0.635" width="0.127" layer="21"/>
-<wire x1="0" y1="2.667" x2="0" y2="1.651" width="0.127" layer="21"/>
+<wire x1="0" y1="2.667" x2="0" y2="2.286" width="0.127" layer="21"/>
+<wire x1="0" y1="2.286" x2="0" y2="1.651" width="0.127" layer="21"/>
 <wire x1="0" y1="1.651" x2="0" y2="1.016" width="0.127" layer="21"/>
 <wire x1="0" y1="1.016" x2="0" y2="0.381" width="0.127" layer="21"/>
-<wire x1="0" y1="0.381" x2="0" y2="-1.524" width="0.127" layer="21"/>
-<wire x1="0" y1="-1.524" x2="0" y2="-2.286" width="0.127" layer="21"/>
-<wire x1="0" y1="-2.286" x2="0" y2="-2.667" width="0.127" layer="21"/>
-<wire x1="0" y1="-2.286" x2="2.286" y2="-1.27" width="0.127" layer="21"/>
-<wire x1="0" y1="-1.524" x2="2.54" y2="-0.381" width="0.127" layer="21"/>
-<wire x1="1.5875" y1="0.635" x2="2.413" y2="1.016" width="0.127" layer="21"/>
+<wire x1="0" y1="0.381" x2="0" y2="-0.381" width="0.127" layer="21"/>
+<wire x1="0" y1="-0.381" x2="0" y2="-1.143" width="0.127" layer="21"/>
+<wire x1="0" y1="-1.143" x2="0" y2="-1.905" width="0.127" layer="21"/>
+<wire x1="0" y1="-1.905" x2="0" y2="-2.667" width="0.127" layer="21"/>
 <wire x1="0" y1="0.381" x2="2.159" y2="1.524" width="0.127" layer="21"/>
 <wire x1="0" y1="1.016" x2="1.778" y2="1.9685" width="0.127" layer="21"/>
 <wire x1="0" y1="1.651" x2="1.27" y2="2.3495" width="0.127" layer="21"/>
-<wire x1="1.75" y1="0" x2="2.413" y2="0.381" width="0.127" layer="21"/>
+<wire x1="0" y1="-0.381" x2="2.413" y2="0.889" width="0.127" layer="21"/>
+<wire x1="0" y1="-1.143" x2="2.54" y2="0.127" width="0.127" layer="21"/>
+<wire x1="0" y1="-1.905" x2="2.54" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="0.381" y1="-2.54" x2="1.905" y2="-1.778" width="0.127" layer="21"/>
+<wire x1="0" y1="2.286" x2="0.508" y2="2.54" width="0.127" layer="21"/>
+<wire x1="2.667" y1="0" x2="2.667" y2="10.082" width="0.127" layer="21"/>
+<wire x1="2.667" y1="10.082" x2="-2.667" y2="10.082" width="0.127" layer="21"/>
+<wire x1="-2.667" y1="10.082" x2="-2.667" y2="0" width="0.127" layer="21"/>
 </package>
 <package name="CAPC2012X130" urn="urn:adsk.eagle:footprint:5225118/2" library_version="29" library_locally_modified="yes">
 <description>Chip, 2.00 X 1.25 X 1.30 mm body
@@ -2004,6 +1929,147 @@ Metric Code Size 1608</description>
 <wire x1="0" y1="2.54" x2="2.54" y2="0" width="3.9116" layer="51" curve="-90" cap="flat"/>
 <pad name="B5,5" x="0" y="0" drill="5.5" diameter="9"/>
 </package>
+<package name="70543-02" urn="urn:adsk.eagle:footprint:7346246/1" library_version="66">
+<description>&lt;b&gt;2.54mm Pitch SL™ Header, Single Row, Vertical, 3.05mm Pocket, Shrouded, 3 Circuits, 0.38µm Gold (Au) Selective Plating, Tin (Sn) PC Tail Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/705430002_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<wire x1="3.81" y1="-2.8575" x2="3.81" y2="2.8575" width="0.254" layer="21"/>
+<wire x1="3.81" y1="2.8575" x2="-3.81" y2="2.8575" width="0.254" layer="21"/>
+<wire x1="-3.81" y1="2.8575" x2="-3.81" y2="-2.8575" width="0.254" layer="21"/>
+<wire x1="-3.81" y1="-2.8575" x2="-3.4925" y2="-2.8575" width="0.254" layer="21"/>
+<wire x1="-3.4925" y1="-2.8575" x2="-3.4925" y2="-3.81" width="0.254" layer="21"/>
+<wire x1="-3.4925" y1="-3.81" x2="3.4925" y2="-3.81" width="0.254" layer="21"/>
+<wire x1="3.4925" y1="-3.81" x2="3.4925" y2="-2.8575" width="0.254" layer="21"/>
+<wire x1="3.4925" y1="-2.8575" x2="3.81" y2="-2.8575" width="0.254" layer="21"/>
+<wire x1="-3.175" y1="2.2225" x2="-3.175" y2="-2.2225" width="0.0508" layer="51"/>
+<wire x1="3.175" y1="2.2225" x2="3.175" y2="-2.2225" width="0.0508" layer="51"/>
+<wire x1="-3.175" y1="2.2225" x2="3.175" y2="2.2225" width="0.0508" layer="51"/>
+<wire x1="-3.175" y1="-2.2225" x2="-2.8575" y2="-2.2225" width="0.0508" layer="51"/>
+<wire x1="-2.8575" y1="-2.2225" x2="2.8575" y2="-2.2225" width="0.0508" layer="51"/>
+<wire x1="2.8575" y1="-2.2225" x2="3.175" y2="-2.2225" width="0.0508" layer="51"/>
+<wire x1="2.8575" y1="-3.175" x2="-2.8575" y2="-3.175" width="0.0508" layer="51"/>
+<wire x1="-2.8575" y1="-2.2225" x2="-2.8575" y2="-3.175" width="0.0508" layer="51"/>
+<wire x1="2.8575" y1="-2.2225" x2="2.8575" y2="-3.175" width="0.0508" layer="51"/>
+<pad name="2" x="1.27" y="0" drill="1.016" shape="long" rot="R90"/>
+<pad name="1" x="-1.27" y="0" drill="1.016" shape="long" rot="R90"/>
+<text x="-4.445" y="-2.54" size="1.016" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="-3.4925" y="3.4925" size="0.8128" layer="27" ratio="10">&gt;VALUE</text>
+<text x="-2.8575" y="-1.5875" size="1.016" layer="51" ratio="10">1</text>
+<rectangle x1="1.0319" y1="-0.2381" x2="1.5081" y2="0.2381" layer="51"/>
+<rectangle x1="-1.5081" y1="-0.2381" x2="-1.0319" y2="0.2381" layer="51"/>
+</package>
+<package name="15-91-02" urn="urn:adsk.eagle:footprint:7346248/1" library_version="66">
+<description>&lt;b&gt;2.54mm Pitch SL™ Wire-to-Board Header, Low Profile, Surface Mount, Single Row, Right Angle, 3.05mm Pocket, Shrouded, with Press-fit Plastic Peg, 2 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/015913024_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<wire x1="3.9688" y1="5.08" x2="-3.9688" y2="5.08" width="0.254" layer="21"/>
+<wire x1="-1.27" y1="1.905" x2="-1.27" y2="-3.81" width="0.254" layer="51"/>
+<wire x1="-1.27" y1="-3.81" x2="1.27" y2="-3.81" width="0.254" layer="51"/>
+<wire x1="1.27" y1="-3.81" x2="1.27" y2="1.905" width="0.254" layer="51"/>
+<wire x1="-3.9688" y1="5.08" x2="-3.9688" y2="2.2225" width="0.254" layer="21"/>
+<wire x1="-3.9688" y1="2.2225" x2="-3.9688" y2="1.905" width="0.254" layer="51"/>
+<wire x1="-3.9688" y1="1.905" x2="-3.175" y2="1.905" width="0.254" layer="51"/>
+<wire x1="-3.175" y1="1.905" x2="-1.27" y2="1.905" width="0.254" layer="51"/>
+<wire x1="1.27" y1="1.905" x2="3.175" y2="1.905" width="0.254" layer="51"/>
+<wire x1="3.175" y1="1.905" x2="3.9688" y2="1.905" width="0.254" layer="51"/>
+<wire x1="3.9688" y1="1.905" x2="3.9688" y2="2.2225" width="0.254" layer="51"/>
+<wire x1="3.9688" y1="2.2225" x2="3.9688" y2="5.08" width="0.254" layer="21"/>
+<wire x1="-3.175" y1="1.905" x2="-3.175" y2="2.54" width="0.254" layer="51"/>
+<wire x1="-3.175" y1="2.54" x2="-1.905" y2="3.81" width="0.254" layer="51" curve="-90"/>
+<wire x1="-1.905" y1="3.81" x2="1.905" y2="3.81" width="0.254" layer="51"/>
+<wire x1="1.905" y1="3.81" x2="3.175" y2="2.54" width="0.254" layer="51" curve="-90"/>
+<wire x1="3.175" y1="2.54" x2="3.175" y2="1.905" width="0.254" layer="51"/>
+<wire x1="-3.9688" y1="-0.635" x2="-3.9688" y2="-6.35" width="0.254" layer="21"/>
+<wire x1="-3.9688" y1="-6.35" x2="3.9688" y2="-6.35" width="0.254" layer="21"/>
+<wire x1="3.9688" y1="-6.35" x2="3.9688" y2="-0.635" width="0.254" layer="21"/>
+<wire x1="-2.54" y1="-6.35" x2="-2.54" y2="-8.5725" width="0.254" layer="51"/>
+<wire x1="2.54" y1="-8.5725" x2="2.54" y2="-6.35" width="0.254" layer="51"/>
+<wire x1="-2.54" y1="-6.985" x2="-1.905" y2="-6.985" width="0.254" layer="51"/>
+<wire x1="-0.635" y1="-6.985" x2="0.635" y2="-6.985" width="0.254" layer="51"/>
+<wire x1="1.905" y1="-6.985" x2="2.54" y2="-6.985" width="0.254" layer="51"/>
+<wire x1="-1.905" y1="-6.985" x2="-1.905" y2="-8.3185" width="0.254" layer="51"/>
+<wire x1="-1.905" y1="-8.3185" x2="-2.159" y2="-8.5725" width="0.254" layer="51" curve="-90"/>
+<wire x1="-2.159" y1="-8.5725" x2="-2.54" y2="-8.5725" width="0.254" layer="51"/>
+<wire x1="0.635" y1="-6.985" x2="0.635" y2="-8.3185" width="0.254" layer="51"/>
+<wire x1="0.635" y1="-8.3185" x2="0.381" y2="-8.5725" width="0.254" layer="51" curve="-90"/>
+<wire x1="0.381" y1="-8.5725" x2="-0.381" y2="-8.5725" width="0.254" layer="51"/>
+<wire x1="-0.381" y1="-8.5725" x2="-0.635" y2="-8.3185" width="0.254" layer="51" curve="-90"/>
+<wire x1="-0.635" y1="-8.3185" x2="-0.635" y2="-6.985" width="0.254" layer="51"/>
+<wire x1="1.905" y1="-6.985" x2="1.905" y2="-8.3185" width="0.254" layer="51"/>
+<wire x1="1.905" y1="-8.3185" x2="2.159" y2="-8.5725" width="0.254" layer="51" curve="90"/>
+<wire x1="2.159" y1="-8.5725" x2="2.54" y2="-8.5725" width="0.254" layer="51"/>
+<wire x1="-3.9688" y1="-0.635" x2="-3.9688" y2="1.905" width="0.254" layer="51"/>
+<wire x1="3.9688" y1="-0.635" x2="3.9688" y2="1.905" width="0.254" layer="51"/>
+<wire x1="-1.905" y1="-6.985" x2="-0.635" y2="-6.985" width="0.254" layer="51"/>
+<wire x1="0.635" y1="-6.985" x2="1.905" y2="-6.985" width="0.254" layer="51"/>
+<smd name="1" x="-1.27" y="-10.795" dx="5.334" dy="1.651" layer="1" rot="R90"/>
+<smd name="2" x="1.27" y="-10.795" dx="5.334" dy="1.651" layer="1" rot="R90"/>
+<text x="-4.445" y="-6.35" size="1.016" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="5.715" y="-6.35" size="0.8128" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+<rectangle x1="-1.5875" y1="-10.795" x2="-0.9525" y2="-6.985" layer="51"/>
+<rectangle x1="0.9525" y1="-10.795" x2="1.5875" y2="-6.985" layer="51"/>
+<hole x="-2.667" y="0.8382" drill="3.4036"/>
+<hole x="2.667" y="0.8382" drill="3.4036"/>
+<polygon width="0.2032" layer="21">
+<vertex x="-3.81" y="5.08"/>
+<vertex x="-3.3337" y="3.4926"/>
+<vertex x="-2.8575" y="5.08"/>
+</polygon>
+</package>
+<package name="CAPPRD254W65D650H1250B" urn="urn:adsk.eagle:footprint:8452290/2" library_version="66">
+<description>Radial Polarized Capacitor, 2.54 mm pitch, 6.50 mm body diameter, 12.50 mm body height
+&lt;p&gt;Radial Polarized Capacitor package with 2.54 mm pitch, 0.65 mm lead diameter, 6.50 mm body diameter and 12.50 mm body height&lt;/p&gt;</description>
+<circle x="0" y="0" radius="3.25" width="0.12" layer="21"/>
+<circle x="0" y="0" radius="3.25" width="0.12" layer="51"/>
+<wire x1="-4.4191" y1="-0.0259" x2="-3.6691" y2="-0.0259" width="0.12" layer="21"/>
+<wire x1="-4.0441" y1="0.3491" x2="-4.0441" y2="-0.4009" width="0.12" layer="21"/>
+<wire x1="0" y1="3.175" x2="0" y2="-3.175" width="0.127" layer="21"/>
+<wire x1="-3.302" y1="0" x2="-3.302" y2="12.065" width="0.127" layer="21"/>
+<wire x1="-3.302" y1="12.065" x2="3.302" y2="12.065" width="0.127" layer="21"/>
+<wire x1="3.302" y1="12.065" x2="3.302" y2="0" width="0.127" layer="21"/>
+<wire x1="3.302" y1="0" x2="0.127" y2="-3.175" width="0.127" layer="21" curve="-90"/>
+<wire x1="0.127" y1="-3.175" x2="0" y2="-3.175" width="0.127" layer="21"/>
+<wire x1="0" y1="-3.175" x2="-0.127" y2="-3.175" width="0.127" layer="21"/>
+<wire x1="-0.127" y1="-3.175" x2="-3.302" y2="0" width="0.127" layer="21" curve="-90"/>
+<pad name="1" x="-1.27" y="0" drill="0.85" diameter="1.45" shape="square"/>
+<pad name="2" x="1.27" y="0" drill="0.85" diameter="1.45"/>
+<text x="4.9849" y="0" size="1.27" layer="25" font="vector" ratio="11" rot="R90" align="bottom-center">&gt;NAME</text>
+<text x="3.885" y="7.62" size="1.27" layer="27" font="vector" ratio="11" rot="R90" align="top-center">&gt;VALUE</text>
+<polygon width="0.127" layer="21">
+<vertex x="0.381" y="2.921"/>
+<vertex x="0.381" y="-2.921" curve="90"/>
+<vertex x="2.921" y="-0.381"/>
+<vertex x="2.921" y="0"/>
+<vertex x="2.921" y="0.381" curve="90"/>
+</polygon>
+</package>
+<package name="ALU-C-D5.3MM_RIGHT" urn="urn:adsk.eagle:footprint:8885514/2" library_version="69">
+<circle x="0" y="0" radius="2.65" width="0.127" layer="21"/>
+<circle x="0" y="0" radius="2.694" width="0.127" layer="39"/>
+<pad name="+" x="-1" y="0" drill="0.8" diameter="1.35" shape="square"/>
+<pad name="-" x="1" y="0" drill="0.8" diameter="1.35"/>
+<text x="3.048" y="1.524" size="0.889" layer="25" font="vector" ratio="11" rot="R270">&gt;NAME</text>
+<text x="-1.524" y="-2.921" size="0.635" layer="27" font="vector" ratio="10" align="top-left">&gt;VALUE</text>
+<wire x1="-4.445" y1="0" x2="-3.81" y2="0" width="0.127" layer="21"/>
+<wire x1="-3.175" y1="0" x2="-3.81" y2="0" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="0" x2="-3.81" y2="0.635" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="0" x2="-3.81" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="0" y1="2.667" x2="0" y2="2.286" width="0.127" layer="21"/>
+<wire x1="0" y1="2.286" x2="0" y2="1.651" width="0.127" layer="21"/>
+<wire x1="0" y1="1.651" x2="0" y2="1.016" width="0.127" layer="21"/>
+<wire x1="0" y1="1.016" x2="0" y2="0.381" width="0.127" layer="21"/>
+<wire x1="0" y1="0.381" x2="0" y2="-0.381" width="0.127" layer="21"/>
+<wire x1="0" y1="-0.381" x2="0" y2="-1.143" width="0.127" layer="21"/>
+<wire x1="0" y1="-1.143" x2="0" y2="-1.905" width="0.127" layer="21"/>
+<wire x1="0" y1="-1.905" x2="0" y2="-2.667" width="0.127" layer="21"/>
+<wire x1="0" y1="0.381" x2="2.159" y2="1.524" width="0.127" layer="21"/>
+<wire x1="0" y1="1.016" x2="1.778" y2="1.9685" width="0.127" layer="21"/>
+<wire x1="0" y1="1.651" x2="1.27" y2="2.3495" width="0.127" layer="21"/>
+<wire x1="0" y1="-0.381" x2="2.413" y2="0.889" width="0.127" layer="21"/>
+<wire x1="0" y1="-1.143" x2="2.54" y2="0.127" width="0.127" layer="21"/>
+<wire x1="0" y1="-1.905" x2="2.54" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="0.381" y1="-2.54" x2="1.905" y2="-1.778" width="0.127" layer="21"/>
+<wire x1="0" y1="2.286" x2="0.508" y2="2.54" width="0.127" layer="21"/>
+<wire x1="2.667" y1="0" x2="2.667" y2="-10.065" width="0.127" layer="21"/>
+<wire x1="2.667" y1="-10.065" x2="-2.667" y2="-10.065" width="0.127" layer="21"/>
+<wire x1="-2.667" y1="-10.065" x2="-2.667" y2="0" width="0.127" layer="21"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="CON24_1X24_DRB_SFW" urn="urn:adsk.eagle:package:6899317/2" type="model" library_version="29">
@@ -2011,27 +2077,15 @@ Metric Code Size 1608</description>
 <packageinstance name="CON24_1X24_DRB_SFW"/>
 </packageinstances>
 </package3d>
-<package3d name="SEEED-SWITCH_SW6-2.54-9.0X3.5X3.2+2.0MM" urn="urn:adsk.eagle:package:5224531/3" type="model" library_version="29" library_locally_modified="yes">
+<package3d name="SEEED-SWITCH_SW6-2.54-9.0X3.5X3.2+2.0MM" urn="urn:adsk.eagle:package:5224531/4" type="model" library_version="66">
 <packageinstances>
 <packageinstance name="SEEED-SWITCH_SW6-2.54-9.0X3.5X3.2+2.0MM"/>
-</packageinstances>
-</package3d>
-<package3d name="70543-04" urn="urn:adsk.eagle:package:6902619/1" type="box" library_version="29" library_locally_modified="yes">
-<description>&lt;b&gt;2.54mm Pitch SL™ Header, Single Row, Vertical, 3.05mm Pocket, Shrouded, 5 Circuits, 0.38µm Gold (Au) Selective Plating, Tin (Sn) PC Tail Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/705430004_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
-<packageinstances>
-<packageinstance name="70543-04"/>
 </packageinstances>
 </package3d>
 <package3d name="70553-04" urn="urn:adsk.eagle:package:6902618/2" type="model" library_version="29" library_locally_modified="yes">
 <description>&lt;b&gt;2.54mm Pitch SL™ Header, Low Profile, Single Row, Right Angle, 3.05mm Pocket, Shrouded, 5 Circuits, 0.38µm Gold (Au) Selective Plating, Tin (Sn) PC Tail Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/705530004_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <packageinstances>
 <packageinstance name="70553-04"/>
-</packageinstances>
-</package3d>
-<package3d name="74099-04" urn="urn:adsk.eagle:package:6902617/1" type="box" library_version="29" library_locally_modified="yes">
-<description>&lt;b&gt;SL™ Wire-to-Board Header, Surface Mount, Single Row, Vertical, 3.05mm Pocket, Shrouded, 4 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/705530004_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
-<packageinstances>
-<packageinstance name="74099-04"/>
 </packageinstances>
 </package3d>
 <package3d name="15-91-04" urn="urn:adsk.eagle:package:6902616/1" type="box" library_version="29" library_locally_modified="yes">
@@ -2340,7 +2394,7 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <packageinstance name="SML0603"/>
 </packageinstances>
 </package3d>
-<package3d name="SOT89" urn="urn:adsk.eagle:package:6899241/4" locally_modified="yes" type="model" library_version="29" library_locally_modified="yes">
+<package3d name="SOT89" urn="urn:adsk.eagle:package:6899241/5" type="model" library_version="66">
 <packageinstances>
 <packageinstance name="SOT89"/>
 </packageinstances>
@@ -2351,14 +2405,16 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <packageinstance name="TO92"/>
 </packageinstances>
 </package3d>
-<package3d name="R0805" urn="urn:adsk.eagle:package:32799/1" type="box" library_version="29" library_locally_modified="yes">
+<package3d name="R0805" urn="urn:adsk.eagle:package:8443791/2" type="model" library_version="66">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
+chip</description>
 <packageinstances>
 <packageinstance name="R0805"/>
 </packageinstances>
 </package3d>
-<package3d name="PC-D5.3MM" urn="urn:adsk.eagle:package:32406/1" type="box" library_version="29" library_locally_modified="yes">
+<package3d name="PC-D5.3MM" urn="urn:adsk.eagle:package:8885168/4" type="model" library_version="69">
 <packageinstances>
-<packageinstance name="PC-D5.3MM"/>
+<packageinstance name="ALU-C-D5.3MM_LEFT"/>
 </packageinstances>
 </package3d>
 <package3d name="CAPC2012X130" urn="urn:adsk.eagle:package:5225034/2" type="model" library_version="29" library_locally_modified="yes">
@@ -2395,13 +2451,7 @@ Metric Code Size 1608</description>
 <packageinstance name="HOLES_2,8-PAD"/>
 </packageinstances>
 </package3d>
-<package3d name="HOLES_3,0-PAD" urn="urn:adsk.eagle:package:5224589/1" type="box" library_version="29" library_locally_modified="yes">
-<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.0 mm, round</description>
-<packageinstances>
-<packageinstance name="HOLES_3,0-PAD"/>
-</packageinstances>
-</package3d>
-<package3d name="HOLES_3,2-PAD" urn="urn:adsk.eagle:package:5224590/1" type="box" library_version="29" library_locally_modified="yes">
+<package3d name="HOLES_3,2-PAD" urn="urn:adsk.eagle:package:5224590/2" type="model" library_version="66">
 <description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.2 mm, round</description>
 <packageinstances>
 <packageinstance name="HOLES_3,2-PAD"/>
@@ -2425,12 +2475,6 @@ Metric Code Size 1608</description>
 <packageinstance name="HOLES_4,1-PAD"/>
 </packageinstances>
 </package3d>
-<package3d name="HOLES_4,3-PAD" urn="urn:adsk.eagle:package:5224594/1" type="box" library_version="29" library_locally_modified="yes">
-<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 4.3 mm, round</description>
-<packageinstances>
-<packageinstance name="HOLES_4,3-PAD"/>
-</packageinstances>
-</package3d>
 <package3d name="HOLES_4,5-PAD" urn="urn:adsk.eagle:package:5224595/1" type="box" library_version="29" library_locally_modified="yes">
 <description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 4.5 mm, round</description>
 <packageinstances>
@@ -2447,6 +2491,78 @@ Metric Code Size 1608</description>
 <description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 5.5 mm, round</description>
 <packageinstances>
 <packageinstance name="HOLES_5,5-PAD"/>
+</packageinstances>
+</package3d>
+<package3d name="SOT230P700X180-4N" urn="urn:adsk.eagle:package:7346255/2" type="model" library_version="66">
+<packageinstances>
+<packageinstance name="SOT230P700X180-4N"/>
+</packageinstances>
+</package3d>
+<package3d name="70543-04" urn="urn:adsk.eagle:package:6902619/2" type="model" library_version="66">
+<description>&lt;b&gt;2.54mm Pitch SL™ Header, Single Row, Vertical, 3.05mm Pocket, Shrouded, 5 Circuits, 0.38µm Gold (Au) Selective Plating, Tin (Sn) PC Tail Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/705430004_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<packageinstances>
+<packageinstance name="70543-04"/>
+</packageinstances>
+</package3d>
+<package3d name="74099-04" urn="urn:adsk.eagle:package:6902617/2" type="model" library_version="66">
+<description>&lt;b&gt;SL™ Wire-to-Board Header, Surface Mount, Single Row, Vertical, 3.05mm Pocket, Shrouded, 4 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/705530004_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<packageinstances>
+<packageinstance name="74099-04"/>
+</packageinstances>
+</package3d>
+<package3d name="KK-156-2" urn="urn:adsk.eagle:package:7346264/2" type="model" library_version="66">
+<description>&lt;b&gt;KK® 396 Header, Vertical, Friction Lock, 2 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/026604020_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<packageinstances>
+<packageinstance name="KK-156-2"/>
+</packageinstances>
+</package3d>
+<package3d name="70553-02" urn="urn:adsk.eagle:package:7346257/2" type="model" library_version="66">
+<description>&lt;b&gt;2.54mm Pitch SL™ Header, Low Profile, Single Row, Right Angle, 3.05mm Pocket, Shrouded, 3 Circuits, 0.38µm Gold (Au) Selective Plating, Tin (Sn) PC Tail Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/705530002_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<packageinstances>
+<packageinstance name="70553-02"/>
+</packageinstances>
+</package3d>
+<package3d name="70543-02" urn="urn:adsk.eagle:package:7346256/2" type="model" library_version="66">
+<description>&lt;b&gt;2.54mm Pitch SL™ Header, Single Row, Vertical, 3.05mm Pocket, Shrouded, 3 Circuits, 0.38µm Gold (Au) Selective Plating, Tin (Sn) PC Tail Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/705430002_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<packageinstances>
+<packageinstance name="70543-02"/>
+</packageinstances>
+</package3d>
+<package3d name="15-91-02" urn="urn:adsk.eagle:package:7346258/1" type="box" library_version="66">
+<description>&lt;b&gt;2.54mm Pitch SL™ Wire-to-Board Header, Low Profile, Surface Mount, Single Row, Right Angle, 3.05mm Pocket, Shrouded, with Press-fit Plastic Peg, 2 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/015913024_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<packageinstances>
+<packageinstance name="15-91-02"/>
+</packageinstances>
+</package3d>
+<package3d name="R0805" urn="urn:adsk.eagle:package:8443792/1" type="model" library_version="66">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
+chip</description>
+<packageinstances>
+<packageinstance name="R0805"/>
+</packageinstances>
+</package3d>
+<package3d name="CAPPRD254W65D650H1250B" urn="urn:adsk.eagle:package:8452255/4" type="model" library_version="66">
+<description>Radial Polarized Capacitor, 2.54 mm pitch, 6.50 mm body diameter, 12.50 mm body height
+&lt;p&gt;Radial Polarized Capacitor package with 2.54 mm pitch, 0.65 mm lead diameter, 6.50 mm body diameter and 12.50 mm body height&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="CAPPRD254W65D650H1250B"/>
+</packageinstances>
+</package3d>
+<package3d name="HOLES_3,0-PAD" urn="urn:adsk.eagle:package:5224589/2" type="model" library_version="66">
+<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.0 mm, round</description>
+<packageinstances>
+<packageinstance name="HOLES_3,0-PAD"/>
+</packageinstances>
+</package3d>
+<package3d name="HOLES_4,3-PAD" urn="urn:adsk.eagle:package:5224594/2" type="box" library_version="66">
+<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 4.3 mm, round</description>
+<packageinstances>
+<packageinstance name="HOLES_4,3-PAD"/>
+</packageinstances>
+</package3d>
+<package3d name="ALU-C-D5.3MM_RIGHT" urn="urn:adsk.eagle:package:8885515/3" type="model" library_version="69">
+<packageinstances>
+<packageinstance name="ALU-C-D5.3MM_RIGHT"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -2562,7 +2678,7 @@ Metric Code Size 1608</description>
 <wire x1="12.7" y1="2.54" x2="5.08" y2="2.54" width="0.1524" layer="94"/>
 <text x="4.1656" y="5.3086" size="2.0828" layer="95" ratio="6" rot="SR0">&gt;Name</text>
 </symbol>
-<symbol name="LM317DCY" library_version="29" library_locally_modified="yes">
+<symbol name="LM317DCY" urn="urn:adsk.eagle:symbol:7346235/1" library_version="66">
 <wire x1="-15.24" y1="5.08" x2="-15.24" y2="-12.7" width="0.4064" layer="94"/>
 <wire x1="-15.24" y1="-12.7" x2="15.24" y2="-12.7" width="0.4064" layer="94"/>
 <wire x1="15.24" y1="-12.7" x2="15.24" y2="5.08" width="0.4064" layer="94"/>
@@ -2574,7 +2690,7 @@ Metric Code Size 1608</description>
 <pin name="OUTPUT_2" x="20.32" y="-2.54" length="middle" direction="out" rot="R180"/>
 <pin name="OUTPUT" x="20.32" y="-5.08" length="middle" direction="out" rot="R180"/>
 </symbol>
-<symbol name="SEEED-SWITCH_SWITCH-2CH-6P" library_version="29" library_locally_modified="yes">
+<symbol name="SEEED-SWITCH_SWITCH-2CH-6P" urn="urn:adsk.eagle:symbol:7346236/1" library_version="66">
 <wire x1="-3.81" y1="3.81" x2="-2.54" y2="3.81" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="3.81" x2="2.54" y2="3.81" width="0.254" layer="94"/>
 <wire x1="2.54" y1="3.81" x2="3.81" y2="3.81" width="0.254" layer="94"/>
@@ -2623,12 +2739,12 @@ Metric Code Size 1608</description>
 <text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
 <pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 </symbol>
-<symbol name="M-3" library_version="29" library_locally_modified="yes">
+<symbol name="M-3" urn="urn:adsk.eagle:symbol:7346237/1" library_version="66">
 <wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
 <text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
 <pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 </symbol>
-<symbol name="MV-3" library_version="29" library_locally_modified="yes">
+<symbol name="MV-3" urn="urn:adsk.eagle:symbol:7346238/1" library_version="66">
 <wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
 <text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
 <text x="-0.762" y="1.397" size="1.778" layer="96">&gt;VALUE</text>
@@ -2644,7 +2760,7 @@ Metric Code Size 1608</description>
 <text x="-3.81" y="1.27" size="1.27" layer="95" ratio="10">&gt;NAME</text>
 <text x="-3.81" y="-2.54" size="1.27" layer="96" ratio="10">&gt;VALUE</text>
 </symbol>
-<symbol name="LED-1" library_version="29" library_locally_modified="yes">
+<symbol name="LED-1" urn="urn:adsk.eagle:symbol:7346239/1" library_version="66">
 <wire x1="1.27" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="0" y1="-2.54" x2="-1.27" y2="0" width="0.254" layer="94"/>
 <wire x1="1.27" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
@@ -2685,7 +2801,7 @@ Metric Code Size 1608</description>
 <pin name="OUT" x="7.62" y="0" visible="off" length="short" direction="out" rot="R180"/>
 <pin name="PAD" x="0" y="5.08" visible="off" length="short" direction="pwr" rot="R270"/>
 </symbol>
-<symbol name="RES-1" library_version="29" library_locally_modified="yes">
+<symbol name="RES-1" urn="urn:adsk.eagle:symbol:7346242/1" library_version="66">
 <wire x1="-1.27" y1="0.508" x2="1.27" y2="0.508" width="0.254" layer="94"/>
 <wire x1="1.27" y1="0.508" x2="1.27" y2="-0.508" width="0.254" layer="94"/>
 <wire x1="1.27" y1="-0.508" x2="-1.27" y2="-0.508" width="0.254" layer="94"/>
@@ -2695,7 +2811,7 @@ Metric Code Size 1608</description>
 <pin name="1" x="-3.81" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
 <pin name="2" x="3.81" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 </symbol>
-<symbol name="PNP" library_version="29" library_locally_modified="yes">
+<symbol name="PNP" urn="urn:adsk.eagle:symbol:7346241/1" library_version="66">
 <wire x1="2.086" y1="1.678" x2="1.578" y2="2.594" width="0.1524" layer="94"/>
 <wire x1="1.578" y1="2.594" x2="0.516" y2="1.478" width="0.1524" layer="94"/>
 <wire x1="0.516" y1="1.478" x2="2.086" y2="1.678" width="0.1524" layer="94"/>
@@ -2714,7 +2830,7 @@ Metric Code Size 1608</description>
 <pin name="E" x="2.54" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
 <pin name="C" x="2.54" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
 </symbol>
-<symbol name="CAP-POLAR" library_version="29" library_locally_modified="yes">
+<symbol name="CAP-POLAR" urn="urn:adsk.eagle:symbol:7346243/1" library_version="66">
 <wire x1="-1.27" y1="2.54" x2="-1.27" y2="-2.54" width="0.508" layer="94"/>
 <wire x1="1.27" y1="2.54" x2="1.27" y2="-2.54" width="0.508" layer="94" curve="47.924978"/>
 <wire x1="1.27" y1="0" x2="0.635" y2="0" width="0.1524" layer="94"/>
@@ -2794,7 +2910,7 @@ Metric Code Size 1608</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="LM317DCY" prefix="U" library_version="29" library_locally_modified="yes">
+<deviceset name="LM317DCY" urn="urn:adsk.eagle:component:7346265/2" prefix="U" library_version="66">
 <description>IC ADJ LINEAR REG 1.25V TO 37V</description>
 <gates>
 <gate name="A" symbol="LM317DCY" x="0" y="0"/>
@@ -2807,6 +2923,9 @@ Metric Code Size 1608</description>
 <connect gate="A" pin="OUTPUT" pad="4"/>
 <connect gate="A" pin="OUTPUT_2" pad="2"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:7346255/2"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="AVAILABILITY" value="Unavailable"/>
@@ -2820,7 +2939,7 @@ Metric Code Size 1608</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SEEED-SWITCH_DIP-TOGGLE-SWITCH-2CH-(2X3P-2.54)" prefix="SW" uservalue="yes" library_version="29" library_locally_modified="yes">
+<deviceset name="SEEED-SWITCH_DIP-TOGGLE-SWITCH-2CH-(2X3P-2.54)" urn="urn:adsk.eagle:component:7346266/2" prefix="SW" uservalue="yes" library_version="66">
 <description>311010004</description>
 <gates>
 <gate name="G$1" symbol="SEEED-SWITCH_SWITCH-2CH-6P" x="0" y="0"/>
@@ -2836,7 +2955,7 @@ Metric Code Size 1608</description>
 <connect gate="G$1" pin="COM2" pad="COM2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:5224531/3"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5224531/4"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -2844,7 +2963,7 @@ Metric Code Size 1608</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="C-GRID-04" urn="urn:adsk.eagle:component:6902621/2" prefix="X" library_version="29" library_locally_modified="yes">
+<deviceset name="C-GRID-04" urn="urn:adsk.eagle:component:6902621/3" prefix="X" library_version="66">
 <description>&lt;b&gt;CONNECTOR&lt;/b&gt;&lt;p&gt;
 wire to board 2.54 mm (0.100") pitch header</description>
 <gates>
@@ -2862,7 +2981,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <connect gate="-4" pin="S" pad="4"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:6902619/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:6902619/2"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -2900,7 +3019,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <connect gate="-4" pin="S" pad="4"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:6902617/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:6902617/2"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -2932,7 +3051,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="C-GRID-02" prefix="X" library_version="29" library_locally_modified="yes">
+<deviceset name="C-GRID-02" urn="urn:adsk.eagle:component:7346267/2" prefix="X" library_version="66">
 <description>&lt;b&gt;CONNECTOR&lt;/b&gt;&lt;p&gt;
 wire to board 2.54 mm (0.100") pitch header</description>
 <gates>
@@ -2945,6 +3064,9 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <connect gate="-1" pin="S" pad="1"/>
 <connect gate="-2" pin="S" pad="2"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:7346256/2"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="MF" value="MOLEX" constant="no"/>
@@ -2959,6 +3081,9 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <connect gate="-1" pin="S" pad="1"/>
 <connect gate="-2" pin="S" pad="2"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:7346257/2"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="MF" value="MOLEX" constant="no"/>
@@ -2973,6 +3098,9 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <connect gate="-1" pin="S" pad="1"/>
 <connect gate="-2" pin="S" pad="2"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:7346258/1"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="MF" value="MOLEX" constant="no"/>
@@ -2984,7 +3112,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="KK-156-2" prefix="X" uservalue="yes" library_version="29" library_locally_modified="yes">
+<deviceset name="KK-156-2" urn="urn:adsk.eagle:component:7346270/2" prefix="X" uservalue="yes" library_version="66">
 <description>&lt;b&gt;KK 156 HEADER&lt;/b&gt;&lt;p&gt;
 Source: http://www.molex.com/pdm_docs/sd/026604100_sd.pdf</description>
 <gates>
@@ -2997,6 +3125,9 @@ Source: http://www.molex.com/pdm_docs/sd/026604100_sd.pdf</description>
 <connect gate="-1" pin="S" pad="1"/>
 <connect gate="-2" pin="S" pad="2"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:7346264/2"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="MF" value="MOLEX" constant="no"/>
@@ -3028,7 +3159,7 @@ Source: http://www.molex.com/pdm_docs/sd/026604100_sd.pdf</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="LED" prefix="LED" uservalue="yes" library_version="29" library_locally_modified="yes">
+<deviceset name="LED" urn="urn:adsk.eagle:component:7346272/1" prefix="LED" uservalue="yes" library_version="66">
 <description>&lt;b&gt;LED&lt;/b&gt;&lt;p&gt;
 &lt;u&gt;OSRAM&lt;/u&gt;:&lt;br&gt;
 
@@ -3554,7 +3685,7 @@ Source: www.kingbright.com</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="L78L05ACU" urn="urn:adsk.eagle:component:6899243/3" locally_modified="yes" library_version="29" library_locally_modified="yes">
+<deviceset name="L78L05ACU" urn="urn:adsk.eagle:component:6899243/4" library_version="66">
 <description>5V Positive voltage regulator SMD SOT89 Package</description>
 <gates>
 <gate name="G$1" symbol="L78L05ACU" x="0" y="0"/>
@@ -3568,7 +3699,7 @@ Source: www.kingbright.com</description>
 <connect gate="G$1" pin="PAD" pad="PAD"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:6899241/4"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:6899241/5"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -3583,7 +3714,7 @@ Source: www.kingbright.com</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SMD-RES-2K-5%-1/8W(0805)" prefix="R" uservalue="yes" library_version="29" library_locally_modified="yes">
+<deviceset name="SMD-RES-2K-5%-1/8W(0805)" urn="urn:adsk.eagle:component:7346274/3" prefix="R" uservalue="yes" library_version="66">
 <description>301010318</description>
 <gates>
 <gate name="G$1" symbol="RES-1" x="0" y="0"/>
@@ -3595,7 +3726,7 @@ Source: www.kingbright.com</description>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:32799/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8443791/2"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -3604,9 +3735,17 @@ Source: www.kingbright.com</description>
 </technology>
 </technologies>
 </device>
+<device name="R0805" package="R0805">
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8443792/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
-<deviceset name="2N2907" prefix="T" library_version="29" library_locally_modified="yes">
+<deviceset name="2N2907" urn="urn:adsk.eagle:component:7346273/1" prefix="T" library_version="66">
 <description>&lt;b&gt;NPN TRANSISTOR&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="PNP" x="0" y="0"/>
@@ -3627,25 +3766,49 @@ Source: www.kingbright.com</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="DIP-ALUMINUM-100UF-16V(D5-H7MM)" prefix="C" uservalue="yes" library_version="29" library_locally_modified="yes">
+<deviceset name="DIP-ALUMINUM-100UF-16V(D5-H7MM)" urn="urn:adsk.eagle:component:7346275/7" prefix="C" uservalue="yes" library_version="69">
 <description>302030031</description>
 <gates>
 <gate name="G$1" symbol="CAP-POLAR" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="PC-D5.3MM">
+<device name="LEFT" package="ALU-C-D5.3MM_LEFT">
 <connects>
 <connect gate="G$1" pin="+" pad="+"/>
 <connect gate="G$1" pin="-" pad="-"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:32406/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8885168/4"/>
 </package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="MPN" value="KS 100uF/16V" constant="no"/>
 <attribute name="VALUE" value="100uf"/>
 </technology>
+</technologies>
+</device>
+<device name="LEFT_SS" package="CAPPRD254W65D650H1250B">
+<connects>
+<connect gate="G$1" pin="+" pad="1"/>
+<connect gate="G$1" pin="-" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8452255/4"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="RIGHT" package="ALU-C-D5.3MM_RIGHT">
+<connects>
+<connect gate="G$1" pin="+" pad="+"/>
+<connect gate="G$1" pin="-" pad="-"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8885515/3"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -3706,7 +3869,7 @@ Source: www.kingbright.com</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="HOLES_MOUNT-PAD-ROUND" urn="urn:adsk.eagle:component:6905305/1" prefix="H" library_version="29" library_locally_modified="yes">
+<deviceset name="HOLES_MOUNT-PAD-ROUND" urn="urn:adsk.eagle:component:6905305/5" prefix="H" library_version="66">
 <description>&lt;b&gt;MOUNTING PAD&lt;/b&gt;, round</description>
 <gates>
 <gate name="G$1" symbol="HOLES_MOUNT-PAD" x="0" y="0"/>
@@ -3728,7 +3891,7 @@ Source: www.kingbright.com</description>
 <connect gate="G$1" pin="MOUNT" pad="B3,0"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:5224589/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5224589/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -3739,7 +3902,7 @@ Source: www.kingbright.com</description>
 <connect gate="G$1" pin="MOUNT" pad="B3,2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:5224590/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5224590/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -3783,7 +3946,7 @@ Source: www.kingbright.com</description>
 <connect gate="G$1" pin="MOUNT" pad="B4,3"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:5224594/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5224594/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -3903,16 +4066,16 @@ Source: www.kingbright.com</description>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="A3L-LOC" device=""/>
 <part name="J1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SFW24R-1STE1LF" device="" package3d_urn="urn:adsk.eagle:package:6899317/2"/>
 <part name="AGND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
-<part name="U1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="LM317DCY" device=""/>
-<part name="SW1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-SWITCH_DIP-TOGGLE-SWITCH-2CH-(2X3P-2.54)" device="DPDT_254_6P_UPDATE" package3d_urn="urn:adsk.eagle:package:5224531/3"/>
+<part name="U1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="LM317DCY" device="" package3d_urn="urn:adsk.eagle:package:7346255/2"/>
+<part name="SW1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-SWITCH_DIP-TOGGLE-SWITCH-2CH-(2X3P-2.54)" device="DPDT_254_6P_UPDATE" package3d_urn="urn:adsk.eagle:package:5224531/4"/>
 <part name="E0" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="C-GRID-04" device="-70553" package3d_urn="urn:adsk.eagle:package:6902618/2"/>
-<part name="Z_MIN" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="C-GRID-02" device="-70553"/>
-<part name="FAN1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="C-GRID-02" device="-70553"/>
-<part name="FAN0" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="C-GRID-02" device="-70553"/>
-<part name="TH1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="C-GRID-02" device="-70553"/>
-<part name="HE0" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="KK-156-2" device=""/>
+<part name="Z_MIN" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="C-GRID-02" device="-70553" package3d_urn="urn:adsk.eagle:package:7346257/2"/>
+<part name="FAN1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="C-GRID-02" device="-70553" package3d_urn="urn:adsk.eagle:package:7346257/2"/>
+<part name="FAN0" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="C-GRID-02" device="-70553" package3d_urn="urn:adsk.eagle:package:7346257/2"/>
+<part name="TH1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="C-GRID-02" device="-70553" package3d_urn="urn:adsk.eagle:package:7346257/2"/>
+<part name="HE0" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="KK-156-2" device="" package3d_urn="urn:adsk.eagle:package:7346264/2"/>
 <part name="AGND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
-<part name="PWR" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="KK-156-2" device=""/>
+<part name="PWR" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="KK-156-2" device="" package3d_urn="urn:adsk.eagle:package:7346264/2"/>
 <part name="R1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-RESISTOR_SMD-RES-1.5K-1%-1/10W(0603)" device="DETAILED_MODEL" package3d_urn="urn:adsk.eagle:package:5224535/3" value="240R"/>
 <part name="R2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-RESISTOR_SMD-RES-1.5K-1%-1/10W(0603)" device="DETAILED_MODEL" package3d_urn="urn:adsk.eagle:package:5224535/3" value="715R"/>
 <part name="R3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-RESISTOR_SMD-RES-1.5K-1%-1/10W(0603)" device="DETAILED_MODEL" package3d_urn="urn:adsk.eagle:package:5224535/3" value="2.05K"/>
@@ -3920,22 +4083,22 @@ Source: www.kingbright.com</description>
 <part name="R4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-RESISTOR_SMD-RES-1.5K-1%-1/10W(0603)" device="DETAILED_MODEL" package3d_urn="urn:adsk.eagle:package:5224535/3" value="1K"/>
 <part name="5V" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="LED" device="CHIP-LED0805" package3d_urn="urn:adsk.eagle:package:15818/2"/>
 <part name="12V" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="LED" device="CHIP-LED0805" package3d_urn="urn:adsk.eagle:package:15818/2"/>
-<part name="U2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="L78L05ACU" device="" package3d_urn="urn:adsk.eagle:package:6899241/4"/>
+<part name="U2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="L78L05ACU" device="" package3d_urn="urn:adsk.eagle:package:6899241/5"/>
 <part name="AGND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
 <part name="Q2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="2N2907" device="" package3d_urn="urn:adsk.eagle:package:28523/2"/>
-<part name="R6" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-2K-5%-1/8W(0805)" device="" package3d_urn="urn:adsk.eagle:package:32799/1" value="1R"/>
-<part name="R7" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-2K-5%-1/8W(0805)" device="" package3d_urn="urn:adsk.eagle:package:32799/1" value="10R"/>
-<part name="C2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="DIP-ALUMINUM-100UF-16V(D5-H7MM)" device="" package3d_urn="urn:adsk.eagle:package:32406/1" value="220uf"/>
-<part name="C3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="DIP-ALUMINUM-100UF-16V(D5-H7MM)" device="" package3d_urn="urn:adsk.eagle:package:32406/1" value="220uf"/>
-<part name="C4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="DIP-ALUMINUM-100UF-16V(D5-H7MM)" device="" package3d_urn="urn:adsk.eagle:package:32406/1" value="220uf"/>
+<part name="R6" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-2K-5%-1/8W(0805)" device="" package3d_urn="urn:adsk.eagle:package:8443791/2" value="1R"/>
+<part name="R7" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-2K-5%-1/8W(0805)" device="" package3d_urn="urn:adsk.eagle:package:8443791/2" value="10R"/>
+<part name="C2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="DIP-ALUMINUM-100UF-16V(D5-H7MM)" device="LEFT" package3d_urn="urn:adsk.eagle:package:8885168/4" value="100uf"/>
+<part name="C3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="DIP-ALUMINUM-100UF-16V(D5-H7MM)" device="RIGHT" package3d_urn="urn:adsk.eagle:package:8885515/3" value="100uf"/>
+<part name="C4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="DIP-ALUMINUM-100UF-16V(D5-H7MM)" device="LEFT" package3d_urn="urn:adsk.eagle:package:8885168/4" value="100uf"/>
 <part name="C5" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-CAPACITOR_CERAMIC-10UF-25V-10%-X5R(0805)" device="CAP_0805-3D" package3d_urn="urn:adsk.eagle:package:5225034/2" value="10uF"/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="AGND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
-<part name="H1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="HOLES_MOUNT-PAD-ROUND" device="3.2" package3d_urn="urn:adsk.eagle:package:5224590/1"/>
-<part name="H2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="HOLES_MOUNT-PAD-ROUND" device="3.2" package3d_urn="urn:adsk.eagle:package:5224590/1"/>
-<part name="H3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="HOLES_MOUNT-PAD-ROUND" device="3.2" package3d_urn="urn:adsk.eagle:package:5224590/1"/>
-<part name="H4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="HOLES_MOUNT-PAD-ROUND" device="3.2" package3d_urn="urn:adsk.eagle:package:5224590/1"/>
-<part name="F1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-2K-5%-1/8W(0805)" device="" package3d_urn="urn:adsk.eagle:package:32799/1" value="500mA"/>
+<part name="H1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="HOLES_MOUNT-PAD-ROUND" device="3.2" package3d_urn="urn:adsk.eagle:package:5224590/2"/>
+<part name="H2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="HOLES_MOUNT-PAD-ROUND" device="3.2" package3d_urn="urn:adsk.eagle:package:5224590/2"/>
+<part name="H3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="HOLES_MOUNT-PAD-ROUND" device="3.2" package3d_urn="urn:adsk.eagle:package:5224590/2"/>
+<part name="H4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="HOLES_MOUNT-PAD-ROUND" device="3.2" package3d_urn="urn:adsk.eagle:package:5224590/2"/>
+<part name="F1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-2K-5%-1/8W(0805)" device="" package3d_urn="urn:adsk.eagle:package:8443791/2" value="500mA"/>
 </parts>
 <sheets>
 <sheet>
@@ -4073,7 +4236,6 @@ Source: www.kingbright.com</description>
 </instance>
 <instance part="C3" gate="G$1" x="107.95" y="78.74" smashed="yes" rot="R270">
 <attribute name="NAME" x="105.41" y="77.47" size="1.27" layer="95" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="110.49" y="80.01" size="1.27" layer="96" ratio="10" rot="R270"/>
 </instance>
 <instance part="C4" gate="G$1" x="151.13" y="142.24" smashed="yes" rot="R270">
 <attribute name="NAME" x="147.32" y="140.97" size="1.27" layer="95" ratio="10" rot="R90"/>
