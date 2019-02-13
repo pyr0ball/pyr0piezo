@@ -170,7 +170,7 @@
 <layer number="255" name="Accent" color="7" fill="1" visible="no" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyYTEyMDdh" projecturn="a.cGVyc29uYWw6dWUyYTEyMDdhIzIwMTgxMTI5MTYyOTY3NjMx" f3durn="urn:adsk.wipprod:dm.lineage:nsLuw-r7TDSCqnqJ3mJIQg" pcbguid="3bd29ec8-00c9-4374-8a01-bcbe035150bd" lastpulledtime="" lastsyncedchangeguid="c40632c8-a1ac-543f-1eb5-0abfdd09adff"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyYTEyMDdh" projecturn="a.cGVyc29uYWw6dWUyYTEyMDdhIzIwMTgxMTI5MTYyOTY3NjMx" f3durn="urn:adsk.wipprod:dm.lineage:nsLuw-r7TDSCqnqJ3mJIQg" pcbguid="3bd29ec8-00c9-4374-8a01-bcbe035150bd" lastpulledtime="" lastsyncedchangeguid="1ad6e9e3-db58-e548-dd74-fc90ab1d583a"/>
 <plain>
 <text x="34.715253125" y="10.10183125" size="1.27" layer="22" ratio="11" rot="R180">+  -</text>
 <text x="34.518234375" y="14.268046875" size="1.27" layer="22" font="vector" ratio="11" rot="MR180" align="bottom-right">PZ1</text>

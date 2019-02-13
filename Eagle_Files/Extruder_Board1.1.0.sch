@@ -675,7 +675,7 @@
 <vertex x="-4.7625" y="5.08"/>
 </polygon>
 </package>
-<package name="HDRRAR4W64P254_2X2_556X736X556B" urn="urn:adsk.eagle:footprint:6905204/1" library_version="32">
+<package name="HDRRAR4W64P254_2X2_556X736X556B" urn="urn:adsk.eagle:footprint:6905204/1" library_version="66">
 <description>Double-row, 4-pin Receptacle Header (Female) Right Angle, 2.54 mm (0.10 in) pitch, 7.36 mm insulator length, 5.56 X 7.36 X 5.56 mm body
 &lt;p&gt;Double-row (2X2), 4-pin Receptacle Header (Female) Right Angle package with 2.54 mm (0.10 in) pitch, 0.64 mm lead width, 3.00 mm tail length and 7.36 mm insulator length with body size 5.56 X 7.36 X 5.56 mm, pin pattern - counter-clockwise from bottom left&lt;/p&gt;</description>
 <circle x="-1.3565" y="0" radius="0.25" width="0" layer="21"/>
@@ -1536,6 +1536,33 @@ Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <rectangle x1="-0.6" y1="1.35" x2="0.1" y2="1.75" layer="29" rot="R270"/>
 <rectangle x1="-1.1" y1="1.35" x2="-0.4" y2="1.75" layer="29" rot="R270"/>
 </package>
+<package name="SPRING_CONTACT_2.5X1.5" urn="urn:adsk.eagle:footprint:8763768/1" library_version="66">
+<description>Spring loaded contact
+https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</description>
+<smd name="TP" x="0" y="0" dx="2" dy="1.5" layer="1"/>
+<pad name="TH" x="0" y="0" drill="0.7" shape="square"/>
+<wire x1="-1.0795" y1="0.889" x2="1.651" y2="0.889" width="0.127" layer="21"/>
+<wire x1="1.651" y1="0.889" x2="1.651" y2="-0.889" width="0.127" layer="21"/>
+<wire x1="1.651" y1="-0.889" x2="-1.0795" y2="-0.889" width="0.127" layer="21"/>
+<wire x1="-1.0795" y1="-0.889" x2="-1.0795" y2="0.889" width="0.127" layer="21"/>
+</package>
+<package name="SPRING_CONTACT_3.48X1.10" urn="urn:adsk.eagle:footprint:8763767/1" library_version="66">
+<description>Spring loaded contact
+https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</description>
+<smd name="TP" x="0" y="0" dx="1.75" dy="1.25" layer="1"/>
+<pad name="TH" x="0" y="0" drill="0.7" shape="square"/>
+<wire x1="-0.9525" y1="0.762" x2="2.54" y2="0.762" width="0.127" layer="21"/>
+<wire x1="2.54" y1="0.762" x2="2.54" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="2.54" y1="-0.762" x2="-0.9525" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="-0.9525" y1="-0.762" x2="-0.9525" y2="0.762" width="0.127" layer="21"/>
+<polygon width="0.127" layer="21">
+<vertex x="2.54" y="0.762"/>
+<vertex x="2.54" y="-0.762"/>
+<vertex x="1.905" y="-0.762"/>
+<vertex x="1.8415" y="-0.762"/>
+<vertex x="1.8415" y="0.762"/>
+</polygon>
+</package>
 </packages>
 <packages3d>
 <package3d name="SOT23" urn="urn:adsk.eagle:package:6899267/1" type="model" library_version="14">
@@ -1583,22 +1610,10 @@ Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <packageinstance name="CON24_1X24_DRB_SFW"/>
 </packageinstances>
 </package3d>
-<package3d name="70543-04" urn="urn:adsk.eagle:package:6902619/1" type="box" library_version="10">
-<description>&lt;b&gt;2.54mm Pitch SL™ Header, Single Row, Vertical, 3.05mm Pocket, Shrouded, 5 Circuits, 0.38µm Gold (Au) Selective Plating, Tin (Sn) PC Tail Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/705430004_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
-<packageinstances>
-<packageinstance name="70543-04"/>
-</packageinstances>
-</package3d>
 <package3d name="70553-04" urn="urn:adsk.eagle:package:6902618/2" type="model" library_version="10">
 <description>&lt;b&gt;2.54mm Pitch SL™ Header, Low Profile, Single Row, Right Angle, 3.05mm Pocket, Shrouded, 5 Circuits, 0.38µm Gold (Au) Selective Plating, Tin (Sn) PC Tail Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/705530004_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <packageinstances>
 <packageinstance name="70553-04"/>
-</packageinstances>
-</package3d>
-<package3d name="74099-04" urn="urn:adsk.eagle:package:6902617/1" type="box" library_version="10">
-<description>&lt;b&gt;SL™ Wire-to-Board Header, Surface Mount, Single Row, Vertical, 3.05mm Pocket, Shrouded, 4 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/705530004_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
-<packageinstances>
-<packageinstance name="74099-04"/>
 </packageinstances>
 </package3d>
 <package3d name="15-91-04" urn="urn:adsk.eagle:package:6902616/1" type="box" library_version="10">
@@ -1607,7 +1622,7 @@ Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <packageinstance name="15-91-04"/>
 </packageinstances>
 </package3d>
-<package3d name="HDRRAR4W64P254_2X2_556X736X556B" urn="urn:adsk.eagle:package:6905202/1" type="model" library_version="32">
+<package3d name="HDRRAR4W64P254_2X2_556X736X556B" urn="urn:adsk.eagle:package:6905202/1" type="model" library_version="66">
 <description>Double-row, 4-pin Receptacle Header (Female) Right Angle, 2.54 mm (0.10 in) pitch, 7.36 mm insulator length, 5.56 X 7.36 X 5.56 mm body
 &lt;p&gt;Double-row (2X2), 4-pin Receptacle Header (Female) Right Angle package with 2.54 mm (0.10 in) pitch, 0.64 mm lead width, 3.00 mm tail length and 7.36 mm insulator length with body size 5.56 X 7.36 X 5.56 mm, pin pattern - counter-clockwise from bottom left&lt;/p&gt;</description>
 <packageinstances>
@@ -1623,18 +1638,6 @@ Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 2.8 mm, round</description>
 <packageinstances>
 <packageinstance name="HOLES_2,8-PAD"/>
-</packageinstances>
-</package3d>
-<package3d name="HOLES_3,0-PAD" urn="urn:adsk.eagle:package:5224589/1" type="box" library_version="12">
-<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.0 mm, round</description>
-<packageinstances>
-<packageinstance name="HOLES_3,0-PAD"/>
-</packageinstances>
-</package3d>
-<package3d name="HOLES_3,2-PAD" urn="urn:adsk.eagle:package:5224590/1" type="box" library_version="12">
-<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.2 mm, round</description>
-<packageinstances>
-<packageinstance name="HOLES_3,2-PAD"/>
 </packageinstances>
 </package3d>
 <package3d name="HOLES_3,3-PAD" urn="urn:adsk.eagle:package:5224591/1" type="box" library_version="12">
@@ -1653,12 +1656,6 @@ Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 4.1 mm, round</description>
 <packageinstances>
 <packageinstance name="HOLES_4,1-PAD"/>
-</packageinstances>
-</package3d>
-<package3d name="HOLES_4,3-PAD" urn="urn:adsk.eagle:package:5224594/1" type="box" library_version="12">
-<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 4.3 mm, round</description>
-<packageinstances>
-<packageinstance name="HOLES_4,3-PAD"/>
 </packageinstances>
 </package3d>
 <package3d name="HOLES_4,5-PAD" urn="urn:adsk.eagle:package:5224595/1" type="box" library_version="12">
@@ -1731,12 +1728,6 @@ Metric Code Size 1608</description>
 <description>TEST PAD</description>
 <packageinstances>
 <packageinstance name="TP10R"/>
-</packageinstances>
-</package3d>
-<package3d name="B1,27" urn="urn:adsk.eagle:package:27944/1" type="box" library_version="28" library_locally_modified="yes">
-<description>TEST PAD</description>
-<packageinstances>
-<packageinstance name="B1,27"/>
 </packageinstances>
 </package3d>
 <package3d name="B2,54" urn="urn:adsk.eagle:package:27948/1" type="box" library_version="28" library_locally_modified="yes">
@@ -1955,12 +1946,6 @@ Metric Code Size 1608</description>
 <packageinstance name="TP20SQ"/>
 </packageinstances>
 </package3d>
-<package3d name="TP13SQ-HOLE" urn="urn:adsk.eagle:package:7170913/2" type="model" library_version="28" library_locally_modified="yes">
-<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
-<packageinstances>
-<packageinstance name="TP13SQ-HOLE"/>
-</packageinstances>
-</package3d>
 <package3d name="DIL14" urn="urn:adsk.eagle:package:16407/2" type="model" library_version="66">
 <description>Dual In Line Package</description>
 <packageinstances>
@@ -1984,6 +1969,62 @@ Metric Code Size 1608</description>
 Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <packageinstances>
 <packageinstance name="QFN16"/>
+</packageinstances>
+</package3d>
+<package3d name="70543-04" urn="urn:adsk.eagle:package:6902619/2" type="model" library_version="66">
+<description>&lt;b&gt;2.54mm Pitch SL™ Header, Single Row, Vertical, 3.05mm Pocket, Shrouded, 5 Circuits, 0.38µm Gold (Au) Selective Plating, Tin (Sn) PC Tail Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/705430004_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<packageinstances>
+<packageinstance name="70543-04"/>
+</packageinstances>
+</package3d>
+<package3d name="74099-04" urn="urn:adsk.eagle:package:6902617/2" type="model" library_version="66">
+<description>&lt;b&gt;SL™ Wire-to-Board Header, Surface Mount, Single Row, Vertical, 3.05mm Pocket, Shrouded, 4 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/705530004_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<packageinstances>
+<packageinstance name="74099-04"/>
+</packageinstances>
+</package3d>
+<package3d name="HOLES_3,0-PAD" urn="urn:adsk.eagle:package:5224589/2" type="model" library_version="66">
+<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.0 mm, round</description>
+<packageinstances>
+<packageinstance name="HOLES_3,0-PAD"/>
+</packageinstances>
+</package3d>
+<package3d name="HOLES_3,2-PAD" urn="urn:adsk.eagle:package:5224590/2" type="model" library_version="66">
+<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.2 mm, round</description>
+<packageinstances>
+<packageinstance name="HOLES_3,2-PAD"/>
+</packageinstances>
+</package3d>
+<package3d name="HOLES_4,3-PAD" urn="urn:adsk.eagle:package:5224594/2" type="box" library_version="66">
+<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 4.3 mm, round</description>
+<packageinstances>
+<packageinstance name="HOLES_4,3-PAD"/>
+</packageinstances>
+</package3d>
+<package3d name="B1,27" urn="urn:adsk.eagle:package:27944/2" type="box" library_version="66">
+<description>TEST PAD</description>
+<packageinstances>
+<packageinstance name="B1,27"/>
+</packageinstances>
+</package3d>
+<package3d name="TP13SQ-HOLE" urn="urn:adsk.eagle:package:7170913/3" type="model" library_version="66">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<packageinstances>
+<packageinstance name="TP13SQ-HOLE"/>
+</packageinstances>
+</package3d>
+<package3d name="SPRING_CONTACT_2.5X1.5" urn="urn:adsk.eagle:package:8763771/3" type="model" library_version="66">
+<description>Spring loaded contact
+https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</description>
+<packageinstances>
+<packageinstance name="SPRING_CONTACT_2.5X1.5"/>
+</packageinstances>
+</package3d>
+<package3d name="SPRING_CONTACT_3.48X1.10" urn="urn:adsk.eagle:package:8763770/2" type="model" library_version="66">
+<description>Spring loaded contact
+https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</description>
+<packageinstances>
+<packageinstance name="SPRING_CONTACT_3.48X1.10"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -2277,13 +2318,12 @@ Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <text x="-3.81" y="1.27" size="1.27" layer="95" ratio="10">&gt;NAME</text>
 <text x="-3.81" y="-2.54" size="1.27" layer="96" ratio="10">&gt;VALUE</text>
 </symbol>
-<symbol name="TP" urn="urn:adsk.eagle:symbol:7170910/1" library_version="28" library_locally_modified="yes">
+<symbol name="TP" urn="urn:adsk.eagle:symbol:7170910/2" library_version="66">
 <wire x1="-0.762" y1="-0.762" x2="0" y2="0" width="0.254" layer="94"/>
 <wire x1="0" y1="0" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
 <wire x1="0.762" y1="-0.762" x2="0" y2="-1.524" width="0.254" layer="94"/>
 <wire x1="0" y1="-1.524" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
 <text x="-1.27" y="1.27" size="1.778" layer="95">&gt;NAME</text>
-<text x="1.27" y="-1.27" size="1.778" layer="97">&gt;TP_SIGNAL_NAME</text>
 <pin name="TP" x="0" y="-2.54" visible="off" length="short" direction="in" rot="R90"/>
 </symbol>
 <symbol name="OPAMP-1" urn="urn:adsk.eagle:symbol:8766124/1" library_version="66">
@@ -2329,7 +2369,7 @@ low-leakage double diode</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="CON-MOLEX-2P-1.27MM" urn="urn:adsk.eagle:component:6897184/2" prefix="X" library_version="28" library_locally_modified="yes">
+<deviceset name="CON-MOLEX-2P-1.27MM" urn="urn:adsk.eagle:component:6897184/4" prefix="X" library_version="66">
 <description>&lt;b&gt;CONNECTOR&lt;/b&gt;&lt;p&gt;
 wire to board 1.25 mm (.049 inch) pitch header</description>
 <gates>
@@ -2610,7 +2650,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="C-GRID-04" urn="urn:adsk.eagle:component:6902621/2" prefix="X" library_version="10">
+<deviceset name="C-GRID-04" urn="urn:adsk.eagle:component:6902621/3" prefix="X" library_version="66">
 <description>&lt;b&gt;CONNECTOR&lt;/b&gt;&lt;p&gt;
 wire to board 2.54 mm (0.100") pitch header</description>
 <gates>
@@ -2628,7 +2668,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <connect gate="-4" pin="S" pad="4"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:6902619/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:6902619/2"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -2666,7 +2706,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <connect gate="-4" pin="S" pad="4"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:6902617/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:6902617/2"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -2698,7 +2738,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="JST-2.54-2X2" urn="urn:adsk.eagle:component:6905208/1" library_version="32">
+<deviceset name="JST-2.54-2X2" urn="urn:adsk.eagle:component:6905208/1" library_version="66">
 <gates>
 <gate name="A" symbol="M" x="0" y="5.08"/>
 <gate name="B" symbol="M" x="0" y="2.54"/>
@@ -2742,7 +2782,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="HOLES_MOUNT-PAD-ROUND" urn="urn:adsk.eagle:component:6905305/1" prefix="H" library_version="12">
+<deviceset name="HOLES_MOUNT-PAD-ROUND" urn="urn:adsk.eagle:component:6905305/5" prefix="H" library_version="66">
 <description>&lt;b&gt;MOUNTING PAD&lt;/b&gt;, round</description>
 <gates>
 <gate name="G$1" symbol="HOLES_MOUNT-PAD" x="0" y="0"/>
@@ -2764,7 +2804,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <connect gate="G$1" pin="MOUNT" pad="B3,0"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:5224589/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5224589/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -2775,7 +2815,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <connect gate="G$1" pin="MOUNT" pad="B3,2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:5224590/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5224590/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -2819,7 +2859,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <connect gate="G$1" pin="MOUNT" pad="B4,3"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:5224594/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5224594/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -2986,7 +3026,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="TP" urn="urn:adsk.eagle:component:7170914/2" prefix="TP" library_version="28" library_locally_modified="yes">
+<deviceset name="TP" urn="urn:adsk.eagle:component:7170914/5" prefix="TP" library_version="66">
 <description>&lt;b&gt;Test pad&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="TP" x="0" y="0"/>
@@ -2997,7 +3037,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <connect gate="G$1" pin="TP" pad="TP"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:27944/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27944/2"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -3491,7 +3531,29 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <connect gate="G$1" pin="TP" pad="TP"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:7170913/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:7170913/3"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SPRING_CONTACT_2X1.5" package="SPRING_CONTACT_2.5X1.5">
+<connects>
+<connect gate="G$1" pin="TP" pad="TH TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8763771/3"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SPRING_CONTACT_3.5X1.1" package="SPRING_CONTACT_3.48X1.10">
+<connects>
+<connect gate="G$1" pin="TP" pad="TH TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8763770/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -3989,12 +4051,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package>
 </packages>
 <packages3d>
-<package3d name="B1,27" urn="urn:adsk.eagle:package:27944/1" type="box" library_version="1">
-<description>TEST PAD</description>
-<packageinstances>
-<packageinstance name="B1,27"/>
-</packageinstances>
-</package3d>
 <package3d name="B2,54" urn="urn:adsk.eagle:package:27948/1" type="box" library_version="1">
 <description>TEST PAD</description>
 <packageinstances>
@@ -4217,6 +4273,12 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <packageinstance name="TP20SQ"/>
 </packageinstances>
 </package3d>
+<package3d name="B1,27" urn="urn:adsk.eagle:package:27944/2" type="box" library_version="2">
+<description>TEST PAD</description>
+<packageinstances>
+<packageinstance name="B1,27"/>
+</packageinstances>
+</package3d>
 </packages3d>
 <symbols>
 <symbol name="TP" urn="urn:adsk.eagle:symbol:27940/1" library_version="1">
@@ -4230,7 +4292,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="TP" urn="urn:adsk.eagle:component:27992/1" prefix="TP" library_version="1">
+<deviceset name="TP" urn="urn:adsk.eagle:component:27992/2" prefix="TP" library_version="2">
 <description>&lt;b&gt;Test pad&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="TP" x="0" y="0"/>
@@ -4241,7 +4303,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <connect gate="G$1" pin="TP" pad="TP"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:27944/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27944/2"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -4852,7 +4914,7 @@ DIN A3, landscape with location and doc. field</description>
 <part name="R11" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="220R"/>
 <part name="R12" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="330R"/>
 <part name="R13" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="100R"/>
-<part name="R14" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-RESISTOR_SMD-RES-1.5K-1%-1/10W(0603)" device="DETAILED_MODEL" package3d_urn="urn:adsk.eagle:package:5224535/3" value="0R"/>
+<part name="F1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-RESISTOR_SMD-RES-1.5K-1%-1/10W(0603)" device="DETAILED_MODEL" package3d_urn="urn:adsk.eagle:package:5224535/3" value="0R"/>
 <part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="ADJ-" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP10R" package3d_urn="urn:adsk.eagle:package:27959/1" value="TPTP10R"/>
 <part name="ADJ+" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP10R" package3d_urn="urn:adsk.eagle:package:27959/1" value="TPTP10R"/>
@@ -4928,7 +4990,6 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="327.66" y1="176.53" x2="322.58" y2="181.61" width="0.1524" layer="94"/>
 <wire x1="322.58" y1="181.61" x2="322.58" y2="224.79" width="0.1524" layer="94"/>
 <text x="180.34" y="201.93" size="1.778" layer="94" rot="R90">Piezo In</text>
-<text x="218.44" y="73.66" size="3.81" layer="94">Feedback LED's</text>
 <wire x1="228.6" y1="224.79" x2="228.6" y2="181.61" width="0.1524" layer="94"/>
 <wire x1="228.6" y1="181.61" x2="223.52" y2="176.53" width="0.1524" layer="94"/>
 <wire x1="223.52" y1="176.53" x2="181.61" y2="176.53" width="0.1524" layer="94"/>
@@ -5191,7 +5252,7 @@ DIN A3, landscape with location and doc. field</description>
 <attribute name="NAME" x="353.06" y="204.47" size="1.27" layer="95" ratio="10"/>
 <attribute name="VALUE" x="354.33" y="200.66" size="1.27" layer="96" ratio="10"/>
 </instance>
-<instance part="R14" gate="G$1" x="71.12" y="130.81" smashed="yes">
+<instance part="F1" gate="G$1" x="71.12" y="130.81" smashed="yes">
 <attribute name="NAME" x="67.31" y="132.08" size="1.27" layer="95" ratio="10"/>
 <attribute name="VALUE" x="67.31" y="128.27" size="1.27" layer="96" ratio="10"/>
 </instance>
@@ -5567,7 +5628,7 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="50.8" y1="130.81" x2="45.72" y2="130.81" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="127" x2="50.8" y2="130.81" width="0.1524" layer="91"/>
 <junction x="50.8" y="130.81"/>
-<pinref part="R14" gate="G$1" pin="1"/>
+<pinref part="F1" gate="G$1" pin="1"/>
 <wire x1="67.31" y1="130.81" x2="60.96" y2="130.81" width="0.1524" layer="91"/>
 <pinref part="D1" gate="G$1" pin="C"/>
 <wire x1="60.96" y1="124.46" x2="60.96" y2="130.81" width="0.1524" layer="91"/>
@@ -5869,7 +5930,7 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="101.6" y1="128.27" x2="99.06" y2="128.27" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="128.27" x2="99.06" y2="130.81" width="0.1524" layer="91"/>
 <junction x="99.06" y="130.81"/>
-<pinref part="R14" gate="G$1" pin="2"/>
+<pinref part="F1" gate="G$1" pin="2"/>
 <pinref part="P+5" gate="1" pin="+5V"/>
 <wire x1="83.82" y1="137.16" x2="83.82" y2="130.81" width="0.1524" layer="91"/>
 <junction x="83.82" y="130.81"/>

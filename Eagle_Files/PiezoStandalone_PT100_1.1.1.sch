@@ -5015,8 +5015,8 @@ DIN A3, landscape with location and doc. field</description>
 <attribute name="VALUE" x="196.85" y="209.55" size="1.27" layer="96" ratio="10" rot="R90"/>
 </instance>
 <instance part="R2" gate="G$1" x="203.2" y="195.58" smashed="yes" rot="R90">
-<attribute name="NAME" x="201.93" y="194.31" size="1.27" layer="95" ratio="10" rot="R270"/>
-<attribute name="VALUE" x="204.47" y="196.85" size="1.27" layer="96" ratio="10" rot="R90"/>
+<attribute name="NAME" x="200.66" y="196.85" size="1.27" layer="95" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="205.232" y="190.5" size="1.27" layer="96" ratio="10" rot="R90"/>
 </instance>
 <instance part="R10" gate="G$1" x="251.46" y="189.23" smashed="yes" rot="R180">
 <attribute name="NAME" x="255.27" y="187.96" size="1.27" layer="95" ratio="10" rot="R180"/>
@@ -5580,14 +5580,14 @@ DIN A3, landscape with location and doc. field</description>
 <segment>
 <pinref part="D8" gate="G$1" pin="AC"/>
 <wire x1="191.77" y1="218.44" x2="191.77" y2="212.09" width="0.1524" layer="91"/>
-<wire x1="204.47" y1="212.09" x2="195.58" y2="212.09" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="212.09" x2="195.58" y2="212.09" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="195.58" y1="212.09" x2="195.58" y2="210.82" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="212.09" x2="191.77" y2="212.09" width="0.1524" layer="91"/>
 <junction x="195.58" y="212.09"/>
-<wire x1="204.47" y1="209.55" x2="204.47" y2="212.09" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="209.55" x2="203.2" y2="212.09" width="0.1524" layer="91"/>
 <pinref part="U3" gate="C" pin="+IN"/>
-<wire x1="210.82" y1="209.55" x2="204.47" y2="209.55" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="209.55" x2="203.2" y2="209.55" width="0.1524" layer="91"/>
 <label x="191.77" y="212.09" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
@@ -5685,16 +5685,14 @@ DIN A3, landscape with location and doc. field</description>
 <net name="GAIN_FB" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="204.47" y1="201.93" x2="203.2" y2="201.93" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="201.93" x2="203.2" y2="199.39" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="199.39" x2="205.74" y2="199.39" width="0.1524" layer="91"/>
 <junction x="203.2" y="199.39"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="205.74" y1="199.39" x2="205.74" y2="189.23" width="0.1524" layer="91"/>
 <wire x1="205.74" y1="189.23" x2="222.25" y2="189.23" width="0.1524" layer="91"/>
-<wire x1="204.47" y1="204.47" x2="204.47" y2="201.93" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="204.47" x2="203.2" y2="199.39" width="0.1524" layer="91"/>
 <pinref part="U3" gate="C" pin="-IN"/>
-<wire x1="210.82" y1="204.47" x2="204.47" y2="204.47" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="204.47" x2="203.2" y2="204.47" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GAIN_OUT" class="0">

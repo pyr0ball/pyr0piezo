@@ -170,7 +170,7 @@
 <layer number="255" name="Accent" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyYTEyMDdh" projecturn="a.cGVyc29uYWw6dWUyYTEyMDdhIzIwMTgxMTI5MTYyOTY3NjMx" f3durn="urn:adsk.wipprod:dm.lineage:DtSfnQ89SfqklU31MMF3YQ" pcbguid="05d06cb7-f4bc-42ed-b43b-e0454bd65b3f" lastpulledtime="" lastsyncedchangeguid="954b6ef8-ae4e-48a4-db5f-3e57323787db"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyYTEyMDdh" projecturn="a.cGVyc29uYWw6dWUyYTEyMDdhIzIwMTgxMTI5MTYyOTY3NjMx" f3durn="urn:adsk.wipprod:dm.lineage:-LnGF0EmSrCC4QDxOs_jhA" pcbguid="65281e6f-4b11-417f-8922-c86f02351248" lastpulledtime="" lastsyncedchangeguid="f88322f6-c5bf-c31b-634f-4831383430cc"/>
 <plain>
 <wire x1="18" y1="2" x2="35" y2="19" width="0.1524" layer="20"/>
 <wire x1="35" y1="19" x2="36.322" y2="20.066" width="0.15" layer="20" curve="-12.237784"/>
@@ -207,6 +207,8 @@
 <wire x1="10.795" y1="7.3025" x2="15.24" y2="7.3025" width="0.1524" layer="22"/>
 <wire x1="10.795" y1="5.3975" x2="15.24" y2="5.3975" width="0.1524" layer="22"/>
 <wire x1="13.0175" y1="9.525" x2="13.0175" y2="3.175" width="0.1524" layer="22"/>
+<wire x1="20.955" y1="20.955" x2="21.6535" y2="21.6535" width="0.2" layer="21"/>
+<wire x1="21.6535" y1="21.6535" x2="22.352" y2="21.6535" width="0.2" layer="21"/>
 </plain>
 <libraries>
 <library name="PiezoFFC" urn="urn:adsk.eagle:library:6897166">
@@ -466,7 +468,7 @@
 <vertex x="-4.7625" y="5.8737"/>
 </polygon>
 </package>
-<package name="HDRRAR4W64P254_2X2_556X736X556B" urn="urn:adsk.eagle:footprint:6905204/1" library_version="32">
+<package name="HDRRAR4W64P254_2X2_556X736X556B" urn="urn:adsk.eagle:footprint:6905204/1" library_version="66">
 <description>Double-row, 4-pin Receptacle Header (Female) Right Angle, 2.54 mm (0.10 in) pitch, 7.36 mm insulator length, 5.56 X 7.36 X 5.56 mm body
 &lt;p&gt;Double-row (2X2), 4-pin Receptacle Header (Female) Right Angle package with 2.54 mm (0.10 in) pitch, 0.64 mm lead width, 3.00 mm tail length and 7.36 mm insulator length with body size 5.56 X 7.36 X 5.56 mm, pin pattern - counter-clockwise from bottom left&lt;/p&gt;</description>
 <circle x="-1.3565" y="0" radius="0.25" width="0" layer="21"/>
@@ -6681,7 +6683,7 @@ Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <packageinstance name="70553-04"/>
 </packageinstances>
 </package3d>
-<package3d name="HDRRAR4W64P254_2X2_556X736X556B" urn="urn:adsk.eagle:package:6905202/1" type="model" library_version="32">
+<package3d name="HDRRAR4W64P254_2X2_556X736X556B" urn="urn:adsk.eagle:package:6905202/1" type="model" library_version="66">
 <description>Double-row, 4-pin Receptacle Header (Female) Right Angle, 2.54 mm (0.10 in) pitch, 7.36 mm insulator length, 5.56 X 7.36 X 5.56 mm body
 &lt;p&gt;Double-row (2X2), 4-pin Receptacle Header (Female) Right Angle package with 2.54 mm (0.10 in) pitch, 0.64 mm lead width, 3.00 mm tail length and 7.36 mm insulator length with body size 5.56 X 7.36 X 5.56 mm, pin pattern - counter-clockwise from bottom left&lt;/p&gt;</description>
 <packageinstances>
@@ -7184,9 +7186,9 @@ design rules under a new name.</description>
 <attribute name="NAME" x="20.572090625" y="30.936496875" size="0.6096" layer="25" font="vector" ratio="11" rot="R180"/>
 <attribute name="VALUE" x="20.837125" y="30.088478125" size="0.6096" layer="27" font="vector" ratio="11" rot="R180"/>
 </element>
-<element name="R14" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="SEEED-RESISTOR_R0603" package3d_urn="urn:adsk.eagle:package:5224535/3" value="0R" x="11.703" y="26.0575" smashed="yes" rot="R90">
-<attribute name="NAME" x="12.208" y="27.067" size="0.6096" layer="25" font="vector" ratio="11" align="center-left"/>
-<attribute name="VALUE" x="11.909" y="26.119" size="0.4064" layer="27" font="vector" ratio="11" rot="R270" align="top-center"/>
+<element name="F1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="SEEED-RESISTOR_R0603" package3d_urn="urn:adsk.eagle:package:5224535/3" value="0R" x="11.6395" y="26.375" smashed="yes" rot="R90">
+<attribute name="NAME" x="11.5095" y="27.3845" size="0.6096" layer="25" font="vector" ratio="11" align="center-left"/>
+<attribute name="VALUE" x="11.8455" y="26.4365" size="0.4064" layer="27" font="vector" ratio="11" rot="R270" align="top-center"/>
 </element>
 <element name="ADJ-" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP10R" package3d_urn="urn:adsk.eagle:package:27959/1" value="TPTP10R" x="9.3845" y="24.3" smashed="yes">
 <attribute name="NAME" x="9.7675" y="24.861" size="0.8128" layer="25" font="vector" ratio="11" rot="R90"/>
@@ -7194,7 +7196,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="8.7495" y="23.538" size="0.0254" layer="27"/>
 </element>
 <element name="ADJ+" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP10R" package3d_urn="urn:adsk.eagle:package:27959/1" value="TPTP10R" x="23.0215" y="21.672" smashed="yes" rot="R225">
-<attribute name="NAME" x="22.70581875" y="22.159284375" size="0.8128" layer="25" font="vector" ratio="11" rot="R180"/>
+<attribute name="NAME" x="20.48331875" y="21.079784375" size="0.8128" layer="25" font="vector" ratio="11" rot="R225"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="21.225446875" y="23.468053125" size="1" layer="37" rot="R225"/>
 <attribute name="VALUE" x="22.931696875" y="22.65983125" size="0.0254" layer="27" rot="R225"/>
 </element>
@@ -7477,12 +7479,12 @@ design rules under a new name.</description>
 <contactref element="J1" pad="9"/>
 <contactref element="C2" pad="2"/>
 <wire x1="5.8641" y1="26.613" x2="5.917109375" y2="26.613" width="0.1524" layer="1"/>
-<contactref element="R14" pad="1"/>
-<wire x1="10.8725" y1="26.0575" x2="10.941" y2="26.0575" width="0.508" layer="1"/>
+<contactref element="F1" pad="1"/>
+<wire x1="10.809" y1="26.375" x2="10.8775" y2="26.375" width="0.508" layer="1"/>
 <contactref element="D1" pad="P$2"/>
 <wire x1="5.917109375" y1="26.613" x2="10.233" y2="26.613" width="0.4064" layer="1"/>
-<wire x1="10.233" y1="26.613" x2="10.3855" y2="26.613" width="0.4064" layer="1"/>
-<wire x1="10.3855" y1="26.613" x2="10.941" y2="26.0575" width="0.4064" layer="1"/>
+<wire x1="10.233" y1="26.613" x2="10.6395" y2="26.613" width="0.4064" layer="1"/>
+<wire x1="10.6395" y1="26.613" x2="10.8775" y2="26.375" width="0.4064" layer="1"/>
 <wire x1="10.246" y1="28.3405" x2="10.3095" y2="28.277" width="0.4064" layer="1"/>
 <wire x1="10.3095" y1="28.277" x2="10.3095" y2="26.6895" width="0.4064" layer="1"/>
 <wire x1="10.3095" y1="26.6895" x2="10.233" y2="26.613" width="0.4064" layer="1"/>
@@ -7851,15 +7853,15 @@ design rules under a new name.</description>
 <wire x1="28.61606875" y1="25.16943125" x2="28.74306875" y2="25.04243125" width="0.1524" layer="1"/>
 <contactref element="U1" pad="16"/>
 <contactref element="U1" pad="3"/>
-<contactref element="R14" pad="2"/>
+<contactref element="F1" pad="2"/>
 <wire x1="18.034" y1="28.91403125" x2="18.0377" y2="28.91033125" width="0.1524" layer="16"/>
 <wire x1="18.0377" y1="28.36615" x2="18.0377" y2="28.91033125" width="0.1524" layer="16"/>
 <wire x1="14.083" y1="25.688" x2="13.4915" y2="25.688" width="0.254" layer="1"/>
-<wire x1="13.122" y1="26.0575" x2="12.465" y2="26.0575" width="0.254" layer="1"/>
-<wire x1="13.4915" y1="25.688" x2="13.122" y2="26.0575" width="0.254" layer="1"/>
+<wire x1="12.8045" y1="26.375" x2="12.4015" y2="26.375" width="0.254" layer="1"/>
+<wire x1="13.4915" y1="25.688" x2="12.8045" y2="26.375" width="0.254" layer="1"/>
 <via x="12.954" y="25.6868" extent="1-16" drill="0.35"/>
-<wire x1="12.954" y1="25.6868" x2="12.5833" y2="26.0575" width="0.254" layer="1"/>
-<wire x1="12.5833" y1="26.0575" x2="12.465" y2="26.0575" width="0.254" layer="1"/>
+<wire x1="12.954" y1="25.6868" x2="12.4015" y2="26.2393" width="0.254" layer="1"/>
+<wire x1="12.4015" y1="26.2393" x2="12.4015" y2="26.375" width="0.254" layer="1"/>
 <wire x1="16.861" y1="41.4655" x2="16.861" y2="41.4685" width="0.1524" layer="16"/>
 <contactref element="R15" pad="1"/>
 <contactref element="C1" pad="1"/>
