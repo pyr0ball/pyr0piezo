@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1.27" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -4896,7 +4896,7 @@ DIN A3, landscape with location and doc. field</description>
 <part name="INT" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
 <part name="TRG" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-LED_SMD-LED-CLEAR-BLUE(0603)" device="LED_0603" package3d_urn="urn:adsk.eagle:package:5224536/3"/>
 <part name="PWR" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-LED_SMD-LED-CLEAR-BLUE(0603)" device="LED_0603" package3d_urn="urn:adsk.eagle:package:5224536/3"/>
-<part name="R6" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2"/>
+<part name="R6" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="1K"/>
 <part name="R8" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="1K"/>
 <part name="R1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="1M"/>
 <part name="R10" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="10K"/>
@@ -5640,7 +5640,7 @@ DIN A3, landscape with location and doc. field</description>
 <label x="223.52" y="125.73" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="E0_1B" class="0">
+<net name="E0_2B" class="0">
 <segment>
 <pinref part="J1" gate="A" pin="88"/>
 <wire x1="349.25" y1="107.95" x2="346.71" y2="107.95" width="0.1524" layer="91"/>
@@ -5657,7 +5657,7 @@ DIN A3, landscape with location and doc. field</description>
 <label x="321.31" y="120.65" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
-<net name="E0_1A" class="0">
+<net name="E0_2A" class="0">
 <segment>
 <pinref part="J1" gate="A" pin="66"/>
 <wire x1="349.25" y1="113.03" x2="346.71" y2="113.03" width="0.1524" layer="91"/>
@@ -5674,7 +5674,7 @@ DIN A3, landscape with location and doc. field</description>
 <label x="321.31" y="118.11" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
-<net name="E0_2A" class="0">
+<net name="E0_1A" class="0">
 <segment>
 <pinref part="J1" gate="A" pin="44"/>
 <wire x1="349.25" y1="118.11" x2="346.71" y2="118.11" width="0.1524" layer="91"/>
@@ -5691,7 +5691,7 @@ DIN A3, landscape with location and doc. field</description>
 <label x="321.31" y="115.57" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
-<net name="E0_2B" class="0">
+<net name="E0_1B" class="0">
 <segment>
 <pinref part="J1" gate="A" pin="22"/>
 <wire x1="349.25" y1="123.19" x2="346.71" y2="123.19" width="0.1524" layer="91"/>
@@ -5864,7 +5864,7 @@ DIN A3, landscape with location and doc. field</description>
 <label x="363.22" y="204.47" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="PWR_LED" class="0">
 <segment>
 <pinref part="R8" gate="G$1" pin="2"/>
 <pinref part="PWR" gate="G$1" pin="+"/>
