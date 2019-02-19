@@ -376,6 +376,9 @@ void loop() {
   // Check for error state
   checkError();
 
+  // Get Serial Input
+  serialInput();
+
   // Checks state of the interrupt trigger, prints status, then sets output pin low
     Serial.print("PZ Status:");
     Serial.println(sensorHReading);
