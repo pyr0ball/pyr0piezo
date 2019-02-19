@@ -20,6 +20,9 @@
 
   Schematics for this project can be found here: https://github.com/pyr0ball/pyr0piezo/tree/master/docs/Schematics
 
+  For Arduino IDE use MCUdude MiniCore: https://mcudude.github.io/MiniCore/package_MCUdude_MiniCore_index.json
+
+
   created 2/18/2019
   by Alan "pyr0ball" Weinstock
 
@@ -81,6 +84,11 @@ int diffAdjH = senseHighInt - VAdj;
 // Error blink parameters
 int BlinkState = LOW;
 int BlinkCount = InitCount * 2;           // Multiply Blink count by 2 to handle toggle state
+
+// Serial Input Parsing Variables
+String readString, substring;
+int loc; 
+
 
 void setup() {
   pinMode(TRG_OUT, OUTPUT); // declare the Trigger as as OUTPUT
@@ -210,6 +218,128 @@ void checkError () {
 }
 
 /*------------------------------------------------*/
+
+void serialInput() {
+
+  //expect a string like VFOLH2.35 VFOLL1.80 VCOMPH2.75 VCOMPL2.54 GFACT2
+
+  if (Serial.available())  {
+    char c = Serial.read();  //gets one byte from serial buffer
+    if (c == '\n') {  //looks for end of data packet marker
+    //if (c == ',') {
+      Serial.println(readString); //prints string to serial port out
+
+
+      //Analyze each input
+      loc = readString.indexOf("VFOLH");
+      //Serial.println(loc);
+      if (loc != -1) {  
+        substring = readString.substring(loc+5, loc+9);
+		if (isFloat(substring)) {
+		  char carray[substring.length() + 1]; // determine size of the array
+		  substring.toCharArray(carray, sizeof(carray)); // puts substring into an array
+		  senseHighThrs = atof(carray);
+		}
+        Serial.print("VFollowHigh: ");
+        Serial.println(substring);
+      } else {
+        Serial.print("VFollowHigh: ");
+        Serial.println("NA");
+      }      
+
+
+      loc = readString.indexOf("VFOLL");
+      //Serial.println(loc);
+      if (loc != -1) {  
+        substring = readString.substring(loc+5, loc+9);
+		if (isFloat(substring)) {
+		  char carray[substring.length() + 1]; // determine size of the array
+		  substring.toCharArray(carray, sizeof(carray)); // puts substring into an array	
+		  senseLowThrs = atof(carray);
+		}
+        Serial.print("VFollowLow: ");
+        Serial.println(substring);
+      } else {
+        Serial.print("VFollowLow: ");
+        Serial.println("NA");
+      }        
+      
+      loc = readString.indexOf("VCOMPH");
+      //Serial.println(loc);
+      if (loc != -1) {  
+        substring = readString.substring(loc+6, loc+10);
+		if (isFloat(substring)) {
+		  char carray[substring.length() + 1]; // determine size of the array
+		  substring.toCharArray(carray, sizeof(carray)); // puts substring into an array
+		  compHighThrs = atof(carray);
+		}
+        Serial.print("VCompHigh: ");
+        Serial.println(substring);
+      } else {
+        Serial.print("VCompHigh: ");
+        Serial.println("NA");
+      } 
+	  
+      loc = readString.indexOf("VCOMPL");
+      //Serial.println(loc);
+      if (loc != -1) {  
+        substring = readString.substring(loc+6, loc+10);
+		if (isFloat(substring)) {
+		  char carray[substring.length() + 1]; // determine size of the array
+		  substring.toCharArray(carray, sizeof(carray)); // puts substring into an array
+		  compLowThrs = atof(carray);
+		}
+        Serial.print("VCompLow: ");
+        Serial.println(substring);
+      } else {
+        Serial.print("VCompLow: ");
+        Serial.println("NA");
+      } 
+	  
+	  loc = readString.indexOf("GFACT");
+      //Serial.println(loc);
+      if (loc != -1) {  
+        substring = readString.substring(loc+5, loc+9);
+		char carray[substring.length() + 1]; // determine size of the array
+		substring.toCharArray(carray, sizeof(carray)); // puts substring into an array
+		GAIN_FACTOR = atof(carray);
+        Serial.print("GainFactor: ");
+        Serial.println(substring);
+      } else {
+        Serial.print("GainFactor: ");
+        Serial.println("NA");
+      } 
+        
+      readString=""; //clears variable for new input
+      substring=""; 
+
+    }  
+    else {     
+      readString += c; //makes the string readString
+    }        
+  }
+  
+}
+
+// Routine for checking if string is a valid number
+boolean isFloat(String tString) {
+  String tBuf;
+  boolean decPt = false;
+  
+  if(tString.charAt(0) == '+' || tString.charAt(0) == '-') tBuf = &tString[1];
+  else tBuf = tString;  
+
+  for(int x=0;x<tBuf.length();x++)
+  {
+    if(tBuf.charAt(x) == '.') {
+      if(decPt) return false;
+      else decPt = true;  
+    }    
+    else if(tBuf.charAt(x) < '0' || tBuf.charAt(x) > '9') return false;
+  }
+  return true;
+}
+
 
 void loop() {
   
