@@ -27,18 +27,18 @@
 
 
 // Set variables for working parameters
-const int TRG_OUT = 9;         // LED and Z-Min trigger output connected to digital pin 10
+const int TRG_OUT = 7;         // LED and Z-Min trigger output connected to digital pin 7
 //const int TRG_OUT = 13;      // For testing on Atmega328/2560, Output is moved to onboard LED pin
-//#define Z_TRG 0                // the piezo is connected to INT0 / digital pin 2
-const byte Z_TRG = 2;
-int ERR_LED = 3;               // LED will blink if optimal voltage range cannot be achieved
+//#define Z_TRG 0              // the piezo is connected to INT0 / digital pin 2
+const byte Z_TRG = 2;          // the piezo is connected to INT0 / digital pin 2
+int ERR_LED = 4;               // LED will blink if optimal voltage range cannot be achieved
 int InitCount = 6;             // Number of times to blink the LED on start
 int V_FOLLOW_PIN = A0;             // Sense pin to check first amp stage voltage output
 int VADJ_SENSE_PIN = A1;           // Sense pin to check comparator stage voltage
 int TRG_DUR = 120;             // duration of the Z-axis pulse sent, in ms
 int Vin = 5;                   // input reference voltage
-float senseHighThrs = 2.15;    // Upper threshold voltage of amp circuit before adjustment
-float senseLowThrs = 1.9;     // Lower threshold voltage of amp circuit before adjustment
+float senseHighThrs = 2.35;    // Upper threshold voltage of amp circuit before adjustment
+float senseLowThrs = 1.8;     // Lower threshold voltage of amp circuit before adjustment
 const int VADJ_R0 = 20;        // Auto-adjust ladder pin assignments
 const int VADJ_R1 = 21;
 const int VADJ_R2 = 5;
@@ -81,7 +81,7 @@ void setup() {
 }
 
 void pulse() {
-  digitalWrite(TRG_OUT, HIGH);
+  digitalWrite(TRG_OUT, LOW);
   sensorHReading = 1;
 }
 
@@ -200,6 +200,6 @@ void loop() {
     Serial.println(ERR_STATE);
     Serial.println("------------------");
     delay(TRG_DUR);
-    digitalWrite(TRG_OUT, LOW);
+    digitalWrite(TRG_OUT, HIGH);
     sensorHReading = 0;
 }
