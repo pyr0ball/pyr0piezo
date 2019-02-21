@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.1">
+<eagle version="9.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -173,7 +173,7 @@
 <fusionsync huburn="a.cGVyc29uYWw6dWUyYTEyMDdh" projecturn="a.cGVyc29uYWw6dWUyYTEyMDdhIzIwMTgxMTI5MTYyOTY3NjMx" f3durn="urn:adsk.wipprod:dm.lineage:nsLuw-r7TDSCqnqJ3mJIQg" pcbguid="3bd29ec8-00c9-4374-8a01-bcbe035150bd" lastpulledtime="" lastsyncedchangeguid="1ad6e9e3-db58-e548-dd74-fc90ab1d583a"/>
 <plain>
 <text x="34.715253125" y="10.10183125" size="1.27" layer="22" ratio="11" rot="R180">+  -</text>
-<text x="34.518234375" y="14.268046875" size="1.27" layer="22" font="vector" ratio="11" rot="MR180" align="bottom-right">PZ1</text>
+<text x="34.518234375" y="13.633046875" size="1.27" layer="22" font="vector" ratio="11" rot="MR90" align="bottom-right">PZ1</text>
 <wire x1="1.757121875" y1="6.206475" x2="1.757121875" y2="0.997925" width="0.15" layer="20" curve="90"/>
 <wire x1="1.757121875" y1="0.997925" x2="1.802753125" y2="0.9365375" width="0.15" layer="20"/>
 <wire x1="1.802753125" y1="0.9365375" x2="4.460409375" y2="-0.1429625" width="0.15" layer="20" curve="45"/>
@@ -195,6 +195,10 @@
 <text x="6.76275" y="10.06475" size="0.8128" layer="22" rot="MR225">Z</text>
 <text x="7.77875" y="9.8425" size="0.6096" layer="22" rot="MR45">Vcc</text>
 <text x="8.85825" y="11.46175" size="0.8128" layer="22" rot="MR315">⏚</text>
+<wire x1="25.4" y1="2.54" x2="26.035" y2="2.54" width="0.1524" layer="26"/>
+<wire x1="26.035" y1="2.54" x2="26.67" y2="3.175" width="0.1524" layer="26"/>
+<wire x1="26.035" y1="1.27" x2="26.67" y2="1.27" width="0.1524" layer="22"/>
+<wire x1="26.67" y1="1.27" x2="28.575" y2="3.175" width="0.1524" layer="22"/>
 </plain>
 <libraries>
 <library name="PiezoFFC" urn="urn:adsk.eagle:library:6897166">
@@ -7082,10 +7086,10 @@ design rules under a new name.</description>
 <attribute name="NAME" x="13.504015625" y="11.112909375" size="0.6096" layer="26" font="vector" ratio="11" rot="MR45" align="bottom-center"/>
 <attribute name="VALUE" value="0R" x="13.364640625" y="10.921896875" size="0.6096" layer="28" font="vector" ratio="11" rot="MR225" align="top-center"/>
 </element>
-<element name="R1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0402" package3d_urn="urn:adsk.eagle:package:7115182/2" value="1M" x="33.02246875" y="12.370746875" smashed="yes" rot="MR90">
-<attribute name="MPN" value="RC0402JR-070RL" x="39.02246875" y="8.370746875" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="NAME" x="32.072175" y="12.106003125" size="0.6096" layer="26" font="vector" ratio="11" rot="MR0"/>
-<attribute name="VALUE" x="33.944240625" y="13.094346875" size="0.6096" layer="28" font="vector" ratio="11" rot="MR180"/>
+<element name="R1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0402" package3d_urn="urn:adsk.eagle:package:7115182/2" value="1M" x="33.02246875" y="9.195746875" smashed="yes" rot="MR90">
+<attribute name="MPN" value="RC0402JR-070RL" x="39.02246875" y="5.195746875" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="NAME" x="32.072175" y="8.931003125" size="0.6096" layer="26" font="vector" ratio="11" rot="MR0"/>
+<attribute name="VALUE" x="32.356740625" y="9.443096875" size="0.6096" layer="28" font="vector" ratio="11" rot="MR180"/>
 </element>
 <element name="R10" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0402" package3d_urn="urn:adsk.eagle:package:7115182/2" value="10K" x="25.2095" y="9.62025" smashed="yes" rot="R180">
 <attribute name="MPN" value="RC0402JR-070RL" x="29.2095" y="3.620253125" size="1.778" layer="27" rot="R180" display="off"/>
@@ -7131,7 +7135,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="20.542" y="9.7675" size="0.4064" layer="27" font="vector" ratio="11"/>
 </element>
 <element name="⏚" library="testpad" library_urn="urn:adsk.eagle:library:385" package="TP13SQ" package3d_urn="urn:adsk.eagle:package:27974/1" value="TPTP13SQ" x="28.575" y="4.0005" smashed="yes" rot="MR90">
-<attribute name="NAME" x="28.56" y="5.4595" size="1.27" layer="26" font="vector" rot="MR180" align="center"/>
+<attribute name="NAME" x="25.639" y="1.42725" size="1.27" layer="26" font="vector" rot="MR180" align="center"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="28.575" y="4.0005" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="VALUE" x="27.813" y="3.3655" size="0.0254" layer="28" rot="MR90"/>
 </element>
@@ -7225,13 +7229,13 @@ design rules under a new name.</description>
 <attribute name="TP_SIGNAL_NAME" value="" x="34.6075" y="6.69925" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="VALUE" x="34.6973" y="6.070634375" size="0.0254" layer="27" rot="R45"/>
 </element>
-<element name="R22" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0402" package3d_urn="urn:adsk.eagle:package:7115182/2" value="100R" x="26.6065" y="5.334" smashed="yes" rot="MR90">
-<attribute name="MPN" value="RC0402JR-070RL" x="32.3215" y="0.889" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="NAME" x="27.90825" y="4.191" size="0.6096" layer="26" font="vector" ratio="11" rot="MR0"/>
-<attribute name="VALUE" x="27.8765" y="3.81" size="0.6096" layer="28" font="vector" ratio="11" rot="MR0"/>
+<element name="R22" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0402" package3d_urn="urn:adsk.eagle:package:7115182/2" value="100R" x="28.41625" y="5.74675" smashed="yes" rot="MR90">
+<attribute name="MPN" value="RC0402JR-070RL" x="34.13125" y="1.30175" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="NAME" x="29.718" y="6.50875" size="0.6096" layer="26" font="vector" ratio="11" rot="MR0"/>
+<attribute name="VALUE" x="29.68625" y="4.22275" size="0.6096" layer="28" font="vector" ratio="11" rot="MR0"/>
 </element>
 <element name="C11" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="CAPC1005X50" package3d_urn="urn:adsk.eagle:package:5248669/4" value="10nF" x="25.0825" y="4.953" smashed="yes" rot="MR135">
-<attribute name="NAME" x="25.3534625" y="4.523290625" size="0.6096" layer="26" font="vector" ratio="11" rot="MR135" align="bottom-center"/>
+<attribute name="NAME" x="24.3692125" y="5.666290625" size="0.6096" layer="26" font="vector" ratio="11" rot="MR135" align="bottom-center"/>
 <attribute name="VALUE" x="25.160790625" y="4.7477125" size="0.4064" layer="28" font="vector" rot="MR135" align="top-center"/>
 </element>
 <element name="J2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="SEEED-RESISTOR_R0603" package3d_urn="urn:adsk.eagle:package:5224535/3" value="" x="26.543" y="6.95325" smashed="yes" rot="MR180">
@@ -7258,6 +7262,21 @@ design rules under a new name.</description>
 <attribute name="NAME" x="13.589" y="3.5814" size="0.6096" layer="25" font="vector" ratio="11" rot="SR90"/>
 <attribute name="VALUE" x="15.875" y="2.9845" size="0.8128" layer="27" font="vector" ratio="11" rot="R90" align="top-left"/>
 </element>
+<element name="ADJ+" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP13SQ" package3d_urn="urn:adsk.eagle:package:27974/1" value="TPTP13SQ" x="26.7335" y="4.0005" smashed="yes" rot="MR0">
+<attribute name="NAME" x="24.9705" y="2.31925" size="0.8128" layer="26" font="vector" ratio="11" rot="MR0"/>
+<attribute name="TP_SIGNAL_NAME" value="" x="26.7335" y="1.4605" size="1" layer="38" rot="MR0"/>
+<attribute name="VALUE" x="27.3685" y="3.2385" size="0.0254" layer="28" rot="MR0"/>
+</element>
+<element name="ADJ-" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP13SQ" package3d_urn="urn:adsk.eagle:package:27974/1" value="TPTP13SQ" x="32.8295" y="13.3985" smashed="yes" rot="MR0">
+<attribute name="NAME" x="36.4005" y="12.9555" size="0.8128" layer="26" font="vector" ratio="11" rot="MR0"/>
+<attribute name="TP_SIGNAL_NAME" value="" x="32.8295" y="10.8585" size="1" layer="38" rot="MR0"/>
+<attribute name="VALUE" x="33.4645" y="12.6365" size="0.0254" layer="28" rot="MR0"/>
+</element>
+<element name="PZ+" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP13SQ" package3d_urn="urn:adsk.eagle:package:27974/1" value="TPTP13SQ" x="31.115" y="13.3985" smashed="yes" rot="MR0">
+<attribute name="NAME" x="31.5745" y="12.60625" size="0.8128" layer="26" font="vector" ratio="11" rot="MR270"/>
+<attribute name="TP_SIGNAL_NAME" value="" x="31.115" y="10.8585" size="1" layer="38" rot="MR0"/>
+<attribute name="VALUE" x="31.75" y="12.6365" size="0.0254" layer="28" rot="MR0"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
@@ -7270,7 +7289,7 @@ design rules under a new name.</description>
 <via x="24.3377125" y="8.683" extent="1-16" drill="0.3"/>
 <via x="17.0990875" y="9.21365625" extent="1-16" drill="0.3"/>
 <via x="19.54579375" y="5.937496875" extent="1-16" drill="0.3"/>
-<via x="29.2842125" y="9.147590625" extent="1-16" drill="0.3"/>
+<via x="31.8242125" y="7.877590625" extent="1-16" drill="0.3"/>
 <via x="10.80020625" y="12.843159375" extent="1-16" drill="0.3"/>
 <via x="22.4938125" y="4.122353125" extent="1-16" drill="0.3"/>
 <via x="34.215534375" y="3.075815625" extent="1-16" drill="0.3"/>
@@ -7357,6 +7376,9 @@ design rules under a new name.</description>
 <via x="30.9034625" y="5.845590625" extent="1-16" drill="0.3"/>
 <wire x1="25.67775" y1="2.63525" x2="25.67775" y2="2.685175" width="0.1524" layer="1"/>
 <wire x1="25.67775" y1="2.685175" x2="25.52505" y2="2.837875" width="0.1524" layer="1"/>
+<wire x1="33.48496875" y1="9.195746875" x2="33.678890625" y2="9.38966875" width="0.1524" layer="16"/>
+<wire x1="33.678890625" y1="9.38966875" x2="33.678890625" y2="10.811884375" width="0.1524" layer="16"/>
+<wire x1="24.728946875" y1="4.59944375" x2="22.4938125" y2="4.122353125" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="Z_MIN_TRIG">
 <contactref element="R6" pad="1"/>
@@ -7604,10 +7626,16 @@ design rules under a new name.</description>
 <wire x1="28.96575625" y1="7.34875" x2="29.28910625" y2="7.6721" width="0.1524" layer="1"/>
 <wire x1="30.48" y1="7.6721" x2="32.428890625" y2="9.620990625" width="0.1524" layer="1"/>
 <contactref element="PZ1" pad="2"/>
-<wire x1="32.428890625" y1="10.811884375" x2="32.428890625" y2="12.23966875" width="0.1524" layer="16"/>
-<wire x1="32.428890625" y1="12.23966875" x2="32.55996875" y2="12.370746875" width="0.1524" layer="16"/>
-<wire x1="32.428890625" y1="10.811884375" x2="32.428890625" y2="10.338171875" width="0.1524" layer="16"/>
+<wire x1="32.55996875" y1="9.195746875" x2="32.428890625" y2="9.326825" width="0.1524" layer="16"/>
+<wire x1="32.428890625" y1="10.338171875" x2="32.428890625" y2="9.326825" width="0.1524" layer="16"/>
+<wire x1="32.428890625" y1="10.811884375" x2="32.428890625" y2="10.795" width="0.1524" layer="16"/>
+<wire x1="32.428890625" y1="10.795" x2="32.428890625" y2="10.338171875" width="0.1524" layer="16"/>
 <wire x1="32.428890625" y1="10.811884375" x2="32.428890625" y2="9.620990625" width="0.1524" layer="1"/>
+<contactref element="PZ+" pad="TP"/>
+<wire x1="31.6786" y1="11.85799375" x2="31.6786" y2="11.545290625" width="0.1524" layer="16"/>
+<wire x1="31.6786" y1="11.545290625" x2="32.428890625" y2="10.795" width="0.1524" layer="16"/>
+<wire x1="31.115" y1="13.3985" x2="31.115" y2="12.42159375" width="0.1524" layer="16"/>
+<wire x1="31.115" y1="12.42159375" x2="31.6786" y2="11.85799375" width="0.1524" layer="16"/>
 </signal>
 <signal name="+5V">
 <contactref element="+5V" pad="TP"/>
@@ -7746,6 +7774,16 @@ design rules under a new name.</description>
 <wire x1="25.7429" y1="6.60184375" x2="26.07630625" y2="6.93525" width="0.1524" layer="16"/>
 <wire x1="26.07630625" y1="6.93525" x2="27.01925" y2="6.93525" width="0.1524" layer="16"/>
 <wire x1="29.591" y1="6.2685" x2="29.591" y2="6.332" width="0.1524" layer="1"/>
+<contactref element="ADJ-" pad="TP"/>
+<wire x1="31.48526875" y1="5.6046" x2="31.14445625" y2="5.2637875" width="0.1524" layer="16"/>
+<wire x1="31.14445625" y1="5.2637875" x2="30.66246875" y2="5.2637875" width="0.1524" layer="16"/>
+<wire x1="32.8295" y1="13.3985" x2="32.8295" y2="13.3918375" width="0.1524" layer="16"/>
+<wire x1="32.8295" y1="13.3918375" x2="34.41149375" y2="11.80984375" width="0.1524" layer="16"/>
+<wire x1="34.41149375" y1="11.80984375" x2="34.41149375" y2="9.27695625" width="0.1524" layer="16"/>
+<wire x1="34.41149375" y1="9.27695625" x2="31.48526875" y2="6.35073125" width="0.1524" layer="16"/>
+<wire x1="31.48526875" y1="6.35073125" x2="31.48526875" y2="5.6046" width="0.1524" layer="16"/>
+<wire x1="29.59425625" y1="6.332" x2="29.591" y2="6.332" width="0.1524" layer="16"/>
+<wire x1="30.66246875" y1="5.2637875" x2="29.59425625" y2="6.332" width="0.1524" layer="16"/>
 </signal>
 <signal name="V_FOLLOW">
 <contactref element="R4" pad="2"/>
@@ -7787,6 +7825,8 @@ design rules under a new name.</description>
 <wire x1="24.67775" y1="2.63525" x2="24.67775" y2="3.302" width="0.1524" layer="1"/>
 <wire x1="24.67775" y1="3.302" x2="24.62875" y2="3.351" width="0.1524" layer="1"/>
 <wire x1="23.95725" y1="3.351" x2="24.62875" y2="3.351" width="0.1524" layer="1"/>
+<contactref element="ADJ+" pad="TP"/>
+<wire x1="25.82475" y1="3.937" x2="26.7335" y2="4.0005" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="GADJ_R0">
 <contactref element="U1" pad="5"/>
@@ -7989,18 +8029,17 @@ design rules under a new name.</description>
 <wire x1="28.04975" y1="5.62375" x2="28.0613" y2="5.6122" width="0.1524" layer="1"/>
 <wire x1="28.75728125" y1="5.6122" x2="29.01128125" y2="5.3582" width="0.1524" layer="1"/>
 <via x="29.01128125" y="5.3582" extent="1-16" drill="0.35"/>
-<wire x1="29.01128125" y1="5.3582" x2="28.36873125" y2="6.00075" width="0.1524" layer="16"/>
-<wire x1="28.36873125" y1="6.00075" x2="27.73575" y2="6.00075" width="0.1524" layer="16"/>
-<wire x1="27.73575" y1="6.00075" x2="27.069" y2="5.334" width="0.1524" layer="16"/>
+<wire x1="29.01128125" y1="5.3582" x2="28.750740625" y2="5.618740625" width="0.1524" layer="16"/>
+<wire x1="28.750740625" y1="5.618740625" x2="28.87875" y2="5.74675" width="0.1524" layer="16"/>
 </signal>
 <signal name="PT100_JUMP">
 <contactref element="C11" pad="2"/>
 <contactref element="R22" pad="2"/>
 <contactref element="J2" pad="1"/>
-<wire x1="26.543" y1="6.19125" x2="26.144" y2="5.79225" width="0.1524" layer="16"/>
-<wire x1="26.144" y1="5.79225" x2="26.144" y2="5.334" width="0.1524" layer="16"/>
-<wire x1="25.43605625" y1="5.306553125" x2="25.463503125" y2="5.334" width="0.1524" layer="16"/>
-<wire x1="25.463503125" y1="5.334" x2="26.144" y2="5.334" width="0.1524" layer="16"/>
+<wire x1="27.95375" y1="5.74675" x2="26.9875" y2="5.74675" width="0.1524" layer="16"/>
+<wire x1="26.543" y1="6.19125" x2="26.9875" y2="5.74675" width="0.1524" layer="16"/>
+<wire x1="25.43605625" y1="5.306553125" x2="25.876253125" y2="5.74675" width="0.1524" layer="16"/>
+<wire x1="25.876253125" y1="5.74675" x2="27.95375" y2="5.74675" width="0.1524" layer="16"/>
 </signal>
 <signal name="PT100_OUT">
 <contactref element="J2" pad="2"/>

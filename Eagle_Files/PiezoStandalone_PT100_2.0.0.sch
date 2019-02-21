@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.1">
+<eagle version="9.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="1.27" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -5370,6 +5370,9 @@ DIN A3, landscape with location and doc. field</description>
 <part name="C14" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="10uF"/>
 <part name="C15" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="3.3uF"/>
 <part name="RP1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="RESISTOR_NETWORK_X4" device="0804_L" package3d_urn="urn:adsk.eagle:package:9000147/3" value="1K"/>
+<part name="ADJ+" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP13SQ" package3d_urn="urn:adsk.eagle:package:27974/1"/>
+<part name="ADJ-" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP13SQ" package3d_urn="urn:adsk.eagle:package:27974/1"/>
+<part name="PZ+" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP13SQ" package3d_urn="urn:adsk.eagle:package:27974/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -5760,6 +5763,18 @@ DIN A3, landscape with location and doc. field</description>
 <attribute name="NAME" x="209.042" y="181.102" size="1.27" layer="95" ratio="10"/>
 <attribute name="VALUE" x="212.09" y="179.07" size="1.27" layer="96" ratio="10"/>
 </instance>
+<instance part="ADJ+" gate="G$1" x="326.39" y="208.28" smashed="yes">
+<attribute name="NAME" x="326.39" y="209.55" size="1.778" layer="95" rot="R90"/>
+<attribute name="TP_SIGNAL_NAME" x="327.66" y="207.01" size="1.778" layer="97"/>
+</instance>
+<instance part="ADJ-" gate="G$1" x="326.39" y="190.5" smashed="yes" rot="R180">
+<attribute name="NAME" x="326.39" y="189.23" size="1.778" layer="95" rot="R270"/>
+<attribute name="TP_SIGNAL_NAME" x="325.12" y="191.77" size="1.778" layer="97" rot="R180"/>
+</instance>
+<instance part="PZ+" gate="G$1" x="325.12" y="102.87" smashed="yes">
+<attribute name="NAME" x="325.12" y="104.14" size="1.778" layer="95" rot="R90"/>
+<attribute name="TP_SIGNAL_NAME" x="326.39" y="101.6" size="1.778" layer="97"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -6114,8 +6129,12 @@ DIN A3, landscape with location and doc. field</description>
 </segment>
 <segment>
 <pinref part="PZ1" gate="-2" pin="S"/>
-<wire x1="323.85" y1="97.79" x2="327.66" y2="97.79" width="0.1524" layer="91"/>
+<wire x1="323.85" y1="97.79" x2="325.12" y2="97.79" width="0.1524" layer="91"/>
 <label x="323.85" y="97.79" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="PZ+" gate="G$1" pin="TP"/>
+<wire x1="325.12" y1="97.79" x2="327.66" y2="97.79" width="0.1524" layer="91"/>
+<wire x1="325.12" y1="100.33" x2="325.12" y2="97.79" width="0.1524" layer="91"/>
+<junction x="325.12" y="97.79"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -6206,10 +6225,14 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="279.4" y1="207.01" x2="279.4" y2="233.68" width="0.1524" layer="91"/>
 <junction x="279.4" y="233.68"/>
 <pinref part="U3" gate="A" pin="-IN"/>
-<wire x1="330.2" y1="196.85" x2="314.96" y2="196.85" width="0.1524" layer="91"/>
+<wire x1="330.2" y1="196.85" x2="326.39" y2="196.85" width="0.1524" layer="91"/>
 <pinref part="U3" gate="C" pin="OUT"/>
+<wire x1="326.39" y1="196.85" x2="314.96" y2="196.85" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="207.01" x2="236.22" y2="207.01" width="0.1524" layer="91"/>
 <junction x="236.22" y="207.01"/>
+<pinref part="ADJ-" gate="G$1" pin="TP"/>
+<wire x1="326.39" y1="193.04" x2="326.39" y2="196.85" width="0.1524" layer="91"/>
+<junction x="326.39" y="196.85"/>
 </segment>
 </net>
 <net name="V_FOLLOW" class="0">
@@ -6240,14 +6263,18 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="318.77" y1="213.36" x2="309.88" y2="213.36" width="0.1524" layer="91"/>
 <pinref part="U3" gate="A" pin="+IN"/>
 <wire x1="309.88" y1="213.36" x2="306.07" y2="213.36" width="0.1524" layer="91"/>
-<wire x1="318.77" y1="201.93" x2="330.2" y2="201.93" width="0.1524" layer="91"/>
+<wire x1="318.77" y1="201.93" x2="326.39" y2="201.93" width="0.1524" layer="91"/>
 <label x="318.77" y="213.36" size="1.778" layer="95" rot="R90" xref="yes"/>
 <pinref part="C15" gate="G$1" pin="2"/>
+<wire x1="326.39" y1="201.93" x2="330.2" y2="201.93" width="0.1524" layer="91"/>
 <wire x1="306.07" y1="209.55" x2="306.07" y2="213.36" width="0.1524" layer="91"/>
 <junction x="306.07" y="213.36"/>
 <pinref part="C14" gate="G$1" pin="2"/>
 <wire x1="309.88" y1="209.55" x2="309.88" y2="213.36" width="0.1524" layer="91"/>
 <junction x="309.88" y="213.36"/>
+<pinref part="ADJ+" gate="G$1" pin="TP"/>
+<wire x1="326.39" y1="205.74" x2="326.39" y2="201.93" width="0.1524" layer="91"/>
+<junction x="326.39" y="201.93"/>
 </segment>
 <segment>
 <pinref part="U1" gate="A" pin="PC1_(ADC1/PCINT9)"/>
