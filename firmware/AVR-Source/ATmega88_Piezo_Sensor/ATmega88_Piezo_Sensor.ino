@@ -27,11 +27,11 @@
 
 
 // Set variables for working parameters
-const int TRG_OUT = 7;         // LED and Z-Min trigger output connected to digital pin 7
+const int TRG_OUT = 9;         // LED and Z-Min trigger output connected to digital pin 9
 //const int TRG_OUT = 13;      // For testing on Atmega328/2560, Output is moved to onboard LED pin
 //#define Z_TRG 0              // the piezo is connected to INT0 / digital pin 2
 const byte Z_TRG = 2;          // the piezo is connected to INT0 / digital pin 2
-int ERR_LED = 4;               // LED will blink if optimal voltage range cannot be achieved
+int ERR_LED = 3;               // LED will blink if optimal voltage range cannot be achieved
 int InitCount = 6;             // Number of times to blink the LED on start
 int V_FOLLOW_PIN = A0;             // Sense pin to check first amp stage voltage output
 int VADJ_SENSE_PIN = A1;           // Sense pin to check comparator stage voltage
