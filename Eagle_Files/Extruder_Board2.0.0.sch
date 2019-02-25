@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1.27" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.127" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -6571,9 +6571,9 @@ DIN A3, landscape with location and doc. field</description>
 </net>
 <net name="Z_MIN_TRIG" class="0">
 <segment>
-<wire x1="355.6" y1="78.74" x2="370.84" y2="78.74" width="0.1524" layer="91"/>
-<label x="370.84" y="78.74" size="1.778" layer="95" rot="R180"/>
-<pinref part="J2" gate="G$1" pin="56"/>
+<label x="358.14" y="116.84" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="41"/>
+<wire x1="373.38" y1="116.84" x2="355.6" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R6" gate="G$1" pin="1"/>
@@ -7358,6 +7358,66 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="265.43" y1="41.91" x2="266.7" y2="41.91" width="0.1524" layer="91"/>
 <wire x1="265.43" y1="36.83" x2="265.43" y2="41.91" width="0.1524" layer="91"/>
 <junction x="265.43" y="41.91"/>
+</segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="39"/>
+<wire x1="355.6" y1="121.92" x2="370.84" y2="121.92" width="0.1524" layer="91"/>
+<label x="358.14" y="121.92" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="X_1B" class="0">
+<segment>
+<pinref part="J2" gate="G$1" pin="56"/>
+<wire x1="355.6" y1="78.74" x2="358.14" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="358.14" y1="78.74" x2="358.14" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="J2" gate="G$1" pin="55"/>
+<wire x1="358.14" y1="81.28" x2="355.6" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="358.14" y1="81.28" x2="370.84" y2="81.28" width="0.1524" layer="91"/>
+<junction x="358.14" y="81.28"/>
+<label x="365.76" y="81.28" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="X_1A" class="0">
+<segment>
+<pinref part="J2" gate="G$1" pin="53"/>
+<wire x1="355.6" y1="86.36" x2="358.14" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="J2" gate="G$1" pin="54"/>
+<wire x1="358.14" y1="86.36" x2="370.84" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="355.6" y1="83.82" x2="358.14" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="358.14" y1="83.82" x2="358.14" y2="86.36" width="0.1524" layer="91"/>
+<junction x="358.14" y="86.36"/>
+<label x="365.76" y="86.36" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="X_2A" class="0">
+<segment>
+<pinref part="J2" gate="G$1" pin="51"/>
+<wire x1="355.6" y1="91.44" x2="358.14" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="J2" gate="G$1" pin="52"/>
+<wire x1="358.14" y1="91.44" x2="370.84" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="355.6" y1="88.9" x2="358.14" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="358.14" y1="88.9" x2="358.14" y2="91.44" width="0.1524" layer="91"/>
+<junction x="358.14" y="91.44"/>
+<label x="365.76" y="91.44" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="X_2B" class="0">
+<segment>
+<pinref part="J2" gate="G$1" pin="49"/>
+<wire x1="355.6" y1="96.52" x2="358.14" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="J2" gate="G$1" pin="50"/>
+<wire x1="358.14" y1="96.52" x2="370.84" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="355.6" y1="93.98" x2="358.14" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="358.14" y1="93.98" x2="358.14" y2="96.52" width="0.1524" layer="91"/>
+<junction x="358.14" y="96.52"/>
+<label x="365.76" y="96.52" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="X_MIN_TRIG" class="0">
+<segment>
+<pinref part="J2" gate="G$1" pin="40"/>
+<wire x1="355.6" y1="119.38" x2="373.38" y2="119.38" width="0.1524" layer="91"/>
+<label x="358.14" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
