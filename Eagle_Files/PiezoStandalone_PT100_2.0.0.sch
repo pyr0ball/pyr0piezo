@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.1">
+<eagle version="9.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -5761,7 +5761,7 @@ DIN A3, landscape with location and doc. field</description>
 <attribute name="NAME" x="330.2" y="116.078" size="1.524" layer="95"/>
 </instance>
 <instance part="J2" gate="G$1" x="262.89" y="44.45" smashed="yes">
-<attribute name="NAME" x="259.08" y="45.72" size="1.27" layer="95" ratio="10"/>
+<attribute name="NAME" x="261.62" y="45.72" size="1.27" layer="95" ratio="10"/>
 <attribute name="VALUE" x="259.08" y="41.91" size="1.27" layer="96" ratio="10"/>
 </instance>
 <instance part="SUPPLY13" gate="GND" x="323.85" y="86.36" smashed="yes">
