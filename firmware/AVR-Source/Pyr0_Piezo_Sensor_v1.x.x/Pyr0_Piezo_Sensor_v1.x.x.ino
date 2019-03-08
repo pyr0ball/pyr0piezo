@@ -35,10 +35,10 @@ int ERR_LED = 3;               // LED will blink if optimal voltage range cannot
 int InitCount = 6;             // Number of times to blink the LED on start
 int V_FOLLOW_PIN = A0;             // Sense pin to check first amp stage voltage output
 int VADJ_SENSE_PIN = A1;           // Sense pin to check comparator stage voltage
-int TRG_DUR = 120;             // duration of the Z-axis pulse sent, in ms
+int TRG_DUR = 40;             // duration of the Z-axis pulse sent, in ms
 int Vin = 5;                   // input reference voltage
-float senseHighThrs = 2.35;    // Upper threshold voltage of amp circuit before adjustment
-float senseLowThrs = 1.8;     // Lower threshold voltage of amp circuit before adjustment
+float senseHighThrs = 1.9;    // Upper threshold voltage of amp circuit before adjustment
+float senseLowThrs = 0;     // Lower threshold voltage of amp circuit before adjustment
 const int VADJ_R0 = 20;        // Auto-adjust ladder pin assignments
 const int VADJ_R1 = 21;
 const int VADJ_R2 = 5;
@@ -83,6 +83,7 @@ void setup() {
 void pulse() {
   digitalWrite(TRG_OUT, LOW);
   sensorHReading = 1;
+  delay(TRG_DUR + 30);
 }
 
 void adjustState() {
