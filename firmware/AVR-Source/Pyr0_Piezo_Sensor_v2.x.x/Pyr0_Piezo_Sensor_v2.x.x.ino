@@ -127,10 +127,10 @@ void adjustFollow() {
    if positive, adjusts the follower to within
    the range set above*/
   if (diffAdjL > 0.0) {
-    ADJ_FOLLOW + (diffAdjL / 4);
+    ADJ_FOLLOW =+ (diffAdjL / 4);
   }
   if (diffAdjH > 0.0) {
-    ADJ_FOLLOW - (diffAdjH / 4);
+    ADJ_FOLLOW =- (diffAdjH / 4);
   }
 
   // Analog output (PWM) of duty cycle
@@ -145,11 +145,11 @@ void adjustFollow() {
 
 void adjustComp() {
   if (diffCompL > 0.0) {
-    ADJ_COMP + (diffCompL / 4);
+    ADJ_COMP =+ (diffCompL / 4);
   }
   
   if (diffCompH > 0.0) {
-    ADJ_COMP - (diffCompH / 4);
+    ADJ_COMP =- (diffCompH / 4);
   }
 
   analogWrite(VCOMP_PWM, ADJ_COMP);
