@@ -383,9 +383,13 @@ void loop() {
     Serial.print("PZ Status:");
     Serial.println(sensorHReading);
     Serial.print("Voltage Reference:");
-    Serial.println(VCompRef);
+    Serial.print(VComp);
+    Serial.print(" ");
+    Serial.println(VCompRef,2);
     Serial.print("Amp Sense:");
-    Serial.println(vAdjRead);
+    Serial.print(VAdj);
+    Serial.print(" ");
+    Serial.println(vAdjRead,2);
     Serial.print("Comparator State:");
     Serial.println(ADJ_COMP);
     Serial.print("Follower State:");
