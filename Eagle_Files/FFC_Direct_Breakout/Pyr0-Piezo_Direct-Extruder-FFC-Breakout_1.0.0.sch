@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.0">
+<eagle version="9.3.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -270,7 +270,7 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="-8" y1="1.5" x2="-7" y2="1.5" width="0.127" layer="21"/>
 <text x="-3.2766" y="2.1336" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
 </package>
-<package name="SOT230P700X180-4N" urn="urn:adsk.eagle:footprint:7346245/1" library_version="66">
+<package name="SOT230P700X180-4N" urn="urn:adsk.eagle:footprint:7346245/2" library_version="90">
 <wire x1="-1.8542" y1="1.8796" x2="-1.8542" y2="2.7432" width="0.1524" layer="51"/>
 <wire x1="-1.8542" y1="2.7432" x2="-3.6576" y2="2.7432" width="0.1524" layer="51"/>
 <wire x1="-3.6576" y1="2.7432" x2="-3.6576" y2="1.8796" width="0.1524" layer="51"/>
@@ -297,10 +297,10 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="-1.8542" y1="3.3528" x2="-1.8542" y2="-3.3528" width="0.1524" layer="21"/>
 <text x="-4.81133125" y="3.56395" size="2.087459375" layer="25" ratio="10" rot="SR0">&gt;NAME</text>
 <text x="-5.74073125" y="-5.89381875" size="2.09216875" layer="27" ratio="10" rot="SR0">&gt;VALUE</text>
-<smd name="1" x="-3.2004" y="2.3114" dx="1.6256" dy="0.889" layer="1"/>
-<smd name="2" x="-3.2004" y="0" dx="1.6256" dy="0.889" layer="1"/>
-<smd name="3" x="-3.2004" y="-2.3114" dx="1.6256" dy="0.889" layer="1"/>
-<smd name="4" x="3.2004" y="0" dx="1.6256" dy="3.175" layer="1"/>
+<smd name="1" x="-3.2004" y="2.3114" dx="1.6256" dy="0.889" layer="1" roundness="20"/>
+<smd name="2" x="-3.2004" y="0" dx="1.6256" dy="0.889" layer="1" roundness="20"/>
+<smd name="3" x="-3.2004" y="-2.3114" dx="1.6256" dy="0.889" layer="1" roundness="20"/>
+<smd name="4" x="3.2004" y="0" dx="1.6256" dy="3.175" layer="1" roundness="25"/>
 </package>
 <package name="SEEED-SWITCH_SW6-2.54-9.0X3.5X3.2+2.0MM" urn="urn:adsk.eagle:footprint:5224473/2" library_version="66">
 <wire x1="-4.55" y1="-1.75" x2="-4.55" y2="1.75" width="0.127" layer="21"/>
@@ -1662,7 +1662,7 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <rectangle x1="-0.4" y1="0.175" x2="0" y2="0.4" layer="51"/>
 <rectangle x1="-0.25" y1="0.175" x2="0" y2="0.4" layer="21"/>
 </package>
-<package name="SOT89" urn="urn:adsk.eagle:footprint:6899240/4" library_version="66">
+<package name="SOT89" urn="urn:adsk.eagle:footprint:6899240/5" library_version="90">
 <wire x1="2.235" y1="-1.245" x2="-2.235" y2="-1.245" width="0.127" layer="51"/>
 <wire x1="2.235" y1="1.219" x2="2.235" y2="-1.245" width="0.127" layer="51"/>
 <wire x1="-2.235" y1="-1.245" x2="-2.235" y2="1.219" width="0.127" layer="51"/>
@@ -1678,7 +1678,6 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <rectangle x1="-1.727390625" y1="-2.10843125" x2="-1.27" y2="-1.27" layer="51"/>
 <rectangle x1="1.270140625" y1="-2.108440625" x2="1.7272" y2="-1.27" layer="51"/>
 <rectangle x1="-0.27983125" y1="-2.111440625" x2="0.2794" y2="-1.27" layer="51"/>
-<rectangle x1="-0.5" y1="-2.8" x2="0.5" y2="-1.2" layer="29"/>
 <polygon width="0.1998" layer="51">
 <vertex x="-0.7874" y="1.3208"/>
 <vertex x="-0.7874" y="1.5748"/>
@@ -1689,9 +1688,9 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <vertex x="0.7874" y="1.2954"/>
 <vertex x="-0.7874" y="1.2954"/>
 </polygon>
-<smd name="1" x="-1.499" y="-1.981" dx="0.8" dy="1.4" layer="1"/>
-<smd name="3" x="1.499" y="-1.981" dx="0.8" dy="1.4" layer="1"/>
-<smd name="2" x="0" y="-1.727" dx="0.8" dy="1.9" layer="1" stop="no" cream="no"/>
+<smd name="1" x="-1.499" y="-1.981" dx="0.8" dy="1.4" layer="1" roundness="40"/>
+<smd name="3" x="1.499" y="-1.981" dx="0.8" dy="1.4" layer="1" roundness="40"/>
+<smd name="2" x="0" y="-1.727" dx="0.8" dy="1.9" layer="1" roundness="40"/>
 <smd name="PAD" x="0" y="0.94" dx="2.032" dy="3.65" layer="1" roundness="75"/>
 </package>
 <package name="TO92" urn="urn:adsk.eagle:footprint:28459/1" library_version="29" library_locally_modified="yes">
@@ -1715,7 +1714,7 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <text x="-2.159" y="0" size="1.27" layer="51" ratio="10">3</text>
 <text x="1.143" y="0" size="1.27" layer="51" ratio="10">1</text>
 </package>
-<package name="R0805" urn="urn:adsk.eagle:footprint:8443790/1" library_version="66">
+<package name="R0805" urn="urn:adsk.eagle:footprint:8443790/2" library_version="90">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
 chip</description>
 <wire x1="-0.41" y1="0.635" x2="0.41" y2="0.635" width="0.1524" layer="51"/>
@@ -1723,8 +1722,8 @@ chip</description>
 <rectangle x1="0.4064" y1="-0.6985" x2="1.0564" y2="0.7015" layer="51"/>
 <rectangle x1="-1.0668" y1="-0.6985" x2="-0.4168" y2="0.7015" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.5001" x2="0.1999" y2="0.5001" layer="35"/>
-<smd name="1" x="-0.85" y="0" dx="1" dy="1.5" layer="1"/>
-<smd name="2" x="0.85" y="0" dx="1" dy="1.5" layer="1"/>
+<smd name="1" x="-0.85" y="0" dx="1" dy="1.5" layer="1" roundness="20"/>
+<smd name="2" x="0.85" y="0" dx="1" dy="1.5" layer="1" roundness="20"/>
 <text x="-1.387" y="1.016" size="0.8128" layer="25" font="vector" ratio="11">&gt;NAME</text>
 <text x="-1.387" y="-1.036" size="0.8128" layer="27" font="vector" ratio="11" align="top-left">&gt;VALUE</text>
 </package>
@@ -2394,7 +2393,7 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <packageinstance name="SML0603"/>
 </packageinstances>
 </package3d>
-<package3d name="SOT89" urn="urn:adsk.eagle:package:6899241/5" type="model" library_version="66">
+<package3d name="SOT89" urn="urn:adsk.eagle:package:6899241/6" type="model" library_version="90">
 <packageinstances>
 <packageinstance name="SOT89"/>
 </packageinstances>
@@ -2405,7 +2404,7 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <packageinstance name="TO92"/>
 </packageinstances>
 </package3d>
-<package3d name="R0805" urn="urn:adsk.eagle:package:8443791/2" type="model" library_version="66">
+<package3d name="R0805" urn="urn:adsk.eagle:package:8443791/3" type="model" library_version="90">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
 chip</description>
 <packageinstances>
@@ -2493,7 +2492,7 @@ Metric Code Size 1608</description>
 <packageinstance name="HOLES_5,5-PAD"/>
 </packageinstances>
 </package3d>
-<package3d name="SOT230P700X180-4N" urn="urn:adsk.eagle:package:7346255/2" type="model" library_version="66">
+<package3d name="SOT230P700X180-4N" urn="urn:adsk.eagle:package:7346255/3" type="model" library_version="90">
 <packageinstances>
 <packageinstance name="SOT230P700X180-4N"/>
 </packageinstances>
@@ -2534,13 +2533,6 @@ Metric Code Size 1608</description>
 <packageinstance name="15-91-02"/>
 </packageinstances>
 </package3d>
-<package3d name="R0805" urn="urn:adsk.eagle:package:8443792/1" type="model" library_version="66">
-<description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
-chip</description>
-<packageinstances>
-<packageinstance name="R0805"/>
-</packageinstances>
-</package3d>
 <package3d name="CAPPRD254W65D650H1250B" urn="urn:adsk.eagle:package:8452255/4" type="model" library_version="66">
 <description>Radial Polarized Capacitor, 2.54 mm pitch, 6.50 mm body diameter, 12.50 mm body height
 &lt;p&gt;Radial Polarized Capacitor package with 2.54 mm pitch, 0.65 mm lead diameter, 6.50 mm body diameter and 12.50 mm body height&lt;/p&gt;</description>
@@ -2563,6 +2555,13 @@ chip</description>
 <package3d name="ALU-C-D5.3MM_RIGHT" urn="urn:adsk.eagle:package:8885515/3" type="model" library_version="69">
 <packageinstances>
 <packageinstance name="ALU-C-D5.3MM_RIGHT"/>
+</packageinstances>
+</package3d>
+<package3d name="R0805" urn="urn:adsk.eagle:package:8443792/2" type="model" library_version="90">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
+chip</description>
+<packageinstances>
+<packageinstance name="R0805"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -2910,7 +2909,7 @@ chip</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="LM317DCY" urn="urn:adsk.eagle:component:7346265/2" prefix="U" library_version="66">
+<deviceset name="LM317DCY" urn="urn:adsk.eagle:component:7346265/3" prefix="U" library_version="90">
 <description>IC ADJ LINEAR REG 1.25V TO 37V</description>
 <gates>
 <gate name="A" symbol="LM317DCY" x="0" y="0"/>
@@ -2924,7 +2923,7 @@ chip</description>
 <connect gate="A" pin="OUTPUT_2" pad="2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:7346255/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:7346255/3"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -3685,7 +3684,7 @@ Source: www.kingbright.com</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="L78L05ACU" urn="urn:adsk.eagle:component:6899243/4" library_version="66">
+<deviceset name="L78L05ACU" urn="urn:adsk.eagle:component:6899243/5" library_version="90">
 <description>5V Positive voltage regulator SMD SOT89 Package</description>
 <gates>
 <gate name="G$1" symbol="L78L05ACU" x="0" y="0"/>
@@ -3699,7 +3698,7 @@ Source: www.kingbright.com</description>
 <connect gate="G$1" pin="PAD" pad="PAD"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:6899241/5"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:6899241/6"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -3714,7 +3713,7 @@ Source: www.kingbright.com</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SMD-RES-2K-5%-1/8W(0805)" urn="urn:adsk.eagle:component:7346274/3" prefix="R" uservalue="yes" library_version="66">
+<deviceset name="SMD-RES-2K-5%-1/8W(0805)" urn="urn:adsk.eagle:component:7346274/4" prefix="R" uservalue="yes" library_version="90">
 <description>301010318</description>
 <gates>
 <gate name="G$1" symbol="RES-1" x="0" y="0"/>
@@ -3726,7 +3725,7 @@ Source: www.kingbright.com</description>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8443791/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8443791/3"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -3737,7 +3736,7 @@ Source: www.kingbright.com</description>
 </device>
 <device name="R0805" package="R0805">
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8443792/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8443792/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -4066,7 +4065,7 @@ Source: www.kingbright.com</description>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="A3L-LOC" device=""/>
 <part name="J1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SFW24R-1STE1LF" device="" package3d_urn="urn:adsk.eagle:package:6899317/2"/>
 <part name="AGND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
-<part name="U1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="LM317DCY" device="" package3d_urn="urn:adsk.eagle:package:7346255/2"/>
+<part name="U1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="LM317DCY" device="" package3d_urn="urn:adsk.eagle:package:7346255/3"/>
 <part name="SW1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-SWITCH_DIP-TOGGLE-SWITCH-2CH-(2X3P-2.54)" device="DPDT_254_6P_UPDATE" package3d_urn="urn:adsk.eagle:package:5224531/4"/>
 <part name="E0" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="C-GRID-04" device="-70553" package3d_urn="urn:adsk.eagle:package:6902618/2"/>
 <part name="Z_MIN" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="C-GRID-02" device="-70553" package3d_urn="urn:adsk.eagle:package:7346257/2"/>
@@ -4083,11 +4082,11 @@ Source: www.kingbright.com</description>
 <part name="R4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-RESISTOR_SMD-RES-1.5K-1%-1/10W(0603)" device="DETAILED_MODEL" package3d_urn="urn:adsk.eagle:package:5224535/3" value="1K"/>
 <part name="5V" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="LED" device="CHIP-LED0805" package3d_urn="urn:adsk.eagle:package:15818/2"/>
 <part name="12V" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="LED" device="CHIP-LED0805" package3d_urn="urn:adsk.eagle:package:15818/2"/>
-<part name="U2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="L78L05ACU" device="" package3d_urn="urn:adsk.eagle:package:6899241/5"/>
+<part name="U2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="L78L05ACU" device="" package3d_urn="urn:adsk.eagle:package:6899241/6"/>
 <part name="AGND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
 <part name="Q2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="2N2907" device="" package3d_urn="urn:adsk.eagle:package:28523/2"/>
-<part name="R6" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-2K-5%-1/8W(0805)" device="" package3d_urn="urn:adsk.eagle:package:8443791/2" value="1R"/>
-<part name="R7" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-2K-5%-1/8W(0805)" device="" package3d_urn="urn:adsk.eagle:package:8443791/2" value="10R"/>
+<part name="R6" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-2K-5%-1/8W(0805)" device="" package3d_urn="urn:adsk.eagle:package:8443791/3" value="2K"/>
+<part name="R7" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-2K-5%-1/8W(0805)" device="" package3d_urn="urn:adsk.eagle:package:8443791/3" value="2K"/>
 <part name="C2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="DIP-ALUMINUM-100UF-16V(D5-H7MM)" device="LEFT" package3d_urn="urn:adsk.eagle:package:8885168/4" value="100uf"/>
 <part name="C3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="DIP-ALUMINUM-100UF-16V(D5-H7MM)" device="RIGHT" package3d_urn="urn:adsk.eagle:package:8885515/3" value="100uf"/>
 <part name="C4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="DIP-ALUMINUM-100UF-16V(D5-H7MM)" device="LEFT" package3d_urn="urn:adsk.eagle:package:8885168/4" value="100uf"/>
@@ -4098,7 +4097,7 @@ Source: www.kingbright.com</description>
 <part name="H2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="HOLES_MOUNT-PAD-ROUND" device="3.2" package3d_urn="urn:adsk.eagle:package:5224590/2"/>
 <part name="H3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="HOLES_MOUNT-PAD-ROUND" device="3.2" package3d_urn="urn:adsk.eagle:package:5224590/2"/>
 <part name="H4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="HOLES_MOUNT-PAD-ROUND" device="3.2" package3d_urn="urn:adsk.eagle:package:5224590/2"/>
-<part name="F1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-2K-5%-1/8W(0805)" device="" package3d_urn="urn:adsk.eagle:package:8443791/2" value="500mA"/>
+<part name="F1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-2K-5%-1/8W(0805)" device="" package3d_urn="urn:adsk.eagle:package:8443791/3" value="2K"/>
 </parts>
 <sheets>
 <sheet>
