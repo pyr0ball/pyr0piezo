@@ -29,6 +29,33 @@
   This code is in the public domain.
 */
 
+/* To set the below parameters using serial input, use the following:
+
+To change trigger active duration: TRG_D [integer for milliseconds]
+To change gain factor: GAIN_F [integer for gain state - see note*]
+To change sensor input pullup vRef high threshold: VADJH [float value]
+To change sensor input pullup vRef low threshold: VADJL [float value]
+To change comparator trigger high threshold: VCOMPH [float value]
+To change comparator trigger high threshold: VCOMPL [float value]
+
+These commands should be wrapped in this format: 
+<CMD, INT, FLOAT>
+
+You must include the unused variable for each instance. 
+
+Examples:
+<GAIN_F, 3, 0.00>
+<VADJH, 0, 2.35>
+
+*Note for Gain Factor:
+The gain STATE is representative of these values:
+0 = 3x
+1 = 3.5x
+2 = 4.33x
+3 = 6x
+4 = 11x
+*/
+ 
 // Set variables for working parameters
 int GAIN_FACTOR = 2;           // Gain adjustment factor. 0=2x, 1=2.5x, 2=3.33x, 3=5x, 4=10x
 int InitCount = 6;             // Number of times to blink the LED on start
@@ -86,9 +113,16 @@ int BlinkState = LOW;
 int BlinkCount = InitCount * 2;           // Multiply Blink count by 2 to handle toggle state
 
 // Serial Input Parsing Variables
-String readString, substring;
-int loc; 
-
+const byte buffSize = 40;
+char inputBuffer[buffSize];
+const char startMarker = '<';
+const char endMarker = '>';
+byte bytesRecvd = 0;
+bool readInProgress = false;
+bool serialIncoming = false;
+char serialMessageIn[buffSize] = {0};
+int serialInt = 0;
+float serialFloat = 0.00;
 
 void setup() {
   pinMode(TRG_OUT, OUTPUT); // declare the Trigger as as OUTPUT
@@ -127,36 +161,28 @@ void adjustFollow() {
    if positive, adjusts the follower to within
    the range set above*/
   if (diffAdjL > 0.0) {
-    ADJ_FOLLOW =+ (diffAdjL / 4);
+	ADJ_FOLLOW =+ (diffAdjL / 4);
   }
   if (diffAdjH > 0.0) {
-    ADJ_FOLLOW =- (diffAdjH / 4);
+	ADJ_FOLLOW =- (diffAdjH / 4);
   }
 
   // Analog output (PWM) of duty cycle
   analogWrite(V_FOL_PWM, ADJ_FOLLOW);
-  
-  Serial.print("Follower State:");
-  Serial.println(ADJ_FOLLOW);
-  Serial.println("--------------------");
 }
 
 /*------------------------------------------------*/
 
 void adjustComp() {
   if (diffCompL > 0.0) {
-    ADJ_COMP =+ (diffCompL / 4);
+	ADJ_COMP =+ (diffCompL / 4);
   }
   
   if (diffCompH > 0.0) {
-    ADJ_COMP =- (diffCompH / 4);
+	ADJ_COMP =- (diffCompH / 4);
   }
 
   analogWrite(VCOMP_PWM, ADJ_COMP);
-  
-  Serial.print("Comparator State:");
-  Serial.println(ADJ_COMP);
-  Serial.println("--------------------");
 }
 
 /*------------------------------------------------*/
@@ -164,43 +190,43 @@ void adjustComp() {
 void adjustGain() {
 
   if  (GAIN_FACTOR < 0) {
-    ERR_STATE = 1;
+	ERR_STATE = 1;
   }
   if (GAIN_FACTOR == 0) {
-    pinMode(GADJ_R3, INPUT);
-    pinMode(GADJ_R2, INPUT);
-    pinMode(GADJ_R1, INPUT);
-    pinMode(GADJ_R0, INPUT);
-    ERR_STATE = 0;
+	pinMode(GADJ_R3, INPUT);
+	pinMode(GADJ_R2, INPUT);
+	pinMode(GADJ_R1, INPUT);
+	pinMode(GADJ_R0, INPUT);
+	ERR_STATE = 0;
   }
   if (GAIN_FACTOR > 0) {
-    pinMode(GADJ_R3, OUTPUT);
-    digitalWrite(GADJ_R3, LOW);
-    pinMode(GADJ_R2, INPUT);
-    pinMode(GADJ_R1, INPUT);
-    pinMode(GADJ_R0, INPUT);
-    ERR_STATE = 0;
+	pinMode(GADJ_R3, OUTPUT);
+	digitalWrite(GADJ_R3, LOW);
+	pinMode(GADJ_R2, INPUT);
+	pinMode(GADJ_R1, INPUT);
+	pinMode(GADJ_R0, INPUT);
+	ERR_STATE = 0;
   }
   if (GAIN_FACTOR > 1) {
-    pinMode(GADJ_R2, OUTPUT);
-    digitalWrite(GADJ_R2, LOW);
-    pinMode(GADJ_R1, INPUT);
-    pinMode(GADJ_R0, INPUT);
-    ERR_STATE = 0;
+	pinMode(GADJ_R2, OUTPUT);
+	digitalWrite(GADJ_R2, LOW);
+	pinMode(GADJ_R1, INPUT);
+	pinMode(GADJ_R0, INPUT);
+	ERR_STATE = 0;
   }
   if (GAIN_FACTOR > 2) {
-    pinMode(GADJ_R1, OUTPUT);
-    digitalWrite(GADJ_R1, LOW);
-    pinMode(GADJ_R0, INPUT);
-    ERR_STATE = 0;
+	pinMode(GADJ_R1, OUTPUT);
+	digitalWrite(GADJ_R1, LOW);
+	pinMode(GADJ_R0, INPUT);
+	ERR_STATE = 0;
   }
   if (GAIN_FACTOR > 3) {
-    pinMode(GADJ_R0, OUTPUT);
-    digitalWrite(GADJ_R0, LOW);
-    ERR_STATE = 0;
+	pinMode(GADJ_R0, OUTPUT);
+	digitalWrite(GADJ_R0, LOW);
+	ERR_STATE = 0;
   }
   if  (GAIN_FACTOR > 4) {
-    ERR_STATE = 1;
+	ERR_STATE = 1;
   }
 }
 
@@ -208,12 +234,12 @@ void adjustGain() {
 
 void checkError () {
   if (ERR_STATE == 1) {
-    digitalWrite(ERR_LED, BlinkState);
-    BlinkState = !BlinkState;
+	digitalWrite(ERR_LED, BlinkState);
+	BlinkState = !BlinkState;
   }
   if (ERR_STATE == 0) {
-    BlinkState = LOW;
-    digitalWrite(ERR_LED, BlinkState);
+	BlinkState = LOW;
+	digitalWrite(ERR_LED, BlinkState);
   }
 }
 
@@ -221,139 +247,169 @@ void checkError () {
 
 void serialInput() {
 
-  //expect a string like VFOLH2.35 VFOLL1.80 VCOMPH2.75 VCOMPL2.54 GFACT2
+	// receive data from Serial and save it into inputBuffer
+	
+  if(Serial.available() > 0) {
 
-  if (Serial.available())  {
-    char c = Serial.read();  //gets one byte from serial buffer
-    if (c == '\n') {  //looks for end of data packet marker
-    //if (c == ',') {
-      Serial.println(readString); //prints string to serial port out
+	char x = Serial.read();
 
-
-      //Analyze each input
-      loc = readString.indexOf("VFOLH");
-      //Serial.println(loc);
-      if (loc != -1) {  
-        substring = readString.substring(loc+5, loc+9);
-		if (isFloat(substring)) {
-		  char carray[substring.length() + 1]; // determine size of the array
-		  substring.toCharArray(carray, sizeof(carray)); // puts substring into an array
-		  senseHighThrs = atof(carray);
-		}
-        Serial.print("VFollowHigh: ");
-        Serial.println(substring);
-      } else {
-        Serial.print("VFollowHigh: ");
-        Serial.println("NA");
-      }      
-
-
-      loc = readString.indexOf("VFOLL");
-      //Serial.println(loc);
-      if (loc != -1) {  
-        substring = readString.substring(loc+5, loc+9);
-		if (isFloat(substring)) {
-		  char carray[substring.length() + 1]; // determine size of the array
-		  substring.toCharArray(carray, sizeof(carray)); // puts substring into an array	
-		  senseLowThrs = atof(carray);
-		}
-        Serial.print("VFollowLow: ");
-        Serial.println(substring);
-      } else {
-        Serial.print("VFollowLow: ");
-        Serial.println("NA");
-      }        
-      
-      loc = readString.indexOf("VCOMPH");
-      //Serial.println(loc);
-      if (loc != -1) {  
-        substring = readString.substring(loc+6, loc+10);
-		if (isFloat(substring)) {
-		  char carray[substring.length() + 1]; // determine size of the array
-		  substring.toCharArray(carray, sizeof(carray)); // puts substring into an array
-		  compHighThrs = atof(carray);
-		}
-        Serial.print("VCompHigh: ");
-        Serial.println(substring);
-      } else {
-        Serial.print("VCompHigh: ");
-        Serial.println("NA");
-      } 
+	  // the order of these IF clauses is significant
 	  
-      loc = readString.indexOf("VCOMPL");
-      //Serial.println(loc);
-      if (loc != -1) {  
-        substring = readString.substring(loc+6, loc+10);
-		if (isFloat(substring)) {
-		  char carray[substring.length() + 1]; // determine size of the array
-		  substring.toCharArray(carray, sizeof(carray)); // puts substring into an array
-		  compLowThrs = atof(carray);
-		}
-        Serial.print("VCompLow: ");
-        Serial.println(substring);
-      } else {
-        Serial.print("VCompLow: ");
-        Serial.println("NA");
-      } 
-	  
-	  loc = readString.indexOf("GFACT");
-      //Serial.println(loc);
-      if (loc != -1) {  
-        substring = readString.substring(loc+5, loc+9);
-		char carray[substring.length() + 1]; // determine size of the array
-		substring.toCharArray(carray, sizeof(carray)); // puts substring into an array
-		GAIN_FACTOR = atof(carray);
-        Serial.print("GainFactor: ");
-        Serial.println(substring);
-      } else {
-        Serial.print("GainFactor: ");
-        Serial.println("NA");
-      } 
-        
-      readString=""; //clears variable for new input
-      substring=""; 
+	if (x == endMarker) {
+	  readInProgress = false;
+	  serialIncoming = true;
+	  inputBuffer[bytesRecvd] = 0;
+	  parseData();
+	}
+	
+	if(readInProgress) {
+	  inputBuffer[bytesRecvd] = x;
+	  bytesRecvd ++;
+	  if (bytesRecvd == buffSize) {
+		bytesRecvd = buffSize - 1;
+	  }
+	}
 
-    }  
-    else {     
-      readString += c; //makes the string readString
-    }        
+	if (x == startMarker) { 
+	  bytesRecvd = 0; 
+	  readInProgress = true;
+	}
   }
-  
 }
 
-// Routine for checking if string is a valid number
-boolean isFloat(String tString) {
-  String tBuf;
-  boolean decPt = false;
-  
-  if(tString.charAt(0) == '+' || tString.charAt(0) == '-') tBuf = &tString[1];
-  else tBuf = tString;  
+/*------------------------------------------------*/
 
-  for(int x=0;x<tBuf.length();x++)
-  {
-    if(tBuf.charAt(x) == '.') {
-      if(decPt) return false;
-      else decPt = true;  
-    }    
-    else if(tBuf.charAt(x) < '0' || tBuf.charAt(x) > '9') return false;
-  }
-  return true;
+void parseData() {
+
+	// split the data into its parts
+	
+  char * strtokIndx; // this is used by strtok() as an index
+  
+  strtokIndx = strtok(inputBuffer,",");      // get the first part - the string
+  strcpy(serialMessageIn, strtokIndx); // copy it to serialMessageIn
+  
+  strtokIndx = strtok(NULL, ",");   // this continues where the previous call left off
+  serialInt = atoi(strtokIndx);     // convert this part to an integer
+   
+  strtokIndx = strtok(NULL, ","); 
+  serialFloat = atof(strtokIndx);     // convert this part to a float
+
 }
 
+/*------------------------------------------------*/
+
+void updateParams() {
+	if (strcmp(serialMessageIn, "TRG_D") == 0) {
+		updateTrigDuration();
+	}
+	if (strcmp(serialMessageIn, "GAIN_F") == 0) {
+		updateGainFactor();
+	}
+	if (strcmp(serialMessageIn, "VCOMPH") == 0) {
+		updateVCompH();
+	}
+	if (strcmp(serialMessageIn, "VCOMPL") == 0) {
+		updateVCompL();
+	}
+	if (strcmp(serialMessageIn, "VADJH") == 0) {
+		updateVAdjH();
+	}
+	if (strcmp(serialMessageIn, "VADJL") == 0) {
+		updateVAdjL();
+	}
+}
+/*------------------------------------------------*/
+
+void updateTrigDuration() {
+	if (serialInt >= 0) {
+		TRG_DUR = serialInt;
+	}
+}
+/*------------------------------------------------*/
+
+void updateGainFactor() {
+	if (serialInt >= 0) {
+		GAIN_FACTOR = serialInt;
+	}
+}
+/*------------------------------------------------*/
+
+void updateVCompH() {
+	if (serialInt >= 0) {
+		compHighThrs = ((float)serialFloat);
+	}
+}
+/*------------------------------------------------*/
+
+void updateVCompL() {
+	if (serialInt >= 0) {
+		compLowThrs = ((float)serialFloat);
+	}
+}
+/*------------------------------------------------*/
+
+void updateVAdjH() {
+	if (serialInt >= 0) {
+		senseHighThrs = ((float)serialFloat);
+	}
+}
+/*------------------------------------------------*/
+
+void updateVAdjL() {
+	if (serialInt >= 0) {
+		senseLowThrs = ((float)serialFloat);
+	}
+}
+/*------------------------------------------------*/
+
+  // Checks state of the interrupt trigger, prints status, then sets output pin low
+void serialReply() {
+  if (serialIncoming) {
+	serialIncoming = false;
+	Serial.print("PZ Status:");
+	Serial.println(sensorHReading);
+	Serial.print("Voltage Reference:");
+	Serial.print(VComp);
+	Serial.print(" ");
+	Serial.println(VCompRef,2);
+	Serial.print("Amp Sense:");
+	Serial.print(VAdj);
+	Serial.print(" ");
+	Serial.println(vAdjRead,2);
+	Serial.print("Comparator State:");
+	Serial.println(ADJ_COMP);
+	Serial.print("Follower State:");
+	Serial.println(ADJ_FOLLOW);
+	Serial.print("Delay:");
+	Serial.println(TRG_DUR);
+	Serial.print("Error State:");
+	Serial.println(ERR_STATE);
+	Serial.println("------------------");
+	delay(TRG_DUR);
+	digitalWrite(TRG_OUT, HIGH);
+	sensorHReading = 0;
+  }
+}
+/*------------------------------------------------*/
 
 void loop() {
   
   // Blink LED's on init
   if (BlinkCount > 0) {
-    BlinkState = !BlinkState;
-    digitalWrite(ERR_LED, BlinkState);
-    digitalWrite(TRG_OUT, BlinkState);
-    delay(150);
-    --BlinkCount;
+	BlinkState = !BlinkState;
+	digitalWrite(ERR_LED, BlinkState);
+	digitalWrite(TRG_OUT, BlinkState);
+	delay(TRG_DUR);
+	--BlinkCount;
   }
 
+  // Get Serial Input
+  serialInput();
+  
+  // Set any new parameters from serial input
+  updateParams();
+  
   // Check voltage of first and second stages and compare against thresholds
-
   VComp = analogRead(VCOMP_SENSE_PIN);
   diffCompL = VComp - compLowInt;
   diffCompH = compHighInt - VComp;
@@ -364,6 +420,7 @@ void loop() {
   diffAdjH = senseHighInt - VAdj;
   vAdjRead = (VAdj * 5) / 1024;
 
+  
   // Set the amplification gain factor
   adjustGain();
   
@@ -375,31 +432,7 @@ void loop() {
   
   // Check for error state
   checkError();
-
-  // Get Serial Input
-  serialInput();
-
-  // Checks state of the interrupt trigger, prints status, then sets output pin low
-    Serial.print("PZ Status:");
-    Serial.println(sensorHReading);
-    Serial.print("Voltage Reference:");
-    Serial.print(VComp);
-    Serial.print(" ");
-    Serial.println(VCompRef,2);
-    Serial.print("Amp Sense:");
-    Serial.print(VAdj);
-    Serial.print(" ");
-    Serial.println(vAdjRead,2);
-    Serial.print("Comparator State:");
-    Serial.println(ADJ_COMP);
-    Serial.print("Follower State:");
-    Serial.println(ADJ_FOLLOW);
-    Serial.print("Delay:");
-    Serial.println(TRG_DUR);
-    Serial.print("Error State:");
-    Serial.println(ERR_STATE);
-    Serial.println("------------------");
-    delay(TRG_DUR);
-    digitalWrite(TRG_OUT, HIGH);
-    sensorHReading = 0;
+  
+  // Reply with status
+  serialReply();
 }
