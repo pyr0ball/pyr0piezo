@@ -56,16 +56,18 @@ The gain STATE is representative of these values:
 4 = 11x
 */
 
-//#include <Wire.h>
+#include <Wire.h>
  
 // Set variables for working parameters
 int GAIN_FACTOR = 2;           // Gain adjustment factor. 0=2x, 1=2.5x, 2=3.33x, 3=5x, 4=10x
 int InitCount = 6;             // Number of times to blink the LED on start
 int TRG_DUR = 120;             // duration of the Z-axis pulse sent, in ms
-float senseHighThrs = 2.35;    // Upper threshold of Voltage Follower before adjustment
-float senseLowThrs = 1.8;      // Lower threshold of Voltage Follower before adjustment
-float compHighThrs = 2.75;     // Upper threshold of Comparator before adjustment
-float compLowThrs = 2.54;      // Lower threshold of Comparator before adjustment
+float senseThrs = 2.15;
+//float senseHighThrs = 2.35;    // Upper threshold of Voltage Follower before adjustment
+//float senseLowThrs = 1.8;      // Lower threshold of Voltage Follower before adjustment
+float compThrs = 2.75;
+//float compHighThrs = 2.75;     // Upper threshold of Comparator before adjustment
+//float compLowThrs = 2.54;      // Lower threshold of Comparator before adjustment
 int Vin = 5;                   // input reference voltage
 
 // Analog Pin Assignments
@@ -92,23 +94,29 @@ volatile int ADJ_COMP = 0;            // Variable for Comparator adjustment
 volatile int ERR_STATE = 0;
 
 // Convert float to integer for adjustment functions
-int senseHighInt = (senseHighThrs / 5) * 1024;    // Voltage Follower upper converted to adg interger
-int senseLowInt = (senseLowThrs / 5) * 1024;      // Voltage Follower lower converted to adg interger
-int compHighInt = (compHighThrs / 5) * 1024;      // Upper threshold of Comparator before adjustment
-int compLowInt = (compLowThrs / 5) * 1024;        // Lower threshold of Comparator before adjustment
+int senseInt = (senseThrs / 5) * 1024;    // Voltage Follower upper converted to adg interger
+//int senseHighInt = (senseHighThrs / 5) * 1024;    // Voltage Follower upper converted to adg interger
+//int senseLowInt = (senseLowThrs / 5) * 1024;      // Voltage Follower lower converted to adg interger
+int compInt = (compThrs / 5) * 1024;      // Upper threshold of Comparator before adjustment
+//int compHighInt = (compHighThrs / 5) * 1024;      // Upper threshold of Comparator before adjustment
+//int compLowInt = (compLowThrs / 5) * 1024;        // Lower threshold of Comparator before adjustment
 
 // Voltage Comparator Adjustment parameters
 float VCompRef = 0.00;                    // variable to store the float value read from the comparator reference
 int VComp = 0;
-int diffCompL = VComp - compLowInt;
-int diffCompH = compHighInt - VComp;
+int diffCompL = VComp - compInt;
+int diffCompH = compInt - VComp;
+//int diffCompL = VComp - compLowInt;
+//int diffCompH = compHighInt - VComp;
 
 
 // Voltage Follower Adjustment parameters
 float vAdjRead = 0.00;                    // variable to store the value read from the follower
 int VAdj = 0;                    
-int diffAdjL = VAdj - senseLowInt;
-int diffAdjH = senseHighInt - VAdj;
+int diffAdjL = VAdj - senseInt;
+int diffAdjH = senseInt - VAdj;
+//int diffAdjL = VAdj - senseLowInt;
+//int diffAdjH = senseHighInt - VAdj;
 
 // Error blink parameters
 int BlinkState = LOW;
@@ -145,7 +153,7 @@ void setup() {
   // Uncomment the followoing line to use hardware interrupt pin
   attachInterrupt(digitalPinToInterrupt(Z_TRG), pulse, FALLING);
 
-  Serial.println("Initializing Piezo Sensor...");
+  Serial.println("Initializing Pyr0-Piezo Sensor...");
   
 }
 
@@ -253,8 +261,6 @@ void serialInput() {
 	
   if(Serial.available() > 0) {
 
-	char x = Serial.read();
-
 	  // the order of these IF clauses is significant
 	  identifyMarkers();
 
@@ -267,21 +273,21 @@ void i2cInput() {
 
 	// receive data from Serial and save it into inputBuffer
 	
-  while(Wire.available()) {
-
-	char x = Wire.read();
-
-	  identifyMarkers();
-	  updateParams();
-    i2cReply();
+	while(Wire.available()) {
+		identifyMarkers();
+		updateParams();
+		i2cReply();
   }
 }
 
 /*------------------------------------------------*/
 
-void identifyMarkers(){
+void identifyMarkers() {
 	
-		if (x == endMarker) {
+	char x = Serial.read();
+	char y = Wire.read();
+
+	if (x == endMarker) {
 	  readInProgress = false;
 	  serialIncoming = true;
 	  inputBuffer[bytesRecvd] = 0;
@@ -297,6 +303,26 @@ void identifyMarkers(){
 	}
 
 	if (x == startMarker) { 
+	  bytesRecvd = 0; 
+	  readInProgress = true;
+	}
+	
+	if (y == endMarker) {
+	  readInProgress = false;
+	  serialIncoming = true;
+	  inputBuffer[bytesRecvd] = 0;
+	  parseData();
+	}
+
+	if(readInProgress) {
+	  inputBuffer[bytesRecvd] = y;
+	  bytesRecvd ++;
+	  if (bytesRecvd == buffSize) {
+		bytesRecvd = buffSize - 1;
+	  }
+	}
+
+	if (y == startMarker) { 
 	  bytesRecvd = 0; 
 	  readInProgress = true;
 	}
@@ -330,18 +356,24 @@ void updateParams() {
 	if (strcmp(serialMessageIn, "GAIN_F") == 0) {
 		updateGainFactor();
 	}
-	if (strcmp(serialMessageIn, "VCOMPH") == 0) {
-		updateVCompH();
+	if (strcmp(serialMessageIn, "VCOMP") == 0) {
+		updateVComp();
 	}
-	if (strcmp(serialMessageIn, "VCOMPL") == 0) {
-		updateVCompL();
+	//if (strcmp(serialMessageIn, "VCOMPH") == 0) {
+	//	updateVCompH();
+	//}
+	//if (strcmp(serialMessageIn, "VCOMPL") == 0) {
+	//	updateVCompL();
+	//}
+	if (strcmp(serialMessageIn, "VADJ") == 0) {
+		updateVAdj();
 	}
-	if (strcmp(serialMessageIn, "VADJH") == 0) {
-		updateVAdjH();
-	}
-	if (strcmp(serialMessageIn, "VADJL") == 0) {
-		updateVAdjL();
-	}
+	//if (strcmp(serialMessageIn, "VADJH") == 0) {
+	//	updateVAdjH();
+	//}
+	//if (strcmp(serialMessageIn, "VADJL") == 0) {
+	//	updateVAdjL();
+	//}
 }
 /*------------------------------------------------*/
 
@@ -359,33 +391,47 @@ void updateGainFactor() {
 }
 /*------------------------------------------------*/
 
+void updateVComp() {
+	if (serialInt >= 0) {
+		compThrs = ((float)serialFloat);
+	}
+}
+/*------------------------------------------------*
+
 void updateVCompH() {
 	if (serialInt >= 0) {
 		compHighThrs = ((float)serialFloat);
 	}
 }
-/*------------------------------------------------*/
+*------------------------------------------------*
 
 void updateVCompL() {
 	if (serialInt >= 0) {
 		compLowThrs = ((float)serialFloat);
 	}
 }
-/*------------------------------------------------*/
+*------------------------------------------------*/
+
+void updateVAdj() {
+	if (serialInt >= 0) {
+		senseThrs = ((float)serialFloat);
+	}
+}
+/*------------------------------------------------*
 
 void updateVAdjH() {
 	if (serialInt >= 0) {
 		senseHighThrs = ((float)serialFloat);
 	}
 }
-/*------------------------------------------------*/
+*------------------------------------------------*
 
 void updateVAdjL() {
 	if (serialInt >= 0) {
 		senseLowThrs = ((float)serialFloat);
 	}
 }
-/*------------------------------------------------*/
+*------------------------------------------------*/
 
 void serialReply() {
   if (serialIncoming) {
@@ -439,13 +485,17 @@ void loop() {
   
   // Check voltage of first and second stages and compare against thresholds
   VComp = analogRead(VCOMP_SENSE_PIN);
-  diffCompL = VComp - compLowInt;
-  diffCompH = compHighInt - VComp;
+  diffCompL = VComp - compInt;
+  diffCompH = compInt - VComp;
+  //diffCompL = VComp - compLowInt;
+  //diffCompH = compHighInt - VComp;
   VCompRef = (VComp * 5) / 1024;
   
   VAdj = analogRead(V_FOLLOW_PIN);
-  diffAdjL = VAdj - senseLowInt;
-  diffAdjH = senseHighInt - VAdj;
+  diffAdjL = VAdj - senseInt;
+  diffAdjH = senseInt - VAdj;
+  //diffAdjL = VAdj - senseLowInt;
+  //diffAdjH = senseHighInt - VAdj;
   vAdjRead = (VAdj * 5) / 1024;
 
   
