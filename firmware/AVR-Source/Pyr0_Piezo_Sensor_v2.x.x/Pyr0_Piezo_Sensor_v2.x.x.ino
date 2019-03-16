@@ -55,6 +55,8 @@ The gain STATE is representative of these values:
 3 = 6x
 4 = 11x
 */
+
+//#include <Wire.h>
  
 // Set variables for working parameters
 int GAIN_FACTOR = 2;           // Gain adjustment factor. 0=2x, 1=2.5x, 2=3.33x, 3=5x, 4=10x
@@ -254,14 +256,38 @@ void serialInput() {
 	char x = Serial.read();
 
 	  // the order of these IF clauses is significant
-	  
-	if (x == endMarker) {
+	  identifyMarkers();
+
+  }
+}
+
+/*------------------------------------------------*/
+
+void i2cInput() {
+
+	// receive data from Serial and save it into inputBuffer
+	
+  while(Wire.available()) {
+
+	char x = Wire.read();
+
+	  identifyMarkers();
+	  updateParams();
+    i2cReply();
+  }
+}
+
+/*------------------------------------------------*/
+
+void identifyMarkers(){
+	
+		if (x == endMarker) {
 	  readInProgress = false;
 	  serialIncoming = true;
 	  inputBuffer[bytesRecvd] = 0;
 	  parseData();
 	}
-	
+
 	if(readInProgress) {
 	  inputBuffer[bytesRecvd] = x;
 	  bytesRecvd ++;
@@ -274,7 +300,6 @@ void serialInput() {
 	  bytesRecvd = 0; 
 	  readInProgress = true;
 	}
-  }
 }
 
 /*------------------------------------------------*/
@@ -362,7 +387,6 @@ void updateVAdjL() {
 }
 /*------------------------------------------------*/
 
-  // Checks state of the interrupt trigger, prints status, then sets output pin low
 void serialReply() {
   if (serialIncoming) {
 	serialIncoming = false;
@@ -385,9 +409,13 @@ void serialReply() {
 	Serial.print("Error State:");
 	Serial.println(ERR_STATE);
 	Serial.println("------------------");
-	delay(TRG_DUR);
-	digitalWrite(TRG_OUT, HIGH);
-	sensorHReading = 0;
+  }
+}
+/*------------------------------------------------*/
+
+void i2cReply() {
+  if (serialIncoming) {
+    Wire.write("OK");
   }
 }
 /*------------------------------------------------*/
@@ -435,4 +463,9 @@ void loop() {
   
   // Reply with status
   serialReply();
+  
+  // Sets trigger output state to false after completing loop
+  delay(TRG_DUR);
+  digitalWrite(TRG_OUT, HIGH);
+  sensorHReading = 0;
 }
