@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.1">
+<eagle version="9.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -5790,8 +5790,8 @@ DIN A3, landscape with location and doc. field</description>
 <part name="R13" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="100R"/>
 <part name="F1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-RESISTOR_SMD-RES-1.5K-1%-1/10W(0603)" device="DETAILED_MODEL" package3d_urn="urn:adsk.eagle:package:5224535/3" value="500mA"/>
 <part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="ADJ+" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP13SQ" package3d_urn="urn:adsk.eagle:package:9341723/2" value="TPTP13SQ"/>
-<part name="ADJ-" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP13SQ" package3d_urn="urn:adsk.eagle:package:9341723/2" value="TPTP13SQ"/>
+<part name="A+" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP13SQ" package3d_urn="urn:adsk.eagle:package:9341723/2" value="TPTP13SQ"/>
+<part name="A-" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP13SQ" package3d_urn="urn:adsk.eagle:package:9341723/2" value="TPTP13SQ"/>
 <part name="PZ+" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP13SQ" package3d_urn="urn:adsk.eagle:package:9341723/2" value="TPTP13SQ"/>
 <part name="D1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ZENER_DIODE_PLZ5V1C" device="" package3d_urn="urn:adsk.eagle:package:8452796/2"/>
 <part name="ERR" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-LED_SMD-LED-CLEAR-BLUE(0603)" device="LED_0603" package3d_urn="urn:adsk.eagle:package:5224536/3"/>
@@ -6137,11 +6137,11 @@ DIN A3, landscape with location and doc. field</description>
 <instance part="P+8" gate="1" x="218.44" y="142.24" smashed="yes">
 <attribute name="VALUE" x="215.9" y="137.16" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="ADJ+" gate="G$1" x="241.3" y="119.38" smashed="yes" rot="R270">
+<instance part="A+" gate="G$1" x="241.3" y="119.38" smashed="yes" rot="R270">
 <attribute name="NAME" x="242.57" y="119.38" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="240.03" y="118.11" size="1.778" layer="97" rot="R270"/>
 </instance>
-<instance part="ADJ-" gate="G$1" x="241.3" y="116.84" smashed="yes" rot="R270">
+<instance part="A-" gate="G$1" x="241.3" y="116.84" smashed="yes" rot="R270">
 <attribute name="NAME" x="242.57" y="116.84" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="240.03" y="115.57" size="1.778" layer="97" rot="R270"/>
 </instance>
@@ -6431,11 +6431,20 @@ DIN A3, landscape with location and doc. field</description>
 <junction x="358.14" y="76.2"/>
 <pinref part="J2" gate="G$1" pin="S@1"/>
 <wire x1="355.6" y1="134.62" x2="377.19" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="377.19" y1="134.62" x2="377.19" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="377.19" y1="134.62" x2="377.19" y2="127" width="0.1524" layer="91"/>
 <junction x="377.19" y="76.2"/>
 <pinref part="J2" gate="G$1" pin="S@2"/>
+<wire x1="377.19" y1="127" x2="377.19" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="355.6" y1="45.72" x2="377.19" y2="45.72" width="0.1524" layer="91"/>
 <junction x="377.19" y="45.72"/>
+<pinref part="J2" gate="G$1" pin="37"/>
+<wire x1="355.6" y1="127" x2="358.14" y2="127" width="0.1524" layer="91"/>
+<junction x="377.19" y="127"/>
+<pinref part="J2" gate="G$1" pin="38"/>
+<wire x1="358.14" y1="127" x2="377.19" y2="127" width="0.1524" layer="91"/>
+<wire x1="355.6" y1="124.46" x2="358.14" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="358.14" y1="124.46" x2="358.14" y2="127" width="0.1524" layer="91"/>
+<junction x="358.14" y="127"/>
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="15"/>
@@ -7108,7 +7117,7 @@ DIN A3, landscape with location and doc. field</description>
 </net>
 <net name="VCOMP_SENSE" class="0">
 <segment>
-<pinref part="ADJ+" gate="G$1" pin="TP"/>
+<pinref part="A+" gate="G$1" pin="TP"/>
 <wire x1="238.76" y1="119.38" x2="228.6" y2="119.38" width="0.1524" layer="91"/>
 <label x="219.71" y="119.38" size="1.778" layer="95"/>
 </segment>
@@ -7167,7 +7176,7 @@ DIN A3, landscape with location and doc. field</description>
 <label x="331.47" y="210.82" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<pinref part="ADJ-" gate="G$1" pin="TP"/>
+<pinref part="A-" gate="G$1" pin="TP"/>
 <wire x1="238.76" y1="116.84" x2="228.6" y2="116.84" width="0.1524" layer="91"/>
 <label x="224.79" y="116.84" size="1.778" layer="95"/>
 </segment>
