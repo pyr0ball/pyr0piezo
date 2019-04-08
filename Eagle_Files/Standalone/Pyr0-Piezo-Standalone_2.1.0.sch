@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.0">
+<eagle version="9.3.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -1006,7 +1006,7 @@ Metric Code Size 1608</description>
 <rectangle x1="-1.4732" y1="0.2032" x2="-1.3462" y2="0.3302" layer="51"/>
 <rectangle x1="-1.1176" y1="0.5842" x2="-0.9906" y2="0.7112" layer="51"/>
 </package>
-<package name="SJM" urn="urn:adsk.eagle:footprint:8763766/2" library_version="80">
+<package name="SJM" urn="urn:adsk.eagle:footprint:8763766/2" locally_modified="yes" library_version="94" library_locally_modified="yes">
 <description>&lt;b&gt;Solder jumper&lt;/b&gt;</description>
 <wire x1="1.016" y1="0" x2="1.524" y2="0" width="0.1524" layer="51"/>
 <wire x1="-1.016" y1="0" x2="-1.524" y2="0" width="0.1524" layer="51"/>
@@ -1015,7 +1015,12 @@ Metric Code Size 1608</description>
 <smd name="1" x="-0.508" y="0" dx="0.65" dy="0.75" layer="1" roundness="50"/>
 <smd name="2" x="0.508" y="0" dx="0.65" dy="0.75" layer="1" roundness="50"/>
 <text x="-1.27" y="0.762" size="0.6096" layer="25" font="vector" ratio="11">&gt;NAME</text>
-<rectangle x1="-0.0762" y1="-0.9144" x2="0.0762" y2="0.9144" layer="29"/>
+<polygon width="0.127" layer="29">
+<vertex x="-0.127" y="0.2032"/>
+<vertex x="0.127" y="0.2032"/>
+<vertex x="0.127" y="-0.2286"/>
+<vertex x="-0.127" y="-0.2286"/>
+</polygon>
 </package>
 <package name="DIL14" urn="urn:adsk.eagle:footprint:16136/1" library_version="58" library_locally_modified="yes">
 <description>&lt;b&gt;Dual In Line Package&lt;/b&gt;</description>
@@ -2287,7 +2292,7 @@ Metric Code Size 1608</description>
 <packageinstance name="SJW"/>
 </packageinstances>
 </package3d>
-<package3d name="SJM" urn="urn:adsk.eagle:package:8763769/3" type="box" library_version="80">
+<package3d name="SJM" urn="urn:adsk.eagle:package:8763769/3" locally_modified="yes" type="box" library_version="94" library_locally_modified="yes">
 <description>&lt;b&gt;Solder jumper&lt;/b&gt;</description>
 <packageinstances>
 <packageinstance name="SJM"/>
@@ -3753,7 +3758,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="ZENER_DIODE_PLZ5V1C" urn="urn:adsk.eagle:component:8452797/3" prefix="D" library_version="52">
+<deviceset name="DIODE_ZENER_PLZ5V1C" urn="urn:adsk.eagle:component:8452797/4" prefix="D" library_version="94" library_locally_modified="yes">
 <gates>
 <gate name="G$1" symbol="D-ZENER" x="0" y="0"/>
 </gates>
@@ -3772,7 +3777,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SJ" urn="urn:adsk.eagle:component:8763772/3" prefix="SJ" uservalue="yes" library_version="80">
+<deviceset name="SJ" urn="urn:adsk.eagle:component:8763772/3" locally_modified="yes" prefix="SJ" uservalue="yes" library_version="94" library_locally_modified="yes">
 <description>SMD solder &lt;b&gt;JUMPER&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="SJ" x="0" y="0"/>
@@ -5360,7 +5365,7 @@ DIN A3, landscape with location and doc. field</description>
 <part name="R14" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="1K"/>
 <part name="R15" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="100R"/>
 <part name="⏚" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP13SQ" package3d_urn="urn:adsk.eagle:package:27974/1" value="TPTP13SQ"/>
-<part name="D1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ZENER_DIODE_PLZ5V1C" device="" package3d_urn="urn:adsk.eagle:package:8452796/2"/>
+<part name="D1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="DIODE_ZENER_PLZ5V1C" device="" package3d_urn="urn:adsk.eagle:package:8452796/2"/>
 <part name="F1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="500mA"/>
 <part name="SJ1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SJ" device="M" package3d_urn="urn:adsk.eagle:package:8763769/3"/>
 <part name="C4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="0.1uF"/>
@@ -5462,11 +5467,11 @@ DIN A3, landscape with location and doc. field</description>
 <text x="326.39" y="224.79" size="1.778" layer="94">Comparator</text>
 </plain>
 <instances>
-<instance part="PZ1" gate="-1" x="330.2" y="93.98" smashed="yes">
-<attribute name="NAME" x="331.47" y="93.472" size="1.524" layer="95" rot="R180"/>
-</instance>
-<instance part="PZ1" gate="-2" x="330.2" y="97.79" smashed="yes">
+<instance part="PZ1" gate="-1" x="330.2" y="97.79" smashed="yes">
 <attribute name="NAME" x="331.47" y="97.282" size="1.524" layer="95" rot="R180"/>
+</instance>
+<instance part="PZ1" gate="-2" x="330.2" y="95.25" smashed="yes">
+<attribute name="NAME" x="331.47" y="94.742" size="1.524" layer="95" rot="R180"/>
 </instance>
 <instance part="U2" gate="G$1" x="71.12" y="130.81" smashed="yes">
 <attribute name="NAME" x="73.6645" y="123.176490625" size="1.78115" layer="95"/>
@@ -5670,11 +5675,11 @@ DIN A3, landscape with location and doc. field</description>
 <attribute name="VALUE" x="242.57" y="39.37" size="1.778" layer="96"/>
 </instance>
 <instance part="U3" gate="P" x="340.36" y="199.39" smashed="yes"/>
-<instance part="PT100" gate="-1" x="203.2" y="43.18" smashed="yes" rot="R180">
-<attribute name="NAME" x="198.628" y="43.18" size="1.524" layer="95" rot="R270"/>
+<instance part="PT100" gate="-1" x="203.2" y="45.72" smashed="yes" rot="R180">
+<attribute name="NAME" x="202.692" y="48.26" size="1.524" layer="95" rot="R90"/>
 </instance>
-<instance part="PT100" gate="-2" x="203.2" y="45.72" smashed="yes" rot="R180">
-<attribute name="NAME" x="200.152" y="45.72" size="1.524" layer="95" rot="R90"/>
+<instance part="PT100" gate="-2" x="203.2" y="43.18" smashed="yes" rot="R180">
+<attribute name="NAME" x="201.168" y="40.64" size="1.524" layer="95" rot="R270"/>
 </instance>
 <instance part="C5" gate="G$1" x="212.09" y="52.07" smashed="yes" rot="R90">
 <attribute name="NAME" x="210.82" y="49.53" size="1.27" layer="95" ratio="10" rot="R90"/>
@@ -5962,10 +5967,10 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="257.81" y1="24.13" x2="257.81" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="PZ1" gate="-1" pin="S"/>
-<wire x1="327.66" y1="93.98" x2="323.85" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="SUPPLY13" gate="GND" pin="GND"/>
-<wire x1="323.85" y1="93.98" x2="323.85" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="323.85" y1="95.25" x2="323.85" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="PZ1" gate="-2" pin="S"/>
+<wire x1="327.66" y1="95.25" x2="323.85" y2="95.25" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="Z_MIN_TRIG" class="0">
@@ -6146,12 +6151,12 @@ DIN A3, landscape with location and doc. field</description>
 <label x="207.01" y="219.71" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="PZ1" gate="-2" pin="S"/>
 <wire x1="323.85" y1="97.79" x2="325.12" y2="97.79" width="0.1524" layer="91"/>
 <label x="323.85" y="97.79" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="PZ+" gate="G$1" pin="TP"/>
-<wire x1="325.12" y1="97.79" x2="327.66" y2="97.79" width="0.1524" layer="91"/>
 <wire x1="325.12" y1="100.33" x2="325.12" y2="97.79" width="0.1524" layer="91"/>
+<pinref part="PZ1" gate="-1" pin="S"/>
+<wire x1="327.66" y1="97.79" x2="325.12" y2="97.79" width="0.1524" layer="91"/>
 <junction x="325.12" y="97.79"/>
 </segment>
 </net>
@@ -6413,40 +6418,40 @@ DIN A3, landscape with location and doc. field</description>
 </net>
 <net name="PT_IN+" class="0">
 <segment>
-<pinref part="PT100" gate="-2" pin="S"/>
-<wire x1="205.74" y1="45.72" x2="207.01" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="TP1" gate="G$1" pin="TP"/>
 <wire x1="207.01" y1="45.72" x2="207.01" y2="46.99" width="0.1524" layer="91"/>
 <pinref part="R17" gate="G$1" pin="1"/>
-<wire x1="207.01" y1="45.72" x2="212.09" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="207.01" y1="45.72" x2="208.28" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="45.72" x2="212.09" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="212.09" y1="45.72" x2="218.44" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="45.72" x2="218.44" y2="48.26" width="0.1524" layer="91"/>
-<junction x="207.01" y="45.72"/>
 <pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="212.09" y1="48.26" x2="212.09" y2="45.72" width="0.1524" layer="91"/>
 <junction x="212.09" y="45.72"/>
 <pinref part="R19" gate="G$1" pin="1"/>
 <wire x1="218.44" y1="49.53" x2="218.44" y2="48.26" width="0.1524" layer="91"/>
 <junction x="218.44" y="48.26"/>
+<pinref part="PT100" gate="-1" pin="S"/>
+<wire x1="207.01" y1="45.72" x2="205.74" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PT_IN-" class="0">
 <segment>
-<pinref part="PT100" gate="-1" pin="S"/>
-<wire x1="205.74" y1="43.18" x2="207.01" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="TP2" gate="G$1" pin="TP"/>
 <wire x1="207.01" y1="43.18" x2="207.01" y2="41.91" width="0.1524" layer="91"/>
 <pinref part="R18" gate="G$1" pin="1"/>
-<wire x1="207.01" y1="43.18" x2="212.09" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="207.01" y1="43.18" x2="208.28" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="43.18" x2="212.09" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="212.09" y1="43.18" x2="218.44" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="43.18" x2="218.44" y2="40.64" width="0.1524" layer="91"/>
-<junction x="207.01" y="43.18"/>
 <pinref part="C6" gate="G$1" pin="2"/>
 <wire x1="212.09" y1="40.64" x2="212.09" y2="43.18" width="0.1524" layer="91"/>
 <junction x="212.09" y="43.18"/>
 <pinref part="R20" gate="G$1" pin="2"/>
 <wire x1="218.44" y1="39.37" x2="218.44" y2="40.64" width="0.1524" layer="91"/>
 <junction x="218.44" y="40.64"/>
+<pinref part="PT100" gate="-2" pin="S"/>
+<wire x1="205.74" y1="43.18" x2="207.01" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PT_AMP-" class="0">

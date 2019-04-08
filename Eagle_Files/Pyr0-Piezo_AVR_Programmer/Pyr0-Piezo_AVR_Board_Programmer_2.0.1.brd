@@ -7163,9 +7163,7 @@ design rules under a new name.</description>
 <signal name="RST">
 <contactref element="RST." pad="TP"/>
 <contactref element="RESET" pad="2"/>
-<wire x1="23.368" y1="44.135003125" x2="23.29" y2="43.27" width="0.1524" layer="1"/>
-<wire x1="23.368" y1="44.135003125" x2="23.368" y2="37.203" width="0.1524" layer="1"/>
-<wire x1="23.6725" y1="36.8985" x2="23.368" y2="37.203" width="0.1524" layer="1"/>
+<wire x1="23.6725" y1="36.8985" x2="24.4856" y2="37.7116" width="0.1524" layer="1"/>
 <contactref element="C1" pad="1"/>
 <wire x1="24.3692" y1="34.438115625" x2="22.961" y2="35.846315625" width="0.1524" layer="1"/>
 <contactref element="ICSP1" pad="4"/>
@@ -7208,6 +7206,9 @@ design rules under a new name.</description>
 <wire x1="3.82201875" y1="10.478" x2="2.811" y2="10.478" width="0.1524" layer="1"/>
 <wire x1="6.43215" y1="9.39685" x2="4.90316875" y2="9.39685" width="0.1524" layer="1"/>
 <wire x1="4.90316875" y1="9.39685" x2="3.82201875" y2="10.478" width="0.1524" layer="1"/>
+<wire x1="24.4856" y1="37.7116" x2="24.4856" y2="41.68775" width="0.1524" layer="1"/>
+<wire x1="23.29" y1="42.88335" x2="23.29" y2="43.27" width="0.1524" layer="1"/>
+<wire x1="24.4856" y1="41.68775" x2="23.29" y2="42.88335" width="0.1524" layer="1"/>
 </signal>
 <signal name="PWR_IND">
 <contactref element="R8" pad="2"/>
