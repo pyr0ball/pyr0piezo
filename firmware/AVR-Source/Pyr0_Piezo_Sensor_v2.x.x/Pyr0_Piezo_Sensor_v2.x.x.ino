@@ -33,10 +33,10 @@
 
 To change trigger active duration: TRG_D [integer for milliseconds]
 To change gain factor: GAIN_F [integer for gain state - see note*]
-To change sensor input pullup vRef high threshold: VADJH [float value]
-To change sensor input pullup vRef low threshold: VADJL [float value]
-To change comparator trigger high threshold: VCOMPH [float value]
-To change comparator trigger high threshold: VCOMPL [float value]
+To change ADC hysteresis value: HYST [integer]
+To change sensor input pullup vRef low threshold: VADJ [float value]
+To change comparator trigger high threshold: VCOMP [float value]
+
 
 These commands should be wrapped in this format: 
 <CMD, INT, FLOAT>
@@ -45,7 +45,7 @@ You must include the unused variable for each instance.
 
 Examples:
 <GAIN_F, 3, 0.00>
-<VADJH, 0, 2.35>
+<VADJ, 0, 2.35>
 
 *Note for Gain Factor:
 The gain STATE is representative of these values:
@@ -62,14 +62,16 @@ The gain STATE is representative of these values:
 int GAIN_FACTOR = 2;           // Gain adjustment factor. 0=3x, 1=3.5x, 2=4.33x, 3=6x, 4=11x
 #define InitCount 6             // Number of times to blink the LED on start
 int TRG_DUR = 120;             // duration of the Z-axis pulse sent, in ms
-#define senseThrs 2.15
+#define senseThrs 2.45
 //float senseHighThrs = 2.35;    // Upper threshold of Voltage Follower before adjustment
 //float senseLowThrs = 1.8;      // Lower threshold of Voltage Follower before adjustment
-#define compThrs 2.75
+#define compThrs 3.15
 //float compHighThrs = 2.75;     // Upper threshold of Comparator before adjustment
 //float compLowThrs = 2.54;      // Lower threshold of Comparator before adjustment
+
 #define Hyst 20                 // Hysteresis value for ADC measurements
 #define Vin 5                   // input reference voltage
+
 
 // Analog Pin Assignments
 #define V_FOLLOW_PIN A0         // Sense pin to check Voltage Follower stage
@@ -163,6 +165,7 @@ void setup() {
 void pulse() {
   digitalWrite(TRG_OUT, LOW);
   sensorHReading = 1;
+  delay(TRG_DUR);
 }
 
 /*------------------------------------------------*/
@@ -172,10 +175,10 @@ void adjustFollow() {
    if positive, adjusts the follower to within
    the range set above*/
   if (diffAdjL > 0.0) {
-    ADJ_FOLLOW += (diffAdjL / 4) ;
+	ADJ_FOLLOW += diffAdjL;
   }
   if (diffAdjH > 0.0) {
-    ADJ_FOLLOW -= (diffAdjH / 4);
+	ADJ_FOLLOW -= diffAdjH;
   }
 
   // Analog output (PWM) of duty cycle
@@ -186,11 +189,10 @@ void adjustFollow() {
 
 void adjustComp() {
   if (diffCompL > 0.0) {
-    ADJ_COMP += (diffCompL / 4);
+	ADJ_COMP += diffCompL;
   }
-  
   if (diffCompH > 0.0) {
-    ADJ_COMP -= (diffCompH / 4);
+	ADJ_COMP -= diffCompH;
   }
 
   analogWrite(VCOMP_PWM, ADJ_COMP);
@@ -358,21 +360,9 @@ void updateParams() {
   else if (strcmp(serialMessageIn, "VCOMP") == 0) {
     updateVComp();
   }
-  //else if (strcmp(serialMessageIn, "VCOMPH") == 0) {
-  //  updateVCompH();
-  //}
-  //else if (strcmp(serialMessageIn, "VCOMPL") == 0) {
-  //  updateVCompL();
-  //}
   else if (strcmp(serialMessageIn, "VADJ") == 0) {
     updateVAdj();
   }
-  //else if (strcmp(serialMessageIn, "VADJH") == 0) {
-  //  updateVAdjH();
-  //}
-  //else if (strcmp(serialMessageIn, "VADJL") == 0) {
-  //  updateVAdjL();
-  //}
 }
 /*------------------------------------------------*/
 
@@ -432,28 +422,50 @@ void updateVAdjL() {
 }
 *------------------------------------------------*/
 
+void updateHysteresis() {
+  if (serialInt >= 0) {
+    Hyst = serialInt;
+  }
+}
+/*------------------------------------------------*/
+
 void serialReply() {
   if (serialIncoming) {
     serialIncoming = false;
-    Serial.print("PZ Status:");
-    Serial.println(sensorHReading);
-    Serial.print("Voltage Reference:");
+
+    Serial.print("Comp Reference:");
     Serial.print(VComp);
     Serial.print(" ");
-    //Serial.println(VCompRef,2);
+    Serial.print("Comparator State:");
+    Serial.print(ADJ_COMP);
+    Serial.print(" ");
+    Serial.println(compInt);
+
+    Serial.print("Diff");
+    Serial.print(" ");
+    Serial.print(diffCompL);
+    Serial.print(" ");
+    Serial.println(diffCompH);
+  
     Serial.print("Amp Sense:");
     Serial.print(VAdj);
     Serial.print(" ");
-    //Serial.println(vAdjRead,2);
-    Serial.print("Comparator State:");
-    Serial.println(ADJ_COMP);
     Serial.print("Follower State:");
-    Serial.println(ADJ_FOLLOW);
-    Serial.print("Delay:");
-    Serial.println(TRG_DUR);
-    Serial.print("Error State:");
-    Serial.println(ERR_STATE);
-    Serial.println("------------------");
+    Serial.print(ADJ_FOLLOW);
+    Serial.print(" ");
+    Serial.println(senseInt);
+
+    Serial.print("Diff");
+    Serial.print(" ");
+    Serial.print(diffAdjL);
+    Serial.print(" ");
+    Serial.println(diffAdjH);
+  
+	  Serial.print("Delay:");
+	  Serial.println(TRG_DUR);
+	  Serial.print("Error State:");
+	  Serial.println(ERR_STATE);
+	  Serial.println("------------------");
   }
 }
 /*------------------------------------------------*/
@@ -485,15 +497,15 @@ void loop() {
   
   // Check voltage of first and second stages and compare against thresholds
   VComp = analogRead(VCOMP_SENSE_PIN);
-  diffCompL = (VComp - compInt) - Hyst;
-  diffCompH = (compInt - VComp) - Hyst;
+  diffCompL = ((VComp - compInt) / 4) - Hyst;
+  diffCompH = ((compInt - VComp) / 4) - Hyst;
   //diffCompL = VComp - compLowInt;
   //diffCompH = compHighInt - VComp;
   //VCompRef = (float)(VComp * 5) / 1024;
   
   VAdj = analogRead(V_FOLLOW_PIN);
-  diffAdjL = (VAdj - senseInt) - Hyst;
-  diffAdjH = (senseInt - VAdj) - Hyst;
+  diffAdjL = ((VAdj - senseInt) / 4) - Hyst;
+  diffAdjH = ((senseInt - VAdj) / 4) - Hyst;
   //diffAdjL = VAdj - senseLowInt;
   //diffAdjH = senseHighInt - VAdj;
   //vAdjRead = (float)(VAdj * 5) / 1024;
