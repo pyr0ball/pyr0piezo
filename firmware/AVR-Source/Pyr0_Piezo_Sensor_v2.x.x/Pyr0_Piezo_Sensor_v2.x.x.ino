@@ -62,10 +62,10 @@ The gain STATE is representative of these values:
 int GAIN_FACTOR = 2;           // Gain adjustment factor. 0=3x, 1=3.5x, 2=4.33x, 3=6x, 4=11x
 int InitCount = 6;             // Number of times to blink the LED on start
 int TRG_DUR = 120;             // duration of the Z-axis pulse sent, in ms
-float senseThrs = 2.15;
+#define senseThrs 2.15
 //float senseHighThrs = 2.35;    // Upper threshold of Voltage Follower before adjustment
 //float senseLowThrs = 1.8;      // Lower threshold of Voltage Follower before adjustment
-float compThrs = 2.75;
+#define compThrs 2.75
 //float compHighThrs = 2.75;     // Upper threshold of Comparator before adjustment
 //float compLowThrs = 2.54;      // Lower threshold of Comparator before adjustment
 int Hyst = 20;                 // Hysteresis value for ADC measurements
@@ -103,7 +103,7 @@ int compInt = (compThrs / 5) * 1024;      // Upper threshold of Comparator befor
 //int compLowInt = (compLowThrs / 5) * 1024;        // Lower threshold of Comparator before adjustment
 
 // Voltage Comparator Adjustment parameters
-float VCompRef = 0.00;                    // variable to store the float value read from the comparator reference
+//float VCompRef = 0.00;                    // variable to store the float value read from the comparator reference
 int VComp = 0;
 int diffCompL = VComp - compInt;
 int diffCompH = compInt - VComp;
@@ -112,7 +112,7 @@ int diffCompH = compInt - VComp;
 
 
 // Voltage Follower Adjustment parameters
-float vAdjRead = 0.00;                    // variable to store the value read from the follower
+//float vAdjRead = 0.00;                    // variable to store the value read from the follower
 int VAdj = 0;                    
 int diffAdjL = VAdj - senseInt;
 int diffAdjH = senseInt - VAdj;
@@ -395,7 +395,7 @@ void updateGainFactor() {
 
 void updateVComp() {
 	if (serialInt >= 0) {
-		compThrs = ((float)serialFloat);
+		compInt = (serialFloat / 5) * 1024;
 	}
 }
 /*------------------------------------------------*
@@ -416,7 +416,7 @@ void updateVCompL() {
 
 void updateVAdj() {
 	if (serialInt >= 0) {
-		senseThrs = ((float)serialFloat);
+		senseInt = (serialFloat / 5) * 1024;
 	}
 }
 /*------------------------------------------------*
@@ -443,11 +443,11 @@ void serialReply() {
 	Serial.print("Voltage Reference:");
 	Serial.print(VComp);
 	Serial.print(" ");
-	Serial.println(VCompRef,2);
+	//Serial.println(VCompRef,2);
 	Serial.print("Amp Sense:");
 	Serial.print(VAdj);
 	Serial.print(" ");
-	Serial.println(vAdjRead,2);
+	//Serial.println(vAdjRead,2);
 	Serial.print("Comparator State:");
 	Serial.println(ADJ_COMP);
 	Serial.print("Follower State:");
@@ -492,14 +492,14 @@ void loop() {
   diffCompH = (compInt - VComp) - Hyst;
   //diffCompL = VComp - compLowInt;
   //diffCompH = compHighInt - VComp;
-  VCompRef = (VComp * 5) / 1024;
+  //VCompRef = (VComp * 5) / 1024;
   
   VAdj = analogRead(V_FOLLOW_PIN);
   diffAdjL = (VAdj - senseInt) - Hyst;
   diffAdjH = (senseInt - VAdj) - Hyst;
   //diffAdjL = VAdj - senseLowInt;
   //diffAdjH = senseHighInt - VAdj;
-  vAdjRead = (VAdj * 5) / 1024;
+  //vAdjRead = (VAdj * 5) / 1024;
 
   
   // Set the amplification gain factor
