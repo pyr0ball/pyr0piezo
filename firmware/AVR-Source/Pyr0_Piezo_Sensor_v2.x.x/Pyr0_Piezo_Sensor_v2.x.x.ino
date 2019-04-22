@@ -60,7 +60,7 @@ The gain STATE is representative of these values:
  
 // Set variables for working parameters
 int GAIN_FACTOR = 2;           // Gain adjustment factor. 0=3x, 1=3.5x, 2=4.33x, 3=6x, 4=11x
-int InitCount = 6;             // Number of times to blink the LED on start
+#define InitCount 6             // Number of times to blink the LED on start
 int TRG_DUR = 120;             // duration of the Z-axis pulse sent, in ms
 #define senseThrs 2.15
 //float senseHighThrs = 2.35;    // Upper threshold of Voltage Follower before adjustment
@@ -68,25 +68,25 @@ int TRG_DUR = 120;             // duration of the Z-axis pulse sent, in ms
 #define compThrs 2.75
 //float compHighThrs = 2.75;     // Upper threshold of Comparator before adjustment
 //float compLowThrs = 2.54;      // Lower threshold of Comparator before adjustment
-int Hyst = 20;                 // Hysteresis value for ADC measurements
-int Vin = 5;                   // input reference voltage
+#define Hyst 20                 // Hysteresis value for ADC measurements
+#define Vin 5                   // input reference voltage
 
 // Analog Pin Assignments
-int V_FOLLOW_PIN = A0;         // Sense pin to check Voltage Follower stage
-int VCOMP_SENSE_PIN = A1;      // Sense pin to check comparator stage voltage
+#define V_FOLLOW_PIN A0         // Sense pin to check Voltage Follower stage
+#define VCOMP_SENSE_PIN A1      // Sense pin to check comparator stage voltage
 
 // Digital Pin Assignments
-const int TRG_OUT = 7;         // LED and Z-Min trigger output connected to digital pin 7
-//const int TRG_OUT = 13;      // For testing on Atmega328/2560, Output is moved to onboard LED pin
+#define TRG_OUT 7         // LED and Z-Min trigger output connected to digital pin 7
+//#define TRG_OUT 13      // For testing on Atmega328/2560, Output is moved to onboard LED pin
 //#define Z_TRG 0              // the piezo is connected to INT0 / digital pin 2
-const byte Z_TRG = 2;          // the piezo is connected to INT0 / digital pin 2
-int ERR_LED = 4;               // LED will blink if optimal voltage range cannot be achieved
-const int GADJ_R0 = 20;        // Auto-adjust ladder pin assignments
-const int GADJ_R1 = 21;        // "
-const int GADJ_R2 = 5;         // "
-const int GADJ_R3 = 6;         // "
-int V_FOL_PWM = 3;             // PWM analog output pin for voltage follower adjustment
-int VCOMP_PWM = 9;             // PWM analog output pin for comparator adjustment
+#define Z_TRG 2          // the piezo is connected to INT0 / digital pin 2
+#define ERR_LED 4               // LED will blink if optimal voltage range cannot be achieved
+#define GADJ_R0 20        // Auto-adjust ladder pin assignments
+#define GADJ_R1 21        // "
+#define GADJ_R2 5         // "
+#define GADJ_R3 6         // "
+#define V_FOL_PWM 3             // PWM analog output pin for voltage follower adjustment
+#define VCOMP_PWM 9             // PWM analog output pin for comparator adjustment
 
 // these variables will change on their own. Do not edit ANYTHING below this line
 volatile int sensorHReading = 0;      // variable to store the value read from the sensor pin
@@ -124,10 +124,10 @@ int BlinkState = LOW;
 int BlinkCount = InitCount * 2;           // Multiply Blink count by 2 to handle toggle state
 
 // Serial Input Parsing Variables
-const byte buffSize = 40;
+#define buffSize 40
 char inputBuffer[buffSize];
-const char startMarker = '<';
-const char endMarker = '>';
+#define startMarker '<'
+#define endMarker '>'
 byte bytesRecvd = 0;
 bool readInProgress = false;
 bool serialIncoming = false;
@@ -172,10 +172,10 @@ void adjustFollow() {
    if positive, adjusts the follower to within
    the range set above*/
   if (diffAdjL > 0.0) {
-	ADJ_FOLLOW += (diffAdjL / 4) ;
+    ADJ_FOLLOW += (diffAdjL / 4) ;
   }
   if (diffAdjH > 0.0) {
-	ADJ_FOLLOW -= (diffAdjH / 4);
+    ADJ_FOLLOW -= (diffAdjH / 4);
   }
 
   // Analog output (PWM) of duty cycle
@@ -186,11 +186,11 @@ void adjustFollow() {
 
 void adjustComp() {
   if (diffCompL > 0.0) {
-	ADJ_COMP += (diffCompL / 4);
+    ADJ_COMP += (diffCompL / 4);
   }
   
   if (diffCompH > 0.0) {
-	ADJ_COMP -= (diffCompH / 4);
+    ADJ_COMP -= (diffCompH / 4);
   }
 
   analogWrite(VCOMP_PWM, ADJ_COMP);
@@ -200,44 +200,41 @@ void adjustComp() {
 
 void adjustGain() {
 
-  if  (GAIN_FACTOR < 0) {
-	ERR_STATE = 1;
+  if  (GAIN_FACTOR < 0 || GAIN_FACTOR > 4) {
+    ERR_STATE = 1;
   }
-  if (GAIN_FACTOR == 0) {
-	pinMode(GADJ_R3, INPUT);
-	pinMode(GADJ_R2, INPUT);
-	pinMode(GADJ_R1, INPUT);
-	pinMode(GADJ_R0, INPUT);
-	ERR_STATE = 0;
+  else if (GAIN_FACTOR == 0) {
+    pinMode(GADJ_R3, INPUT);
+    pinMode(GADJ_R2, INPUT);
+    pinMode(GADJ_R1, INPUT);
+    pinMode(GADJ_R0, INPUT);
+    ERR_STATE = 0;
   }
-  if (GAIN_FACTOR > 0) {
-	pinMode(GADJ_R3, OUTPUT);
-	digitalWrite(GADJ_R3, LOW);
-	pinMode(GADJ_R2, INPUT);
-	pinMode(GADJ_R1, INPUT);
-	pinMode(GADJ_R0, INPUT);
-	ERR_STATE = 0;
+  else if (GAIN_FACTOR > 0) {
+    pinMode(GADJ_R3, OUTPUT);
+    digitalWrite(GADJ_R3, LOW);
+    pinMode(GADJ_R2, INPUT);
+    pinMode(GADJ_R1, INPUT);
+    pinMode(GADJ_R0, INPUT);
+    ERR_STATE = 0;
   }
-  if (GAIN_FACTOR > 1) {
-	pinMode(GADJ_R2, OUTPUT);
-	digitalWrite(GADJ_R2, LOW);
-	pinMode(GADJ_R1, INPUT);
-	pinMode(GADJ_R0, INPUT);
-	ERR_STATE = 0;
+  else if (GAIN_FACTOR > 1) {
+    pinMode(GADJ_R2, OUTPUT);
+    digitalWrite(GADJ_R2, LOW);
+    pinMode(GADJ_R1, INPUT);
+    pinMode(GADJ_R0, INPUT);
+    ERR_STATE = 0;
   }
-  if (GAIN_FACTOR > 2) {
-	pinMode(GADJ_R1, OUTPUT);
-	digitalWrite(GADJ_R1, LOW);
-	pinMode(GADJ_R0, INPUT);
-	ERR_STATE = 0;
+  else if (GAIN_FACTOR > 2) {
+    pinMode(GADJ_R1, OUTPUT);
+    digitalWrite(GADJ_R1, LOW);
+    pinMode(GADJ_R0, INPUT);
+    ERR_STATE = 0;
   }
-  if (GAIN_FACTOR > 3) {
-	pinMode(GADJ_R0, OUTPUT);
-	digitalWrite(GADJ_R0, LOW);
-	ERR_STATE = 0;
-  }
-  if  (GAIN_FACTOR > 4) {
-	ERR_STATE = 1;
+  else if (GAIN_FACTOR > 3) {
+    pinMode(GADJ_R0, OUTPUT);
+    digitalWrite(GADJ_R0, LOW);
+    ERR_STATE = 0;
   }
 }
 
@@ -245,12 +242,12 @@ void adjustGain() {
 
 void checkError () {
   if (ERR_STATE == 1) {
-	digitalWrite(ERR_LED, BlinkState);
-	BlinkState = !BlinkState;
+    digitalWrite(ERR_LED, BlinkState);
+    BlinkState = !BlinkState;
   }
-  if (ERR_STATE == 0) {
-	BlinkState = LOW;
-	digitalWrite(ERR_LED, BlinkState);
+  else if (ERR_STATE == 0) {
+    BlinkState = LOW;
+    digitalWrite(ERR_LED, BlinkState);
   }
 }
 
@@ -258,12 +255,12 @@ void checkError () {
 
 void serialInput() {
 
-	// receive data from Serial and save it into inputBuffer
-	
+  // receive data from Serial and save it into inputBuffer
+  
   if(Serial.available() > 0) {
 
-	  // the order of these IF clauses is significant
-	  identifyMarkers();
+    // the order of these IF clauses is significant
+    identifyMarkers();
 
   }
 }
@@ -272,61 +269,61 @@ void serialInput() {
 
 /* void i2cInput() {
 
-	// receive data from Serial and save it into inputBuffer
-	
-	while(Wire.available()) {
-		identifyMarkers();
-		updateParams();
-		i2cReply();
+  // receive data from Serial and save it into inputBuffer
+  
+  while(Wire.available()) {
+    identifyMarkers();
+    updateParams();
+    i2cReply();
   }
 }
 */
 /*------------------------------------------------*/
 
 void identifyMarkers() {
-	
-	char x = Serial.read();
-//	char y = Wire.read();
+  
+  char x = Serial.read();
+//  char y = Wire.read();
 
-	if (x == endMarker) {
-	  readInProgress = false;
-	  serialIncoming = true;
-	  inputBuffer[bytesRecvd] = 0;
-	  parseData();
-	}
+  if (x == endMarker) {
+    readInProgress = false;
+    serialIncoming = true;
+    inputBuffer[bytesRecvd] = 0;
+    parseData();
+  }
 
-	if(readInProgress) {
-	  inputBuffer[bytesRecvd] = x;
-	  bytesRecvd ++;
-	  if (bytesRecvd == buffSize) {
-		bytesRecvd = buffSize - 1;
-	  }
-	}
+  else if(readInProgress) {
+    inputBuffer[bytesRecvd] = x;
+    bytesRecvd ++;
+    if (bytesRecvd == buffSize) {
+      bytesRecvd = buffSize - 1;
+    }
+  }
 
-	if (x == startMarker) { 
-	  bytesRecvd = 0; 
-	  readInProgress = true;
-	}
-	
-/*	if (y == endMarker) {
-	  readInProgress = false;
-	  serialIncoming = true;
-	  inputBuffer[bytesRecvd] = 0;
-	  parseData();
-	}
+  else if (x == startMarker) { 
+    bytesRecvd = 0; 
+    readInProgress = true;
+  }
+  
+/*  if (y == endMarker) {
+    readInProgress = false;
+    serialIncoming = true;
+    inputBuffer[bytesRecvd] = 0;
+    parseData();
+  }
 
-	if(readInProgress) {
-	  inputBuffer[bytesRecvd] = y;
-	  bytesRecvd ++;
-	  if (bytesRecvd == buffSize) {
-		bytesRecvd = buffSize - 1;
-	  }
-	}
+  if(readInProgress) {
+    inputBuffer[bytesRecvd] = y;
+    bytesRecvd ++;
+    if (bytesRecvd == buffSize) {
+    bytesRecvd = buffSize - 1;
+    }
+  }
 
-	if (y == startMarker) { 
-	  bytesRecvd = 0; 
-	  readInProgress = true;
-	}
+  if (y == startMarker) { 
+    bytesRecvd = 0; 
+    readInProgress = true;
+  }
  */
 }
 
@@ -334,8 +331,8 @@ void identifyMarkers() {
 
 void parseData() {
 
-	// split the data into its parts
-	
+  // split the data into its parts
+  
   char * strtokIndx; // this is used by strtok() as an index
   
   strtokIndx = strtok(inputBuffer,",");      // get the first part - the string
@@ -352,111 +349,111 @@ void parseData() {
 /*------------------------------------------------*/
 
 void updateParams() {
-	if (strcmp(serialMessageIn, "TRG_D") == 0) {
-		updateTrigDuration();
-	}
-	if (strcmp(serialMessageIn, "GAIN_F") == 0) {
-		updateGainFactor();
-	}
-	if (strcmp(serialMessageIn, "VCOMP") == 0) {
-		updateVComp();
-	}
-	//if (strcmp(serialMessageIn, "VCOMPH") == 0) {
-	//	updateVCompH();
-	//}
-	//if (strcmp(serialMessageIn, "VCOMPL") == 0) {
-	//	updateVCompL();
-	//}
-	if (strcmp(serialMessageIn, "VADJ") == 0) {
-		updateVAdj();
-	}
-	//if (strcmp(serialMessageIn, "VADJH") == 0) {
-	//	updateVAdjH();
-	//}
-	//if (strcmp(serialMessageIn, "VADJL") == 0) {
-	//	updateVAdjL();
-	//}
+  if (strcmp(serialMessageIn, "TRG_D") == 0) {
+    updateTrigDuration();
+  }
+  else if (strcmp(serialMessageIn, "GAIN_F") == 0) {
+    updateGainFactor();
+  }
+  else if (strcmp(serialMessageIn, "VCOMP") == 0) {
+    updateVComp();
+  }
+  //else if (strcmp(serialMessageIn, "VCOMPH") == 0) {
+  //  updateVCompH();
+  //}
+  //else if (strcmp(serialMessageIn, "VCOMPL") == 0) {
+  //  updateVCompL();
+  //}
+  else if (strcmp(serialMessageIn, "VADJ") == 0) {
+    updateVAdj();
+  }
+  //else if (strcmp(serialMessageIn, "VADJH") == 0) {
+  //  updateVAdjH();
+  //}
+  //else if (strcmp(serialMessageIn, "VADJL") == 0) {
+  //  updateVAdjL();
+  //}
 }
 /*------------------------------------------------*/
 
 void updateTrigDuration() {
-	if (serialInt >= 0) {
-		TRG_DUR = serialInt;
-	}
+  if (serialInt >= 0) {
+    TRG_DUR = serialInt;
+  }
 }
 /*------------------------------------------------*/
 
 void updateGainFactor() {
-	if (serialInt >= 0) {
-		GAIN_FACTOR = serialInt;
-	}
+  if (serialInt >= 0) {
+    GAIN_FACTOR = serialInt;
+  }
 }
 /*------------------------------------------------*/
 
 void updateVComp() {
-	if (serialInt >= 0) {
-		compInt = (serialFloat / 5) * 1024;
-	}
+  if (serialInt >= 0) {
+    compInt = (serialFloat / 5) * 1024;
+  }
 }
 /*------------------------------------------------*
 
 void updateVCompH() {
-	if (serialInt >= 0) {
-		compHighThrs = ((float)serialFloat);
-	}
+  if (serialInt >= 0) {
+    compHighThrs = ((float)serialFloat);
+  }
 }
 *------------------------------------------------*
 
 void updateVCompL() {
-	if (serialInt >= 0) {
-		compLowThrs = ((float)serialFloat);
-	}
+  if (serialInt >= 0) {
+    compLowThrs = ((float)serialFloat);
+  }
 }
 *------------------------------------------------*/
 
 void updateVAdj() {
-	if (serialInt >= 0) {
-		senseInt = (serialFloat / 5) * 1024;
-	}
+  if (serialInt >= 0) {
+    senseInt = (serialFloat / 5) * 1024;
+  }
 }
 /*------------------------------------------------*
 
 void updateVAdjH() {
-	if (serialInt >= 0) {
-		senseHighThrs = ((float)serialFloat);
-	}
+  if (serialInt >= 0) {
+    senseHighThrs = ((float)serialFloat);
+  }
 }
 *------------------------------------------------*
 
 void updateVAdjL() {
-	if (serialInt >= 0) {
-		senseLowThrs = ((float)serialFloat);
-	}
+  if (serialInt >= 0) {
+    senseLowThrs = ((float)serialFloat);
+  }
 }
 *------------------------------------------------*/
 
 void serialReply() {
   if (serialIncoming) {
-	serialIncoming = false;
-	Serial.print("PZ Status:");
-	Serial.println(sensorHReading);
-	Serial.print("Voltage Reference:");
-	Serial.print(VComp);
-	Serial.print(" ");
-	//Serial.println(VCompRef,2);
-	Serial.print("Amp Sense:");
-	Serial.print(VAdj);
-	Serial.print(" ");
-	//Serial.println(vAdjRead,2);
-	Serial.print("Comparator State:");
-	Serial.println(ADJ_COMP);
-	Serial.print("Follower State:");
-	Serial.println(ADJ_FOLLOW);
-	Serial.print("Delay:");
-	Serial.println(TRG_DUR);
-	Serial.print("Error State:");
-	Serial.println(ERR_STATE);
-	Serial.println("------------------");
+    serialIncoming = false;
+    Serial.print("PZ Status:");
+    Serial.println(sensorHReading);
+    Serial.print("Voltage Reference:");
+    Serial.print(VComp);
+    Serial.print(" ");
+    //Serial.println(VCompRef,2);
+    Serial.print("Amp Sense:");
+    Serial.print(VAdj);
+    Serial.print(" ");
+    //Serial.println(vAdjRead,2);
+    Serial.print("Comparator State:");
+    Serial.println(ADJ_COMP);
+    Serial.print("Follower State:");
+    Serial.println(ADJ_FOLLOW);
+    Serial.print("Delay:");
+    Serial.println(TRG_DUR);
+    Serial.print("Error State:");
+    Serial.println(ERR_STATE);
+    Serial.println("------------------");
   }
 }
 /*------------------------------------------------*/
@@ -473,11 +470,11 @@ void loop() {
   
   // Blink LED's on init
   if (BlinkCount > 0) {
-	BlinkState = !BlinkState;
-	digitalWrite(ERR_LED, BlinkState);
-	digitalWrite(TRG_OUT, BlinkState);
-	delay(TRG_DUR);
-	--BlinkCount;
+    BlinkState = !BlinkState;
+    digitalWrite(ERR_LED, BlinkState);
+    digitalWrite(TRG_OUT, BlinkState);
+    delay(TRG_DUR);
+    --BlinkCount;
   }
 
   // Get Serial Input
