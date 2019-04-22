@@ -56,10 +56,10 @@ The gain STATE is representative of these values:
 4 = 11x
 */
 
-#include <Wire.h>
+//#include <Wire.h>
  
 // Set variables for working parameters
-int GAIN_FACTOR = 2;           // Gain adjustment factor. 0=2x, 1=2.5x, 2=3.33x, 3=5x, 4=10x
+int GAIN_FACTOR = 2;           // Gain adjustment factor. 0=3x, 1=3.5x, 2=4.33x, 3=6x, 4=11x
 int InitCount = 6;             // Number of times to blink the LED on start
 int TRG_DUR = 120;             // duration of the Z-axis pulse sent, in ms
 float senseThrs = 2.15;
@@ -68,6 +68,7 @@ float senseThrs = 2.15;
 float compThrs = 2.75;
 //float compHighThrs = 2.75;     // Upper threshold of Comparator before adjustment
 //float compLowThrs = 2.54;      // Lower threshold of Comparator before adjustment
+int Hyst = 20;                 // Hysteresis value for ADC measurements
 int Vin = 5;                   // input reference voltage
 
 // Analog Pin Assignments
@@ -171,10 +172,10 @@ void adjustFollow() {
    if positive, adjusts the follower to within
    the range set above*/
   if (diffAdjL > 0.0) {
-	ADJ_FOLLOW =+ (diffAdjL / 4);
+	ADJ_FOLLOW += (diffAdjL / 4) ;
   }
   if (diffAdjH > 0.0) {
-	ADJ_FOLLOW =- (diffAdjH / 4);
+	ADJ_FOLLOW -= (diffAdjH / 4);
   }
 
   // Analog output (PWM) of duty cycle
@@ -185,11 +186,11 @@ void adjustFollow() {
 
 void adjustComp() {
   if (diffCompL > 0.0) {
-	ADJ_COMP =+ (diffCompL / 4);
+	ADJ_COMP += (diffCompL / 4);
   }
   
   if (diffCompH > 0.0) {
-	ADJ_COMP =- (diffCompH / 4);
+	ADJ_COMP -= (diffCompH / 4);
   }
 
   analogWrite(VCOMP_PWM, ADJ_COMP);
@@ -269,7 +270,7 @@ void serialInput() {
 
 /*------------------------------------------------*/
 
-void i2cInput() {
+/* void i2cInput() {
 
 	// receive data from Serial and save it into inputBuffer
 	
@@ -279,13 +280,13 @@ void i2cInput() {
 		i2cReply();
   }
 }
-
+*/
 /*------------------------------------------------*/
 
 void identifyMarkers() {
 	
 	char x = Serial.read();
-	char y = Wire.read();
+//	char y = Wire.read();
 
 	if (x == endMarker) {
 	  readInProgress = false;
@@ -307,7 +308,7 @@ void identifyMarkers() {
 	  readInProgress = true;
 	}
 	
-	if (y == endMarker) {
+/*	if (y == endMarker) {
 	  readInProgress = false;
 	  serialIncoming = true;
 	  inputBuffer[bytesRecvd] = 0;
@@ -326,6 +327,7 @@ void identifyMarkers() {
 	  bytesRecvd = 0; 
 	  readInProgress = true;
 	}
+ */
 }
 
 /*------------------------------------------------*/
@@ -458,12 +460,13 @@ void serialReply() {
   }
 }
 /*------------------------------------------------*/
-
+/*
 void i2cReply() {
   if (serialIncoming) {
     Wire.write("OK");
   }
 }
+*/
 /*------------------------------------------------*/
 
 void loop() {
@@ -485,15 +488,15 @@ void loop() {
   
   // Check voltage of first and second stages and compare against thresholds
   VComp = analogRead(VCOMP_SENSE_PIN);
-  diffCompL = VComp - compInt;
-  diffCompH = compInt - VComp;
+  diffCompL = (VComp - compInt) - Hyst;
+  diffCompH = (compInt - VComp) - Hyst;
   //diffCompL = VComp - compLowInt;
   //diffCompH = compHighInt - VComp;
   VCompRef = (VComp * 5) / 1024;
   
   VAdj = analogRead(V_FOLLOW_PIN);
-  diffAdjL = VAdj - senseInt;
-  diffAdjH = senseInt - VAdj;
+  diffAdjL = (VAdj - senseInt) - Hyst;
+  diffAdjH = (senseInt - VAdj) - Hyst;
   //diffAdjL = VAdj - senseLowInt;
   //diffAdjH = senseHighInt - VAdj;
   vAdjRead = (VAdj * 5) / 1024;
