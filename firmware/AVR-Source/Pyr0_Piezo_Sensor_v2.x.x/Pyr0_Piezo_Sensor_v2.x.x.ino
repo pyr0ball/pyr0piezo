@@ -56,8 +56,17 @@ The gain STATE is representative of these values:
 4 = 11x
 */
 
-//#include <Wire.h>
- 
+
+
+// Debug output toggle. Uncomment to enable
+//#define DEBUG true
+
+// i2c input toggle. Uncomment to enable
+//#define I2C true
+#ifdef I2C
+	#include <Wire.h>
+#endif
+
 // Set variables for working parameters
 int GAIN_FACTOR = 2;           // Gain adjustment factor. 0=3x, 1=3.5x, 2=4.33x, 3=6x, 4=11x
 #define InitCount 6             // Number of times to blink the LED on start
@@ -67,7 +76,6 @@ int TRG_DUR = 120;             // duration of the Z-axis pulse sent, in ms
 
 int Hyst = 20;                 // Hysteresis value for ADC measurements
 #define Vin 5                   // input reference voltage
-
 
 // Analog Pin Assignments
 #define V_FOLLOW_PIN A0         // Sense pin to check Voltage Follower stage
@@ -259,17 +267,19 @@ void serialInput() {
 
 /*------------------------------------------------*/
 
-/* void i2cInput() {
+#ifdef I2C
+	void i2cInput() {
 
-  // receive data from Serial and save it into inputBuffer
-  
-  while(Wire.available()) {
-    identifyMarkers();
-    updateParams();
-    i2cReply();
-  }
-}
-*/
+	  // receive data from Serial and save it into inputBuffer
+	  
+	  while(Wire.available()) {
+		identifyMarkers();
+		updateParams();
+		i2cReply();
+	  }
+	}
+#endif
+
 /*------------------------------------------------*/
 
 void identifyMarkers() {
@@ -296,27 +306,27 @@ void identifyMarkers() {
     bytesRecvd = 0; 
     readInProgress = true;
   }
-  
-/*  if (y == endMarker) {
-    readInProgress = false;
-    serialIncoming = true;
-    inputBuffer[bytesRecvd] = 0;
-    parseData();
-  }
-
-  if(readInProgress) {
-    inputBuffer[bytesRecvd] = y;
-    bytesRecvd ++;
-    if (bytesRecvd == buffSize) {
-    bytesRecvd = buffSize - 1;
+  #ifdef I2C
+    if (y == endMarker) {
+      readInProgress = false;
+      serialIncoming = true;
+      inputBuffer[bytesRecvd] = 0;
+      parseData();
     }
-  }
 
-  if (y == startMarker) { 
-    bytesRecvd = 0; 
-    readInProgress = true;
-  }
- */
+    if(readInProgress) {
+      inputBuffer[bytesRecvd] = y;
+      bytesRecvd ++;
+      if (bytesRecvd == buffSize) {
+      bytesRecvd = buffSize - 1;
+      }
+    }
+
+    if (y == startMarker) { 
+      bytesRecvd = 0; 
+      readInProgress = true;
+    }
+  #endif
 }
 
 /*------------------------------------------------*/
@@ -373,44 +383,18 @@ void updateGainFactor() {
 void updateVComp() {
   if (serialInt >= 0) {
     compInt = (serialFloat / 5) * 1024;
+    senseInt = compInt; // syncing these params til #24 is fixed
   }
 }
-/*------------------------------------------------*
-
-void updateVCompH() {
-  if (serialInt >= 0) {
-    compHighThrs = ((float)serialFloat);
-  }
-}
-*------------------------------------------------*
-
-void updateVCompL() {
-  if (serialInt >= 0) {
-    compLowThrs = ((float)serialFloat);
-  }
-}
-*------------------------------------------------*/
+/*------------------------------------------------*/
 
 void updateVAdj() {
   if (serialInt >= 0) {
     senseInt = (serialFloat / 5) * 1024;
+    compInt = senseInt; // syncing these params til #24 is fixed
   }
 }
-/*------------------------------------------------*
-
-void updateVAdjH() {
-  if (serialInt >= 0) {
-    senseHighThrs = ((float)serialFloat);
-  }
-}
-*------------------------------------------------*
-
-void updateVAdjL() {
-  if (serialInt >= 0) {
-    senseLowThrs = ((float)serialFloat);
-  }
-}
-*------------------------------------------------*/
+/*------------------------------------------------*/
 
 void updateHysteresis() {
   if (serialInt >= 0) {
@@ -422,34 +406,35 @@ void updateHysteresis() {
 void serialReply() {
   if (serialIncoming) {
 	serialIncoming = false;
+	#ifdef DEBUG
+		Serial.print("Comp Reference:");
+		Serial.print(VComp);
+		Serial.print(" ");
+		Serial.print("Comparator State:");
+		Serial.print(ADJ_COMP);
+		Serial.print(" ");
+		Serial.println(compInt);
 
-	Serial.print("Comp Reference:");
-	Serial.print(VComp);
-	Serial.print(" ");
-	Serial.print("Comparator State:");
-	Serial.print(ADJ_COMP);
-	Serial.print(" ");
-	Serial.println(compInt);
+		Serial.print("Diff");
+		Serial.print(" ");
+		Serial.print(diffCompL);
+		Serial.print(" ");
+		Serial.println(diffCompH);
+	  
+		Serial.print("Amp Sense:");
+		Serial.print(VAdj);
+		Serial.print(" ");
+		Serial.print("Follower State:");
+		Serial.print(ADJ_FOLLOW);
+		Serial.print(" ");
+		Serial.println(senseInt);
 
-	Serial.print("Diff");
-	Serial.print(" ");
-	Serial.print(diffCompL);
-	Serial.print(" ");
-	Serial.println(diffCompH);
-  
-	Serial.print("Amp Sense:");
-	Serial.print(VAdj);
-	Serial.print(" ");
-	Serial.print("Follower State:");
-	Serial.print(ADJ_FOLLOW);
-	Serial.print(" ");
-	Serial.println(senseInt);
-
-	Serial.print("Diff");
-	Serial.print(" ");
-	Serial.print(diffAdjL);
-	Serial.print(" ");
-	Serial.println(diffAdjH);
+		Serial.print("Diff");
+		Serial.print(" ");
+		Serial.print(diffAdjL);
+		Serial.print(" ");
+		Serial.println(diffAdjH);
+	#endif
   
 	Serial.print("Delay:");
 	Serial.println(TRG_DUR);
@@ -459,13 +444,13 @@ void serialReply() {
   }
 }
 /*------------------------------------------------*/
-/*
-void i2cReply() {
-  if (serialIncoming) {
-    Wire.write("OK");
+#ifdef I2C
+  void i2cReply() {
+    if (serialIncoming) {
+      Wire.write("OK");
+    }
   }
-}
-*/
+#endif
 /*------------------------------------------------*/
 
 void loop() {
