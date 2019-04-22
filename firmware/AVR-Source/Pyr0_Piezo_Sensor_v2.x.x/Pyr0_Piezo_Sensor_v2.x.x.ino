@@ -489,14 +489,14 @@ void loop() {
   diffCompH = (compInt - VComp) - Hyst;
   //diffCompL = VComp - compLowInt;
   //diffCompH = compHighInt - VComp;
-  //VCompRef = (VComp * 5) / 1024;
+  //VCompRef = (float)(VComp * 5) / 1024;
   
   VAdj = analogRead(V_FOLLOW_PIN);
   diffAdjL = (VAdj - senseInt) - Hyst;
   diffAdjH = (senseInt - VAdj) - Hyst;
   //diffAdjL = VAdj - senseLowInt;
   //diffAdjH = senseHighInt - VAdj;
-  //vAdjRead = (VAdj * 5) / 1024;
+  //vAdjRead = (float)(VAdj * 5) / 1024;
 
   
   // Set the amplification gain factor
