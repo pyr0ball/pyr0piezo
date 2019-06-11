@@ -59,11 +59,13 @@ The gain STATE is representative of these values:
 // Debug output toggle. Uncomment to enable
 #define DEBUG true
 
+#include "pP_serial.cpp"
+
 // i2c input toggle. Uncomment to enable
 //#define I2C true
 #ifdef I2C
 	#include <Wire.h>
-	#include "pP_i2c.h"
+	#include "pP_i2c.cpp"
 #endif
 
 // Headers, variables, and functions
