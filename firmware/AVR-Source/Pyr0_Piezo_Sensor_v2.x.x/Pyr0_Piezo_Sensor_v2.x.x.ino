@@ -59,7 +59,7 @@ The gain STATE is representative of these values:
 
 
 // Debug output toggle. Uncomment to enable
-//#define DEBUG true
+#define DEBUG true
 
 // i2c input toggle. Uncomment to enable
 //#define I2C true
@@ -70,9 +70,10 @@ The gain STATE is representative of these values:
 // Set variables for working parameters
 int GAIN_FACTOR = 2;           // Gain adjustment factor. 0=3x, 1=3.5x, 2=4.33x, 3=6x, 4=11x
 #define InitCount 6             // Number of times to blink the LED on start
-int TRG_DUR = 120;             // duration of the Z-axis pulse sent, in ms
+int LOOP_DUR = 100;			  // duration of time between ADC checks and other loop functions
+int TRG_DUR = 20;             // duration of the Z-axis pulse sent, in ms
 #define senseThrs 1.85
-#define compThrs 1.85
+#define compThrs 2.54
 
 int Hyst = 20;                 // Hysteresis value for ADC measurements
 #define Vin 5                   // input reference voltage
@@ -161,6 +162,7 @@ void pulse() {
   digitalWrite(TRG_OUT, LOW);
   sensorHReading = 1;
   delay(TRG_DUR);
+  digitalWrite(TRG_OUT, HIGH);
 }
 
 /*------------------------------------------------*/
@@ -383,7 +385,7 @@ void updateGainFactor() {
 void updateVComp() {
   if (serialInt >= 0) {
     compInt = (serialFloat / 5) * 1024;
-    senseInt = compInt; // syncing these params til #24 is fixed
+    //senseInt = compInt; // syncing these params til #24 is fixed
   }
 }
 /*------------------------------------------------*/
@@ -391,7 +393,7 @@ void updateVComp() {
 void updateVAdj() {
   if (serialInt >= 0) {
     senseInt = (serialFloat / 5) * 1024;
-    compInt = senseInt; // syncing these params til #24 is fixed
+    //compInt = senseInt; // syncing these params til #24 is fixed
   }
 }
 /*------------------------------------------------*/
@@ -460,7 +462,7 @@ void loop() {
 	BlinkState = !BlinkState;
 	digitalWrite(ERR_LED, BlinkState);
 	digitalWrite(TRG_OUT, BlinkState);
-	delay(TRG_DUR);
+	delay(LOOP_DUR);
 	--BlinkCount;
   }
 
@@ -499,7 +501,7 @@ void loop() {
   serialReply();
   
   // Sets trigger output state to false after completing loop
-  delay(TRG_DUR);
+  delay(LOOP_DUR);
   digitalWrite(TRG_OUT, HIGH);
   sensorHReading = 0;
 }
