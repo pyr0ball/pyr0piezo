@@ -220,7 +220,7 @@ void updateGainFactor() {
 
 void updateVComp() {
   if (serialInt >= 0) {
-    compInt = (serialFloat / 5) * 1024;
+    compInt = (serialFloat * 1024) / Vin;
     //senseInt = compInt; // syncing these params til #24 is fixed
   }
 }
@@ -228,7 +228,7 @@ void updateVComp() {
 
 void updateVAdj() {
   if (serialInt >= 0) {
-    senseInt = (serialFloat / 5) * 1024;
+    senseInt = (serialFloat * 1024) / Vin;
     //compInt = senseInt; // syncing these params til #24 is fixed
   }
 }

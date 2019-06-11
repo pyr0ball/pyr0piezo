@@ -5,8 +5,8 @@ volatile int ADJ_COMP = 0;            // Variable for Comparator adjustment
 volatile int ERR_STATE = 0;
 
 // Convert float to integer for adjustment functions
-int senseInt = (senseThrs / 5) * 1024;    // Voltage Follower upper converted to adg interger
-int compInt = (compThrs / 5) * 1024;      // Upper threshold of Comparator before adjustment
+int senseInt = (senseThrs * 1024) / Vin;    // Voltage Follower upper converted to adg interger
+int compInt = (compThrs * 1024) / Vin;      // Upper threshold of Comparator before adjustment
 
 // Voltage Comparator Adjustment parameters
 //float VCompRef = 0.00;                    // variable to store the float value read from the comparator reference
