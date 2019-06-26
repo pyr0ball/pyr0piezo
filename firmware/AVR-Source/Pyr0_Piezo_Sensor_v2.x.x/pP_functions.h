@@ -1,25 +1,3 @@
-void setup() {
-  pinMode(TRG_OUT, OUTPUT); // declare the Trigger as as OUTPUT
-  pinMode(ERR_LED, OUTPUT);
-  pinMode(Z_TRG, INPUT_PULLUP); // declare z-sense input with pullup
-  pinMode(V_FOLLOW_PIN, INPUT);
-  pinMode(VCOMP_SENSE_PIN, INPUT);
-  pinMode(GADJ_R0, INPUT); // declare input to break pull to ground
-  pinMode(GADJ_R1, INPUT); // declare input to break pull to ground
-  pinMode(GADJ_R2, INPUT); // declare input to break pull to ground
-  pinMode(GADJ_R3, INPUT); // declare input to break pull to ground
-  Serial.begin(9600);
-
-  // Uncomment the following lines to use PCInt pins instead of hardware interrupt
-  //#include <PinChangeInterrupt.h>
-  //attachPCINT(digitalPinToPCINT(Z_TRG), pulse, FALLING);
-
-  // Uncomment the followoing line to use hardware interrupt pin
-  attachInterrupt(digitalPinToInterrupt(Z_TRG), pulse, FALLING);
-
-  Serial.println("Initializing Pyr0-Piezo Sensor...");
-  
-}
 
 /*------------------------------------------------*/
 
@@ -36,11 +14,11 @@ void adjustFollow() {
   /* Compares diffs of threshold vs read value
    if positive, adjusts the follower to within
    the range set above*/
-  if (diffAdjL > 0.0) {
-	ADJ_FOLLOW += diffAdjL;
+  if (diffAdjL > 0) {
+	ADJ_FOLLOW += diffAdjL / 12;
   }
-  if (diffAdjH > 0.0) {
-	ADJ_FOLLOW -= diffAdjH;
+  if (diffAdjH > 0) {
+	ADJ_FOLLOW -= diffAdjH / 12;
   }
 
   // Analog output (PWM) of duty cycle
@@ -50,11 +28,11 @@ void adjustFollow() {
 /*------------------------------------------------*/
 
 void adjustComp() {
-  if (diffCompL > 0.0) {
-	ADJ_COMP += diffCompL;
+  if (diffCompL > 0) {
+	ADJ_COMP += diffCompL / 12;
   }
-  if (diffCompH > 0.0) {
-	ADJ_COMP -= diffCompH;
+  if (diffCompH > 0) {
+	ADJ_COMP -= diffCompH / 12;
   }
 
   analogWrite(VCOMP_PWM, ADJ_COMP);
@@ -120,6 +98,24 @@ void checkError () {
 
 /*------------------------------------------------*/
 
+void parseData() {
+
+  // split the data into its parts
+  
+  char * strtokIndx; // this is used by strtok() as an index
+  
+  strtokIndx = strtok(inputBuffer,",");      // get the first part - the string
+  strcpy(serialMessageIn, strtokIndx); // copy it to serialMessageIn
+  
+  strtokIndx = strtok(NULL, ",");   // this continues where the previous call left off
+  serialInt = atoi(strtokIndx);     // convert this part to an integer
+   
+  strtokIndx = strtok(NULL, ","); 
+  serialFloat = atof(strtokIndx);     // convert this part to a float
+
+}
+/*------------------------------------------------*/
+
 void identifyMarkers() {
   
   char x = Serial.read();
@@ -169,41 +165,6 @@ void identifyMarkers() {
 
 /*------------------------------------------------*/
 
-void parseData() {
-
-  // split the data into its parts
-  
-  char * strtokIndx; // this is used by strtok() as an index
-  
-  strtokIndx = strtok(inputBuffer,",");      // get the first part - the string
-  strcpy(serialMessageIn, strtokIndx); // copy it to serialMessageIn
-  
-  strtokIndx = strtok(NULL, ",");   // this continues where the previous call left off
-  serialInt = atoi(strtokIndx);     // convert this part to an integer
-   
-  strtokIndx = strtok(NULL, ","); 
-  serialFloat = atof(strtokIndx);     // convert this part to a float
-
-}
-
-/*------------------------------------------------*/
-
-void updateParams() {
-  if (strcmp(serialMessageIn, "TRG_D") == 0) {
-    updateTrigDuration();
-  }
-  else if (strcmp(serialMessageIn, "GAIN_F") == 0) {
-    updateGainFactor();
-  }
-  else if (strcmp(serialMessageIn, "VCOMP") == 0) {
-    updateVComp();
-  }
-  else if (strcmp(serialMessageIn, "VADJ") == 0) {
-    updateVAdj();
-  }
-}
-/*------------------------------------------------*/
-
 void updateTrigDuration() {
   if (serialInt >= 0) {
     TRG_DUR = serialInt;
@@ -239,4 +200,24 @@ void updateHysteresis() {
     Hyst = serialInt;
   }
 }
+/*------------------------------------------------*/
+
+/*------------------------------------------------*/
+
+void updateParams() {
+  if (strcmp(serialMessageIn, "TRG_D") == 0) {
+    updateTrigDuration();
+  }
+  else if (strcmp(serialMessageIn, "GAIN_F") == 0) {
+    updateGainFactor();
+  }
+  else if (strcmp(serialMessageIn, "VCOMP") == 0) {
+    updateVComp();
+  }
+  else if (strcmp(serialMessageIn, "VADJ") == 0) {
+    updateVAdj();
+  }
+}
+
+
 /*------------------------------------------------*/

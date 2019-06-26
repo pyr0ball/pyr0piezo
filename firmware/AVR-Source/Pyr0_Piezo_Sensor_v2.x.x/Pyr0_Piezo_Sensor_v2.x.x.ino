@@ -56,33 +56,56 @@ The gain STATE is representative of these values:
 4 = 11x
 */
 
-// Debug output toggle. Uncomment to enable
-#define DEBUG true
-
-#include "pP_serial.cpp"
-
-// i2c input toggle. Uncomment to enable
-//#define I2C true
-#ifdef I2C
-	#include <Wire.h>
-	#include "pP_i2c.cpp"
-#endif
-
-// Headers, variables, and functions
-#include "pP_pins.h"
-#include "pP_volatile.h"
-#include "pP_functions.cpp"
-
 // Configurable settings:
 int GAIN_FACTOR = 2;           // Gain adjustment factor. 0=3x, 1=3.5x, 2=4.33x, 3=6x, 4=11x
 #define InitCount 6             // Number of times to blink the LED on start
-int LOOP_DUR = 100;			  // duration of time between ADC checks and other loop functions
+int LOOP_DUR = 50;        // duration of time between ADC checks and other loop functions
 int TRG_DUR = 20;             // duration of the Z-axis pulse sent, in ms
 #define senseThrs 1.85
 #define compThrs 2.54
 
 int Hyst = 20;                 // Hysteresis value for ADC measurements
 #define Vin 5                   // input reference voltage
+
+/*------------------------------------------------------------*/
+
+// Debug output toggle. Uncomment to enable
+#define DEBUG true
+
+// Headers, variables, and functions
+#include "pP_pins.h"
+#include "pP_volatile.h"
+#include "pP_functions.h"
+#include "pP_serial.h"
+
+// i2c input toggle. Uncomment to enable
+//#define I2C true
+#ifdef I2C
+  #include "pP_i2c.h"
+#endif
+
+void setup() {
+  pinMode(TRG_OUT, OUTPUT); // declare the Trigger as as OUTPUT
+  pinMode(ERR_LED, OUTPUT);
+  pinMode(Z_TRG, INPUT_PULLUP); // declare z-sense input with pullup
+  pinMode(V_FOLLOW_PIN, INPUT);
+  pinMode(VCOMP_SENSE_PIN, INPUT);
+  pinMode(GADJ_R0, INPUT); // declare input to break pull to ground
+  pinMode(GADJ_R1, INPUT); // declare input to break pull to ground
+  pinMode(GADJ_R2, INPUT); // declare input to break pull to ground
+  pinMode(GADJ_R3, INPUT); // declare input to break pull to ground
+  Serial.begin(9600);
+
+  // Uncomment the following lines to use PCInt pins instead of hardware interrupt
+  //#include <PinChangeInterrupt.h>
+  //attachPCINT(digitalPinToPCINT(Z_TRG), pulse, FALLING);
+
+  // Uncomment the followoing line to use hardware interrupt pin
+  attachInterrupt(digitalPinToInterrupt(Z_TRG), pulse, FALLING);
+
+  Serial.println("Initializing Pyr0-Piezo Sensor...");
+  
+}
 
 
 /*------------------------------------------------*/
@@ -106,22 +129,26 @@ void loop() {
   
   // Check voltage of first and second stages and compare against thresholds
   VComp = analogRead(VCOMP_SENSE_PIN);
-  diffCompL = ((VComp - compInt) / 4) - Hyst;
-  diffCompH = ((compInt - VComp) / 4) - Hyst;
+  diffCompL = (VComp - compInt) - Hyst;
+  diffCompH = (compInt - VComp) - Hyst;
   
   VAdj = analogRead(V_FOLLOW_PIN);
-  diffAdjL = ((VAdj - senseInt) / 4) - Hyst;
-  diffAdjH = ((senseInt - VAdj) / 4) - Hyst;
+  diffAdjL = (VAdj - senseInt) - Hyst;
+  diffAdjH = (senseInt - VAdj) - Hyst;
 
   
   // Set the amplification gain factor
   adjustGain();
   
   // Voltage Follower adjustment
-  adjustFollow();
-
+  if (diffAdjL > 0 || diffAdjH > 0) {
+    adjustFollow();
+  }
+  
   // Voltage Comparator adjustment
-  adjustComp();
+  if (diffCompL > 0 || diffCompH > 0) {
+    adjustComp();
+  }
   
   // Alert the user that auto-calibration is ongoing
   calibrateAlert();
