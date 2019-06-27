@@ -4,18 +4,22 @@ volatile int ADJ_FOLLOW = 0;          // Variable for Follower adjustment
 volatile int ADJ_COMP = 0;            // Variable for Comparator adjustment
 volatile int ERR_STATE = 0;
 
-// Convert float to integer for adjustment functions
-int senseInt = (senseThrs * 1024) / Vin;    // Voltage Follower upper converted to adg interger
-int compInt = (compThrs * 1024) / Vin;      // Upper threshold of Comparator before adjustment
+int Vin = 5000;                   // input reference voltage in millivolts (multiply V by 1000)
+int VOld = 5000;                  // Variable to store previous cycle's Vin
+int VLast = 0;
+
+// Convert threshold values based on the input voltage
+long senseLong = senseThrs * 1024L;
+long compLong = compThrs * 1024L;
+long senseInt = senseLong / Vin;
+long compInt = compLong / Vin;
 
 // Voltage Comparator Adjustment parameters
-//float VCompRef = 0.00;                    // variable to store the float value read from the comparator reference
 int VComp = 0;
 int diffCompL = VComp - compInt;
 int diffCompH = compInt - VComp;
 
 // Voltage Follower Adjustment parameters
-//float vAdjRead = 0.00;                    // variable to store the value read from the follower
 int VAdj = 0;                    
 int diffAdjL = VAdj - senseInt;
 int diffAdjH = senseInt - VAdj;

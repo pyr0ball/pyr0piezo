@@ -61,21 +61,21 @@ int GAIN_FACTOR = 2;           // Gain adjustment factor. 0=3x, 1=3.5x, 2=4.33x,
 #define InitCount 6             // Number of times to blink the LED on start
 int LOOP_DUR = 50;        // duration of time between ADC checks and other loop functions
 int TRG_DUR = 20;             // duration of the Z-axis pulse sent, in ms
-#define senseThrs 1.85
-#define compThrs 2.54
-
+#define senseThrs 1450
+#define compThrs 2850
+int dAdjFac = 1;		        // adjustment divider. Higher number will cause the DAC output to adjust more slowly.
 int Hyst = 20;                 // Hysteresis value for ADC measurements
-#define Vin 5                   // input reference voltage
 
 /*------------------------------------------------------------*/
 
 // Debug output toggle. Uncomment to enable
 #define DEBUG true
+//#define VERBOSE true
 
 // Headers, variables, and functions
 #include "pP_pins.h"
 #include "pP_volatile.h"
-#include "pP_functions.h"
+#include "pP_function.h"
 #include "pP_serial.h"
 
 // i2c input toggle. Uncomment to enable
@@ -96,11 +96,6 @@ void setup() {
   pinMode(GADJ_R3, INPUT); // declare input to break pull to ground
   Serial.begin(9600);
 
-  // Uncomment the following lines to use PCInt pins instead of hardware interrupt
-  //#include <PinChangeInterrupt.h>
-  //attachPCINT(digitalPinToPCINT(Z_TRG), pulse, FALLING);
-
-  // Uncomment the followoing line to use hardware interrupt pin
   attachInterrupt(digitalPinToInterrupt(Z_TRG), pulse, FALLING);
 
   Serial.println("Initializing Pyr0-Piezo Sensor...");
@@ -127,29 +122,24 @@ void loop() {
   // Set any new parameters from serial input
   updateParams();
   
-  // Check voltage of first and second stages and compare against thresholds
-  VComp = analogRead(VCOMP_SENSE_PIN);
-  diffCompL = (VComp - compInt) - Hyst;
-  diffCompH = (compInt - VComp) - Hyst;
-  
-  VAdj = analogRead(V_FOLLOW_PIN);
-  diffAdjL = (VAdj - senseInt) - Hyst;
-  diffAdjH = (senseInt - VAdj) - Hyst;
-
-  
   // Set the amplification gain factor
   adjustGain();
   
+  // Check voltage of first and second stages and compare against thresholds
+  adjustVin();
+  VComp = analogRead(VCOMP_SENSE_PIN);
+  VAdj = analogRead(V_FOLLOW_PIN);
+  
   // Voltage Follower adjustment
-  if (diffAdjL > 0 || diffAdjH > 0) {
+  if (VLast > Hyst || VLast < -Hyst) {
     adjustFollow();
   }
   
   // Voltage Comparator adjustment
-  if (diffCompL > 0 || diffCompH > 0) {
+  if (VLast > Hyst || VLast > -Hyst) {
     adjustComp();
   }
-  
+
   // Alert the user that auto-calibration is ongoing
   calibrateAlert();
   
