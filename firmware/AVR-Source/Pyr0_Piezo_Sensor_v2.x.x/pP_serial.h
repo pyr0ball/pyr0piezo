@@ -12,9 +12,6 @@ void parseData() {
   
   strtokIndx = strtok(NULL, ",");   // this continues where the previous call left off
   serialInt = atoi(strtokIndx);     // convert this part to an integer
-   
-  strtokIndx = strtok(NULL, ","); 
-  serialFloat = atof(strtokIndx);     // convert this part to a float
 
 }
 /*------------------------------------------------*/
@@ -84,7 +81,7 @@ void updateGainFactor() {
 
 void updateVComp() {
   if (serialInt >= 0) {
-    compInt = (serialFloat * 1024) / Vin;
+    compInt = serialInt;
     //senseInt = compInt; // syncing these params til #24 is fixed
   }
 }
@@ -92,7 +89,7 @@ void updateVComp() {
 
 void updateVAdj() {
   if (serialInt >= 0) {
-    senseInt = (serialFloat * 1024) / Vin;
+    senseInt = serialInt;
     //compInt = senseInt; // syncing these params til #24 is fixed
   }
 }
@@ -103,8 +100,6 @@ void updateHysteresis() {
     Hyst = serialInt;
   }
 }
-/*------------------------------------------------*/
-
 /*------------------------------------------------*/
 
 void updateParams() {
@@ -120,7 +115,12 @@ void updateParams() {
   else if (strcmp(serialMessageIn, "VADJ") == 0) {
     updateVAdj();
   }
+  else if (strcmp(serialMessageIn, "HYST") == 0) {
+  updateHysteresis();
+  }
 }
+
+/*------------------------------------------------*/
 
 void serialInput() {
 
@@ -152,12 +152,6 @@ void serialReply() {
     Serial.print(" ");
     Serial.println(compInt);
 
-    Serial.print("Diff");
-    Serial.print(" ");
-    Serial.print(diffCompL);
-    Serial.print(" ");
-    Serial.println(diffCompH);
-    
     Serial.print("Amp Sense:");
     Serial.print(VAdj);
     Serial.print(" ");
@@ -166,11 +160,6 @@ void serialReply() {
     Serial.print(" ");
     Serial.println(senseInt);
 
-    Serial.print("Diff");
-    Serial.print(" ");
-    Serial.print(diffAdjL);
-    Serial.print(" ");
-    Serial.println(diffAdjH);
   #endif
   
   Serial.print("Delay:");

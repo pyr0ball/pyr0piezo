@@ -38,4 +38,3 @@ bool readInProgress = false;
 bool serialIncoming = false;
 char serialMessageIn[buffSize] = {0};
 int serialInt = 0;
-float serialFloat = 0.00;

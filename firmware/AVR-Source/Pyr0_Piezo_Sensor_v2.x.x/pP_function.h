@@ -57,15 +57,14 @@ long readVcc() {
 /*------------------------------------------------*/
 
  void adjustFollow() {
-    /* Compares diffs of threshold vs read value
-     if positive, adjusts the follower to within
-     the range set above*/
-    
-    ADJ_FOLLOW = (senseInt / 4);
+  /* Compares diffs of threshold vs read value
+   if positive, adjusts the follower to within
+   the range set above*/
+  ADJ_FOLLOW = (senseInt / 4);
 
-    // Analog output (PWM) of duty cycle
-    analogWrite(V_FOL_PWM, ADJ_FOLLOW);
-  }
+  // Analog output (PWM) of duty cycle
+  analogWrite(V_FOL_PWM, ADJ_FOLLOW);
+}
 
 /*------------------------------------------------*/
 

@@ -39,13 +39,11 @@ To change comparator trigger high threshold: VCOMP [float value]
 
 
 These commands should be wrapped in this format: 
-<CMD, INT, FLOAT>
-
-You must include the unused variable for each instance. 
+<CMD, INT>
 
 Examples:
-<GAIN_F, 3, 0.00>
-<VADJ, 0, 2.35>
+<GAIN_F, 3> <~ set gain factor to index 3 (6x)
+<VADJ, 2350> <~ set the vref floor to 2.35V
 
 *Note for Gain Factor:
 The gain STATE is representative of these values:
@@ -63,13 +61,15 @@ int LOOP_DUR = 50;        // duration of time between ADC checks and other loop 
 int TRG_DUR = 20;             // duration of the Z-axis pulse sent, in ms
 #define senseThrs 1450
 #define compThrs 2850
-int dAdjFac = 1;		        // adjustment divider. Higher number will cause the DAC output to adjust more slowly.
 int Hyst = 20;                 // Hysteresis value for ADC measurements
 
 /*------------------------------------------------------------*/
 
 // Debug output toggle. Uncomment to enable
 #define DEBUG true
+
+/*  Debug output verbose mode will continuously output sensor readings
+    rather than waiting for user input */
 //#define VERBOSE true
 
 // Headers, variables, and functions
@@ -79,29 +79,27 @@ int Hyst = 20;                 // Hysteresis value for ADC measurements
 #include "pP_serial.h"
 
 // i2c input toggle. Uncomment to enable
-//#define I2C true
+#define I2C true
 #ifdef I2C
   #include "pP_i2c.h"
 #endif
 
 void setup() {
-  pinMode(TRG_OUT, OUTPUT); // declare the Trigger as as OUTPUT
+  pinMode(TRG_OUT, OUTPUT);       // declare the Trigger as as OUTPUT
   pinMode(ERR_LED, OUTPUT);
-  pinMode(Z_TRG, INPUT_PULLUP); // declare z-sense input with pullup
+  pinMode(Z_TRG, INPUT_PULLUP);   // declare z-sense input with pullup
   pinMode(V_FOLLOW_PIN, INPUT);
   pinMode(VCOMP_SENSE_PIN, INPUT);
-  pinMode(GADJ_R0, INPUT); // declare input to break pull to ground
-  pinMode(GADJ_R1, INPUT); // declare input to break pull to ground
-  pinMode(GADJ_R2, INPUT); // declare input to break pull to ground
-  pinMode(GADJ_R3, INPUT); // declare input to break pull to ground
+  pinMode(GADJ_R0, INPUT);        // declare input to set high impedance
+  pinMode(GADJ_R1, INPUT);        // declare input to set high impedance
+  pinMode(GADJ_R2, INPUT);        // declare input to set high impedance
+  pinMode(GADJ_R3, INPUT);        // declare input to set high impedance
   Serial.begin(9600);
 
   attachInterrupt(digitalPinToInterrupt(Z_TRG), pulse, FALLING);
 
   Serial.println("Initializing Pyr0-Piezo Sensor...");
-  
 }
-
 
 /*------------------------------------------------*/
 
@@ -109,11 +107,11 @@ void loop() {
   
   // Blink LED's on init
   if (BlinkCount > 0) {
-	BlinkState = !BlinkState;
-	digitalWrite(ERR_LED, BlinkState);
-	digitalWrite(TRG_OUT, BlinkState);
-	delay(LOOP_DUR);
-	--BlinkCount;
+    BlinkState = !BlinkState;
+    digitalWrite(ERR_LED, BlinkState);
+    digitalWrite(TRG_OUT, BlinkState);
+    delay(LOOP_DUR);
+    --BlinkCount;
   }
 
   // Get Serial Input
@@ -136,7 +134,7 @@ void loop() {
   }
   
   // Voltage Comparator adjustment
-  if (VLast > Hyst || VLast > -Hyst) {
+  if (VLast > Hyst || VLast < -Hyst) {
     adjustComp();
   }
 
