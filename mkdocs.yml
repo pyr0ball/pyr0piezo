@@ -1,1 +1,9 @@
 site_name: Pyr0-Piezo
+nav:
+  - 'Home': 'docs/index.md'
+  - 'About': 'docs/about.md'
+  - 'FAQ': 'docs/faq.md'
+  - 'Configuration': 'docs/config.md'
+
+google_analytics: ['UA-135668867-1', 'pyroballpcbs.com']
+ 
