@@ -38,3 +38,6 @@ bool readInProgress = false;
 bool serialIncoming = false;
 char serialMessageIn[buffSize] = {0};
 int serialInt = 0;
+
+#define LOW 0
+#define HIGH 1

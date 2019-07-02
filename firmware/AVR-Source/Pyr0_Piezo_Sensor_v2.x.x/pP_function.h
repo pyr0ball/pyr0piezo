@@ -3,15 +3,23 @@
   Created by Alan "pyr0ball" Weinstock 6/26/2019
 */
 
+void digitalWriteFast(uint8_t pin, uint8_t x) {
+  if (pin / 8) { // pin >= 8
+    PORTB ^= (-x ^ PORTB) & (1 << (pin % 8));
+  }
+  else {
+    PORTD ^= (-x ^ PORTD) & (1 << (pin % 8));
+  }
+}
+
 /*------------------------------------------------*/
 
 void pulse() {
-  digitalWrite(TRG_OUT, LOW);
+  digitalWriteFast(TRG_OUT, LOW);
   sensorHReading = 1;
   delay(TRG_DUR);
-  digitalWrite(TRG_OUT, HIGH);
+  digitalWriteFast(TRG_OUT, HIGH);
 }
-
 
 /*------------------------------------------------*/
 
