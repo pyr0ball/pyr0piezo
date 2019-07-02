@@ -1,9 +1,20 @@
 site_name: Pyr0-Piezo
+site_description: Documentation for the Pyr0-Piezo Z-probe sensor
+site_author: Alan "pyr0ball" Weinstock
+repo_url: https://github.com/pyr0ball/pyr0piezo/
+
+markdown_extensions:
+  #http://pythonhosted.org/Markdown/extensions/admonition.html
+  - admonition:
+  - toc:
+      permalink: True
+
 nav:
-  - 'Home': 'docs/index.md'
-  - 'About': 'docs/about.md'
-  - 'FAQ': 'docs/faq.md'
-  - 'Configuration': 'docs/config.md'
+  - 'Home': 'index.md'
+  - 'About': 'about.md'
+  - 'FAQ': 'faq.md'
+  - 'Configuration': 'config.md'
+  - 'Main Site': 'https://pyroballpcbs.com'
 
 google_analytics: ['UA-135668867-1', 'pyroballpcbs.com']
  
