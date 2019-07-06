@@ -82,9 +82,6 @@ long voltMeterConstant = 1125300L; // For fine tuning input voltage sense
 
 // i2c input toggle. Uncomment to enable
 #define I2C true
-#ifdef I2C
-  #include "pP_i2c.h"
-#endif
 
 void setup() {
   pinMode(TRG_OUT, OUTPUT);       // declare the Trigger as as OUTPUT

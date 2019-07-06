@@ -1,3 +1,4 @@
+#ifdef I2C
 #ifndef _pP_i2c_h_
 #define _pP_i2c_h_
 
@@ -30,4 +31,5 @@ class pP_i2c {
     void i2cInput();
 };
 
+#endif
 #endif
