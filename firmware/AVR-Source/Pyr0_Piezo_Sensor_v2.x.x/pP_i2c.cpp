@@ -10,7 +10,7 @@ void pP_i2c::i2cInput(int bytesReceived) {
       cmdRcvd[a] = Wire.receive();
     }
     else {
-      Wire.receive();
+      longRcvd[a] = Wire.receive();
     }
   }
   if (bytesReceived == 1 && (cmdRcvd[0] < regMapSize)) {
@@ -46,7 +46,7 @@ void pP_i2c::i2cInput(int bytesReceived) {
       return;
       break;
     case 0x06:
-      voltMeterConstant = (uint8_t) cmdRcvd[1];
+      voltMeterConstant = longRcvd[0]*65536+longRcvd[1]*256+longRcvd[2];
       return;
       break;
     default:

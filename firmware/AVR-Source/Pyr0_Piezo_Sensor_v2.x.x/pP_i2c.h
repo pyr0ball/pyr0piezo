@@ -16,10 +16,12 @@
 
 /*-------------------------Variables------------------------*/
 #define regMapSize  7
-#define maxBytes  3
+#define maxBytes  2
+#define longBytes 4
 byte regMap[regMapSize];
 byte regMapTemp[regMapSize];
 byte cmdRcvd[maxBytes];
+byte longRcvd[longBytes];
 
 /*------------------------------------------------*/
 
