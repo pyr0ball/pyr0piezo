@@ -45,7 +45,7 @@ long readVcc() {
 
   long result = (high<<8) | low;
 
-  result = 1125300L / result; // Calculate Vcc (in mV); 1125300 = 1.1*1023*1000
+  result = voltMeterConstant / result; // Calculate Vcc (in mV); 1125300 = 1.1*1023*1000
   return result; // Vcc in millivolts
 }
 
