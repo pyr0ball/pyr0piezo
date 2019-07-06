@@ -5,7 +5,7 @@
   The sense pin is tied to an interrupt, which is pulled high by internal pullup resistor.
   When the piezo touches the bed, the amplification circuit will draw the interrupt pin low
   and the atmega will output a pulse based on the programmed trigger duration
-  
+
  * PD2 INT0 (Piezo In 'D2')
  * D7 PCINT23 (Trigger OUT 'D7')
  * PC0 ADC0 (Voltage Reference Check 'A0')
@@ -38,7 +38,7 @@ To change sensor input pullup vRef low threshold: VADJ [float value]
 To change comparator trigger high threshold: VCOMP [float value]
 
 
-These commands should be wrapped in this format: 
+These commands should be wrapped in this format:
 <CMD, INT>
 
 Examples:
@@ -73,6 +73,7 @@ int Hyst = 20;                 // Hysteresis value for ADC measurements
 //#define VERBOSE true
 
 // Headers, variables, and functions
+#include "LightChrono.h"
 #include "pP_pins.h"
 #include "pP_volatile.h"
 #include "pP_function.h"
@@ -104,51 +105,51 @@ void setup() {
 /*------------------------------------------------*/
 
 void loop() {
-  
-  // Blink LED's on init
-  if (BlinkCount > 0) {
-    BlinkState = !BlinkState;
-    digitalWrite(ERR_LED, BlinkState);
-    digitalWrite(TRG_OUT, BlinkState);
-    delay(LOOP_DUR);
-    --BlinkCount;
-  }
+  if (mainLoop.haspassed(LOOP_DUR)) {
+    mainLoop.restart();
+    // Blink LED's on init
+    if (BlinkCount > 0) {
+      BlinkState = !BlinkState;
+      digitalWrite(ERR_LED, BlinkState);
+      digitalWrite(TRG_OUT, BlinkState);
+      --BlinkCount;
+    }
 
-  // Get Serial Input
-  serialInput();
-  
-  // Set any new parameters from serial input
-  updateParams();
-  
-  // Set the amplification gain factor
-  adjustGain();
-  
-  // Check voltage of first and second stages and compare against thresholds
-  adjustVin();
-  VComp = analogRead(VCOMP_SENSE_PIN);
-  VAdj = analogRead(V_FOLLOW_PIN);
-  
-  // Voltage Follower adjustment
-  if (VLast > Hyst || VLast < -Hyst) {
-    adjustFollow();
-  }
-  
-  // Voltage Comparator adjustment
-  if (VLast > Hyst || VLast < -Hyst) {
-    adjustComp();
-  }
+    // Get Serial Input
+    serialInput();
 
-  // Alert the user that auto-calibration is ongoing
-  calibrateAlert();
-  
-  // Check for error state
-  checkError();
-  
-  // Reply with status
-  serialReply();
-  
-  // Sets trigger output state to false after completing loop
-  delay(LOOP_DUR);
-  digitalWrite(TRG_OUT, HIGH);
-  sensorHReading = 0;
+    // Set any new parameters from serial input
+    updateParams();
+
+    // Set the amplification gain factor
+    adjustGain();
+
+    // Check voltage of first and second stages and compare against thresholds
+    adjustVin();
+    VComp = analogRead(VCOMP_SENSE_PIN);
+    VAdj = analogRead(V_FOLLOW_PIN);
+
+    // Voltage Follower adjustment
+    if (VLast > Hyst || VLast < -Hyst) {
+      adjustFollow();
+    }
+
+    // Voltage Comparator adjustment
+    if (VLast > Hyst || VLast < -Hyst) {
+      adjustComp();
+    }
+
+    // Alert the user that auto-calibration is ongoing
+    calibrateAlert();
+
+    // Check for error state
+    checkError();
+
+    // Reply with status
+    serialReply();
+
+    // Sets trigger output state to false after completing loop
+    digitalWrite(TRG_OUT, HIGH);
+    sensorHReading = 0;
+  }
 }

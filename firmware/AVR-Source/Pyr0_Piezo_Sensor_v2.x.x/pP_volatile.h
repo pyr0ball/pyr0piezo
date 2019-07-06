@@ -20,7 +20,7 @@ int diffCompL = VComp - compInt;
 int diffCompH = compInt - VComp;
 
 // Voltage Follower Adjustment parameters
-int VAdj = 0;                    
+int VAdj = 0;
 int diffAdjL = VAdj - senseInt;
 int diffAdjH = senseInt - VAdj;
 
@@ -41,3 +41,6 @@ int serialInt = 0;
 
 #define LOW 0
 #define HIGH 1
+
+// Task scheduler instances
+LightChrono mainLoop;
