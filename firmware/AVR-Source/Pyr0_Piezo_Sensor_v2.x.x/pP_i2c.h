@@ -1,10 +1,7 @@
-#ifdef I2C
 #ifndef _pP_i2c_h_
 #define _pP_i2c_h_
+#ifdef I2C_INPUT
 
-#include <Wire.h>
-
-#define pP_i2c_address  0xa0 // I2C Bus Address
 
 #define senseInt_Offset 0x00 // Integer of sense threshold in millivolts
 #define compInt_Offset  0x01 // Integer of comparator threshold in millivolts
@@ -16,12 +13,13 @@
 
 /*-------------------------Variables------------------------*/
 #define regMapSize  7
-#define maxBytes  2
+uint8_t maxBytes = 2;
 #define longBytes 4
 byte regMap[regMapSize];
 byte regMapTemp[regMapSize];
 byte cmdRcvd[maxBytes];
 byte longRcvd[longBytes];
+
 
 /*------------------------------------------------*/
 
@@ -30,7 +28,7 @@ class pP_i2c {
     pP_i2c(uint8_t address=pP_i2c_address);
 
     void init();
-    void i2cInput();
+    void i2cInput(int bytesReceived);
 };
 
 #endif

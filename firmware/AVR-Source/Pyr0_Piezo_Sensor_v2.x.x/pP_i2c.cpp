@@ -1,16 +1,25 @@
+#ifdef I2C_INPUT
+
+#include <Arduino.h>
+#include "pP_config.h"
 #include "pP_i2c.h"
+#include <Wire.h>
+
+pP_i2c::pP_i2c(){
+
+}
 
 void pP_i2c::init() {
-  Wire.begin(pP_i2c_address)
+  Wire.begin(pP_i2c_address);
 }
 
 void pP_i2c::i2cInput(int bytesReceived) {
   for (int a = 0; a < bytesReceived; a++) {
     if (a < maxBytes) {
-      cmdRcvd[a] = Wire.receive();
+      cmdRcvd[a] = Wire.read();
     }
     else {
-      longRcvd[a] = Wire.receive();
+      longRcvd[a] = Wire.read();
     }
   }
   if (bytesReceived == 1 && (cmdRcvd[0] < regMapSize)) {
@@ -22,11 +31,11 @@ void pP_i2c::i2cInput(int bytesReceived) {
   }
   switch (cmdRcvd[0]) {
     case 0x00:
-      senseInt = (uint8_t) cmdRcvd[1];
+      senseInt = (long) cmdRcvd[1];
       return;
-      break
+      break;
     case 0x01:
-      compInt = (uint8_t) cmdRcvd[1];
+      compInt = (long) cmdRcvd[1];
       return;
       break;
     case 0x02:
@@ -53,3 +62,4 @@ void pP_i2c::i2cInput(int bytesReceived) {
       return;
   }
 }
+#endif
