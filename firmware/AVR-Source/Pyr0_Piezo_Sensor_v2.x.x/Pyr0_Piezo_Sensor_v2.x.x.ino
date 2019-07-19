@@ -54,16 +54,6 @@ The gain STATE is representative of these values:
 4 = 11x
 */
 
-// Configurable settings:
-int GAIN_FACTOR = 2;            // Gain adjustment factor. 0=3x, 1=3.5x, 2=4.33x, 3=6x, 4=11x
-#define InitCount 6             // Number of times to blink the LED on start
-int LOOP_DUR = 50;              // duration of time between ADC checks and other loop functions
-int TRG_DUR = 20;               // duration of the Z-axis pulse sent, in ms
-#define senseThrs 1450
-#define compThrs 2850
-int Hyst = 20;                  // Hysteresis value for ADC measurements
-long voltMeterConstant = 1125300L; // For fine tuning input voltage sense
-
 /*------------------------------------------------------------*/
 
 // Debug output toggle. Uncomment to enable
@@ -76,12 +66,13 @@ long voltMeterConstant = 1125300L; // For fine tuning input voltage sense
 // Headers, variables, and functions
 #include "LightChrono.h"
 #include "pP_pins.h"
+#include "pP_config.h"
 #include "pP_volatile.h"
 #include "pP_function.h"
 #include "pP_serial.h"
 
 // i2c input toggle. Uncomment to enable
-#define I2C true
+//#define I2C_INPUT true
 
 void setup() {
   pinMode(TRG_OUT, OUTPUT);       // declare the Trigger as as OUTPUT
@@ -103,7 +94,7 @@ void setup() {
 /*------------------------------------------------*/
 
 void loop() {
-  if (mainLoop.haspassed(LOOP_DUR)) {
+  if (mainLoop.hasPassed(LOOP_DUR)) {
     mainLoop.restart();
     // Blink LED's on init
     if (BlinkCount > 0) {
