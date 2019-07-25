@@ -30,7 +30,7 @@ nav:
         - 'Gantry Mount': 'mounts/mendel/mendel-gantry-mount.md'
       - 'Prusa Mendel':
         - 'Prusa i3 on Head': 'mounts/prusa-mendel/i3-on-head.md'
-        - 'HICTOP i3': 'mounts/hictop-i3.md'
+        - 'HICTOP i3': 'mounts/prusa-mendel/hictop-i3.md'
       - 'Ultimaker Kinematics':
         - 'Makerbot Original Under Bed': 'mounts/ultimaker/makerbot-under-bed.md'
         - 'Ultimaker Under Bed': 'mounts/ultimaker/um-under-bed.md'
