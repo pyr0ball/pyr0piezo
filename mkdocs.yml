@@ -13,25 +13,27 @@ nav:
   - 'Home': 'index.md'
   - 'About': 'about.md'
   - 'FAQ': 'faq.md'
-  - 'Installation': 'installation.md'
-    - 'Core XY': 'mounts/core-xy'
-      - 'Hypercube Evo (On Head)': 'mounts/core-xy/hevo-on-head'
-    - 'Creality Family': 'mounts/creality'
-      - 'CR-10 Family': 'mounts/creality/creality-original-head'
-      - 'Ender 3 Family': 'mounts/creality/creality-original-head'
-    - 'Delta': 'mounts/delta/'
-      - 'On Head': 'mounts/delta/delta-head.md'
-      - 'Under Bed': 'mounts/delta/delta-under-bed.md'
-    - 'Deltesian': 'mounts/deltesian/deltesian.md'
-    - 'Mendel': 'mounts/mendel/'
-      - 'On Head': 'mounts/mendel/mendel-on-head.md'
-      - 'Gantry Mount': 'mounts/mendel/mendel-gantry-mount.md'
-    - 'Prusa Mendel': 'mounts/prusa-mendel'
-      - 'Prusa i3 on Head': 'mounts/prusa-mendel/i3-on-head.md'
-      - 'HICTOP i3': 'mounts/hictop-i3.md'
-    - 'Ultimaker Kinematics': 'mounts/ultimaker'
-      - 'Makerbot Original Under Bed': 'mounts/ultimaker/makerbot-under-bed.md'
-      - 'Ultimaker Under Bed': 'mounts/ultimaker/um-under-bed.md'
+  - 'Installation':
+    - 'Start Here': 'installation.md'
+    - 'Printer Specific':
+      - 'Core XY':
+        - 'Hypercube Evo (On Head)': 'mounts/core-xy/hevo-on-head.md'
+      - 'Creality Family':
+        - 'CR-10 Family': 'mounts/creality/creality-original-head.md'
+        - 'Ender 3 Family': 'mounts/creality/creality-original-head.md'
+      - 'Delta':
+        - 'On Head': 'mounts/delta/delta-head.md'
+        - 'Under Bed': 'mounts/delta/delta-under-bed.md'
+      - 'Deltesian': 'mounts/deltesian/deltesian.md'
+      - 'Mendel':
+        - 'On Head': 'mounts/mendel/mendel-on-head.md'
+        - 'Gantry Mount': 'mounts/mendel/mendel-gantry-mount.md'
+      - 'Prusa Mendel':
+        - 'Prusa i3 on Head': 'mounts/prusa-mendel/i3-on-head.md'
+        - 'HICTOP i3': 'mounts/hictop-i3.md'
+      - 'Ultimaker Kinematics':
+        - 'Makerbot Original Under Bed': 'mounts/ultimaker/makerbot-under-bed.md'
+        - 'Ultimaker Under Bed': 'mounts/ultimaker/um-under-bed.md'
   - 'Configuration': 'config.md'
   - 'Main Site': 'https://pyroballpcbs.com'
 
