@@ -38,6 +38,7 @@ The disks are then mounted under the bed on the inner circumference edges of the
 
 After that, simply reinstall the bed, being careful not to trap the wires from the piezo between the bed and the printer's case, and plug it all in.
 
+#### Using Mesh Bed Leveling on the MP Delta Mini
 The MPDM can then use multi-point mesh bed leveling by issuing a modified GCODE command:
 
 ```
@@ -48,3 +49,5 @@ G29 P6 ; 6x6 matrix
 ```
 
 You can also add one of the above to your startup script in Cura, Slic3r, or Simplify3D
+
+For further information, check out the [unofficial wiki for the MP Delta Mini](https://www.mpminidelta.com/g29)
