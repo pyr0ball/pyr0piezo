@@ -22,6 +22,7 @@ nav:
         - 'CR-10 Family': 'mounts/creality/creality-original-head.md'
         - 'Ender 3 Family': 'mounts/creality/creality-original-head.md'
       - 'Delta':
+        - 'Monoprice Delta Mini': 'mounts/delta/monoprice-delta-mini.md'
         - 'On Head': 'mounts/delta/delta-head.md'
         - 'Under Bed': 'mounts/delta/delta-under-bed.md'
       - 'Deltesian': 'mounts/deltesian/deltesian.md'
