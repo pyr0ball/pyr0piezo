@@ -32,9 +32,9 @@ nav:
       - 'Prusa Mendel':
         - 'Prusa i3 on Head': 'mounts/prusa-mendel/i3-on-head.md'
         - 'HICTOP i3': 'mounts/prusa-mendel/hictop-i3.md'
-      - 'Ultimaker Kinematics':
-        - 'Makerbot Original Under Bed': 'mounts/ultimaker/makerbot-under-bed.md'
-        - 'Ultimaker Under Bed': 'mounts/ultimaker/um-under-bed.md'
+      - 'Quadrap':
+        - 'Makerbot Original Under Bed': 'mounts/quadrap/makerbot-under-bed.md'
+        - 'Ultimaker Under Bed': 'mounts/quadrap/um-under-bed.md'
   - 'Configuration': 'config.md'
   - 'Main Site': 'https://pyroballpcbs.com'
 
