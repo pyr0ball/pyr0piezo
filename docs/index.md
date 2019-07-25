@@ -4,6 +4,8 @@ Pyr0-Piezo is a circuit design that incorporates the use of Piezoelectric Elemen
 
 The latest firmware for this project can be found [HERE](https://github.com/pyr0ball/pyr0piezo/tree/master/firmware/Compiled-Firmware)
 
+To request a mount for your printer, [open an issue on GitHub](https://github.com/pyr0ball/pyr0piezo/issues/new?assignees=pyr0ball&labels=add+support+request&template=printer-mount-request.md&title=%5BMOUNT%5D)
+
 
 Join our discord for support and to join in realtime discussion for the project:
 <div class="discord_widget">
