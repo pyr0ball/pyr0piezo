@@ -6,17 +6,17 @@ Pyr0-Piezo Installation Instructions
 *First, follow the instructions for physically installing your Pyro-Piezo on the printer you're using:*
 
 - Creality:
-  - [CR-10 / Ender 3](mounts/creality/creality-original-head.md)
+    - [CR-10 / Ender 3](mounts/creality/creality-original-head.md)
 - Prusa / Mendel
-  - [Prusa i3 on Head](mounts/prusa-mendel/i3-on-head.md)
-  - [Mendel on Head](mounts/mendel/mendel-on-head.md) | [Mendel Gantry Mount](mounts/mendel/mendel-gantry-mount.md)
+    - [Prusa i3 on Head](mounts/prusa-mendel/i3-on-head.md)
+    - [Mendel on Head](mounts/mendel/mendel-on-head.md) | [Mendel Gantry Mount](mounts/mendel/mendel-gantry-mount.md)
 - Ultimaker Kinematics
-  - [Ultimaker Under Bed](mounts/ultimaker/um-under-bed.md)
-  - [Makerbot Under Bed](mounts/ultimaker/makerbot-under-bed.md)
+    - [Ultimaker Under Bed](mounts/ultimaker/um-under-bed.md)
+    - [Makerbot Under Bed](mounts/ultimaker/makerbot-under-bed.md)
 - Core-XY
-  - [Hypercube Evo on Head](mounts/core-xy/hevo-on-head.md)
+    - [Hypercube Evo on Head](mounts/core-xy/hevo-on-head.md)
 - Delta
-  - [Monoprice Delta Mini](mounts/delta/delta-under-bed.md)
-  - [Folgertech Delta](mounts/delta/delta-head.md)
+    - [Monoprice Delta Mini](mounts/delta/delta-under-bed.md)
+    - [Folgertech Delta](mounts/delta/delta-head.md)
 - Deltesian
-  - [Bornity's Deltesian](mounts/deltesian/deltesian.md)
+    - [Bornity's Deltesian](mounts/deltesian/deltesian.md)
