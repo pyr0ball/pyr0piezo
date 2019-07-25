@@ -11,8 +11,8 @@ Pyr0-Piezo Installation Instructions
     - [Prusa i3 on Head](mounts/prusa-mendel/i3-on-head.md)
     - [Mendel on Head](mounts/mendel/mendel-on-head.md) | [Mendel Gantry Mount](mounts/mendel/mendel-gantry-mount.md)
 - Ultimaker Kinematics
-    - [Ultimaker Under Bed](mounts/ultimaker/um-under-bed.md)
-    - [Makerbot Under Bed](mounts/ultimaker/makerbot-under-bed.md)
+    - [Ultimaker Under Bed](mounts/quadrap/um-under-bed.md)
+    - [Makerbot Under Bed](mounts/quadrap/makerbot-under-bed.md)
 - Core-XY
     - [Hypercube Evo on Head](mounts/core-xy/hevo-on-head.md)
 - Delta
