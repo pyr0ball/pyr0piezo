@@ -6,13 +6,13 @@ All of the MPDM's under-bed switch connectors are tied to the same input pin, so
 
 The first must be added to SJ1 on the bottom of the EasyPiezi:
 
-![](assets/images/mp-delta-mini-ub/5.jpg)
+![](../../assets/images/mp-delta-mini-ub/5.jpg)
 
 The next must be added to R12 on the MPDM's mainboard, adjacent to the connector used by the EasyPiezi:
 
-![](assets/images/mp-delta-mini-ub/4.jpg)
+![](../../assets/images/mp-delta-mini-ub/4.jpg)
 
 #### Wiring the piezo disks
 Since the EasyPiezi uses a single two-pin input, we need to wire up three piezo disks in parallel (all positive and negative connections are joined together)
 
-![](assets/images/mp-delta-mini-ub/1.jpg)
+![](../../assets/images/mp-delta-mini-ub/1.jpg)
