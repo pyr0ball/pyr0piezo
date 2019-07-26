@@ -5,7 +5,8 @@ repo_url: https://github.com/pyr0ball/pyr0piezo/
 
 theme:
   name: 'material'
-  logo: 'docs/assets/images/Pyr0ball-logo.png'
+  logo: 'assets/images/Pyr0ball-logo.png'
+  favicon: 'assets/images/Pyr0ball-logo.png'
   #custom_dir: 'mkdocs-theme-overrides'
 
 markdown_extensions:
