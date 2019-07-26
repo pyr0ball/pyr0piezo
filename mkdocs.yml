@@ -38,7 +38,10 @@ nav:
       - 'Quadrap':
         - 'Makerbot Original Under Bed': 'mounts/quadrap/makerbot-under-bed.md'
         - 'Ultimaker Under Bed': 'mounts/quadrap/um-under-bed.md'
-  - 'Configuration': 'config.md'
+  - 'Configuration':
+    - 'Start Here': 'config.md'
+    - 'Firmware Config':
+      - 'Marlin': 'tutorials/config/printer-firmware/marlin/marlin-config.md'
   - 'Main Site': 'https://pyroballpcbs.com'
 
 google_analytics: ['UA-135668867-1', 'pyroballpcbs.com']
