@@ -7,7 +7,7 @@ theme:
   name: 'material'
   logo: 'assets/images/Pyr0ball-logo.png'
   favicon: 'assets/images/Pyr0ball-logo.png'
-  #custom_dir: 'mkdocs-theme-overrides'
+  custom_dir: 'mkdocs-theme-overrides'
 
 markdown_extensions:
   #http://pythonhosted.org/Markdown/extensions/admonition.html
