@@ -46,6 +46,8 @@ nav:
     - 'Firmware Config':
       - 'Marlin': 'tutorials/config/printer-firmware/marlin/marlin-config.md'
       - 'Klipper': 'tutorials/config/printer-firmware/klipper/klipper-config.md'
+    - 'Wiring Diagrams':
+      - 'Creality': 'tutorials/wiring/creality.md'
   - 'Main Site': 'https://pyroballpcbs.com'
 
 google_analytics: ['UA-135668867-1', 'pyroballpcbs.com']

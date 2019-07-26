@@ -52,3 +52,6 @@ Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN`
 
 - Uncomment `#define Z_SAFE_HOMING`
   - Default for this setting puts the nozzle in the center of the bed for G28Z, but you can define a corner offset if you wish. This will be performed before any bed levelling procedure
+
+#### Using Auto Bed leveling
+Refer to [Marlin's excellent Wiki](http://marlinfw.org/docs/gcode/G029-abl.html) on the subject.
