@@ -3,6 +3,9 @@ site_description: Documentation for the Pyr0-Piezo Z-probe sensor
 site_author: Alan "pyr0ball" Weinstock
 repo_url: https://github.com/pyr0ball/pyr0piezo/
 
+theme:
+  name: 'material'
+
 markdown_extensions:
   #http://pythonhosted.org/Markdown/extensions/admonition.html
   - admonition:
