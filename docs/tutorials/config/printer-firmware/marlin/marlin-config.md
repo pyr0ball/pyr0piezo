@@ -1,14 +1,12 @@
-Marlin Configuration
----------------------------
-#### Pyr0-Piezo Rev.2.x.x
-##### Endstop logic configuration
+### Pyr0-Piezo Rev.2.x.x
+#### Endstop logic configuration
 Comment #define ENDSTOPPULLUP_ZMIN (or other pin if using a different connection)
 
 Set Z_MIN_ENDSTOP_INVERTING to “true”
 
-![](../../assets/images/marlin-config/rev2.x-1.jpg)
+![](../../../../assets/images/marlin-config/rev2.x-1.jpg)
 
-##### Enable Interrupts
+#### Enable Interrupts
 *This only applies if you are running Marlin v1.1.9 or later*
 
 Uncomment this line for best possible accuracy:
@@ -16,7 +14,7 @@ Uncomment this line for best possible accuracy:
 
 `#define ENDSTOP_INTERRUPTS_FEATURE`
 
-##### Configure Z-Probe Options
+#### Configure Z-Probe Options
 
  - If using the Z_Min input, uncomment:
 
@@ -44,7 +42,7 @@ Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN`
 
   `#define Z_MIN_PROBE_REPEATABILITY_TEST`
 
-##### Configure Bed Leveling
+#### Configure Bed Leveling
 
 - Choose your flavor of bed leveling and uncomment the line for it. Theoretically, Unified Bed Levelling is the best choice for this kind of probe
 

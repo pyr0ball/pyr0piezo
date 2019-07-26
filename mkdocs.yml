@@ -42,6 +42,7 @@ nav:
     - 'Start Here': 'config.md'
     - 'Firmware Config':
       - 'Marlin': 'tutorials/config/printer-firmware/marlin/marlin-config.md'
+      - 'Klipper': 'tutorials/config/printer-firmware/marlin/klipper-config.md'
   - 'Main Site': 'https://pyroballpcbs.com'
 
 google_analytics: ['UA-135668867-1', 'pyroballpcbs.com']
