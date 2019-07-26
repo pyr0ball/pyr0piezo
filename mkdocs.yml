@@ -5,8 +5,7 @@ repo_url: https://github.com/pyr0ball/pyr0piezo/
 
 theme:
   name: 'material'
-
-custom_dir: 'mkdocs-theme-overrides'
+  custom_dir: 'mkdocs-theme-overrides'
 
 markdown_extensions:
   #http://pythonhosted.org/Markdown/extensions/admonition.html
