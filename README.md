@@ -28,24 +28,31 @@ This design incorporates two different enhancements:
  - Vs. Mechanical endstops: All the things
 
  - Vs [PrecisionPiezoUK](https://www.precisionpiezo.co.uk/resources-osh) version: No potentiometer calibration required, better false-signal filtering
- 
-Features:
+
+ Features:
 
  - Self-calibrating (no more fiddling with tiny potentiometers!)
  - Ultra-precise z-height measurements
  - Zero offset (The nozzle itself is the sensor!)
  - Compatible with ALL surface types
  - No plugging in removable sensors for leveling
+ - Tunable over UART / I2C
+
+ FFC Cable Chain Extra Features:
+
  - FFC Cable chain for a clean connection between print head and controller
  - Onboard switchable DC buck converter for 12v or 5v fan operation
  - LED Feedback on all PWM components
- - Standalone version available for drop-in installation
+ Standalone version available for drop-in installation
 
 Credit must be given to precisionpiezo.co.uk for getting me started on this project and giving me a place to start. I did build a version of the FFC cable chain based on their electrical designs but found the calibration of the circuit to be very fiddly, as the range of value on the potentiometers that was acceptable was very narrow.
 
 I've since started from scratch using my own BOM and designs, while including an onboard microcontroller to handle auto-calibration. Given that every 3D printer is different, I wanted this sensor to be as easy and stable as other sensors available on the market, but with the increased performance of a piezo sensor.
 
-[Discord for support and discussion](https://discord.gg/gmjgXHw)
+Join our discord for support and to join in realtime discussion for the project:
+<div class="discord_widget">
+  <iframe src="https://discordapp.com/widget?id=544587989536473099&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"> </iframe>
+</div>
 ---------------------------
 
 Legacy links:
@@ -62,5 +69,5 @@ Original FFC Cable Chain designs can be found on my Thingiverse:
  - [3D Printed Mount for Prusa/Anet printers](https://www.thingiverse.com/thing:2712439)
  - [FFC Cable Chain + Piezo boards](https://www.thingiverse.com/thing:2618717)
 
- 
+
  Please refer to LICENSE.md for license information
