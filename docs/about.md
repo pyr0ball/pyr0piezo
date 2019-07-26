@@ -8,27 +8,27 @@ Optionally there is a version that incorporates an FFC Cable chain (Flat Flexibl
 
 - Vs. Inductive / capacitative sensors:
 
-  No Offset, more accurate, doesn't require special surface
+    No Offset, more accurate, doesn't require special surface
 
 - Vs. Mechanical touch (BL-Touch, servo mounted endstops):
 
-  No Offset, more accurate
+    No Offset, more accurate
 
 - Vs. removable pressure sensor:
 
-  More accurate, no need for attaching a device only for levelling
+    More accurate, no need for attaching a device only for levelling
 
 - Vs. Optical rangefinder / Time of Flight:
 
-  Much more accurate, doesnt require specific surface
+    Much more accurate, doesnt require specific surface
 
 - Vs. Mechanical endstops:
 
-  All the things
+    All the things
 
 - Vs PrecisionPiezoUK version:
 
-  No potentiometer calibration required, better false-signal filtering
+    No potentiometer calibration required, better false-signal filtering
 
 Features:
 
