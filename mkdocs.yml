@@ -54,6 +54,19 @@ nav:
         - 'MKS Gen L': 'tutorials/wiring/mks-gen-l.md'
         - 'MKS SBase': 'tutorials/wiring/mks-sbase.md'
       - 'RAMPS 1.4': 'tutorials/wiring/ramps-1.4.md'
+  - 'Resources':
+    - 'Schematics':
+      - 'EasyPiezi':
+        - 'EasyPiezi 1.0.0': 'schematics/Pyr0-Piezo_Standalone_1.0.0_Schematic.pdf'
+        - 'EasyPiezi 1.0.2': 'schematics/Pyr0-Piezo_Standalone_1.0.2_Schematic.pdf'
+        - 'EasyPiezi 1.1.1': 'schematics/Pyr0-Piezo_Standalone_PT100_1.1.1_Schematic.pdf'
+        - 'EasyPiezi 2.0.0': 'schematics/Pyr0-Piezo_Standalone_PT100_2.0.0_Schematic.pdf'
+      - 'FFC Extruder':
+        - 'FFC Extruder 1.0.2': 'schematics/Pyr0-Piezo_FFC_Extruder_Board1.0.2_Schematic.pdf'
+        - 'FFC Extruder 1.1.0': 'schematics/Pyr0-Piezo_FFC_Extruder_Board1.1.0_Schematic.pdf'
+      - 'FFC Breakout':
+        - 'FFC Breakout 1.0.0': 'schematics/Pyr0-Piezo_FFC_Breakout_1.0.0_Schematic.pdf'
+        - 'FFC Breakout 2.0.0': 'schematics/Pyr0-Piezo_FFC_Breakout_2.0.0_Schematic.pdf'
   - 'Main Site': 'https://pyroballpcbs.com'
 
 google_analytics: ['UA-135668867-1', 'pyroballpcbs.com']
