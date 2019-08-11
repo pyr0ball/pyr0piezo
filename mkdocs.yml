@@ -82,7 +82,7 @@ nav:
           - 'EasyPiezi 2.0.0': 'drawings/pinouts/easypiezi/Pyr0-Piezo_Standalone_PT100_v2.0.0_Connector_Pinout.pdf'
         #- 'FFC Direct Extruder':
         - 'FFC Direct Breakout':
-          - 'FFC Direct Breakout 1.0.0': 'drawings/pinouts/ffc-direct-breakout/Pyr0-Piezo_FFC_Direct_Extruder_Breakout_1.0.0_Connector_Pinout.pdf'
+          - 'FFC Direct Breakout 1.0.0': 'drawings/pinouts/ffc-direct-breakouts/Pyr0-Piezo_FFC_Direct_Extruder_Breakout_1.0.0_Connector_Pinout.pdf'
       - 'Test Pads Layout': 'drawings/pyro-piezo-test-pads.md'
   - 'Main Site': 'https://pyroballpcbs.com'
 
