@@ -61,12 +61,29 @@ nav:
         - 'EasyPiezi 1.0.2': 'schematics/Pyr0-Piezo_Standalone_1.0.2_Schematic.pdf'
         - 'EasyPiezi 1.1.1': 'schematics/Pyr0-Piezo_Standalone_PT100_1.1.1_Schematic.pdf'
         - 'EasyPiezi 2.0.0': 'schematics/Pyr0-Piezo_Standalone_PT100_2.0.0_Schematic.pdf'
-      - 'FFC Extruder':
-        - 'FFC Extruder 1.0.2': 'schematics/Pyr0-Piezo_FFC_Extruder_Board1.0.2_Schematic.pdf'
-        - 'FFC Extruder 1.1.0': 'schematics/Pyr0-Piezo_FFC_Extruder_Board1.1.0_Schematic.pdf'
-      - 'FFC Breakout':
-        - 'FFC Breakout 1.0.0': 'schematics/Pyr0-Piezo_FFC_Breakout_1.0.0_Schematic.pdf'
-        - 'FFC Breakout 2.0.0': 'schematics/Pyr0-Piezo_FFC_Breakout_2.0.0_Schematic.pdf'
+      - 'FFC Direct Extruder':
+        - 'FFC Direct Extruder 1.0.2': 'schematics/Pyr0-Piezo_FFC_Extruder_Board1.0.2_Schematic.pdf'
+        - 'FFC Direct Extruder 1.1.0': 'schematics/Pyr0-Piezo_FFC_Extruder_Board1.1.0_Schematic.pdf'
+      - 'FFC Direct Breakout':
+        - 'FFC Direct Breakout 1.0.0': 'schematics/Pyr0-Piezo_FFC_Breakout_1.0.0_Schematic.pdf'
+        - 'FFC Direct Breakout 2.0.0': 'schematics/Pyr0-Piezo_FFC_Breakout_2.0.0_Schematic.pdf'
+    - 'Drawings':
+      - 'Board Layouts':
+        - 'EasyPiezi':
+          - 'EasyPiezi 1.1.1': 'drawings/Pyr0-Piezo_Standalone_PT100_v1.1.1_Components_Layout.pdf'
+          - 'EasyPiezi 2.0.0': 'drawings/Pyr0-Piezo_Standalone_PT100_v2.0.0_Components_Layout.pdf'
+          - 'EasyPiezi 2.0.1': 'drawings/Pyr0-Piezo_Standalone_v2.0.1_Components_Layout.pdf'
+        - 'FFC Direct Extruder':
+          - 'FFC Direct Extruder 1.1.0 Top': 'drawings/Pyr0-Piezo_FFC_Extruder_Boardv1.1.0_Components_Front.pdf'
+        #- 'FFC Direct Breakout':
+      - 'Connector Pinouts':
+        - 'EasyPiezi':
+          - 'EasyPiezi 1.1.1': 'drawings/Pyr0-Piezo_Standalone_PT100_v1.1.1_Connector_Pinout.pdf'
+          - 'EasyPiezi 2.0.0': 'drawings/Pyr0-Piezo_Standalone_PT100_v2.0.0_Connector_Pinout.pdf'
+        #- 'FFC Direct Extruder':
+        - 'FFC Direct Breakout':
+          - 'FFC Direct Breakout 1.0.0': 'drawings/Pyr0-Piezo_FFC_Direct_Extruder_Breakout_1.0.0_Connector_Pinout.pdf'
+      - 'Test Pads Layout': 'drawings/Pyr0-Piezo_FFC_Extruder_Boardv1.1.0_Test_Pads.pdf'
   - 'Main Site': 'https://pyroballpcbs.com'
 
 google_analytics: ['UA-135668867-1', 'pyroballpcbs.com']
