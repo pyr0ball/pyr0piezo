@@ -56,7 +56,7 @@ nav:
       - 'RAMPS 1.4': 'tutorials/wiring/ramps-1.4.md'
   - 'Resources':
     - 'Schematics':
-      - 'EasyPiezi': 'drawings\pinouts\easypiezi\easypiezi-pinouts.md'
+      - 'EasyPiezi': 'drawings/pinouts/easypiezi/easypiezi-pinouts.md'
       - 'FFC Direct Extruder':
         - 'FFC Direct Extruder 1.0.2': 'schematics/Pyr0-Piezo_FFC_Extruder_Board1.0.2_Schematic.pdf'
         - 'FFC Direct Extruder 1.1.0': 'schematics/Pyr0-Piezo_FFC_Extruder_Board1.1.0_Schematic.pdf'
