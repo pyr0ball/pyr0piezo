@@ -1,15 +1,15 @@
 ### EasyPiezi v1.1.1 Pinout
 
-<object data="./Pyr0-Piezo_Standalone_PT100_v1.1.1_Connector_Pinout.pdf" type="application/pdf" width="100%" height="450px">
-    <embed src="./Pyr0-Piezo_Standalone_PT100_v1.1.1_Connector_Pinout.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="./Pyr0-Piezo_Standalone_PT100_v1.1.1_Connector_Pinout.pdf">Download PDF</a>.</p>
+<object data="../Pyr0-Piezo_Standalone_PT100_v1.1.1_Connector_Pinout.pdf" type="application/pdf" width="100%" height="450px">
+    <embed src="../Pyr0-Piezo_Standalone_PT100_v1.1.1_Connector_Pinout.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="../Pyr0-Piezo_Standalone_PT100_v1.1.1_Connector_Pinout.pdf">Download PDF</a>.</p>
     </embed>
 </object>
 
 ### EasyPiezi v2.0.0 Pinout
 
-<object data="./Pyr0-Piezo_Standalone_PT100_v2.0.0_Connector_Pinout.pdf" type="application/pdf" width="100%" height="450px">
-    <embed src="./Pyr0-Piezo_Standalone_PT100_v2.0.0_Connector_Pinout.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="./Pyr0-Piezo_Standalone_PT100_v2.0.0_Connector_Pinout.pdf">Download PDF</a>.</p>
+<object data="../Pyr0-Piezo_Standalone_PT100_v2.0.0_Connector_Pinout.pdf" type="application/pdf" width="100%" height="450px">
+    <embed src="../Pyr0-Piezo_Standalone_PT100_v2.0.0_Connector_Pinout.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="../Pyr0-Piezo_Standalone_PT100_v2.0.0_Connector_Pinout.pdf">Download PDF</a>.</p>
     </embed>
 </object>

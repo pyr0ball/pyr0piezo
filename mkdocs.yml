@@ -56,13 +56,9 @@ nav:
       - 'RAMPS 1.4': 'tutorials/wiring/ramps-1.4.md'
   - 'Resources':
     - 'Schematics':
-      - 'EasyPiezi': 'drawings/pinouts/easypiezi/easypiezi-pinouts.md'
-      - 'FFC Direct Extruder':
-        - 'FFC Direct Extruder 1.0.2': 'schematics/Pyr0-Piezo_FFC_Extruder_Board1.0.2_Schematic.pdf'
-        - 'FFC Direct Extruder 1.1.0': 'schematics/Pyr0-Piezo_FFC_Extruder_Board1.1.0_Schematic.pdf'
-      - 'FFC Direct Breakout':
-        - 'FFC Direct Breakout 1.0.0': 'schematics/Pyr0-Piezo_FFC_Breakout_1.0.0_Schematic.pdf'
-        - 'FFC Direct Breakout 2.0.0': 'schematics/Pyr0-Piezo_FFC_Breakout_2.0.0_Schematic.pdf'
+      - 'EasyPiezi': 'schematics/easypiezi/easypiezi-schematics.md'
+      - 'FFC Direct Extruder': 'schematics/ffc-direct-extruder/ffc-direct-extruder-schematics.md'
+      - 'FFC Direct Breakout': 'schematics/ffc-direct-breakout/ffc-direct-breakout-schematics.md'
     - 'Drawings':
       - 'Board Layouts':
         - 'EasyPiezi':
@@ -73,12 +69,9 @@ nav:
           - 'FFC Direct Extruder 1.1.0 Top': 'drawings/layouts/ffc-direct-extruder/Pyr0-Piezo_FFC_Extruder_Boardv1.1.0_Components_Front.pdf'
         #- 'FFC Direct Breakout':
       - 'Connector Pinouts':
-        - 'EasyPiezi':
-          - 'EasyPiezi 1.1.1': 'drawings/pinouts/easypiezi/Pyr0-Piezo_Standalone_PT100_v1.1.1_Connector_Pinout.pdf'
-          - 'EasyPiezi 2.0.0': 'drawings/pinouts/easypiezi/Pyr0-Piezo_Standalone_PT100_v2.0.0_Connector_Pinout.pdf'
-        #- 'FFC Direct Extruder':
-        - 'FFC Direct Breakout':
-          - 'FFC Direct Breakout 1.0.0': 'drawings/pinouts/ffc-direct-breakouts/Pyr0-Piezo_FFC_Direct_Extruder_Breakout_1.0.0_Connector_Pinout.pdf'
+        - 'EasyPiezi': 'drawings/pinouts/easypiezi/easypiezi-pinouts.md'
+        - 'FFC Direct Extruder': 'drawings/pinouts/ffc-direct-extruder/ffc-direct-extruder-pinouts.md'
+        - 'FFC Direct Breakout': 'drawings/pinouts/ffc-direct-breakouts/ffc-direct-breakout-pinouts.md'
       - 'Test Pads Layout': 'drawings/pyro-piezo-test-pads.md'
   - 'Main Site': 'https://pyroballpcbs.com'
 
