@@ -21,6 +21,14 @@ nav:
   - 'FAQ': 'faq.md'
   - 'Installation':
     - 'Start Here': 'installation.md'
+    - 'Wiring Diagrams':
+      - 'Creality 1284P': 'tutorials/wiring/creality-1284.md'
+      - 'Duet Wifi': 'tutorials/wiring/duet-wifi.md'
+      - 'MKS Family':
+        - 'MKS Base 1.4': 'tutorials/wiring/mks-base.md'
+        - 'MKS Gen L': 'tutorials/wiring/mks-gen-l.md'
+        - 'MKS SBase': 'tutorials/wiring/mks-sbase.md'
+      - 'RAMPS 1.4': 'tutorials/wiring/ramps-1.4.md'
     - 'Printer Specific':
       - 'Core XY':
         - 'Hypercube Evo (On Head)': 'mounts/core-xy/hevo-on-head.md'
@@ -46,14 +54,6 @@ nav:
     - 'Firmware Config':
       - 'Marlin': 'tutorials/config/printer-firmware/marlin/marlin-config.md'
       - 'Klipper': 'tutorials/config/printer-firmware/klipper/klipper-config.md'
-    - 'Wiring Diagrams':
-      - 'Creality 1284P': 'tutorials/wiring/creality-1284.md'
-      - 'Duet Wifi': 'tutorials/wiring/duet-wifi.md'
-      - 'MKS Family':
-        - 'MKS Base 1.4': 'tutorials/wiring/mks-base.md'
-        - 'MKS Gen L': 'tutorials/wiring/mks-gen-l.md'
-        - 'MKS SBase': 'tutorials/wiring/mks-sbase.md'
-      - 'RAMPS 1.4': 'tutorials/wiring/ramps-1.4.md'
   - 'Resources':
     - 'Schematics':
       - 'EasyPiezi': 'schematics/easypiezi/easypiezi-schematics.md'
