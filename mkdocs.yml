@@ -61,10 +61,7 @@ nav:
       - 'FFC Direct Breakout': 'schematics/ffc-direct-breakout/ffc-direct-breakout-schematics.md'
     - 'Drawings':
       - 'Board Layouts':
-        - 'EasyPiezi':
-          - 'EasyPiezi 1.1.1': 'drawings/layouts/easypiezi/Pyr0-Piezo_Standalone_PT100_v1.1.1_Components_Layout.pdf'
-          - 'EasyPiezi 2.0.0': 'drawings/layouts/easypiezi/Pyr0-Piezo_Standalone_PT100_v2.0.0_Components_Layout.pdf'
-          - 'EasyPiezi 2.0.1': 'drawings/layouts/easypiezi/Pyr0-Piezo_Standalone_v2.0.1_Components_Layout.pdf'
+        - 'EasyPiezi': 'drawings/layouts/easypiezi/easypiezi-layouts.md'
         - 'FFC Direct Extruder':
           - 'FFC Direct Extruder 1.1.0 Top': 'drawings/layouts/ffc-direct-extruder/Pyr0-Piezo_FFC_Extruder_Boardv1.1.0_Components_Front.pdf'
         #- 'FFC Direct Breakout':
