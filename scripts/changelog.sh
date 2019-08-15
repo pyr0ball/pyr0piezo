@@ -66,19 +66,19 @@ read -r -d '' changelogmdadd << EOF
 
 Changelog updated $timestamp
 
-#### Added Features
+ *Added Features*
 
 $featureadd
 
 ------------------------------------
 
-#### Bugfixes
+ *Bugfixes*
 
 $bugfixes
 
 ------------------------------------
 
-#### Full Changelog
+ *Full Changelog*
 
 $changelog
 EOF
@@ -94,4 +94,3 @@ sed -i "/Logs/a \ \ \ \ \ \ \ \ - '${first_tag}-${last_tag}': 'changelogs/change
 
 # Append the changelog content to the full list page
 echo -e "$changelogmdadd" >> ../docs/changelog.md
-
