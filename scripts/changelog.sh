@@ -10,9 +10,9 @@
 # ./changelog.sh rev.2.0.1 rev.2.1.1
 # ./changelog.sh b1d5817 02cd438 githun-username github project
 
-first-tag="${1}"
-last-tag="${2}"
-git-user="${3:-pyr0ball}"
-git-project="${4:-pyr0piezo}"
+first_tag="${1}"
+last_tag="${2}"
+git_user="${3:-pyr0ball}"
+git_project="${4:-pyr0piezo}"
 
-git log ${first-tag}...${last-tag} --pretty=format:"%s [view commit](http://github.com/${git-user}/${git-project}/commit/%H) " --reverse | grep "#changelog"
+git log ${first_tag}...${last_tag} --pretty=format:"%s [view commit](http://github.com/${git_user}/${git_project}/commit/%H) " --reverse | grep "#changelog"
