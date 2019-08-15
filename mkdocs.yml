@@ -73,6 +73,14 @@ nav:
     - Changelog:
       - Version List: 'changelog.md'
       - Logs:
+        - 'v2.1.1-v2.1.2': 'changelogs/changelog_2019-08-15_v2.1.1_v2.1.2.md'
+        - 'v2.0.2-v2.1.1': 'changelogs/changelog_2019-08-15_v2.0.2_v2.1.1.md'
+        - 'v2.0.1_hw-v2.0.2': 'changelogs/changelog_2019-08-15_v2.0.1_hw_v2.0.2.md'
+        - 'v2.0.1-v2.0.1_hw': 'changelogs/changelog_2019-08-15_v2.0.1_v2.0.1_hw.md'
+        - 'v2.0.0-v2.0.1': 'changelogs/changelog_2019-08-15_v2.0.0_v2.0.1.md'
+        - '76b4ba6-v2.0.0': 'changelogs/changelog_2019-08-15_76b4ba6_v2.0.0.md'
+        - 'cfa0abc-76b4ba6': 'changelogs/changelog_2019-08-15_cfa0abc_76b4ba6.md'
+        - '551fcb7-cfa0abc': 'changelogs/changelog_2019-08-15_551fcb7_cfa0abc.md'
 
   - 'Main Site': 'https://pyroballpcbs.com'
 
