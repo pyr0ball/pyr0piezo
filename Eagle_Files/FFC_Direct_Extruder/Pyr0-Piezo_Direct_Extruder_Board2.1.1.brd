@@ -170,7 +170,7 @@
 <layer number="255" name="Accent" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyYTEyMDdh" projecturn="a.cGVyc29uYWw6dWUyYTEyMDdhIzIwMTgxMTI5MTYyOTY3NjMx" f3durn="urn:adsk.wipprod:dm.lineage:kLqOE60LRyiDp0M3Uw-NMw" pcbguid="904c2048-57d9-4211-b646-dc029f43fb90" lastpulledtime="" lastsyncedchangeguid="950c35e8-8ae6-45e3-5c1a-f7b4efe43181"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyYTEyMDdh" projecturn="a.cGVyc29uYWw6dWUyYTEyMDdhIzIwMTgxMTI5MTYyOTY3NjMx" f3durn="urn:adsk.wipprod:dm.lineage:IceQULcSTEuML44lHUtPnQ" pcbguid="9717538e-3333-4b2a-9bb6-73dde84bc05d" lastpulledtime="" lastsyncedchangeguid="c655b427-4710-e37b-47c9-5bdb8d42f7ed"/>
 <plain>
 <wire x1="24.35" y1="2" x2="41.35" y2="19" width="0.1524" layer="20"/>
 <wire x1="41.35" y1="19" x2="42.672" y2="20.066" width="0.15" layer="20" curve="-12.237784"/>
@@ -6687,7 +6687,7 @@ Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <wire x1="16.75" y1="-5.75" x2="-2.75" y2="-5.75" width="0.127" layer="22"/>
 <text x="7" y="2" size="1.27" layer="25" font="vector" align="bottom-center">&gt;NAME</text>
 </package>
-<package name="FH12-40S-0.5SH" urn="urn:adsk.eagle:footprint:7232/1" library_version="98">
+<package name="FH12-40S-0.5SH" urn="urn:adsk.eagle:footprint:12330673/1" library_version="100">
 <description>&lt;b&gt;0.5mm Pitch Connectors For FPC/FFC&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data sheet&lt;/a&gt;&lt;p&gt;</description>
 <wire x1="-11.45" y1="0.5" x2="-11.95" y2="0.5" width="0.2032" layer="51"/>
@@ -6758,7 +6758,6 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <smd name="39" x="9.25" y="3.25" dx="0.3" dy="1.3" layer="1" stop="no" cream="no"/>
 <smd name="40" x="9.75" y="3.25" dx="0.3" dy="1.3" layer="1" stop="no" cream="no"/>
 <text x="-11.4476" y="4.095" size="1.27" layer="25">&gt;NAME</text>
-<text x="-10.2476" y="-0.3258" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-9.95" y1="2.55" x2="-9.55" y2="3.95" layer="29"/>
 <rectangle x1="-9.875" y1="2.625" x2="-9.625" y2="3.875" layer="31"/>
 <rectangle x1="-9.45" y1="2.55" x2="-9.05" y2="3.95" layer="29"/>
@@ -6986,14 +6985,14 @@ Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <packageinstance name="28M1"/>
 </packageinstances>
 </package3d>
-<package3d name="FFC-15P-1MM" urn="urn:adsk.eagle:package:12330556/1" type="box" library_version="98">
+<package3d name="FFC-15P-1MM" urn="urn:adsk.eagle:package:12330556/2" type="model" library_version="100">
 <packageinstances>
 <packageinstance name="FFC-15P-1MM"/>
 </packageinstances>
 </package3d>
-<package3d name="FH12-40S-0.5SH" urn="urn:adsk.eagle:package:7313/1" type="box" library_version="98">
-<description>0.5mm Pitch Connectors For FPC/FFC
-Source: Data sheet</description>
+<package3d name="FH12-40S-0.5SH" urn="urn:adsk.eagle:package:12330674/2" type="model" library_version="100">
+<description>&lt;b&gt;0.5mm Pitch Connectors For FPC/FFC&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data sheet&lt;/a&gt;&lt;p&gt;</description>
 <packageinstances>
 <packageinstance name="FH12-40S-0.5SH"/>
 </packageinstances>
@@ -7536,10 +7535,10 @@ design rules under a new name.</description>
 <attribute name="NAME" x="13.97" y="19.558" size="0.6096" layer="26" font="vector" ratio="11" rot="MR0"/>
 <attribute name="VALUE" x="11.7475" y="19.3675" size="0.6096" layer="28" font="vector" ratio="11" rot="MR180"/>
 </element>
-<element name="J1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="FFC-15P-1MM" package3d_urn="urn:adsk.eagle:package:12330556/1" value="FFC-15P-1MM" x="6.985" y="27.305" smashed="yes" rot="R270">
+<element name="J1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="FFC-15P-1MM" package3d_urn="urn:adsk.eagle:package:12330556/2" value="FFC-15P-1MM" x="6.985" y="27.305" smashed="yes" rot="R270">
 <attribute name="NAME" x="8.985" y="20.305" size="1.27" layer="25" font="vector" rot="R270" align="bottom-center"/>
 </element>
-<element name="X1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="FH12-40S-0.5SH" package3d_urn="urn:adsk.eagle:package:7313/1" value="FFC-40P-0.5SH" x="3.8735" y="28.1305" smashed="yes" rot="MR90">
+<element name="X1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="FH12-40S-0.5SH" package3d_urn="urn:adsk.eagle:package:12330674/2" value="FFC-40P-0.5SH" x="3.8735" y="28.1305" smashed="yes" rot="MR90">
 <attribute name="MF" value="" x="3.8735" y="28.1305" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="MPN" value="FH12-40S-0.5SH(55)" x="3.8735" y="28.1305" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="NAME" x="7.9685" y="16.6829" size="1.27" layer="26" rot="MR90"/>
@@ -7643,7 +7642,7 @@ design rules under a new name.</description>
 <via x="31.893" y="24.2155" extent="1-16" drill="0.3"/>
 <via x="27.702" y="24.533" extent="1-16" drill="0.3"/>
 <via x="11.3" y="26.2575" extent="1-16" drill="0.3"/>
-<via x="5.2675" y="34.5125" extent="1-16" drill="0.3"/>
+<via x="16.1175" y="30.3625" extent="1-16" drill="0.3"/>
 <via x="15.8085" y="22.5745" extent="1-16" drill="0.3"/>
 <via x="22.0315" y="20.098" extent="1-16" drill="0.3"/>
 <via x="25.5875" y="16.2245" extent="1-16" drill="0.3"/>
@@ -8040,10 +8039,7 @@ design rules under a new name.</description>
 <signal name="SPI_SCK">
 <contactref element="U1" pad="15"/>
 <contactref element="SCK" pad="TP"/>
-<wire x1="24.2938" y1="23.888" x2="24.243" y2="23.001" width="0.1524" layer="1"/>
-<wire x1="24.243" y1="23.001" x2="25.019" y2="22.225" width="0.1524" layer="1"/>
-<wire x1="25.019" y1="22.225" x2="25.019" y2="21.209" width="0.1524" layer="1"/>
-<wire x1="25.019" y1="21.209" x2="25.206525" y2="21.021475" width="0.1524" layer="1"/>
+<wire x1="25.206525" y1="21.021475" x2="25.019" y2="21.209" width="0.1524" layer="1"/>
 <via x="25.206525" y="21.021475" extent="1-16" drill="0.35"/>
 <wire x1="25.206525" y1="21.021475" x2="25.206525" y2="19.99901875" width="0.1524" layer="16"/>
 <wire x1="28.2321" y1="16.97344375" x2="28.2321" y2="11.4949875" width="0.1524" layer="16"/>
@@ -8061,6 +8057,10 @@ design rules under a new name.</description>
 <wire x1="21.170528125" y1="7.200528125" x2="20.32" y2="6.35" width="0.1524" layer="1"/>
 <via x="20.32" y="6.35" extent="1-16" drill="0.35"/>
 <wire x1="26.25105" y1="9.876" x2="25.6767125" y2="9.876" width="0.1524" layer="1"/>
+<wire x1="24.4362" y1="23.7456" x2="24.2938" y2="23.888" width="0.1524" layer="1"/>
+<wire x1="25.019" y1="22.33720625" x2="24.4362" y2="22.92000625" width="0.1524" layer="1"/>
+<wire x1="24.4362" y1="22.92000625" x2="24.4362" y2="23.7456" width="0.1524" layer="1"/>
+<wire x1="25.019" y1="21.209" x2="25.019" y2="22.33720625" width="0.1524" layer="1"/>
 </signal>
 <signal name="SPI_MISO">
 <contactref element="U1" pad="14"/>

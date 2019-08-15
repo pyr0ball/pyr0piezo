@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.1">
+<eagle version="9.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -7076,14 +7076,14 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="1012259" x="66.073890625" y="-12.06810625" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="57H4718" x="66.073890625" y="-12.06810625" size="1.778" layer="27" display="off"/>
 </element>
-<element name="U2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="SOT89" package3d_urn="urn:adsk.eagle:package:6899241/6" value="L78L05ACU" x="5.349796875" y="-9.1175" smashed="yes" rot="R180">
-<attribute name="AVAILABILITY" value="Unavailable" x="-12.43020625" y="-5.307503125" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="DESCRIPTION" value=" Voltage regulator; fixed; 5V; 0.1A; SOT89; SMD; Package: reel, tape " x="-12.43020625" y="-5.307503125" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="STMicroelectronics" x="-12.43020625" y="-5.307503125" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MP" value="L78L05ACU-TR" x="-12.43020625" y="-5.307503125" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="3.020575" y="-10.97146875" size="1.016" layer="25" font="vector" ratio="11" rot="R270"/>
-<attribute name="PACKAGE" value="None" x="-12.43020625" y="-5.307503125" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="PRICE" value="None" x="-12.43020625" y="-5.307503125" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="U2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="SOT89" package3d_urn="urn:adsk.eagle:package:6899241/6" value="L78L05ACU" x="11.064796875" y="4.2175" smashed="yes" rot="R180">
+<attribute name="AVAILABILITY" value="Unavailable" x="-6.71520625" y="8.027496875" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="DESCRIPTION" value=" Voltage regulator; fixed; 5V; 0.1A; SOT89; SMD; Package: reel, tape " x="-6.71520625" y="8.027496875" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="STMicroelectronics" x="-6.71520625" y="8.027496875" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MP" value="L78L05ACU-TR" x="-6.71520625" y="8.027496875" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="8.735575" y="2.36353125" size="1.016" layer="25" font="vector" ratio="11" rot="R270"/>
+<attribute name="PACKAGE" value="None" x="-6.71520625" y="8.027496875" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="PRICE" value="None" x="-6.71520625" y="8.027496875" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="Z_TRG" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="SEEED-LED_LED-0603" package3d_urn="urn:adsk.eagle:package:5224536/3" value="" x="29.977978125" y="11.607921875" smashed="yes" rot="R90">
 <attribute name="NAME" x="29.16561875" y="11.3335625" size="0.6096" layer="25" font="vector" ratio="11" rot="R90" align="bottom-center"/>
@@ -7226,7 +7226,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="17.17225" y="7.66625" size="0.8128" layer="27" font="vector" ratio="11" rot="R90"/>
 </element>
 <element name="U$1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="LOGO-PYR0BALL-SS-6MM" value="" x="23.495" y="5.08" smashed="yes" rot="MR0"/>
-<element name="U$2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="LOGO-PYR0BALL-SS-6MM" value="" x="35.179" y="19.1135" smashed="yes" rot="R45"/>
+<element name="U$2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="LOGO-PYR0BALL-SS-6MM" value="" x="27.559" y="9.5885" smashed="yes" rot="R45"/>
 <element name="D1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="DO-219AC" package3d_urn="urn:adsk.eagle:package:8452796/2" value="ZENER_DIODE_PLZ5V1C" x="14.097" y="8.128" smashed="yes" rot="R270"/>
 <element name="F1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0402" package3d_urn="urn:adsk.eagle:package:7115182/2" value="500mA" x="10.668" y="8.001" smashed="yes" rot="R90">
 <attribute name="MPN" value="RC0402JR-070RL" x="4.953" y="3.556" size="1.778" layer="27" rot="R90" display="off"/>
@@ -7373,11 +7373,11 @@ design rules under a new name.</description>
 <attribute name="NAME" x="23.368109375" y="11.556959375" size="1.00001875" layer="25" rot="R180"/>
 <attribute name="PACKAGE" value="None" x="19.685" y="10.795" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="U$3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="SOT-563" package3d_urn="urn:adsk.eagle:package:9309068/2" value="MOSFET_ARRAY_EMK34" x="-4.445" y="-2.54" smashed="yes">
-<attribute name="NAME" x="-5.461" y="-1.27" size="0.6096" layer="25" font="vector" ratio="11"/>
+<element name="U$3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="SOT-563" package3d_urn="urn:adsk.eagle:package:9309068/2" value="MOSFET_ARRAY_EMK34" x="26.67" y="16.51" smashed="yes">
+<attribute name="NAME" x="25.654" y="17.78" size="0.6096" layer="25" font="vector" ratio="11"/>
 </element>
-<element name="R2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="EXBN8V-L" package3d_urn="urn:adsk.eagle:package:9000147/3" value="RESISTOR_NETWORK_X40804_L" x="-4.445" y="-5.08" smashed="yes" rot="R270">
-<attribute name="NAME" x="-3.3909" y="-6.06425" size="0.6096" layer="25" font="vector" ratio="11" rot="SR180"/>
+<element name="R2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="EXBN8V-L" package3d_urn="urn:adsk.eagle:package:9000147/3" value="RESISTOR_NETWORK_X40804_L" x="29.845" y="16.51" smashed="yes">
+<attribute name="NAME" x="30.82925" y="17.5641" size="0.6096" layer="25" font="vector" ratio="11" rot="SR270"/>
 </element>
 </elements>
 <signals>
@@ -7549,8 +7549,8 @@ design rules under a new name.</description>
 <wire x1="9.0055" y1="16.638" x2="13.2890875" y2="18.73865625" width="0" layer="19" extent="1-1"/>
 <wire x1="6.54185" y1="18.430271875" x2="9.0055" y2="16.638" width="0" layer="19" extent="1-1"/>
 <wire x1="3.0956375" y1="16.889059375" x2="6.54185" y2="18.430271875" width="0" layer="19" extent="1-1"/>
-<wire x1="5.349796875" y1="-7.3905" x2="9.1162625" y2="-2.847878125" width="0" layer="19" extent="1-1"/>
-<wire x1="5.349796875" y1="-10.0575" x2="5.349796875" y2="-7.3905" width="0" layer="19" extent="1-1"/>
+<wire x1="11.064796875" y1="5.9445" x2="9.1162625" y2="-2.847878125" width="0" layer="19" extent="1-1"/>
+<wire x1="11.064796875" y1="3.2775" x2="11.064796875" y2="5.9445" width="0" layer="19" extent="1-1"/>
 <wire x1="-1.26479375" y1="9.033159375" x2="4.463853125" y2="3.59795625" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="Z_MIN_TRIG">
@@ -7659,8 +7659,8 @@ design rules under a new name.</description>
 <wire x1="12.065" y1="11.325415625" x2="11.665590625" y2="11.724825" width="0.1524" layer="1"/>
 <wire x1="17.8584875" y1="8.7266875" x2="13.721475" y2="8.7266875" width="0.1524" layer="16"/>
 <wire x1="12.065" y1="10.3831625" x2="12.065" y2="11.325415625" width="0.1524" layer="1"/>
-<wire x1="-3.695" y1="-2.04" x2="12.065" y2="10.3831625" width="0" layer="19" extent="1-1"/>
-<wire x1="-3.695" y1="-4.5022" x2="-3.695" y2="-2.04" width="0" layer="19" extent="1-1"/>
+<wire x1="27.42" y1="17.01" x2="12.065" y2="10.3831625" width="0" layer="19" extent="1-1"/>
+<wire x1="29.2672" y1="17.26" x2="27.42" y2="17.01" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SCL">
 <contactref element="U$3" pad="P$3"/>
@@ -7675,8 +7675,8 @@ design rules under a new name.</description>
 <via x="12.158365625" y="9.431634375" extent="1-16" drill="0.35"/>
 <wire x1="12.158365625" y1="9.431634375" x2="10.78170625" y2="10.80829375" width="0.1524" layer="1"/>
 <wire x1="10.78170625" y1="10.80829375" x2="10.78170625" y2="10.840940625" width="0.1524" layer="1"/>
-<wire x1="-5.195" y1="-3.04" x2="10.78170625" y2="10.80829375" width="0" layer="19" extent="1-1"/>
-<wire x1="-5.195" y1="-4.5022" x2="-5.195" y2="-3.04" width="0" layer="19" extent="1-1"/>
+<wire x1="25.92" y1="16.01" x2="10.78170625" y2="10.80829375" width="0" layer="19" extent="1-1"/>
+<wire x1="29.2672" y1="15.76" x2="25.92" y2="16.01" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="TRG_LED">
 <contactref element="Z_TRG" pad="+"/>
@@ -7793,9 +7793,9 @@ design rules under a new name.</description>
 <wire x1="13.52543125" y1="10.232734375" x2="24.431134375" y2="13.4027" width="0" layer="19" extent="16-16"/>
 <wire x1="14.097" y1="6.978" x2="12.26315" y2="7.04085" width="0" layer="19" extent="1-16"/>
 <wire x1="4.8895" y1="-1.0875" x2="14.097" y2="6.978" width="0" layer="19" extent="1-16"/>
-<wire x1="6.848796875" y1="-7.1365" x2="10.867753125" y2="5.782515625" width="0" layer="19" extent="1-16"/>
-<wire x1="-3.695" y1="-5.6578" x2="6.848796875" y2="-7.1365" width="0" layer="19" extent="1-1"/>
-<wire x1="-5.195" y1="-5.6578" x2="-3.695" y2="-5.6578" width="0" layer="19" extent="1-1"/>
+<wire x1="12.563796875" y1="6.1985" x2="10.867753125" y2="5.782515625" width="0" layer="19" extent="1-16"/>
+<wire x1="30.4228" y1="17.26" x2="12.563796875" y2="6.1985" width="0" layer="19" extent="1-1"/>
+<wire x1="30.4228" y1="15.76" x2="30.4228" y2="17.26" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="GAIN_OUT">
 <contactref element="R3" pad="2"/>
@@ -7948,7 +7948,7 @@ design rules under a new name.</description>
 <wire x1="11.451790625" y1="7.852209375" x2="11.279290625" y2="7.852209375" width="0.4064" layer="16"/>
 <wire x1="11.279290625" y1="7.852209375" x2="11.1305" y2="8.001" width="0.4064" layer="16"/>
 <via x="11.1305" y="8.001" extent="1-16" drill="0.35"/>
-<wire x1="3.850796875" y1="-7.1365" x2="11.279290625" y2="7.852209375" width="0" layer="19" extent="1-16"/>
+<wire x1="9.565796875" y1="6.1985" x2="11.279290625" y2="7.852209375" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="AMP_VCC">
 <contactref element="R21" pad="1"/>
@@ -8157,21 +8157,21 @@ design rules under a new name.</description>
 <signal name="SDA3V3">
 <contactref element="U$3" pad="P$1"/>
 <contactref element="R2" pad="3"/>
-<wire x1="-4.695" y1="-4.5022" x2="-5.195" y2="-2.04" width="0" layer="19" extent="1-1"/>
+<wire x1="29.2672" y1="16.26" x2="25.92" y2="17.01" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SCL3V3">
 <contactref element="U$3" pad="P$4"/>
 <contactref element="R2" pad="2"/>
-<wire x1="-4.195" y1="-4.5022" x2="-3.695" y2="-3.04" width="0" layer="19" extent="1-1"/>
+<wire x1="29.2672" y1="16.76" x2="27.42" y2="16.01" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+3.3V">
 <contactref element="R2" pad="6"/>
 <contactref element="R2" pad="7"/>
 <contactref element="U$3" pad="P$2"/>
 <contactref element="U$3" pad="P$5"/>
-<wire x1="-4.195" y1="-5.6578" x2="-4.695" y2="-5.6578" width="0" layer="19" extent="1-1"/>
-<wire x1="-5.195" y1="-2.54" x2="-4.695" y2="-5.6578" width="0" layer="19" extent="1-1"/>
-<wire x1="-3.695" y1="-2.54" x2="-5.195" y2="-2.54" width="0" layer="19" extent="1-1"/>
+<wire x1="30.4228" y1="16.76" x2="30.4228" y2="16.26" width="0" layer="19" extent="1-1"/>
+<wire x1="25.92" y1="16.51" x2="30.4228" y2="16.26" width="0" layer="19" extent="1-1"/>
+<wire x1="27.42" y1="16.51" x2="25.92" y2="16.51" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SWCLK">
 <contactref element="U4" pad="31"/>
