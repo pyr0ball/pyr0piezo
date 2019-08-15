@@ -81,6 +81,8 @@ $bugfixes
  *Full Changelog*
 
 $changelog
+
+------------------------------------
 EOF
 
 # Change directory to script location to prepare for editing nav content
