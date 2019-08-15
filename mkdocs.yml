@@ -70,6 +70,10 @@ nav:
         - 'FFC Direct Extruder': 'drawings/pinouts/ffc-direct-extruder/ffc-direct-extruder-pinouts.md'
         - 'FFC Direct Breakout': 'drawings/pinouts/ffc-direct-breakouts/ffc-direct-breakout-pinouts.md'
       - 'Test Pads Layout': 'drawings/pyro-piezo-test-pads.md'
+    - Changelog:
+      - Version List: 'changelog.md'
+      - Logs:
+
   - 'Main Site': 'https://pyroballpcbs.com'
 
 google_analytics: ['UA-135668867-1', 'pyroballpcbs.com']
