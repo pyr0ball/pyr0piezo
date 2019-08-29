@@ -138,7 +138,7 @@ void loop() {
     serialReply();
 
     // Sets trigger output state to false after completing loop
-    digitalWrite(TRG_OUT, HIGH);
+    //digitalWrite(TRG_OUT, HIGH);
     sensorHReading = 0;
   }
 }
