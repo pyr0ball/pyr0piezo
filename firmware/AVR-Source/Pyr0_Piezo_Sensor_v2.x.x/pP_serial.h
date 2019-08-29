@@ -160,6 +160,29 @@ void serialReply() {
     Serial.print(" ");
     Serial.println(senseInt);
 
+    Serial.print("Gain Factor:");
+    Serial.print(GAIN_FACTOR);
+    switch (GAIN_FACTOR) {
+      case 0:
+        Serial.println(" 3x");
+        break;
+      case 1:
+        Serial.println(" 3.5x");
+        break;
+      case 2:
+        Serial.println(" 4.33x");
+        break;
+      case 3:
+        Serial.println(" 6x");
+        break;
+      case 4:
+        Serial.println(" 11x");
+        break;
+      default:
+        Serial.println(" INVALID");
+        break;
+    }
+
   #endif
   
   Serial.print("Delay:");
