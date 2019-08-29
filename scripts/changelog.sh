@@ -26,13 +26,13 @@ git_user="${3:-pyr0ball}"
 git_project="${4:-pyr0piezo}"
 
 # Gather full changelog
-changelog=$(git log ${first_tag}...${last_tag} --pretty=format:"- %s [view commit](http://github.com/${git_user}/${git_project}/commit/%H) \n" --reverse )
+changelog=$(git log ${first_tag}...${last_tag} --pretty=format:"- %s [view commit](http://github.com/${git_user}/${git_project}/commit/%H) \n" --reverse | sed 's/#bugfix//g' | sed 's/#featureadd//g')
 
 # Gather bugfixes
-bugfixes=$(git log ${first_tag}...${last_tag} --pretty=format:"- %s [view commit](http://github.com/${git_user}/${git_project}/commit/%H) \n" --reverse | grep "#bugfix" )
+bugfixes=$(git log ${first_tag}...${last_tag} --pretty=format:"- %s [view commit](http://github.com/${git_user}/${git_project}/commit/%H) \n" --reverse | grep "#bugfix" | sed 's/#bugfix//g' )
 
 # Gather added features
-featureadd=$(git log ${first_tag}...${last_tag} --pretty=format:"- %s [view commit](http://github.com/${git_user}/${git_project}/commit/%H) \n" --reverse | grep "#featureadd")
+featureadd=$(git log ${first_tag}...${last_tag} --pretty=format:"- %s [view commit](http://github.com/${git_user}/${git_project}/commit/%H) \n" --reverse | grep "#featureadd" | sed 's/#featureadd//g' )
 
 # Build a new nav bar entry for the changelog
 navadd="        - Changelog $first_tag to $last_tag: /'changelogs/changelog_${date_pretty}_${first_tag}_${last_tag}.md/'"
