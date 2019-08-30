@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.0">
+<eagle version="9.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -1006,7 +1006,7 @@ Metric Code Size 1608</description>
 <rectangle x1="-1.4732" y1="0.2032" x2="-1.3462" y2="0.3302" layer="51"/>
 <rectangle x1="-1.1176" y1="0.5842" x2="-0.9906" y2="0.7112" layer="51"/>
 </package>
-<package name="SJM" urn="urn:adsk.eagle:footprint:8763766/2" locally_modified="yes" library_version="94" library_locally_modified="yes">
+<package name="SJM" urn="urn:adsk.eagle:footprint:8763766/3" library_version="102">
 <description>&lt;b&gt;Solder jumper&lt;/b&gt;</description>
 <wire x1="1.016" y1="0" x2="1.524" y2="0" width="0.1524" layer="51"/>
 <wire x1="-1.016" y1="0" x2="-1.524" y2="0" width="0.1524" layer="51"/>
@@ -1125,7 +1125,7 @@ Metric Code Size 1608</description>
 <rectangle x1="-1.4625" y1="2.2425" x2="-1.1375" y2="3.315" layer="51"/>
 <rectangle x1="-2.1125" y1="2.2425" x2="-1.7875" y2="3.315" layer="51"/>
 </package>
-<package name="QFN16" urn="urn:adsk.eagle:footprint:8766126/1" library_version="87">
+<package name="QFN16" urn="urn:adsk.eagle:footprint:8766126/1" library_version="102">
 <description>&lt;b&gt;RTE (S-PQFP-N16)&lt;/b&gt; 3x3 mm&lt;p&gt;
 Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.1016" layer="51"/>
@@ -1713,7 +1713,7 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <vertex x="1.8415" y="0.762"/>
 </polygon>
 </package>
-<package name="0606_LED" urn="urn:adsk.eagle:footprint:9308793/1" library_version="83">
+<package name="0606_LED" urn="urn:adsk.eagle:footprint:9308793/2" library_version="102">
 <description>&lt;h3&gt;0606 - LED SMT&lt;/h3&gt;
 &lt;p&gt;Specifications:
 &lt;ul&gt;&lt;li&gt;Pin count:4&lt;/li&gt;
@@ -1735,16 +1735,21 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <wire x1="-0.8" y1="-0.75" x2="-0.8" y2="0.75" width="0.127" layer="51"/>
 <wire x1="-0.05" y1="-0.75" x2="0.05" y2="-0.75" width="0.2032" layer="21"/>
 <wire x1="-0.05" y1="0.75" x2="0.05" y2="0.75" width="0.2032" layer="21"/>
-<wire x1="1.4" y1="-0.2" x2="1.4" y2="0.2" width="0.127" layer="21"/>
-<wire x1="1.4" y1="-0.2" x2="1.5" y2="-0.1" width="0.127" layer="21"/>
-<wire x1="1.5" y1="-0.1" x2="1.6" y2="0" width="0.127" layer="21"/>
-<wire x1="1.6" y1="0" x2="1.5" y2="0.1" width="0.127" layer="21"/>
-<wire x1="1.5" y1="0.1" x2="1.4" y2="0.2" width="0.127" layer="21"/>
-<wire x1="1.5" y1="-0.1" x2="1.5" y2="0.1" width="0.127" layer="21"/>
+<wire x1="-1.4" y1="0.2" x2="-1.4" y2="-0.2" width="0.127" layer="21"/>
+<wire x1="-1.4" y1="0.2" x2="-1.5" y2="0.1" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="0.1" x2="-1.6" y2="0" width="0.127" layer="21"/>
+<wire x1="-1.6" y1="0" x2="-1.5" y2="-0.1" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="-0.1" x2="-1.4" y2="-0.2" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="0.1" x2="-1.5" y2="-0.1" width="0.127" layer="21"/>
 <circle x="-0.5" y="0.4" radius="0.1" width="0" layer="51"/>
 <circle x="-1.4525" y="0.7175" radius="0.1" width="0" layer="21"/>
 <text x="0" y="0.9525" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-0.9525" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<polygon width="0.127" layer="21">
+<vertex x="0.254" y="-0.635"/>
+<vertex x="0.254" y="0.635"/>
+<vertex x="-0.127" y="0"/>
+</polygon>
 </package>
 <package name="4PLCC" urn="urn:adsk.eagle:footprint:9308794/2" library_version="83">
 <smd name="P$1" x="-0.75" y="0.55" dx="1" dy="0.8" layer="1"/>
@@ -2292,7 +2297,7 @@ Metric Code Size 1608</description>
 <packageinstance name="SJW"/>
 </packageinstances>
 </package3d>
-<package3d name="SJM" urn="urn:adsk.eagle:package:8763769/3" locally_modified="yes" type="box" library_version="94" library_locally_modified="yes">
+<package3d name="SJM" urn="urn:adsk.eagle:package:8763769/4" type="box" library_version="102">
 <description>&lt;b&gt;Solder jumper&lt;/b&gt;</description>
 <packageinstances>
 <packageinstance name="SJM"/>
@@ -2316,7 +2321,7 @@ Metric Code Size 1608</description>
 <packageinstance name="SSOP14"/>
 </packageinstances>
 </package3d>
-<package3d name="QFN16" urn="urn:adsk.eagle:package:8766128/2" type="model" library_version="87">
+<package3d name="QFN16" urn="urn:adsk.eagle:package:8766128/2" type="model" library_version="102">
 <description>&lt;b&gt;RTE (S-PQFP-N16)&lt;/b&gt; 3x3 mm&lt;p&gt;
 Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <packageinstances>
@@ -2383,7 +2388,7 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <packageinstance name="SPRING_CONTACT_3.48X1.10"/>
 </packageinstances>
 </package3d>
-<package3d name="LTST-C195KGJRKT" urn="urn:adsk.eagle:package:9308796/2" type="model" library_version="83">
+<package3d name="LTST-C195KGJRKT" urn="urn:adsk.eagle:package:9308796/3" type="model" library_version="102">
 <description>&lt;h3&gt;0606 - LED SMT&lt;/h3&gt;
 &lt;p&gt;Specifications:
 &lt;ul&gt;&lt;li&gt;Pin count:4&lt;/li&gt;
@@ -3092,7 +3097,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="CON-MOLEX-6P-1.25MM" urn="urn:adsk.eagle:component:9308888/2" prefix="X" library_version="87">
+<deviceset name="CON-MOLEX-6P-1.25MM" urn="urn:adsk.eagle:component:9308888/2" prefix="X" library_version="102">
 <description>&lt;b&gt;CONNECTOR&lt;/b&gt;&lt;p&gt;
 wire to board 1.25 mm (.049 inch) pitch header</description>
 <gates>
@@ -3777,7 +3782,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SJ" urn="urn:adsk.eagle:component:8763772/3" locally_modified="yes" prefix="SJ" uservalue="yes" library_version="94" library_locally_modified="yes">
+<deviceset name="SJ" urn="urn:adsk.eagle:component:8763772/4" prefix="SJ" uservalue="yes" library_version="102">
 <description>SMD solder &lt;b&gt;JUMPER&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="SJ" x="0" y="0"/>
@@ -3813,7 +3818,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 <connect gate="1" pin="2" pad="2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8763769/3"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8763769/4"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -3821,7 +3826,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="LM2902" urn="urn:adsk.eagle:component:8766129/3" prefix="U" library_version="87">
+<deviceset name="LM2902" urn="urn:adsk.eagle:component:8766129/3" prefix="U" library_version="102">
 <description>&lt;b&gt;Low power quad operational amplifier&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00000533.pdf"&gt; Data sgeet &lt;/a&gt;</description>
 <gates>
@@ -4136,7 +4141,7 @@ Source: &lt;a href="http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL
 </device>
 </devices>
 </deviceset>
-<deviceset name="LED-RGB-COM_ANO" urn="urn:adsk.eagle:component:9308797/4" prefix="D" library_version="87" library_locally_modified="yes">
+<deviceset name="LED-RGB-COM_ANO" urn="urn:adsk.eagle:component:9308797/5" prefix="D" library_version="102">
 <description>&lt;h3&gt;Everlight Electronics Co Ltd EAST1616RGBB4 0606 RGB LED&lt;/h3&gt;
 
 &lt;p&gt;&lt;li&gt;&lt;b&gt;Color:&lt;/b&gt; RGB&lt;/li&gt;
@@ -4163,7 +4168,7 @@ Source: &lt;a href="http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL
 <connect gate="G$1" pin="RED" pad="P$1"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:9308796/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9308796/3"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -4756,7 +4761,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="TP" urn="urn:adsk.eagle:component:27992/2" prefix="TP" library_version="2">
+<deviceset name="TP" urn="urn:adsk.eagle:component:27992/3" prefix="TP" library_version="3">
 <description>&lt;b&gt;Test pad&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="TP" x="0" y="0"/>
@@ -4771,6 +4776,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="19" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -4784,6 +4790,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="3" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -4797,6 +4804,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="12" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -4810,6 +4818,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -4823,6 +4832,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -4836,6 +4846,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="3" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -4849,6 +4860,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -4862,6 +4874,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -4875,6 +4888,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -4888,6 +4902,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -4901,6 +4916,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -4914,6 +4930,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -4927,6 +4944,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -4940,6 +4958,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -4953,6 +4972,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -4966,6 +4986,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -4979,6 +5000,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="3" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -4992,6 +5014,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="4" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5005,6 +5028,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5018,6 +5042,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5031,6 +5056,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5044,6 +5070,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5057,6 +5084,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5070,6 +5098,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5083,6 +5112,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5096,6 +5126,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5109,6 +5140,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5122,6 +5154,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5135,6 +5168,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5148,6 +5182,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5161,6 +5196,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5174,6 +5210,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5187,6 +5224,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5200,6 +5238,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5213,6 +5252,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5226,6 +5266,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5239,6 +5280,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5252,6 +5294,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="2" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5367,7 +5410,7 @@ DIN A3, landscape with location and doc. field</description>
 <part name="⏚" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP13SQ" package3d_urn="urn:adsk.eagle:package:27974/1" value="TPTP13SQ"/>
 <part name="D1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="DIODE_ZENER_PLZ5V1C" device="" package3d_urn="urn:adsk.eagle:package:8452796/2"/>
 <part name="F1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="500mA"/>
-<part name="SJ1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SJ" device="M" package3d_urn="urn:adsk.eagle:package:8763769/3"/>
+<part name="SJ1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SJ" device="M" package3d_urn="urn:adsk.eagle:package:8763769/4"/>
 <part name="C4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="0.1uF"/>
 <part name="U3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="LM2902" device="QT" package3d_urn="urn:adsk.eagle:package:8766128/2"/>
 <part name="PT100" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CON-MOLEX-2P-1.27MM" device="048" package3d_urn="urn:adsk.eagle:package:5807562/3"/>
@@ -5401,7 +5444,7 @@ DIN A3, landscape with location and doc. field</description>
 <part name="ADJ-" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP13SQ" package3d_urn="urn:adsk.eagle:package:9341723/2"/>
 <part name="PZ+" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP13SQ" package3d_urn="urn:adsk.eagle:package:9341723/2"/>
 <part name="U4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ATMEGA48/88/168/328PB" device="" package3d_urn="urn:adsk.eagle:package:9273057/3"/>
-<part name="LED" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="LED-RGB-COM_ANO" device="0606" package3d_urn="urn:adsk.eagle:package:9308796/2"/>
+<part name="LED" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="LED-RGB-COM_ANO" device="0606" package3d_urn="urn:adsk.eagle:package:9308796/3"/>
 </parts>
 <sheets>
 <sheet>
