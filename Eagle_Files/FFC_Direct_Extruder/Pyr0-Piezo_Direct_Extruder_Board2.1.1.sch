@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -627,7 +627,7 @@
 <vertex x="-4.7625" y="5.08"/>
 </polygon>
 </package>
-<package name="HDRRAR4W64P254_2X2_556X736X556B" urn="urn:adsk.eagle:footprint:6905204/1" library_version="98">
+<package name="HDRRAR4W64P254_2X2_556X736X556B" urn="urn:adsk.eagle:footprint:6905204/1" library_version="101">
 <description>Double-row, 4-pin Receptacle Header (Female) Right Angle, 2.54 mm (0.10 in) pitch, 7.36 mm insulator length, 5.56 X 7.36 X 5.56 mm body
 &lt;p&gt;Double-row (2X2), 4-pin Receptacle Header (Female) Right Angle package with 2.54 mm (0.10 in) pitch, 0.64 mm lead width, 3.00 mm tail length and 7.36 mm insulator length with body size 5.56 X 7.36 X 5.56 mm, pin pattern - counter-clockwise from bottom left&lt;/p&gt;</description>
 <circle x="-1.3565" y="0" radius="0.25" width="0" layer="21"/>
@@ -1364,7 +1364,7 @@ Metric Code Size 1608</description>
 <rectangle x1="-1.4625" y1="2.2425" x2="-1.1375" y2="3.315" layer="51"/>
 <rectangle x1="-2.1125" y1="2.2425" x2="-1.7875" y2="3.315" layer="51"/>
 </package>
-<package name="QFN16" urn="urn:adsk.eagle:footprint:8766126/1" library_version="98">
+<package name="QFN16" urn="urn:adsk.eagle:footprint:8766126/1" library_version="101">
 <description>&lt;b&gt;RTE (S-PQFP-N16)&lt;/b&gt; 3x3 mm&lt;p&gt;
 Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.1016" layer="51"/>
@@ -2162,7 +2162,7 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <packageinstance name="15-91-04"/>
 </packageinstances>
 </package3d>
-<package3d name="HDRRAR4W64P254_2X2_556X736X556B" urn="urn:adsk.eagle:package:6905202/1" type="model" library_version="98">
+<package3d name="HDRRAR4W64P254_2X2_556X736X556B" urn="urn:adsk.eagle:package:6905202/1" type="model" library_version="101">
 <description>Double-row, 4-pin Receptacle Header (Female) Right Angle, 2.54 mm (0.10 in) pitch, 7.36 mm insulator length, 5.56 X 7.36 X 5.56 mm body
 &lt;p&gt;Double-row (2X2), 4-pin Receptacle Header (Female) Right Angle package with 2.54 mm (0.10 in) pitch, 0.64 mm lead width, 3.00 mm tail length and 7.36 mm insulator length with body size 5.56 X 7.36 X 5.56 mm, pin pattern - counter-clockwise from bottom left&lt;/p&gt;</description>
 <packageinstances>
@@ -2492,7 +2492,7 @@ Metric Code Size 1608</description>
 <packageinstance name="SSOP14"/>
 </packageinstances>
 </package3d>
-<package3d name="QFN16" urn="urn:adsk.eagle:package:8766128/2" type="model" library_version="98">
+<package3d name="QFN16" urn="urn:adsk.eagle:package:8766128/2" type="model" library_version="101">
 <description>&lt;b&gt;RTE (S-PQFP-N16)&lt;/b&gt; 3x3 mm&lt;p&gt;
 Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <packageinstances>
@@ -3201,7 +3201,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="JST-2.54-2X2" urn="urn:adsk.eagle:component:6905208/1" library_version="98">
+<deviceset name="JST-2.54-2X2" urn="urn:adsk.eagle:component:6905208/1" library_version="101">
 <gates>
 <gate name="A" symbol="M" x="0" y="5.08"/>
 <gate name="B" symbol="M" x="0" y="2.54"/>
@@ -4024,7 +4024,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="LM2902" urn="urn:adsk.eagle:component:8766129/3" prefix="U" library_version="98">
+<deviceset name="LM2902" urn="urn:adsk.eagle:component:8766129/3" prefix="U" library_version="101">
 <description>&lt;b&gt;Low power quad operational amplifier&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00000533.pdf"&gt; Data sgeet &lt;/a&gt;</description>
 <gates>
@@ -5021,7 +5021,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="TP" urn="urn:adsk.eagle:component:27992/2" prefix="TP" library_version="2">
+<deviceset name="TP" urn="urn:adsk.eagle:component:27992/3" prefix="TP" library_version="3">
 <description>&lt;b&gt;Test pad&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="TP" x="0" y="0"/>
@@ -5036,6 +5036,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="19" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5049,6 +5050,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="3" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5062,6 +5064,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="12" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5075,6 +5078,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5088,6 +5092,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5101,6 +5106,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="3" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5114,6 +5120,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5127,6 +5134,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5140,6 +5148,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5153,6 +5162,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5166,6 +5176,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5179,6 +5190,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5192,6 +5204,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5205,6 +5218,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5218,6 +5232,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5231,6 +5246,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5244,6 +5260,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="3" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5257,6 +5274,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="4" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5270,6 +5288,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5283,6 +5302,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5296,6 +5316,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5309,6 +5330,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5322,6 +5344,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5335,6 +5358,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5348,6 +5372,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5361,6 +5386,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5374,6 +5400,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5387,6 +5414,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5400,6 +5428,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5413,6 +5442,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5426,6 +5456,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5439,6 +5470,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5452,6 +5484,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5465,6 +5498,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5478,6 +5512,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5491,6 +5526,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5504,6 +5540,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>
@@ -5517,6 +5554,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="2" constant="no"/>
 <attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
 </technology>
 </technologies>

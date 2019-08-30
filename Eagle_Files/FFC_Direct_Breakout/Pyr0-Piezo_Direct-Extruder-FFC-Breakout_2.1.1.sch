@@ -3,10 +3,10 @@
 <eagle version="9.4.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -3006,7 +3006,7 @@ grid 5.08 mm</description>
 <rectangle x1="0.7112" y1="-1.4954" x2="1.1684" y2="-0.9112" layer="51"/>
 <rectangle x1="-1.1684" y1="-1.4954" x2="-0.7112" y2="-0.9112" layer="51"/>
 </package>
-<package name="FFC-15P-1MM" library_version="97" library_locally_modified="yes">
+<package name="FFC-15P-1MM" urn="urn:adsk.eagle:footprint:12330555/1" library_version="101">
 <smd name="P$1" x="0" y="0" dx="0.6" dy="1.9" layer="1"/>
 <smd name="P$2" x="1" y="0" dx="0.6" dy="1.9" layer="1"/>
 <smd name="P$3" x="2" y="0" dx="0.6" dy="1.9" layer="1"/>
@@ -3034,7 +3034,7 @@ grid 5.08 mm</description>
 <wire x1="16.75" y1="-5.75" x2="-2.75" y2="-5.75" width="0.127" layer="22"/>
 <text x="7" y="2" size="1.27" layer="25" font="vector" align="bottom-center">&gt;NAME</text>
 </package>
-<package name="FH12-40S-0.5SH" urn="urn:adsk.eagle:footprint:7232/1" library_version="97" library_locally_modified="yes">
+<package name="FH12-40S-0.5SH" urn="urn:adsk.eagle:footprint:12330673/1" library_version="101">
 <description>&lt;b&gt;0.5mm Pitch Connectors For FPC/FFC&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data sheet&lt;/a&gt;&lt;p&gt;</description>
 <wire x1="-11.45" y1="0.5" x2="-11.95" y2="0.5" width="0.2032" layer="51"/>
@@ -3105,7 +3105,6 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <smd name="39" x="9.25" y="3.25" dx="0.3" dy="1.3" layer="1" stop="no" cream="no"/>
 <smd name="40" x="9.75" y="3.25" dx="0.3" dy="1.3" layer="1" stop="no" cream="no"/>
 <text x="-11.4476" y="4.095" size="1.27" layer="25">&gt;NAME</text>
-<text x="-10.2476" y="-0.3258" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-9.95" y1="2.55" x2="-9.55" y2="3.95" layer="29"/>
 <rectangle x1="-9.875" y1="2.625" x2="-9.625" y2="3.875" layer="31"/>
 <rectangle x1="-9.45" y1="2.55" x2="-9.05" y2="3.95" layer="29"/>
@@ -3959,11 +3958,16 @@ grid 5.08 mm</description>
 <packageinstance name="SC59-BEC"/>
 </packageinstances>
 </package3d>
-<package3d name="FH12-40S-0.5SH" urn="urn:adsk.eagle:package:7313/1" type="box" library_version="97" library_locally_modified="yes">
-<description>0.5mm Pitch Connectors For FPC/FFC
-Source: Data sheet</description>
+<package3d name="FH12-40S-0.5SH" urn="urn:adsk.eagle:package:12330674/2" type="model" library_version="101">
+<description>&lt;b&gt;0.5mm Pitch Connectors For FPC/FFC&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data sheet&lt;/a&gt;&lt;p&gt;</description>
 <packageinstances>
 <packageinstance name="FH12-40S-0.5SH"/>
+</packageinstances>
+</package3d>
+<package3d name="FFC-15P-1MM" urn="urn:adsk.eagle:package:12330556/2" type="model" library_version="101">
+<packageinstances>
+<packageinstance name="FFC-15P-1MM"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -4194,7 +4198,7 @@ Source: Data sheet</description>
 <pin name="A" x="-2.54" y="0" visible="off" length="point" direction="pas"/>
 <pin name="C" x="2.54" y="0" visible="off" length="point" direction="pas" rot="R180"/>
 </symbol>
-<symbol name="FFC-15P-1MM" library_version="97" library_locally_modified="yes">
+<symbol name="FFC-15P-1MM" urn="urn:adsk.eagle:symbol:12330554/1" library_version="101">
 <pin name="P$1" x="-5.08" y="17.78" length="middle"/>
 <pin name="P$2" x="-5.08" y="15.24" length="middle"/>
 <pin name="P$3" x="-5.08" y="12.7" length="middle"/>
@@ -4223,7 +4227,7 @@ Source: Data sheet</description>
 <text x="-1.27" y="1.27" size="1.778" layer="95">&gt;NAME</text>
 <pin name="TP" x="0" y="-2.54" visible="off" length="short" direction="in" rot="R90"/>
 </symbol>
-<symbol name="PINV" library_version="97" library_locally_modified="yes">
+<symbol name="PINV" urn="urn:adsk.eagle:symbol:12330552/1" library_version="101">
 <wire x1="0" y1="0.254" x2="0" y2="-0.254" width="0.1524" layer="94"/>
 <wire x1="0" y1="-0.254" x2="1.016" y2="-0.254" width="0.1524" layer="94"/>
 <wire x1="1.016" y1="-0.254" x2="1.27" y2="0.254" width="0.1524" layer="94"/>
@@ -4232,7 +4236,7 @@ Source: Data sheet</description>
 <text x="-2.54" y="2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="1" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 </symbol>
-<symbol name="PIN" library_version="97" library_locally_modified="yes">
+<symbol name="PIN" urn="urn:adsk.eagle:symbol:12330553/1" library_version="101">
 <wire x1="0" y1="0.254" x2="0" y2="-0.254" width="0.1524" layer="94"/>
 <wire x1="0" y1="-0.254" x2="1.016" y2="-0.254" width="0.1524" layer="94"/>
 <wire x1="1.016" y1="-0.254" x2="1.27" y2="0.254" width="0.1524" layer="94"/>
@@ -5943,7 +5947,7 @@ Source: www.kingbright.com</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="FFC-15P-1MM" prefix="J" library_version="97" library_locally_modified="yes">
+<deviceset name="FFC-15P-1MM" urn="urn:adsk.eagle:component:12330558/2" prefix="J" library_version="101">
 <gates>
 <gate name="G$1" symbol="FFC-15P-1MM" x="-2.54" y="0"/>
 <gate name="G$2" symbol="TP" x="12.7" y="20.32"/>
@@ -5970,13 +5974,16 @@ Source: www.kingbright.com</description>
 <connect gate="G$2" pin="TP" pad="P$16"/>
 <connect gate="G$3" pin="TP" pad="P$17"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:12330556/2"/>
+</package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
 </device>
 </devices>
 </deviceset>
-<deviceset name="FFC-40P-0.5S" prefix="X" library_version="97" library_locally_modified="yes">
+<deviceset name="FFC-40P-0.5S" urn="urn:adsk.eagle:component:12330557/3" prefix="X" library_version="101">
 <description>&lt;b&gt;0.5mm Pitch Connectors For FPC/FFC&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data sheet&lt;/a&gt;&lt;p&gt;</description>
 <gates>
@@ -6066,7 +6073,7 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <connect gate="-9" pin="1" pad="9"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:7313/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:12330674/2"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -6166,8 +6173,8 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <part name="U2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="L78L05ACU" device="" package3d_urn="urn:adsk.eagle:package:6899241/6"/>
 <part name="AGND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
 <part name="Q2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="*-PNP-" device="SOT23-BEC" package3d_urn="urn:adsk.eagle:package:28748/2" technology="MMBT2907ALT1"/>
-<part name="R6" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-2K-5%-1/8W(0805)" device="" package3d_urn="urn:adsk.eagle:package:8443791/3" value="2K"/>
-<part name="R7" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-2K-5%-1/8W(0805)" device="" package3d_urn="urn:adsk.eagle:package:8443791/3" value="2K"/>
+<part name="R6" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-2K-5%-1/8W(0805)" device="" package3d_urn="urn:adsk.eagle:package:8443791/3" value="1R"/>
+<part name="R7" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-2K-5%-1/8W(0805)" device="" package3d_urn="urn:adsk.eagle:package:8443791/3" value="10R"/>
 <part name="C2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="DIP-ALUMINUM-100UF-16V(D5-H7MM)" device="LEFT" package3d_urn="urn:adsk.eagle:package:8885168/4" value="100uf"/>
 <part name="C3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="DIP-ALUMINUM-100UF-16V(D5-H7MM)" device="RIGHT" package3d_urn="urn:adsk.eagle:package:8885515/3" value="100uf"/>
 <part name="C4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="DIP-ALUMINUM-100UF-16V(D5-H7MM)" device="RIGHT" package3d_urn="urn:adsk.eagle:package:8885515/3" value="100uf"/>
@@ -6178,7 +6185,7 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <part name="H2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="HOLES_MOUNT-PAD-ROUND" device="3.2" package3d_urn="urn:adsk.eagle:package:5224590/2"/>
 <part name="H3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="HOLES_MOUNT-PAD-ROUND" device="3.2" package3d_urn="urn:adsk.eagle:package:5224590/2"/>
 <part name="H4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="HOLES_MOUNT-PAD-ROUND" device="3.2" package3d_urn="urn:adsk.eagle:package:5224590/2"/>
-<part name="R5" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-2K-5%-1/8W(0805)" device="" package3d_urn="urn:adsk.eagle:package:8443791/3" value="2K"/>
+<part name="R5" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-2K-5%-1/8W(0805)" device="" package3d_urn="urn:adsk.eagle:package:8443791/3" value="0R"/>
 <part name="AGND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
 <part name="AGND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
 <part name="X_MOT" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="C-GRID-04" device="-70553" package3d_urn="urn:adsk.eagle:package:6902618/2"/>
@@ -6203,8 +6210,8 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <part name="D14" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="DIODE_SCHOTTKY_SINGLE" device="" package3d_urn="urn:adsk.eagle:package:10086384/2"/>
 <part name="D15" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="DIODE_SCHOTTKY_SINGLE" device="" package3d_urn="urn:adsk.eagle:package:10086384/2"/>
 <part name="D16" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="DIODE_SCHOTTKY_SINGLE" device="" package3d_urn="urn:adsk.eagle:package:10086384/2"/>
-<part name="J2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="FFC-15P-1MM" device=""/>
-<part name="X1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="FFC-40P-0.5S" device="H" package3d_urn="urn:adsk.eagle:package:7313/1"/>
+<part name="J2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="FFC-15P-1MM" device="" package3d_urn="urn:adsk.eagle:package:12330556/2"/>
+<part name="X1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="FFC-40P-0.5S" device="H" package3d_urn="urn:adsk.eagle:package:12330674/2"/>
 <part name="PT100" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="C-GRID-02" device="-70543" package3d_urn="urn:adsk.eagle:package:7346256/2"/>
 </parts>
 <sheets>
