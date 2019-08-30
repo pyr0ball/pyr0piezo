@@ -116,7 +116,22 @@ void updateParams() {
     updateVAdj();
   }
   else if (strcmp(serialMessageIn, "HYST") == 0) {
-  updateHysteresis();
+    updateHysteresis();
+  }
+  else if (strcmp(serialMessageIn, "HELP") == 0) {
+    Serial.println("To change trigger active duration: TRG_D [integer for milliseconds]");
+    Serial.println("To change gain factor: GAIN_F [integer for gain state - see note*]");
+    Serial.println("To change ADC hysteresis value: HYST [integer]");
+    Serial.println("To change sensor input pullup vRef low threshold: VADJ [float value]");
+    Serial.println("To change comparator trigger high threshold: VCOMP [float value]");
+    Serial.println("");
+    Serial.println("These commands should be wrapped in this format:");
+    Serial.println("<CMD, INT>");
+    Serial.println("");
+    Serial.println("Examples:");
+    Serial.println("<GAIN_F, 3> <~ set gain factor to index 3 (6x)");
+    Serial.println("<VADJ, 2350> <~ set the vref floor to 2.35V");
+    parseData();
   }
 }
 
