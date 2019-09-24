@@ -89,7 +89,7 @@ void updateVComp() {
 
 void updateVAdj() {
   if (serialInt >= 0) {
-    senseInt = serialInt;
+    senseThrs = serialInt;
     //compInt = senseInt; // syncing these params til #24 is fixed
   }
 }
