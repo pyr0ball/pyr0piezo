@@ -47,11 +47,13 @@
  extern int Debug;
 #endif
 
+#define VM_CONST_ADDRESS 28
 #if !(defined(voltMeterConstant))
   extern long voltMeterConstant = 1125300L; // For fine tuning input voltage sense
 #endif
 
 #ifdef I2C_INPUT
+  #define I2C_SLAVE_ADDRESS 24
   #if !(defined(pP_i2c_address))
     extern byte pP_i2c_address = 0xa0;     // I2C Bus Address
   #endif

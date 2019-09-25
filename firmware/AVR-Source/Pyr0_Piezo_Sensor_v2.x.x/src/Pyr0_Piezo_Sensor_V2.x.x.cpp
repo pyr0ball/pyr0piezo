@@ -27,9 +27,10 @@
   by Alan "pyr0ball" Weinstock
 
   This code is in the public domain.
-*/
+------------------------------------------------------------*/
 
-/* To set the below parameters using serial input, use the following:
+/*-----------------------------------------------------------
+To set the below parameters using serial input, use the following:
 
 To change trigger active duration: TRG_D [integer for milliseconds]
 To change gain factor: GAIN_F [integer for gain state - see note*]
@@ -37,6 +38,7 @@ To change ADC hysteresis value: HYST [integer]
 To change sensor input pullup vRef low threshold: VFOL [integer in millivolts]
 To change comparator trigger high threshold: VCOMP [integer in millivolts]
 To change the duration between ADC measurements: LOOP_D [integer in milliseconds]
+To update the internal vRef constant value **(see notes below): CONST [long value]
 
 You can also enable or disable DEBUG output with: DEBUG [0|1]
 
@@ -44,7 +46,6 @@ You can query the current configuration with: CONFIG
 You can query the current state (including ADC measurements) with: STATE
 
 To reset all settings to defaults, use: RESET
-
 
 These commands should be wrapped in this format:
 CMD INT
@@ -62,9 +63,24 @@ The gain STATE is representative of these values:
 2 = 4.33x
 3 = 6x
 4 = 11x
-*/
 
-/*------------------------------------------------------------*/
+**Note for calibrating internal 1.1v vRef:
+The ADC reading function assumes an "ideal" multiplier constant. Each Atmega
+chip is slightly different, so it won't be completely accurate without tuning.
+Most of the time this won't be necessary, so don't mess with this if you don't
+know what you're doing!
+The reading can be fine-tuned by using a multimeter, and this equation:
+
+scale_constant = internal1.1Ref * 1023 * 1000
+
+where
+
+internal1.1Ref = 1.1 * Vcc1 (per voltmeter) / Vcc2 (per readVcc() function)
+
+If the scale_constant calculated is different from the default 1125300,
+update the voltMeterConstant variable in pP_config.h with the correct value
+
+------------------------------------------------------------*/
 
 // Debug output toggle. Uncomment to enable
 #define DEBUG true

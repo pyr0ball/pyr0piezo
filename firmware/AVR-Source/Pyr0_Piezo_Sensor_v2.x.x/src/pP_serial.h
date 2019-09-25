@@ -118,6 +118,16 @@ void updateHysteresis() {
 }
 /*------------------------------------------------*/
 
+void updateConstant() {
+  if (serialInt >= 0)
+  {
+    voltMeterConstant = serialInt;
+    EEPROM.put(VM_CONST_ADDRESS, voltMeterConstant);
+  }
+}
+
+/*------------------------------------------------*/
+
 void updateDebug() {
   if (serialInt > 0) {
     Debug = 1;
@@ -168,6 +178,9 @@ void serialPrintConfig()
 
   Serial.print("HYST ");
   Serial.println(Hyst);
+
+  Serial.print("VM_CONST ");
+  Serial.println(voltMeterConstant);
 }
 
 void serialPrintState()
@@ -211,6 +224,9 @@ void updateParams() {
   }
   else if (strcmp(serialMessageIn, "HYST") == 0) {
     updateHysteresis();
+  }
+  else if (strcmp(serialMessageIn, "CONST") == 0) {
+    updateConstant();
   }
   else if (strcmp(serialMessageIn, "DEBUG") == 0) {
     updateDebug();
