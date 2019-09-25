@@ -32,7 +32,7 @@
   long voltMeterConstant = 1125300L; // For fine tuning input voltage sense
 #endif
 
-#ifdef I2C
+#ifdef I2C_INPUT
   #if !(defined(pP_i2c_address))
     byte pP_i2c_address = 0xa0;     // I2C Bus Address
   #endif
