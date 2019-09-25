@@ -47,7 +47,7 @@
  extern int Debug;
 #endif
 
-#if !(defined(voldMeterConstant))
+#if !(defined(voltMeterConstant))
   extern long voltMeterConstant = 1125300L; // For fine tuning input voltage sense
 #endif
 
