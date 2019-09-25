@@ -40,7 +40,8 @@ long readVcc() {
   return result; // Vcc in millivolts
 }
 
-/* The above function assumes an "ideal" multiplier constant.
+/*-------------------------------------------------
+The above function assumes an "ideal" multiplier constant.
 Each Atmega chip is slightly different, so it won't be completely accurate
 without tuning. Most of the time this won't be necessary, so don't mess
 with this if you don't know what you're doing!
@@ -53,9 +54,8 @@ where
 internal1.1Ref = 1.1 * Vcc1 (per voltmeter) / Vcc2 (per readVcc() function)
 
 If the scale_constant calculated is different from the default 1125300,
-update the voltMeterConstant variable in pP_config.h with the correct value*/
-
-/*------------------------------------------------*/
+update the voltMeterConstant variable in pP_config.h with the correct value
+--------------------------------------------------*/
 
  void readVin() {
    VOld = Vin;
