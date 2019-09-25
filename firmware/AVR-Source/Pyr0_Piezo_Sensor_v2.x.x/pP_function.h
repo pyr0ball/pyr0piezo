@@ -44,7 +44,7 @@ long readVcc() {
 Each Atmega chip is slightly different, so it won't be completely accurate
 without tuning. Most of the time this won't be necessary, so don't mess
 with this if you don't know what you're doing!
-The reading can be fine-tuned by using a multimeter, and this equasion:
+The reading can be fine-tuned by using a multimeter, and this equation:
 
 scale_constant = internal1.1Ref * 1023 * 1000
 
