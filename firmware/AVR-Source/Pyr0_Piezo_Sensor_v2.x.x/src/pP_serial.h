@@ -121,7 +121,7 @@ void updateHysteresis() {
 void updateConstant() {
   if (serialInt >= 0)
   {
-    voltMeterConstant = serialInt;
+    voltMeterConstant = (long) serialInt;
     EEPROM.put(VM_CONST_ADDRESS, voltMeterConstant);
   }
 }
