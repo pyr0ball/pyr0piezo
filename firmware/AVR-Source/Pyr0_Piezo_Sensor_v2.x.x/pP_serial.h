@@ -55,6 +55,7 @@ void identifyMarkers() {
   #endif
 }
 
+/*------------------------------------------------*/
 void updateGainFactor()
 {
   if (serialInt >= 0)

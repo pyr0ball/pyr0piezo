@@ -10,9 +10,7 @@ int VLast = 0;
 
 // Convert threshold values based on the input voltage
 
-long senseLong = senseThrs * 1024L;
-long compLong = compThrs * 1024L;
-long senseInt;
+long followerLong = followerThrs * 1023L;
 long compInt;
 
 // Voltage Comparator Adjustment parameters
