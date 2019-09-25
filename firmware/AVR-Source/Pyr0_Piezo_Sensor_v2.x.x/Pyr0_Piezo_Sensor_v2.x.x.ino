@@ -130,7 +130,7 @@ void loop() {
     // Check voltage of first and second stages and compare against thresholds
     adjustVin();
     VComp = analogRead(VCOMP_SENSE_PIN);
-    VAdj = analogRead(V_FOLLOW_PIN);
+    VFol = analogRead(V_FOLLOW_PIN);
 
     // Voltage Follower adjustment
     if (VLast > Hyst || VLast < -Hyst) {

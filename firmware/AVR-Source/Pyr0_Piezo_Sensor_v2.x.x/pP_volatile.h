@@ -17,8 +17,6 @@ long compInt;
 
 // Voltage Comparator Adjustment parameters
 int VComp = 0;
-int diffCompL = VComp - compInt;
-int diffCompH = compInt - VComp;
 
 // Voltage Follower Adjustment parameters
 int VAdj = 0;

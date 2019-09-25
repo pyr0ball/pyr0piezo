@@ -57,7 +57,7 @@ update the voltMeterConstant variable in pP_config.h with the correct value*/
 
 /*------------------------------------------------*/
 
- void adjustVin() {
+ void readVin() {
    VOld = Vin;
 	 Vin = readVcc(), DEC;
    senseLong = senseThrs * 1024L;
