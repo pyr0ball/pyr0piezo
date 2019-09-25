@@ -1,4 +1,4 @@
-###Pyr0-Piezo Changelog v2.1.2 to beta-avr-v2.1.3
+###Pyr0-Piezo Changelog v2.1.2 to v2.1.3
 
 #### Added Features
 
