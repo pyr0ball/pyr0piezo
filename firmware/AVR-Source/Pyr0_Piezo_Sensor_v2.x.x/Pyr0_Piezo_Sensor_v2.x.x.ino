@@ -34,8 +34,8 @@
 To change trigger active duration: TRG_D [integer for milliseconds]
 To change gain factor: GAIN_F [integer for gain state - see note*]
 To change ADC hysteresis value: HYST [integer]
-To change sensor input pullup vRef low threshold: VADJ [float value]
-To change comparator trigger high threshold: VCOMP [float value]
+To change sensor input pullup vRef low threshold: VFOL [integer in millivolts]
+To change comparator trigger high threshold: VCOMP [integer in millivolts]
 
 
 These commands should be wrapped in this format:
@@ -43,7 +43,7 @@ These commands should be wrapped in this format:
 
 Examples:
 <GAIN_F, 3> <~ set gain factor to index 3 (6x)
-<VADJ, 2350> <~ set the vref floor to 2.35V
+<VFOL, 2350> <~ set the vref floor to 2.35V
 
 *Note for Gain Factor:
 The gain STATE is representative of these values:
@@ -64,6 +64,7 @@ The gain STATE is representative of these values:
 //#define VERBOSE true
 
 // Headers, variables, and functions
+include <Arduino.h>
 include <EEPROM.h>
 #include "LightChrono.h"
 #include "pP_pins.h"
@@ -104,6 +105,10 @@ void setup() {
   delay(2); // Wait for vref to settle
 
   Serial.println("Initializing Pyr0-Piezo Sensor...");
+
+  restoreConfig();
+
+  adjustGain();
 }
 
 /*------------------------------------------------*/
@@ -123,35 +128,46 @@ void loop() {
     serialInput();
 
     // Set any new parameters from serial input
-    updateParams();
+    if (serialIncoming) {
+      updateParams();
+    }
 
     // Set the amplification gain factor
     adjustGain();
 
     // Check voltage of first and second stages and compare against thresholds
-    adjustVin();
+    readVin();
     VComp = analogRead(VCOMP_SENSE_PIN);
     VFol = analogRead(V_FOLLOW_PIN);
 
     // Voltage Follower adjustment
+    VLast = VOld - Vin;
     if (VLast > Hyst || VLast < -Hyst) {
       adjustFollow();
-    }
 
     // Voltage Comparator adjustment
-    if (VLast > Hyst || VLast < -Hyst) {
       adjustComp();
+    // Alert the user that auto-calibration is ongoing
+      ERR_STATE = 1;
+    } else {
+      ERR_STATE = 0;
     }
 
-    // Alert the user that auto-calibration is ongoing
-    calibrateAlert();
+    // Blink LED's on init
+    if (BlinkCount > 0) {
+      BlinkState = !BlinkState;
+      digitalWrite(ERR_LED, BlinkState);
+      digitalWrite(TRG_OUT, BlinkState);
+      --BlinkCount;
+    } else {
+      // Check for error state
+      checkError();
+    }
 
-    // Check for error state
-    checkError();
-
-    // Reply with status
-    serialReply();
-
+    // Print state if debug is on
+    if (Debug > 0) {
+      serialPrintState();
+    }
     // Sets trigger output state to false after completing loop
     //digitalWrite(TRG_OUT, HIGH);
     sensorHReading = 0;
