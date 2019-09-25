@@ -29,11 +29,11 @@ Examples:
 
 *Note for Gain Factor:
 The gain STATE is representative of these values:
-0 = 3x
-1 = 3.5x
-2 = 4.33x
-3 = 6x
-4 = 11x
+- 0 = 3x
+- 1 = 3.5x
+- 2 = 4.33x
+- 3 = 6x
+- 4 = 11x
 
 ------------------------
 
