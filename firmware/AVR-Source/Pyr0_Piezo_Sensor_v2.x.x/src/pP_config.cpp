@@ -8,10 +8,6 @@ int LOOP_DUR = LOOP_DUR_DEFAULT; // duration of time between ADC checks and othe
 int TRG_DUR = TRG_DUR_DEFAULT;   // duration of the Z-axis pulse sent, in ms
 int Hyst = HYST_DEFAULT;         // Hysteresis value for ADC measurements
 int Debug = 0;
-long voltMeterConstant = 1125300L; // For fine tuning input voltage sense
-#ifdef I2C_INPUT
-  byte pP_i2c_address = 0xa0; // I2C Bus Address
-#endif
 
 void resetEEPROM() {
     resetConfig();
@@ -21,6 +17,7 @@ void resetEEPROM() {
     EEPROM.put(LOOP_DUR_ADDRESS, LOOP_DUR);
     EEPROM.put(TRG_DUR_ADDRESS, TRG_DUR);
     EEPROM.put(HYST_ADDRESS, Hyst);
+    EEPROM.put(VM_CONST_ADDRESS, voltMeterConstant);
 }
 
 // Restore config from EEPROM, otherwise reset config and write to EEPROM
