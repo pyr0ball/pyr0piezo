@@ -55,6 +55,20 @@ Join our discord for support and to join in realtime discussion for the project:
 </div>
 ---------------------------
 
+## Contribution:
+
+The support site for this project uses a script to automatically parse git commits for changelog data. There are three categories of commits that should show up in the case log:
+
+  - Bugfix `#bugfix`: commits related to fixing something that's broken
+  - Added Features `#featureadd`: Commits related to adding new functions and features
+  - Changelog `#changelog`: Any other commits that should be on the changelog, but don't fall into the two categories above
+
+Simply by adding the corresponding tag to the end of the first line of your commit message, the changelog will automatically compile these for the documentation site. Please be sure to include this in any commit messages for this project.
+
+I would also request that commits remain small, adding each change/fix/feature to their own commits. This will help with future debugging, version tracking, and testing.
+
+--------------------------
+
 Legacy links:
 
 [Original Mount (Doesn't work as well as I'd like)](https://www.thingiverse.com/thing:2712439)
