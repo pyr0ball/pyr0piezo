@@ -28,18 +28,6 @@ void pulse() {
 
 long readVcc() {
   // Read 1.1V reference against AVcc
-  // set the reference to Vcc and the measurement to the internal 1.1V reference
-  #if defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
-    ADMUX = _BV(REFS0) | _BV(MUX4) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1);
-  #elif defined (__AVR_ATtiny24__) || defined(__AVR_ATtiny44__) || defined(__AVR_ATtiny84__)
-    ADMUX = _BV(MUX5) | _BV(MUX0);
-  #elif defined (__AVR_ATtiny25__) || defined(__AVR_ATtiny45__) || defined(__AVR_ATtiny85__)
-    ADMUX = _BV(MUX3) | _BV(MUX2);
-  #else
-    ADMUX = _BV(REFS0) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1);
-  #endif
-
-  delay(2); // Wait for Vref to settle
   ADCSRA |= _BV(ADSC); // Start conversion
   while (bit_is_set(ADCSRA,ADSC)); // measuring
 
@@ -51,6 +39,21 @@ long readVcc() {
   result = voltMeterConstant / result; // Calculate Vcc (in mV); 1125300 = 1.1*1023*1000
   return result; // Vcc in millivolts
 }
+
+/* The above function assumes an "ideal" multiplier constant.
+Each Atmega chip is slightly different, so it won't be completely accurate
+without tuning. Most of the time this won't be necessary, so don't mess
+with this if you don't know what you're doing!
+The reading can be fine-tuned by using a multimeter, and this equation:
+
+scale_constant = internal1.1Ref * 1023 * 1000
+
+where
+
+internal1.1Ref = 1.1 * Vcc1 (per voltmeter) / Vcc2 (per readVcc() function)
+
+If the scale_constant calculated is different from the default 1125300,
+update the voltMeterConstant variable in pP_config.h with the correct value*/
 
 /*------------------------------------------------*/
 
