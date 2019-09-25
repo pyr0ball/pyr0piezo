@@ -1,0 +1,6 @@
+{
+    "board": "MiniCore:avr:328",
+    "configuration": "bootloader=uart0,variant=modelPB,BOD=1v8,LTO=Os,clock=8MHz_internal",
+    "programmer": "AVRISP mkII",
+    "sketch": "src\\Pyr0_Piezo_Sensor_v2.x.x.cpp"
+}

@@ -40,7 +40,8 @@ long readVcc() {
   return result; // Vcc in millivolts
 }
 
-/* The above function assumes an "ideal" multiplier constant.
+/*-------------------------------------------------
+The above function assumes an "ideal" multiplier constant.
 Each Atmega chip is slightly different, so it won't be completely accurate
 without tuning. Most of the time this won't be necessary, so don't mess
 with this if you don't know what you're doing!
@@ -53,18 +54,17 @@ where
 internal1.1Ref = 1.1 * Vcc1 (per voltmeter) / Vcc2 (per readVcc() function)
 
 If the scale_constant calculated is different from the default 1125300,
-update the voltMeterConstant variable in pP_config.h with the correct value*/
+update the voltMeterConstant variable in pP_config.h with the correct value
+--------------------------------------------------*/
 
-/*------------------------------------------------*/
-
- void adjustVin() {
+ void readVin() {
    VOld = Vin;
 	 Vin = readVcc(), DEC;
-   senseLong = senseThrs * 1024L;
-   compLong = compThrs * 1024L;
-   senseInt = (long long) senseLong / Vin;
+   followerLong = followerThrs * 1023L;
+   compLong = compThrs * 1023L;
+   followerInt = (long long) followerLong / Vin;
    compInt = (long long) compLong / Vin;
-   senseInt = (int) senseInt;
+   followerInt = (int) followerInt;
    compInt = (int) compInt;
  }
 
@@ -74,7 +74,7 @@ update the voltMeterConstant variable in pP_config.h with the correct value*/
   /* Compares diffs of threshold vs read value
    if positive, adjusts the follower to within
    the range set above*/
-  ADJ_FOLLOW = (senseInt / 4);
+  ADJ_FOLLOW = (followerInt / 4);
 
   // Analog output (PWM) of duty cycle
   analogWrite(V_FOL_PWM, ADJ_FOLLOW);
@@ -106,7 +106,6 @@ void adjustGain() {
     pinMode(GADJ_R2, INPUT);
     pinMode(GADJ_R1, INPUT);
     pinMode(GADJ_R0, INPUT);
-    ERR_STATE = 0;
   }
   else if (GAIN_FACTOR > 0) {
     pinMode(GADJ_R3, OUTPUT);
@@ -114,25 +113,21 @@ void adjustGain() {
     pinMode(GADJ_R2, INPUT);
     pinMode(GADJ_R1, INPUT);
     pinMode(GADJ_R0, INPUT);
-    ERR_STATE = 0;
   }
   else if (GAIN_FACTOR > 1) {
     pinMode(GADJ_R2, OUTPUT);
     digitalWrite(GADJ_R2, LOW);
     pinMode(GADJ_R1, INPUT);
     pinMode(GADJ_R0, INPUT);
-    ERR_STATE = 0;
   }
   else if (GAIN_FACTOR > 2) {
     pinMode(GADJ_R1, OUTPUT);
     digitalWrite(GADJ_R1, LOW);
     pinMode(GADJ_R0, INPUT);
-    ERR_STATE = 0;
   }
   else if (GAIN_FACTOR > 3) {
     pinMode(GADJ_R0, OUTPUT);
     digitalWrite(GADJ_R0, LOW);
-    ERR_STATE = 0;
   }
 }
 

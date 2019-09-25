@@ -10,20 +10,16 @@ int VLast = 0;
 
 // Convert threshold values based on the input voltage
 
-long senseLong = senseThrs * 1024L;
-long compLong = compThrs * 1024L;
-long senseInt;
+long followerLong = followerThrs * 1023L;
+long compLong = compThrs * 1023L;
+long followerInt;
 long compInt;
 
 // Voltage Comparator Adjustment parameters
 int VComp = 0;
-int diffCompL = VComp - compInt;
-int diffCompH = compInt - VComp;
 
 // Voltage Follower Adjustment parameters
-int VAdj = 0;
-int diffAdjL = VAdj - senseInt;
-int diffAdjH = senseInt - VAdj;
+int VFol = 0;
 
 // Error blink parameters
 
@@ -33,10 +29,8 @@ int BlinkCount = InitCount * 2;           // Multiply Blink count by 2 to handle
 // Serial Input Parsing Variables
 #define buffSize 40
 char inputBuffer[buffSize];
-#define startMarker '<'
-#define endMarker '>'
+#define endMarker '\n'
 byte bytesRecvd = 0;
-bool readInProgress = false;
 bool serialIncoming = false;
 char serialMessageIn[buffSize] = {0};
 int serialInt = 0;
