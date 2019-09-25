@@ -36,14 +36,24 @@ To change gain factor: GAIN_F [integer for gain state - see note*]
 To change ADC hysteresis value: HYST [integer]
 To change sensor input pullup vRef low threshold: VFOL [integer in millivolts]
 To change comparator trigger high threshold: VCOMP [integer in millivolts]
+To change the duration between ADC measurements: LOOP_D [integer in milliseconds]
+
+You can also enable or disable DEBUG output with: DEBUG [0|1]
+
+You can query the current configuration with: CONFIG
+You can query the current state (including ADC measurements) with: STATE
+
+To reset all settings to defaults, use: RESET
 
 
 These commands should be wrapped in this format:
-<CMD, INT>
+CMD INT
 
 Examples:
-<GAIN_F, 3> <~ set gain factor to index 3 (6x)
-<VFOL, 2350> <~ set the vref floor to 2.35V
+GAIN_F 3 <~ set gain factor to index 3 (6x)
+VFOL 2350 <~ set the vref floor to 2.35V
+DEBUG 1 <~ Enable debug output
+STATE <~ display current sensor status
 
 *Note for Gain Factor:
 The gain STATE is representative of these values:
