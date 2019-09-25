@@ -56,6 +56,7 @@ void identifyMarkers() {
 }
 
 /*------------------------------------------------*/
+
 void updateGainFactor()
 {
   if (serialInt >= 0)
@@ -65,7 +66,7 @@ void updateGainFactor()
     EEPROM.put(GAIN_FACTOR_ADDRESS, GAIN_FACTOR);
   }
 }
-}
+
 /*------------------------------------------------*/
 
 void updateVFol() {

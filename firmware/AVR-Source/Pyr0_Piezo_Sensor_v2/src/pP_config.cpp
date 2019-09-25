@@ -9,10 +9,11 @@ int TRG_DUR = TRG_DUR_DEFAULT;   // duration of the Z-axis pulse sent, in ms
 int Hyst = HYST_DEFAULT;         // Hysteresis value for ADC measurements
 int Debug = 0;
 long voltMeterConstant = 1125300L; // For fine tuning input voltage sense
-// byte pP_i2c_address = 0xa0; // I2C Bus Address
+#ifdef I2C_INPUT
+  byte pP_i2c_address = 0xa0; // I2C Bus Address
+#endif
 
-void resetEEPROM()
-{
+void resetEEPROM() {
     resetConfig();
     EEPROM.put(GAIN_FACTOR_ADDRESS, GAIN_FACTOR);
     EEPROM.put(FOLLOWER_THRESHOLD_ADDRESS, followerThrs);
@@ -23,73 +24,53 @@ void resetEEPROM()
 }
 
 // Restore config from EEPROM, otherwise reset config and write to EEPROM
-void restoreConfig()
-{
+void restoreConfig() {
     int temp;
 
     EEPROM.get(GAIN_FACTOR_ADDRESS, temp);
-    if (temp < 0 || temp > 4)
-    {
+    if (temp < 0 || temp > 4) {
         resetEEPROM();
-    }
-    else
-    {
+    } else {
         GAIN_FACTOR = temp;
     }
 
     EEPROM.get(FOLLOWER_THRESHOLD_ADDRESS, temp);
-    if (temp < 0 || temp > 5000)
-    {
+    if (temp < 0 || temp > 5000) {
         resetEEPROM();
-    }
-    else
-    {
+    } else {
         followerThrs = temp;
     }
 
     EEPROM.get(COMP_THRESHOLD_ADDRESS, temp);
-    if (temp < 0 || temp > 5000)
-    {
+    if (temp < 0 || temp > 5000) {
         resetEEPROM();
-    }
-    else
-    {
+    } else {
         compThrs = temp;
     }
 
     EEPROM.get(LOOP_DUR_ADDRESS, temp);
-    if (temp < 0 && temp > 1000)
-    {
+    if (temp < 0 && temp > 1000) {
         resetEEPROM();
-    }
-    else
-    {
+    } else {
         LOOP_DUR = temp;
     }
 
     EEPROM.get(TRG_DUR_ADDRESS, temp);
-    if (temp < 0 || temp > 1000)
-    {
+    if (temp < 0 || temp > 1000) {
         resetEEPROM();
-    }
-    else
-    {
+    } else {
         TRG_DUR = temp;
     }
 
     EEPROM.get(HYST_ADDRESS, temp);
-    if (temp < 0 || temp > 1000)
-    {
+    if (temp < 0 || temp > 1000) {
         resetEEPROM();
-    }
-    else
-    {
+    } else {
         Hyst = temp;
     }
 }
 
-void resetConfig()
-{
+void resetConfig() {
     GAIN_FACTOR = GAIN_FACTOR_DEFAULT;
     followerThrs = FOLLOWER_THRESHOLD_DEFAULT;
     compThrs = COMP_THRESHOLD_DEFAULT;
