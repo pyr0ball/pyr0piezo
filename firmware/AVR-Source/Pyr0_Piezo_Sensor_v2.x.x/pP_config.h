@@ -17,7 +17,7 @@
 #endif
 
 #if !(defined(LOOP_DUR))
-  int LOOP_DUR = 50;              // duration of time between ADC checks and other loop functions
+  extern int LOOP_DUR; 
 #endif
 
 #if !(defined(TRG_DUR))

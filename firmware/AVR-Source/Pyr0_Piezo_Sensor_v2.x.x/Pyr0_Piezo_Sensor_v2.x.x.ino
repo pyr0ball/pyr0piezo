@@ -64,6 +64,7 @@ The gain STATE is representative of these values:
 //#define VERBOSE true
 
 // Headers, variables, and functions
+include <EEPROM.h>
 #include "LightChrono.h"
 #include "pP_pins.h"
 #include "pP_config.h"
