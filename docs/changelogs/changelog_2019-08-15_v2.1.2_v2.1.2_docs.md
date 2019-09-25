@@ -2,18 +2,18 @@
 
 #### Added Features
 
-- setting up syntax for changelogs on the docs site #featureadd [view commit](http://github.com/pyr0ball/pyr0piezo/commit/b3909173a6b2a5d6cf281d9b6a4bb987599b960d) 
+- setting up syntax for changelogs on the docs site  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/b3909173a6b2a5d6cf281d9b6a4bb987599b960d) 
 
-- Added comprehensive changelog generated from script #featureadd [view commit](http://github.com/pyr0ball/pyr0piezo/commit/74d348ea0738d7b17b176e1a6bc22478356a9dc4) 
+- Added comprehensive changelog generated from script  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/74d348ea0738d7b17b176e1a6bc22478356a9dc4) 
 
 
 ------------------------------------
 
 #### Bugfixes
 
-- fixed syntax for table of contents on changelog #bugfix [view commit](http://github.com/pyr0ball/pyr0piezo/commit/359c8c8eba193dcc738dbb4bd49dbabb26972748) 
+- fixed syntax for table of contents on changelog  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/359c8c8eba193dcc738dbb4bd49dbabb26972748) 
 
-- added additional separator between sections added by changelog script #bugfix [view commit](http://github.com/pyr0ball/pyr0piezo/commit/ae26c4792bdd6c71721d7d552f588de34bd4fb8c) 
+- added additional separator between sections added by changelog script  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/ae26c4792bdd6c71721d7d552f588de34bd4fb8c) 
 
 
 ------------------------------------
@@ -140,13 +140,13 @@
 
 - Fixed syntax issue with changelog script [view commit](http://github.com/pyr0ball/pyr0piezo/commit/11b8eb691f9091e57e7b5c387e041d60c8c8005b) 
 
-- setting up syntax for changelogs on the docs site #featureadd [view commit](http://github.com/pyr0ball/pyr0piezo/commit/b3909173a6b2a5d6cf281d9b6a4bb987599b960d) 
+- setting up syntax for changelogs on the docs site  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/b3909173a6b2a5d6cf281d9b6a4bb987599b960d) 
 
 - fixed some syntax with regex for the changelog [view commit](http://github.com/pyr0ball/pyr0piezo/commit/e4de789d65ae66166892cfd899ddd3761174e3c9) 
 
-- Added comprehensive changelog generated from script #featureadd [view commit](http://github.com/pyr0ball/pyr0piezo/commit/74d348ea0738d7b17b176e1a6bc22478356a9dc4) 
+- Added comprehensive changelog generated from script  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/74d348ea0738d7b17b176e1a6bc22478356a9dc4) 
 
-- fixed syntax for table of contents on changelog #bugfix [view commit](http://github.com/pyr0ball/pyr0piezo/commit/359c8c8eba193dcc738dbb4bd49dbabb26972748) 
+- fixed syntax for table of contents on changelog  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/359c8c8eba193dcc738dbb4bd49dbabb26972748) 
 
-- added additional separator between sections added by changelog script #bugfix [view commit](http://github.com/pyr0ball/pyr0piezo/commit/ae26c4792bdd6c71721d7d552f588de34bd4fb8c) 
+- added additional separator between sections added by changelog script  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/ae26c4792bdd6c71721d7d552f588de34bd4fb8c) 
 

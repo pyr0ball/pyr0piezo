@@ -7222,7 +7222,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="17.3355" y="7.4831" size="0.6096" layer="26" font="vector" ratio="11" rot="MR180" align="bottom-center"/>
 </element>
 <element name="U3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="QFN16" package3d_urn="urn:adsk.eagle:package:8766128/2" value="LM2902QT" x="26.57475" y="5.87375" smashed="yes" rot="R90">
-<attribute name="NAME" x="24.416" y="4.477" size="0.8128" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="NAME" x="24.44775" y="7.5245" size="0.8128" layer="25" font="vector" ratio="10"/>
 </element>
 <element name="PT100" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="53048-02" package3d_urn="urn:adsk.eagle:package:5807562/3" value="CON-MOLEX-2P-1.27MM048" x="37.338" y="4.8895" smashed="yes" rot="R225">
 <attribute name="MF" value="MOLEX" x="46.318253125" y="3.09345" size="1.778" layer="27" rot="R225" display="off"/>
@@ -7323,12 +7323,12 @@ design rules under a new name.</description>
 <attribute name="NAME" x="13.589" y="3.5814" size="0.6096" layer="25" font="vector" ratio="11" rot="SR90"/>
 <attribute name="VALUE" x="15.875" y="2.9845" size="0.8128" layer="27" font="vector" ratio="11" rot="R90" align="top-left"/>
 </element>
-<element name="ADJ+" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP13SQ" package3d_urn="urn:adsk.eagle:package:9341723/2" value="TPTP13SQ" x="34.57575" y="13.3985" smashed="yes" rot="MR90">
+<element name="THR" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP13SQ" package3d_urn="urn:adsk.eagle:package:9341723/2" value="TPTP13SQ" x="34.57575" y="13.3985" smashed="yes" rot="MR90">
 <attribute name="NAME" x="35.40275" y="12.685" size="0.6096" layer="26" font="vector" ratio="11" rot="MR90"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="32.03575" y="13.3985" size="1" layer="38" rot="MR90"/>
 <attribute name="VALUE" x="33.81375" y="12.7635" size="0.0254" layer="28" rot="MR90"/>
 </element>
-<element name="ADJ-" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP13SQ" package3d_urn="urn:adsk.eagle:package:9341723/2" value="TPTP13SQ" x="32.8295" y="13.3985" smashed="yes" rot="MR0">
+<element name="AOUT" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP13SQ" package3d_urn="urn:adsk.eagle:package:9341723/2" value="TPTP13SQ" x="32.8295" y="13.3985" smashed="yes" rot="MR0">
 <attribute name="NAME" x="31.7985" y="14.7305" size="0.6096" layer="26" font="vector" ratio="11" rot="MR180"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="32.8295" y="10.8585" size="1" layer="38" rot="MR0"/>
 <attribute name="VALUE" x="33.4645" y="12.6365" size="0.0254" layer="28" rot="MR0"/>
@@ -7350,6 +7350,28 @@ design rules under a new name.</description>
 <element name="LED" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="0606_LED" package3d_urn="urn:adsk.eagle:package:9308796/3" value="LED-RGB-COM_ANO0606" x="14.57325" y="12.85875" smashed="yes" rot="R270">
 <attribute name="NAME" x="14.57325" y="11.6205" size="0.6096" layer="25" font="vector" ratio="11" rot="R180" align="bottom-center"/>
 <attribute name="PROD_ID" value="DIO-12140" x="14.57325" y="12.85875" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="FOL" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP13SQ" package3d_urn="urn:adsk.eagle:package:9341723/2" value="TPTP13SQ" x="27.7495" y="13.3985" smashed="yes" rot="MR0">
+<attribute name="NAME" x="28.3995" y="14.0985" size="0.8128" layer="26" font="vector" ratio="11" rot="MR0"/>
+<attribute name="TP_SIGNAL_NAME" value="" x="27.7495" y="10.8585" size="1" layer="38" rot="MR0"/>
+<attribute name="VALUE" x="28.3845" y="12.6365" size="0.0254" layer="28" rot="MR0"/>
+</element>
+<element name="TP_F" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="TP09R" package3d_urn="urn:adsk.eagle:package:9341726/2" value="TPTP09R" x="23.4315" y="5.04825" smashed="yes">
+<attribute name="NAME" x="22.9814" y="5.54835" size="0.8128" layer="25" font="vector"/>
+<attribute name="TP_SIGNAL_NAME" value="" x="23.4315" y="3.14325" size="1" layer="37"/>
+<attribute name="VALUE" x="23.0505" y="4.54025" size="0.0254" layer="27"/>
+</element>
+<element name="F_PWM" library="testpad" library_urn="urn:adsk.eagle:library:385" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="25.17775" y="10.922" smashed="yes">
+<attribute name="NAME" x="25.63975" y="10.78235" size="0.6096" layer="25"/>
+<attribute name="POPULARITY" value="1" x="25.17775" y="10.922" size="1.778" layer="27" display="off"/>
+<attribute name="TP_SIGNAL_NAME" value="" x="25.17775" y="9.017" size="1" layer="37"/>
+<attribute name="VALUE" x="24.92375" y="10.541" size="0.0254" layer="27"/>
+</element>
+<element name="C_PWM" library="testpad" library_urn="urn:adsk.eagle:library:385" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="19.685" y="1.74625" smashed="yes">
+<attribute name="NAME" x="19.25475" y="1.9494" size="0.6096" layer="25" rot="R180"/>
+<attribute name="POPULARITY" value="1" x="19.685" y="1.74625" size="1.778" layer="27" display="off"/>
+<attribute name="TP_SIGNAL_NAME" value="" x="19.685" y="-0.15875" size="1" layer="37"/>
+<attribute name="VALUE" x="19.431" y="1.36525" size="0.0254" layer="27"/>
 </element>
 </elements>
 <signals>
@@ -7448,6 +7470,7 @@ design rules under a new name.</description>
 <contactref element="RDY" pad="-"/>
 <contactref element="J1" pad="3"/>
 <contactref element="PZ1" pad="2"/>
+<wire x1="19.435" y1="5.084" x2="18.580309375" y2="4.243146875" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="Z_MIN_TRIG">
 <contactref element="U4" pad="11"/>
@@ -7845,7 +7868,7 @@ design rules under a new name.</description>
 <wire x1="25.7429" y1="6.60184375" x2="26.07630625" y2="6.93525" width="0.1524" layer="16"/>
 <wire x1="26.07630625" y1="6.93525" x2="27.01925" y2="6.93525" width="0.1524" layer="16"/>
 <wire x1="29.591" y1="6.2685" x2="29.591" y2="6.332" width="0.1524" layer="1"/>
-<contactref element="ADJ-" pad="TP"/>
+<contactref element="AOUT" pad="TP"/>
 <wire x1="32.8295" y1="13.3985" x2="32.8295" y2="13.3918375" width="0.1524" layer="16"/>
 <wire x1="34.41149375" y1="11.80984375" x2="32.8295" y2="13.3918375" width="0.1524" layer="16"/>
 <wire x1="29.59425625" y1="6.332" x2="29.591" y2="6.332" width="0.1524" layer="16"/>
@@ -7889,7 +7912,11 @@ design rules under a new name.</description>
 <wire x1="23.57525" y1="6.38025" x2="23.14725" y2="6.38025" width="0.1524" layer="1"/>
 <wire x1="23.14725" y1="6.38025" x2="22.9435" y2="6.584" width="0.1524" layer="1"/>
 <wire x1="22.9435" y1="6.584" x2="22.12" y2="6.584" width="0.1524" layer="1"/>
-<wire x1="23.57525" y1="6.38025" x2="23.48" y2="6.4755" width="0.1524" layer="1"/>
+<wire x1="23.57525" y1="6.38025" x2="23.55025" y2="6.40525" width="0.1524" layer="1"/>
+<contactref element="TP_F" pad="TP"/>
+<wire x1="23.55025" y1="6.40525" x2="23.48" y2="6.4755" width="0.1524" layer="1"/>
+<wire x1="23.4315" y1="5.04825" x2="23.4315" y2="6.2865" width="0.1524" layer="1"/>
+<wire x1="23.4315" y1="6.2865" x2="23.55025" y2="6.40525" width="0.1524" layer="1"/>
 </signal>
 <signal name="VCOMP_SENSE">
 <contactref element="R7" pad="2"/>
@@ -7903,7 +7930,7 @@ design rules under a new name.</description>
 <wire x1="25.64415" y1="3.8735" x2="25.64415" y2="3.8319" width="0.1524" layer="1"/>
 <wire x1="25.64415" y1="3.8319" x2="24.5825" y2="2.77025" width="0.1524" layer="1"/>
 <wire x1="24.5825" y1="2.77025" x2="24.5825" y2="2.54" width="0.1524" layer="1"/>
-<contactref element="ADJ+" pad="TP"/>
+<contactref element="THR" pad="TP"/>
 <via x="25.64415" y="3.8735" extent="1-16" drill="0.35"/>
 <wire x1="29.23088125" y1="4.91015" x2="29.58633125" y2="5.2656" width="0.1524" layer="16"/>
 <wire x1="29.58633125" y1="5.2656" x2="29.58633125" y2="5.45633125" width="0.1524" layer="16"/>
@@ -8226,6 +8253,8 @@ design rules under a new name.</description>
 <wire x1="26.1065" y1="9.2075" x2="25.25925" y2="9.2075" width="0.1524" layer="1"/>
 <wire x1="25.25925" y1="9.2075" x2="25.2095" y2="9.15775" width="0.1524" layer="1"/>
 <wire x1="26.1065" y1="10.0965" x2="26.1065" y2="9.2075" width="0.1524" layer="1"/>
+<contactref element="FOL" pad="TP"/>
+<wire x1="26.1065" y1="10.0965" x2="27.7495" y2="13.3985" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="V_FOL_PWM">
 <contactref element="R10" pad="2"/>
@@ -8240,6 +8269,9 @@ design rules under a new name.</description>
 <wire x1="17.25724375" y1="10.83125625" x2="16.89365" y2="10.83125625" width="0.1524" layer="1"/>
 <wire x1="16.89365" y1="10.83125625" x2="16.50694375" y2="10.44455" width="0.1524" layer="1"/>
 <wire x1="22.02325" y1="11.5425" x2="17.9684875" y2="11.5425" width="0.1524" layer="1"/>
+<contactref element="F_PWM" pad="TP"/>
+<wire x1="25.17775" y1="10.922" x2="25.2095" y2="10.89025" width="0.1524" layer="1"/>
+<wire x1="25.2095" y1="10.89025" x2="25.2095" y2="10.08275" width="0.1524" layer="1"/>
 </signal>
 <signal name="VCOMP_PWM">
 <contactref element="R7" pad="1"/>
@@ -8253,6 +8285,9 @@ design rules under a new name.</description>
 <wire x1="20.27158125" y1="1.5494" x2="19.935" y2="1.88598125" width="0.1524" layer="1"/>
 <wire x1="20.8643" y1="1.5494" x2="20.27158125" y2="1.5494" width="0.1524" layer="1"/>
 <wire x1="19.935" y1="1.88598125" x2="19.935" y2="2.899" width="0.1524" layer="1"/>
+<contactref element="C_PWM" pad="TP"/>
+<wire x1="19.685" y1="1.74625" x2="19.79526875" y2="1.74625" width="0.1524" layer="1"/>
+<wire x1="19.79526875" y1="1.74625" x2="19.935" y2="1.88598125" width="0.1524" layer="1"/>
 </signal>
 <signal name="LED_PWR">
 <contactref element="LED" pad="P$2"/>

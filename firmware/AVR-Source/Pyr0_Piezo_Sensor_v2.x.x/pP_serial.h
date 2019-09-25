@@ -89,7 +89,7 @@ void updateVComp() {
 
 void updateVAdj() {
   if (serialInt >= 0) {
-    senseInt = serialInt;
+    senseThrs = serialInt;
     //compInt = senseInt; // syncing these params til #24 is fixed
   }
 }
@@ -116,7 +116,22 @@ void updateParams() {
     updateVAdj();
   }
   else if (strcmp(serialMessageIn, "HYST") == 0) {
-  updateHysteresis();
+    updateHysteresis();
+  }
+  else if (strcmp(serialMessageIn, "HELP") == 0) {
+    Serial.println("To change trigger active duration: TRG_D [integer for milliseconds]");
+    Serial.println("To change gain factor: GAIN_F [integer for gain state - see note*]");
+    Serial.println("To change ADC hysteresis value: HYST [integer]");
+    Serial.println("To change sensor input pullup vRef low threshold: VADJ [float value]");
+    Serial.println("To change comparator trigger high threshold: VCOMP [float value]");
+    Serial.println("");
+    Serial.println("These commands should be wrapped in this format:");
+    Serial.println("<CMD, INT>");
+    Serial.println("");
+    Serial.println("Examples:");
+    Serial.println("<GAIN_F, 3> <~ set gain factor to index 3 (6x)");
+    Serial.println("<VADJ, 2350> <~ set the vref floor to 2.35V");
+    parseData();
   }
 }
 
@@ -159,6 +174,29 @@ void serialReply() {
     Serial.print(ADJ_FOLLOW);
     Serial.print(" ");
     Serial.println(senseInt);
+
+    Serial.print("Gain Factor:");
+    Serial.print(GAIN_FACTOR);
+    switch (GAIN_FACTOR) {
+      case 0:
+        Serial.println(" 3x");
+        break;
+      case 1:
+        Serial.println(" 3.5x");
+        break;
+      case 2:
+        Serial.println(" 4.33x");
+        break;
+      case 3:
+        Serial.println(" 6x");
+        break;
+      case 4:
+        Serial.println(" 11x");
+        break;
+      default:
+        Serial.println(" INVALID");
+        break;
+    }
 
   #endif
   

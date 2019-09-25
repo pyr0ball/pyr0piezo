@@ -3,7 +3,7 @@
 <eagle version="9.4.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.0635" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.05" altunitdist="mm" altunit="mm"/>
@@ -170,7 +170,7 @@
 <layer number="255" name="Accent" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyYTEyMDdh" projecturn="a.cGVyc29uYWw6dWUyYTEyMDdhIzIwMTgxMTI5MTYyOTY3NjMx" f3durn="urn:adsk.wipprod:dm.lineage:vKKGWEmGQn2HI60LZl0iTg" pcbguid="3754e242-df44-4c66-bec3-354b7824fadf" lastpulledtime="" lastsyncedchangeguid="8c33d7fc-1179-e463-a626-702d9a512d88"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyYTEyMDdh" projecturn="a.cGVyc29uYWw6dWUyYTEyMDdhIzIwMTgxMTI5MTYyOTY3NjMx" f3durn="urn:adsk.wipprod:dm.lineage:CjM9Iyx4Rp2n97LAflqEiA" pcbguid="9b4d669b-d89c-43f0-b322-b72a1e8bf9f7" lastpulledtime="" lastsyncedchangeguid="33774929-49bf-131c-e5a3-9350a075751e"/>
 <plain>
 <wire x1="59.7" y1="0" x2="5" y2="0" width="0.1524" layer="20"/>
 <wire x1="5" y1="0" x2="0" y2="5" width="0.1524" layer="20" curve="-90"/>
@@ -185,7 +185,7 @@
 <text x="7.8" y="19.4" size="2.54" layer="21" font="vector" ratio="11" rot="R90">-   +</text>
 <text x="24.55" y="13.3" size="2.1844" layer="21" font="vector" ratio="11" rot="R180">S -</text>
 <text x="42.2" y="12" size="1.016" layer="21" font="vector" ratio="11">1B  1A  2A  2B</text>
-<text x="16.4" y="57.5" size="1.778" layer="21">Pyr0-Piezo FFC Rev.2.0.1</text>
+<text x="16.4" y="57.5" size="1.778" layer="21">Pyr0-Piezo FFC Rev.2.1.1</text>
 <text x="16" y="55.7" size="1.15" layer="21">Copyright 2019 Alan "pyr0ball" Weinstock</text>
 <wire x1="59.7" y1="0" x2="64.8" y2="5.1" width="0.1524" layer="20" curve="90"/>
 <text x="28.2" y="12" size="1.016" layer="21" font="vector" ratio="11">1B  1A  2A  2B</text>
@@ -6567,7 +6567,7 @@ Source: http://www.kingtronics.com/SMD_M7/M7_SMD_4007.pdf</description>
 <vertex x="0.762" y="-0.762"/>
 </polygon>
 </package>
-<package name="FFC-15P-1MM" library_version="97" library_locally_modified="yes">
+<package name="FFC-15P-1MM" urn="urn:adsk.eagle:footprint:12330555/1" library_version="101">
 <smd name="P$1" x="0" y="0" dx="0.6" dy="1.9" layer="1"/>
 <smd name="P$2" x="1" y="0" dx="0.6" dy="1.9" layer="1"/>
 <smd name="P$3" x="2" y="0" dx="0.6" dy="1.9" layer="1"/>
@@ -6595,7 +6595,7 @@ Source: http://www.kingtronics.com/SMD_M7/M7_SMD_4007.pdf</description>
 <wire x1="16.75" y1="-5.75" x2="-2.75" y2="-5.75" width="0.127" layer="22"/>
 <text x="7" y="2" size="1.27" layer="25" font="vector" align="bottom-center">&gt;NAME</text>
 </package>
-<package name="FH12-40S-0.5SH" urn="urn:adsk.eagle:footprint:7232/1" library_version="97" library_locally_modified="yes">
+<package name="FH12-40S-0.5SH" urn="urn:adsk.eagle:footprint:12330673/1" library_version="101">
 <description>&lt;b&gt;0.5mm Pitch Connectors For FPC/FFC&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data sheet&lt;/a&gt;&lt;p&gt;</description>
 <wire x1="-11.45" y1="0.5" x2="-11.95" y2="0.5" width="0.2032" layer="51"/>
@@ -6666,7 +6666,6 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <smd name="39" x="9.25" y="3.25" dx="0.3" dy="1.3" layer="1" stop="no" cream="no"/>
 <smd name="40" x="9.75" y="3.25" dx="0.3" dy="1.3" layer="1" stop="no" cream="no"/>
 <text x="-11.4476" y="4.095" size="1.27" layer="25">&gt;NAME</text>
-<text x="-10.2476" y="-0.3258" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-9.95" y1="2.55" x2="-9.55" y2="3.95" layer="29"/>
 <rectangle x1="-9.875" y1="2.625" x2="-9.625" y2="3.875" layer="31"/>
 <rectangle x1="-9.45" y1="2.55" x2="-9.05" y2="3.95" layer="29"/>
@@ -6936,9 +6935,9 @@ chip</description>
 <packageinstance name="DO-214AC"/>
 </packageinstances>
 </package3d>
-<package3d name="FH12-40S-0.5SH" urn="urn:adsk.eagle:package:7313/1" type="box" library_version="97" library_locally_modified="yes">
-<description>0.5mm Pitch Connectors For FPC/FFC
-Source: Data sheet</description>
+<package3d name="FH12-40S-0.5SH" urn="urn:adsk.eagle:package:12330674/2" type="model" library_version="101">
+<description>&lt;b&gt;0.5mm Pitch Connectors For FPC/FFC&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data sheet&lt;/a&gt;&lt;p&gt;</description>
 <packageinstances>
 <packageinstance name="FH12-40S-0.5SH"/>
 </packageinstances>
@@ -6947,6 +6946,11 @@ Source: Data sheet</description>
 <description>&lt;b&gt;2.54mm Pitch SL™ Header, Single Row, Vertical, 3.05mm Pocket, Shrouded, 3 Circuits, 0.38µm Gold (Au) Selective Plating, Tin (Sn) PC Tail Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/705430002_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <packageinstances>
 <packageinstance name="70543-02"/>
+</packageinstances>
+</package3d>
+<package3d name="FFC-15P-1MM" urn="urn:adsk.eagle:package:12330556/2" type="model" library_version="101">
+<packageinstances>
+<packageinstance name="FFC-15P-1MM"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -7243,12 +7247,12 @@ design rules under a new name.</description>
 <element name="Q2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="SOT23-BEC" package3d_urn="urn:adsk.eagle:package:28748/2" value="" x="17.337" y="24.114" smashed="yes" rot="R270">
 <attribute name="NAME" x="21.532" y="23.179" size="1.27" layer="25" font="vector" ratio="11" rot="R90"/>
 </element>
-<element name="R6" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0805" package3d_urn="urn:adsk.eagle:package:8443791/3" value="2K" x="14.46" y="18.174" smashed="yes">
+<element name="R6" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0805" package3d_urn="urn:adsk.eagle:package:8443791/3" value="1R" x="14.46" y="18.174" smashed="yes">
 <attribute name="MPN" value="RC0805JR-072KL" x="8.11" y="24.524" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="15.075" y="17.221" size="0.889" layer="25" font="vector" ratio="11" rot="R180"/>
 <attribute name="VALUE" x="13.317" y="17.539" size="0.889" layer="21" font="vector" ratio="11" rot="R90"/>
 </element>
-<element name="R7" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0805" package3d_urn="urn:adsk.eagle:package:8443791/3" value="2K" x="17.33" y="19.114" smashed="yes" rot="R90">
+<element name="R7" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0805" package3d_urn="urn:adsk.eagle:package:8443791/3" value="10R" x="17.33" y="19.114" smashed="yes" rot="R90">
 <attribute name="MPN" value="RC0805JR-072KL" x="9.71" y="12.764" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="16.679" y="20.625" size="0.889" layer="25" font="vector" ratio="11"/>
 <attribute name="VALUE" x="18.352" y="20.819" size="0.889" layer="21" font="vector" ratio="11" rot="R270"/>
@@ -7272,7 +7276,7 @@ design rules under a new name.</description>
 <element name="H2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="HOLES_3,2-PAD" package3d_urn="urn:adsk.eagle:package:5224590/2" value="HOLES_MOUNT-PAD-ROUND3.2" x="5.08" y="58.82" smashed="yes"/>
 <element name="H3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="HOLES_3,2-PAD" package3d_urn="urn:adsk.eagle:package:5224590/2" value="HOLES_MOUNT-PAD-ROUND3.2" x="59.76" y="5.18" smashed="yes"/>
 <element name="H4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="HOLES_3,2-PAD" package3d_urn="urn:adsk.eagle:package:5224590/2" value="HOLES_MOUNT-PAD-ROUND3.2" x="59.76" y="58.82" smashed="yes"/>
-<element name="R5" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0805" package3d_urn="urn:adsk.eagle:package:8443791/3" value="2K" x="27.1" y="18.65" smashed="yes" rot="R270">
+<element name="R5" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0805" package3d_urn="urn:adsk.eagle:package:8443791/3" value="0R" x="27.1" y="18.65" smashed="yes" rot="R270">
 <attribute name="MPN" value="RC0805JR-072KL" x="34.1" y="24.65" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="29.005" y="17.634" size="0.889" layer="25" font="vector" ratio="11" rot="R180"/>
 <attribute name="VALUE" x="29.005" y="20.555" size="0.889" layer="27" ratio="11" rot="R180"/>
@@ -7346,10 +7350,10 @@ design rules under a new name.</description>
 <element name="D16" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="DO-214AC" package3d_urn="urn:adsk.eagle:package:10086384/2" value="DIODE_SCHOTTKY_SINGLE" x="50.5" y="16" smashed="yes" rot="MR0">
 <attribute name="NAME" x="53.905" y="14.96" size="1.016" layer="26" font="vector" rot="MR90"/>
 </element>
-<element name="J2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="FFC-15P-1MM" value="FFC-15P-1MM" x="59.5" y="33" smashed="yes" rot="R90">
+<element name="J2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="FFC-15P-1MM" package3d_urn="urn:adsk.eagle:package:12330556/2" value="FFC-15P-1MM" x="59.5" y="33" smashed="yes" rot="R90">
 <attribute name="NAME" x="57.5" y="40" size="1.27" layer="25" font="vector" rot="R90" align="bottom-center"/>
 </element>
-<element name="X1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="FH12-40S-0.5SH" package3d_urn="urn:adsk.eagle:package:7313/1" value="FFC-40P-0.5SH" x="62.5" y="27" smashed="yes" rot="MR270">
+<element name="X1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="FH12-40S-0.5SH" package3d_urn="urn:adsk.eagle:package:12330674/2" value="FFC-40P-0.5SH" x="62.5" y="27" smashed="yes" rot="MR270">
 <attribute name="MF" value="" x="62.5" y="27" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="MPN" value="FH12-40S-0.5SH(55)" x="62.5" y="27" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="NAME" x="63.905" y="36.9476" size="1.27" layer="26" rot="MR270"/>

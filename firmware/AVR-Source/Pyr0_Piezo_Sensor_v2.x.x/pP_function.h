@@ -17,6 +17,9 @@ void digitalWriteFast(uint8_t pin, uint8_t x) {
 void pulse() {
   digitalWriteFast(TRG_OUT, LOW);
   sensorHReading = 1;
+  #ifdef DEBUG
+    Serial.println("Trig!");
+  #endif
   delay(TRG_DUR);
   digitalWriteFast(TRG_OUT, HIGH);
 }
