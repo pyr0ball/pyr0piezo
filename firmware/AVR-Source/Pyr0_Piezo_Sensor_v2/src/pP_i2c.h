@@ -3,7 +3,7 @@
 #ifdef I2C_INPUT
 
 
-#define senseInt_Offset 0x00 // Integer of sense threshold in millivolts
+#define followerInt_Offset 0x00 // Integer of sense threshold in millivolts
 #define compInt_Offset  0x01 // Integer of comparator threshold in millivolts
 #define gainFactor_Offset 0x02  // Gain adjustment factor. 0=3x, 1=3.5x, 2=4.33x, 3=6x, 4=11x
 #define hysteresis_Offset 0x03  // Hysteresis value for ADC measurements

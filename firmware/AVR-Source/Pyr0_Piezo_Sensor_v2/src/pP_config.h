@@ -1,41 +1,63 @@
+#ifndef PP_CONFIG_H
+#define PP_CONFIG_H
+
 // Configurable settings:
 
+#define GAIN_FACTOR_DEFAULT 2
+#define GAIN_FACTOR_ADDRESS 0
 #if !(defined(GAIN_FACTOR))
-  int GAIN_FACTOR = 2;            // Gain adjustment factor. 0=3x, 1=3.5x, 2=4.33x, 3=6x, 4=11x
+extern int GAIN_FACTOR; // Gain adjustment factor. 0=3x, 1=3.5x, 2=4.33x, 3=6x, 4=11x
 #endif
 
-#ifndef senseThrs
-  #define senseThrs 1450
+#define FOLLOWER_THRESHOLD_DEFAULT 1450
+#define FOLLOWER_THRESHOLD_ADDRESS 4
+#if !(defined(followerThrs))
+extern int followerThrs;
 #endif
 
-#ifndef compThrs
-  #define compThrs 2850
+#define COMP_THRESHOLD_DEFAULT 2850
+#define COMP_THRESHOLD_ADDRESS 8
+#if !(defined(compThrs))
+extern int compThrs;
 #endif
 
 #ifndef InitCount
-  #define InitCount 6             // Number of times to blink the LED on start
+#define InitCount 6 // Number of times to blink the LED on start
 #endif
 
+#define LOOP_DUR_DEFAULT 50
+#define LOOP_DUR_ADDRESS 12
 #if !(defined(LOOP_DUR))
-  int LOOP_DUR = 50;              // duration of time between ADC checks and other loop functions
+extern int LOOP_DUR; // duration of time between ADC checks and other loop functions
 #endif
 
+#define TRG_DUR_DEFAULT 20
+#define TRG_DUR_ADDRESS 16
 #if !(defined(TRG_DUR))
-  int TRG_DUR = 20;               // duration of the Z-axis pulse sent, in ms
+extern int TRG_DUR; // duration of the Z-axis pulse sent, in ms
 #endif
 
+#define HYST_DEFAULT 20
+#define HYST_ADDRESS 20
 #if !(defined(Hyst))
-  int Hyst = 20;                  // Hysteresis value for ADC measurements
+extern int Hyst; // Hysteresis value for ADC measurements
+#endif
+
+#if !(defined(Debug))
+extern int Debug;
 #endif
 
 #if !(defined(voldMeterConstant))
-  long voltMeterConstant = 1125300L; // For fine tuning input voltage sense
+extern long voltMeterConstant; // For fine tuning input voltage sense
 #endif
 
-#ifdef I2C_INPUT
-  #if !(defined(pP_i2c_address))
-    byte pP_i2c_address = 0xa0;     // I2C Bus Address
-  #endif
-#endif
+// #ifdef I2C_INPUT
+// #if !(defined(pP_i2c_address))
+// extern byte pP_i2c_address = 0xa0; // I2C Bus Address
+// #endif
+// #endif
 
-  
+void restoreConfig();
+void resetConfig();
+
+#endif

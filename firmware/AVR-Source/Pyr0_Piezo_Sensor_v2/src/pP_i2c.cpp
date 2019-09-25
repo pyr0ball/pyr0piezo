@@ -31,7 +31,7 @@ void pP_i2c::i2cInput(int bytesReceived) {
   }
   switch (cmdRcvd[0]) {
     case 0x00:
-      senseInt = (long) cmdRcvd[1];
+      followerInt = (long) cmdRcvd[1];
       return;
       break;
     case 0x01:

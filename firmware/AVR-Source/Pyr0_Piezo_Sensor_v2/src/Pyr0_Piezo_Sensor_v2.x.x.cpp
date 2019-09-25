@@ -34,7 +34,7 @@
 To change trigger active duration: TRG_D [integer for milliseconds]
 To change gain factor: GAIN_F [integer for gain state - see note*]
 To change ADC hysteresis value: HYST [integer]
-To change sensor input pullup vRef low threshold: VADJ [float value]
+To change sensor input pullup vRef low threshold: VFOL [float value]
 To change comparator trigger high threshold: VCOMP [float value]
 
 
@@ -43,7 +43,7 @@ These commands should be wrapped in this format:
 
 Examples:
 <GAIN_F, 3> <~ set gain factor to index 3 (6x)
-<VADJ, 2350> <~ set the vref floor to 2.35V
+<VFOL, 2350> <~ set the vref floor to 2.35V
 
 *Note for Gain Factor:
 The gain STATE is representative of these values:
@@ -54,14 +54,7 @@ The gain STATE is representative of these values:
 4 = 11x
 */
 
-/*------------------------------------------------------------*/
-
-// Debug output toggle. Uncomment to enable
-#define DEBUG true
-
-/*  Debug output verbose mode will continuously output sensor readings
-    rather than waiting for user input */
-//#define VERBOSE true
+#include <Arduino.h>
 
 // Headers, variables, and functions
 #include "LightChrono.h"
@@ -74,68 +67,82 @@ The gain STATE is representative of these values:
 // i2c input toggle. Uncomment to enable
 //#define I2C_INPUT true
 
-void setup() {
-  pinMode(TRG_OUT, OUTPUT);       // declare the Trigger as as OUTPUT
+void setup()
+{
+  pinMode(TRG_OUT, OUTPUT); // declare the Trigger as as OUTPUT
   pinMode(ERR_LED, OUTPUT);
-  pinMode(Z_TRG, INPUT_PULLUP);   // declare z-sense input with pullup
+  pinMode(Z_TRG, INPUT_PULLUP); // declare z-sense input with pullup
   pinMode(V_FOLLOW_PIN, INPUT);
   pinMode(VCOMP_SENSE_PIN, INPUT);
-  pinMode(GADJ_R0, INPUT);        // declare input to set high impedance
-  pinMode(GADJ_R1, INPUT);        // declare input to set high impedance
-  pinMode(GADJ_R2, INPUT);        // declare input to set high impedance
-  pinMode(GADJ_R3, INPUT);        // declare input to set high impedance
+  pinMode(GADJ_R0, INPUT); // declare input to set high impedance
+  pinMode(GADJ_R1, INPUT); // declare input to set high impedance
+  pinMode(GADJ_R2, INPUT); // declare input to set high impedance
+  pinMode(GADJ_R3, INPUT); // declare input to set high impedance
   Serial.begin(9600);
 
   attachInterrupt(digitalPinToInterrupt(Z_TRG), pulse, FALLING);
 
   Serial.println("Initializing Pyr0-Piezo Sensor...");
+
+  restoreConfig();
+
+  adjustGain();
 }
 
-/*------------------------------------------------*/
-
-void loop() {
-  if (mainLoop.hasPassed(LOOP_DUR)) {
+void loop()
+{
+  if (mainLoop.hasPassed(LOOP_DUR))
+  {
     mainLoop.restart();
-    // Blink LED's on init
-    if (BlinkCount > 0) {
-      BlinkState = !BlinkState;
-      digitalWrite(ERR_LED, BlinkState);
-      digitalWrite(TRG_OUT, BlinkState);
-      --BlinkCount;
-    }
 
     // Get Serial Input
     serialInput();
 
     // Set any new parameters from serial input
-    updateParams();
-
-    // Set the amplification gain factor
-    adjustGain();
+    if (serialIncoming)
+    {
+      updateParams();
+    }
 
     // Check voltage of first and second stages and compare against thresholds
-    adjustVin();
+    readVin();
     VComp = analogRead(VCOMP_SENSE_PIN);
-    VAdj = analogRead(V_FOLLOW_PIN);
+    VFol = analogRead(V_FOLLOW_PIN);
 
-    // Voltage Follower adjustment
-    if (VLast > Hyst || VLast < -Hyst) {
+    VLast = VOld - Vin;
+    if (VLast > Hyst || VLast < -Hyst)
+    {
+      // Voltage Follower adjustment
       adjustFollow();
-    }
-
-    // Voltage Comparator adjustment
-    if (VLast > Hyst || VLast < -Hyst) {
+      // Voltage Comparator adjustment
       adjustComp();
+      // Alert the user that auto-calibration is ongoing
+      ERR_STATE = 1;
+    }
+    else
+    {
+      ERR_STATE = 0;
     }
 
-    // Alert the user that auto-calibration is ongoing
-    calibrateAlert();
-
+    // Blink LED's on init
+    if (BlinkCount > 0)
+    {
+      BlinkState = !BlinkState;
+      digitalWrite(ERR_LED, BlinkState);
+      digitalWrite(TRG_OUT, BlinkState);
+      --BlinkCount;
+    }
+    else
     // Check for error state
-    checkError();
+    {
+      checkError();
+    }
 
-    // Reply with status
-    serialReply();
+    // Print state if debug is on
+    if (Debug > 0)
+    {
+      serialPrintState();
+    }
 
     // Sets trigger output state to false after completing loop
     //digitalWrite(TRG_OUT, HIGH);

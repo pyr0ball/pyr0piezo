@@ -54,14 +54,14 @@ long readVcc() {
 
 /*------------------------------------------------*/
 
- void adjustVin() {
+ void readVin() {
    VOld = Vin;
 	 Vin = readVcc(), DEC;
-   senseLong = senseThrs * 1024L;
-   compLong = compThrs * 1024L;
-   senseInt = (long long) senseLong / Vin;
+   followerLong = followerThrs * 1023L;
+   compLong = compThrs * 1023L;
+   followerInt = (long long) followerLong / Vin;
    compInt = (long long) compLong / Vin;
-   senseInt = (int) senseInt;
+   followerInt = (int) followerInt;
    compInt = (int) compInt;
  }
 
@@ -71,7 +71,7 @@ long readVcc() {
   /* Compares diffs of threshold vs read value
    if positive, adjusts the follower to within
    the range set above*/
-  ADJ_FOLLOW = (senseInt / 4);
+  ADJ_FOLLOW = (followerInt / 4);
 
   // Analog output (PWM) of duty cycle
   analogWrite(V_FOL_PWM, ADJ_FOLLOW);
@@ -87,15 +87,6 @@ void adjustComp() {
 
 /*------------------------------------------------*/
 
-void calibrateAlert() {
-  VLast = VOld - Vin;
-  if (VLast > Hyst || VLast < -Hyst ) {
-    ERR_STATE = 1;
-  }
-}
-
-/*------------------------------------------------*/
-
 void adjustGain() {
 
   if (GAIN_FACTOR == 0) {
@@ -103,7 +94,6 @@ void adjustGain() {
     pinMode(GADJ_R2, INPUT);
     pinMode(GADJ_R1, INPUT);
     pinMode(GADJ_R0, INPUT);
-    ERR_STATE = 0;
   }
   else if (GAIN_FACTOR > 0) {
     pinMode(GADJ_R3, OUTPUT);
@@ -111,25 +101,21 @@ void adjustGain() {
     pinMode(GADJ_R2, INPUT);
     pinMode(GADJ_R1, INPUT);
     pinMode(GADJ_R0, INPUT);
-    ERR_STATE = 0;
   }
   else if (GAIN_FACTOR > 1) {
     pinMode(GADJ_R2, OUTPUT);
     digitalWrite(GADJ_R2, LOW);
     pinMode(GADJ_R1, INPUT);
     pinMode(GADJ_R0, INPUT);
-    ERR_STATE = 0;
   }
   else if (GAIN_FACTOR > 2) {
     pinMode(GADJ_R1, OUTPUT);
     digitalWrite(GADJ_R1, LOW);
     pinMode(GADJ_R0, INPUT);
-    ERR_STATE = 0;
   }
   else if (GAIN_FACTOR > 3) {
     pinMode(GADJ_R0, OUTPUT);
     digitalWrite(GADJ_R0, LOW);
-    ERR_STATE = 0;
   }
 }
 
