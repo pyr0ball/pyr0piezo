@@ -508,24 +508,46 @@ Changelog updated 2019-08-15_15-51-13
 - Migrated configs to separate header file, made adjustment to definition [view commit](http://github.com/pyr0ball/pyr0piezo/commit/56c06008d4f7463a284561b5d0a337b573caa5e8)
 
 - Changed compiler behavior for i2c. I2C library is still broken [view commit](http://github.com/pyr0ball/pyr0piezo/commit/29fd45db239fc5beee5414f8e795ab0e6d14cb96)
-### v2.1.2 to v2.1.2_docs
+### v2.1.2 to v2.1.3
 
-Changelog updated 2019-08-15_16-07-36
+Changelog updated 2019-09-25_14-59-04
 
  *Added Features*
 
-- setting up syntax for changelogs on the docs site #featureadd [view commit](http://github.com/pyr0ball/pyr0piezo/commit/b3909173a6b2a5d6cf281d9b6a4bb987599b960d) 
+- setting up syntax for changelogs on the docs site  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/b3909173a6b2a5d6cf281d9b6a4bb987599b960d) 
 
-- Added comprehensive changelog generated from script #featureadd [view commit](http://github.com/pyr0ball/pyr0piezo/commit/74d348ea0738d7b17b176e1a6bc22478356a9dc4) 
+- Added comprehensive changelog generated from script  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/74d348ea0738d7b17b176e1a6bc22478356a9dc4) 
+
+- Added debug output to trigger function  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/952a1cdb5f59be1e5ed3c2891674b01113c42c53) 
+
+- Added gain factor to serial debug output  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/fd172492d7231fa85606eeea16a0e6b3804834b9) 
+
+- new version EasyPiezi-v2.1.2 - adds extra test points  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/c79ad7d4bd6542f21c0715cb4b44e2b669b5d266) 
+
+- added usage output to serial by sending <HELP>  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/4d8466d79ab1a585bd651a670ea296856efaffdb) 
 
 
 ------------------------------------
 
  *Bugfixes*
 
-- fixed syntax for table of contents on changelog #bugfix [view commit](http://github.com/pyr0ball/pyr0piezo/commit/359c8c8eba193dcc738dbb4bd49dbabb26972748) 
+- fixed syntax for table of contents on changelog  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/359c8c8eba193dcc738dbb4bd49dbabb26972748) 
 
-- added additional separator between sections added by changelog script #bugfix [view commit](http://github.com/pyr0ball/pyr0piezo/commit/ae26c4792bdd6c71721d7d552f588de34bd4fb8c) 
+- added additional separator between sections added by changelog script  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/ae26c4792bdd6c71721d7d552f588de34bd4fb8c) 
+
+- commented out main loop trigger reset  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/afad0a1d883980d6ef4709d63f58d407af9f4484) 
+
+- fixed definition parameter for I2C config  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/b207482bc1ca76ba21ae846b7446e1fdff65ab32) 
+
+- Slight adjustment to wire routing for better spacing  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/4b5cc640be4b0230fba5ac6a6c0e6388f8372091) 
+
+- fixed footprint for RGB LED (default polarity was backwards)  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/52f39b6debebb7995a301e34918917907bde0778) 
+
+- fixed incorrect resistor values on FFC Direct vreg  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/01c530d7c6efe6135643c05cc69230a04d021c35) 
+
+- fixed 0606 rgb led footprint  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/bc052bccacb0cd8ddf6b6ef20190d60698f783d3) 
+
+- Fixed serial input updating the wrong variable  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/cdae15c99ad3cdacc3209cb60f7fafbb7c123b3c) 
 
 
 ------------------------------------
@@ -652,53 +674,15 @@ Changelog updated 2019-08-15_16-07-36
 
 - Fixed syntax issue with changelog script [view commit](http://github.com/pyr0ball/pyr0piezo/commit/11b8eb691f9091e57e7b5c387e041d60c8c8005b) 
 
-- setting up syntax for changelogs on the docs site #featureadd [view commit](http://github.com/pyr0ball/pyr0piezo/commit/b3909173a6b2a5d6cf281d9b6a4bb987599b960d) 
+- setting up syntax for changelogs on the docs site  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/b3909173a6b2a5d6cf281d9b6a4bb987599b960d) 
 
 - fixed some syntax with regex for the changelog [view commit](http://github.com/pyr0ball/pyr0piezo/commit/e4de789d65ae66166892cfd899ddd3761174e3c9) 
 
-- Added comprehensive changelog generated from script #featureadd [view commit](http://github.com/pyr0ball/pyr0piezo/commit/74d348ea0738d7b17b176e1a6bc22478356a9dc4) 
+- Added comprehensive changelog generated from script  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/74d348ea0738d7b17b176e1a6bc22478356a9dc4) 
 
-- fixed syntax for table of contents on changelog #bugfix [view commit](http://github.com/pyr0ball/pyr0piezo/commit/359c8c8eba193dcc738dbb4bd49dbabb26972748) 
+- fixed syntax for table of contents on changelog  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/359c8c8eba193dcc738dbb4bd49dbabb26972748) 
 
-- added additional separator between sections added by changelog script #bugfix [view commit](http://github.com/pyr0ball/pyr0piezo/commit/ae26c4792bdd6c71721d7d552f588de34bd4fb8c) 
-
-
-------------------------------------
-### v2.1.2_docs to master (Current as of 8/30/2019)
-
-Changelog updated 2019-08-30_18-23-20
-
- *Added Features*
-
-- Added debug output to trigger function  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/952a1cdb5f59be1e5ed3c2891674b01113c42c53) 
-
-- Added gain factor to serial debug output  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/fd172492d7231fa85606eeea16a0e6b3804834b9) 
-
-- new version EasyPiezi-v2.1.2 - adds extra test points  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/c79ad7d4bd6542f21c0715cb4b44e2b669b5d266) 
-
-- added usage output to serial by sending <HELP>  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/4d8466d79ab1a585bd651a670ea296856efaffdb) 
-
-
-------------------------------------
-
- *Bugfixes*
-
-- commented out main loop trigger reset  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/afad0a1d883980d6ef4709d63f58d407af9f4484) 
-
-- fixed definition parameter for I2C config  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/b207482bc1ca76ba21ae846b7446e1fdff65ab32) 
-
-- Slight adjustment to wire routing for better spacing  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/4b5cc640be4b0230fba5ac6a6c0e6388f8372091) 
-
-- fixed footprint for RGB LED (default polarity was backwards)  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/52f39b6debebb7995a301e34918917907bde0778) 
-
-- fixed incorrect resistor values on FFC Direct vreg  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/01c530d7c6efe6135643c05cc69230a04d021c35) 
-
-- fixed 0606 rgb led footprint  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/bc052bccacb0cd8ddf6b6ef20190d60698f783d3) 
-
-
-------------------------------------
-
- *Full Changelog*
+- added additional separator between sections added by changelog script  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/ae26c4792bdd6c71721d7d552f588de34bd4fb8c) 
 
 - Added latest commits to changelog including docs site [view commit](http://github.com/pyr0ball/pyr0piezo/commit/cc0b19d3913de537ce5d10201302643757b79f09) 
 
@@ -726,11 +710,25 @@ Changelog updated 2019-08-30_18-23-20
 
 - added usage output to serial by sending <HELP>  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/4d8466d79ab1a585bd651a670ea296856efaffdb) 
 
+- fixed permissions on scripts [view commit](http://github.com/pyr0ball/pyr0piezo/commit/914e0406336813f0b3c65c0462e3dc8f13288e82) 
+
+- added new changelog detailing recent changes [view commit](http://github.com/pyr0ball/pyr0piezo/commit/c5a357d29036258f3221d9b38c50804e1578a04e) 
+
+- Merge branch 'master' of https://github.com/pyr0ball/pyr0piezo [view commit](http://github.com/pyr0ball/pyr0piezo/commit/b8e008014d91845068ed843d04009ec2de150bae) 
+
+- Fixed serial input updating the wrong variable  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/cdae15c99ad3cdacc3209cb60f7fafbb7c123b3c) 
+
+- added explaination on how to fine-tune VccMeter. #changelog [view commit](http://github.com/pyr0ball/pyr0piezo/commit/2bbc20ff4db69ab9eeacec7e10a45ebb6abbf3bf) 
+
+- Merge branch 'master' of https://github.com/pyr0ball/pyr0piezo [view commit](http://github.com/pyr0ball/pyr0piezo/commit/a0d6b1d178052a160834aff3101a25c9e14a703d) 
+
+- fixed typo #changelog [view commit](http://github.com/pyr0ball/pyr0piezo/commit/40b20c06701c4e4709961d153f5a9da8f45d9daf) 
+
 
 ------------------------------------
 ### v2.1.3 to v2.1.4
 
-Changelog updated 2019-09-25_14-47-01
+Changelog updated 2019-09-25_14-59-18
 
  *Added Features*
 
