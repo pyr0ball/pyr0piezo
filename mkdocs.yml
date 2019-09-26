@@ -50,8 +50,8 @@ nav:
         - 'Makerbot Original Under Bed': 'mounts/quadrap/makerbot-under-bed.md'
         - 'Ultimaker Under Bed': 'mounts/quadrap/um-under-bed.md'
   - 'Configuration':
-    - 'Start Here': 'config.md'
-    - 'Firmware Config':
+    - 'Pyr0-Piezo Config': 'config.md'
+    - 'Printer Firmware Config':
       - 'Marlin': 'tutorials/config/printer-firmware/marlin/marlin-config.md'
       - 'Klipper': 'tutorials/config/printer-firmware/klipper/klipper-config.md'
   - 'Resources':
