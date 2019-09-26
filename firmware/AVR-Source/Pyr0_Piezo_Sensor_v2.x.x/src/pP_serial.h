@@ -18,7 +18,8 @@ void identifyMarkers() {
   char x = Serial.read();
 //  char y = Wire.read();
 
-  if (x == endMarker) {
+  if (x == '\n' || x == '\r')
+  {
     serialIncoming = true;
     inputBuffer[bytesRecvd] = 0;
     parseData();
