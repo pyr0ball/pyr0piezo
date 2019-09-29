@@ -90,8 +90,8 @@ update the voltMeterConstant variable in pP_config.h with the correct value
 //#define VERBOSE true
 
 // Headers, variables, and functions
-include <Arduino.h>
-include <EEPROM.h>
+#include <Arduino.h>
+#include <EEPROM.h>
 #include "LightChrono.h"
 #include "pP_pins.h"
 #include "pP_config.h"
