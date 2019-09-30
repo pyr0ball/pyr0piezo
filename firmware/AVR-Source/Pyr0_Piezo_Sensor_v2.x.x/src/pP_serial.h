@@ -193,11 +193,11 @@ void serialPrintState()
   Serial.print(",");
 
   Serial.print("\"VComp\":");
-  Serial.print(VComp);
+  Serial.print((long) VComp * Vin / 1023);
   Serial.print(",");
 
   Serial.print("\"VFol\":");
-  Serial.print(VFol);
+  Serial.print((long) VFol * Vin / 1023);
   Serial.print(",");
 
   Serial.print("\"Err\":");
