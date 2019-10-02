@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.2">
+<eagle version="9.5.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -5367,8 +5367,8 @@ DIN A3, landscape with location and doc. field</description>
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="RDY" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-LED_SMD-LED-CLEAR-BLUE(0603)" device="LED_0603" package3d_urn="urn:adsk.eagle:package:5224536/3"/>
-<part name="H2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="HOLES_MOUNT-PAD-ROUND" device="2.8" package3d_urn="urn:adsk.eagle:package:5224588/2"/>
-<part name="H3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="HOLES_MOUNT-PAD-ROUND" device="2.8" package3d_urn="urn:adsk.eagle:package:5224588/2"/>
+<part name="H2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="HOLES_MOUNT-PAD-ROUND" device="3.2" package3d_urn="urn:adsk.eagle:package:5224590/2" value="HOLES_MOUNT-PAD-ROUND3.2"/>
+<part name="H3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="HOLES_MOUNT-PAD-ROUND" device="3.2" package3d_urn="urn:adsk.eagle:package:5224590/2" value="HOLES_MOUNT-PAD-ROUND3.2"/>
 <part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SCK" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP13SQ" package3d_urn="urn:adsk.eagle:package:9341723/2"/>
@@ -5386,7 +5386,7 @@ DIN A3, landscape with location and doc. field</description>
 <part name="C1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-CAPACITOR_CERAMIC-10UF-25V-10%-X5R(0805)" device="CAP_0603_GEN" package3d_urn="urn:adsk.eagle:package:5248663/3" value="1uF"/>
 <part name="C2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-CAPACITOR_CERAMIC-10UF-25V-10%-X5R(0805)" device="CAP_0603_GEN" package3d_urn="urn:adsk.eagle:package:5248663/3" value="1uF"/>
 <part name="INT" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
-<part name="R6" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2"/>
+<part name="R6" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="4K7"/>
 <part name="R8" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2"/>
 <part name="R1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="1M"/>
 <part name="R10" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="10K"/>
@@ -5428,8 +5428,8 @@ DIN A3, landscape with location and doc. field</description>
 <part name="R21" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="100R"/>
 <part name="C10" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="0.1uF"/>
 <part name="SUPPLY11" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="TP1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP09R" package3d_urn="urn:adsk.eagle:package:9341726/2"/>
-<part name="TP2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP09R" package3d_urn="urn:adsk.eagle:package:9341726/2"/>
+<part name="PT+" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP09R" package3d_urn="urn:adsk.eagle:package:9341726/2"/>
+<part name="PT-" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP09R" package3d_urn="urn:adsk.eagle:package:9341726/2"/>
 <part name="R22" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="100R"/>
 <part name="C11" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="10nF"/>
 <part name="SUPPLY12" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -5440,14 +5440,14 @@ DIN A3, landscape with location and doc. field</description>
 <part name="C14" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="10uF"/>
 <part name="C15" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="3.3uF"/>
 <part name="RP1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="RESISTOR_NETWORK_X4" device="0804_L" package3d_urn="urn:adsk.eagle:package:9000147/3" value="1K"/>
-<part name="THR" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP13SQ" package3d_urn="urn:adsk.eagle:package:9341723/2"/>
-<part name="AOUT" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP13SQ" package3d_urn="urn:adsk.eagle:package:9341723/2"/>
+<part name="VCOM" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP13SQ" package3d_urn="urn:adsk.eagle:package:9341723/2"/>
+<part name="GOUT" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP13SQ" package3d_urn="urn:adsk.eagle:package:9341723/2"/>
 <part name="PZ+" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP13SQ" package3d_urn="urn:adsk.eagle:package:9341723/2"/>
 <part name="U4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ATMEGA48/88/168/328PB" device="" package3d_urn="urn:adsk.eagle:package:9273057/3"/>
 <part name="LED" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="LED-RGB-COM_ANO" device="0606" package3d_urn="urn:adsk.eagle:package:9308796/3"/>
 <part name="FOL" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP13SQ" package3d_urn="urn:adsk.eagle:package:9341723/2"/>
 <part name="TP_F" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP09R" package3d_urn="urn:adsk.eagle:package:9341726/2"/>
-<part name="F_PWM" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
+<part name="F_PWM" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP09R" package3d_urn="urn:adsk.eagle:package:9341726/2"/>
 <part name="C_PWM" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
 </parts>
 <sheets>
@@ -5781,10 +5781,10 @@ DIN A3, landscape with location and doc. field</description>
 <instance part="SUPPLY11" gate="GND" x="347.98" y="207.01" smashed="yes">
 <attribute name="VALUE" x="346.075" y="203.835" size="1.778" layer="96"/>
 </instance>
-<instance part="TP1" gate="G$1" x="207.01" y="49.53" smashed="yes">
+<instance part="PT+" gate="G$1" x="207.01" y="49.53" smashed="yes">
 <attribute name="NAME" x="205.74" y="50.8" size="1.016" layer="95"/>
 </instance>
-<instance part="TP2" gate="G$1" x="207.01" y="39.37" smashed="yes" rot="R180">
+<instance part="PT-" gate="G$1" x="207.01" y="39.37" smashed="yes" rot="R180">
 <attribute name="NAME" x="208.28" y="38.1" size="1.016" layer="95" rot="R180"/>
 </instance>
 <instance part="R22" gate="G$1" x="252.73" y="44.45" smashed="yes">
@@ -5840,11 +5840,11 @@ DIN A3, landscape with location and doc. field</description>
 <attribute name="NAME" x="214.122" y="176.022" size="1.27" layer="95" ratio="10"/>
 <attribute name="VALUE" x="217.17" y="173.99" size="1.27" layer="96" ratio="10"/>
 </instance>
-<instance part="THR" gate="G$1" x="328.93" y="208.28" smashed="yes">
+<instance part="VCOM" gate="G$1" x="328.93" y="208.28" smashed="yes">
 <attribute name="NAME" x="328.93" y="209.55" size="1.778" layer="95" rot="R90"/>
 <attribute name="TP_SIGNAL_NAME" x="330.2" y="207.01" size="1.778" layer="97"/>
 </instance>
-<instance part="AOUT" gate="G$1" x="328.93" y="190.5" smashed="yes" rot="R180">
+<instance part="GOUT" gate="G$1" x="328.93" y="190.5" smashed="yes" rot="R180">
 <attribute name="NAME" x="328.93" y="189.23" size="1.778" layer="95" rot="R270"/>
 <attribute name="TP_SIGNAL_NAME" x="327.66" y="191.77" size="1.778" layer="97" rot="R180"/>
 </instance>
@@ -6323,7 +6323,7 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="328.93" y1="196.85" x2="320.04" y2="196.85" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="214.63" x2="241.3" y2="214.63" width="0.1524" layer="91"/>
 <junction x="241.3" y="214.63"/>
-<pinref part="AOUT" gate="G$1" pin="TP"/>
+<pinref part="GOUT" gate="G$1" pin="TP"/>
 <wire x1="328.93" y1="193.04" x2="328.93" y2="196.85" width="0.1524" layer="91"/>
 <junction x="328.93" y="196.85"/>
 </segment>
@@ -6368,7 +6368,7 @@ DIN A3, landscape with location and doc. field</description>
 <pinref part="C14" gate="G$1" pin="2"/>
 <wire x1="316.23" y1="209.55" x2="316.23" y2="213.36" width="0.1524" layer="91"/>
 <junction x="316.23" y="213.36"/>
-<pinref part="THR" gate="G$1" pin="TP"/>
+<pinref part="VCOM" gate="G$1" pin="TP"/>
 <wire x1="328.93" y1="205.74" x2="328.93" y2="201.93" width="0.1524" layer="91"/>
 <junction x="328.93" y="201.93"/>
 </segment>
@@ -6494,7 +6494,7 @@ DIN A3, landscape with location and doc. field</description>
 </net>
 <net name="PT_IN+" class="0">
 <segment>
-<pinref part="TP1" gate="G$1" pin="TP"/>
+<pinref part="PT+" gate="G$1" pin="TP"/>
 <wire x1="207.01" y1="45.72" x2="207.01" y2="46.99" width="0.1524" layer="91"/>
 <pinref part="R17" gate="G$1" pin="1"/>
 <wire x1="207.01" y1="45.72" x2="212.09" y2="45.72" width="0.1524" layer="91"/>
@@ -6512,7 +6512,7 @@ DIN A3, landscape with location and doc. field</description>
 </net>
 <net name="PT_IN-" class="0">
 <segment>
-<pinref part="TP2" gate="G$1" pin="TP"/>
+<pinref part="PT-" gate="G$1" pin="TP"/>
 <wire x1="207.01" y1="43.18" x2="207.01" y2="41.91" width="0.1524" layer="91"/>
 <pinref part="R18" gate="G$1" pin="1"/>
 <wire x1="207.01" y1="43.18" x2="208.28" y2="43.18" width="0.1524" layer="91"/>
