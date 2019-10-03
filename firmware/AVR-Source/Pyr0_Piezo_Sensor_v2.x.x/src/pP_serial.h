@@ -8,7 +8,7 @@ void parseData() {
   strcpy(serialMessageIn, strtokIndx);   // copy it to serialMessageIn
   
   strtokIndx = strtok(NULL, " "); // this continues where the previous call left off
-  serialInt = atoi(strtokIndx);   // convert this part to an integer
+  serialLong = atol(strtokIndx);   // convert this part to an integer
 
 }
 /*------------------------------------------------*/
@@ -18,7 +18,8 @@ void identifyMarkers() {
   char x = Serial.read();
 //  char y = Wire.read();
 
-  if (x == endMarker) {
+  if (x == '\n' || x == '\r')
+  {
     serialIncoming = true;
     inputBuffer[bytesRecvd] = 0;
     parseData();
@@ -59,9 +60,9 @@ void identifyMarkers() {
 
 void updateGainFactor()
 {
-  if (serialInt >= 0)
+  if (serialLong >= 0)
   {
-    GAIN_FACTOR = serialInt;
+    GAIN_FACTOR = serialLong;
     adjustGain();
     EEPROM.put(GAIN_FACTOR_ADDRESS, GAIN_FACTOR);
   }
@@ -70,9 +71,9 @@ void updateGainFactor()
 /*------------------------------------------------*/
 
 void updateVFol() {
-  if (serialInt >= 0)
+  if (serialLong >= 0)
   {
-    followerThrs = serialInt;
+    followerThrs = serialLong;
     adjustFollow();
     EEPROM.put(FOLLOWER_THRESHOLD_ADDRESS, followerThrs);
   }
@@ -80,9 +81,9 @@ void updateVFol() {
 /*------------------------------------------------*/
 
 void updateVComp() {
-  if (serialInt >= 0)
+  if (serialLong >= 0)
   {
-    compThrs = serialInt;
+    compThrs = serialLong;
     adjustComp();
     EEPROM.put(COMP_THRESHOLD_ADDRESS, compThrs);
   }
@@ -92,36 +93,36 @@ void updateVComp() {
 
 void updateLoopDuration()
 {
-  if (serialInt >= 0)
+  if (serialLong >= 0)
   {
-    LOOP_DUR = serialInt;
+    LOOP_DUR = serialLong;
     EEPROM.put(LOOP_DUR_ADDRESS, LOOP_DUR);
   }
 }
 /*------------------------------------------------*/
 
 void updateTrigDuration() {
-  if (serialInt >= 0)
+  if (serialLong >= 0)
   {
-    TRG_DUR = serialInt;
+    TRG_DUR = serialLong;
     EEPROM.put(TRG_DUR_ADDRESS, TRG_DUR);
   }
 }
 /*------------------------------------------------*/
 
 void updateHysteresis() {
-  if (serialInt >= 0)
+  if (serialLong >= 0)
   {
-    Hyst = serialInt;
+    Hyst = serialLong;
     EEPROM.put(HYST_ADDRESS, Hyst);
   }
 }
 /*------------------------------------------------*/
 
 void updateConstant() {
-  if (serialInt >= 0)
+  if (serialLong >= 0)
   {
-    voltMeterConstant = (long) serialInt;
+    voltMeterConstant = (long) serialLong;
     EEPROM.put(VM_CONST_ADDRESS, voltMeterConstant);
   }
 }
@@ -129,9 +130,9 @@ void updateConstant() {
 /*------------------------------------------------*/
 
 void updateDebug() {
-  if (serialInt > 0) {
+  if (serialLong > 0) {
     Debug = 1;
-  } else if (serialInt == 0) {
+  } else if (serialLong == 0) {
     Debug = 0;
   }
 }
@@ -192,11 +193,11 @@ void serialPrintState()
   Serial.print(",");
 
   Serial.print("\"VComp\":");
-  Serial.print(VComp);
+  Serial.print((long) VComp * Vin / 1023);
   Serial.print(",");
 
   Serial.print("\"VFol\":");
-  Serial.print(VFol);
+  Serial.print((long) VFol * Vin / 1023);
   Serial.print(",");
 
   Serial.print("\"Err\":");
@@ -217,7 +218,7 @@ void updateParams() {
     updateVComp();
   }
   else if (strcmp(serialMessageIn, "LOOP_D") == 0) {
-    updateTrigDuration();
+    updateLoopDuration();
   }
   else if (strcmp(serialMessageIn, "TRG_D") == 0) {
     updateTrigDuration();
