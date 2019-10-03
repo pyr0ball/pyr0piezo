@@ -8,6 +8,8 @@ int LOOP_DUR = LOOP_DUR_DEFAULT; // duration of time between ADC checks and othe
 int TRG_DUR = TRG_DUR_DEFAULT;   // duration of the Z-axis pulse sent, in ms
 int Hyst = HYST_DEFAULT;         // Hysteresis value for ADC measurements
 int Debug = 0;
+long voltMeterConstant = VM_CONST_DEFAULT;
+uint8_t pP_i2c_address = 0xa0;
 
 void resetEEPROM() {
     resetConfig();
@@ -65,6 +67,14 @@ void restoreConfig() {
     } else {
         Hyst = temp;
     }
+
+    long longTemp;
+    EEPROM.get(VM_CONST_DEFAULT, longTemp);
+    if (longTemp < 1000000L || longTemp > 1200000L) {
+        resetEEPROM();
+    } else {
+        voltMeterConstant = longTemp;
+    }
 }
 
 void resetConfig() {
@@ -74,4 +84,5 @@ void resetConfig() {
     LOOP_DUR = LOOP_DUR_DEFAULT;
     TRG_DUR = TRG_DUR_DEFAULT;
     Hyst = HYST_DEFAULT;
+    voltMeterConstant = VM_CONST_DEFAULT;
 }
