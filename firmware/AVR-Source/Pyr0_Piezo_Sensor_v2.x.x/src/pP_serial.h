@@ -18,8 +18,7 @@ void identifyMarkers() {
   char x = Serial.read();
 //  char y = Wire.read();
 
-  if (x == '\n' || x == '\r')
-  {
+  if (x == '\n' || x == '\r') {
     serialIncoming = true;
     inputBuffer[bytesRecvd] = 0;
     parseData();
@@ -27,8 +26,7 @@ void identifyMarkers() {
   } else {
     inputBuffer[bytesRecvd] = x;
     bytesRecvd++;
-    if (bytesRecvd == buffSize)
-    {
+    if (bytesRecvd == buffSize) {
       bytesRecvd = buffSize - 1;
     }
   }
@@ -60,8 +58,7 @@ void identifyMarkers() {
 
 void updateGainFactor()
 {
-  if (serialLong >= 0)
-  {
+  if (serialLong >= 0) {
     GAIN_FACTOR = serialLong;
     adjustGain();
     EEPROM.put(GAIN_FACTOR_ADDRESS, GAIN_FACTOR);
@@ -71,8 +68,7 @@ void updateGainFactor()
 /*------------------------------------------------*/
 
 void updateVFol() {
-  if (serialLong >= 0)
-  {
+  if (serialLong >= 0) {
     followerThrs = serialLong;
     adjustFollow();
     EEPROM.put(FOLLOWER_THRESHOLD_ADDRESS, followerThrs);
@@ -81,8 +77,7 @@ void updateVFol() {
 /*------------------------------------------------*/
 
 void updateVComp() {
-  if (serialLong >= 0)
-  {
+  if (serialLong >= 0) {
     compThrs = serialLong;
     adjustComp();
     EEPROM.put(COMP_THRESHOLD_ADDRESS, compThrs);
@@ -91,10 +86,8 @@ void updateVComp() {
 
 /*------------------------------------------------*/
 
-void updateLoopDuration()
-{
-  if (serialLong >= 0)
-  {
+void updateLoopDuration() {
+  if (serialLong >= 0) {
     LOOP_DUR = serialLong;
     EEPROM.put(LOOP_DUR_ADDRESS, LOOP_DUR);
   }
@@ -102,8 +95,7 @@ void updateLoopDuration()
 /*------------------------------------------------*/
 
 void updateTrigDuration() {
-  if (serialLong >= 0)
-  {
+  if (serialLong >= 0) {
     TRG_DUR = serialLong;
     EEPROM.put(TRG_DUR_ADDRESS, TRG_DUR);
   }
@@ -111,8 +103,7 @@ void updateTrigDuration() {
 /*------------------------------------------------*/
 
 void updateHysteresis() {
-  if (serialLong >= 0)
-  {
+  if (serialLong >= 0) {
     Hyst = serialLong;
     EEPROM.put(HYST_ADDRESS, Hyst);
   }
@@ -120,8 +111,7 @@ void updateHysteresis() {
 /*------------------------------------------------*/
 
 void updateConstant() {
-  if (serialLong >= 0)
-  {
+  if (serialLong >= 0) {
     voltMeterConstant = (long) serialLong;
     EEPROM.put(VM_CONST_ADDRESS, voltMeterConstant);
   }
@@ -139,12 +129,10 @@ void updateDebug() {
 
 /*------------------------------------------------*/
 
-void serialPrintConfig()
-{
+void serialPrintConfig() {
   Serial.print("GAIN_F ");
   Serial.print(GAIN_FACTOR);
-  switch (GAIN_FACTOR)
-  {
+  switch (GAIN_FACTOR) {
   case 0:
     Serial.println(" 3x");
     break;
@@ -184,8 +172,7 @@ void serialPrintConfig()
   Serial.println(voltMeterConstant);
 }
 
-void serialPrintState()
-{
+void serialPrintState() {
   Serial.print("{");
 
   Serial.print("\"Vcc\":");
