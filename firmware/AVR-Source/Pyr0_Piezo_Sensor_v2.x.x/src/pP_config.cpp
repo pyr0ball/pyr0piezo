@@ -70,12 +70,9 @@ void restoreConfig() {
 
     long longTemp;
     EEPROM.get(VM_CONST_DEFAULT, longTemp);
-    if (longTemp < 1000000L || longTemp > 1200000L)
-    {
+    if (longTemp < 1000000L || longTemp > 1200000L) {
         resetEEPROM();
-    }
-    else
-    {
+    } else {
         voltMeterConstant = longTemp;
     }
 }
