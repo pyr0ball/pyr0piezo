@@ -89,15 +89,13 @@ update the voltMeterConstant variable in pP_config.h with the correct value
   ADJ_FOLLOW = (followerInt / 4);
 
   // Analog output (PWM) of duty cycle
-  analogWrite(V_FOL_PWM, ADJ_FOLLOW);
+  OCR2B = ADJ_FOLLOW;
 }
 
 /*------------------------------------------------*/
 
 void adjustComp() {
-  ADJ_COMP = (compInt / 4);
-
-  analogWrite(VCOMP_PWM, ADJ_COMP);
+  OCR1A = compInt;
 }
 
 /*------------------------------------------------*/
