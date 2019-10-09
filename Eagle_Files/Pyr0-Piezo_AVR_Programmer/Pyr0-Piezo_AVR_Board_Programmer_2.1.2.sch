@@ -395,13 +395,6 @@
 <text x="-1.27" y="-4.445" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
 <rectangle x1="-0.3302" y1="-0.3302" x2="0.3302" y2="0.3302" layer="51"/>
 </package>
-<package name="TP06R" urn="urn:adsk.eagle:footprint:27908/1" library_version="22" library_locally_modified="yes">
-<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
-<smd name="TP" x="0" y="0" dx="0.6" dy="0.6" layer="1" roundness="100" cream="no"/>
-<text x="-0.3" y="0.4001" size="1.27" layer="25">&gt;NAME</text>
-<text x="-0.254" y="-0.381" size="0.0254" layer="27">&gt;VALUE</text>
-<text x="0" y="-1.905" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
-</package>
 <package name="TP06SQ" urn="urn:adsk.eagle:footprint:27909/1" library_version="22" library_locally_modified="yes">
 <description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
 <smd name="TP" x="0" y="0" dx="0.5996" dy="0.5996" layer="1" cream="no"/>
@@ -434,13 +427,6 @@
 <description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
 <smd name="TP" x="0" y="0" dx="0.8" dy="0.8" layer="1" cream="no"/>
 <text x="-0.3" y="0.4001" size="1.27" layer="25">&gt;NAME</text>
-<text x="-0.381" y="-0.508" size="0.0254" layer="27">&gt;VALUE</text>
-<text x="0" y="-1.905" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
-</package>
-<package name="TP09R" urn="urn:adsk.eagle:footprint:27914/1" library_version="22" library_locally_modified="yes">
-<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
-<smd name="TP" x="0" y="0" dx="0.9" dy="0.9" layer="1" roundness="100" cream="no"/>
-<text x="-0.4501" y="0.5001" size="1.27" layer="25">&gt;NAME</text>
 <text x="-0.381" y="-0.508" size="0.0254" layer="27">&gt;VALUE</text>
 <text x="0" y="-1.905" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
 </package>
@@ -547,13 +533,6 @@
 <smd name="TP" x="0" y="0" dx="2" dy="2" layer="1" roundness="100" cream="no"/>
 <text x="-1" y="1.05" size="1.27" layer="25">&gt;NAME</text>
 <text x="-0.762" y="-1.016" size="0.0254" layer="27">&gt;VALUE</text>
-<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
-</package>
-<package name="TP13SQ" urn="urn:adsk.eagle:footprint:27930/1" library_version="22" library_locally_modified="yes">
-<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
-<smd name="TP" x="0" y="0" dx="1.3" dy="1.3" layer="1" cream="no"/>
-<text x="-0.65" y="0.7" size="1.27" layer="25">&gt;NAME</text>
-<text x="-0.635" y="-0.762" size="0.0254" layer="27">&gt;VALUE</text>
 <text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
 </package>
 <package name="TP14SQ" urn="urn:adsk.eagle:footprint:27931/1" library_version="22" library_locally_modified="yes">
@@ -684,7 +663,7 @@
 <pad name="5" x="10.16" y="0" drill="1.1051" diameter="1.7051"/>
 <text x="-1.27" y="-1.405" size="0.8128" layer="25" font="vector" align="top-left">&gt;NAME</text>
 </package>
-<package name="QFN50P500X500X80-29N" urn="urn:adsk.eagle:footprint:8319975/1" library_version="34">
+<package name="QFN50P500X500X80-29N" urn="urn:adsk.eagle:footprint:8319975/2" library_version="103">
 <wire x1="-2.55" y1="2.55" x2="2.55" y2="2.55" width="0.127" layer="51"/>
 <wire x1="2.55" y1="2.55" x2="2.55" y2="-2.55" width="0.127" layer="51"/>
 <wire x1="2.55" y1="-2.55" x2="-2.55" y2="-2.55" width="0.127" layer="51"/>
@@ -701,13 +680,16 @@
 <wire x1="2.55" y1="-2.55" x2="2" y2="-2.55" width="0.127" layer="21"/>
 <wire x1="-2.55" y1="-2" x2="-2.55" y2="-2.55" width="0.127" layer="21"/>
 <wire x1="-2.55" y1="-2.55" x2="-1.95" y2="-2.55" width="0.127" layer="21"/>
-<circle x="-3.478" y="1.578" radius="0.07" width="0.2" layer="21"/>
-<text x="-3.5002" y="3.450109375" size="1.27245" layer="25">&gt;NAME</text>
-<text x="-3.35426875" y="-4.680709375" size="1.272540625" layer="27">&gt;VALUE</text>
+<text x="-3.5002" y="3.450109375" size="1.27245" layer="25" font="vector" ratio="11">&gt;NAME</text>
+<text x="-3.35426875" y="-4.680709375" size="1.272540625" layer="27" font="vector" ratio="11">&gt;VALUE</text>
 <rectangle x1="0.1800875" y1="0.1800875" x2="1.33" y2="1.33" layer="31"/>
 <rectangle x1="-1.33181875" y1="0.180246875" x2="-0.18" y2="1.33" layer="31" rot="R90"/>
 <rectangle x1="-1.3314" y1="-1.3314" x2="-0.18" y2="-0.18" layer="31" rot="R180"/>
 <rectangle x1="0.18026875" y1="-1.33198125" x2="1.33" y2="-0.18" layer="31" rot="R270"/>
+<rectangle x1="-2.413" y1="2.032" x2="-2.032" y2="2.413" layer="35"/>
+<rectangle x1="2.032" y1="2.032" x2="2.413" y2="2.413" layer="35"/>
+<rectangle x1="2.032" y1="-2.413" x2="2.413" y2="-2.032" layer="35"/>
+<rectangle x1="-2.413" y1="-2.413" x2="-2.032" y2="-2.032" layer="35"/>
 <smd name="1" x="-2.36" y="1.5" dx="1.01" dy="0.27" layer="1" roundness="50"/>
 <smd name="2" x="-2.36" y="1" dx="1.01" dy="0.27" layer="1" roundness="50"/>
 <smd name="3" x="-2.36" y="0.5" dx="1.01" dy="0.27" layer="1" roundness="50"/>
@@ -737,6 +719,11 @@
 <smd name="27" x="-1" y="2.36" dx="1.01" dy="0.27" layer="1" roundness="50" rot="R270"/>
 <smd name="28" x="-1.5" y="2.36" dx="1.01" dy="0.27" layer="1" roundness="50" rot="R270"/>
 <smd name="29" x="0" y="0" dx="3.25" dy="3.25" layer="1" cream="no"/>
+<polygon width="0.127" layer="21">
+<vertex x="-3.048" y="1.524"/>
+<vertex x="-3.048" y="3.048"/>
+<vertex x="-1.524" y="3.048"/>
+</polygon>
 </package>
 <package name="CAPC1005X50" urn="urn:adsk.eagle:footprint:5248673/4" library_version="34">
 <description>Chip, 1.00 X 0.55 X 0.50 mm body
@@ -793,7 +780,7 @@
 <pad name="6" x="0" y="-2.54" drill="1.1051" diameter="1.7051"/>
 <text x="-1.27" y="1.4875" size="1.27" layer="25" font="vector" ratio="11">&gt;NAME</text>
 </package>
-<package name="SC-74-6" urn="urn:adsk.eagle:footprint:8452335/2" library_version="45">
+<package name="SC-74-6" urn="urn:adsk.eagle:footprint:8452335/3" library_version="103">
 <wire x1="-0.5588" y1="-1.5494" x2="0.5588" y2="-1.5494" width="0.1524" layer="21"/>
 <wire x1="0.5588" y1="1.5494" x2="0.3048" y2="1.5494" width="0.1524" layer="21"/>
 <wire x1="0.3048" y1="1.5494" x2="-0.3048" y2="1.5494" width="0.1524" layer="21"/>
@@ -842,11 +829,11 @@
 <text x="-2.413" y="-1.2954" size="1.016" layer="25" font="vector" ratio="11" rot="SR90">&gt;NAME</text>
 <text x="3.175" y="-1.2954" size="1.016" layer="27" font="vector" ratio="11" rot="SR90">&gt;VALUE</text>
 <smd name="1" x="-1.27" y="0.9398" dx="1.3208" dy="0.5588" layer="1"/>
-<smd name="2" x="-1.27" y="0" dx="1.3208" dy="0.5588" layer="1"/>
-<smd name="3" x="-1.27" y="-0.9398" dx="1.3208" dy="0.5588" layer="1"/>
-<smd name="4" x="1.27" y="-0.9398" dx="1.3208" dy="0.5588" layer="1"/>
-<smd name="5" x="1.27" y="0" dx="1.3208" dy="0.5588" layer="1"/>
-<smd name="6" x="1.27" y="0.9398" dx="1.3208" dy="0.5588" layer="1"/>
+<smd name="2" x="-1.27" y="0" dx="1.3208" dy="0.5588" layer="1" roundness="75"/>
+<smd name="3" x="-1.27" y="-0.9398" dx="1.3208" dy="0.5588" layer="1" roundness="75"/>
+<smd name="4" x="1.27" y="-0.9398" dx="1.3208" dy="0.5588" layer="1" roundness="75"/>
+<smd name="5" x="1.27" y="0" dx="1.3208" dy="0.5588" layer="1" roundness="75"/>
+<smd name="6" x="1.27" y="0.9398" dx="1.3208" dy="0.5588" layer="1" roundness="75"/>
 </package>
 <package name="CAPC2012X130" urn="urn:adsk.eagle:footprint:5225118/2" library_version="52">
 <description>Chip, 2.00 X 1.25 X 1.30 mm body
@@ -970,20 +957,10 @@ Metric Code Size 1608</description>
 <smd name="P$5" x="-0.254" y="4.0005" dx="1.75" dy="1.3" layer="1" roundness="10"/>
 <smd name="P$6" x="2.25425" y="4.0005" dx="1.75" dy="1.3" layer="1" roundness="10"/>
 </package>
-<package name="SPRING_CONTACT_2.5X1.5" urn="urn:adsk.eagle:footprint:8763768/1" library_version="56" library_locally_modified="yes">
+<package name="SPRING_CONTACT_3.48X1.10" urn="urn:adsk.eagle:footprint:8763767/2" library_version="103">
 <description>Spring loaded contact
 https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</description>
-<smd name="TP" x="0" y="0" dx="2" dy="1.5" layer="1"/>
-<pad name="TH" x="0" y="0" drill="0.7" shape="square"/>
-<wire x1="-1.0795" y1="0.889" x2="1.651" y2="0.889" width="0.127" layer="21"/>
-<wire x1="1.651" y1="0.889" x2="1.651" y2="-0.889" width="0.127" layer="21"/>
-<wire x1="1.651" y1="-0.889" x2="-1.0795" y2="-0.889" width="0.127" layer="21"/>
-<wire x1="-1.0795" y1="-0.889" x2="-1.0795" y2="0.889" width="0.127" layer="21"/>
-</package>
-<package name="SPRING_CONTACT_3.48X1.10" urn="urn:adsk.eagle:footprint:8763767/1" library_version="56" library_locally_modified="yes">
-<description>Spring loaded contact
-https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</description>
-<smd name="TP" x="0" y="0" dx="1.75" dy="1.25" layer="1"/>
+<smd name="TP" x="0" y="0" dx="1.75" dy="1.25" layer="1" roundness="30"/>
 <pad name="TH" x="0" y="0" drill="0.7" shape="square"/>
 <wire x1="-0.9525" y1="0.762" x2="2.54" y2="0.762" width="0.127" layer="21"/>
 <wire x1="2.54" y1="0.762" x2="2.54" y2="-0.762" width="0.127" layer="21"/>
@@ -1203,6 +1180,37 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <vertex x="-4.7625" y="5.08"/>
 </polygon>
 </package>
+<package name="TP06R" urn="urn:adsk.eagle:footprint:9341708/1" library_version="103">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="0.6" dy="0.6" layer="1" roundness="100" cream="no"/>
+<text x="-0.3" y="0.4001" size="0.8128" layer="25" font="vector">&gt;NAME</text>
+<text x="-0.254" y="-0.381" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-1.905" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP09R" urn="urn:adsk.eagle:footprint:9341725/1" library_version="103">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="0.9" dy="0.9" layer="1" roundness="100" cream="no"/>
+<text x="-0.4501" y="0.5001" size="0.8128" layer="25" font="vector">&gt;NAME</text>
+<text x="-0.381" y="-0.508" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-1.905" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP13SQ" urn="urn:adsk.eagle:footprint:9341709/1" library_version="103">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1.3" dy="1.3" layer="1" cream="no"/>
+<text x="-0.65" y="0.7" size="1.016" layer="25" font="vector" ratio="11">&gt;NAME</text>
+<text x="-0.635" y="-0.762" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="SPRING_CONTACT_2.5X1.5" urn="urn:adsk.eagle:footprint:8763768/2" library_version="103">
+<description>Spring loaded contact
+https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</description>
+<smd name="TP" x="0" y="0" dx="2" dy="1.5" layer="1" roundness="30"/>
+<pad name="TH" x="0" y="0" drill="0.7" shape="square"/>
+<wire x1="-1.0795" y1="0.889" x2="1.651" y2="0.889" width="0.127" layer="21"/>
+<wire x1="1.651" y1="0.889" x2="1.651" y2="-0.889" width="0.127" layer="21"/>
+<wire x1="1.651" y1="-0.889" x2="-1.0795" y2="-0.889" width="0.127" layer="21"/>
+<wire x1="-1.0795" y1="-0.889" x2="-1.0795" y2="0.889" width="0.127" layer="21"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="R0402" urn="urn:adsk.eagle:package:7115182/2" type="model" library_version="18" library_locally_modified="yes">
@@ -1299,12 +1307,6 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <packageinstance name="P1-20Y"/>
 </packageinstances>
 </package3d>
-<package3d name="TP06R" urn="urn:adsk.eagle:package:27954/1" type="box" library_version="22" library_locally_modified="yes">
-<description>TEST PAD</description>
-<packageinstances>
-<packageinstance name="TP06R"/>
-</packageinstances>
-</package3d>
 <package3d name="TP06SQ" urn="urn:adsk.eagle:package:27952/1" type="box" library_version="22" library_locally_modified="yes">
 <description>TEST PAD</description>
 <packageinstances>
@@ -1333,12 +1335,6 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <description>TEST PAD</description>
 <packageinstances>
 <packageinstance name="TP08SQ"/>
-</packageinstances>
-</package3d>
-<package3d name="TP09R" urn="urn:adsk.eagle:package:27958/1" type="box" library_version="22" library_locally_modified="yes">
-<description>TEST PAD</description>
-<packageinstances>
-<packageinstance name="TP09R"/>
 </packageinstances>
 </package3d>
 <package3d name="TP09SQ" urn="urn:adsk.eagle:package:27957/1" type="box" library_version="22" library_locally_modified="yes">
@@ -1431,12 +1427,6 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <packageinstance name="TP20R"/>
 </packageinstances>
 </package3d>
-<package3d name="TP13SQ" urn="urn:adsk.eagle:package:27974/1" type="box" library_version="22" library_locally_modified="yes">
-<description>TEST PAD</description>
-<packageinstances>
-<packageinstance name="TP13SQ"/>
-</packageinstances>
-</package3d>
 <package3d name="TP14SQ" urn="urn:adsk.eagle:package:27984/1" type="box" library_version="22" library_locally_modified="yes">
 <description>TEST PAD</description>
 <packageinstances>
@@ -1479,12 +1469,6 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <packageinstance name="TP20SQ"/>
 </packageinstances>
 </package3d>
-<package3d name="TP13SQ-HOLE" urn="urn:adsk.eagle:package:7170913/3" type="model" library_version="48" library_locally_modified="yes">
-<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
-<packageinstances>
-<packageinstance name="TP13SQ-HOLE"/>
-</packageinstances>
-</package3d>
 <package3d name="AMPHENOL_10118192-0001LF" urn="urn:adsk.eagle:package:7172902/2" type="model" library_version="26">
 <packageinstances>
 <packageinstance name="AMPHENOL_10118192-0001LF"/>
@@ -1502,7 +1486,7 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <packageinstance name="HDRVR5W64P254_1X5_1270X254X575B"/>
 </packageinstances>
 </package3d>
-<package3d name="QFN50P500X500X80-29N" urn="urn:adsk.eagle:package:8319976/2" type="model" library_version="34">
+<package3d name="QFN50P500X500X80-29N" urn="urn:adsk.eagle:package:8319976/3" type="model" library_version="103">
 <packageinstances>
 <packageinstance name="QFN50P500X500X80-29N"/>
 </packageinstances>
@@ -1528,7 +1512,7 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <packageinstance name="ICSP_2X3_2.54_RIGHT"/>
 </packageinstances>
 </package3d>
-<package3d name="SOT95P275X110-6N" urn="urn:adsk.eagle:package:8452336/3" type="model" library_version="45">
+<package3d name="SOT95P275X110-6N" urn="urn:adsk.eagle:package:8452336/4" type="model" library_version="103">
 <packageinstances>
 <packageinstance name="SC-74-6"/>
 </packageinstances>
@@ -1598,14 +1582,7 @@ Metric Code Size 1608</description>
 <packageinstance name="ICSP_3X2_2X1.5_SPRING_CONTACTS"/>
 </packageinstances>
 </package3d>
-<package3d name="SPRING_CONTACT_2.5X1.5" urn="urn:adsk.eagle:package:8763771/3" type="model" library_version="56" library_locally_modified="yes">
-<description>Spring loaded contact
-https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</description>
-<packageinstances>
-<packageinstance name="SPRING_CONTACT_2.5X1.5"/>
-</packageinstances>
-</package3d>
-<package3d name="SPRING_CONTACT_3.48X1.10" urn="urn:adsk.eagle:package:8763770/2" type="model" library_version="56" library_locally_modified="yes">
+<package3d name="SPRING_CONTACT_3.48X1.10" urn="urn:adsk.eagle:package:8763770/3" type="model" library_version="103">
 <description>Spring loaded contact
 https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</description>
 <packageinstances>
@@ -1640,6 +1617,37 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 4.3 mm, round</description>
 <packageinstances>
 <packageinstance name="HOLES_4,3-PAD"/>
+</packageinstances>
+</package3d>
+<package3d name="TP06R" urn="urn:adsk.eagle:package:9341716/2" type="box" library_version="103">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<packageinstances>
+<packageinstance name="TP06R"/>
+</packageinstances>
+</package3d>
+<package3d name="TP09R" urn="urn:adsk.eagle:package:9341726/2" type="box" library_version="103">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<packageinstances>
+<packageinstance name="TP09R"/>
+</packageinstances>
+</package3d>
+<package3d name="TP13SQ" urn="urn:adsk.eagle:package:9341723/2" type="box" library_version="103">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<packageinstances>
+<packageinstance name="TP13SQ"/>
+</packageinstances>
+</package3d>
+<package3d name="TP13SQ-HOLE" urn="urn:adsk.eagle:package:7170913/4" type="box" library_version="103">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<packageinstances>
+<packageinstance name="TP13SQ-HOLE"/>
+</packageinstances>
+</package3d>
+<package3d name="SPRING_CONTACT_2.5X1.5" urn="urn:adsk.eagle:package:8763771/4" type="model" library_version="103">
+<description>Spring loaded contact
+https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</description>
+<packageinstances>
+<packageinstance name="SPRING_CONTACT_2.5X1.5"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -1681,7 +1689,7 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <pin name="MOUNT" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 <text x="-2.286" y="3.1242" size="1.778" layer="95">&gt;NAME</text>
 </symbol>
-<symbol name="TP" urn="urn:adsk.eagle:symbol:7170910/1" locally_modified="yes" library_version="56" library_locally_modified="yes">
+<symbol name="TP" urn="urn:adsk.eagle:symbol:7170910/2" library_version="103">
 <wire x1="-0.762" y1="-0.762" x2="0" y2="0" width="0.254" layer="94"/>
 <wire x1="0" y1="0" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
 <wire x1="0.762" y1="-0.762" x2="0" y2="-1.524" width="0.254" layer="94"/>
@@ -2065,7 +2073,7 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 </device>
 </devices>
 </deviceset>
-<deviceset name="TP" urn="urn:adsk.eagle:component:7170914/4" locally_modified="yes" prefix="TP" library_version="56" library_locally_modified="yes">
+<deviceset name="TP" urn="urn:adsk.eagle:component:7170914/9" prefix="TP" library_version="103">
 <description>&lt;b&gt;Test pad&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="TP" x="0" y="0"/>
@@ -2180,7 +2188,7 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <connect gate="G$1" pin="TP" pad="TP"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:27954/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9341716/2"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -2258,7 +2266,7 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <connect gate="G$1" pin="TP" pad="TP"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:27958/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9341726/2"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -2466,7 +2474,7 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <connect gate="G$1" pin="TP" pad="TP"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:27974/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9341723/2"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -2570,7 +2578,7 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <connect gate="G$1" pin="TP" pad="TP"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:7170913/3"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:7170913/4"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -2581,7 +2589,7 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <connect gate="G$1" pin="TP" pad="TH TP"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8763771/3"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8763771/4"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -2592,7 +2600,7 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <connect gate="G$1" pin="TP" pad="TH TP"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8763770/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8763770/3"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -2685,7 +2693,7 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 </device>
 </devices>
 </deviceset>
-<deviceset name="CP2102N-A01-GQFN28" urn="urn:adsk.eagle:component:8319977/2" prefix="U" library_version="34">
+<deviceset name="CP2102N-A01-GQFN28" urn="urn:adsk.eagle:component:8319977/3" prefix="U" library_version="103">
 <description>Ic Bridge Usb To Uart 28qfn</description>
 <gates>
 <gate name="G$1" symbol="CP2102N-A01-GQFN28" x="0" y="0"/>
@@ -2722,7 +2730,7 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <connect gate="G$1" pin="VREGIN" pad="7"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8319976/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8319976/3"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -2844,7 +2852,7 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 </device>
 </devices>
 </deviceset>
-<deviceset name="TVS_DIODE_CM1293A" urn="urn:adsk.eagle:component:8452337/2" prefix="D" library_version="45">
+<deviceset name="DIODE_TVS_ARRAY_CM1293A" urn="urn:adsk.eagle:component:8452337/4" prefix="D" library_version="103">
 <description>https://www.onsemi.com/pub/Collateral/CM1293A-D.PDF</description>
 <gates>
 <gate name="G$1" symbol="TVS_DIODE_PRIMARY" x="-12.7" y="0"/>
@@ -2863,7 +2871,7 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 <connect gate="G$4" pin="CH$1" pad="6"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8452336/3"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8452336/4"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -2927,7 +2935,7 @@ https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10104320.pdf</descripti
 </device>
 </devices>
 </deviceset>
-<deviceset name="ZENER_DIODE_PLZ5V1C" urn="urn:adsk.eagle:component:8452797/3" prefix="D" library_version="52">
+<deviceset name="DIODE_ZENER_PLZ5V1C" urn="urn:adsk.eagle:component:8452797/4" prefix="D" library_version="103">
 <gates>
 <gate name="G$1" symbol="D-ZENER" x="0" y="0"/>
 </gates>
@@ -3089,12 +3097,12 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="R3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2"/>
-<part name="RXD" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/2" value="TPSPRING_CONTACT_3.5X1.1"/>
-<part name="TXD" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/2" value="TPSPRING_CONTACT_3.5X1.1"/>
-<part name="GND" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/2" value="TPSPRING_CONTACT_3.5X1.1"/>
-<part name="+5V" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/2" value="TPSPRING_CONTACT_3.5X1.1"/>
+<part name="RXD" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/3" value="TPSPRING_CONTACT_3.5X1.1"/>
+<part name="TXD" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/3" value="TPSPRING_CONTACT_3.5X1.1"/>
+<part name="GND" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/3" value="TPSPRING_CONTACT_3.5X1.1"/>
+<part name="+5V" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/3" value="TPSPRING_CONTACT_3.5X1.1"/>
 <part name="SUPPLY7" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="RST." library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/2" value="TPSPRING_CONTACT_3.5X1.1"/>
+<part name="RST." library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/3" value="TPSPRING_CONTACT_3.5X1.1"/>
 <part name="PWR" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-LED_SMD-LED-CLEAR-BLUE(0603)" device="LED_0603" package3d_urn="urn:adsk.eagle:package:5224536/3"/>
 <part name="R8" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2"/>
 <part name="J1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="10118192-0001LF" device="" package3d_urn="urn:adsk.eagle:package:7172902/2"/>
@@ -3103,25 +3111,25 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="R1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="22K"/>
 <part name="R2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="47K"/>
 <part name="TTL" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="JST-2.54MM_5P-2.54" device="JST_2.54MM_5P_F" package3d_urn="urn:adsk.eagle:package:5071743/2"/>
-<part name="U1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CP2102N-A01-GQFN28" device="" package3d_urn="urn:adsk.eagle:package:8319976/2"/>
+<part name="U1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CP2102N-A01-GQFN28" device="" package3d_urn="urn:adsk.eagle:package:8319976/3"/>
 <part name="R4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="10K"/>
 <part name="C1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="0.1uF"/>
 <part name="C2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="0.1uF"/>
 <part name="ICSP1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ICSP_HEADER" device="ICSP_2.54MM_RIGHT" package3d_urn="urn:adsk.eagle:package:8324115/3"/>
 <part name="ICSP0" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ICSP_HEADER" device="SPRING_3.48X1.1" package3d_urn="urn:adsk.eagle:package:8763833/2" value="ICSP_HEADERSPRING_3.48X1.1"/>
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="D2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TVS_DIODE_CM1293A" device="" package3d_urn="urn:adsk.eagle:package:8452336/3"/>
+<part name="D2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="DIODE_TVS_ARRAY_CM1293A" device="" package3d_urn="urn:adsk.eagle:package:8452336/4"/>
 <part name="ICSP2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ICSP_HEADER" device="SPRING_3.48X1.1" package3d_urn="urn:adsk.eagle:package:8763833/2" value="ICSP_HEADERSPRING_3.48X1.1"/>
 <part name="C3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="CERAMIC-1NF-50V-10%-X7R(0402)" device="CAP_0402" package3d_urn="urn:adsk.eagle:package:5248669/4" value="0.1uF"/>
 <part name="C4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-CAPACITOR_CERAMIC-10UF-25V-10%-X5R(0805)" device="CAP_0805-3D" package3d_urn="urn:adsk.eagle:package:5225034/2" value="4.7uF"/>
 <part name="C5" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-CAPACITOR_CERAMIC-10UF-25V-10%-X5R(0805)" device="CAP_0805-3D" package3d_urn="urn:adsk.eagle:package:5225034/2" value="4.7uF"/>
 <part name="R5" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="10K"/>
-<part name="D3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="ZENER_DIODE_PLZ5V1C" device="" package3d_urn="urn:adsk.eagle:package:8452796/2"/>
-<part name="PZ+" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/2" value="TPSPRING_CONTACT_3.5X1.1"/>
-<part name="VCOM" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/2" value="TPSPRING_CONTACT_3.5X1.1"/>
-<part name="GOUT" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/2" value="TPSPRING_CONTACT_3.5X1.1"/>
+<part name="D3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="DIODE_ZENER_PLZ5V1C" device="" package3d_urn="urn:adsk.eagle:package:8452796/2"/>
+<part name="PZ+" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/3" value="TPSPRING_CONTACT_3.5X1.1"/>
+<part name="VCOM" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/3" value="TPSPRING_CONTACT_3.5X1.1"/>
+<part name="GOUT" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/3" value="TPSPRING_CONTACT_3.5X1.1"/>
 <part name="TJ1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="C-GRID-04" device="-70553" package3d_urn="urn:adsk.eagle:package:6902618/2"/>
-<part name="VFOL" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/2" value="TPSPRING_CONTACT_3.5X1.1"/>
+<part name="VFOL" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="SPRING_CONTACT_3.5X1.1" package3d_urn="urn:adsk.eagle:package:8763770/3" value="TPSPRING_CONTACT_3.5X1.1"/>
 </parts>
 <sheets>
 <sheet>

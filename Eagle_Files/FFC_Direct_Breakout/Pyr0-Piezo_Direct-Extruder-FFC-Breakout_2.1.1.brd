@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.2">
+<eagle version="9.5.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.0635" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.05" altunitdist="mm" altunit="mm"/>
@@ -7426,8 +7426,8 @@ design rules under a new name.</description>
 <wire x1="59.212" y1="18.5" x2="59.2468" y2="18.4652" width="0.8128" layer="1"/>
 <wire x1="59.2468" y1="18.4652" x2="59.25" y2="18.4652" width="0.8128" layer="1"/>
 <wire x1="59.25" y1="18.4652" x2="59.25" y2="18.5" width="0.8128" layer="1"/>
-<wire x1="59.25" y1="18.4652" x2="59.25" y2="18.25" width="0" layer="19" extent="1-16"/>
-<wire x1="59.2545" y1="18.4835" x2="59.25" y2="18.4652" width="0" layer="19" extent="1-1"/>
+<wire x1="59.2545" y1="18.4835" x2="59.25" y2="18.25" width="0" layer="19" extent="16-16"/>
+<wire x1="59.25" y1="18.5" x2="59.2545" y2="18.4835" width="0" layer="19" extent="1-1"/>
 <wire x1="59.25" y1="18.75" x2="59.25" y2="18.5" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="E0_1B">
@@ -7479,7 +7479,7 @@ design rules under a new name.</description>
 <wire x1="59.2444" y1="29.2444" x2="59.25" y2="29.2444" width="0.254" layer="16"/>
 <wire x1="59.25" y1="29.2444" x2="59.25" y2="28.7556" width="0.254" layer="16"/>
 <wire x1="59.25" y1="28.7556" x2="59.25" y2="28.75" width="0" layer="19" extent="16-16"/>
-<wire x1="59.25" y1="29.25" x2="59.25" y2="29.2444" width="0" layer="19" extent="16-16"/>
+<wire x1="59.25" y1="29.25" x2="59.25" y2="28.75" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="V_INT">
 <contactref element="U1" pad="4"/>
@@ -7940,7 +7940,7 @@ design rules under a new name.</description>
 <wire x1="59.2056" y1="22.5" x2="59.25" y2="22.4556" width="0.8128" layer="1"/>
 <via x="59.25" y="22.4556" extent="1-16" drill="0.4"/>
 <wire x1="59.25" y1="22.4556" x2="59.25" y2="22.25" width="0" layer="19" extent="16-16"/>
-<wire x1="59.25" y1="22.75" x2="59.2056" y2="22.5" width="0" layer="19" extent="1-16"/>
+<wire x1="59.25" y1="22.75" x2="59.25" y2="22.4556" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="X_1A">
 <contactref element="X_MOT" pad="2"/>
@@ -7964,8 +7964,8 @@ design rules under a new name.</description>
 <wire x1="59.212" y1="23.5" x2="59.2468" y2="23.4652" width="0.8128" layer="1"/>
 <wire x1="59.2468" y1="23.4652" x2="59.25" y2="23.4652" width="0.8128" layer="1"/>
 <wire x1="59.25" y1="23.462" x2="59.25" y2="23.25" width="0" layer="19" extent="16-16"/>
-<wire x1="59.2468" y1="23.4652" x2="59.25" y2="23.462" width="0" layer="19" extent="1-1"/>
-<wire x1="59.25" y1="23.75" x2="59.212" y2="23.5" width="0" layer="19" extent="1-16"/>
+<wire x1="59.25" y1="23.4652" x2="59.25" y2="23.462" width="0" layer="19" extent="1-1"/>
+<wire x1="59.25" y1="23.75" x2="59.25" y2="23.462" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="X_2A">
 <contactref element="X_MOT" pad="3"/>
@@ -7989,8 +7989,8 @@ design rules under a new name.</description>
 <wire x1="59.212" y1="24.5" x2="59.2468" y2="24.4652" width="0.8128" layer="1"/>
 <wire x1="59.2468" y1="24.4652" x2="59.25" y2="24.4652" width="0.8128" layer="1"/>
 <wire x1="59.25" y1="24.462" x2="59.25" y2="24.25" width="0" layer="19" extent="16-16"/>
-<wire x1="59.2468" y1="24.4652" x2="59.25" y2="24.462" width="0" layer="19" extent="1-1"/>
-<wire x1="59.25" y1="24.75" x2="59.212" y2="24.5" width="0" layer="19" extent="1-16"/>
+<wire x1="59.25" y1="24.4652" x2="59.25" y2="24.462" width="0" layer="19" extent="1-1"/>
+<wire x1="59.25" y1="24.75" x2="59.25" y2="24.462" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="X_2B">
 <contactref element="X_MOT" pad="4"/>
@@ -8007,9 +8007,9 @@ design rules under a new name.</description>
 <via x="59.25" y="25.462" extent="1-16" drill="0.4"/>
 <wire x1="59.212" y1="25.5" x2="59.2468" y2="25.4652" width="0.8128" layer="1"/>
 <wire x1="59.2468" y1="25.4652" x2="59.25" y2="25.4652" width="0.8128" layer="1"/>
-<wire x1="59.212" y1="25.5" x2="59.25" y2="25.75" width="0" layer="19" extent="1-16"/>
-<wire x1="59.25" y1="25.462" x2="59.2468" y2="25.4652" width="0" layer="19" extent="1-1"/>
-<wire x1="59.25" y1="25.25" x2="59.2468" y2="25.4652" width="0" layer="19" extent="1-16"/>
+<wire x1="59.25" y1="25.462" x2="59.25" y2="25.75" width="0" layer="19" extent="16-16"/>
+<wire x1="59.25" y1="25.4652" x2="59.25" y2="25.462" width="0" layer="19" extent="1-1"/>
+<wire x1="59.25" y1="25.25" x2="59.25" y2="25.462" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="X_MIN_TRIG">
 <contactref element="X_MIN" pad="2"/>
