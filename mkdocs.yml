@@ -16,60 +16,71 @@ markdown_extensions:
       permalink: True
 
 nav:
-  - 'Home': 'index.md'
-  - 'About': 'about.md'
-  - 'FAQ': 'faq.md'
-  - 'Installation':
-    - 'Start Here': 'installation.md'
-    - 'Wiring Diagrams':
-      - 'Creality 1284P': 'tutorials/wiring/creality-1284.md'
-      - 'Duet Wifi': 'tutorials/wiring/duet-wifi.md'
-      - 'MKS Family':
-        - 'MKS Base 1.4': 'tutorials/wiring/mks-base.md'
-        - 'MKS Gen L': 'tutorials/wiring/mks-gen-l.md'
-        - 'MKS SBase': 'tutorials/wiring/mks-sbase.md'
-      - 'RAMPS 1.4': 'tutorials/wiring/ramps-1.4.md'
-    - 'Printer Specific':
-      - 'Core XY':
-        - 'Hypercube Evo (On Head)': 'mounts/core-xy/hevo-on-head.md'
-      - 'Creality Family':
-        - 'CR-10 Family': 'mounts/creality/creality-original-head.md'
-        - 'Ender 3 Family': 'mounts/creality/creality-original-head.md'
-      - 'Delta':
-        - 'Monoprice Delta Mini': 'mounts/delta/monoprice-delta-mini.md'
-        - 'On Head': 'mounts/delta/delta-head.md'
-        - 'Under Bed': 'mounts/delta/delta-under-bed.md'
-      - 'Deltesian': 'mounts/deltesian/deltesian.md'
-      - 'Mendel':
-        - 'On Head': 'mounts/mendel/mendel-on-head.md'
-        - 'Gantry Mount': 'mounts/mendel/mendel-gantry-mount.md'
-      - 'Prusa Mendel':
-        - 'Prusa i3 on Head': 'mounts/prusa-mendel/i3-on-head.md'
-        - 'HICTOP i3': 'mounts/prusa-mendel/hictop-i3.md'
-      - 'Quadrap':
-        - 'Makerbot Original Under Bed': 'mounts/quadrap/makerbot-under-bed.md'
-        - 'Ultimaker Under Bed': 'mounts/quadrap/um-under-bed.md'
-  - 'Configuration':
-    - 'Pyr0-Piezo Config': 'config.md'
-    - 'Printer Firmware Config':
-      - 'Marlin': 'tutorials/config/printer-firmware/marlin/marlin-config.md'
-      - 'Klipper': 'tutorials/config/printer-firmware/klipper/klipper-config.md'
-  - 'Resources':
-    - 'Schematics':
-      - 'EasyPiezi': 'schematics/easypiezi/easypiezi-schematics.md'
-      - 'FFC Direct Extruder': 'schematics/ffc-direct-extruder/ffc-direct-extruder-schematics.md'
-      - 'FFC Direct Breakout': 'schematics/ffc-direct-breakout/ffc-direct-breakout-schematics.md'
-    - 'Drawings':
-      - 'Board Layouts':
-        - 'EasyPiezi': 'drawings/layouts/easypiezi/easypiezi-layouts.md'
-        - 'FFC Direct Extruder':
-          - 'FFC Direct Extruder 1.1.0 Top': 'drawings/layouts/ffc-direct-extruder/Pyr0-Piezo_FFC_Extruder_Boardv1.1.0_Components_Front.pdf'
-        #- 'FFC Direct Breakout':
-      - 'Connector Pinouts':
-        - 'EasyPiezi': 'drawings/pinouts/easypiezi/easypiezi-pinouts.md'
-        - 'FFC Direct Extruder': 'drawings/pinouts/ffc-direct-extruder/ffc-direct-extruder-pinouts.md'
-        - 'FFC Direct Breakout': 'drawings/pinouts/ffc-direct-breakouts/ffc-direct-breakout-pinouts.md'
-      - 'Test Pads Layout': 'drawings/pyro-piezo-test-pads.md'
+  - Home: 'index.md'
+  - About: 'about.md'
+  - FAQ: 'faq.md'
+  - Installation:
+    - Start Here: 'installation.md'
+    - Wiring Diagrams:
+      - Easy-Piezi:
+        - Creality 1284P: 'tutorials/wiring/easy-piezi/creality-1284.md'
+        - Duet Wifi: 'tutorials/wiring/easy-piezi/duet-wifi.md'
+        - MKS Family:
+          - MKS Base 1.4: 'tutorials/wiring/easy-piezi/mks-base.md'
+          - MKS Gen L: 'tutorials/wiring/easy-piezi/mks-gen-l.md'
+          - MKS SBase: 'tutorials/wiring/easy-piezi/mks-sbase.md'
+        - RAMPS 1.4: 'tutorials/wiring/easy-piezi/ramps-1.4.md'
+      - pP-FFC:
+        - Creality 1284P: 'tutorials/wiring/pp-ffc/creality-1284.md'
+        - Duet Wifi: 'tutorials/wiring/pp-ffc/duet-wifi.md'
+        - MKS Family:
+          - MKS Base 1.4: 'tutorials/wiring/pp-ffc/mks-base.md'
+          - MKS Gen L: 'tutorials/wiring/pp-ffc/mks-gen-l.md'
+          - MKS SBase: 'tutorials/wiring/pp-ffc/mks-sbase.md'
+        - RAMPS 1.4: 'tutorials/wiring/pp-ffc/ramps-1.4.md'
+    - Printer Specific:
+      - Core XY:
+        - Hypercube Evo (On Head): 'mounts/core-xy/hevo-on-head.md'
+      - Creality Family:
+        - CR-10 Family: 'mounts/creality/creality-original-head.md'
+        - Ender 3 Family: 'mounts/creality/creality-original-head.md'
+      - Delta:
+        - Monoprice Delta Mini: 'mounts/delta/monoprice-delta-mini.md'
+        - On Head: 'mounts/delta/delta-head.md'
+        - Under Bed: 'mounts/delta/delta-under-bed.md'
+      - Deltesian: 'mounts/deltesian/deltesian.md'
+      - Mendel:
+        - On Head: 'mounts/mendel/mendel-on-head.md'
+        - Gantry Mount: 'mounts/mendel/mendel-gantry-mount.md'
+      - Prusa Mendel:
+        - Prusa i3 on Head: 'mounts/prusa-mendel/i3-on-head.md'
+        - HICTOP i3: 'mounts/prusa-mendel/hictop-i3.md'
+      - Quadrap:
+        - Makerbot Original Under Bed: 'mounts/quadrap/makerbot-under-bed.md'
+        - Ultimaker Under Bed: 'mounts/quadrap/um-under-bed.md'
+  - Configuration:
+    - Pyr0-Piezo Config: 'config.md'
+    - Printer Firmware Config:
+      - Marlin: 'tutorials/config/printer-firmware/marlin/marlin-config.md'
+      - Klipper: 'tutorials/config/printer-firmware/klipper/klipper-config.md'
+      - RepRapFirmware v2: 'tutorials/config/printer-firmware/rrf-v2/rrf-v2-config.md'
+      - RepRapFirmware v3: 'tutorials/config/printer-firmware/rrf-v3/rrf-v3-config.md'
+  - Resources:
+    - Schematics:
+      - EasyPiezi: 'schematics/easypiezi/easypiezi-schematics.md'
+      - FFC Direct Extruder: 'schematics/ffc-direct-extruder/ffc-direct-extruder-schematics.md'
+      - FFC Direct Breakout: 'schematics/ffc-direct-breakout/ffc-direct-breakout-schematics.md'
+    - Drawings:
+      - Board Layouts:
+        - EasyPiezi: 'drawings/layouts/easypiezi/easypiezi-layouts.md'
+        - FFC Direct Extruder:
+          - FFC Direct Extruder 1.1.0 Top: 'drawings/layouts/ffc-direct-extruder/Pyr0-Piezo_FFC_Extruder_Boardv1.1.0_Components_Front.pdf'
+        #- FFC Direct Breakout:
+      - Connector Pinouts:
+        - EasyPiezi: 'drawings/pinouts/easypiezi/easypiezi-pinouts.md'
+        - FFC Direct Extruder: 'drawings/pinouts/ffc-direct-extruder/ffc-direct-extruder-pinouts.md'
+        - FFC Direct Breakout: 'drawings/pinouts/ffc-direct-breakouts/ffc-direct-breakout-pinouts.md'
+      - Test Pads Layout: 'drawings/pyro-piezo-test-pads.md'
     - Changelog:
       - Version List: 'changelog.md'
       - Logs:
@@ -84,6 +95,6 @@ nav:
         - 'cfa0abc-76b4ba6': 'changelogs/changelog_2019-08-15_cfa0abc_76b4ba6.md'
         - '551fcb7-cfa0abc': 'changelogs/changelog_2019-08-15_551fcb7_cfa0abc.md'
 
-  - 'Main Site': 'https://pyroballpcbs.com'
+  - Main Site: 'https://pyroballpcbs.com'
 
 google_analytics: ['UA-135668867-1', 'pyroballpcbs.com']
