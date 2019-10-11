@@ -5,12 +5,13 @@
 # Commits are separated by category, requiring that the user add tags to commits based on their content
 # Adding #bugfix to a commit will add it to the bugfix category
 # Adding #featureadd to a commit will add it to the added features category
+# Adding #docs to a commit will add it to the documentation category
 #
 # Usage: pass two tags or commit hashes in when running this script, and a changelog will be generated listing the differences between those two tags.
 # If args 3 & 4 are unused, default values will be substituted
 # ex:
 # ./changelog.sh rev.2.0.1 rev.2.1.1
-# ./changelog.sh b1d5817 02cd438 githun-username github project
+# ./changelog.sh b1d5817 02cd438 githun-username github-project
 #
 # The script then generates a markdown file to be used on the documentation site
 
@@ -26,13 +27,16 @@ git_user="${3:-pyr0ball}"
 git_project="${4:-pyr0piezo}"
 
 # Gather full changelog
-changelog=$(git log ${first_tag}...${last_tag} --pretty=format:"- %s [view commit](http://github.com/${git_user}/${git_project}/commit/%H) \n" --reverse | sed 's/#bugfix//g' | sed 's/#featureadd//g')
+changelog=$(git log ${first_tag}...${last_tag} --pretty=format:"- %s [view commit](http://github.com/${git_user}/${git_project}/commit/%H) \n" --reverse | sed 's/#bugfix//g' | sed 's/#featureadd//g' | sed 's/#changelog//g' | sed 's/#docs//g')
 
 # Gather bugfixes
 bugfixes=$(git log ${first_tag}...${last_tag} --pretty=format:"- %s [view commit](http://github.com/${git_user}/${git_project}/commit/%H) \n" --reverse | grep "#bugfix" | sed 's/#bugfix//g' )
 
 # Gather added features
 featureadd=$(git log ${first_tag}...${last_tag} --pretty=format:"- %s [view commit](http://github.com/${git_user}/${git_project}/commit/%H) \n" --reverse | grep "#featureadd" | sed 's/#featureadd//g' )
+
+# Gather added features
+docs=$(git log ${first_tag}...${last_tag} --pretty=format:"- %s [view commit](http://github.com/${git_user}/${git_project}/commit/%H) \n" --reverse | grep "#docs" | sed 's/#docs//g' )
 
 # Build a new nav bar entry for the changelog
 navadd="        - Changelog $first_tag to $last_tag: /'changelogs/changelog_${date_pretty}_${first_tag}_${last_tag}.md/'"
@@ -50,6 +54,12 @@ $featureadd
 #### Bugfixes
 
 $bugfixes
+
+------------------------------------
+
+#### Documentation Updates
+
+$docs
 
 ------------------------------------
 
@@ -75,6 +85,12 @@ $featureadd
  *Bugfixes*
 
 $bugfixes
+
+------------------------------------
+
+ *Documentation Updates*
+
+$docs
 
 ------------------------------------
 

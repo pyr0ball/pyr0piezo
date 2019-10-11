@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.2">
+<eagle version="9.5.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -191,6 +191,7 @@
 <vertex x="17.526" y="7.366"/>
 <vertex x="16.51" y="7.366"/>
 </polygon>
+<text x="19.27225" y="13.17625" size="0.8128" layer="21">EasyPiezi v1.0.2</text>
 </plain>
 <libraries>
 <library name="PiezoFFC" urn="urn:adsk.eagle:library:6897166">
