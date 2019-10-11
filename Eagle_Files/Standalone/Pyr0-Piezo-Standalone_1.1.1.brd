@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.0">
+<eagle version="9.5.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -195,6 +195,7 @@
 <text x="6.76275" y="10.06475" size="0.8128" layer="22" rot="MR225">Z</text>
 <text x="7.77875" y="9.8425" size="0.6096" layer="22" rot="MR45">Vcc</text>
 <text x="8.85825" y="11.46175" size="0.8128" layer="22" rot="MR315">⏚</text>
+<text x="19.27225" y="13.17625" size="0.8128" layer="21">EasyPiezi v1.1.1</text>
 </plain>
 <libraries>
 <library name="PiezoFFC" urn="urn:adsk.eagle:library:6897166">

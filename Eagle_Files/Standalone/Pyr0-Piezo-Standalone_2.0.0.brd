@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.1">
+<eagle version="9.5.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.635" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.03175" altunitdist="mm" altunit="mm"/>
@@ -199,6 +199,7 @@
 <wire x1="26.035" y1="2.54" x2="26.67" y2="3.175" width="0.1524" layer="26"/>
 <wire x1="26.035" y1="1.27" x2="26.67" y2="1.27" width="0.1524" layer="22"/>
 <wire x1="26.67" y1="1.27" x2="28.575" y2="3.175" width="0.1524" layer="22"/>
+<text x="19.27225" y="13.17625" size="0.8128" layer="21">EasyPiezi v2.0.0</text>
 </plain>
 <libraries>
 <library name="PiezoFFC" urn="urn:adsk.eagle:library:6897166">

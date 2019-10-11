@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.2">
+<eagle version="9.5.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -199,6 +199,7 @@
 <wire x1="26.035" y1="2.54" x2="26.67" y2="3.175" width="0.1524" layer="26"/>
 <wire x1="26.035" y1="1.27" x2="26.67" y2="1.27" width="0.1524" layer="22"/>
 <wire x1="26.67" y1="1.27" x2="28.575" y2="3.175" width="0.1524" layer="22"/>
+<text x="19.27225" y="13.17625" size="0.8128" layer="21">EasyPiezi v2.0.2</text>
 </plain>
 <libraries>
 <library name="PiezoFFC" urn="urn:adsk.eagle:library:6897166">
