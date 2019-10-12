@@ -60,6 +60,7 @@ nav:
         - Ultimaker Under Bed: 'mounts/quadrap/um-under-bed.md'
   - Configuration:
     - Pyr0-Piezo Config: 'config.md'
+    - Settings Explaination: 'tutorials/config/pyr0piezo-parameters/pyr0piezo-parameters.md'
     - Printer Firmware Config:
       - Marlin: 'tutorials/config/printer-firmware/marlin/marlin-config.md'
       - Klipper: 'tutorials/config/printer-firmware/klipper/klipper-config.md'
