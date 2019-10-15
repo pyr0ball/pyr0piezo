@@ -100,6 +100,16 @@ update the voltMeterConstant variable in pP_config.h with the correct value
 //#define I2C_INPUT true
 
 void setup() {
+  //Setup PWM on voltage follower (PD3)
+  TCCR2A = (1 << COM2B1) | (0 << COM2B0) | (0 << WGM21) | (1 << WGM20);
+  TCCR2B = (0 << WGM22) | (0 << CS22) | (0 << CS21) | (1 << CS20);
+  DDRD |= (1 << DDD3);
+
+  //Setup PWM on comparator (PB1)
+  TCCR1A = (1 << COM1A1) | (0 << COM1A0) | (1 << WGM11) | (1 << WGM10);
+  TCCR1B = (0 << WGM13) | (0 << WGM12) | (0 << CS12) | (0 << CS11) | (1 << CS10);
+  DDRB |= (1 << DDB1);
+
   pinMode(TRG_OUT, OUTPUT);       // declare the Trigger as as OUTPUT
   pinMode(ERR_LED, OUTPUT);
   pinMode(Z_TRG, INPUT_PULLUP);   // declare z-sense input with pullup

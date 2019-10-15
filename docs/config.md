@@ -1,24 +1,38 @@
-## Configurations over UART/Serial TTY
+## Serial Terminal Applications
+
+In order to send commands, you will need an application capable of communicating over serial. Please download and install one of the following:
+
+ - Windows
+    - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+    - [RealTerm](https://sourceforge.net/projects/realterm/)
+    - [Termite](https://www.compuphase.com/software_termite.htm)
+ - MacOS
+ - Linux
+    - minicom - `sudo apt install minicom` || `sudo yum install minicom`
+
+## Updatng Pyr0-Piezo Circuit Parameters over Serial
+
+The Pyr0-Piezo onboard microcontroller can be adjusted over UART/TTY/Serial.
 
 To set the below parameters using serial input, use the following:
 
-- To change trigger active duration: `TRG_D` [integer for milliseconds]
-- To change gain factor: `GAIN_F` [integer for gain state - see note*]
-- To change ADC hysteresis value: `HYST` [integer]
-- To change sensor input pullup vRef low threshold: `VFOL` [integer in millivolts]
-- To change comparator trigger high threshold: `VCOMP` [integer in millivolts]
-- To change the duration between ADC measurements: `LOOP_D` [integer in milliseconds]
+- To change trigger active duration: `TRG_D [integer for milliseconds]`
+- To change gain factor: `GAIN_F [integer for gain state - see note*]`
+- To change ADC hysteresis value: `HYST [integer]`
+- To change sensor input pullup vRef low threshold: `VFOL [integer in millivolts]`
+- To change comparator trigger high threshold: `VCOMP [integer in millivolts]`
+- To change the duration between ADC measurements: `LOOP_D [integer in milliseconds]`
+- To update the internal vRef constant value **(see notes below): `CONST [long value]`
 
-You can also enable or disable DEBUG output with: `DEBUG` [0|1]
+You can also enable or disable DEBUG output with: `DEBUG [0|1]`
 
 You can query the current configuration with: `CONFIG`
 You can query the current state (including ADC measurements) with: `STATE`
 
 To reset all settings to defaults, use: `RESET`
 
-
 These commands should be wrapped in this format:
-1CMD INT1
+`CMD INT`
 
 Examples:
 
@@ -29,6 +43,7 @@ Examples:
 
 *Note for Gain Factor:
 The gain STATE is representative of these values:
+
 - 0 = 3x
 - 1 = 3.5x
 - 2 = 4.33x
@@ -48,16 +63,13 @@ with this if you don't know what you're doing!
 
 The reading can be fine-tuned by using a multimeter, and this equation:
 
-```
-scale_constant = internal1.1Ref * 1023 * 1000
+`scale_constant = internal1.1Ref * 1023 * 1000`
 
 where
 
-internal1.1Ref = 1.1 * Vcc1 (per voltmeter) / Vcc2 (per readVcc() function)
-```
+`internal1.1Ref = 1.1 * Vcc1 (per voltmeter) / Vcc2 (per readVcc() function)`
 
-If the scale_constant calculated is different from the default 1125300,
-update the voltMeterConstant variable in pP_config.h with the correct value.
+If the scale_constant calculated is different from the default 1125300, update the voltMeterConstant variable in pP_config.h with the correct value or use the `CONST` command
 
 ## Configuration in firmware
 
