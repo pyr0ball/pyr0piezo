@@ -1,4 +1,4 @@
-## Pyr0-Piezo circuit explaination
+## Pyr0-Piezo circuit explanation
 
 In order to understand what each parameter does, a basic understanding of the circuit and signal involved is required.
 
