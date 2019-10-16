@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1.27" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="mm"/>
+<grid distance="1.27" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -246,8 +246,8 @@
 <package name="R0805" urn="urn:adsk.eagle:footprint:8443790/2" locally_modified="yes" library_version="108" library_locally_modified="yes">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
 chip</description>
-<wire x1="-0.41" y1="0.635" x2="0.41" y2="0.635" width="0.1524" layer="51"/>
-<wire x1="-0.41" y1="-0.635" x2="0.41" y2="-0.635" width="0.1524" layer="51"/>
+<wire x1="-0.41" y1="0.635" x2="0.41" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-0.41" y1="-0.635" x2="0.41" y2="-0.635" width="0.1524" layer="21"/>
 <rectangle x1="0.4064" y1="-0.6985" x2="1.0564" y2="0.7015" layer="51"/>
 <rectangle x1="-1.0668" y1="-0.6985" x2="-0.4168" y2="0.7015" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.5001" x2="0.1999" y2="0.5001" layer="35"/>
@@ -256,17 +256,17 @@ chip</description>
 <text x="-1.387" y="1.016" size="0.8128" layer="25" font="vector" ratio="11">&gt;NAME</text>
 <text x="1.27" y="-1.016" size="0.8128" layer="21" ratio="11" rot="R180">&gt;VALUE</text>
 </package>
-<package name="CAPC2012X130" urn="urn:adsk.eagle:footprint:5225118/2" library_version="107">
+<package name="CAPC2012X130" urn="urn:adsk.eagle:footprint:5225118/2" locally_modified="yes" library_version="108" library_locally_modified="yes">
 <description>Chip, 2.00 X 1.25 X 1.30 mm body
 &lt;p&gt;Chip package with body size 2.00 X 1.25 X 1.30 mm&lt;/p&gt;</description>
-<wire x1="1" y1="-0.625" x2="-1" y2="-0.625" width="0.12" layer="51"/>
+<wire x1="1" y1="-0.625" x2="-1" y2="-0.625" width="0.12" layer="21"/>
 <wire x1="-1" y1="-0.625" x2="-1" y2="0.625" width="0.12" layer="51"/>
-<wire x1="-1" y1="0.625" x2="1" y2="0.625" width="0.12" layer="51"/>
+<wire x1="-1" y1="0.625" x2="1" y2="0.625" width="0.12" layer="21"/>
 <wire x1="1" y1="0.625" x2="1" y2="-0.625" width="0.12" layer="51"/>
 <smd name="1" x="-0.925" y="0" dx="0.9618" dy="1.3618" layer="1"/>
 <smd name="2" x="0.925" y="0" dx="0.9618" dy="1.3618" layer="1"/>
-<text x="0" y="0.9949" size="0.4064" layer="25" font="vector" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-0.9949" size="0.4064" layer="27" font="vector" align="top-center">&gt;VALUE</text>
+<text x="0" y="0.9949" size="0.6096" layer="25" font="vector" ratio="11" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.9949" size="0.4064" layer="27" font="vector" ratio="11" align="top-center">&gt;VALUE</text>
 </package>
 <package name="CAPC1005X50" urn="urn:adsk.eagle:footprint:5248673/4" library_version="12" library_locally_modified="yes">
 <description>Chip, 1.00 X 0.55 X 0.50 mm body
@@ -305,15 +305,15 @@ chip</description>
 <text x="-9.271" y="-3.048" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
 <text x="-6.731" y="-0.635" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
-<package name="SO14" urn="urn:adsk.eagle:footprint:16137/1" library_version="58" library_locally_modified="yes">
+<package name="SO14" urn="urn:adsk.eagle:footprint:16137/1" locally_modified="yes" library_version="108" library_locally_modified="yes">
 <description>&lt;b&gt;Small Outline Package 14&lt;/b&gt;</description>
-<wire x1="4.305" y1="-1.9" x2="-4.305" y2="-1.9" width="0.2032" layer="51"/>
-<wire x1="-4.305" y1="-1.9" x2="-4.305" y2="-1.4" width="0.2032" layer="51"/>
-<wire x1="-4.305" y1="-1.4" x2="-4.305" y2="1.9" width="0.2032" layer="51"/>
-<wire x1="4.305" y1="-1.4" x2="-4.305" y2="-1.4" width="0.2032" layer="51"/>
-<wire x1="4.305" y1="1.9" x2="4.305" y2="-1.4" width="0.2032" layer="51"/>
-<wire x1="4.305" y1="-1.4" x2="4.305" y2="-1.9" width="0.2032" layer="51"/>
-<wire x1="-4.305" y1="1.9" x2="4.305" y2="1.9" width="0.2032" layer="51"/>
+<wire x1="4.305" y1="-1.9" x2="-4.305" y2="-1.9" width="0.2032" layer="21"/>
+<wire x1="-4.305" y1="-1.9" x2="-4.305" y2="-1.4" width="0.2032" layer="21"/>
+<wire x1="-4.305" y1="-1.4" x2="-4.305" y2="1.9" width="0.2032" layer="21"/>
+<wire x1="4.305" y1="-1.4" x2="-4.305" y2="-1.4" width="0.2032" layer="21"/>
+<wire x1="4.305" y1="1.9" x2="4.305" y2="-1.4" width="0.2032" layer="21"/>
+<wire x1="4.305" y1="-1.4" x2="4.305" y2="-1.9" width="0.2032" layer="21"/>
+<wire x1="-4.305" y1="1.9" x2="4.305" y2="1.9" width="0.2032" layer="21"/>
 <smd name="2" x="-2.54" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
 <smd name="13" x="-2.54" y="2.6" dx="0.6" dy="2.2" layer="1"/>
 <smd name="1" x="-3.81" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
@@ -344,6 +344,7 @@ chip</description>
 <rectangle x1="3.565" y1="2" x2="4.055" y2="3.1" layer="51"/>
 <rectangle x1="2.295" y1="2" x2="2.785" y2="3.1" layer="51"/>
 <rectangle x1="1.025" y1="2" x2="1.515" y2="3.1" layer="51"/>
+<wire x1="-4.318" y1="0.762" x2="-4.318" y2="-0.508" width="0.2032" layer="21" curve="-180"/>
 </package>
 <package name="SSOP14" urn="urn:adsk.eagle:footprint:16141/1" library_version="58" library_locally_modified="yes">
 <description>&lt;b&gt;Small Shrink Outline Package&lt;/b&gt;</description>
@@ -1712,7 +1713,7 @@ chip</description>
 <packageinstance name="R0805"/>
 </packageinstances>
 </package3d>
-<package3d name="CAPC2012X130" urn="urn:adsk.eagle:package:5225034/2" type="model" library_version="107">
+<package3d name="CAPC2012X130" urn="urn:adsk.eagle:package:5225034/2" type="model" library_version="108" library_locally_modified="yes">
 <description>Chip, 2.00 X 1.25 X 1.30 mm body
 &lt;p&gt;Chip package with body size 2.00 X 1.25 X 1.30 mm&lt;/p&gt;</description>
 <packageinstances>
@@ -1732,7 +1733,7 @@ chip</description>
 <packageinstance name="DIL14"/>
 </packageinstances>
 </package3d>
-<package3d name="SO14" urn="urn:adsk.eagle:package:16406/2" type="model" library_version="58" library_locally_modified="yes">
+<package3d name="SO14" urn="urn:adsk.eagle:package:16406/2" type="model" library_version="108" library_locally_modified="yes">
 <description>Small Outline Package 14</description>
 <packageinstances>
 <packageinstance name="SO14"/>
@@ -2385,7 +2386,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SEEED-CAPACITOR_CERAMIC-10UF-25V-10%-X5R(0805)" urn="urn:adsk.eagle:component:6973862/1" prefix="C" uservalue="yes" library_version="107">
+<deviceset name="SEEED-CAPACITOR_CERAMIC-10UF-25V-10%-X5R(0805)" urn="urn:adsk.eagle:component:6973862/1" prefix="C" uservalue="yes" library_version="108" library_locally_modified="yes">
 <description>302010178</description>
 <gates>
 <gate name="G$1" symbol="SEEED-CAPACITOR_C" x="0" y="0"/>
@@ -3463,23 +3464,23 @@ In this library the device names are the same as the pin names of the symbols, t
 <attribute name="NAME" x="60.96" y="25.4" size="1.27" layer="95" ratio="10"/>
 <attribute name="VALUE" x="64.77" y="22.86" size="1.27" layer="96" ratio="10" rot="R180"/>
 </instance>
-<instance part="PWR" gate="G$1" x="189.23" y="114.3" smashed="yes">
-<attribute name="NAME" x="192.786" y="109.728" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="194.945" y="109.728" size="1.778" layer="96" rot="R90"/>
+<instance part="PWR" gate="G$1" x="124.46" y="12.7" smashed="yes">
+<attribute name="NAME" x="128.016" y="8.128" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="130.175" y="8.128" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="TRIG" gate="G$1" x="180.34" y="114.3" smashed="yes">
-<attribute name="NAME" x="183.896" y="109.728" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="186.055" y="109.728" size="1.778" layer="96" rot="R90"/>
+<instance part="TRIG" gate="G$1" x="114.3" y="12.7" smashed="yes">
+<attribute name="NAME" x="117.856" y="8.128" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="120.015" y="8.128" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R19" gate="G$1" x="180.34" y="123.19" smashed="yes" rot="R90">
-<attribute name="NAME" x="179.07" y="121.92" size="1.27" layer="95" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="181.61" y="124.46" size="1.27" layer="96" ratio="10" rot="R270"/>
+<instance part="R19" gate="G$1" x="124.46" y="21.59" smashed="yes" rot="R90">
+<attribute name="NAME" x="123.19" y="20.32" size="1.27" layer="95" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="125.73" y="22.86" size="1.27" layer="96" ratio="10" rot="R270"/>
 </instance>
-<instance part="P+3" gate="1" x="180.34" y="133.35" smashed="yes">
-<attribute name="VALUE" x="177.8" y="128.27" size="1.778" layer="96" rot="R90"/>
+<instance part="P+3" gate="1" x="124.46" y="31.75" smashed="yes">
+<attribute name="VALUE" x="121.92" y="26.67" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="SUPPLY7" gate="GND" x="189.23" y="106.68" smashed="yes">
-<attribute name="VALUE" x="187.325" y="103.505" size="1.778" layer="96"/>
+<instance part="SUPPLY7" gate="GND" x="124.46" y="2.54" smashed="yes">
+<attribute name="VALUE" x="122.555" y="-0.635" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -3564,6 +3565,12 @@ In this library the device names are the same as the pin names of the symbols, t
 <segment>
 <pinref part="SUPPLY7" gate="GND" pin="GND"/>
 <pinref part="PWR" gate="G$1" pin="C"/>
+<wire x1="124.46" y1="5.08" x2="124.46" y2="6.35" width="0.1524" layer="91"/>
+<pinref part="TRIG" gate="G$1" pin="C"/>
+<wire x1="124.46" y1="6.35" x2="124.46" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="7.62" x2="114.3" y2="6.35" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="6.35" x2="124.46" y2="6.35" width="0.1524" layer="91"/>
+<junction x="124.46" y="6.35"/>
 </segment>
 </net>
 <net name="Z_TRG" class="0">
@@ -3572,10 +3579,12 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="172.72" y="97.79" size="1.778" layer="95"/>
 <pinref part="J1" gate="G$2" pin="Z-TRG"/>
 <pinref part="R10" gate="G$1" pin="2"/>
-<pinref part="TRIG" gate="G$1" pin="C"/>
 <wire x1="180.34" y1="97.79" x2="182.88" y2="97.79" width="0.1524" layer="91"/>
-<wire x1="180.34" y1="109.22" x2="180.34" y2="97.79" width="0.1524" layer="91"/>
-<junction x="180.34" y="97.79"/>
+</segment>
+<segment>
+<pinref part="TRIG" gate="G$1" pin="A"/>
+<wire x1="114.3" y1="15.24" x2="114.3" y2="20.32" width="0.1524" layer="91"/>
+<label x="114.3" y="20.32" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="PZ+" class="0">
@@ -3633,7 +3642,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <segment>
 <pinref part="R19" gate="G$1" pin="2"/>
 <pinref part="P+3" gate="1" pin="+5V"/>
-<wire x1="180.34" y1="127" x2="180.34" y2="130.81" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="25.4" x2="124.46" y2="29.21" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GAIN_OUT1" class="0">
@@ -3906,14 +3915,10 @@ In this library the device names are the same as the pin names of the symbols, t
 </net>
 <net name="LED_VCC" class="0">
 <segment>
-<pinref part="TRIG" gate="G$1" pin="A"/>
 <pinref part="R19" gate="G$1" pin="1"/>
-<wire x1="180.34" y1="116.84" x2="180.34" y2="118.11" width="0.1524" layer="91"/>
 <pinref part="PWR" gate="G$1" pin="A"/>
-<wire x1="180.34" y1="118.11" x2="180.34" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="189.23" y1="116.84" x2="189.23" y2="118.11" width="0.1524" layer="91"/>
-<wire x1="189.23" y1="118.11" x2="180.34" y2="118.11" width="0.1524" layer="91"/>
-<junction x="180.34" y="118.11"/>
+<wire x1="124.46" y1="16.51" x2="124.46" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="15.24" x2="124.46" y2="16.51" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
