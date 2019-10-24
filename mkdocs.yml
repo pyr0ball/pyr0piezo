@@ -66,6 +66,8 @@ nav:
       - Klipper: 'tutorials/config/printer-firmware/klipper/klipper-config.md'
       - RepRapFirmware v2: 'tutorials/config/printer-firmware/rrf-v2/rrf-v2-config.md'
       - RepRapFirmware v3: 'tutorials/config/printer-firmware/rrf-v3/rrf-v3-config.md'
+  - Extras:
+    - PT100 RTD Thermal Sensor: 'tutorials/extras/pt100.md'
   - Resources:
     - Schematics:
       - EasyPiezi: 'schematics/easypiezi/easypiezi-schematics.md'
