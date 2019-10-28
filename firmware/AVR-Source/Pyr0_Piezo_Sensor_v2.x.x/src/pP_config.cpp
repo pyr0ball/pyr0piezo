@@ -69,7 +69,7 @@ void restoreConfig() {
     }
 
     long longTemp;
-    EEPROM.get(VM_CONST_DEFAULT, longTemp);
+    EEPROM.get(VM_CONST_ADDRESS, longTemp);
     if (longTemp < 1000000L || longTemp > 1200000L) {
         resetEEPROM();
     } else {

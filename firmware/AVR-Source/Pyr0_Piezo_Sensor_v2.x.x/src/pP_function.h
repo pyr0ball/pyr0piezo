@@ -71,7 +71,7 @@ update the voltMeterConstant variable in pP_config.h with the correct value
 
  void readVin() {
    VOld = Vin;
-	 Vin = readVcc(), DEC;
+	 Vin = readVcc();
    followerLong = followerThrs * 1023L;
    compLong = compThrs * 1023L;
    followerInt = (long long) followerLong / Vin;
