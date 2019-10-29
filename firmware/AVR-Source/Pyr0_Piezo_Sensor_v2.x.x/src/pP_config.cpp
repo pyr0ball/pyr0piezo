@@ -12,7 +12,6 @@ long voltMeterConstant = VM_CONST_DEFAULT;
 uint8_t pP_i2c_address = 0xa0;
 
 void resetEEPROM() {
-    resetConfig();
     EEPROM.put(GAIN_FACTOR_ADDRESS, GAIN_FACTOR);
     EEPROM.put(FOLLOWER_THRESHOLD_ADDRESS, followerThrs);
     EEPROM.put(COMP_THRESHOLD_ADDRESS, compThrs);
