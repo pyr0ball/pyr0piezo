@@ -223,7 +223,7 @@ void updateParams() {
     serialPrintConfig();
   }
   else if (strcmp(serialMessageIn, "RESET") == 0) {
-    resetConfig();
+    resetEEPROM();
     serialPrintConfig();
   }
   else if (strcmp(serialMessageIn, "STATE") == 0) {
