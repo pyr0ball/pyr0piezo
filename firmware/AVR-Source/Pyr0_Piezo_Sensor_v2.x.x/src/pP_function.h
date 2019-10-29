@@ -19,6 +19,7 @@ void pulse() {
   sensorHReading = 1;
   delay(TRG_DUR);
   digitalWriteFast(TRG_OUT, HIGH);
+  Serial.println("Trig'd!");
 }
 
 /*------------------------------------------------*/
