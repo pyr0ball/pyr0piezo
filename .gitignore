@@ -2,3 +2,5 @@ Eagle_Files/**/*.B\#*
 Eagle_Files/**/*.s\#*
 docs/**/*.odt\#*
 site/*
+ICSP Pinout.png
+SparkFun Programmer Pinout.png
