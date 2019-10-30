@@ -156,8 +156,8 @@ void loop() {
 
     // Check voltage of first and second stages and compare against thresholds
     readVin();
-    VComp = analogRead(VCOMP_SENSE_PIN);
-    VFol = analogRead(V_FOLLOW_PIN);
+    VComp = analogReadFast(VCOMP_SENSE_PIN);
+    VFol = analogReadFast(V_FOLLOW_PIN);
 
     VLast = VOld - Vin;
     if (VLast > Hyst || VLast < -Hyst) {

@@ -12,6 +12,14 @@ void digitalWriteFast(uint8_t pin, uint8_t x) {
   }
 }
 
+int inline analogReadFast(byte ADCpin)
+{ byte ADCSRAoriginal = ADCSRA;
+  ADCSRA = (ADCSRA & B11111000) | 4;
+  int adc = analogRead(ADCpin);
+  ADCSRA = ADCSRAoriginal;
+  return adc;
+}
+
 /*------------------------------------------------*/
 
 void pulse() {
