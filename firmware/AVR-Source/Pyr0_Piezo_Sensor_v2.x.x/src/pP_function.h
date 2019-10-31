@@ -12,6 +12,14 @@ void digitalWriteFast(uint8_t pin, uint8_t x) {
   }
 }
 
+int inline analogReadFast(byte ADCpin)
+{ byte ADCSRAoriginal = ADCSRA;
+  ADCSRA = (ADCSRA & B11111000) | 4;
+  int adc = analogRead(ADCpin);
+  ADCSRA = ADCSRAoriginal;
+  return adc;
+}
+
 /*------------------------------------------------*/
 
 void pulse() {
@@ -120,25 +128,25 @@ void adjustGain() {
   }
   else if (GAIN_FACTOR > 0) {
     pinMode(GADJ_R3, OUTPUT);
-    digitalWrite(GADJ_R3, LOW);
+    digitalWriteFast(GADJ_R3, LOW);
     pinMode(GADJ_R2, INPUT);
     pinMode(GADJ_R1, INPUT);
     pinMode(GADJ_R0, INPUT);
   }
   else if (GAIN_FACTOR > 1) {
     pinMode(GADJ_R2, OUTPUT);
-    digitalWrite(GADJ_R2, LOW);
+    digitalWriteFast(GADJ_R2, LOW);
     pinMode(GADJ_R1, INPUT);
     pinMode(GADJ_R0, INPUT);
   }
   else if (GAIN_FACTOR > 2) {
     pinMode(GADJ_R1, OUTPUT);
-    digitalWrite(GADJ_R1, LOW);
+    digitalWriteFast(GADJ_R1, LOW);
     pinMode(GADJ_R0, INPUT);
   }
   else if (GAIN_FACTOR > 3) {
     pinMode(GADJ_R0, OUTPUT);
-    digitalWrite(GADJ_R0, LOW);
+    digitalWriteFast(GADJ_R0, LOW);
   }
 }
 
@@ -146,11 +154,11 @@ void adjustGain() {
 
 void checkError () {
   if (ERR_STATE == 1) {
-    digitalWrite(ERR_LED, BlinkState);
+    digitalWriteFast(ERR_LED, BlinkState);
     BlinkState = !BlinkState;
   }
   else if (ERR_STATE == 0) {
     BlinkState = LOW;
-    digitalWrite(ERR_LED, BlinkState);
+    digitalWriteFast(ERR_LED, BlinkState);
   }
 }
