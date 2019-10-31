@@ -60,8 +60,8 @@
   #endif
 #endif
 
-void resetEEPROM();
-void resetConfig();
+void eraseEEPROM();
+void setDefaultConfig();
 void restoreConfig();
 
 #endif
