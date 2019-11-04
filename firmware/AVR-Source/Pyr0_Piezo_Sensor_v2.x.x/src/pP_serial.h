@@ -222,8 +222,8 @@ void updateParams() {
   else if (strcmp(serialMessageIn, "CONFIG") == 0) {
     serialPrintConfig();
   }
-  else if (strcmp(serialMessageIn, "RESET") == 0) {
-    resetEEPROM();
+  else if (strcmp(serialMessageIn, "ERASE") == 0) {
+    eraseEEPROM();
     serialPrintConfig();
   }
   else if (strcmp(serialMessageIn, "STATE") == 0) {
@@ -238,7 +238,7 @@ void updateParams() {
     // Serial.println("To change ADC hysteresis value: HYST [integer]");
     // Serial.println("To enable or disable debug output: DEBUG [0|1]");
     // Serial.println("To print current config: CONFIG");
-    // Serial.println("To reset config to defaults: RESET");
+    // Serial.println("To set config to defaults: ERASE");
     // Serial.println("To print current state: STATE");
     // Serial.println("");
     // Serial.println("Commands are entered in this format:");

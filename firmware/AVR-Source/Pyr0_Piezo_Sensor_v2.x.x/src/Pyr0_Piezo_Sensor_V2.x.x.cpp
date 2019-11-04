@@ -45,7 +45,7 @@ You can also enable or disable DEBUG output with: DEBUG [0|1]
 You can query the current configuration with: CONFIG
 You can query the current state (including ADC measurements) with: STATE
 
-To reset all settings to defaults, use: RESET
+To set all settings to defaults, use: ERASE
 
 These commands should be wrapped in this format:
 CMD INT

@@ -11,9 +11,9 @@ int Debug = 0;
 long voltMeterConstant = VM_CONST_DEFAULT;
 uint8_t pP_i2c_address = 0xa0;
 
-void resetEEPROM() {
+void eraseEEPROM() {
 	
-	resetConfig();
+	setDefaultConfig();
 	
     EEPROM.put(GAIN_FACTOR_ADDRESS, GAIN_FACTOR);
     EEPROM.put(FOLLOWER_THRESHOLD_ADDRESS, followerThrs);
@@ -24,50 +24,50 @@ void resetEEPROM() {
     EEPROM.put(VM_CONST_ADDRESS, voltMeterConstant);
 }
 
-// Restore config from EEPROM, otherwise reset config and write to EEPROM
+// Restore config from EEPROM, otherwise erase config and write to EEPROM
 void restoreConfig() {
     int temp;
 	
-	bool reset = false;
+	bool erase = false;
 
     EEPROM.get(GAIN_FACTOR_ADDRESS, temp);
     if (temp < 0 || temp > 4) {
-		reset = true;
+		erase = true;
     } else {
         GAIN_FACTOR = temp;
     }
 
     EEPROM.get(FOLLOWER_THRESHOLD_ADDRESS, temp);
     if (temp < 0 || temp > 5000) {
-        reset = true;
+        erase = true;
     } else {
         followerThrs = temp;
     }
 
     EEPROM.get(COMP_THRESHOLD_ADDRESS, temp);
     if (temp < 0 || temp > 5000) {
-        reset = true;
+        erase = true;
     } else {
         compThrs = temp;
     }
 
     EEPROM.get(LOOP_DUR_ADDRESS, temp);
     if (temp < 0 && temp > 1000) {
-        reset = true;
+        erase = true;
     } else {
         LOOP_DUR = temp;
     }
 
     EEPROM.get(TRG_DUR_ADDRESS, temp);
     if (temp < 0 || temp > 1000) {
-        reset = true;
+        erase = true;
     } else {
         TRG_DUR = temp;
     }
 
     EEPROM.get(HYST_ADDRESS, temp);
     if (temp < 0 || temp > 1000) {
-        reset = true;
+        erase = true;
     } else {
         Hyst = temp;
     }
@@ -75,17 +75,17 @@ void restoreConfig() {
     long longTemp;
     EEPROM.get(VM_CONST_ADDRESS, longTemp);
     if (longTemp < 1000000L || longTemp > 1200000L) {
-        reset = true;
+        erase = true;
     } else {
         voltMeterConstant = longTemp;
     }
 	
-	if (reset) {
-		resetEEPROM();
+	if (erase) {
+		eraseEEPROM();
 	}
 }
 
-void resetConfig() {
+void setDefaultConfig() {
     GAIN_FACTOR = GAIN_FACTOR_DEFAULT;
     followerThrs = FOLLOWER_THRESHOLD_DEFAULT;
     compThrs = COMP_THRESHOLD_DEFAULT;
