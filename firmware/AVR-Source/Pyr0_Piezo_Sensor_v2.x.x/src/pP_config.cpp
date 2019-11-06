@@ -12,7 +12,9 @@ long voltMeterConstant = VM_CONST_DEFAULT;
 uint8_t pP_i2c_address = 0xa0;
 
 void resetEEPROM() {
-    resetConfig();
+	
+	resetConfig();
+	
     EEPROM.put(GAIN_FACTOR_ADDRESS, GAIN_FACTOR);
     EEPROM.put(FOLLOWER_THRESHOLD_ADDRESS, followerThrs);
     EEPROM.put(COMP_THRESHOLD_ADDRESS, compThrs);
@@ -25,45 +27,47 @@ void resetEEPROM() {
 // Restore config from EEPROM, otherwise reset config and write to EEPROM
 void restoreConfig() {
     int temp;
+	
+	bool reset = false;
 
     EEPROM.get(GAIN_FACTOR_ADDRESS, temp);
     if (temp < 0 || temp > 4) {
-        resetEEPROM();
+		reset = true;
     } else {
         GAIN_FACTOR = temp;
     }
 
     EEPROM.get(FOLLOWER_THRESHOLD_ADDRESS, temp);
     if (temp < 0 || temp > 5000) {
-        resetEEPROM();
+        reset = true;
     } else {
         followerThrs = temp;
     }
 
     EEPROM.get(COMP_THRESHOLD_ADDRESS, temp);
     if (temp < 0 || temp > 5000) {
-        resetEEPROM();
+        reset = true;
     } else {
         compThrs = temp;
     }
 
     EEPROM.get(LOOP_DUR_ADDRESS, temp);
     if (temp < 0 && temp > 1000) {
-        resetEEPROM();
+        reset = true;
     } else {
         LOOP_DUR = temp;
     }
 
     EEPROM.get(TRG_DUR_ADDRESS, temp);
     if (temp < 0 || temp > 1000) {
-        resetEEPROM();
+        reset = true;
     } else {
         TRG_DUR = temp;
     }
 
     EEPROM.get(HYST_ADDRESS, temp);
     if (temp < 0 || temp > 1000) {
-        resetEEPROM();
+        reset = true;
     } else {
         Hyst = temp;
     }
@@ -71,10 +75,14 @@ void restoreConfig() {
     long longTemp;
     EEPROM.get(VM_CONST_ADDRESS, longTemp);
     if (longTemp < 1000000L || longTemp > 1200000L) {
-        resetEEPROM();
+        reset = true;
     } else {
         voltMeterConstant = longTemp;
     }
+	
+	if (reset) {
+		resetEEPROM();
+	}
 }
 
 void resetConfig() {

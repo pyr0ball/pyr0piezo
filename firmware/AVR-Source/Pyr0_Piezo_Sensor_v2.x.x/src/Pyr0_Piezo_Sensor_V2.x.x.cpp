@@ -119,10 +119,10 @@ void setup() {
   pinMode(GADJ_R1, INPUT);        // declare input to set high impedance
   pinMode(GADJ_R2, INPUT);        // declare input to set high impedance
   pinMode(GADJ_R3, INPUT);        // declare input to set high impedance
-  Serial.begin(9600);
 
   attachInterrupt(digitalPinToInterrupt(Z_TRG), pulse, FALLING);
 
+  Serial.begin(9600);
   Serial.println("Initializing Pyr0-Piezo Sensor...");
 
   restoreConfig();
@@ -138,8 +138,8 @@ void loop() {
     // Blink LED's on init
     if (BlinkCount > 0) {
       BlinkState = !BlinkState;
-      digitalWrite(ERR_LED, BlinkState);
-      digitalWrite(TRG_OUT, BlinkState);
+      digitalWriteFast(ERR_LED, BlinkState);
+      digitalWriteFast(TRG_OUT, BlinkState);
       --BlinkCount;
     }
 
@@ -156,8 +156,8 @@ void loop() {
 
     // Check voltage of first and second stages and compare against thresholds
     readVin();
-    VComp = analogRead(VCOMP_SENSE_PIN);
-    VFol = analogRead(V_FOLLOW_PIN);
+    VComp = analogReadFast(VCOMP_SENSE_PIN);
+    VFol = analogReadFast(V_FOLLOW_PIN);
 
     VLast = VOld - Vin;
     if (VLast > Hyst || VLast < -Hyst) {
@@ -174,8 +174,8 @@ void loop() {
     // Blink LED's on init
     if (BlinkCount > 0) {
       BlinkState = !BlinkState;
-      digitalWrite(ERR_LED, BlinkState);
-      digitalWrite(TRG_OUT, BlinkState);
+      digitalWriteFast(ERR_LED, BlinkState);
+      digitalWriteFast(TRG_OUT, BlinkState);
       --BlinkCount;
     } else {
       // Check for error state
@@ -187,7 +187,7 @@ void loop() {
       serialPrintState();
     }
     // Sets trigger output state to false after completing loop
-    //digitalWrite(TRG_OUT, HIGH);
+    //digitalWriteFast(TRG_OUT, HIGH);
     sensorHReading = 0;
   }
 }
