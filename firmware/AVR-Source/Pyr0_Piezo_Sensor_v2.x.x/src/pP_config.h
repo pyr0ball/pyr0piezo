@@ -43,8 +43,14 @@
   extern int Hyst; // Hysteresis value for ADC measurements
 #endif
 
+#define LOGIC_DEFAULT 0
+#define LOGIC_ADDRESS 24
+#if !(defined(LOGIC))
+  extern bool LOGIC; // Trigger logic scheme, Active LOW is default
+#endif
+
 #if !(defined(Debug))
- extern int Debug;
+  extern int Debug;
 #endif
 
 #define VM_CONST_ADDRESS 28
@@ -58,10 +64,10 @@
   #if !(defined(pP_i2c_address))
     extern uint8_t pP_i2c_address;     // I2C Bus Address
   #endif
-#endif
+#endif // I2C_INPUT
 
 void eraseEEPROM();
 void setDefaultConfig();
 void restoreConfig();
 
-#endif
+#endif // PP_CONFIG_H

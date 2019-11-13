@@ -23,10 +23,10 @@ int inline analogReadFast(byte ADCpin)
 /*------------------------------------------------*/
 
 void pulse() {
-  digitalWriteFast(TRG_OUT, LOW);
+  digitalWriteFast(TRG_OUT, LOGIC);
   sensorHReading = 1;
   delay(TRG_DUR);
-  digitalWriteFast(TRG_OUT, HIGH);
+  digitalWriteFast(TRG_OUT, !LOGIC);
   Serial.println("Trig'd!");
 }
 
