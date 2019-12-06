@@ -56,6 +56,8 @@ Join our discord for support and to join in realtime discussion for the project:
 
 ## Contribution:
 
+Please submit all Pull Requests through the **develop** branch!
+
 The support site for this project uses a script to automatically parse git commits for changelog data. There are three categories of commits that should show up in the case log:
 
   - Bugfix `#bugfix`: commits related to fixing something that's broken
