@@ -130,11 +130,11 @@ void calibrateAlert() {
 void adjustGain() {
   switch (GAIN_FACTOR)
   {
-  case 0:
+  case 4:
     pinMode(GADJ_R0, OUTPUT);
     digitalWriteFast(GADJ_R0, LOW);
     break;
-  case 1:
+  case 3:
     pinMode(GADJ_R1, OUTPUT);
     digitalWriteFast(GADJ_R1, LOW);
     pinMode(GADJ_R0, INPUT);
@@ -145,14 +145,14 @@ void adjustGain() {
     pinMode(GADJ_R1, INPUT);
     pinMode(GADJ_R0, INPUT);
     break;
-  case 3:
+  case 1:
     pinMode(GADJ_R3, OUTPUT);
     digitalWriteFast(GADJ_R3, LOW);
     pinMode(GADJ_R2, INPUT);
     pinMode(GADJ_R1, INPUT);
     pinMode(GADJ_R0, INPUT);
     break;
-  case 4:
+  case 0:
   default:
     pinMode(GADJ_R3, INPUT);
     pinMode(GADJ_R2, INPUT);
