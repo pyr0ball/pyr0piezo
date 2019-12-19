@@ -3,6 +3,9 @@
   Created by Alan "pyr0ball" Weinstock 6/26/2019
 */
 
+//#pragma once
+//#include "pP_function.h"
+
 void digitalWriteFast(uint8_t pin, uint8_t x) {
   if (pin / 8) { // pin >= 8
     PORTB ^= (-x ^ PORTB) & (1 << (pin % 8));
@@ -95,6 +98,9 @@ update the voltMeterConstant variable in pP_config.h with the correct value
   /* Compares diffs of threshold vs read value
    if positive, adjusts the follower to within
    the range set above*/
+  followerLong = followerThrs * 1023L;
+  followerInt = (long long) followerLong / Vin;
+  followerInt = (int) followerInt;
   ADJ_FOLLOW = (followerInt / 4);
 
   // Analog output (PWM) of duty cycle
@@ -104,6 +110,9 @@ update the voltMeterConstant variable in pP_config.h with the correct value
 /*------------------------------------------------*/
 
 void adjustComp() {
+  compLong = compThrs * 1023L;
+  compInt = (long long) compLong / Vin;
+  compInt = (int) compInt;
   OCR1A = compInt;
 }
 

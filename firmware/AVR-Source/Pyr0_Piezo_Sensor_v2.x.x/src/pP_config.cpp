@@ -1,3 +1,5 @@
+//#pragma once
+//#include "pP_function.h"
 #include "pP_config.h"
 #include <EEPROM.h>
 
@@ -76,7 +78,7 @@ void restoreConfig() {
 
     EEPROM.get(LOGIC_ADDRESS, temp);
     if (temp < 0 || temp > 1) {
-        reset = true;
+        erase = true;
     } else {
         LOGIC = temp;
     }
@@ -92,6 +94,9 @@ void restoreConfig() {
 	if (erase) {
 		eraseEEPROM();
 	}
+
+    adjustFollow();
+    adjustComp();
 }
 
 void setDefaultConfig() {
@@ -103,4 +108,6 @@ void setDefaultConfig() {
     Hyst = HYST_DEFAULT;
     LOGIC = LOGIC_DEFAULT;
     voltMeterConstant = VM_CONST_DEFAULT;
+    adjustFollow();
+    adjustComp();
 }
