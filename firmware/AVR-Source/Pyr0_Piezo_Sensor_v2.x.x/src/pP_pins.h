@@ -30,3 +30,4 @@ Default pins (based on Rev.2.x.xPCB layout)
 #define GADJ_R3 6         // "
 #define V_FOL_PWM 3       // PWM analog output pin for voltage follower adjustment
 #define VCOMP_PWM 9       // PWM analog output pin for comparator adjustment
+#define PZDET_PIN 16      // Digital input pin for detecting piezo connection

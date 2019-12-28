@@ -174,3 +174,15 @@ void checkError () {
     digitalWriteFast(ERR_LED, BlinkState);
   }
 }
+
+/*------------------------------------------------*/
+
+void pzConCheck () {
+  PZ_STATE = digitalRead(PZDET_PIN)
+  if (PZ_STATE == 1) {
+    digitalWriteFast(TRG_OUT, LOGIC);
+    ERR_STATE = 1;
+  }
+}
+
+/*------------------------------------------------*/

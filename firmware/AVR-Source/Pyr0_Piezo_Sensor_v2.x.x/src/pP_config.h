@@ -49,6 +49,12 @@
   extern bool LOGIC; // Trigger logic scheme, Active LOW is default
 #endif
 
+#define PZDET_DEFAULT 0
+#define PZDET_ADDRESS 26
+#if !(defined(PZDET))
+  extern bool PZDET; // Enable or disable piezo connection detection, default is off
+#endif
+
 #if !(defined(Debug))
   extern int Debug;
 #endif

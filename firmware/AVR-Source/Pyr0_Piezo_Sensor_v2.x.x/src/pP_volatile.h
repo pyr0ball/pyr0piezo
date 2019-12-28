@@ -3,6 +3,7 @@ volatile int sensorHReading = 0;      // variable to store the value read from t
 volatile int ADJ_FOLLOW = 0;          // Variable for Follower adjustment
 volatile int ADJ_COMP = 0;            // Variable for Comparator adjustment
 volatile int ERR_STATE = 0;
+volatile int PZ_STATE = 0;
 
 int Vin = 5000;                   // input reference voltage in millivolts (multiply V by 1000)
 int VOld = 5000;                  // Variable to store previous cycle's Vin
@@ -25,6 +26,7 @@ int VFol = 0;
 
 int BlinkState = 0;
 int BlinkCount = (InitCount * 2) + 1;   // Multiply Blink count by 2 to handle toggle state, add one extra to make sure light is on after
+
 
 // Serial Input Parsing Variables
 #define buffSize 40

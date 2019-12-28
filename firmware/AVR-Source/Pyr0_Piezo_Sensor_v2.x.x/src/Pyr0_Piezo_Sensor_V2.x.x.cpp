@@ -112,6 +112,7 @@ void setup() {
 
   pinMode(TRG_OUT, OUTPUT);       // declare the Trigger as as OUTPUT
   pinMode(ERR_LED, OUTPUT);
+  pinMode(PZDET_PIN, INPUT);
   pinMode(Z_TRG, INPUT_PULLUP);   // declare z-sense input with pullup
   pinMode(V_FOLLOW_PIN, INPUT);
   pinMode(VCOMP_SENSE_PIN, INPUT);
@@ -170,6 +171,9 @@ void loop() {
     } else {
       ERR_STATE = 0;
     }
+
+    // Check that the piezo disk is properly connected
+    pzConCheck();
 
     // Blink LED's on init
     if (BlinkCount > 0) {

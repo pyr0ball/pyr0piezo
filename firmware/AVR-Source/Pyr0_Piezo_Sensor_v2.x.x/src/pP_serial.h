@@ -110,6 +110,22 @@ void updateHysteresis() {
 }
 /*------------------------------------------------*/
 
+void updateLogic() {
+  if (serialLong >= 0) {
+    Hyst = serialLong;
+    EEPROM.put(LOGIC_ADDRESS, LOGIC);
+  }
+}
+/*------------------------------------------------*/
+
+void updatePzDet() {
+  if (serialLong >= 0) {
+    Hyst = serialLong;
+    EEPROM.put(PZDET_ADDRESS, PZDET);
+  }
+}
+/*------------------------------------------------*/
+
 void updateConstant() {
   if (serialLong >= 0) {
     voltMeterConstant = (long) serialLong;
@@ -168,6 +184,12 @@ void serialPrintConfig() {
   Serial.print("HYST ");
   Serial.println(Hyst);
 
+  Serial.print("LOGIC ");
+  Serial.println(LOGIC);
+
+  Serial.print("PZDET ");
+  Serial.println(PZDET);
+
   Serial.print("VM_CONST ");
   Serial.println(voltMeterConstant);
 }
@@ -189,6 +211,9 @@ void serialPrintState() {
 
   Serial.print("\"Err\":");
   Serial.print(ERR_STATE);
+
+  Serial.print("\"PzCon\":");
+  Serial.print(PZ_STATE);
 
   Serial.println("}");
 }
@@ -212,6 +237,12 @@ void updateParams() {
   }
   else if (strcmp(serialMessageIn, "HYST") == 0) {
     updateHysteresis();
+  }
+  else if (strcmp(serialMessageIn, "LOGIC") == 0) {
+    updateLogic();
+  }
+  else if (strcmp(serialMessageIn, "PZDET") == 0) {
+    updatePzDet();
   }
   else if (strcmp(serialMessageIn, "CONST") == 0) {
     updateConstant();

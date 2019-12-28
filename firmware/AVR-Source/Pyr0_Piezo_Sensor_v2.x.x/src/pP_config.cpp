@@ -10,6 +10,7 @@ int LOOP_DUR = LOOP_DUR_DEFAULT; // duration of time between ADC checks and othe
 int TRG_DUR = TRG_DUR_DEFAULT;   // duration of the Z-axis pulse sent, in ms
 int Hyst = HYST_DEFAULT;         // Hysteresis value for ADC measurements
 bool LOGIC = LOGIC_DEFAULT;      // Trigger output logic (active low or active high)
+bool PZDET = PZDET_DEFAULT;      // Enable/disable piezo connection detection
 int Debug = 0;
 long voltMeterConstant = VM_CONST_DEFAULT;
 uint8_t pP_i2c_address = 0xa0;
@@ -25,6 +26,7 @@ void eraseEEPROM() {
     EEPROM.put(TRG_DUR_ADDRESS, TRG_DUR);
     EEPROM.put(HYST_ADDRESS, Hyst);
     EEPROM.put(LOGIC_ADDRESS, LOGIC);
+    EEPROM.put(PZDET_ADDRESS, PZDET);
     EEPROM.put(VM_CONST_ADDRESS, voltMeterConstant);
 }
 
@@ -83,6 +85,13 @@ void restoreConfig() {
         LOGIC = temp;
     }
 
+    EEPROM.get(PZDET_ADDRESS, temp);
+    if (temp < 0 || temp > 1) {
+        erase = true;
+    } else {
+        PZDET = temp;
+    }
+
     long longTemp;
     EEPROM.get(VM_CONST_ADDRESS, longTemp);
     if (longTemp < 1000000L || longTemp > 1200000L) {
@@ -107,6 +116,7 @@ void setDefaultConfig() {
     TRG_DUR = TRG_DUR_DEFAULT;
     Hyst = HYST_DEFAULT;
     LOGIC = LOGIC_DEFAULT;
+    PZDET = PZDET_DEFAULT;
     voltMeterConstant = VM_CONST_DEFAULT;
     adjustFollow();
     adjustComp();
