@@ -112,7 +112,7 @@ void updateHysteresis() {
 
 void updateLogic() {
   if (serialLong >= 0) {
-    Hyst = serialLong;
+    LOGIC = serialLong;
     EEPROM.put(LOGIC_ADDRESS, LOGIC);
   }
 }
@@ -120,7 +120,7 @@ void updateLogic() {
 
 void updatePzDet() {
   if (serialLong >= 0) {
-    Hyst = serialLong;
+    PZDET = serialLong;
     EEPROM.put(PZDET_ADDRESS, PZDET);
   }
 }

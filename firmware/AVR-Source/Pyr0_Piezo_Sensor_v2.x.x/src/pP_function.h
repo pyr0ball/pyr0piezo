@@ -178,8 +178,8 @@ void checkError () {
 /*------------------------------------------------*/
 
 void pzConCheck () {
-  PZ_STATE = digitalRead(PZDET_PIN)
-  if (PZ_STATE == 1) {
+  PZ_STATE = digitalRead(PZDET_PIN);
+  if (PZ_STATE == PZDET) {
     digitalWriteFast(TRG_OUT, LOGIC);
     ERR_STATE = 1;
   }
@@ -196,6 +196,7 @@ void eraseEEPROM() {
     EEPROM.put(LOOP_DUR_ADDRESS, LOOP_DUR);
     EEPROM.put(TRG_DUR_ADDRESS, TRG_DUR);
     EEPROM.put(HYST_ADDRESS, Hyst);
+    EEPROM.put(PZDET_ADDRESS, PZDET);
     EEPROM.put(LOGIC_ADDRESS, LOGIC);
     EEPROM.put(VM_CONST_ADDRESS, voltMeterConstant);
 }
@@ -248,6 +249,13 @@ void restoreConfig() {
         Hyst = temp;
     }
 
+    EEPROM.get(PZDET_ADDRESS, temp);
+    if (temp < 0 || temp > 1) {
+        erase = true;
+    } else {
+        PZDET = temp;
+    }
+
     EEPROM.get(LOGIC_ADDRESS, temp);
     if (temp < 0 || temp > 1) {
         erase = true;
@@ -278,6 +286,7 @@ void setDefaultConfig() {
     LOOP_DUR = LOOP_DUR_DEFAULT;
     TRG_DUR = TRG_DUR_DEFAULT;
     Hyst = HYST_DEFAULT;
+    PZDET = PZDET_DEFAULT;
     LOGIC = LOGIC_DEFAULT;
     voltMeterConstant = VM_CONST_DEFAULT;
     adjustFollow();

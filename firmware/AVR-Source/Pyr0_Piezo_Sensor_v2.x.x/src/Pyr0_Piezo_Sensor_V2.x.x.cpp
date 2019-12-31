@@ -112,7 +112,7 @@ void setup() {
 
   pinMode(TRG_OUT, OUTPUT);       // declare the Trigger as as OUTPUT
   pinMode(ERR_LED, OUTPUT);
-  pinMode(PZDET_PIN, INPUT);
+  pinMode(PZDET_PIN, INPUT_PULLUP);
   pinMode(Z_TRG, INPUT_PULLUP);   // declare z-sense input with pullup
   pinMode(V_FOLLOW_PIN, INPUT);
   pinMode(VCOMP_SENSE_PIN, INPUT);
