@@ -43,16 +43,16 @@
   extern int Hyst; // Hysteresis value for ADC measurements
 #endif
 
-#define LOGIC_DEFAULT 0
-#define LOGIC_ADDRESS 24
+#define LOGIC_DEFAULT 1
+#define LOGIC_ADDRESS 32
 #if !(defined(LOGIC))
-  extern bool LOGIC; // Trigger logic scheme, Active LOW is default
+  extern int LOGIC; // Trigger logic scheme, Active LOW is default
 #endif
 
 #define PZDET_DEFAULT 0
 #define PZDET_ADDRESS 26
 #if !(defined(PZDET))
-  extern bool PZDET; // Enable or disable piezo connection detection, default is off
+  extern int PZDET; // Enable or disable piezo connection detection, default is off
 #endif
 
 #if !(defined(Debug))
