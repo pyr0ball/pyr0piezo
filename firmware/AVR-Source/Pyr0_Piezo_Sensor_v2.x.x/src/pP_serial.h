@@ -114,6 +114,7 @@ void updateLogic() {
   if (serialLong >= 0) {
     LOGIC = serialLong;
     EEPROM.put(LOGIC_ADDRESS, LOGIC);
+    pulse();
   }
 }
 /*------------------------------------------------*/
