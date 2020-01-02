@@ -16,7 +16,9 @@ void parseData() {
 void identifyMarkers() {
   
   char x = Serial.read();
-//  char y = Wire.read();
+  #ifdef I2C_INPUT
+  char y = Wire.read();
+  #endif // I2C_INPUT
 
   if (x == '\n' || x == '\r') {
     serialIncoming = true;
@@ -32,24 +34,17 @@ void identifyMarkers() {
   }
 
   #ifdef I2C_INPUT
-    if (y == endMarker) {
-      readInProgress = false;
+    if (y == '\n' || y == '\r') {
       serialIncoming = true;
       inputBuffer[bytesRecvd] = 0;
       parseData();
-    }
-
-    if (readInProgress) {
+      bytesRecvd = 0;
+    } else {
       inputBuffer[bytesRecvd] = y;
       bytesRecvd++;
       if (bytesRecvd == buffSize) {
-      bytesRecvd = buffSize - 1;
+        bytesRecvd = buffSize - 1;
       }
-    }
-
-    if (y == startMarker) { 
-      bytesRecvd = 0; 
-      readInProgress = true;
     }
   #endif
 }
@@ -262,24 +257,32 @@ void updateParams() {
     serialPrintState();
   }
   else if (strcmp(serialMessageIn, "HELP") == 0) {
-    // Serial.println("To change gain factor: GAIN_F [integer for gain state - see note*]");
-    // Serial.println("To change voltage follower voltage (low threshold): VFOL [float value]");
-    // Serial.println("To change comparator voltage (high threshold): VCOMP [float value]");
-    // Serial.println("To change main loop period: LOOP_D [integer for milliseconds]");
-    // Serial.println("To change trigger active duration: TRG_D [integer for milliseconds]");
-    // Serial.println("To change ADC hysteresis value: HYST [integer]");
-    // Serial.println("To enable or disable debug output: DEBUG [0|1]");
-    // Serial.println("To print current config: CONFIG");
-    // Serial.println("To set config to defaults: ERASE");
-    // Serial.println("To print current state: STATE");
-    // Serial.println("");
-    // Serial.println("Commands are entered in this format:");
-    // Serial.println("CMD VAL");
-    // Serial.println("Commands are confirmed with Enter key");
-    // Serial.println("");
-    // Serial.println("Examples:");
-    // Serial.println("GAIN_F 3 <~ set gain factor to index 3 (6x)");
-    // Serial.println("VFOL 2350 <~ set the vref floor to 2.35V");
+    #if defined(ARDUINO_AVR_ATmega328PB)
+      Serial.println("To change gain factor: GAIN_F [integer for gain state - see note*]");
+      Serial.println("To change voltage follower voltage (low threshold): VFOL [float value]");
+      Serial.println("To change comparator voltage (high threshold): VCOMP [float value]");
+      Serial.println("To change main loop period: LOOP_D [integer for milliseconds]");
+      Serial.println("To change trigger active duration: TRG_D [integer for milliseconds]");
+      Serial.println("To change the output logic: LOGIC [0|1]");
+      Serial.println("  (0 for active low, 1 for active high)");
+      Serial.println("To enable piezo plugged detection: PZDET [0|1]");
+      Serial.println("  (0 for disabled, 1 for enabled)");
+      Serial.println("To change ADC hysteresis value: HYST [integer in millivolts]");
+      Serial.println("To enable or disable debug output: DEBUG [0|1]");
+      Serial.println("To print current config: CONFIG");
+      Serial.println("To set config to defaults: ERASE");
+      Serial.println("To print current state: STATE");
+      Serial.println("");
+      Serial.println("Commands are entered in this format:");
+      Serial.println("CMD VAL");
+      Serial.println("Commands are confirmed with Enter key");
+      Serial.println("");
+      Serial.println("Examples:");
+      Serial.println("GAIN_F 3 <~ set gain factor to index 3 (6x)");
+      Serial.println("VFOL 2350 <~ set the vref floor to 2.35V");
+    #else
+      Serial.println("Check docs.pyroballpcbs.com/config")
+    #endif // defined(ARDUINO_AVR_ATmega328PB)
   }
   parseData();
 }    
