@@ -281,7 +281,7 @@ void updateParams() {
       Serial.println("GAIN_F 3 <~ set gain factor to index 3 (6x)");
       Serial.println("VFOL 2350 <~ set the vref floor to 2.35V");
     #else
-      Serial.println("Check docs.pyroballpcbs.com/config")
+      Serial.println("Check docs.pyroballpcbs.com/config");
     #endif // defined(ARDUINO_AVR_ATmega328PB)
   }
   parseData();
