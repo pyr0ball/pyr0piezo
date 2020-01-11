@@ -59,6 +59,9 @@ nav:
         - Makerbot Original Under Bed: 'mounts/quadrap/makerbot-under-bed.md'
         - Ultimaker Under Bed: 'mounts/quadrap/um-under-bed.md'
   - Configuration:
+    - Update Sensor:
+      - Sensor UART Wiring: 'schematics/other/uart-programmer-wiring.md'
+      - Beta v2.x.x: 'tutorials/firmware-update/beta-unit-firmware-update.md'
     - Pyr0-Piezo Config: 'config.md'
     - Settings Explaination: 'tutorials/config/pyr0piezo-parameters/pyr0piezo-parameters.md'
     - Printer Firmware Config:
