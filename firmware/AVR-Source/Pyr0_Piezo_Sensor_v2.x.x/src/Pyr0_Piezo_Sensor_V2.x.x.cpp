@@ -101,7 +101,7 @@ update the voltMeterConstant variable in pP_config.h with the correct value
 #include "pP_serial.h"
 
 // i2c input toggle. Uncomment to enable
-//#define I2C_INPUT true
+#define I2C_INPUT
 
 void setup() {
   //Setup PWM on voltage follower (PD3)
