@@ -188,6 +188,9 @@ void serialPrintConfig() {
 
   Serial.print("VM_CONST ");
   Serial.println(voltMeterConstant);
+  
+  Serial.print("Firmware Version ");
+  Serial.println(PP_VERSION);
 }
 
 void serialPrintState() {
@@ -207,9 +210,15 @@ void serialPrintState() {
 
   Serial.print("\"Err\":");
   Serial.print(ERR_STATE);
+  Serial.print(",");
 
   Serial.print("\"PzCon\":");
   Serial.print(PZ_STATE);
+  Serial.print(",");
+
+  Serial.print("\"Firm_Ver\":");
+  Serial.print(PP_VERSION);
+  Serial.print(",");
 
   Serial.println("}");
 }

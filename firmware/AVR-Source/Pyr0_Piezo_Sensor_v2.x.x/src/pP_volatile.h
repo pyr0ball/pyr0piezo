@@ -27,7 +27,6 @@ int VFol = 0;
 int BlinkState = 0;
 int BlinkCount = (InitCount * 2) + 1;   // Multiply Blink count by 2 to handle toggle state, add one extra to make sure light is on after
 
-
 // Serial Input Parsing Variables
 #define buffSize 40
 char inputBuffer[buffSize];
