@@ -183,11 +183,11 @@ void loop() {
     if (BlinkCount > 0) {
       BlinkState = !BlinkState;
       digitalWriteFast(ERR_LED, BlinkState);
-      digitalWriteFast(TRG_OUT, BlinkState);
+//      digitalWriteFast(TRG_OUT, BlinkState);
       --BlinkCount;
-    } else {
+//    } else {
       // Check for error state
-      checkError();
+//      checkError();
     }
 
     // Print state if debug is on

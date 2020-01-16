@@ -25,12 +25,19 @@ int inline analogReadFast(byte ADCpin)
 
 /*------------------------------------------------*/
 
+void doubleFlash() {
+    BlinkCount = 4 ;
+}
+
+/*------------------------------------------------*/
+
 void pulse() {
   digitalWriteFast(TRG_OUT, LOGIC);
   sensorHReading = 1;
   delay(TRG_DUR);
   digitalWriteFast(TRG_OUT, !LOGIC);
   Serial.println("Trig'd!");
+  doubleFlash();
 }
 
 /*------------------------------------------------*/
@@ -164,16 +171,16 @@ void adjustGain() {
 
 /*------------------------------------------------*/
 
-void checkError () {
-  if (ERR_STATE == 1) {
-    digitalWriteFast(ERR_LED, BlinkState);
-    BlinkState = !BlinkState;
-  }
-  else if (ERR_STATE == 0) {
-    BlinkState = LOW;
-    digitalWriteFast(ERR_LED, BlinkState);
-  }
-}
+//void checkError () {
+//  if (ERR_STATE == 1) {
+//    digitalWriteFast(ERR_LED, BlinkState);
+//    BlinkState = !BlinkState;
+//  }
+//  else if (ERR_STATE == 0) {
+//    BlinkState = LOW;
+//    digitalWriteFast(ERR_LED, BlinkState);
+//  }
+//}
 
 /*------------------------------------------------*/
 
