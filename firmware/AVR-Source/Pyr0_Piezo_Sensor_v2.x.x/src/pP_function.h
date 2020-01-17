@@ -187,7 +187,7 @@ void adjustGain() {
 void pzConCheck () {
   PZ_STATE = digitalRead(PZDET_PIN);
   if (PZ_STATE == PZDET) {
-    digitalWriteFast(TRG_OUT, LOGIC);
+    //digitalWriteFast(TRG_OUT, LOGIC);
     ERR_STATE = 1;
   }
 }
