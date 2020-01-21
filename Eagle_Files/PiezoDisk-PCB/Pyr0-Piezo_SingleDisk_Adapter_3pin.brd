@@ -170,36 +170,34 @@
 <layer number="255" name="Accent" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyYTEyMDdh" projecturn="a.cGVyc29uYWw6dWUyYTEyMDdhIzIwMTgxMTI5MTYyOTY3NjMx" f3durn="urn:adsk.wipprod:dm.lineage:7ePR4_QuQeiO7QY8erFDCw" pcbguid="d4991351-07ad-4ba6-9d91-f49c73d368d4" lastpulledtime="" lastsyncedchangeguid="1955d288-6f82-8a71-617e-abfcb1f65f0e"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyYTEyMDdh" projecturn="a.cGVyc29uYWw6dWUyYTEyMDdhIzIwMTgxMTI5MTYyOTY3NjMx" f3durn="urn:adsk.wipprod:dm.lineage:7ePR4_QuQeiO7QY8erFDCw" pcbguid="d4991351-07ad-4ba6-9d91-f49c73d368d4" lastpulledtime="" lastsyncedchangeguid="b91400a7-0863-90be-fe90-801656f4d338"/>
 <plain>
-<wire x1="-10.795" y1="-3.06" x2="-10.795" y2="-13.78" width="0" layer="20"/>
+<wire x1="-10.795" y1="-4.965" x2="-10.795" y2="-13.78" width="0" layer="20"/>
 <wire x1="-10.795" y1="-13.78" x2="-6.795" y2="-17.78" width="0" layer="20" curve="90"/>
 <wire x1="-6.795" y1="-17.78" x2="6.775" y2="-17.78" width="0" layer="20"/>
 <wire x1="6.775" y1="-17.78" x2="10.775" y2="-13.78" width="0" layer="20" curve="90"/>
-<wire x1="10.775" y1="-13.78" x2="10.775" y2="-3.06" width="0" layer="20"/>
-<wire x1="6.775" y1="2.21" x2="5.385" y2="2.21" width="0" layer="20"/>
-<wire x1="5.385" y1="2.21" x2="4.7625" y2="1.5875" width="0" layer="20"/>
-<wire x1="4.7625" y1="1.5875" x2="4.7625" y2="-1.5875" width="0" layer="20"/>
-<wire x1="4.7625" y1="-1.5875" x2="4.699" y2="-1.778" width="0" layer="20"/>
-<wire x1="4.699" y1="-1.778" x2="2.286" y2="-4.191" width="0" layer="20" curve="-53.130102"/>
-<wire x1="2.286" y1="-4.191" x2="2.032" y2="-4.191" width="0" layer="20"/>
-<wire x1="2.032" y1="-4.191" x2="1.27" y2="-3.429" width="0" layer="20" curve="-90"/>
-<wire x1="1.27" y1="-3.429" x2="1.27" y2="-1.651" width="0" layer="20"/>
-<wire x1="1.27" y1="-1.651" x2="1.397" y2="-1.524" width="0" layer="20"/>
-<wire x1="1.397" y1="-1.524" x2="0.889" y2="1.905" width="0" layer="20" curve="106.853992"/>
-<wire x1="0.889" y1="1.905" x2="-0.889" y2="1.905" width="0" layer="20"/>
-<wire x1="-6.775" y1="2.21" x2="-5.385" y2="2.21" width="0" layer="20"/>
-<wire x1="-5.385" y1="2.21" x2="-4.7625" y2="1.5875" width="0" layer="20"/>
-<wire x1="-4.7625" y1="1.5875" x2="-4.7625" y2="-1.5875" width="0" layer="20"/>
-<wire x1="-4.7625" y1="-1.5875" x2="-4.699" y2="-1.778" width="0" layer="20"/>
-<wire x1="-4.699" y1="-1.778" x2="-2.286" y2="-4.191" width="0" layer="20" curve="53.130102"/>
-<wire x1="-2.286" y1="-4.191" x2="-2.032" y2="-4.191" width="0" layer="20"/>
-<wire x1="-2.032" y1="-4.191" x2="-1.27" y2="-3.429" width="0" layer="20" curve="90"/>
-<wire x1="-1.27" y1="-3.429" x2="-1.27" y2="-1.651" width="0" layer="20"/>
-<wire x1="-1.27" y1="-1.651" x2="-1.397" y2="-1.524" width="0" layer="20"/>
-<wire x1="-1.397" y1="-1.524" x2="-0.889" y2="1.905" width="0" layer="20" curve="-106.853992"/>
-<wire x1="-10.795" y1="-3.06" x2="-6.775" y2="2.21" width="0" layer="20" curve="-75.323607"/>
-<wire x1="10.775" y1="-3.06" x2="6.775" y2="2.21" width="0" layer="20" curve="75.323607"/>
+<wire x1="10.775" y1="-13.78" x2="10.775" y2="-4.965" width="0" layer="20"/>
+<wire x1="6.775" y1="1.2575" x2="5.385" y2="1.2575" width="0" layer="20"/>
+<wire x1="5.385" y1="1.2575" x2="4.7625" y2="0.635" width="0" layer="20"/>
+<wire x1="4.7625" y1="0.635" x2="4.7625" y2="-0.635" width="0" layer="20"/>
+<wire x1="4.7625" y1="-0.635" x2="4.699" y2="-0.8255" width="0" layer="20"/>
+<wire x1="4.699" y1="-0.8255" x2="2.286" y2="-3.556" width="0" layer="20" curve="-40"/>
+<wire x1="2.286" y1="-3.556" x2="2.032" y2="-3.556" width="0" layer="20"/>
+<wire x1="2.032" y1="-3.556" x2="1.27" y2="-2.921" width="0" layer="20" curve="-90"/>
+<wire x1="1.27" y1="-2.921" x2="1.397" y2="-2.4765" width="0" layer="20"/>
+<wire x1="1.397" y1="-2.4765" x2="0.889" y2="0.9525" width="0" layer="20" curve="106.853992"/>
+<wire x1="0.889" y1="0.9525" x2="-0.889" y2="0.9525" width="0" layer="20"/>
+<wire x1="-6.775" y1="1.2575" x2="-5.385" y2="1.2575" width="0" layer="20"/>
+<wire x1="-5.385" y1="1.2575" x2="-4.7625" y2="0.635" width="0" layer="20"/>
+<wire x1="-4.7625" y1="0.635" x2="-4.7625" y2="-0.635" width="0" layer="20"/>
+<wire x1="-4.7625" y1="-0.635" x2="-4.699" y2="-0.8255" width="0" layer="20"/>
+<wire x1="-4.699" y1="-0.8255" x2="-2.286" y2="-3.556" width="0" layer="20" curve="30"/>
+<wire x1="-2.286" y1="-3.556" x2="-2.032" y2="-3.556" width="0" layer="20"/>
+<wire x1="-2.032" y1="-3.556" x2="-1.27" y2="-2.921" width="0" layer="20" curve="90"/>
+<wire x1="-1.27" y1="-2.921" x2="-1.397" y2="-2.4765" width="0" layer="20"/>
+<wire x1="-1.397" y1="-2.4765" x2="-0.889" y2="0.9525" width="0" layer="20" curve="-106.853992"/>
+<wire x1="-10.795" y1="-4.965" x2="-6.775" y2="1.2575" width="0" layer="20" curve="-75.323607"/>
+<wire x1="10.775" y1="-4.965" x2="6.775" y2="1.2575" width="0" layer="20" curve="75.323607"/>
 </plain>
 <libraries>
 <library name="PiezoFFC" urn="urn:adsk.eagle:library:6897166">
@@ -266,46 +264,6 @@
 <vertex x="-3.0163" y="5.8738"/>
 </polygon>
 </package>
-<package name="PIEZO-DISK-12MM" urn="urn:adsk.eagle:footprint:14393957/3" library_version="107">
-<pad name="PZ+" x="0" y="0" drill="1.5" thermals="no"/>
-<circle x="0" y="0" radius="6" width="0.127" layer="21"/>
-<polygon width="0.127" layer="46">
-<vertex x="-2.25" y="4.5" curve="65"/>
-<vertex x="-5" y="0" curve="90"/>
-<vertex x="0" y="-5" curve="90"/>
-<vertex x="5" y="0" curve="65"/>
-<vertex x="2.25" y="4.5"/>
-<vertex x="2" y="4.5" curve="90"/>
-<vertex x="1" y="3.5"/>
-<vertex x="1" y="1.5" curve="-15"/>
-<vertex x="1.25" y="1.25" curve="-90"/>
-<vertex x="1.25" y="-1.25" curve="-90"/>
-<vertex x="-1.25" y="-1.25" curve="-90"/>
-<vertex x="-1.25" y="1.25" curve="-15"/>
-<vertex x="-1" y="1.5"/>
-<vertex x="-1" y="3.5" curve="90"/>
-<vertex x="-2" y="4.5" curve="15"/>
-</polygon>
-<smd name="GND1" x="0" y="6" dx="1.5" dy="2.5" layer="1" roundness="100" thermals="no"/>
-<smd name="GND2" x="6" y="0" dx="2.5" dy="1.5" layer="1" roundness="100" thermals="no"/>
-<smd name="GND3" x="0" y="-6" dx="1.5" dy="2.5" layer="1" roundness="100" thermals="no"/>
-<smd name="GND4" x="-6" y="0" dx="2.5" dy="1.5" layer="1" roundness="100" thermals="no"/>
-<wire x1="0" y1="-5" x2="-5" y2="0" width="0" layer="46" curve="-90"/>
-<wire x1="-5" y1="0" x2="-2.25" y2="4.5" width="0" layer="46" curve="-65"/>
-<wire x1="-2.25" y1="4.5" x2="-2" y2="4.5" width="0" layer="46" curve="-15"/>
-<wire x1="-2" y1="4.5" x2="-1" y2="3.5" width="0" layer="46" curve="-90"/>
-<wire x1="-1" y1="3.5" x2="-1" y2="1.5" width="0" layer="46"/>
-<wire x1="-1" y1="1.5" x2="-1.25" y2="1.25" width="0" layer="46" curve="15"/>
-<wire x1="-1.25" y1="1.25" x2="-1.25" y2="-1.25" width="0" layer="46" curve="90"/>
-<wire x1="-1.25" y1="-1.25" x2="1.25" y2="-1.25" width="0" layer="46" curve="90"/>
-<wire x1="1.25" y1="-1.25" x2="1.25" y2="1.25" width="0" layer="46" curve="90"/>
-<wire x1="1.25" y1="1.25" x2="1" y2="1.5" width="0" layer="46" curve="15"/>
-<wire x1="1" y1="1.5" x2="1" y2="3.5" width="0" layer="46"/>
-<wire x1="1" y1="3.5" x2="2" y2="4.5" width="0" layer="46" curve="-90"/>
-<wire x1="2" y1="4.5" x2="2.25" y2="4.5" width="0" layer="46"/>
-<wire x1="2.25" y1="4.5" x2="5" y2="0" width="0" layer="46" curve="-65"/>
-<wire x1="5" y1="0" x2="0" y2="-5" width="0" layer="46" curve="-90"/>
-</package>
 <package name="HOLES_3,2-PAD" urn="urn:adsk.eagle:footprint:5224515/2" library_version="115">
 <description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.2 mm, round</description>
 <circle x="0" y="0" radius="3.429" width="0.1524" layer="21"/>
@@ -320,6 +278,45 @@
 <pad name="B3,2" x="0" y="0" drill="3.2" diameter="5.842"/>
 <text x="-1.27" y="-3.81" size="1.27" layer="48">3,2</text>
 </package>
+<package name="PIEZO-DISK-12MM-OFFSET" urn="urn:adsk.eagle:footprint:16537146/1" library_version="117">
+<pad name="PZ+" x="0" y="1.5" drill="1.5" thermals="no"/>
+<circle x="0" y="0" radius="6" width="0.127" layer="21"/>
+<polygon width="0.127" layer="46">
+<vertex x="-2.25" y="4.5" curve="65"/>
+<vertex x="-5" y="0" curve="90"/>
+<vertex x="0" y="-5" curve="90"/>
+<vertex x="5" y="0" curve="65"/>
+<vertex x="2.25" y="4.5"/>
+<vertex x="2" y="4.5" curve="90"/>
+<vertex x="1" y="3.5"/>
+<vertex x="1" y="3" curve="-15"/>
+<vertex x="1.25" y="2.75" curve="-90"/>
+<vertex x="1.25" y="0.25" curve="-90"/>
+<vertex x="-1.25" y="0.25" curve="-90"/>
+<vertex x="-1.25" y="2.75" curve="-15"/>
+<vertex x="-1" y="3"/>
+<vertex x="-1" y="3.5" curve="90"/>
+<vertex x="-2" y="4.5" curve="15"/>
+</polygon>
+<smd name="GND1" x="0" y="6" dx="1.5" dy="2.5" layer="1" roundness="100" thermals="no"/>
+<smd name="GND2" x="4.5" y="4" dx="2.5" dy="2.5" layer="1" roundness="50" rot="R42" thermals="no"/>
+<smd name="GND3" x="-4.5" y="4" dx="2.5" dy="2.5" layer="1" roundness="50" rot="R48" thermals="no"/>
+<wire x1="0" y1="-5" x2="-5" y2="0" width="0" layer="46" curve="-90"/>
+<wire x1="-5" y1="0" x2="-2.25" y2="4.5" width="0" layer="46" curve="-65"/>
+<wire x1="-2.25" y1="4.5" x2="-2" y2="4.5" width="0" layer="46" curve="-15"/>
+<wire x1="-2" y1="4.5" x2="-1" y2="3.5" width="0" layer="46" curve="-90"/>
+<wire x1="-1" y1="3.5" x2="-1" y2="3" width="0" layer="46"/>
+<wire x1="-1" y1="3" x2="-1.25" y2="2.75" width="0" layer="46" curve="15"/>
+<wire x1="-1.25" y1="2.75" x2="-1.25" y2="0.25" width="0" layer="46" curve="90"/>
+<wire x1="-1.25" y1="0.25" x2="1.25" y2="0.25" width="0" layer="46" curve="90"/>
+<wire x1="1.25" y1="0.25" x2="1.25" y2="2.75" width="0" layer="46" curve="90"/>
+<wire x1="1.25" y1="2.75" x2="1" y2="3" width="0" layer="46" curve="15"/>
+<wire x1="1" y1="3" x2="1" y2="3.5" width="0" layer="46"/>
+<wire x1="1" y1="3.5" x2="2" y2="4.5" width="0" layer="46" curve="-90"/>
+<wire x1="2" y1="4.5" x2="2.25" y2="4.5" width="0" layer="46"/>
+<wire x1="2.25" y1="4.5" x2="5" y2="0" width="0" layer="46" curve="-65"/>
+<wire x1="5" y1="0" x2="0" y2="-5" width="0" layer="46" curve="-90"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="70553-03" urn="urn:adsk.eagle:package:7346260/2" type="model" library_version="114">
@@ -328,15 +325,15 @@
 <packageinstance name="70553-03"/>
 </packageinstances>
 </package3d>
-<package3d name="PIEZO-DISK-12MM" urn="urn:adsk.eagle:package:14393959/5" type="model" library_version="107">
-<packageinstances>
-<packageinstance name="PIEZO-DISK-12MM"/>
-</packageinstances>
-</package3d>
 <package3d name="HOLES_3,2-PAD" urn="urn:adsk.eagle:package:5224590/3" type="model" library_version="115">
 <description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.2 mm, round</description>
 <packageinstances>
 <packageinstance name="HOLES_3,2-PAD"/>
+</packageinstances>
+</package3d>
+<package3d name="PIEZO-DISK-12MM-OFFSET" urn="urn:adsk.eagle:package:16537148/2" type="model" library_version="117">
+<packageinstances>
+<packageinstance name="PIEZO-DISK-12MM-OFFSET"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -541,46 +538,44 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="-19.05" y="-9.525" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-19.05" y="-9.525" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="PZ1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="PIEZO-DISK-12MM" package3d_urn="urn:adsk.eagle:package:14393959/5" value="PIEZO-DISK12MM" x="0" y="0" smashed="yes" rot="R180"/>
+<element name="PZ1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="PIEZO-DISK-12MM-OFFSET" package3d_urn="urn:adsk.eagle:package:16537148/2" value="PIEZO-DISK12MM-OFFSET" x="0" y="0.635" smashed="yes" rot="R180"/>
 <element name="H1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="HOLES_3,2-PAD" package3d_urn="urn:adsk.eagle:package:5224590/3" value="HOLES_MOUNT-PAD-ROUND3.2" x="6.35" y="-8.255" smashed="yes"/>
 <element name="H2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="HOLES_3,2-PAD" package3d_urn="urn:adsk.eagle:package:5224590/3" value="HOLES_MOUNT-PAD-ROUND3.2" x="-6.35" y="-8.255" smashed="yes"/>
 </elements>
 <signals>
 <signal name="PZ+">
-<contactref element="PZ1" pad="PZ+" route="any" routetag="G$1.PZ+"/>
+<contactref element="PZ1" pad="PZ+"/>
 <contactref element="J1" pad="2"/>
-<wire x1="0" y1="0" x2="0" y2="-12.065" width="0.508" layer="16"/>
+<wire x1="0" y1="-0.865" x2="0" y2="-12.065" width="0.508" layer="16"/>
 </signal>
 <signal name="GND">
 <contactref element="J1" pad="1"/>
 <contactref element="PZ1" pad="GND1"/>
 <contactref element="PZ1" pad="GND2"/>
 <contactref element="PZ1" pad="GND3"/>
-<contactref element="PZ1" pad="GND4"/>
 <polygon width="0.254" layer="1">
-<vertex x="-10.795" y="0.94"/>
+<vertex x="-10.795" y="-0.0125"/>
 <vertex x="-10.795" y="-17.78"/>
 <vertex x="10.775" y="-17.78"/>
-<vertex x="10.775" y="0.94"/>
-<vertex x="2.235" y="0.94"/>
-<vertex x="1.27" y="1.905"/>
-<vertex x="-1.27" y="1.905"/>
-<vertex x="-2.235" y="0.94"/>
+<vertex x="10.775" y="-0.0125"/>
+<vertex x="2.235" y="-0.0125"/>
+<vertex x="1.27" y="0.9525"/>
+<vertex x="-1.27" y="0.9525"/>
+<vertex x="-2.235" y="-0.0125"/>
 </polygon>
 <polygon width="0.254" layer="16">
-<vertex x="-10.795" y="0.94"/>
+<vertex x="-10.795" y="-0.0125"/>
 <vertex x="-10.795" y="-17.78"/>
 <vertex x="10.775" y="-17.78"/>
-<vertex x="10.775" y="0.94"/>
-<vertex x="2.235" y="0.94"/>
-<vertex x="1.27" y="1.905"/>
-<vertex x="-1.27" y="1.905"/>
-<vertex x="-2.235" y="0.94"/>
+<vertex x="10.775" y="-0.0125"/>
+<vertex x="2.235" y="-0.0125"/>
+<vertex x="1.27" y="0.9525"/>
+<vertex x="-1.27" y="0.9525"/>
+<vertex x="-2.235" y="-0.0125"/>
 </polygon>
 <contactref element="H2" pad="B3,2"/>
 <contactref element="H1" pad="B3,2"/>
 <contactref element="J1" pad="3"/>
-<wire x1="6" y1="0" x2="0" y2="6" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
@@ -590,6 +585,62 @@ design rules under a new name.</description>
 <mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>
 <mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
 </mfgpreviewcolors>
+<errors>
+<approved hash="4,16,cdd877263b49124a"/>
+<approved hash="4,16,a2db9579414db520"/>
+<approved hash="4,16,a14aa05286d787cd"/>
+<approved hash="4,16,518fe57bc823e099"/>
+<approved hash="4,16,a2c38f6e4152af36"/>
+<approved hash="4,1,298a4137d8a46617"/>
+<approved hash="4,1,8ae55bb60a3f1f88"/>
+<approved hash="4,1,54ad0aacb90bc8ef"/>
+<approved hash="4,1,cdd877263b49124a"/>
+<approved hash="4,1,a2db9579414db520"/>
+<approved hash="4,1,7cc9b344236ffd54"/>
+<approved hash="4,1,a4e574f8704564a7"/>
+<approved hash="4,1,8142b75864e14ba3"/>
+<approved hash="4,1,a14aa05286d787cd"/>
+<approved hash="4,1,518fe57bc823e099"/>
+<approved hash="4,1,a2c38f6e4152af36"/>
+<approved hash="4,16,5b0ef49a822d6bf6"/>
+<approved hash="4,16,00267ee9084430c1"/>
+<approved hash="4,15,5b0ef49a822d6bf6"/>
+<approved hash="4,15,00267ee9084430c1"/>
+<approved hash="4,14,5b0ef49a822d6bf6"/>
+<approved hash="4,14,00267ee9084430c1"/>
+<approved hash="4,13,5b0ef49a822d6bf6"/>
+<approved hash="4,13,00267ee9084430c1"/>
+<approved hash="4,12,5b0ef49a822d6bf6"/>
+<approved hash="4,12,00267ee9084430c1"/>
+<approved hash="4,11,5b0ef49a822d6bf6"/>
+<approved hash="4,11,00267ee9084430c1"/>
+<approved hash="4,10,5b0ef49a822d6bf6"/>
+<approved hash="4,10,00267ee9084430c1"/>
+<approved hash="4,9,5b0ef49a822d6bf6"/>
+<approved hash="4,9,00267ee9084430c1"/>
+<approved hash="4,8,5b0ef49a822d6bf6"/>
+<approved hash="4,8,00267ee9084430c1"/>
+<approved hash="4,7,5b0ef49a822d6bf6"/>
+<approved hash="4,7,00267ee9084430c1"/>
+<approved hash="4,6,5b0ef49a822d6bf6"/>
+<approved hash="4,6,00267ee9084430c1"/>
+<approved hash="4,5,5b0ef49a822d6bf6"/>
+<approved hash="4,5,00267ee9084430c1"/>
+<approved hash="4,4,00267ee9084430c1"/>
+<approved hash="4,4,5b0ef49a822d6bf6"/>
+<approved hash="4,3,00267ee9084430c1"/>
+<approved hash="4,3,5b0ef49a822d6bf6"/>
+<approved hash="4,2,00267ee9084430c1"/>
+<approved hash="4,2,5b0ef49a822d6bf6"/>
+<approved hash="4,1,00267ee9084430c1"/>
+<approved hash="4,1,6c7a0ca87405a26a"/>
+<approved hash="4,1,9cc4e5324f9f0902"/>
+<approved hash="4,1,3334a073cea58154"/>
+<approved hash="4,1,5b0ef49a822d6bf6"/>
+<approved hash="4,1,f37d99e1f9d91640"/>
+<approved hash="4,1,b252df2af8e45c6e"/>
+<approved hash="4,1,ee791f65e43a903b"/>
+</errors>
 </board>
 </drawing>
 <compatibility>

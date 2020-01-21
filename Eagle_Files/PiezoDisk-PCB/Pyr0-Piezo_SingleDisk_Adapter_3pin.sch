@@ -567,6 +567,88 @@
 <pad name="B3,0" x="0" y="0" drill="3" diameter="5.842"/>
 <text x="-1.27" y="-3.81" size="1.27" layer="48">3,0</text>
 </package>
+<package name="PIEZO-DISK-12MM-OFFSET" urn="urn:adsk.eagle:footprint:16537146/1" library_version="117">
+<pad name="PZ+" x="0" y="1.5" drill="1.5" thermals="no"/>
+<circle x="0" y="0" radius="6" width="0.127" layer="21"/>
+<polygon width="0.127" layer="46">
+<vertex x="-2.25" y="4.5" curve="65"/>
+<vertex x="-5" y="0" curve="90"/>
+<vertex x="0" y="-5" curve="90"/>
+<vertex x="5" y="0" curve="65"/>
+<vertex x="2.25" y="4.5"/>
+<vertex x="2" y="4.5" curve="90"/>
+<vertex x="1" y="3.5"/>
+<vertex x="1" y="3" curve="-15"/>
+<vertex x="1.25" y="2.75" curve="-90"/>
+<vertex x="1.25" y="0.25" curve="-90"/>
+<vertex x="-1.25" y="0.25" curve="-90"/>
+<vertex x="-1.25" y="2.75" curve="-15"/>
+<vertex x="-1" y="3"/>
+<vertex x="-1" y="3.5" curve="90"/>
+<vertex x="-2" y="4.5" curve="15"/>
+</polygon>
+<smd name="GND1" x="0" y="6" dx="1.5" dy="2.5" layer="1" roundness="100" thermals="no"/>
+<smd name="GND2" x="4.5" y="4" dx="2.5" dy="2.5" layer="1" roundness="50" rot="R42" thermals="no"/>
+<smd name="GND3" x="-4.5" y="4" dx="2.5" dy="2.5" layer="1" roundness="50" rot="R48" thermals="no"/>
+<wire x1="0" y1="-5" x2="-5" y2="0" width="0" layer="46" curve="-90"/>
+<wire x1="-5" y1="0" x2="-2.25" y2="4.5" width="0" layer="46" curve="-65"/>
+<wire x1="-2.25" y1="4.5" x2="-2" y2="4.5" width="0" layer="46" curve="-15"/>
+<wire x1="-2" y1="4.5" x2="-1" y2="3.5" width="0" layer="46" curve="-90"/>
+<wire x1="-1" y1="3.5" x2="-1" y2="3" width="0" layer="46"/>
+<wire x1="-1" y1="3" x2="-1.25" y2="2.75" width="0" layer="46" curve="15"/>
+<wire x1="-1.25" y1="2.75" x2="-1.25" y2="0.25" width="0" layer="46" curve="90"/>
+<wire x1="-1.25" y1="0.25" x2="1.25" y2="0.25" width="0" layer="46" curve="90"/>
+<wire x1="1.25" y1="0.25" x2="1.25" y2="2.75" width="0" layer="46" curve="90"/>
+<wire x1="1.25" y1="2.75" x2="1" y2="3" width="0" layer="46" curve="15"/>
+<wire x1="1" y1="3" x2="1" y2="3.5" width="0" layer="46"/>
+<wire x1="1" y1="3.5" x2="2" y2="4.5" width="0" layer="46" curve="-90"/>
+<wire x1="2" y1="4.5" x2="2.25" y2="4.5" width="0" layer="46"/>
+<wire x1="2.25" y1="4.5" x2="5" y2="0" width="0" layer="46" curve="-65"/>
+<wire x1="5" y1="0" x2="0" y2="-5" width="0" layer="46" curve="-90"/>
+</package>
+<package name="PIEZO-DISK-20MM-OFFSET" urn="urn:adsk.eagle:footprint:16537147/1" library_version="117">
+<pad name="PZ+" x="0" y="0" drill="2.5" thermals="no"/>
+<circle x="0" y="0" radius="10" width="0.127" layer="21"/>
+<polygon width="0.127" layer="46">
+<vertex x="-3.5" y="7" curve="65"/>
+<vertex x="-8" y="0" curve="90"/>
+<vertex x="0" y="-8" curve="90"/>
+<vertex x="8" y="0" curve="65"/>
+<vertex x="3.5" y="7"/>
+<vertex x="3" y="7" curve="90"/>
+<vertex x="1" y="5"/>
+<vertex x="1" y="2.5" curve="-45"/>
+<vertex x="2.5" y="1" curve="-45"/>
+<vertex x="2.5" y="-1" curve="-45"/>
+<vertex x="1" y="-2.5" curve="-43.602819"/>
+<vertex x="-1" y="-2.5" curve="-45"/>
+<vertex x="-2.5" y="-1" curve="-45"/>
+<vertex x="-2.5" y="1" curve="-45"/>
+<vertex x="-1" y="2.5"/>
+<vertex x="-1" y="5" curve="90"/>
+<vertex x="-3" y="7"/>
+</polygon>
+<smd name="GND1" x="0" y="10" dx="2.5" dy="3.5" layer="1" roundness="100" thermals="no"/>
+<smd name="GND2" x="8" y="6" dx="3.5" dy="3.5" layer="1" roundness="50" rot="R39" thermals="no"/>
+<smd name="GND3" x="-8" y="6" dx="3.5" dy="3.5" layer="1" roundness="50" rot="R51" thermals="no"/>
+<wire x1="-3.5" y1="7" x2="-8" y2="0" width="0" layer="46" curve="65"/>
+<wire x1="-8" y1="0" x2="0" y2="-8" width="0" layer="46" curve="90"/>
+<wire x1="0" y1="-8" x2="8" y2="0" width="0" layer="46" curve="90"/>
+<wire x1="8" y1="0" x2="3.5" y2="7" width="0" layer="46" curve="65"/>
+<wire x1="3.5" y1="7" x2="3" y2="7" width="0" layer="46"/>
+<wire x1="3" y1="7" x2="1" y2="5" width="0" layer="46" curve="90"/>
+<wire x1="1" y1="5" x2="1" y2="2.5" width="0" layer="46"/>
+<wire x1="1" y1="2.5" x2="2.5" y2="1" width="0" layer="46" curve="-45"/>
+<wire x1="2.5" y1="1" x2="2.5" y2="-1" width="0" layer="46" curve="-45"/>
+<wire x1="2.5" y1="-1" x2="1" y2="-2.5" width="0" layer="46" curve="-45"/>
+<wire x1="1" y1="-2.5" x2="-1" y2="-2.5" width="0" layer="46" curve="-43.602819"/>
+<wire x1="-1" y1="-2.5" x2="-2.5" y2="-1" width="0" layer="46" curve="-45"/>
+<wire x1="-2.5" y1="-1" x2="-2.5" y2="1" width="0" layer="46" curve="-45"/>
+<wire x1="-2.5" y1="1" x2="-1" y2="2.5" width="0" layer="46" curve="-45"/>
+<wire x1="-1" y1="2.5" x2="-1" y2="5" width="0" layer="46"/>
+<wire x1="-1" y1="5" x2="-3" y2="7" width="0" layer="46" curve="90"/>
+<wire x1="-3" y1="7" x2="-3.5" y2="7" width="0" layer="46"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="PIEZO-DISK-12MM" urn="urn:adsk.eagle:package:14393959/5" type="model" library_version="107">
@@ -663,6 +745,16 @@
 <packageinstance name="HOLES_3,0-PAD"/>
 </packageinstances>
 </package3d>
+<package3d name="PIEZO-DISK-12MM-OFFSET" urn="urn:adsk.eagle:package:16537148/2" type="model" library_version="117">
+<packageinstances>
+<packageinstance name="PIEZO-DISK-12MM-OFFSET"/>
+</packageinstances>
+</package3d>
+<package3d name="PIEZO-DISK-20MM-OFFSET" urn="urn:adsk.eagle:package:16537149/2" type="model" library_version="117">
+<packageinstances>
+<packageinstance name="PIEZO-DISK-20MM-OFFSET"/>
+</packageinstances>
+</package3d>
 </packages3d>
 <symbols>
 <symbol name="PIEZO-SMD" urn="urn:adsk.eagle:symbol:14393956/1" library_version="107">
@@ -692,7 +784,7 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="PIEZO-DISK" urn="urn:adsk.eagle:component:14393961/4" prefix="PZ" library_version="107">
+<deviceset name="PIEZO-DISK" urn="urn:adsk.eagle:component:14393961/5" prefix="PZ" library_version="117">
 <gates>
 <gate name="G$1" symbol="PIEZO-SMD" x="0" y="0"/>
 </gates>
@@ -716,6 +808,30 @@
 </connects>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:14393960/4"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="12MM-OFFSET" package="PIEZO-DISK-12MM-OFFSET">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND1 GND2 GND3"/>
+<connect gate="G$1" pin="PZ+" pad="PZ+"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16537148/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="20MM-OFFSET" package="PIEZO-DISK-20MM-OFFSET">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND1 GND2 GND3"/>
+<connect gate="G$1" pin="PZ+" pad="PZ+"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16537149/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -980,7 +1096,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 </class>
 </classes>
 <parts>
-<part name="PZ1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="PIEZO-DISK" device="12MM" package3d_urn="urn:adsk.eagle:package:14393959/5"/>
+<part name="PZ1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="PIEZO-DISK" device="12MM-OFFSET" package3d_urn="urn:adsk.eagle:package:16537148/2" value="PIEZO-DISK12MM-OFFSET"/>
 <part name="J1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="C-GRID-03" device="-70553" package3d_urn="urn:adsk.eagle:package:7346260/2"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="H1" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="HOLES_MOUNT-PAD-ROUND" device="3.2" package3d_urn="urn:adsk.eagle:package:5224590/3"/>
