@@ -18,7 +18,9 @@ To set the below parameters using serial input, use the following:
 
 - To change trigger active duration: `TRG_D [integer for milliseconds]`
 - To change gain factor: `GAIN_F [integer for gain state - see note*]`
-- To change ADC hysteresis value: `HYST [integer]`
+- To change the output logic: `LOGIC [0|1]` (0 for active low, 1 for active high)
+- To enable piezo plugged detection: `PZDET [0|1]` (0 for disabled, 1 for enabled)
+- To change ADC hysteresis value: `HYST [integer in millivolts]`
 - To change sensor input pullup vRef low threshold: `VFOL [integer in millivolts]`
 - To change comparator trigger high threshold: `VCOMP [integer in millivolts]`
 - To change the duration between ADC measurements: `LOOP_D [integer in milliseconds]`
@@ -27,6 +29,7 @@ To set the below parameters using serial input, use the following:
 You can also enable or disable DEBUG output with: `DEBUG [0|1]`
 
 You can query the current configuration with: `CONFIG`
+
 You can query the current state (including ADC measurements) with: `STATE`
 
 To reset all settings to defaults, use: `RESET`
