@@ -84,8 +84,6 @@ update the voltMeterConstant variable in pP_config.h with the correct value
 
 ------------------------------------------------------------*/
 
-#define PP_VERSION "2.2.1_1ed670"
-
 /*  Debug output verbose mode will continuously output sensor readings
     rather than waiting for user input */
 #define VERBOSE true
