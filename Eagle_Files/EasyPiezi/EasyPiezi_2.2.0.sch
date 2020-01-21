@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.1">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -1127,7 +1127,7 @@ Metric Code Size 1608</description>
 <rectangle x1="-1.4625" y1="2.2425" x2="-1.1375" y2="3.315" layer="51"/>
 <rectangle x1="-2.1125" y1="2.2425" x2="-1.7875" y2="3.315" layer="51"/>
 </package>
-<package name="QFN16" urn="urn:adsk.eagle:footprint:8766126/1" library_version="109">
+<package name="QFN16" urn="urn:adsk.eagle:footprint:8766126/1" library_version="114">
 <description>&lt;b&gt;RTE (S-PQFP-N16)&lt;/b&gt; 3x3 mm&lt;p&gt;
 Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.1016" layer="51"/>
@@ -2491,7 +2491,7 @@ Metric Code Size 1608</description>
 <packageinstance name="SSOP14"/>
 </packageinstances>
 </package3d>
-<package3d name="QFN16" urn="urn:adsk.eagle:package:8766128/2" type="model" library_version="109">
+<package3d name="QFN16" urn="urn:adsk.eagle:package:8766128/2" type="model" library_version="114">
 <description>&lt;b&gt;RTE (S-PQFP-N16)&lt;/b&gt; 3x3 mm&lt;p&gt;
 Source: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf</description>
 <packageinstances>
@@ -3392,7 +3392,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="CON-MOLEX-6P-1.25MM" urn="urn:adsk.eagle:component:9308888/2" prefix="X" library_version="109">
+<deviceset name="CON-MOLEX-6P-1.25MM" urn="urn:adsk.eagle:component:9308888/2" prefix="X" library_version="114">
 <description>&lt;b&gt;CONNECTOR&lt;/b&gt;&lt;p&gt;
 wire to board 1.25 mm (.049 inch) pitch header</description>
 <gates>
@@ -4121,7 +4121,7 @@ wire to board 1.25 mm (.049 inch) pitch header</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="LM2902" urn="urn:adsk.eagle:component:8766129/4" prefix="U" library_version="113" library_locally_modified="yes">
+<deviceset name="LM2902" urn="urn:adsk.eagle:component:8766129/4" prefix="U" library_version="114">
 <description>&lt;b&gt;Low power quad operational amplifier&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00000533.pdf"&gt; Data sgeet &lt;/a&gt;</description>
 <gates>
@@ -5933,7 +5933,6 @@ DIN A3, landscape with location and doc. field</description>
 </instance>
 <instance part="J1" gate="-2" x="327.66" y="124.46" smashed="yes">
 <attribute name="NAME" x="330.2" y="123.698" size="1.524" layer="95"/>
-<attribute name="VALUE" x="326.898" y="125.857" size="1.778" layer="96"/>
 </instance>
 <instance part="J1" gate="-3" x="327.66" y="121.92" smashed="yes">
 <attribute name="NAME" x="330.2" y="121.158" size="1.524" layer="95"/>
