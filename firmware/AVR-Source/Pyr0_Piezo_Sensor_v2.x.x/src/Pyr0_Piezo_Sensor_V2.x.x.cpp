@@ -34,7 +34,9 @@ To set the below parameters using serial input, use the following:
 
 To change trigger active duration: TRG_D [integer for milliseconds]
 To change gain factor: GAIN_F [integer for gain state - see note*]
-To change ADC hysteresis value: HYST [integer]
+To change the output logic: LOGIC [0|1] (0 for active low, 1 for active high)
+To enable piezo plugged detection: PZDET [0|1] (0 for disabled, 1 for enabled)
+To change ADC hysteresis value: HYST [integer in millivolts]
 To change sensor input pullup vRef low threshold: VFOL [integer in millivolts]
 To change comparator trigger high threshold: VCOMP [integer in millivolts]
 To change the duration between ADC measurements: LOOP_D [integer in milliseconds]
@@ -45,7 +47,7 @@ You can also enable or disable DEBUG output with: DEBUG [0|1]
 You can query the current configuration with: CONFIG
 You can query the current state (including ADC measurements) with: STATE
 
-To reset all settings to defaults, use: RESET
+To set all settings to defaults, use: ERASE
 
 These commands should be wrapped in this format:
 CMD INT
@@ -97,7 +99,7 @@ update the voltMeterConstant variable in pP_config.h with the correct value
 #include "pP_serial.h"
 
 // i2c input toggle. Uncomment to enable
-//#define I2C_INPUT true
+#define I2C_INPUT
 
 void setup() {
   //Setup PWM on voltage follower (PD3)
@@ -112,6 +114,7 @@ void setup() {
 
   pinMode(TRG_OUT, OUTPUT);       // declare the Trigger as as OUTPUT
   pinMode(ERR_LED, OUTPUT);
+  pinMode(PZDET_PIN, INPUT_PULLUP);
   pinMode(Z_TRG, INPUT_PULLUP);   // declare z-sense input with pullup
   pinMode(V_FOLLOW_PIN, INPUT);
   pinMode(VCOMP_SENSE_PIN, INPUT);
@@ -128,6 +131,8 @@ void setup() {
   restoreConfig();
 
   adjustGain();
+
+  digitalWriteFast(TRG_OUT, !LOGIC);
 }
 
 /*------------------------------------------------*/
@@ -139,7 +144,7 @@ void loop() {
     if (BlinkCount > 0) {
       BlinkState = !BlinkState;
       digitalWriteFast(ERR_LED, BlinkState);
-      digitalWriteFast(TRG_OUT, BlinkState);
+      //digitalWriteFast(TRG_OUT, BlinkState);
       --BlinkCount;
     }
 
@@ -171,15 +176,20 @@ void loop() {
       ERR_STATE = 0;
     }
 
+    // Check that the piezo disk is properly connected
+    pzConCheck();
+
     // Blink LED's on init
     if (BlinkCount > 0) {
       BlinkState = !BlinkState;
       digitalWriteFast(ERR_LED, BlinkState);
-      digitalWriteFast(TRG_OUT, BlinkState);
+//      digitalWriteFast(TRG_OUT, BlinkState);
       --BlinkCount;
-    } else {
+//    } else {
       // Check for error state
-      checkError();
+//      checkError();
+    } else {
+      digitalWriteFast(ERR_LED, 0);
     }
 
     // Print state if debug is on

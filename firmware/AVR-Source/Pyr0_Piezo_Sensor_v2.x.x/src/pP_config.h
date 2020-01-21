@@ -43,8 +43,20 @@
   extern int Hyst; // Hysteresis value for ADC measurements
 #endif
 
+#define LOGIC_DEFAULT 1
+#define LOGIC_ADDRESS 32
+#if !(defined(LOGIC))
+  extern int LOGIC; // Trigger logic scheme, Active LOW is default
+#endif
+
+#define PZDET_DEFAULT 0
+#define PZDET_ADDRESS 26
+#if !(defined(PZDET))
+  extern int PZDET; // Enable or disable piezo connection detection, default is off
+#endif
+
 #if !(defined(Debug))
- extern int Debug;
+  extern int Debug;
 #endif
 
 #define VM_CONST_ADDRESS 28
@@ -58,10 +70,10 @@
   #if !(defined(pP_i2c_address))
     extern uint8_t pP_i2c_address;     // I2C Bus Address
   #endif
-#endif
+#endif // I2C_INPUT
 
-void resetEEPROM();
-void resetConfig();
+void eraseEEPROM();
+void setDefaultConfig();
 void restoreConfig();
 
-#endif
+#endif // PP_CONFIG_H

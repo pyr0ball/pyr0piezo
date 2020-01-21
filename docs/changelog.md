@@ -1105,3 +1105,167 @@ Changelog updated 2019-10-30_18-51-54
 
 
 ------------------------------------
+### v2.1.5 to v2.1.6
+
+Changelog updated 2019-12-28_03-43-10
+
+ *Added Features*
+
+- Adds support for inverting trigger logic.   [view commit](http://github.com/pyr0ball/pyr0piezo/commit/5b8c409c109954ea520e5c1e6de9c1f0834889c2) 
+
+
+------------------------------------
+
+ *Bugfixes*
+
+- Fixed width of thermals on singledisk adapter  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/024c6f79111242985d1ce0a0b3ad4358f0d885bf) 
+
+- Fixed pad thermals, added url, fixed logo  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/041836b40b0e0d6fce617c9f73365e8ca9ecb076) 
+
+- Fix for gain adjustment  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/94e2c127951575f3847e72235969a1623eac13a4) 
+
+- fixing serial input not taking effect immediately  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/4076423e1babf8e6e45f1878481dfe42f29fe211) 
+
+
+------------------------------------
+
+ *Documentation Updates*
+
+- Documentation update for v2.1.5  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/5d72861a36e1e76c1264d3bc8b02479edc6d3979) 
+
+
+------------------------------------
+
+ *Full Changelog*
+
+- Documentation update for v2.1.5  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/5d72861a36e1e76c1264d3bc8b02479edc6d3979) 
+
+- These code changes are for resetting the config values to the default values by issuing the ERASE word via a serial terminal. [view commit](http://github.com/pyr0ball/pyr0piezo/commit/106e6c85c3c5f97e20d947a8b6ea3a6f8f30a268) 
+
+- Merge pull request #60 from klcjr89/master [view commit](http://github.com/pyr0ball/pyr0piezo/commit/9ae410f011c43e5bf4ccb902ef1734d0a61edb28) 
+
+- Fixed width of thermals on singledisk adapter  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/024c6f79111242985d1ce0a0b3ad4358f0d885bf) 
+
+- Fixed pad thermals, added url, fixed logo  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/041836b40b0e0d6fce617c9f73365e8ca9ecb076) 
+
+- Merge branch 'master' of https://github.com/pyr0ball/pyr0piezo [view commit](http://github.com/pyr0ball/pyr0piezo/commit/cd3503beb31c346c0f0f1a1cc53c6ba1a06c57a3) 
+
+- Merge branch 'master' of https://github.com/pyr0ball/pyr0piezo into develop [view commit](http://github.com/pyr0ball/pyr0piezo/commit/64550544467b6e2e5627938338ac63c5a39c5b9b) 
+
+- removed file that shouldn't be tracked [view commit](http://github.com/pyr0ball/pyr0piezo/commit/4f3558b79198da40932a678d410cca57b1e0d801) 
+
+- slight edit to platformio.ini, added dependencies [view commit](http://github.com/pyr0ball/pyr0piezo/commit/bc2de746b469d2f04452b55baafd523cc7e335da) 
+
+- Merge branch 'master' of https://github.com/pyr0ball/pyr0piezo into develop [view commit](http://github.com/pyr0ball/pyr0piezo/commit/407c9834d1c8e9db58041ba84cbe5064d64e20d8) 
+
+- Adds support for inverting trigger logic.   [view commit](http://github.com/pyr0ball/pyr0piezo/commit/5b8c409c109954ea520e5c1e6de9c1f0834889c2) 
+
+- ignore [view commit](http://github.com/pyr0ball/pyr0piezo/commit/0d73cc55ef50b1bd11193d47e42e2f0afad97601) 
+
+- Merge branch 'master' of https://github.com/pyr0ball/pyr0piezo [view commit](http://github.com/pyr0ball/pyr0piezo/commit/e0ebe53efcb320a8ba2d552461838486075b0d3b) 
+
+- Fix for gain adjustment  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/94e2c127951575f3847e72235969a1623eac13a4) 
+
+- Merge branch 'develop' of https://github.com/pyr0ball/pyr0piezo into develop [view commit](http://github.com/pyr0ball/pyr0piezo/commit/75776942085c672776ceaa32988dce46d45389a2) 
+
+- Merge pull request #63 from loredan/master [view commit](http://github.com/pyr0ball/pyr0piezo/commit/ecd472d80f0a7a46bc7a6d5eddbbe107c6ed22ed) 
+
+- Merge branch 'develop' of https://github.com/pyr0ball/pyr0piezo into develop [view commit](http://github.com/pyr0ball/pyr0piezo/commit/d30c60639c6a0f82697a97257e89b2291526aa0e) 
+
+- fixing serial input not taking effect immediately  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/4076423e1babf8e6e45f1878481dfe42f29fe211) 
+
+- fixed accidental reversal of gain adjust #oops [view commit](http://github.com/pyr0ball/pyr0piezo/commit/3dcadb5e4ee9449eafdcd9f9861ba8b142373eb1) 
+
+- Revert "fixed accidental reversal of gain adjust #oops" [view commit](http://github.com/pyr0ball/pyr0piezo/commit/2e4cf0ce58e460622cf5e639a15f78481c319839) 
+
+
+------------------------------------
+### v2.2.0 to v2.2.1
+
+Changelog updated 2020-01-16_11-24-38
+
+ *Added Features*
+
+- modified i2c registermap, added stubs  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/44bd9f0182551668aaab3dc2de385f5a79deab13) 
+
+- added firmware version to serial response  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/a3e4ec86a50ed991f97b5f85aabd0a15fd036d81) 
+
+- Changed default state of I2C input macro to enabled  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/217c13b82700d58774b874f0865f5ca04f3cc418) 
+
+- changed error LED behavor to instead indicate a trigger event  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/a1267204d5403a3fcd20f680be75cc6753366ca9) 
+
+
+------------------------------------
+
+ *Bugfixes*
+
+- fixed platformio.ini to allow build and upload directly  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/79f0d657dae01ad02d266a6bccb526845505fa5f) 
+
+- fixed logic and pzdet inputs  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/c30905bd74cbeee65109ae18643ec04123abecbd) 
+
+- fixed logic level change not taking effect til trigger  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/a9d928833ae6d14214eb6c7c8d67bd5974ad9e74) 
+
+- changed compiler to include help message only on 328pb  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/49bfe7663be0cf019b0fa1aa846345dbcf57a6e5) 
+
+- fixed missing semicolon  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/568dc93311a8d3494a61e922cccb929b97420f75) 
+
+
+------------------------------------
+
+ *Documentation Updates*
+
+- Updated changelog  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/30999ed4a85cdaa3950d054585f2e8e1aa40b08a) 
+
+- added instructions for PZDET and LOGIC to main.cpp  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/e668988f3e19932119ac72bfea4e37bb68af4197) 
+
+- added docs for wiring up UART and uploading firmware  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/7d352360d959c2db4ea76a79ba3f1acb30223905) 
+
+- fixed typo in link to uart pdf  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/5e82dc5cd52ab07667528740195c2beb0991256a) 
+
+- fixed another typo in docs  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/85b63734d758edf3e3b1204091920ffe8ed0068f) 
+
+- Added wiring image for ezpz uart  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/882a8721f0f0c8cd4eefa72273038afe15239471) 
+
+
+------------------------------------
+
+ *Full Changelog*
+
+- Updated changelog  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/30999ed4a85cdaa3950d054585f2e8e1aa40b08a) 
+
+- fixed platformio.ini to allow build and upload directly  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/79f0d657dae01ad02d266a6bccb526845505fa5f) 
+
+- removed bad merge lines [view commit](http://github.com/pyr0ball/pyr0piezo/commit/d903a8a4f371f1ab5a2dbd87b2ae19bf4c0ac080) 
+
+- fixed logic and pzdet inputs  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/c30905bd74cbeee65109ae18643ec04123abecbd) 
+
+- added instructions for PZDET and LOGIC to main.cpp  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/e668988f3e19932119ac72bfea4e37bb68af4197) 
+
+- fixed logic level change not taking effect til trigger  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/a9d928833ae6d14214eb6c7c8d67bd5974ad9e74) 
+
+- changed compiler to include help message only on 328pb  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/49bfe7663be0cf019b0fa1aa846345dbcf57a6e5) 
+
+- fixed missing semicolon  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/568dc93311a8d3494a61e922cccb929b97420f75) 
+
+- added verbose output to PIO build flags [view commit](http://github.com/pyr0ball/pyr0piezo/commit/539e5d141125f04c009c2347d187fdfc84b5c451) 
+
+- modified i2c registermap, added stubs  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/44bd9f0182551668aaab3dc2de385f5a79deab13) 
+
+- added docs for wiring up UART and uploading firmware  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/7d352360d959c2db4ea76a79ba3f1acb30223905) 
+
+- fixed typo in link to uart pdf  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/5e82dc5cd52ab07667528740195c2beb0991256a) 
+
+- fixed another typo in docs  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/85b63734d758edf3e3b1204091920ffe8ed0068f) 
+
+- Added wiring image for ezpz uart  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/882a8721f0f0c8cd4eefa72273038afe15239471) 
+
+- added firmware version to serial response  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/a3e4ec86a50ed991f97b5f85aabd0a15fd036d81) 
+
+- changed default state for i2c input macro to enabled  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/904d6af9dc3e74aeae190cde418338f80e906e84) 
+
+- Changed default state of I2C input macro to enabled  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/217c13b82700d58774b874f0865f5ca04f3cc418) 
+
+- changed error LED behavor to instead indicate a trigger event  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/a1267204d5403a3fcd20f680be75cc6753366ca9) 
+
+
+------------------------------------

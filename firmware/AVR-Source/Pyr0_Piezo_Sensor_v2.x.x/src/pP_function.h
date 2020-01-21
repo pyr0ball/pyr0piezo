@@ -3,6 +3,9 @@
   Created by Alan "pyr0ball" Weinstock 6/26/2019
 */
 
+//#pragma once
+//#include "pP_function.h"
+
 void digitalWriteFast(uint8_t pin, uint8_t x) {
   if (pin / 8) { // pin >= 8
     PORTB ^= (-x ^ PORTB) & (1 << (pin % 8));
@@ -22,12 +25,19 @@ int inline analogReadFast(byte ADCpin)
 
 /*------------------------------------------------*/
 
+void doubleFlash() {
+    BlinkCount = 4 ;
+}
+
+/*------------------------------------------------*/
+
 void pulse() {
-  digitalWriteFast(TRG_OUT, LOW);
+  digitalWriteFast(TRG_OUT, LOGIC);
   sensorHReading = 1;
   delay(TRG_DUR);
-  digitalWriteFast(TRG_OUT, HIGH);
+  digitalWriteFast(TRG_OUT, !LOGIC);
   Serial.println("Trig'd!");
+  doubleFlash();
 }
 
 /*------------------------------------------------*/
@@ -95,6 +105,9 @@ update the voltMeterConstant variable in pP_config.h with the correct value
   /* Compares diffs of threshold vs read value
    if positive, adjusts the follower to within
    the range set above*/
+  followerLong = followerThrs * 1023L;
+  followerInt = (long long) followerLong / Vin;
+  followerInt = (int) followerInt;
   ADJ_FOLLOW = (followerInt / 4);
 
   // Analog output (PWM) of duty cycle
@@ -104,6 +117,9 @@ update the voltMeterConstant variable in pP_config.h with the correct value
 /*------------------------------------------------*/
 
 void adjustComp() {
+  compLong = compThrs * 1023L;
+  compInt = (long long) compLong / Vin;
+  compInt = (int) compInt;
   OCR1A = compInt;
 }
 
@@ -119,46 +135,167 @@ void calibrateAlert() {
 /*------------------------------------------------*/
 
 void adjustGain() {
-
-  if (GAIN_FACTOR == 0) {
-    pinMode(GADJ_R3, INPUT);
-    pinMode(GADJ_R2, INPUT);
+  switch (GAIN_FACTOR)
+  {
+  case 4:
+    pinMode(GADJ_R0, OUTPUT);
+    digitalWriteFast(GADJ_R0, LOW);
+    break;
+  case 3:
+    pinMode(GADJ_R1, OUTPUT);
+    digitalWriteFast(GADJ_R1, LOW);
+    pinMode(GADJ_R0, INPUT);
+    break;
+  case 2:
+    pinMode(GADJ_R2, OUTPUT);
+    digitalWriteFast(GADJ_R2, LOW);
     pinMode(GADJ_R1, INPUT);
     pinMode(GADJ_R0, INPUT);
-  }
-  else if (GAIN_FACTOR > 0) {
+    break;
+  case 1:
     pinMode(GADJ_R3, OUTPUT);
     digitalWriteFast(GADJ_R3, LOW);
     pinMode(GADJ_R2, INPUT);
     pinMode(GADJ_R1, INPUT);
     pinMode(GADJ_R0, INPUT);
-  }
-  else if (GAIN_FACTOR > 1) {
-    pinMode(GADJ_R2, OUTPUT);
-    digitalWriteFast(GADJ_R2, LOW);
+    break;
+  case 0:
+  default:
+    pinMode(GADJ_R3, INPUT);
+    pinMode(GADJ_R2, INPUT);
     pinMode(GADJ_R1, INPUT);
     pinMode(GADJ_R0, INPUT);
-  }
-  else if (GAIN_FACTOR > 2) {
-    pinMode(GADJ_R1, OUTPUT);
-    digitalWriteFast(GADJ_R1, LOW);
-    pinMode(GADJ_R0, INPUT);
-  }
-  else if (GAIN_FACTOR > 3) {
-    pinMode(GADJ_R0, OUTPUT);
-    digitalWriteFast(GADJ_R0, LOW);
+    break;
   }
 }
 
 /*------------------------------------------------*/
 
-void checkError () {
-  if (ERR_STATE == 1) {
-    digitalWriteFast(ERR_LED, BlinkState);
-    BlinkState = !BlinkState;
+//void checkError () {
+//  if (ERR_STATE == 1) {
+//    digitalWriteFast(ERR_LED, BlinkState);
+//    BlinkState = !BlinkState;
+//  }
+//  else if (ERR_STATE == 0) {
+//    BlinkState = LOW;
+//    digitalWriteFast(ERR_LED, BlinkState);
+//  }
+//}
+
+/*------------------------------------------------*/
+
+void pzConCheck () {
+  PZ_STATE = digitalRead(PZDET_PIN);
+  if (PZ_STATE == PZDET) {
+    //digitalWriteFast(TRG_OUT, LOGIC);
+    ERR_STATE = 1;
   }
-  else if (ERR_STATE == 0) {
-    BlinkState = LOW;
-    digitalWriteFast(ERR_LED, BlinkState);
-  }
+}
+
+/*------------------------------------------------*/
+void eraseEEPROM() {
+	
+	setDefaultConfig();
+	
+    EEPROM.put(GAIN_FACTOR_ADDRESS, GAIN_FACTOR);
+    EEPROM.put(FOLLOWER_THRESHOLD_ADDRESS, followerThrs);
+    EEPROM.put(COMP_THRESHOLD_ADDRESS, compThrs);
+    EEPROM.put(LOOP_DUR_ADDRESS, LOOP_DUR);
+    EEPROM.put(TRG_DUR_ADDRESS, TRG_DUR);
+    EEPROM.put(HYST_ADDRESS, Hyst);
+    EEPROM.put(PZDET_ADDRESS, PZDET);
+    EEPROM.put(LOGIC_ADDRESS, LOGIC);
+    EEPROM.put(VM_CONST_ADDRESS, voltMeterConstant);
+}
+
+// Restore config from EEPROM, otherwise erase config and write to EEPROM
+void restoreConfig() {
+    int temp;
+	
+	bool erase = false;
+
+    EEPROM.get(GAIN_FACTOR_ADDRESS, temp);
+    if (temp < 0 || temp > 4) {
+		erase = true;
+    } else {
+        GAIN_FACTOR = temp;
+    }
+
+    EEPROM.get(FOLLOWER_THRESHOLD_ADDRESS, temp);
+    if (temp < 0 || temp > 5000) {
+        erase = true;
+    } else {
+        followerThrs = temp;
+    }
+
+    EEPROM.get(COMP_THRESHOLD_ADDRESS, temp);
+    if (temp < 0 || temp > 5000) {
+        erase = true;
+    } else {
+        compThrs = temp;
+    }
+
+    EEPROM.get(LOOP_DUR_ADDRESS, temp);
+    if (temp < 0 && temp > 1000) {
+        erase = true;
+    } else {
+        LOOP_DUR = temp;
+    }
+
+    EEPROM.get(TRG_DUR_ADDRESS, temp);
+    if (temp < 0 || temp > 1000) {
+        erase = true;
+    } else {
+        TRG_DUR = temp;
+    }
+
+    EEPROM.get(HYST_ADDRESS, temp);
+    if (temp < 0 || temp > 1000) {
+        erase = true;
+    } else {
+        Hyst = temp;
+    }
+
+    EEPROM.get(PZDET_ADDRESS, temp);
+    if (temp < 0 || temp > 1) {
+        erase = true;
+    } else {
+        PZDET = temp;
+    }
+
+    EEPROM.get(LOGIC_ADDRESS, temp);
+    if (temp < 0 || temp > 1) {
+        erase = true;
+    } else {
+        LOGIC = temp;
+    }
+
+    long longTemp;
+    EEPROM.get(VM_CONST_ADDRESS, longTemp);
+    if (longTemp < 1000000L || longTemp > 1200000L) {
+        erase = true;
+    } else {
+        voltMeterConstant = longTemp;
+    }
+	
+	if (erase) {
+		eraseEEPROM();
+	}
+
+    adjustFollow();
+    adjustComp();
+}
+
+void setDefaultConfig() {
+    GAIN_FACTOR = GAIN_FACTOR_DEFAULT;
+    followerThrs = FOLLOWER_THRESHOLD_DEFAULT;
+    compThrs = COMP_THRESHOLD_DEFAULT;
+    LOOP_DUR = LOOP_DUR_DEFAULT;
+    TRG_DUR = TRG_DUR_DEFAULT;
+    Hyst = HYST_DEFAULT;
+    PZDET = PZDET_DEFAULT;
+    LOGIC = LOGIC_DEFAULT;
+    voltMeterConstant = VM_CONST_DEFAULT;
+    adjustFollow();
+    adjustComp();
 }
