@@ -1,4 +1,5 @@
 Eagle_Files/**/*.B\#*
 Eagle_Files/**/*.s\#*
+Eagle_Files/**/*.l\#*
 docs/**/*.odt\#*
 site/*
