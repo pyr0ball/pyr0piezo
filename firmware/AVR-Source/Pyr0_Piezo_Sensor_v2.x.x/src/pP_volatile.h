@@ -1,3 +1,8 @@
+#ifndef PP_VOLATILE_H
+#define PP_VOLATILE_H
+
+#include "LightChrono.h"
+
 // these variables will change on their own. Do not edit ANYTHING below this line
 volatile int sensorHReading = 0;      // variable to store the value read from the sensor pin
 volatile int ADJ_FOLLOW = 0;          // Variable for Follower adjustment
@@ -41,3 +46,5 @@ long serialLong = 0;
 
 // Task scheduler instances
 LightChrono mainLoop;
+
+#endif //PP_VOLATILE_H
