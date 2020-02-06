@@ -10,6 +10,7 @@
 #define PP_FUNCTION_H
 
 #include "Arduino.h"
+#include "pP_config.h"
 #include "pP_volatile.h"
 #include "pP_pins.h"
 #include "stdint.h"
