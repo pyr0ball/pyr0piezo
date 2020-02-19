@@ -2,6 +2,17 @@
 #include "pP_function.h"
 #include <EEPROM.h>
 
+int GAIN_FACTOR = GAIN_FACTOR_DEFAULT;
+int followerThrs = FOLLOWER_THRESHOLD_DEFAULT;
+int compThrs = COMP_THRESHOLD_DEFAULT;
+int LOOP_DUR = LOOP_DUR_DEFAULT;
+int TRG_DUR = TRG_DUR_DEFAULT;
+int Hyst = HYST_DEFAULT;
+int LOGIC = LOGIC_DEFAULT;
+int PZDET = PZDET_DEFAULT;
+int Debug = 0;
+long voltMeterConstant = VM_CONST_DEFAULT;
+
 /*------------------------------------------------*/
 void eraseEEPROM() {
 	

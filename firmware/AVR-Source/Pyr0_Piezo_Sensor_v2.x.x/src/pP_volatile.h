@@ -19,8 +19,8 @@ extern int VLast;
 
 extern long followerLong;
 extern long compLong;
-long followerInt;
-long compInt;
+extern long followerInt;
+extern long compInt;
 
 // Voltage Comparator Adjustment parameters
 extern int VComp;
@@ -35,7 +35,7 @@ extern int BlinkCount;   // Multiply Blink count by 2 to handle toggle state, ad
 
 // Serial Input Parsing Variables
 #define buffSize 40
-char inputBuffer[buffSize];
+extern char inputBuffer[buffSize];
 #define endMarker '\n'
 extern uint8_t bytesRecvd;
 extern bool serialIncoming;
@@ -46,6 +46,6 @@ extern long serialLong;
 //#define HIGH 1
 
 // Task scheduler instances
-LightChrono mainLoop;
+extern LightChrono mainLoop;
 
 #endif //PP_VOLATILE_H

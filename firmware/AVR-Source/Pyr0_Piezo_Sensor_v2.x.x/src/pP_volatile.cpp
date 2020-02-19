@@ -17,6 +17,8 @@ int VLast = 0;
 
 long followerLong = followerThrs * 1023L;
 long compLong = compThrs * 1023L;
+long followerInt = 0;
+long compInt = 0;
 
 // Voltage Comparator Adjustment parameters
 int VComp = 0;
@@ -30,7 +32,10 @@ int BlinkState = 0;
 int BlinkCount = (InitCount * 2) + 1;   // Multiply Blink count by 2 to handle toggle state, add one extra to make sure light is on after
 
 // Serial Input Parsing Variables
+char inputBuffer[buffSize];
 uint8_t bytesRecvd = 0;
 bool serialIncoming = false;
 char serialMessageIn[buffSize] = {0};
 long serialLong = 0;
+
+LightChrono mainLoop;
