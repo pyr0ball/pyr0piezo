@@ -89,7 +89,7 @@ update the voltMeterConstant variable in pP_config.h with the correct value
 #include <EEPROM.h>
 #include "LightChrono.h"
 #include "pP_pins.h"
-#include "pP_config.h"
+// #include "pP_config.h"
 #include "pP_volatile.h"
 #include "pP_function.h"
 #include "pP_serial.h"

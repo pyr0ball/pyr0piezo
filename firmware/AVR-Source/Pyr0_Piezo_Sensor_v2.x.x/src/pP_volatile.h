@@ -2,44 +2,45 @@
 #define PP_VOLATILE_H
 
 #include "LightChrono.h"
+#include "stdint.h"
 
 // these variables will change on their own. Do not edit ANYTHING below this line
-volatile int sensorHReading = 0;      // variable to store the value read from the sensor pin
-volatile int ADJ_FOLLOW = 0;          // Variable for Follower adjustment
-volatile int ADJ_COMP = 0;            // Variable for Comparator adjustment
-volatile int ERR_STATE = 0;
-volatile int PZ_STATE = 0;
+extern volatile int sensorHReading;      // variable to store the value read from the sensor pin
+extern volatile int ADJ_FOLLOW;          // Variable for Follower adjustment
+extern volatile int ADJ_COMP;            // Variable for Comparator adjustment
+extern volatile int ERR_STATE;
+extern volatile int PZ_STATE;
 
-int Vin = 5000;                   // input reference voltage in millivolts (multiply V by 1000)
-int VOld = 5000;                  // Variable to store previous cycle's Vin
-int VLast = 0;
+extern int Vin;                   // input reference voltage in millivolts (multiply V by 1000)
+extern int VOld;                  // Variable to store previous cycle's Vin
+extern int VLast;
 
 // Convert threshold values based on the input voltage
 
-long followerLong = followerThrs * 1023L;
-long compLong = compThrs * 1023L;
+extern long followerLong;
+extern long compLong;
 long followerInt;
 long compInt;
 
 // Voltage Comparator Adjustment parameters
-int VComp = 0;
+extern int VComp;
 
 // Voltage Follower Adjustment parameters
-int VFol = 0;
+extern int VFol;
 
 // Error blink parameters
 
-int BlinkState = 0;
-int BlinkCount = (InitCount * 2) + 1;   // Multiply Blink count by 2 to handle toggle state, add one extra to make sure light is on after
+extern int BlinkState;
+extern int BlinkCount;   // Multiply Blink count by 2 to handle toggle state, add one extra to make sure light is on after
 
 // Serial Input Parsing Variables
 #define buffSize 40
 char inputBuffer[buffSize];
 #define endMarker '\n'
-byte bytesRecvd = 0;
-bool serialIncoming = false;
-char serialMessageIn[buffSize] = {0};
-long serialLong = 0;
+extern uint8_t bytesRecvd;
+extern bool serialIncoming;
+extern char serialMessageIn[buffSize];
+extern long serialLong;
 
 //#define LOW 0
 //#define HIGH 1
