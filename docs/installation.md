@@ -9,6 +9,14 @@
 
 ## Getting Support for your printer
 
+### Request Support using GitHub
+
+Open a [Printer Mount Request](https://github.com/pyr0ball/pyr0piezo/issues/new?assignees=pyr0ball&labels=add+support+request&template=printer-mount-request.md&title=%5BMOUNT%5D)
+
+### Request Support on Discord
+
+Join the [Discord Server](https://discordapp.com/widget?id=544587989536473099&theme=dark) and request support from pyr0ball#2592
+
 ### Choosing your mounting scheme
 *First, follow the instructions for physically installing your Pyro-Piezo on the printer you're using:*
 
