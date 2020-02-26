@@ -5,7 +5,7 @@
 ## Fully Supported Printers
 
 - [Monoprice Delta Mini](tutorials/wiring/easy-piezi/monoprice-delta-mini.md)
-  - ![](assets/images/mp-delta-mini-ub/pmdm-product.jpg)
+  - ![](assets/images/mp-delta-mini-ub/mpdm-product.jpg)
 
 ## Getting Support for your printer
 
