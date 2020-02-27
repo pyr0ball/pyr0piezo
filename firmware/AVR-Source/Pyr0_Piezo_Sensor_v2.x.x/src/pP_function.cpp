@@ -192,6 +192,23 @@ void adjustGain()
 
 /*------------------------------------------------*/
 
+void adjustVcc()
+{
+  switch (VCCSW)
+  {
+  case 0:
+    pinMode(VCCSW_PIN, OUTPUT);
+    digitalWriteFast(VCCSW_PIN, LOW);
+    break;
+  case 1:
+  default:
+    pinMode(VCCSW_PIN, INPUT);
+    break;
+  }
+}
+
+/*------------------------------------------------*/
+
 //void checkError () {
 //  if (ERR_STATE == 1) {
 //    digitalWriteFast(ERR_LED, BlinkState);

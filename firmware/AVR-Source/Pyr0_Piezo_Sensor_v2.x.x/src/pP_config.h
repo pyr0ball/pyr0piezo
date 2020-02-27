@@ -39,9 +39,13 @@ extern int LOGIC; // Trigger logic scheme, Active LOW is default
 #define PZDET_ADDRESS 26
 extern int PZDET; // Enable or disable piezo connection detection, default is off
 
+#define VCCSW_DEFAULT 0
+#define VCCSW_ADDRESS 28
+extern int VCCSW; // Enable or disable piezo connection detection, default is off
+
 extern int Debug;
 
-#define VM_CONST_ADDRESS 28
+#define VM_CONST_ADDRESS 30
 #define VM_CONST_DEFAULT 1125300L
 extern long voltMeterConstant; // For fine tuning input voltage sense
 

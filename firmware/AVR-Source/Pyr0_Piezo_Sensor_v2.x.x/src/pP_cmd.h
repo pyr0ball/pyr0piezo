@@ -93,6 +93,16 @@ void updatePzDet(int value)
 }
 /*------------------------------------------------*/
 
+void updateVccSwitch(int value)
+{
+    if (value >= 0)
+    {
+        VCCSW = value;
+        EEPROM.put(VCCSW_ADDRESS, VCCSW);
+    }
+}
+/*------------------------------------------------*/
+
 void updateConstant(long value)
 {
     if (value >= 0)
