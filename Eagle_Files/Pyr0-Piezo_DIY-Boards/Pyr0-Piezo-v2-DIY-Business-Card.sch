@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1.27" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -9653,6 +9653,7 @@ general purpose rectifier, 1 A</description>
 <attribute name="NAME" x="109.22" y="130.0226" size="1.778" layer="95"/>
 <attribute name="VALUE" x="109.22" y="127.2286" size="1.778" layer="96"/>
 </instance>
+<instance part="J1" gate="G$5" x="274.32" y="50.8" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -9893,6 +9894,11 @@ general purpose rectifier, 1 A</description>
 <wire x1="45.72" y1="118.11" x2="49.53" y2="118.11" width="0.1524" layer="91"/>
 <label x="49.53" y="118.11" size="1.778" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="J1" gate="G$5" pin="COMP_S"/>
+<wire x1="269.24" y1="45.72" x2="259.08" y2="45.72" width="0.1524" layer="91"/>
+<label x="256.54" y="45.72" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="VCOMP_SENSE" class="0">
 <segment>
@@ -9914,6 +9920,11 @@ general purpose rectifier, 1 A</description>
 <pinref part="U2" gate="G$1" pin="PC1_(ADC1/PCINT9)"/>
 <wire x1="45.72" y1="115.57" x2="49.53" y2="115.57" width="0.1524" layer="91"/>
 <label x="49.53" y="115.57" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J1" gate="G$5" pin="FOL_S"/>
+<wire x1="269.24" y1="55.88" x2="259.08" y2="55.88" width="0.1524" layer="91"/>
+<label x="254" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GADJ_R0" class="0">
