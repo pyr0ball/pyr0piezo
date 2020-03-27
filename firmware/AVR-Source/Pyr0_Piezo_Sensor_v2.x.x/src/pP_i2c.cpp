@@ -1,16 +1,15 @@
 #ifdef I2C_INPUT
 
-#include <Arduino.h>
-#include "pP_config.h"
 #include "pP_i2c.h"
+#include "pP_config.h"
+#include <Arduino.h>
 #include <Wire.h>
 
 byte registerMap[regMapSize];
 byte registerMapTemp[regMapSize - 1];
 byte receivedCommands[maxBytes];
 
-pP_i2c::pP_i2c(){
-
+pP_i2c::pP_i2c() {
 }
 
 void pP_i2c::init() {
@@ -24,19 +23,15 @@ void pP_i2c::i2cReportStatus() {
 }
 
 void pP_i2c::i2cReportVersion() {
-
 }
 
 void pP_i2c::i2cReportConfig() {
-
 }
 
 void pP_i2c::i2cReportIdentity() {
-
 }
 
 void pP_i2c::i2cRequestInput() {
-
 }
 
 void pP_i2c::i2cReply() {
@@ -68,64 +63,64 @@ void pP_i2c::i2cInput(int bytesReceived) {
 
   // Parse commands and apply changes or actions
   switch (cmdRcvd[0]) {
-    case 0x00:
-      i2cReportStatus();
-      return;
-      break;
-    case 0x01:
-      followerInt = (int) cmdRcvd[1];
-      return;
-      break;
-    case 0x02:
-      compInt = (int) cmdRcvd[1];
-      return;
-      break;
-    case 0x03:
-      GAIN_FACTOR = (int) cmdRcvd[1];
-      return;
-      break;
-    case 0x04:
-      Hyst = (int) cmdRcvd[1];
-      return;
-      break;
-    case 0x05:
-      LOOP_DUR = (int) cmdRcvd[1];
-      return;
-      break;
-    case 0x06:
-      LOGIC = (int) cmdRcvd[1];
-      return;
-      break;
-    case 0x07:
-      PZDET = (int) cmdRcvd[1];
-      return;
-      break;
-    case 0x08:
-      TRG_DUR = (int) cmdRcvd[1];
-      return;
-      break;
-    case 0x09:
-      DEBUG = (int) cmdRcvd[1];
-      return;
-      break;
-    case 0x0a:
-      voltMeterConstant = longRcvd[0]*65536+longRcvd[1]*256+longRcvd[2];
-      return;
-      break;
-    case 0x0b:
-      reportVersion();
-      return;
-      break;
-    case 0x0c:
-      reportConfig();
-      return;
-      break;
-    case 0x0d:
-      reportIdentity();
-      return;
-      break;
-    default:
-      return;
+  case 0x00:
+    i2cReportStatus();
+    return;
+    break;
+  case 0x01:
+    followerInt = (int)cmdRcvd[1];
+    return;
+    break;
+  case 0x02:
+    compInt = (int)cmdRcvd[1];
+    return;
+    break;
+  case 0x03:
+    GAIN_FACTOR = (int)cmdRcvd[1];
+    return;
+    break;
+  case 0x04:
+    Hyst = (int)cmdRcvd[1];
+    return;
+    break;
+  case 0x05:
+    LOOP_DUR = (int)cmdRcvd[1];
+    return;
+    break;
+  case 0x06:
+    LOGIC = (int)cmdRcvd[1];
+    return;
+    break;
+  case 0x07:
+    PZDET = (int)cmdRcvd[1];
+    return;
+    break;
+  case 0x08:
+    TRG_DUR = (int)cmdRcvd[1];
+    return;
+    break;
+  case 0x09:
+    DEBUG = (int)cmdRcvd[1];
+    return;
+    break;
+  case 0x0a:
+    voltMeterConstant = longRcvd[0] * 65536 + longRcvd[1] * 256 + longRcvd[2];
+    return;
+    break;
+  case 0x0b:
+    reportVersion();
+    return;
+    break;
+  case 0x0c:
+    reportConfig();
+    return;
+    break;
+  case 0x0d:
+    reportIdentity();
+    return;
+    break;
+  default:
+    return;
   }
 }
 #endif

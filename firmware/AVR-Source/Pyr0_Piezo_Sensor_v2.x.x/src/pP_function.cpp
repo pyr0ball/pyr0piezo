@@ -9,24 +9,19 @@
 #include "pP_function.h"
 #include "Arduino.h"
 #include "pP_config.h"
-#include "pP_volatile.h"
 #include "pP_pins.h"
+#include "pP_volatile.h"
 #include "stdint.h"
 
-void digitalWriteFast(uint8_t pin, uint8_t x)
-{
-  if (pin / 8)
-  { // pin >= 8
+void digitalWriteFast(uint8_t pin, uint8_t x) {
+  if (pin / 8) { // pin >= 8
     PORTB ^= (-x ^ PORTB) & (1 << (pin % 8));
-  }
-  else
-  {
+  } else {
     PORTD ^= (-x ^ PORTD) & (1 << (pin % 8));
   }
 }
 
-int analogReadFast(uint8_t ADCpin)
-{
+int analogReadFast(uint8_t ADCpin) {
   byte ADCSRAoriginal = ADCSRA;
   ADCSRA = (ADCSRA & B11111000) | 4;
   int adc = analogRead(ADCpin);
@@ -36,15 +31,13 @@ int analogReadFast(uint8_t ADCpin)
 
 /*------------------------------------------------*/
 
-void doubleFlash()
-{
+void doubleFlash() {
   BlinkCount = 4;
 }
 
 /*------------------------------------------------*/
 
-void pulse()
-{
+void pulse() {
   digitalWriteFast(TRG_OUT, LOGIC);
   sensorHReading = 1;
   delay(TRG_DUR);
@@ -55,8 +48,7 @@ void pulse()
 
 /*------------------------------------------------*/
 
-long readVcc()
-{
+long readVcc() {
   // Read 1.1V reference against AVcc
 
   // Atmega's Secret Voltmeter setup:
@@ -103,8 +95,7 @@ If the scale_constant calculated is different from the default 1125300,
 update the voltMeterConstant variable in pP_config.h with the correct value
 --------------------------------------------------*/
 
-void readVin()
-{
+void readVin() {
   VOld = Vin;
   Vin = readVcc();
   followerLong = followerThrs * 1023L;
@@ -117,8 +108,7 @@ void readVin()
 
 /*------------------------------------------------*/
 
-void adjustFollow()
-{
+void adjustFollow() {
   /* Compares diffs of threshold vs read value
    if positive, adjusts the follower to within
    the range set above*/
@@ -133,8 +123,7 @@ void adjustFollow()
 
 /*------------------------------------------------*/
 
-void adjustComp()
-{
+void adjustComp() {
   compLong = compThrs * 1023L;
   compInt = (long long)compLong / Vin;
   compInt = (int)compInt;
@@ -143,21 +132,17 @@ void adjustComp()
 
 /*------------------------------------------------*/
 
-void calibrateAlert()
-{
+void calibrateAlert() {
   VLast = VOld - Vin;
-  if (VLast > Hyst || VLast < -Hyst)
-  {
+  if (VLast > Hyst || VLast < -Hyst) {
     ERR_STATE = 1;
   }
 }
 
 /*------------------------------------------------*/
 
-void adjustGain()
-{
-  switch (GAIN_FACTOR)
-  {
+void adjustGain() {
+  switch (GAIN_FACTOR) {
   case 4:
     pinMode(GADJ_R0, OUTPUT);
     digitalWriteFast(GADJ_R0, LOW);
@@ -192,7 +177,7 @@ void adjustGain()
 
 /*------------------------------------------------*/
 
-//void checkError () {
+// void checkError () {
 //  if (ERR_STATE == 1) {
 //    digitalWriteFast(ERR_LED, BlinkState);
 //    BlinkState = !BlinkState;
@@ -205,12 +190,10 @@ void adjustGain()
 
 /*------------------------------------------------*/
 
-void pzConCheck()
-{
+void pzConCheck() {
   PZ_STATE = digitalRead(PZDET_PIN);
-  if (PZ_STATE == PZDET)
-  {
-    //digitalWriteFast(TRG_OUT, LOGIC);
+  if (PZ_STATE == PZDET) {
+    // digitalWriteFast(TRG_OUT, LOGIC);
     ERR_STATE = 1;
   }
 }

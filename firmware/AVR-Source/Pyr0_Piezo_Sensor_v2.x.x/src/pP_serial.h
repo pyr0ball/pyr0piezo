@@ -1,7 +1,7 @@
 #include "pP_cmd.h"
+#include "pP_volatile.h"
 
-void parseData()
-{
+void parseData() {
 
   // split the data into its parts
 
@@ -15,45 +15,36 @@ void parseData()
 }
 /*------------------------------------------------*/
 
-void identifyMarkers()
-{
+void identifyMarkers() {
 
   char x = Serial.read();
 #ifdef I2C_INPUT
   char y = Wire.read();
 #endif // I2C_INPUT
 
-  if (x == '\n' || x == '\r')
-  {
+  if (x == '\n' || x == '\r') {
     serialIncoming = true;
     inputBuffer[bytesRecvd] = 0;
     parseData();
     bytesRecvd = 0;
-  }
-  else
-  {
+  } else {
     inputBuffer[bytesRecvd] = x;
     bytesRecvd++;
-    if (bytesRecvd == buffSize)
-    {
+    if (bytesRecvd == buffSize) {
       bytesRecvd = buffSize - 1;
     }
   }
 
 #ifdef I2C_INPUT
-  if (y == '\n' || y == '\r')
-  {
+  if (y == '\n' || y == '\r') {
     serialIncoming = true;
     inputBuffer[bytesRecvd] = 0;
     parseData();
     bytesRecvd = 0;
-  }
-  else
-  {
+  } else {
     inputBuffer[bytesRecvd] = y;
     bytesRecvd++;
-    if (bytesRecvd == buffSize)
-    {
+    if (bytesRecvd == buffSize) {
       bytesRecvd = buffSize - 1;
     }
   }
@@ -62,12 +53,10 @@ void identifyMarkers()
 
 /*------------------------------------------------*/
 
-void serialPrintConfig()
-{
+void serialPrintConfig() {
   Serial.print("GAIN_F ");
   Serial.print(GAIN_FACTOR);
-  switch (GAIN_FACTOR)
-  {
+  switch (GAIN_FACTOR) {
   case 0:
     Serial.println(" 3x");
     break;
@@ -116,8 +105,7 @@ void serialPrintConfig()
   Serial.println(PP_VERSION);
 }
 
-void serialPrintState()
-{
+void serialPrintState() {
   Serial.print("{");
 
   Serial.print("\"Vcc\":");
@@ -147,64 +135,36 @@ void serialPrintState()
   Serial.println("}");
 }
 
-void updateParams()
-{
+void updateParams() {
   serialIncoming = false;
-  if (strcmp(serialMessageIn, "GAIN_F") == 0)
-  {
+  if (strcmp(serialMessageIn, "GAIN_F") == 0) {
     updateGainFactor(serialLong);
-  }
-  else if (strcmp(serialMessageIn, "VFOL") == 0)
-  {
+  } else if (strcmp(serialMessageIn, "VFOL") == 0) {
     updateVFol(serialLong);
-  }
-  else if (strcmp(serialMessageIn, "VCOMP") == 0)
-  {
+  } else if (strcmp(serialMessageIn, "VCOMP") == 0) {
     updateVComp(serialLong);
-  }
-  else if (strcmp(serialMessageIn, "LOOP_D") == 0)
-  {
+  } else if (strcmp(serialMessageIn, "LOOP_D") == 0) {
     updateLoopDuration(serialLong);
-  }
-  else if (strcmp(serialMessageIn, "TRG_D") == 0)
-  {
+  } else if (strcmp(serialMessageIn, "TRG_D") == 0) {
     updateTrigDuration(serialLong);
-  }
-  else if (strcmp(serialMessageIn, "HYST") == 0)
-  {
+  } else if (strcmp(serialMessageIn, "HYST") == 0) {
     updateHysteresis(serialLong);
-  }
-  else if (strcmp(serialMessageIn, "LOGIC") == 0)
-  {
+  } else if (strcmp(serialMessageIn, "LOGIC") == 0) {
     updateLogic(serialLong);
-  }
-  else if (strcmp(serialMessageIn, "PZDET") == 0)
-  {
+  } else if (strcmp(serialMessageIn, "PZDET") == 0) {
     updatePzDet(serialLong);
-  }
-  else if (strcmp(serialMessageIn, "CONST") == 0)
-  {
+  } else if (strcmp(serialMessageIn, "CONST") == 0) {
     updateConstant(serialLong);
-  }
-  else if (strcmp(serialMessageIn, "DEBUG") == 0)
-  {
+  } else if (strcmp(serialMessageIn, "DEBUG") == 0) {
     updateDebug(serialLong);
-  }
-  else if (strcmp(serialMessageIn, "CONFIG") == 0)
-  {
+  } else if (strcmp(serialMessageIn, "CONFIG") == 0) {
     serialPrintConfig();
-  }
-  else if (strcmp(serialMessageIn, "ERASE") == 0)
-  {
+  } else if (strcmp(serialMessageIn, "ERASE") == 0) {
     eraseEEPROM();
     serialPrintConfig();
-  }
-  else if (strcmp(serialMessageIn, "STATE") == 0)
-  {
+  } else if (strcmp(serialMessageIn, "STATE") == 0) {
     serialPrintState();
-  }
-  else if (strcmp(serialMessageIn, "HELP") == 0)
-  {
+  } else if (strcmp(serialMessageIn, "HELP") == 0) {
 #if defined(ARDUINO_AVR_ATmega328PB)
     Serial.println("To change gain factor: GAIN_F [integer for gain state - see note*]");
     Serial.println("To change voltage follower voltage (low threshold): VFOL [float value]");
@@ -235,11 +195,9 @@ void updateParams()
   parseData();
 }
 
-void serialInput()
-{
+void serialInput() {
   // receive data from Serial and save it into inputBuffer
-  if (Serial.available() > 0)
-  {
+  if (Serial.available() > 0) {
 
     // the order of these IF clauses is significant
     identifyMarkers();

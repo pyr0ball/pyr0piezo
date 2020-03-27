@@ -85,39 +85,39 @@ update the voltMeterConstant variable in pP_config.h with the correct value
 ------------------------------------------------------------*/
 
 // Headers, variables, and functions
-#include <Arduino.h>
-#include <EEPROM.h>
 #include "LightChrono.h"
 #include "pP_pins.h"
+#include <Arduino.h>
+#include <EEPROM.h>
 // #include "pP_config.h"
-#include "pP_volatile.h"
 #include "pP_function.h"
 #include "pP_serial.h"
+#include "pP_volatile.h"
 
 // i2c input toggle. Uncomment to enable
 #define I2C_INPUT
 
 void setup() {
-  //Setup PWM on voltage follower (PD3)
+  // Setup PWM on voltage follower (PD3)
   TCCR2A = (1 << COM2B1) | (0 << COM2B0) | (0 << WGM21) | (1 << WGM20);
   TCCR2B = (0 << WGM22) | (0 << CS22) | (0 << CS21) | (1 << CS20);
   DDRD |= (1 << DDD3);
 
-  //Setup PWM on comparator (PB1)
+  // Setup PWM on comparator (PB1)
   TCCR1A = (1 << COM1A1) | (0 << COM1A0) | (1 << WGM11) | (1 << WGM10);
   TCCR1B = (0 << WGM13) | (0 << WGM12) | (0 << CS12) | (0 << CS11) | (1 << CS10);
   DDRB |= (1 << DDB1);
 
-  pinMode(TRG_OUT, OUTPUT);       // declare the Trigger as as OUTPUT
+  pinMode(TRG_OUT, OUTPUT); // declare the Trigger as as OUTPUT
   pinMode(ERR_LED, OUTPUT);
   pinMode(PZDET_PIN, INPUT_PULLUP);
-  pinMode(Z_TRG, INPUT_PULLUP);   // declare z-sense input with pullup
+  pinMode(Z_TRG, INPUT_PULLUP); // declare z-sense input with pullup
   pinMode(V_FOLLOW_PIN, INPUT);
   pinMode(VCOMP_SENSE_PIN, INPUT);
-  pinMode(GADJ_R0, INPUT);        // declare input to set high impedance
-  pinMode(GADJ_R1, INPUT);        // declare input to set high impedance
-  pinMode(GADJ_R2, INPUT);        // declare input to set high impedance
-  pinMode(GADJ_R3, INPUT);        // declare input to set high impedance
+  pinMode(GADJ_R0, INPUT); // declare input to set high impedance
+  pinMode(GADJ_R1, INPUT); // declare input to set high impedance
+  pinMode(GADJ_R2, INPUT); // declare input to set high impedance
+  pinMode(GADJ_R3, INPUT); // declare input to set high impedance
 
   attachInterrupt(digitalPinToInterrupt(Z_TRG), pulse, FALLING);
 
@@ -140,7 +140,7 @@ void loop() {
     if (BlinkCount > 0) {
       BlinkState = !BlinkState;
       digitalWriteFast(ERR_LED, BlinkState);
-      //digitalWriteFast(TRG_OUT, BlinkState);
+      // digitalWriteFast(TRG_OUT, BlinkState);
       --BlinkCount;
     }
 
@@ -162,11 +162,11 @@ void loop() {
 
     VLast = VOld - Vin;
     if (VLast > Hyst || VLast < -Hyst) {
-    // Voltage Follower adjustment
+      // Voltage Follower adjustment
       adjustFollow();
-    // Voltage Comparator adjustment
+      // Voltage Comparator adjustment
       adjustComp();
-    // Alert the user that auto-calibration is ongoing
+      // Alert the user that auto-calibration is ongoing
       ERR_STATE = 1;
     } else {
       ERR_STATE = 0;
@@ -179,11 +179,11 @@ void loop() {
     if (BlinkCount > 0) {
       BlinkState = !BlinkState;
       digitalWriteFast(ERR_LED, BlinkState);
-//      digitalWriteFast(TRG_OUT, BlinkState);
+      //      digitalWriteFast(TRG_OUT, BlinkState);
       --BlinkCount;
-//    } else {
+      //    } else {
       // Check for error state
-//      checkError();
+      //      checkError();
     } else {
       digitalWriteFast(ERR_LED, 0);
     }
@@ -193,7 +193,7 @@ void loop() {
       serialPrintState();
     }
     // Sets trigger output state to false after completing loop
-    //digitalWriteFast(TRG_OUT, HIGH);
+    // digitalWriteFast(TRG_OUT, HIGH);
     sensorHReading = 0;
   }
 }
