@@ -1,126 +1,121 @@
-#ifdef I2C_INPUT
-
-#include "pP_i2c.h"
-#include "pP_config.h"
-#include <Arduino.h>
+#include "pP_i2c.hpp"
+#include "pP_cmd.h"
+#include "pP_i2c_config.h"
+#include "pP_volatile.h"
 #include <Wire.h>
 
-byte registerMap[regMapSize];
-byte registerMapTemp[regMapSize - 1];
-byte receivedCommands[maxBytes];
+uint8_t command;
+uint16_t value;
 
-pP_i2c::pP_i2c() {
-}
-
-void pP_i2c::init() {
+void i2cInit() {
   Wire.begin(pP_i2c_address);
   Wire.onRequest(i2cReply);
   Wire.onReceive(i2cInput);
 }
 
-void pP_i2c::i2cReportStatus() {
-  _i2cResponse = "{"
+void i2cReportConfig() {
+  i2cWrite(GAIN_FACTOR);
+  i2cWrite(followerThrs);
+  i2cWrite(compThrs);
+  i2cWrite(LOOP_DUR);
+  i2cWrite(TRG_DUR);
+  i2cWrite(Hyst);
+  i2cWrite(LOGIC);
+  i2cWrite(PZDET);
+  i2cWrite(voltMeterConstant);
 }
 
-void pP_i2c::i2cReportVersion() {
+void i2cReportState() {
+  i2cWrite(Vin);
+  i2cWrite((int)((long)VComp * Vin / 1023));
+  i2cWrite((int)((long)VFol * Vin / 1023));
+  i2cWrite(ERR_STATE);
+  i2cWrite(PZ_STATE);
 }
 
-void pP_i2c::i2cReportConfig() {
+void i2cWrite(int data) {
+  Wire.write(data >> 24);
+  Wire.write(data >> 16);
+  Wire.write(data >> 8);
+  Wire.write(data);
 }
 
-void pP_i2c::i2cReportIdentity() {
+void i2cWrite(long data) {
+  Wire.write(data >> 56);
+  Wire.write(data >> 48);
+  Wire.write(data >> 40);
+  Wire.write(data >> 32);
+  Wire.write(data >> 24);
+  Wire.write(data >> 16);
+  Wire.write(data >> 8);
+  Wire.write(data);
 }
 
-void pP_i2c::i2cRequestInput() {
+void i2cReply() {
+  switch (command) {
+  case CMD_CONFIG:
+  case CMD_ERASE:
+    i2cReportConfig();
+    break;
+  case CMD_STATE:
+    i2cReportState();
+    break;
+  default:
+    break;
+  }
 }
 
-void pP_i2c::i2cReply() {
-  Wire.send()
-}
-
-void pP_i2c::i2cInput(int bytesReceived) {
+void i2cInput(int bytesReceived) {
   for (int a = 0; a < bytesReceived; a++) {
     // Check length of message, drops anything longer than [longBytes]
-    if (a <= maxBytes) {
-      cmdRcvd[a] = Wire.receive();
+    if (a == 0) {
+      command = Wire.read();
+    } else if (a == 1) {
+      value = Wire.read();
+    } else if (a == 2) {
+      value = value << 8 | Wire.read();
+    } else {
+      Wire.read(); //
     }
-    elif (a <= longBytes) {
-      longRcvd[a] = Wire.receive();
-    }
-    else {
-      Wire.receive(); //
-    }
-  }
-
-  // Check input command corresponds with register map, set 0x00 if not
-  if (bytesReceived == 1 && (cmdRcvd[0] < regMapSize)) {
-    return;
-  }
-  if (bytesReceived == 1 && (cmdRcvd[0] >= regMapSize)) {
-    cmdRcvd[0] = 0x00;
-    return;
   }
 
   // Parse commands and apply changes or actions
-  switch (cmdRcvd[0]) {
-  case 0x00:
-    i2cReportStatus();
-    return;
+  switch (command) {
+  case CMD_GAIN_F:
+    updateGainFactor(value);
     break;
-  case 0x01:
-    followerInt = (int)cmdRcvd[1];
-    return;
+  case CMD_VFOL:
+    updateVFol(value);
     break;
-  case 0x02:
-    compInt = (int)cmdRcvd[1];
-    return;
+  case CMD_VCOMP:
+    updateVComp(value);
     break;
-  case 0x03:
-    GAIN_FACTOR = (int)cmdRcvd[1];
-    return;
+  case CMD_LOOP_D:
+    updateLoopDuration(value);
     break;
-  case 0x04:
-    Hyst = (int)cmdRcvd[1];
-    return;
+  case CMD_TRG_D:
+    updateTrigDuration(value);
     break;
-  case 0x05:
-    LOOP_DUR = (int)cmdRcvd[1];
-    return;
+  case CMD_HYST:
+    updateHysteresis(value);
     break;
-  case 0x06:
-    LOGIC = (int)cmdRcvd[1];
-    return;
+  case CMD_LOGIC:
+    updateLogic(value);
     break;
-  case 0x07:
-    PZDET = (int)cmdRcvd[1];
-    return;
+  case CMD_PZDET:
+    updatePzDet(value);
     break;
-  case 0x08:
-    TRG_DUR = (int)cmdRcvd[1];
-    return;
+  case CMD_CONST:
+    updateConstant(value);
     break;
-  case 0x09:
-    DEBUG = (int)cmdRcvd[1];
-    return;
+  case CMD_CONFIG:
     break;
-  case 0x0a:
-    voltMeterConstant = longRcvd[0] * 65536 + longRcvd[1] * 256 + longRcvd[2];
-    return;
+  case CMD_ERASE:
+    eraseEEPROM();
     break;
-  case 0x0b:
-    reportVersion();
-    return;
-    break;
-  case 0x0c:
-    reportConfig();
-    return;
-    break;
-  case 0x0d:
-    reportIdentity();
-    return;
+  case CMD_STATE:
     break;
   default:
     return;
   }
 }
-#endif

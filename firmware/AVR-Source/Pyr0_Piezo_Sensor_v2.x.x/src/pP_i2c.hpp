@@ -1,6 +1,8 @@
 #ifndef _pP_i2c_h_
 #define _pP_i2c_h_
-#ifdef I2C_INPUT
+
+#include "pP_config.h"
+#include "stdint.h"
 
 #define status_Offset 0x00       // Status register
 #define senseInt_Offset 0x01     // Integer of sense threshold in millivolts
@@ -17,26 +19,6 @@
 #define configRegister_Offset 0x0c
 #define identRegister_Offset 0x0d
 
-/*-------------------------Variables------------------------*/
-#define regMapSize 14
-#define maxBytes 2
-#define longBytes 4
-byte regMap[regMapSize];
-byte regMapTemp[regMapSize];
-byte cmdRcvd[maxBytes];
-byte longRcvd[longBytes];
+void i2cInit();
 
-/*------------------------------------------------*/
-
-class pP_i2c {
-public:
-  pP_i2c(uint8_t address = pP_i2c_address);
-  void init();
-  void i2cInput(int bytesReceived);
-
-private:
-  char _i2cResponse;
-};
-
-#endif // I2C_INPUT
 #endif // _pP_i2c_h_

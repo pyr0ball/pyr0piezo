@@ -1,6 +1,8 @@
 #ifndef PP_CONFIG_H
 #define PP_CONFIG_H
 
+#include "stdint.h"
+
 // Configurable settings:
 
 #define GAIN_FACTOR_DEFAULT 2 // Gain adjustment factor. 0=3x, 1=3.5x, 2=4.33x, 3=6x, 4=11x
@@ -45,10 +47,8 @@ extern int Debug;
 #define VM_CONST_DEFAULT 1125300L
 extern long voltMeterConstant; // For fine tuning input voltage sense
 
-#ifdef I2C_INPUT
 #define I2C_SLAVE_ADDRESS 24
-uint8_t pP_i2c_address = 0xa0; // I2C Bus Address
-#endif                         // I2C_INPUT
+extern uint8_t pP_i2c_address; // I2C Bus Address (P + 0 -> 0x50 + 0x30 -> 0x80)
 
 void eraseEEPROM();
 void setDefaultConfig();

@@ -12,6 +12,7 @@ int LOGIC = LOGIC_DEFAULT;
 int PZDET = PZDET_DEFAULT;
 int Debug = 0;
 long voltMeterConstant = VM_CONST_DEFAULT;
+uint8_t pP_i2c_address = 0x80;
 
 /*------------------------------------------------*/
 void eraseEEPROM() {

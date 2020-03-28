@@ -84,18 +84,18 @@ update the voltMeterConstant variable in pP_config.h with the correct value
 
 ------------------------------------------------------------*/
 
+// i2c input toggle. Uncomment to enable
+#define I2C_INPUT
+
 // Headers, variables, and functions
 #include "LightChrono.h"
 #include "pP_pins.h"
 #include <Arduino.h>
 #include <EEPROM.h>
-// #include "pP_config.h"
 #include "pP_function.h"
+#include "pP_i2c.hpp"
 #include "pP_serial.h"
 #include "pP_volatile.h"
-
-// i2c input toggle. Uncomment to enable
-#define I2C_INPUT
 
 void setup() {
   // Setup PWM on voltage follower (PD3)
@@ -123,6 +123,8 @@ void setup() {
 
   Serial.begin(9600);
   Serial.println("Initializing Pyr0-Piezo Sensor...");
+
+  i2cInit();
 
   restoreConfig();
 

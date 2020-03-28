@@ -18,9 +18,6 @@ void parseData() {
 void identifyMarkers() {
 
   char x = Serial.read();
-#ifdef I2C_INPUT
-  char y = Wire.read();
-#endif // I2C_INPUT
 
   if (x == '\n' || x == '\r') {
     serialIncoming = true;
@@ -34,21 +31,6 @@ void identifyMarkers() {
       bytesRecvd = buffSize - 1;
     }
   }
-
-#ifdef I2C_INPUT
-  if (y == '\n' || y == '\r') {
-    serialIncoming = true;
-    inputBuffer[bytesRecvd] = 0;
-    parseData();
-    bytesRecvd = 0;
-  } else {
-    inputBuffer[bytesRecvd] = y;
-    bytesRecvd++;
-    if (bytesRecvd == buffSize) {
-      bytesRecvd = buffSize - 1;
-    }
-  }
-#endif
 }
 
 /*------------------------------------------------*/
@@ -126,11 +108,6 @@ void serialPrintState() {
 
   Serial.print("\"PzCon\":");
   Serial.print(PZ_STATE);
-  Serial.print(",");
-
-  Serial.print("\"Firm_Ver\":");
-  Serial.print(PP_VERSION);
-  Serial.print(",");
 
   Serial.println("}");
 }
