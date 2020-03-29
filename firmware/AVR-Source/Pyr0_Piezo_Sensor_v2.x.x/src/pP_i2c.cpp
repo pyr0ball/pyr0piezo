@@ -7,10 +7,16 @@
 uint8_t command;
 uint16_t value;
 
-void i2cInit() {
-  Wire.begin(pP_i2c_address);
-  Wire.onRequest(i2cReply);
-  Wire.onReceive(i2cInput);
+void i2cWrite(int data) {
+  Wire.write(data >> 8);
+  Wire.write(data);
+}
+
+void i2cWrite(long data) {
+  Wire.write(data >> 24);
+  Wire.write(data >> 16);
+  Wire.write(data >> 8);
+  Wire.write(data);
 }
 
 void i2cReportConfig() {
@@ -33,25 +39,9 @@ void i2cReportState() {
   i2cWrite(PZ_STATE);
 }
 
-void i2cWrite(int data) {
-  Wire.write(data >> 24);
-  Wire.write(data >> 16);
-  Wire.write(data >> 8);
-  Wire.write(data);
-}
-
-void i2cWrite(long data) {
-  Wire.write(data >> 56);
-  Wire.write(data >> 48);
-  Wire.write(data >> 40);
-  Wire.write(data >> 32);
-  Wire.write(data >> 24);
-  Wire.write(data >> 16);
-  Wire.write(data >> 8);
-  Wire.write(data);
-}
-
 void i2cReply() {
+  Serial.print("Requested ");
+  Serial.println(command);
   switch (command) {
   case CMD_CONFIG:
   case CMD_ERASE:
@@ -78,6 +68,11 @@ void i2cInput(int bytesReceived) {
       Wire.read(); //
     }
   }
+
+  Serial.print("Command ");
+  Serial.print(command);
+  Serial.print(" ");
+  Serial.println(value);
 
   // Parse commands and apply changes or actions
   switch (command) {
@@ -118,4 +113,10 @@ void i2cInput(int bytesReceived) {
   default:
     return;
   }
+}
+
+void i2cInit() {
+  Wire.begin(pP_i2c_address);
+  Wire.onRequest(i2cReply);
+  Wire.onReceive(i2cInput);
 }
