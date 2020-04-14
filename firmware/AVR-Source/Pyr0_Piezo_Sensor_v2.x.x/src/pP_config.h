@@ -48,7 +48,7 @@ extern int Debug;
 extern long voltMeterConstant; // For fine tuning input voltage sense
 
 #define I2C_SLAVE_ADDRESS 24
-extern uint8_t pP_i2c_address; // I2C Bus Address (P + 0 -> 0x50 + 0x30 -> 0x80)
+extern uint8_t pP_i2c_address;
 
 void eraseEEPROM();
 void setDefaultConfig();

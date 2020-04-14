@@ -2,41 +2,51 @@
 #include "pP_cmd.h"
 #include "pP_i2c_config.h"
 #include "pP_volatile.h"
-#include <Wire.h>
+#include <Wire1.h>
 
 uint8_t command;
 uint16_t value;
 
-void i2cWrite(int data) {
-  Wire.write(data >> 8);
-  Wire.write(data);
+void i2cWrite(uint8_t *buffer, int offset, int data) {
+  buffer[offset] = (uint8_t)(data >> 8);
+  buffer[offset + 1] = (uint8_t)data;
 }
 
-void i2cWrite(long data) {
-  Wire.write(data >> 24);
-  Wire.write(data >> 16);
-  Wire.write(data >> 8);
-  Wire.write(data);
+void i2cWrite(uint8_t *buffer, int offset, long data) {
+  buffer[offset] = (uint8_t)(data >> 24);
+  buffer[offset + 1] = (uint8_t)(data >> 16);
+  buffer[offset + 2] = (uint8_t)(data >> 8);
+  buffer[offset + 3] = (uint8_t)data;
 }
 
 void i2cReportConfig() {
-  i2cWrite(GAIN_FACTOR);
-  i2cWrite(followerThrs);
-  i2cWrite(compThrs);
-  i2cWrite(LOOP_DUR);
-  i2cWrite(TRG_DUR);
-  i2cWrite(Hyst);
-  i2cWrite(LOGIC);
-  i2cWrite(PZDET);
-  i2cWrite(voltMeterConstant);
+  uint8_t length = 20 + sizeof(PP_VERSION) - 1;
+  if (length > 32) {
+    length = 32;
+  }
+  uint8_t buffer[length];
+  i2cWrite(buffer, 0, GAIN_FACTOR);
+  i2cWrite(buffer, 2, followerThrs);
+  i2cWrite(buffer, 4, compThrs);
+  i2cWrite(buffer, 6, LOOP_DUR);
+  i2cWrite(buffer, 8, TRG_DUR);
+  i2cWrite(buffer, 10, Hyst);
+  i2cWrite(buffer, 12, LOGIC);
+  i2cWrite(buffer, 14, PZDET);
+  i2cWrite(buffer, 16, voltMeterConstant);
+  memcpy(buffer + 20, PP_VERSION, length - 20);
+  Wire1.write(buffer, length);
 }
 
 void i2cReportState() {
-  i2cWrite(Vin);
-  i2cWrite((int)((long)VComp * Vin / 1023));
-  i2cWrite((int)((long)VFol * Vin / 1023));
-  i2cWrite(ERR_STATE);
-  i2cWrite(PZ_STATE);
+  uint8_t length = 10;
+  uint8_t buffer[length];
+  i2cWrite(buffer, 0, Vin);
+  i2cWrite(buffer, 2, (int)((long)VComp * Vin / 1023));
+  i2cWrite(buffer, 4, (int)((long)VFol * Vin / 1023));
+  i2cWrite(buffer, 6, ERR_STATE);
+  i2cWrite(buffer, 8, PZ_STATE);
+  Wire1.write(buffer, length);
 }
 
 void i2cReply() {
@@ -59,13 +69,13 @@ void i2cInput(int bytesReceived) {
   for (int a = 0; a < bytesReceived; a++) {
     // Check length of message, drops anything longer than [longBytes]
     if (a == 0) {
-      command = Wire.read();
+      command = Wire1.read();
     } else if (a == 1) {
-      value = Wire.read();
+      value = Wire1.read();
     } else if (a == 2) {
-      value = value << 8 | Wire.read();
+      value = value << 8 | Wire1.read();
     } else {
-      Wire.read(); //
+      Wire1.read(); //
     }
   }
 
@@ -116,7 +126,7 @@ void i2cInput(int bytesReceived) {
 }
 
 void i2cInit() {
-  Wire.begin(pP_i2c_address);
-  Wire.onRequest(i2cReply);
-  Wire.onReceive(i2cInput);
+  Wire1.begin(pP_i2c_address);
+  Wire1.onRequest(i2cReply);
+  Wire1.onReceive(i2cInput);
 }
