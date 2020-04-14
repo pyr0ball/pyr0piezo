@@ -120,6 +120,8 @@ void i2cInput(int bytesReceived) {
     break;
   case CMD_STATE:
     break;
+  case CMD_VCCSW:
+    updateVccSwitch(value);
   default:
     return;
   }
