@@ -1,6 +1,6 @@
 #include "i2c.h"
-#include "Wire.h"
 #include "Arduino.h"
+#include "Wire.h"
 
 uint16_t read16() {
   return Wire.read() << 8 | Wire.read();

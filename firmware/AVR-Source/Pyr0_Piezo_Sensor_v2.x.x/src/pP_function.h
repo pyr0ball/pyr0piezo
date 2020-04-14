@@ -36,6 +36,7 @@ update the voltMeterConstant variable in pP_config.h with the correct value
 void readVin();
 void adjustFollow();
 void adjustComp();
+void adjustVcc();
 void calibrateAlert();
 void adjustGain();
 // void checkError () {

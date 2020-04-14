@@ -11,10 +11,11 @@
  * PC0 ADC0 (Voltage Reference Check 'A0')
  * PC1 ADC1 (Sensitivity Adjustment Check 'A1')
  * PD4 PCINT20 (Error feedback LED 'D4')
- * PB6 PCINT6 (Voltage Adjustment Resistor 0 'D20')
- * PB7 PCINT7 (Voltage Adjustment Resistor 1 'D21')
- * PD5 T1 (Voltage Adjustment Resistor 2 'D5')
- * PD6 PCINT22 (Voltage Adjustment Resistor 3 'D6')
+ * PB6 PCINT6 (Gain Adjustment Resistor 0 'D20')
+ * PB7 PCINT7 (Gain Adjustment Resistor 1 'D21')
+ * PD5 T1 (Gain Adjustment Resistor 2 'D5')
+ * PD6 PCINT22 (Gain Adjustment Resistor 3 'D6')
+ * PB0 PCINT0 (VCC Adjustment Resistors 'D8')
  * PB1 OC1A (Comparator VRef PWM Out 'D9')
  * PD3 OC2B (Voltage Follower VRef PWM Out 'D3')
 
@@ -36,6 +37,7 @@ To change trigger active duration: TRG_D [integer for milliseconds]
 To change gain factor: GAIN_F [integer for gain state - see note*]
 To change the output logic: LOGIC [0|1] (0 for active low, 1 for active high)
 To enable piezo plugged detection: PZDET [0|1] (0 for disabled, 1 for enabled)
+To set the sensor's output voltage: VCCSW [0|1] (0 for 3.3v, 1 for 5v)
 To change ADC hysteresis value: HYST [integer in millivolts]
 To change sensor input pullup vRef low threshold: VFOL [integer in millivolts]
 To change comparator trigger high threshold: VCOMP [integer in millivolts]
@@ -130,6 +132,8 @@ void setup() {
 
   adjustGain();
 
+  adjustVcc();
+
   digitalWriteFast(TRG_OUT, !LOGIC);
 }
 
@@ -156,6 +160,9 @@ void loop() {
 
     // Set the amplification gain factor
     adjustGain();
+
+    // Set the VCC input switch
+    adjustVcc();
 
     // Check voltage of first and second stages and compare against thresholds
     readVin();
