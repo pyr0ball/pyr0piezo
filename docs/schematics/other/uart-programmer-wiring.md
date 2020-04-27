@@ -1,4 +1,4 @@
-![](../../../assets/images/board-images/easy-piezi/pp-v2.1.2-uart-wiring.png)
+![](../../assets/images/board-images/easy-piezi/pp-v2.1.2-uart-wiring.png)
 
 <object data="../../other/USB-UART-Wiring-Example.pdf" type="application/pdf" width="100%" height="450px">
     <embed src="../../other/USB-UART-Wiring-Example.pdf">
