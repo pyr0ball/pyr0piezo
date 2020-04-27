@@ -1,0 +1,13 @@
+#define CMD_GAIN_F 0x00
+#define CMD_VFOL 0x01
+#define CMD_VCOMP 0x02
+#define CMD_LOOP_D 0x03
+#define CMD_TRG_D 0x04
+#define CMD_HYST 0x05
+#define CMD_LOGIC 0x06
+#define CMD_PZDET 0x07
+#define CMD_CONST 0x08
+#define CMD_CONFIG 0x09
+#define CMD_ERASE 0x0a
+#define CMD_STATE 0x0b
+#define CMD_VCCSW 0x0c

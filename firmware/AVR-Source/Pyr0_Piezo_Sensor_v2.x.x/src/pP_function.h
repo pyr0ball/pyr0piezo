@@ -39,7 +39,7 @@ void adjustComp();
 void adjustVcc();
 void calibrateAlert();
 void adjustGain();
-//void checkError () {
+// void checkError () {
 //  if (ERR_STATE == 1) {
 //    digitalWriteFast(ERR_LED, BlinkState);
 //    BlinkState = !BlinkState;
@@ -51,4 +51,4 @@ void adjustGain();
 //}
 void pzConCheck();
 
-#endif //PP_FUNCTION_H
+#endif // PP_FUNCTION_H
