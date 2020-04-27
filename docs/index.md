@@ -6,6 +6,7 @@ The latest firmware for this project can be found [HERE](https://github.com/pyr0
 
 To request a mount for your printer, [open an issue on GitHub](https://github.com/pyr0ball/pyr0piezo/issues/new?assignees=pyr0ball&labels=add+support+request&template=printer-mount-request.md&title=%5BMOUNT%5D)
 
+[![Donate to help this project continue!](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3TLQQSFCEJL8S&source=url)
 
 Join our discord for support and to join in realtime discussion for the project:
 <div class="discord_widget">
