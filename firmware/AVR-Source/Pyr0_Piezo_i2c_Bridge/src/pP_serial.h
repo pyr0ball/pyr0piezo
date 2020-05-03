@@ -1,5 +1,6 @@
 #include "i2c.h"
 #include "stdint.h"
+#include "string.h"
 
 #define buffSize 40
 bool serialIncoming = false;
@@ -125,6 +126,7 @@ void serialPrintState() {
 
 void updateParams() {
   serialIncoming = false;
+  strupr(serialMessageIn);
   if (strcmp(serialMessageIn, "GAIN_F") == 0) {
     write(CMD_GAIN_F, (uint16_t)serialLong);
   } else if (strcmp(serialMessageIn, "VFOL") == 0) {

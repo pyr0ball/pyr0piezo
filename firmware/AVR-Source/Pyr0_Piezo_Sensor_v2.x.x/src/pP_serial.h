@@ -1,5 +1,6 @@
 #include "pP_cmd.h"
 #include "pP_volatile.h"
+#include "string.h"
 
 void parseData() {
 
@@ -128,6 +129,7 @@ void serialPrintState() {
 
 void updateParams() {
   serialIncoming = false;
+  strupr(serialMessageIn);
   if (strcmp(serialMessageIn, "GAIN_F") == 0) {
     updateGainFactor(serialLong);
   } else if (strcmp(serialMessageIn, "VFOL") == 0) {
