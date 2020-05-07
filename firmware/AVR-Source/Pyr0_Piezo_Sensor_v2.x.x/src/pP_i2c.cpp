@@ -5,7 +5,7 @@
 #include <Wire1.h>
 
 uint8_t command;
-uint16_t value;
+uint32_t value;
 
 void i2cWrite(uint8_t *buffer, int offset, int data) {
   buffer[offset] = (uint8_t)(data >> 8);
@@ -33,8 +33,9 @@ void i2cReportConfig() {
   i2cWrite(buffer, 10, Hyst);
   i2cWrite(buffer, 12, LOGIC);
   i2cWrite(buffer, 14, PZDET);
-  i2cWrite(buffer, 16, voltMeterConstant);
-  memcpy(buffer + 20, PP_VERSION, length - 20);
+  i2cWrite(buffer, 16, VCCSW);
+  i2cWrite(buffer, 18, voltMeterConstant);
+  memcpy(buffer + 22, PP_VERSION, length - 22);
   Wire1.write(buffer, length);
 }
 
@@ -50,8 +51,6 @@ void i2cReportState() {
 }
 
 void i2cReply() {
-  Serial.print("Requested ");
-  Serial.println(command);
   switch (command) {
   case CMD_CONFIG:
   case CMD_ERASE:
@@ -72,17 +71,10 @@ void i2cInput(int bytesReceived) {
       command = Wire1.read();
     } else if (a == 1) {
       value = Wire1.read();
-    } else if (a == 2) {
-      value = value << 8 | Wire1.read();
     } else {
-      Wire1.read(); //
+      value = value << 8 | Wire1.read();
     }
   }
-
-  Serial.print("Command ");
-  Serial.print(command);
-  Serial.print(" ");
-  Serial.println(value);
 
   // Parse commands and apply changes or actions
   switch (command) {
@@ -122,6 +114,10 @@ void i2cInput(int bytesReceived) {
     break;
   case CMD_VCCSW:
     updateVccSwitch(value);
+    break;
+  case CMD_VCCADJUST:
+    adjustConstant(value);
+    break;
   default:
     return;
   }

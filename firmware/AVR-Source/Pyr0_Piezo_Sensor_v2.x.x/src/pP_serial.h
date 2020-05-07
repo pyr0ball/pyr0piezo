@@ -150,6 +150,8 @@ void updateParams() {
     updateVccSwitch(serialLong);
   } else if (strcmp(serialMessageIn, "CONST") == 0) {
     updateConstant(serialLong);
+  } else if (strcmp(serialMessageIn, "VCCADJUST") == 0) {
+    adjustConstant(serialLong);
   } else if (strcmp(serialMessageIn, "DEBUG") == 0) {
     updateDebug(serialLong);
   } else if (strcmp(serialMessageIn, "CONFIG") == 0) {
@@ -173,6 +175,7 @@ void updateParams() {
     Serial.println("To change the main voltage of the circuit: VCCSW [0|1]");
     Serial.println("  (0 for 3.3v, 1 for 5v)");
     Serial.println("To change ADC hysteresis value: HYST [integer in millivolts]");
+    Serial.println("To adjust VCC voltage readings: VCCADJUST [integer in millivolts, use value from multimeter]");
     Serial.println("To enable or disable debug output: DEBUG [0|1]");
     Serial.println("To print current config: CONFIG");
     Serial.println("To set config to defaults: ERASE");

@@ -3,11 +3,17 @@
 #include "Wire.h"
 
 uint16_t read16() {
-  return Wire.read() << 8 | Wire.read();
+  uint8_t value = Wire.read();
+  uint8_t value1 = Wire.read();
+  return ((uint16_t)value) << 8 | value1;
 }
 
 uint32_t read32() {
-  return (uint32_t)Wire.read() << 24 | (uint32_t)Wire.read() << 16 | Wire.read() << 8 | Wire.read();
+  uint8_t value = Wire.read();
+  uint8_t value1 = Wire.read();
+  uint8_t value2 = Wire.read();
+  uint8_t value3 = Wire.read();
+  return ((uint32_t)value) << 24 | ((uint32_t)value1) << 16 | ((uint16_t)value2) << 8 | value3;
 }
 
 void write(uint8_t cmd) {
@@ -40,7 +46,6 @@ config_t requestConfig() {
   Wire.endTransmission();
 
   uint8_t bytes = Wire.requestFrom(ADDRESS, 255);
-  Serial.println(bytes);
 
   config_t config;
   config.GAIN_FACTOR = read16();
@@ -51,6 +56,7 @@ config_t requestConfig() {
   config.Hyst = read16();
   config.LOGIC = read16();
   config.PZDET = read16();
+  config.VCCSW = read16();
   config.voltMeterConstant = read32();
   config.version = Wire.readString();
 
@@ -70,4 +76,6 @@ state_t requestState() {
   state.VFol = read16();
   state.ERR_STATE = read16();
   state.PZ_STATE = read16();
+
+  return state;
 }

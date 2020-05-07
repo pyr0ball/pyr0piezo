@@ -11,3 +11,4 @@
 #define CMD_ERASE 0x0a
 #define CMD_STATE 0x0b
 #define CMD_VCCSW 0x0c
+#define CMD_VCCADJUST 0x0d
