@@ -1,6 +1,7 @@
 #include "EEPROM.h"
 #include "pP_config.h"
 #include "pP_function.h"
+#include "pP_volatile.h"
 
 /*------------------------------------------------*/
 
@@ -84,6 +85,13 @@ void updateVccSwitch(int value) {
 void updateConstant(long value) {
   if (value >= 0) {
     voltMeterConstant = value;
+    EEPROM.put(VM_CONST_ADDRESS, voltMeterConstant);
+  }
+}
+
+void adjustConstant(int value) {
+  if (value > 0 && Vin > 0) {
+    voltMeterConstant = (long)(1.1 * value / Vin * 1023 * 1000);
     EEPROM.put(VM_CONST_ADDRESS, voltMeterConstant);
   }
 }

@@ -1,5 +1,6 @@
 #include "i2c.h"
 #include "stdint.h"
+#include "string.h"
 
 #define buffSize 40
 bool serialIncoming = false;
@@ -89,6 +90,20 @@ void serialPrintConfig() {
   Serial.print("PZDET ");
   Serial.println(config.PZDET);
 
+  Serial.print("VCCSW ");
+  Serial.print(config.VCCSW);
+  switch (config.VCCSW) {
+  case 0:
+    Serial.println(" 3.3v");
+    break;
+  case 1:
+    Serial.println(" 5v");
+    break;
+  default:
+    Serial.println(" INVALID");
+    break;
+  }
+
   Serial.print("VM_CONST ");
   Serial.println(config.voltMeterConstant);
 
@@ -106,11 +121,11 @@ void serialPrintState() {
   Serial.print(",");
 
   Serial.print("\"VComp\":");
-  Serial.print((uint32_t)state.VComp * state.Vin / 1023);
+  Serial.print(state.VComp);
   Serial.print(",");
 
   Serial.print("\"VFol\":");
-  Serial.print((uint32_t)state.VFol * state.Vin / 1023);
+  Serial.print(state.VFol);
   Serial.print(",");
 
   Serial.print("\"Err\":");
@@ -125,6 +140,7 @@ void serialPrintState() {
 
 void updateParams() {
   serialIncoming = false;
+  strupr(serialMessageIn);
   if (strcmp(serialMessageIn, "GAIN_F") == 0) {
     write(CMD_GAIN_F, (uint16_t)serialLong);
   } else if (strcmp(serialMessageIn, "VFOL") == 0) {
@@ -145,6 +161,8 @@ void updateParams() {
     write(CMD_VCCSW, (uint16_t)serialLong);
   } else if (strcmp(serialMessageIn, "CONST") == 0) {
     write(CMD_CONST, serialLong);
+  } else if (strcmp(serialMessageIn, "VCCADJUST") == 0) {
+    write(CMD_VCCADJUST, (uint16_t)serialLong);
   } else if (strcmp(serialMessageIn, "CONFIG") == 0) {
     serialPrintConfig();
   } else if (strcmp(serialMessageIn, "ERASE") == 0) {
@@ -166,6 +184,7 @@ void updateParams() {
     Serial.println("To change the main voltage of the circuit: VCCSW [0|1]");
     Serial.println("  (0 for 3.3v, 1 for 5v)");
     Serial.println("To change ADC hysteresis value: HYST [integer in millivolts]");
+    Serial.println("To adjust VCC voltage readings: VCCADJUST [integer in millivolts, use value from multimeter]");
     Serial.println("To enable or disable debug output: DEBUG [0|1]");
     Serial.println("To print current config: CONFIG");
     Serial.println("To set config to defaults: ERASE");
