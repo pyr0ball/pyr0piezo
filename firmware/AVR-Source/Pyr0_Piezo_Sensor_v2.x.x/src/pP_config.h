@@ -43,7 +43,7 @@ extern int PZDET; // Enable or disable piezo connection detection, default is of
 
 #define VCCSW_DEFAULT 0
 #define VCCSW_ADDRESS 28
-extern int VCCSW; // Enable or disable piezo connection detection, default is off
+extern int VCCSW; // Set the signal output to 3.3v [0] or 5v logic [1]
 
 extern int Debug;
 
