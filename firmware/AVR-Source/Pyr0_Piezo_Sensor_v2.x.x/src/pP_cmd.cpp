@@ -22,6 +22,7 @@ void updateVFol(int value) {
     EEPROM.put(FOLLOWER_THRESHOLD_ADDRESS, followerThrs);
   }
 }
+
 /*------------------------------------------------*/
 
 void updateVComp(int value) {
@@ -40,6 +41,7 @@ void updateLoopDuration(int value) {
     EEPROM.put(LOOP_DUR_ADDRESS, LOOP_DUR);
   }
 }
+
 /*------------------------------------------------*/
 
 void updateTrigDuration(int value) {
@@ -48,6 +50,7 @@ void updateTrigDuration(int value) {
     EEPROM.put(TRG_DUR_ADDRESS, TRG_DUR);
   }
 }
+
 /*------------------------------------------------*/
 
 void updateHysteresis(int value) {
@@ -56,6 +59,7 @@ void updateHysteresis(int value) {
     EEPROM.put(HYST_ADDRESS, Hyst);
   }
 }
+
 /*------------------------------------------------*/
 
 void updateLogic(int value) {
@@ -65,6 +69,7 @@ void updateLogic(int value) {
     pulse();
   }
 }
+
 /*------------------------------------------------*/
 
 void updatePzDet(int value) {
@@ -73,6 +78,7 @@ void updatePzDet(int value) {
     EEPROM.put(PZDET_ADDRESS, PZDET);
   }
 }
+
 /*------------------------------------------------*/
 
 void updateVccSwitch(int value) {
@@ -82,12 +88,16 @@ void updateVccSwitch(int value) {
   }
 }
 
+/*------------------------------------------------*/
+
 void updateConstant(long value) {
   if (value >= 0) {
     voltMeterConstant = value;
     EEPROM.put(VM_CONST_ADDRESS, voltMeterConstant);
   }
 }
+
+/*------------------------------------------------*/
 
 void adjustConstant(int value) {
   if (value > 0 && Vin > 0) {

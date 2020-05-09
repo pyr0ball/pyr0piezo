@@ -16,6 +16,7 @@ long voltMeterConstant = VM_CONST_DEFAULT;
 uint8_t pP_i2c_address = 0x10;
 
 /*------------------------------------------------*/
+
 void eraseEEPROM() {
 
   setDefaultConfig();
@@ -31,6 +32,8 @@ void eraseEEPROM() {
   EEPROM.put(VCCSW_ADDRESS, VCCSW);
   EEPROM.put(VM_CONST_ADDRESS, voltMeterConstant);
 }
+
+/*------------------------------------------------*/
 
 // Restore config from EEPROM, otherwise erase config and write to EEPROM
 void restoreConfig() {
@@ -116,6 +119,8 @@ void restoreConfig() {
   adjustFollow();
   adjustComp();
 }
+
+/*------------------------------------------------*/
 
 void setDefaultConfig() {
   GAIN_FACTOR = GAIN_FACTOR_DEFAULT;

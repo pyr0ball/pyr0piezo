@@ -192,19 +192,6 @@ void adjustVcc() {
 
 /*------------------------------------------------*/
 
-// void checkError () {
-//  if (ERR_STATE == 1) {
-//    digitalWriteFast(ERR_LED, BlinkState);
-//    BlinkState = !BlinkState;
-//  }
-//  else if (ERR_STATE == 0) {
-//    BlinkState = LOW;
-//    digitalWriteFast(ERR_LED, BlinkState);
-//  }
-//}
-
-/*------------------------------------------------*/
-
 void pzConCheck() {
   PZ_STATE = digitalRead(PZDET_PIN);
   if (PZ_STATE == PZDET) {
