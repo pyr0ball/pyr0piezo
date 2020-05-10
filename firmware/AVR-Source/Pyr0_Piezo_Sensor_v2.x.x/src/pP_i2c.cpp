@@ -1,131 +1,130 @@
-#ifdef I2C_INPUT
+#include "pP_i2c.hpp"
+#include "pP_cmd.h"
+#include "pP_i2c_config.h"
+#include "pP_volatile.h"
+#include <Wire1.h>
 
-#include <Arduino.h>
-#include "pP_config.h"
-#include "pP_i2c.h"
-#include <Wire.h>
+uint8_t command;
+uint32_t value;
 
-byte registerMap[regMapSize];
-byte registerMapTemp[regMapSize - 1];
-byte receivedCommands[maxBytes];
-
-pP_i2c::pP_i2c(){
-
+void i2cWrite(uint8_t *buffer, int offset, int data) {
+  buffer[offset] = (uint8_t)(data >> 8);
+  buffer[offset + 1] = (uint8_t)data;
 }
 
-void pP_i2c::init() {
-  Wire.begin(pP_i2c_address);
-  Wire.onRequest(i2cReply);
-  Wire.onReceive(i2cInput);
+void i2cWrite(uint8_t *buffer, int offset, long data) {
+  buffer[offset] = (uint8_t)(data >> 24);
+  buffer[offset + 1] = (uint8_t)(data >> 16);
+  buffer[offset + 2] = (uint8_t)(data >> 8);
+  buffer[offset + 3] = (uint8_t)data;
 }
 
-void pP_i2c::i2cReportStatus() {
-  _i2cResponse = "{"
+void i2cReportConfig() {
+  uint8_t length = 20 + sizeof(PP_VERSION) - 1;
+  if (length > 32) {
+    length = 32;
+  }
+  uint8_t buffer[length];
+  i2cWrite(buffer, 0, GAIN_FACTOR);
+  i2cWrite(buffer, 2, followerThrs);
+  i2cWrite(buffer, 4, compThrs);
+  i2cWrite(buffer, 6, LOOP_DUR);
+  i2cWrite(buffer, 8, TRG_DUR);
+  i2cWrite(buffer, 10, Hyst);
+  i2cWrite(buffer, 12, LOGIC);
+  i2cWrite(buffer, 14, PZDET);
+  i2cWrite(buffer, 16, VCCSW);
+  i2cWrite(buffer, 18, voltMeterConstant);
+  memcpy(buffer + 22, PP_VERSION, length - 22);
+  Wire1.write(buffer, length);
 }
 
-void pP_i2c::i2cReportVersion() {
-
+void i2cReportState() {
+  uint8_t length = 10;
+  uint8_t buffer[length];
+  i2cWrite(buffer, 0, Vin);
+  i2cWrite(buffer, 2, (int)((long)VComp * Vin / 1023));
+  i2cWrite(buffer, 4, (int)((long)VFol * Vin / 1023));
+  i2cWrite(buffer, 6, ERR_STATE);
+  i2cWrite(buffer, 8, PZ_STATE);
+  Wire1.write(buffer, length);
 }
 
-void pP_i2c::i2cReportConfig() {
-
+void i2cReply() {
+  switch (command) {
+  case CMD_CONFIG:
+  case CMD_ERASE:
+    i2cReportConfig();
+    break;
+  case CMD_STATE:
+    i2cReportState();
+    break;
+  default:
+    break;
+  }
 }
 
-void pP_i2c::i2cReportIdentity() {
-
-}
-
-void pP_i2c::i2cRequestInput() {
-
-}
-
-void pP_i2c::i2cReply() {
-  Wire.send()
-}
-
-void pP_i2c::i2cInput(int bytesReceived) {
+void i2cInput(int bytesReceived) {
   for (int a = 0; a < bytesReceived; a++) {
     // Check length of message, drops anything longer than [longBytes]
-    if (a <= maxBytes) {
-      cmdRcvd[a] = Wire.receive();
+    if (a == 0) {
+      command = Wire1.read();
+    } else if (a == 1) {
+      value = Wire1.read();
+    } else {
+      value = value << 8 | Wire1.read();
     }
-    elif (a <= longBytes) {
-      longRcvd[a] = Wire.receive();
-    }
-    else {
-      Wire.receive(); //
-    }
-  }
-
-  // Check input command corresponds with register map, set 0x00 if not
-  if (bytesReceived == 1 && (cmdRcvd[0] < regMapSize)) {
-    return;
-  }
-  if (bytesReceived == 1 && (cmdRcvd[0] >= regMapSize)) {
-    cmdRcvd[0] = 0x00;
-    return;
   }
 
   // Parse commands and apply changes or actions
-  switch (cmdRcvd[0]) {
-    case 0x00:
-      i2cReportStatus();
-      return;
-      break;
-    case 0x01:
-      followerInt = (int) cmdRcvd[1];
-      return;
-      break;
-    case 0x02:
-      compInt = (int) cmdRcvd[1];
-      return;
-      break;
-    case 0x03:
-      GAIN_FACTOR = (int) cmdRcvd[1];
-      return;
-      break;
-    case 0x04:
-      Hyst = (int) cmdRcvd[1];
-      return;
-      break;
-    case 0x05:
-      LOOP_DUR = (int) cmdRcvd[1];
-      return;
-      break;
-    case 0x06:
-      LOGIC = (int) cmdRcvd[1];
-      return;
-      break;
-    case 0x07:
-      PZDET = (int) cmdRcvd[1];
-      return;
-      break;
-    case 0x08:
-      TRG_DUR = (int) cmdRcvd[1];
-      return;
-      break;
-    case 0x09:
-      DEBUG = (int) cmdRcvd[1];
-      return;
-      break;
-    case 0x0a:
-      voltMeterConstant = longRcvd[0]*65536+longRcvd[1]*256+longRcvd[2];
-      return;
-      break;
-    case 0x0b:
-      reportVersion();
-      return;
-      break;
-    case 0x0c:
-      reportConfig();
-      return;
-      break;
-    case 0x0d:
-      reportIdentity();
-      return;
-      break;
-    default:
-      return;
+  switch (command) {
+  case CMD_GAIN_F:
+    updateGainFactor(value);
+    break;
+  case CMD_VFOL:
+    updateVFol(value);
+    break;
+  case CMD_VCOMP:
+    updateVComp(value);
+    break;
+  case CMD_LOOP_D:
+    updateLoopDuration(value);
+    break;
+  case CMD_TRG_D:
+    updateTrigDuration(value);
+    break;
+  case CMD_HYST:
+    updateHysteresis(value);
+    break;
+  case CMD_LOGIC:
+    updateLogic(value);
+    break;
+  case CMD_PZDET:
+    updatePzDet(value);
+    break;
+  case CMD_CONST:
+    updateConstant(value);
+    break;
+  case CMD_CONFIG:
+    break;
+  case CMD_ERASE:
+    eraseEEPROM();
+    break;
+  case CMD_STATE:
+    break;
+  case CMD_VCCSW:
+    updateVccSwitch(value);
+    break;
+  case CMD_VCCADJUST:
+    adjustConstant(value);
+    break;
+  default:
+    return;
   }
 }
-#endif
+
+void i2cInit() {
+  Wire1.begin(pP_i2c_address);
+  Wire1.onRequest(i2cReply);
+  Wire1.onReceive(i2cInput);
+}

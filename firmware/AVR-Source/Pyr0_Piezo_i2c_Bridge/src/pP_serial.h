@@ -1,6 +1,13 @@
-#include "pP_cmd.h"
-#include "pP_volatile.h"
+#include "i2c.h"
+#include "stdint.h"
 #include "string.h"
+
+#define buffSize 40
+bool serialIncoming = false;
+uint8_t bytesRecvd = 0;
+char inputBuffer[buffSize];
+char serialMessageIn[buffSize] = {0};
+uint32_t serialLong = 0;
 
 void parseData() {
 
@@ -37,9 +44,11 @@ void identifyMarkers() {
 /*------------------------------------------------*/
 
 void serialPrintConfig() {
+  config_t config = requestConfig();
+
   Serial.print("GAIN_F ");
-  Serial.print(GAIN_FACTOR);
-  switch (GAIN_FACTOR) {
+  Serial.print(config.GAIN_FACTOR);
+  switch (config.GAIN_FACTOR) {
   case 0:
     Serial.println(" 3x");
     break;
@@ -61,29 +70,29 @@ void serialPrintConfig() {
   }
 
   Serial.print("VFOL ");
-  Serial.println(followerThrs);
+  Serial.println(config.followerThrs);
 
   Serial.print("VCOMP ");
-  Serial.println(compThrs);
+  Serial.println(config.compThrs);
 
   Serial.print("LOOP_D ");
-  Serial.println(LOOP_DUR);
+  Serial.println(config.LOOP_DUR);
 
   Serial.print("TRG_D ");
-  Serial.println(TRG_DUR);
+  Serial.println(config.TRG_DUR);
 
   Serial.print("HYST ");
-  Serial.println(Hyst);
+  Serial.println(config.Hyst);
 
   Serial.print("LOGIC ");
-  Serial.println(LOGIC);
+  Serial.println(config.LOGIC);
 
   Serial.print("PZDET ");
-  Serial.println(PZDET);
+  Serial.println(config.PZDET);
 
   Serial.print("VCCSW ");
-  Serial.print(VCCSW);
-  switch (VCCSW) {
+  Serial.print(config.VCCSW);
+  switch (config.VCCSW) {
   case 0:
     Serial.println(" 3.3v");
     break;
@@ -96,33 +105,35 @@ void serialPrintConfig() {
   }
 
   Serial.print("VM_CONST ");
-  Serial.println(voltMeterConstant);
+  Serial.println(config.voltMeterConstant);
 
   Serial.print("Firmware Version ");
-  Serial.println(PP_VERSION);
+  Serial.println(config.version);
 }
 
 void serialPrintState() {
+  state_t state = requestState();
+
   Serial.print("{");
 
   Serial.print("\"Vcc\":");
-  Serial.print(Vin);
+  Serial.print(state.Vin);
   Serial.print(",");
 
   Serial.print("\"VComp\":");
-  Serial.print((long)VComp * Vin / 1023);
+  Serial.print(state.VComp);
   Serial.print(",");
 
   Serial.print("\"VFol\":");
-  Serial.print((long)VFol * Vin / 1023);
+  Serial.print(state.VFol);
   Serial.print(",");
 
   Serial.print("\"Err\":");
-  Serial.print(ERR_STATE);
+  Serial.print(state.ERR_STATE);
   Serial.print(",");
 
   Serial.print("\"PzCon\":");
-  Serial.print(PZ_STATE);
+  Serial.print(state.PZ_STATE);
 
   Serial.println("}");
 }
@@ -131,33 +142,31 @@ void updateParams() {
   serialIncoming = false;
   strupr(serialMessageIn);
   if (strcmp(serialMessageIn, "GAIN_F") == 0) {
-    updateGainFactor(serialLong);
+    write(CMD_GAIN_F, (uint16_t)serialLong);
   } else if (strcmp(serialMessageIn, "VFOL") == 0) {
-    updateVFol(serialLong);
+    write(CMD_VFOL, (uint16_t)serialLong);
   } else if (strcmp(serialMessageIn, "VCOMP") == 0) {
-    updateVComp(serialLong);
+    write(CMD_VCOMP, (uint16_t)serialLong);
   } else if (strcmp(serialMessageIn, "LOOP_D") == 0) {
-    updateLoopDuration(serialLong);
+    write(CMD_LOOP_D, (uint16_t)serialLong);
   } else if (strcmp(serialMessageIn, "TRG_D") == 0) {
-    updateTrigDuration(serialLong);
+    write(CMD_TRG_D, (uint16_t)serialLong);
   } else if (strcmp(serialMessageIn, "HYST") == 0) {
-    updateHysteresis(serialLong);
+    write(CMD_HYST, (uint16_t)serialLong);
   } else if (strcmp(serialMessageIn, "LOGIC") == 0) {
-    updateLogic(serialLong);
+    write(CMD_LOGIC, (uint16_t)serialLong);
   } else if (strcmp(serialMessageIn, "PZDET") == 0) {
-    updatePzDet(serialLong);
+    write(CMD_PZDET, (uint16_t)serialLong);
   } else if (strcmp(serialMessageIn, "VCCSW") == 0) {
-    updateVccSwitch(serialLong);
+    write(CMD_VCCSW, (uint16_t)serialLong);
   } else if (strcmp(serialMessageIn, "CONST") == 0) {
-    updateConstant(serialLong);
+    write(CMD_CONST, serialLong);
   } else if (strcmp(serialMessageIn, "VCCADJUST") == 0) {
-    adjustConstant(serialLong);
-  } else if (strcmp(serialMessageIn, "DEBUG") == 0) {
-    updateDebug(serialLong);
+    write(CMD_VCCADJUST, (uint16_t)serialLong);
   } else if (strcmp(serialMessageIn, "CONFIG") == 0) {
     serialPrintConfig();
   } else if (strcmp(serialMessageIn, "ERASE") == 0) {
-    eraseEEPROM();
+    write(CMD_ERASE);
     serialPrintConfig();
   } else if (strcmp(serialMessageIn, "STATE") == 0) {
     serialPrintState();

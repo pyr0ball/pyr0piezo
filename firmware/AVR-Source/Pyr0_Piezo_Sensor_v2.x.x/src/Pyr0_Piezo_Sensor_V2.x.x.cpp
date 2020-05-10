@@ -11,10 +11,11 @@
  * PC0 ADC0 (Voltage Reference Check 'A0')
  * PC1 ADC1 (Sensitivity Adjustment Check 'A1')
  * PD4 PCINT20 (Error feedback LED 'D4')
- * PB6 PCINT6 (Voltage Adjustment Resistor 0 'D20')
- * PB7 PCINT7 (Voltage Adjustment Resistor 1 'D21')
- * PD5 T1 (Voltage Adjustment Resistor 2 'D5')
- * PD6 PCINT22 (Voltage Adjustment Resistor 3 'D6')
+ * PB6 PCINT6 (Gain Adjustment Resistor 0 'D20')
+ * PB7 PCINT7 (Gain Adjustment Resistor 1 'D21')
+ * PD5 T1 (Gain Adjustment Resistor 2 'D5')
+ * PD6 PCINT22 (Gain Adjustment Resistor 3 'D6')
+ * PB0 PCINT0 (VCC Adjustment Resistors 'D8')
  * PB1 OC1A (Comparator VRef PWM Out 'D9')
  * PD3 OC2B (Voltage Follower VRef PWM Out 'D3')
 
@@ -36,6 +37,7 @@ To change trigger active duration: TRG_D [integer for milliseconds]
 To change gain factor: GAIN_F [integer for gain state - see note*]
 To change the output logic: LOGIC [0|1] (0 for active low, 1 for active high)
 To enable piezo plugged detection: PZDET [0|1] (0 for disabled, 1 for enabled)
+To set the sensor's output voltage: VCCSW [0|1] (0 for 3.3v, 1 for 5v)
 To change ADC hysteresis value: HYST [integer in millivolts]
 To change sensor input pullup vRef low threshold: VFOL [integer in millivolts]
 To change comparator trigger high threshold: VCOMP [integer in millivolts]
@@ -84,53 +86,53 @@ update the voltMeterConstant variable in pP_config.h with the correct value
 
 ------------------------------------------------------------*/
 
-/*  Debug output verbose mode will continuously output sensor readings
-    rather than waiting for user input */
-#define VERBOSE true
-
-// Headers, variables, and functions
-#include <Arduino.h>
-#include <EEPROM.h>
-#include "LightChrono.h"
-#include "pP_pins.h"
-#include "pP_config.h"
-#include "pP_volatile.h"
-#include "pP_function.h"
-#include "pP_serial.h"
-
 // i2c input toggle. Uncomment to enable
 #define I2C_INPUT
 
+// Headers, variables, and functions
+#include "LightChrono.h"
+#include "pP_pins.h"
+#include <Arduino.h>
+#include <EEPROM.h>
+#include "pP_function.h"
+#include "pP_i2c.hpp"
+#include "pP_serial.h"
+#include "pP_volatile.h"
+
 void setup() {
-  //Setup PWM on voltage follower (PD3)
+  // Setup PWM on voltage follower (PD3)
   TCCR2A = (1 << COM2B1) | (0 << COM2B0) | (0 << WGM21) | (1 << WGM20);
   TCCR2B = (0 << WGM22) | (0 << CS22) | (0 << CS21) | (1 << CS20);
   DDRD |= (1 << DDD3);
 
-  //Setup PWM on comparator (PB1)
+  // Setup PWM on comparator (PB1)
   TCCR1A = (1 << COM1A1) | (0 << COM1A0) | (1 << WGM11) | (1 << WGM10);
   TCCR1B = (0 << WGM13) | (0 << WGM12) | (0 << CS12) | (0 << CS11) | (1 << CS10);
   DDRB |= (1 << DDB1);
 
-  pinMode(TRG_OUT, OUTPUT);       // declare the Trigger as as OUTPUT
+  pinMode(TRG_OUT, OUTPUT); // declare the Trigger as as OUTPUT
   pinMode(ERR_LED, OUTPUT);
   pinMode(PZDET_PIN, INPUT_PULLUP);
-  pinMode(Z_TRG, INPUT_PULLUP);   // declare z-sense input with pullup
+  pinMode(Z_TRG, INPUT_PULLUP); // declare z-sense input with pullup
   pinMode(V_FOLLOW_PIN, INPUT);
   pinMode(VCOMP_SENSE_PIN, INPUT);
-  pinMode(GADJ_R0, INPUT);        // declare input to set high impedance
-  pinMode(GADJ_R1, INPUT);        // declare input to set high impedance
-  pinMode(GADJ_R2, INPUT);        // declare input to set high impedance
-  pinMode(GADJ_R3, INPUT);        // declare input to set high impedance
+  pinMode(GADJ_R0, INPUT); // declare input to set high impedance
+  pinMode(GADJ_R1, INPUT); // declare input to set high impedance
+  pinMode(GADJ_R2, INPUT); // declare input to set high impedance
+  pinMode(GADJ_R3, INPUT); // declare input to set high impedance
 
   attachInterrupt(digitalPinToInterrupt(Z_TRG), pulse, FALLING);
 
   Serial.begin(9600);
   Serial.println("Initializing Pyr0-Piezo Sensor...");
 
+  i2cInit();
+
   restoreConfig();
 
   adjustGain();
+
+  adjustVcc();
 
   digitalWriteFast(TRG_OUT, !LOGIC);
 }
@@ -144,7 +146,7 @@ void loop() {
     if (BlinkCount > 0) {
       BlinkState = !BlinkState;
       digitalWriteFast(ERR_LED, BlinkState);
-      //digitalWriteFast(TRG_OUT, BlinkState);
+      // digitalWriteFast(TRG_OUT, BlinkState);
       --BlinkCount;
     }
 
@@ -159,6 +161,9 @@ void loop() {
     // Set the amplification gain factor
     adjustGain();
 
+    // Set the VCC input switch
+    adjustVcc();
+
     // Check voltage of first and second stages and compare against thresholds
     readVin();
     VComp = analogReadFast(VCOMP_SENSE_PIN);
@@ -166,11 +171,11 @@ void loop() {
 
     VLast = VOld - Vin;
     if (VLast > Hyst || VLast < -Hyst) {
-    // Voltage Follower adjustment
+      // Voltage Follower adjustment
       adjustFollow();
-    // Voltage Comparator adjustment
+      // Voltage Comparator adjustment
       adjustComp();
-    // Alert the user that auto-calibration is ongoing
+      // Alert the user that auto-calibration is ongoing
       ERR_STATE = 1;
     } else {
       ERR_STATE = 0;
@@ -183,11 +188,11 @@ void loop() {
     if (BlinkCount > 0) {
       BlinkState = !BlinkState;
       digitalWriteFast(ERR_LED, BlinkState);
-//      digitalWriteFast(TRG_OUT, BlinkState);
+      //      digitalWriteFast(TRG_OUT, BlinkState);
       --BlinkCount;
-//    } else {
+      //    } else {
       // Check for error state
-//      checkError();
+      //      checkError();
     } else {
       digitalWriteFast(ERR_LED, 0);
     }
@@ -197,7 +202,7 @@ void loop() {
       serialPrintState();
     }
     // Sets trigger output state to false after completing loop
-    //digitalWriteFast(TRG_OUT, HIGH);
+    // digitalWriteFast(TRG_OUT, HIGH);
     sensorHReading = 0;
   }
 }
