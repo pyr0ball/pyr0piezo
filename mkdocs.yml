@@ -23,6 +23,7 @@ nav:
     - Start Here: 'installation.md'
     - Wiring Diagrams:
       - Easy-Piezi:
+        - Monoprice Delta Mini: 'tutorials/wiring/easy-piezi/monoprice-delta-mini.md'
         - Creality 1284P: 'tutorials/wiring/easy-piezi/creality-1284.md'
         - Duet Wifi: 'tutorials/wiring/easy-piezi/duet-wifi.md'
         - MKS Family:
@@ -46,7 +47,7 @@ nav:
         - CR-10 Family: 'mounts/creality/creality-original-head.md'
         - Ender 3 Family: 'mounts/creality/creality-original-head.md'
       - Delta:
-        - Monoprice Delta Mini: 'tutorials/wiring/easy-piezi/monoprice-delta-mini.md'
+        - Monoprice Delta Mini: 'mounts/delta/monoprice-delta-mini.md'
         - On Head: 'mounts/delta/delta-head.md'
         - Under Bed: 'mounts/delta/delta-under-bed.md'
       - Deltesian: 'mounts/deltesian/deltesian.md'
