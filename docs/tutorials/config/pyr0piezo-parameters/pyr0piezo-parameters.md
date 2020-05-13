@@ -6,11 +6,12 @@
 - To change gain factor: `GAIN_F` [integer for gain state - see note*]
 - To change the output logic: `LOGIC [0|1]` (0 for active low, 1 for active high)
 - To enable piezo plugged detection: `PZDET [0|1]` (0 for disabled, 1 for enabled)
+- To set the sensor logic output voltage: `VCCSW [0|1]` (0 for 3.3v, 1 for 5v)
 - To change ADC hysteresis value: `HYST` [integer in millivolts]
 - To change sensor input pullup vRef low threshold: `VFOL` [integer in millivolts]
 - To change comparator trigger high threshold: `VCOMP` [integer in millivolts]
 - To change the duration between ADC measurements: `LOOP_D` [integer in milliseconds]
-- To update the internal vRef constant value **(see notes below): `CONST` [long value]
+- To calibrate internal vRef **(see notes below): `CONST` [Vcc measurement in millivolts]
 
 You can also enable or disable DEBUG output with: `DEBUG [0|1]`
 
@@ -51,15 +52,7 @@ The ADC reading function assumes an "ideal" multiplier constant. Each Atmega
 chip is slightly different, so it won't be completely accurate without tuning.
 Most of the time this won't be necessary, so don't mess with this if you don't
 know what you're doing!
-The reading can be fine-tuned by using a multimeter, and this equation:
-
-`scale_constant = internal1.1Ref * 1023 * 1000`
-
-where
-
-`internal1.1Ref = 1.1 * Vcc1 (per voltmeter) / Vcc2 (per readVcc() function)`
-
-If the scale_constant calculated is different from the default 1125300, update the voltMeterConstant variable in pP_config.h with the correct value or send a new value with `CONST`
+The reading can be fine-tuned by using a multimeter. Simply take a voltage readig at the Anode of D1 and input it's value in millivolts afte rthe `CONST` command
 
 ## Sensitivity Tuning Workflow
 
