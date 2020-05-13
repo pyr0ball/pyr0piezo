@@ -73,6 +73,8 @@ nav:
   - Extras:
     - PT100 RTD Thermal Sensor: 'tutorials/extras/pt100.md'
   - Resources:
+    - Sensor Datasheet:
+      - I2C Integration: 'tutorials/config/pyr0piezo-i2c/pyr0piezo-i2c.md'
     - Schematics:
       - EasyPiezi: 'schematics/easypiezi/easypiezi-schematics.md'
       - FFC Direct Extruder: 'schematics/ffc-direct-extruder/ffc-direct-extruder-schematics.md'
