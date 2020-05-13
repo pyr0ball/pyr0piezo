@@ -1,6 +1,6 @@
 # Integration using I2C
 
-Default I2C Address: 0x10
+Default I2C Address: **0x10**
 
 ## I2C Command Register Map
 
@@ -22,3 +22,23 @@ see [Pyr0-Piezo Parameters Explanation](../pyr0piezo-parameters/pyr0piezo-parame
 |0x0b|STATE|None|Output|10
 |0x0c|VCCSW|Boolean|Input|1
 |0x0d|VCCADJUST|Millivolts|Input|2
+
+## I2C Command Syntax
+
+I2C input syntax uses "Least Significant Byte First" formatting, which means the data bytes are sent in reverse order:
+
+```serial
+[Address Byte] [Command Byte] [Data 8] ... [Data 0]
+```
+
+For example, to set the Logic output to Active Low:
+
+```serial
+0x10 0x06 0x00
+```
+
+Or to set VCOMP to 2650:
+
+```serial
+0x10 0x02 0x5A 0x0A
+```
