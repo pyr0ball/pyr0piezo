@@ -8,7 +8,7 @@ multi:
         eda:
           type: eagle
           pcb: Hardware/Eagle_Files/Pyr0-Piezo_DIY-Boards/Pyr0-Piezo-v2-DIY-Business-Card.brd
-          sch: Hardware/Eagle_Files/Pyr0-Piezo_DIY-Boards/Pyr0-Piezo-v2-DIY-Business-Card.sch
+          schematic: Hardware/Eagle_Files/Pyr0-Piezo_DIY-Boards/Pyr0-Piezo-v2-DIY-Business-Card.sch
     pyropiezo_standalone:
         summary: Standalone Pyr0-Piezo Circuit for using external arduino.
         color: red
@@ -18,4 +18,4 @@ multi:
         eda:
           type: eagle
           pcb: Hardware/Eagle_Files/Pyr0-Piezo_DIY-Boards/Pyr0-Piezo-v2-DIY-Standalone-Board_v1.0.0.brd
-          sch: Hardware/Eagle_Files/Pyr0-Piezo_DIY-Boards/Pyr0-Piezo-v2-DIY-Standalone-Board_v1.0.0.sch
+          schematic: Hardware/Eagle_Files/Pyr0-Piezo_DIY-Boards/Pyr0-Piezo-v2-DIY-Standalone-Board_v1.0.0.sch
