@@ -1,0 +1,21 @@
+multi:
+    business_card:
+        summary: Business Card Sized Pyr0-Piezo Circuit using TH Components.
+        color: black
+        site: https://docs.pyroballpcbs.com
+        gerbers: Hardware/Gerbers/DIY-Pyr0-Piezo-Boards/pP-DIY-Business-Card-TH/gerbers/
+        bom: Hardware/Gerbers/DIY-Pyr0-Piezo-Boards/pP-DIY-Business-Card-TH/BOM-pP-DIY-Business-Card-TH.csv
+        eda:
+          type: eagle
+          pcb: Hardware/Eagle_Files/Pyr0-Piezo_DIY-Boards/Pyr0-Piezo-v2-DIY-Business-Card.brd
+          sch: Hardware/Eagle_Files/Pyr0-Piezo_DIY-Boards/Pyr0-Piezo-v2-DIY-Business-Card.sch
+    pyropiezo_standalone:
+        summary: Standalone Pyr0-Piezo Circuit for using external arduino.
+        color: red
+        site: https://docs.pyroballpcbs.com
+        gerbers: Hardware/Gerbers/DIY-Pyr0-Piezo-Boards/pP-DIY-Standalone-SMD/gerbers/
+        bom: Hardware/Gerbers/DIY-Pyr0-Piezo-Boards/pP-DIY-Standalone-SMD/BOM-pP-DIY-Standalone-SMD.csv
+        eda:
+          type: eagle
+          pcb: Hardware/Eagle_Files/Pyr0-Piezo_DIY-Boards/Pyr0-Piezo-v2-DIY-Standalone-Board_v1.0.0.brd
+          sch: Hardware/Eagle_Files/Pyr0-Piezo_DIY-Boards/Pyr0-Piezo-v2-DIY-Standalone-Board_v1.0.0.sch

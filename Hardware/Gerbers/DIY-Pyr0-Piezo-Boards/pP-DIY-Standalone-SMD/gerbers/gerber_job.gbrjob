@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2020-05-21T18:58:38Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.6.1"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "Pyr0-Piezo-v2-DIY-Standalone-Board_v1.0.0"
+        },
+        "Owner": "Pyroballpcs Pyroballpcs <pyroballpcs@gmail.com>",
+        "Size": {
+            "X": 45.573,
+            "Y": 18.339
+        }
+    }
+}
