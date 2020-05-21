@@ -1,5 +1,5 @@
 multi:
-    business_card:
+    Pyr0-Piezo Z-Probe Business Card DIY Module:
         summary: Business Card Sized Pyr0-Piezo Circuit using TH Components.
         color: black
         site: https://docs.pyroballpcbs.com
@@ -9,7 +9,7 @@ multi:
           type: eagle
           pcb: Hardware/Eagle_Files/Pyr0-Piezo_DIY-Boards/Pyr0-Piezo-v2-DIY-Business-Card.brd
           schematic: Hardware/Eagle_Files/Pyr0-Piezo_DIY-Boards/Pyr0-Piezo-v2-DIY-Business-Card.sch
-    pyropiezo_standalone:
+    Pyr0-Piezo Z-Probe Standalone Module:
         summary: Standalone Pyr0-Piezo Circuit for using external arduino.
         color: red
         site: https://docs.pyroballpcbs.com
