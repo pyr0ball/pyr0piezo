@@ -20,6 +20,8 @@ Assembly animation:
 
 <div style='position:relative; padding-bottom:calc(75.00% + 44px)'><iframe src='https://gfycat.com/ifr/AnimatedInsistentChimpanzee' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div>
 
+---
+
 ## Uploading Firmware Without a Jig
 
 Uploading firmware without a Pyr0-Piezo AVR Programming Jig requires soldering to the test pads on the bottom of the Sensor's PCB:
@@ -28,17 +30,21 @@ Uploading firmware without a Pyr0-Piezo AVR Programming Jig requires soldering t
 
 To utilize the UART's in-built auto-reset function, a 10k resistor and a small capacitor must be added to the reset wire in the configuration below:
 
-<object data="../../other/USB-UART-Wiring-Example.pdf" type="application/pdf" width="100%" height="450px">
-    <embed src="../../other/USB-UART-Wiring-Example.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="../../other/USB-UART-Wiring-Example.pdf">Download PDF</a>.</p>
+<object data="../../../schematics/other/USB-UART-Wiring-Example.pdf" type="application/pdf" width="100%" height="450px">
+    <embed src="../../../schematics/other/USB-UART-Wiring-Example.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="../../../schematics/other/USB-UART-Wiring-Example.pdf">Download PDF</a>.</p>
     </embed>
 </object>
 
+---
+
 ## Firmware Upload Procedure
 
-The firmware for this project can be updated using one of three methods, VS Code, Arduino IDE, or avrdude.
+The firmware for this project can be updated using one of three methods: VS Code, Arduino IDE, or avrdude.
 
-Please be sure you've already [wired up your sensor's UART port](../../schematics/other/uart-programmer-wiring.md)
+Please be sure you've already [wired up your sensor's UART port](../../schematics/other/uart-programmer-wiring.md) or used the programmig jig described earlier in this page.
+
+---
 
 ### VS Code (Preferred Application)
 
@@ -69,11 +75,15 @@ Please be sure you've already [wired up your sensor's UART port](../../schematic
 2. Click the "PlatformIO: Upload" button found in the bottom bar of the VS Code window
 3. Verify Serial connection by opening the Serial Monitor and typing `CONFIG` or `STATE`. You should get a response.
 
+---
+
 ### Arduino IDE
 
 1. Install [Arduino IDE from Arduino's official page](https://www.arduino.cc/en/main/software)
 2. Under File > Preferences > Additional Board Manager URL's, Add:
     - `https://mcudude.github.io/MiniCore/package_MCUdude_MiniCore_index.json`
+
+---
 
 ### AVRDUDESS
 
@@ -88,6 +98,8 @@ After installing AVRDUDESS, and opening it, follow the image below with the sett
 - **C.** From the MCU Pulldown, select "Atmega328PB"
 - **D.** Set the Fuse Bits to `E2`, `DF`, `F9` respectively. Leave LB *blank*
 - **E.** Click the Flash button to begin the upload process
+
+---
 
 ### avrdude
 
