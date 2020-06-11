@@ -53,7 +53,7 @@ Please be sure you've already [wired up your sensor's UART port](../../schematic
 1. Install [VS Code from Micosoft's official page](https://code.visualstudio.com/download)
 2. Use the "Extensions" menu to install PlatformIO.
 3. (Optional) Install extra plugins to assist in development:
-    - GitLense
+    - GitLens
     - markdownlint
     - Markdown Preview Enhanced
     - C/C++
