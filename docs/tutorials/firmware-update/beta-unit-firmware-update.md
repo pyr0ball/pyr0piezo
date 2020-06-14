@@ -18,7 +18,10 @@ The AVR Programming jig consists of several components:
 
 Assembly animation:
 
-<div style='position:relative; padding-bottom:calc(75.00% + 44px)'><iframe src='https://gfycat.com/ifr/AnimatedInsistentChimpanzee' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div>
+<div style='position:relative; padding-bottom:calc(75.00% + 44px)'>
+  <iframe src='https://gfycat.com/ifr/AnimatedInsistentChimpanzee' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen>
+  </iframe>
+</div>
 
 ---
 
@@ -26,7 +29,7 @@ Assembly animation:
 
 Uploading firmware without a Pyr0-Piezo AVR Programming Jig requires soldering to the test pads on the bottom of the Sensor's PCB:
 
-![](../../assets/images/board-images/easy-piezi/pp-v2.1.2-uart-wiring.png)
+![EasyPiezi UART Wiring](../../assets/images/board-images/easy-piezi/pp-v2.1.2-uart-wiring.png)
 
 To utilize the UART's in-built auto-reset function, a 10k resistor and a small capacitor must be added to the reset wire in the configuration below:
 
@@ -98,6 +101,8 @@ After installing AVRDUDESS, and opening it, follow the image below with the sett
 - **C.** From the MCU Pulldown, select "Atmega328PB"
 - **D.** Set the Fuse Bits to `E2`, `DF`, `F9` respectively. Leave LB *blank*
 - **E.** Click the Flash button to begin the upload process
+
+![](../../assets/images/applications/AVRDUDESS.JPG)
 
 ---
 
