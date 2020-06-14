@@ -33,7 +33,7 @@ extern int TRG_DUR;
 #define HYST_ADDRESS 20
 extern int Hyst; // Hysteresis value for ADC measurements
 
-#define LOGIC_DEFAULT 1
+#define LOGIC_DEFAULT 0
 #define LOGIC_ADDRESS 32
 extern int LOGIC; // Trigger logic scheme, Active LOW is default
 
