@@ -8,9 +8,9 @@ theme:
   logo: 'assets/images/Pyr0ball-logo.png'
   favicon: 'assets/images/Pyr0ball-logo.png'
   custom_dir: 'mkdocs-theme-overrides'
-  palette:
-    primary: 'orange'
-    accent: 'light orange'
+  #palette:
+  #  primary: 'orange'
+  #  accent: 'light orange'
 
 extra_css:
   - stylesheets/dark_theme.css
