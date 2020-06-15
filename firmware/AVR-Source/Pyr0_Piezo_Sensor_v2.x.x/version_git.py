@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import subprocess
 
 major_version = "2.3.1"
