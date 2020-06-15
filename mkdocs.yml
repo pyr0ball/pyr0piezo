@@ -19,6 +19,7 @@ extra_css:
 markdown_extensions:
   #http://pythonhosted.org/Markdown/extensions/admonition.html
   - admonition:
+  - mdx_truly_sane_lists:
   - toc:
       permalink: True
 
@@ -69,7 +70,7 @@ nav:
   - Configuration:
     - Update Sensor:
       - Sensor UART Wiring: 'schematics/other/uart-programmer-wiring.md'
-      - Beta v2.x.x: 'tutorials/firmware-update/beta-unit-firmware-update.md'
+      - Firmware Update: 'tutorials/firmware-update/beta-unit-firmware-update.md'
     - Pyr0-Piezo Config: 'config.md'
     - Settings Explaination: 'tutorials/config/pyr0piezo-parameters/pyr0piezo-parameters.md'
     - Printer Firmware Config:
