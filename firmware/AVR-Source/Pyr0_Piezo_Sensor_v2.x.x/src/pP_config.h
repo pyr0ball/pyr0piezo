@@ -54,6 +54,10 @@ extern long voltMeterConstant; // For fine tuning input voltage sense
 #define I2C_SLAVE_ADDRESS 24
 extern uint8_t pP_i2c_address;
 
+#ifndef PP_VERSION
+    #define PP_VERSION "2.3.1"
+#endif // PP_VERSION fallback if python script fails
+
 void eraseEEPROM();
 void setDefaultConfig();
 void restoreConfig();
