@@ -65,17 +65,17 @@ If you built your own board and are starting out with a completely factory-fresh
 2. Use the "Extensions" menu to install PlatformIO.
 3. (Optional) Install extra plugins to assist in development:
 
-    - GitLens
-    - markdownlint
-    - Markdown Preview Enhanced
-    - C/C++
-    - C++ Intellisense
-    - Python
+- GitLens
+- markdownlint
+- Markdown Preview Enhanced
+- C/C++
+- C++ Intellisense
+- Python
 
 #### Configuration
 
-1. In PIO Home, open the firmware folder:
-    - `~/pyr0piezo/firmware/AVR-Source/Pyr0_Piezo_sensor_v2.x.x`
+1. In PIO Home, open the firmware folder: `~/pyr0piezo/firmware/AVR-Source/Pyr0_Piezo_sensor_v2.x.x`
+2. By default, VSCode is configured to utilize the Atmega328PB MCU. This can be changed by editing the `default_envs` parameter in the `platformio.ini` file
 
 #### Upload
 
