@@ -41,6 +41,10 @@ To utilize the UART's in-built auto-reset function, a 10k resistor and a small c
 
 ---
 
+## Obtaining the Latest Firmware
+
+You can obtain the latest firmware release for this project [HERE](https://github.com/pyr0ball/pyr0piezo/releases/latest) as a zip file with the source, as well as a pre-compiled hex file for use with certain programmers.
+
 ## Firmware Upload Procedure
 
 The firmware for this project can be updated using one of three methods: VS Code, Arduino IDE, or avrdude.
@@ -67,9 +71,9 @@ Please be sure you've already [wired up your sensor's UART port](../../schematic
 
 1. In PIO Home, open the firmware folder:
     - `~/pyr0piezo/firmware/AVR-Source/Pyr0_Piezo_sensor_v2.x.x`
-2. Make certain you're on the latest `develop` branch
+2. Make certain you're on the latest `master` branch
     - In GitLense, under the "Repositories" menu, expand the "Branches" menu
-    - Right click on `develop` and select "Switch to Branch"
+    - Right click on `master` and select "Switch to Branch"
     - Back at the top of the "Repositories" menu, hover the mouse over `Pyr0_Piezo_Sensor_v2.x.x` and click first on `fetch`, then on `pull`
 
 #### Upload
