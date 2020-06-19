@@ -53,7 +53,7 @@ The firmware for this project can be updated using one of three methods: VS Code
 
 Please be sure you've already [wired up your sensor's UART port](../../schematics/other/uart-programmer-wiring.md) or used the programmig jig described earlier in this page.
 
-If you built your own board and are starting out with a completely factory-fresh MCU, you'll need to install a bootloader. Have a look at [Uploading over ICSP] for instructions on how to do that.
+If you built your own board and are starting out with a completely factory-fresh MCU, you'll need to install a bootloader. Have a look at [Uploading over ICSP](https://docs.pyroballpcbs.com/tutorials/firmware-update/beta-unit-firmware-update/#uploading-over-icsp) for instructions on how to do that.
 
 ---
 
