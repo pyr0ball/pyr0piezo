@@ -45,11 +45,15 @@ To utilize the UART's in-built auto-reset function, a 10k resistor and a small c
 
 You can obtain the latest firmware release for this project [HERE](https://github.com/pyr0ball/pyr0piezo/releases/latest) as a zip file with the source, as well as a pre-compiled hex file for use with certain programmers.
 
+---
+
 ## Firmware Upload Procedure
 
 The firmware for this project can be updated using one of three methods: VS Code, Arduino IDE, or avrdude.
 
 Please be sure you've already [wired up your sensor's UART port](../../schematics/other/uart-programmer-wiring.md) or used the programmig jig described earlier in this page.
+
+If you built your own board and are starting out with a completely factory-fresh MCU, you'll need to install a bootloader. Have a look at [Uploading over ICSP] for instructions on how to do that.
 
 ---
 
@@ -60,6 +64,7 @@ Please be sure you've already [wired up your sensor's UART port](../../schematic
 1. Install [VS Code from Micosoft's official page](https://code.visualstudio.com/download)
 2. Use the "Extensions" menu to install PlatformIO.
 3. (Optional) Install extra plugins to assist in development:
+
     - GitLens
     - markdownlint
     - Markdown Preview Enhanced
@@ -71,16 +76,23 @@ Please be sure you've already [wired up your sensor's UART port](../../schematic
 
 1. In PIO Home, open the firmware folder:
     - `~/pyr0piezo/firmware/AVR-Source/Pyr0_Piezo_sensor_v2.x.x`
-2. Make certain you're on the latest `master` branch
-    - In GitLense, under the "Repositories" menu, expand the "Branches" menu
-    - Right click on `master` and select "Switch to Branch"
-    - Back at the top of the "Repositories" menu, hover the mouse over `Pyr0_Piezo_Sensor_v2.x.x` and click first on `fetch`, then on `pull`
 
 #### Upload
 
 1. Make any desired adjustments to default values in `src/pP_config.h`
 2. Click the "PlatformIO: Upload" button found in the bottom bar of the VS Code window
 3. Verify Serial connection by opening the Serial Monitor and typing `CONFIG` or `STATE`. You should get a response.
+
+#### Uploading over ICSP
+
+Using this method will install the bootloader required to upload firmware over UART
+
+1. Open the `platformio.ini` file found in the Pyr0_Piezo_sensor_v2.x.x folder
+2. Change the `defailt_envs` parameter to `ICSP_Bootloader`
+
+```ini
+[platformio]
+default_envs = ICSP_Bootloader```
 
 ---
 
