@@ -2,7 +2,12 @@
 #include "pP_cmd.h"
 #include "pP_i2c_config.h"
 #include "pP_volatile.h"
-#include <Wire1.h>
+#ifdef __AVR_ATmega328P__
+  #include <Wire.h>
+#endif
+#ifdef __AVR_ATmega328PB__
+  #include <Wire1.h>
+#endif
 
 uint8_t command;
 uint32_t value;
@@ -36,7 +41,12 @@ void i2cReportConfig() {
   i2cWrite(buffer, 16, VCCSW);
   i2cWrite(buffer, 18, voltMeterConstant);
   memcpy(buffer + 22, PP_VERSION, length - 22);
+  #ifdef __AVR_ATmega328P__
+  Wire.write(buffer, length);
+  #endif
+  #ifdef __AVR_ATmega328PB__
   Wire1.write(buffer, length);
+  #endif
 }
 
 void i2cReportState() {
@@ -47,7 +57,12 @@ void i2cReportState() {
   i2cWrite(buffer, 4, (int)((long)VFol * Vin / 1023));
   i2cWrite(buffer, 6, ERR_STATE);
   i2cWrite(buffer, 8, PZ_STATE);
+  #ifdef __AVR_ATmega328P__
+  Wire.write(buffer, length);
+  #endif
+  #ifdef __AVR_ATmega328PB__
   Wire1.write(buffer, length);
+  #endif
 }
 
 void i2cReply() {
@@ -68,9 +83,19 @@ void i2cInput(int bytesReceived) {
   for (int a = 0; a < bytesReceived; a++) {
     // Check length of message, drops anything longer than [longBytes]
     if (a == 0) {
+      #ifdef __AVR_ATmega328P__
+      command = Wire.read();
+      #endif
+      #ifdef __AVR_ATmega328PB__
       command = Wire1.read();
+      #endif
     } else if (a == 1) {
+      #ifdef __AVR_ATmega328P__
+      value = Wire.read();
+      #endif
+      #ifdef __AVR_ATmega328PB__
       value = Wire1.read();
+      #endif
     } else {
       value = value << 8 | Wire1.read();
     }
@@ -124,7 +149,14 @@ void i2cInput(int bytesReceived) {
 }
 
 void i2cInit() {
+  #ifdef __AVR_ATmega328P__
+  Wire.begin(pP_i2c_address);
+  Wire.onRequest(i2cReply);
+  Wire.onReceive(i2cInput);
+  #endif
+  #ifdef __AVR_ATmega328PB__
   Wire1.begin(pP_i2c_address);
   Wire1.onRequest(i2cReply);
   Wire1.onReceive(i2cInput);
+  #endif
 }

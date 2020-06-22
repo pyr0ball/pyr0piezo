@@ -15,6 +15,8 @@ Default pins (based on Rev.2.x.xPCB layout)
  * PD3 OC2B (Voltage Follower VRef PWM Out 'D3')
 */
 
+#ifdef __AVR_ATmega328PB__ // Pin assignments for 328PB variant
+
 // Analog Pin Assignments
 #define V_FOLLOW_PIN A0    // Sense pin to check Voltage Follower stage
 #define VCOMP_SENSE_PIN A1 // Sense pin to check comparator stage voltage
@@ -32,3 +34,27 @@ Default pins (based on Rev.2.x.xPCB layout)
 #define VCOMP_PWM 9  // PWM analog output pin for comparator adjustment
 #define PZDET_PIN 16 // Digital input pin for detecting piezo connection
 #define VCCSW_PIN 8  // VCC variable regulator switch pin
+
+#endif //__AVR_ATmega328PB__
+
+#ifdef __AVR_ATmega328P__ // Pin assignments for 328P variant
+
+// Analog Pin Assignments
+#define V_FOLLOW_PIN A0    // PC0 Sense pin to check Voltage Follower stage
+#define VCOMP_SENSE_PIN A1 // PC1 Sense pin to check comparator stage voltage
+
+// Digital Pin Assignments
+#define TRG_OUT 7 // LED and Z-Min trigger output connected to digital pin 7
+//#define TRG_OUT 13      // For testing on Atmega328/2560, Output is moved to onboard LED pin
+#define Z_TRG 2      // the piezo is connected to INT0 / digital pin 2
+#define ERR_LED 4    // LED will blink if optimal voltage range cannot be achieved
+#define GADJ_R0 20   // PB6 Auto-adjust ladder pin assignments
+#define GADJ_R1 21   // PB7 "
+#define GADJ_R2 5    // PD5 "
+#define GADJ_R3 6    // PD6 "
+#define V_FOL_PWM 3  // PD3 PWM analog output pin for voltage follower adjustment
+#define VCOMP_PWM 9  // PB1 PWM analog output pin for comparator adjustment
+#define PZDET_PIN 16 // PC2 Digital input pin for detecting piezo connection
+#define VCCSW_PIN 8  // PB0 VCC variable regulator switch pin
+
+#endif //__AVR_ATmega328P__
