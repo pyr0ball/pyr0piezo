@@ -97,7 +97,12 @@ void i2cInput(int bytesReceived) {
       value = Wire1.read();
       #endif
     } else {
+      #ifdef __AVR_ATmega328PB__
       value = value << 8 | Wire1.read();
+      #endif
+      #ifdef __AVR_ATmega328P__
+      value = value << 8 | Wire.read();
+      #endif
     }
   }
 
