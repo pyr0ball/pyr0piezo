@@ -8,4 +8,8 @@
 
 **Q:** Does this sensor support 3.3v logic controllers?
 
-**A:** Yes, but for Rev.2.x boards, this requires populating a solder bridge (SB1) on the back of the EasyPiezi board
+**A:** Yes, if you bought a production (v2.3.0 or later)  board, the logic level of the circuit is configurable to be either 5v or 3.3v. For pre-production (beta) boards, this is possible by following [this guide](tutorials/wiring/easy-piezi/unregulated-operation/)
+
+**Q:** Is it required to use the SingleDisk Piezo Adapters?
+
+**A:** No. the SingleDisk adapter board is simply a carrier for a 12mm piezo disk that has the dual benefit of maximizing signal-to-noise ratio, and providing a consistent mounting scheme. All that's required is a piezelectric element that has positive and negative rails that can be connected to the Pyr0-Piezo circuit.
