@@ -92,7 +92,8 @@ Using this method will install the bootloader required to upload firmware over U
 
 ```ini
 [platformio]
-default_envs = ICSP_Bootloader```
+default_envs = ICSP_Bootloader
+```
 
 ---
 
