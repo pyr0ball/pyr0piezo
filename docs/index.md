@@ -9,9 +9,7 @@ To request a mount for your printer, [open an issue on GitHub](https://github.co
 [![Donate to help this project continue!](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3TLQQSFCEJL8S&source=url)
 
 Join our discord for support and to join in realtime discussion for the project:
-<div class="discord_widget">
-  <iframe src="https://discordapp.com/widget?id=544587989536473099&theme=dark" width="350" height="200" allowtransparency="true" frameborder="0"> </iframe>
-</div>
+![Discord Banner 1](https://discordapp.com/api/guilds/544587989536473099/widget.png?style=banner1)
 
 Here's a video I did back in the early days of beta explaining how the circuit works:
 
