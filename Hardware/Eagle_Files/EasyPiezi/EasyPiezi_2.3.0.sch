@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1.27" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -5817,9 +5817,9 @@ DIN A3, landscape with location and doc. field</description>
 <part name="TP_F" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP09R" package3d_urn="urn:adsk.eagle:package:9341726/2"/>
 <part name="F_PWM" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="TP" device="TP09R" package3d_urn="urn:adsk.eagle:package:9341726/2"/>
 <part name="C_PWM" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
-<part name="R2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2"/>
-<part name="R5" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2"/>
-<part name="R9" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2"/>
+<part name="R2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="2K2"/>
+<part name="R5" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="3K"/>
+<part name="R9" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" package3d_urn="urn:adsk.eagle:package:7115182/2" value="3K6"/>
 </parts>
 <sheets>
 <sheet>
@@ -6257,12 +6257,12 @@ DIN A3, landscape with location and doc. field</description>
 <attribute name="VALUE" x="63.5" y="104.14" size="1.27" layer="96" ratio="10"/>
 </instance>
 <instance part="R5" gate="G$1" x="40.64" y="111.76" smashed="yes" rot="R270">
-<attribute name="NAME" x="39.37" y="107.95" size="1.27" layer="95" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="38.1" y="115.57" size="1.27" layer="96" ratio="10" rot="R270"/>
+<attribute name="NAME" x="40.386" y="108.204" size="1.27" layer="95" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="41.148" y="116.332" size="1.27" layer="96" ratio="10" rot="R270"/>
 </instance>
 <instance part="R9" gate="G$1" x="36.83" y="111.76" smashed="yes" rot="R90">
-<attribute name="NAME" x="35.56" y="107.95" size="1.27" layer="95" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="39.37" y="107.95" size="1.27" layer="96" ratio="10" rot="R90"/>
+<attribute name="NAME" x="36.576" y="108.458" size="1.27" layer="95" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="36.322" y="113.538" size="1.27" layer="96" ratio="10" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -7070,7 +7070,7 @@ DIN A3, landscape with location and doc. field</description>
 <pinref part="R5" gate="G$1" pin="1"/>
 <pinref part="R9" gate="G$1" pin="2"/>
 <wire x1="40.64" y1="115.57" x2="36.83" y2="115.57" width="0.1524" layer="91"/>
-<label x="38.1" y="115.57" size="1.778" layer="95" rot="R90" xref="yes"/>
+<label x="38.862" y="115.57" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U4" gate="A" pin="PB0/ICP1/CLKO/PTCXY"/>

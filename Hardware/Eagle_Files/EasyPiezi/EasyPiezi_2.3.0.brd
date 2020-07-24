@@ -170,7 +170,7 @@
 <layer number="255" name="Accent" color="7" fill="1" visible="no" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyYTEyMDdh" projecturn="a.cGVyc29uYWw6dWUyYTEyMDdhIzIwMTgxMTI5MTYyOTY3NjMx" f3durn="urn:adsk.wipprod:dm.lineage:169Sjry_R56h3jRKqfc0NQ" pcbguid="6fe6201e-d7cf-425a-9275-8c8c67dd0b6c" lastpulledtime="" lastsyncedchangeguid="bb61cdab-da3f-cf89-6c5e-13e2484f2520"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyYTEyMDdh" projecturn="a.cGVyc29uYWw6dWUyYTEyMDdhIzIwMTgxMTI5MTYyOTY3NjMx" f3durn="urn:adsk.wipprod:dm.lineage:78mEL7qyToiMJn8ubwKObw" pcbguid="360ab3a3-11fc-4ca8-a52a-227fd8b2059a" lastpulledtime="" lastsyncedchangeguid="534f509e-7677-5851-aa15-9bb12285179b"/>
 <plain>
 <text x="34.778753125" y="9.75258125" size="1.27" layer="22" ratio="11" rot="R180">--+</text>
 <text x="30.093015625" y="14.687953125" size="1.27" layer="21" font="vector" ratio="11" rot="R90" align="bottom-right">PZ1</text>
@@ -7268,7 +7268,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="12.367203125" y="8.2017375" size="0.6096" layer="26" font="vector" ratio="11" rot="MR270"/>
 </element>
 <element name="C4" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="CAPC1005X50" package3d_urn="urn:adsk.eagle:package:5248669/4" value="0.1uF" x="17.3355" y="6.0325" smashed="yes" rot="MR270">
-<attribute name="NAME" x="17.3355" y="7.4831" size="0.6096" layer="26" font="vector" ratio="11" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="17.3355" y="7.4831" size="0.8128" layer="26" font="vector" ratio="11" rot="MR180" align="bottom-center"/>
 </element>
 <element name="U3" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="QFN16" package3d_urn="urn:adsk.eagle:package:8766128/2" value="LM2902QT" x="26.57475" y="5.87375" smashed="yes" rot="R90">
 <attribute name="NAME" x="24.44775" y="7.5245" size="0.8128" layer="25" font="vector" ratio="10"/>
@@ -7421,19 +7421,19 @@ design rules under a new name.</description>
 <attribute name="TP_SIGNAL_NAME" value="" x="20.193" y="-0.15875" size="1" layer="37"/>
 <attribute name="VALUE" x="19.939" y="1.36525" size="0.0254" layer="27"/>
 </element>
-<element name="R2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0402" package3d_urn="urn:adsk.eagle:package:7115182/2" value="" x="12.954" y="7.239" smashed="yes" rot="MR90">
+<element name="R2" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0402" package3d_urn="urn:adsk.eagle:package:7115182/2" value="2K2" x="12.954" y="7.239" smashed="yes" rot="MR90">
 <attribute name="MPN" value="RC0402JR-070RL" x="18.034" y="4.191" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="NAME" x="14.224" y="7.874" size="0.8128" layer="26" font="vector" ratio="11" rot="MR0"/>
+<attribute name="NAME" x="14.097" y="7.62" size="0.8128" layer="26" font="vector" ratio="11" rot="MR180"/>
 <attribute name="VALUE" x="14.224" y="5.715" size="0.8128" layer="28" font="vector" ratio="11" rot="MR0"/>
 </element>
-<element name="R5" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0402" package3d_urn="urn:adsk.eagle:package:7115182/2" value="" x="12.954" y="8.255" smashed="yes" rot="MR90">
+<element name="R5" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0402" package3d_urn="urn:adsk.eagle:package:7115182/2" value="3K" x="12.954" y="8.255" smashed="yes" rot="MR90">
 <attribute name="MPN" value="RC0402JR-070RL" x="17.907" y="5.207" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="NAME" x="13.97" y="8.636" size="0.8128" layer="26" font="vector" ratio="11" rot="MR180"/>
+<attribute name="NAME" x="14.097" y="8.636" size="0.8128" layer="26" font="vector" ratio="11" rot="MR180"/>
 <attribute name="VALUE" x="14.224" y="6.731" size="0.8128" layer="28" font="vector" ratio="11" rot="MR0"/>
 </element>
-<element name="R9" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0402" package3d_urn="urn:adsk.eagle:package:7115182/2" value="" x="12.954" y="9.271" smashed="yes" rot="MR270">
+<element name="R9" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" package="R0402" package3d_urn="urn:adsk.eagle:package:7115182/2" value="3K6" x="12.954" y="9.271" smashed="yes" rot="MR270">
 <attribute name="MPN" value="RC0402JR-070RL" x="8.001" y="12.319" size="1.778" layer="28" rot="MR270" display="off"/>
-<attribute name="NAME" x="13.97" y="9.652" size="0.8128" layer="26" font="vector" ratio="11" rot="MR180"/>
+<attribute name="NAME" x="13.97" y="9.779" size="0.8128" layer="26" font="vector" ratio="11" rot="MR180"/>
 <attribute name="VALUE" x="11.684" y="10.795" size="0.8128" layer="28" font="vector" ratio="11" rot="MR180"/>
 </element>
 </elements>
@@ -7518,7 +7518,7 @@ design rules under a new name.</description>
 <wire x1="25.8743" y1="2.837875" x2="25.5825" y2="2.546075" width="0.1524" layer="1"/>
 <wire x1="25.5825" y1="2.54" x2="25.5825" y2="2.546075" width="0.1524" layer="1"/>
 <via x="29.0302125" y="9.147590625" extent="1-16" drill="0.3"/>
-<via x="37.517534375" y="8.632065625" extent="1-16" drill="0.3"/>
+<via x="37.390534375" y="8.632065625" extent="1-16" drill="0.3"/>
 <contactref element="D8" pad="1"/>
 <contactref element="U4" pad="5"/>
 <contactref element="U4" pad="21"/>
@@ -8160,9 +8160,13 @@ design rules under a new name.</description>
 <contactref element="U2" pad="3"/>
 <wire x1="9.692796875" y1="6.3255" x2="9.692796875" y2="6.563296875" width="0.4064" layer="1"/>
 <wire x1="9.692796875" y1="6.3255" x2="9.692796875" y2="6.517796875" width="0.4064" layer="1"/>
-<wire x1="9.692796875" y1="6.517796875" x2="11.176" y2="8.001" width="0.4064" layer="1"/>
-<via x="11.176" y="8.001" extent="1-16" drill="0.35"/>
-<wire x1="11.176" y1="8.001" x2="11.1305" y2="8.001" width="0" layer="19" extent="1-16"/>
+<wire x1="9.692796875" y1="6.563296875" x2="10.5249" y2="7.3954" width="0.4064" layer="1"/>
+<wire x1="10.5249" y1="7.3954" x2="10.52956875" y2="7.3954" width="0.4064" layer="1"/>
+<wire x1="10.52956875" y1="7.3954" x2="10.8111" y2="7.67693125" width="0.4064" layer="1"/>
+<wire x1="10.8111" y1="7.67693125" x2="10.8111" y2="7.6816" width="0.4064" layer="1"/>
+<wire x1="10.8111" y1="7.6816" x2="11.1305" y2="8.001" width="0.4064" layer="1"/>
+<wire x1="11.176" y1="8.001" x2="11.1305" y2="8.001" width="0.1524" layer="16"/>
+<via x="11.1305" y="8.001" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="AMP_VCC">
 <contactref element="R21" pad="1"/>
@@ -8478,20 +8482,11 @@ design rules under a new name.</description>
 <mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
 </mfgpreviewcolors>
 <errors>
-<approved hash="19,1,8a1a8a64316e3110"/>
 <approved hash="19,16,56f354474b4549f1"/>
-<approved hash="19,16,059c056e4df04d02"/>
-<approved hash="19,16,b7fd55e71d42b6c5"/>
-<approved hash="19,16,1c3268843158e7f3"/>
-<approved hash="5,1,39766c7b586b9ba9"/>
-<approved hash="5,1,4cd3f18e89ba9bf6"/>
-<approved hash="5,16,cfeaeed44b8109a6"/>
-<approved hash="5,1,d4138c08589e3f9d"/>
-<approved hash="5,16,c79fad2d24b5657f"/>
-<approved hash="5,16,0927e4c85bd6b920"/>
-<approved hash="5,16,205168d71234745e"/>
 <approved hash="5,16,8616cc7beefb1c60"/>
-<approved hash="5,16,090db6ec7b8c2d28"/>
+<approved hash="5,1,f5ffad721dd13ad2"/>
+<approved hash="5,1,b79388e073a20d17"/>
+<approved hash="5,16,c348c8657cf1f7a7"/>
 </errors>
 </board>
 </drawing>
