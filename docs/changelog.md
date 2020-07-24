@@ -1275,6 +1275,8 @@ Changelog updated 2020-05-10_15-07-19
 
  *Added Features*
 
+- Autogenerating version number #featureadd [view commit](http://github.com/pyr0ball/pyr0piezo/commit/5cf9c4e94a3b14414befba0423b0cb3273846a4c)
+
 - Added FFC-X-Mot board for v2.1.2  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/9db036fc1ee13d3b5176fb5bf5b92bc0b1705af0) 
 
 - Added eagle source files for SingleDisk PCB adapters  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/6b6d13e08fdaa915b19635e5706014ff1557589d) 
@@ -1345,7 +1347,7 @@ Changelog updated 2020-05-10_15-07-19
 
 - updated readme [view commit](http://github.com/pyr0ball/pyr0piezo/commit/4300c905516beb5e0963778b450ec2463ccec9f0) 
 
-- #feature Autogenerating version number [view commit](http://github.com/pyr0ball/pyr0piezo/commit/5cf9c4e94a3b14414befba0423b0cb3273846a4c) 
+- Autogenerating version number #featureadd [view commit](http://github.com/pyr0ball/pyr0piezo/commit/5cf9c4e94a3b14414befba0423b0cb3273846a4c) 
 
 - updated internal version with latest commit  [view commit](http://github.com/pyr0ball/pyr0piezo/commit/3f5af8ced7dc1dfc5b8074e8f6127acd8a35957a) 
 
