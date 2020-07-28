@@ -51,6 +51,7 @@ nav:
     - Printer Specific:
       - Core XY:
         - Hypercube Evo (On Head): 'mounts/core-xy/hevo-on-head.md'
+        - Railcore II (Under-Bed): 'mounts/core-xy/railcore-ii.md'
       - Creality Family:
         - CR-10 Family: 'mounts/creality/creality-original-head.md'
         - Ender 3 Family: 'mounts/creality/creality-original-head.md'
