@@ -8,6 +8,8 @@ The Railcore has a print bed mounting system that is ideal for placing a piezo p
 
 ![Railcore Integration Bed Off](https://pyroballpcbs.com/wp-content/uploads/2020/07/RailCore_II_300ZL_bed-off-1.png)
 
+![Railcore Integration Close Up](https://pyroballpcbs.com/wp-content/uploads/2020/07/RailCore_II_300ZL_close-up.png)
+
 Parts required:
 
 - 1x EasyPiezi Module
