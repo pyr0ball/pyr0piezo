@@ -2,15 +2,15 @@
 
 In order to send commands, you will need an application capable of communicating over serial. Please download and install one of the following:
 
- - Windows
-    - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-    - [RealTerm](https://sourceforge.net/projects/realterm/)
-    - [Termite](https://www.compuphase.com/software_termite.htm)
- - MacOS
- - Linux
-    - minicom - `sudo apt install minicom` || `sudo yum install minicom`
+- Windows
+ - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+ - [RealTerm](https://sourceforge.net/projects/realterm/)
+ - [Termite](https://www.compuphase.com/software_termite.htm)
+- MacOS
+- Linux
+ - minicom - `sudo apt install minicom` || `sudo yum install minicom`
 
-## Updatng Pyr0-Piezo Circuit Parameters over Serial
+## Updating Pyr0-Piezo Circuit Parameters over Serial
 
 The Pyr0-Piezo onboard microcontroller can be adjusted over UART/TTY/Serial.
 
