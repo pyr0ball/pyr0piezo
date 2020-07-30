@@ -25,7 +25,7 @@ void i2cWrite(uint8_t *buffer, int offset, long data) {
 }
 
 void i2cReportConfig() {
-  uint8_t length = 20 + sizeof(PP_VERSION) - 1;
+  uint8_t length = 22 + sizeof(PP_VERSION) - 1;
   if (length > 32) {
     length = 32;
   }
