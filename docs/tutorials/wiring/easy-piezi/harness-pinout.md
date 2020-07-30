@@ -4,12 +4,11 @@
 
 The Main Connector for the EasyPiezi has 6 pins, with Pin1 marked with a small embossed arrow:
 
-https://docs.pyroballpcbs.com/tutorials/wiring/easy-piezi/harness-pinout/
 ![Main Connecctor Wiring Harness Input](../../../assets/images/wiring-diagrams/Main-Connector-Wiring-Harness.png)
 
 Pin numbers are laid out in the following image and table:
 
-![Input Connector Pin Assignments](../../../assets/images/wiring-diagrams/Main-Connector-Wiring-Harness.png)
+![Input Connector Pin Assignments](../../../assets/images/wiring-diagrams/Main-Connector-Wiring-PinNumbers.png)
 
 | Pin Number | Wire Color | Signal Name | Req/Opt |
 |------------|------------|-------------|---------|
