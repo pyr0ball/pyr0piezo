@@ -14,7 +14,7 @@ Pin numbers are laid out in the following image and table:
 |------------|------------|-------------|---------|
 | 1          | <strong><span style="color:green">Green</span></strong>      | SDA (I2C)   | Optional|
 | 2          | <strong><span style="color:yellow; background-color:#212121; ">Yellow</span></strong>     | SCL (I2C)   | Optional|
-| 3          | <strong><span style="color:red">Red</span></strong>        | +6-38V DC   | Required|
+| 3          | <strong><span style="color:red">Red</span></strong>        | +6-12V DC   | Required|
 | 4          | <strong><span style="color:black; background-color:#F5F5F5;">Black</span></strong>      | Ground      | Required|
 | 5          | <strong><span style="color:white; background-color:#212121">White</strong>      | Z-Trigger   | Required|
 | 6          | <strong><span style="color:#08F">Blue</strong>       | PT100 Anlg  | Optional|
@@ -32,6 +32,6 @@ They are arranged from top to bottom:
 | 1          | <strong><span style="color:green">Green</span></strong>      | SDA (I2C)   | Optional|
 | 2          | <strong><span style="color:yellow; background-color:#212121; ">Yellow</span></strong>     | SCL (I2C)   | Optional|
 | 3          | <strong><span style="color:black; background-color:#aaa;">Black</span></strong>      | Ground      | Required|
-| 4          | <strong><span style="color:red">Red</span></strong>        | +6-38V DC   | Required|
+| 4          | <strong><span style="color:red">Red</span></strong>        | +6-12V DC   | Required|
 | 5          | <strong><span style="color:white; background-color:#212121">White</strong>      | Z-Trigger   | Required|
 | 6          | <strong><span style="color:#08F">Blue</strong>       | PT100 Anlg  | Optional|

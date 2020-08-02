@@ -33,12 +33,12 @@ nav:
       - EasyPiezi:
         - EasyPiezi Wiring Harness: 'tutorials/wiring/easy-piezi/harness-pinout.md'
         - Monoprice Delta Mini: 'tutorials/wiring/easy-piezi/monoprice-delta-mini.md'
-        - Creality 1284P: 'tutorials/wiring/easy-piezi/creality-1284.md'
-        - Duet Wifi: 'tutorials/wiring/easy-piezi/duet-wifi.md'
-        - MKS Family:
-          - MKS Base 1.4: 'tutorials/wiring/easy-piezi/mks-base.md'
-          - MKS Gen L: 'tutorials/wiring/easy-piezi/mks-gen-l.md'
-          - MKS SBase: 'tutorials/wiring/easy-piezi/mks-sbase.md'
+        # - Creality 1284P: 'tutorials/wiring/easy-piezi/creality-1284.md'
+        # - Duet Wifi: 'tutorials/wiring/easy-piezi/duet-wifi.md'
+        # - MKS Family:
+        #   - MKS Base 1.4: 'tutorials/wiring/easy-piezi/mks-base.md'
+        #   - MKS Gen L: 'tutorials/wiring/easy-piezi/mks-gen-l.md'
+        #   - MKS SBase: 'tutorials/wiring/easy-piezi/mks-sbase.md'
         - RAMPS 1.4: 'tutorials/wiring/easy-piezi/ramps-1.4.md'
         - Power from 3.3v/5V: 'tutorials/wiring/easy-piezi/unregulated-operation.md'
       - pP-FFC:
