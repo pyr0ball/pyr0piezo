@@ -13516,8 +13516,6 @@ design rules under a new name.</description>
 <via x="-9.25" y="-18.75" extent="1-16" drill="0.35"/>
 <via x="-24" y="13" extent="1-16" drill="0.35"/>
 <via x="-26.5" y="13" extent="1-16" drill="0.35"/>
-<contactref element="HEATER" pad="4"/>
-<contactref element="V/TH_IN" pad="2"/>
 <via x="-4.5" y="26.6" extent="1-16" drill="0.35"/>
 <via x="-12.25" y="25" extent="1-16" drill="0.35"/>
 <via x="-1.9" y="30.5" extent="1-16" drill="0.35"/>
@@ -14448,6 +14446,20 @@ design rules under a new name.</description>
 <wire x1="4.98" y1="-28.52" x2="4.98" y2="-29.25" width="0.1524" layer="1"/>
 <wire x1="10.9452" y1="-26.6952" x2="6.8048" y2="-26.6952" width="0.1524" layer="1"/>
 <wire x1="6.8048" y1="-26.6952" x2="4.98" y2="-28.52" width="0.1524" layer="1"/>
+</signal>
+<signal name="HE0-">
+<contactref element="HEATER" pad="4"/>
+<contactref element="V/TH_IN" pad="2"/>
+<wire x1="27.06843125" y1="-17.943653125" x2="27" y2="-18.012084375" width="0.8128" layer="1"/>
+<wire x1="27" y1="-18.012084375" x2="27" y2="-20.25715" width="0.8128" layer="1"/>
+<wire x1="24.5602" y1="-22.69695" x2="24.5602" y2="-23.697425" width="0.8128" layer="1"/>
+<wire x1="24.5602" y1="-23.697425" x2="20.582425" y2="-27.6752" width="0.8128" layer="1"/>
+<wire x1="20.582425" y1="-27.6752" x2="12.82323125" y2="-27.6752" width="0.8128" layer="1"/>
+<wire x1="12.82323125" y1="-27.6752" x2="11.20823125" y2="-26.0602" width="0.8128" layer="1"/>
+<wire x1="2.44" y1="-28.31" x2="2.44" y2="-29.25" width="0.8128" layer="1"/>
+<wire x1="27" y1="-20.25715" x2="24.5602" y2="-22.69695" width="0.8128" layer="1"/>
+<wire x1="11.20823125" y1="-26.0602" x2="4.6898" y2="-26.0602" width="0.8128" layer="1"/>
+<wire x1="4.6898" y1="-26.0602" x2="2.44" y2="-28.31" width="0.8128" layer="1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

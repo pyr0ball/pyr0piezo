@@ -4725,7 +4725,6 @@ DIN A3, landscape with location and doc. field</description>
 <part name="C16" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-CAPACITOR_CERAMIC-10UF-25V-10%-X5R(0805)" device="CAP_0603-IMP" package3d_urn="urn:adsk.eagle:package:5710321/1" value="10uF"/>
 <part name="V/TH_IN" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="5566-4" device="" package3d_urn="urn:adsk.eagle:package:22519030/2"/>
 <part name="HEATER" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="C-GRID-04" device="-70543" package3d_urn="urn:adsk.eagle:package:6902619/2"/>
-<part name="SUPPLY7" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5126,9 +5125,6 @@ DIN A3, landscape with location and doc. field</description>
 <instance part="HEATER" gate="-4" x="236.22" y="123.19" smashed="yes">
 <attribute name="NAME" x="238.76" y="122.428" size="1.524" layer="95"/>
 </instance>
-<instance part="SUPPLY7" gate="GND" x="218.44" y="115.57" smashed="yes">
-<attribute name="VALUE" x="220.345" y="114.935" size="1.778" layer="96"/>
-</instance>
 </instances>
 <busses>
 <bus name="I2C:SCL,SDA">
@@ -5286,15 +5282,6 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="350.52" y1="54.61" x2="356.87" y2="54.61" width="0.1524" layer="91"/>
 <wire x1="356.87" y1="54.61" x2="356.87" y2="46.99" width="0.1524" layer="91"/>
 <pinref part="SUPPLY14" gate="GND" pin="GND"/>
-</segment>
-<segment>
-<pinref part="HEATER" gate="-4" pin="S"/>
-<pinref part="SUPPLY7" gate="GND" pin="GND"/>
-<wire x1="218.44" y1="123.19" x2="233.68" y2="123.19" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="118.11" x2="218.44" y2="123.19" width="0.1524" layer="91"/>
-<pinref part="V/TH_IN" gate="-2" pin="S"/>
-<wire x1="203.2" y1="123.19" x2="218.44" y2="123.19" width="0.1524" layer="91"/>
-<junction x="218.44" y="123.19"/>
 </segment>
 </net>
 <net name="Z_MIN_TRIG" class="0">
@@ -5985,6 +5972,15 @@ DIN A3, landscape with location and doc. field</description>
 <pinref part="V/TH_IN" gate="-1" pin="S"/>
 <wire x1="203.2" y1="104.14" x2="207.01" y2="104.14" width="0.1524" layer="91"/>
 <junction x="207.01" y="104.14"/>
+</segment>
+</net>
+<net name="HE0-" class="0">
+<segment>
+<pinref part="HEATER" gate="-4" pin="S"/>
+<wire x1="218.44" y1="123.19" x2="233.68" y2="123.19" width="0.1524" layer="91"/>
+<pinref part="V/TH_IN" gate="-2" pin="S"/>
+<wire x1="203.2" y1="123.19" x2="218.44" y2="123.19" width="0.1524" layer="91"/>
+<label x="218.44" y="123.19" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 </nets>
