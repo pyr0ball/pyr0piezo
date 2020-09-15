@@ -41,7 +41,7 @@ extern int LOGIC; // Trigger logic scheme, Active LOW is default
 #define PZDET_ADDRESS 26
 extern int PZDET; // Enable or disable piezo connection detection, default is off
 
-#define VCCSW_DEFAULT 0
+#define VCCSW_DEFAULT 1
 #define VCCSW_ADDRESS 28
 extern int VCCSW; // Set the signal output to 3.3v [0] or 5v logic [1]
 
