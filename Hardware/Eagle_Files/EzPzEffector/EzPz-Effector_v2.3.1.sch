@@ -4725,6 +4725,7 @@ DIN A3, landscape with location and doc. field</description>
 <part name="C16" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="SEEED-CAPACITOR_CERAMIC-10UF-25V-10%-X5R(0805)" device="CAP_0603-IMP" package3d_urn="urn:adsk.eagle:package:5710321/1" value="10uF"/>
 <part name="V/TH_IN" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="5566-4" device="" package3d_urn="urn:adsk.eagle:package:22519030/2"/>
 <part name="HEATER" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="C-GRID-04" device="-70543" package3d_urn="urn:adsk.eagle:package:6902619/2"/>
+<part name="BYPASS" library="PiezoFFC" library_urn="urn:adsk.eagle:library:6897166" deviceset="C-GRID-02" device="-70543" package3d_urn="urn:adsk.eagle:package:7346256/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -5125,6 +5126,12 @@ DIN A3, landscape with location and doc. field</description>
 <instance part="HEATER" gate="-4" x="236.22" y="123.19" smashed="yes">
 <attribute name="NAME" x="238.76" y="122.428" size="1.524" layer="95"/>
 </instance>
+<instance part="BYPASS" gate="-2" x="24.13" y="144.78" smashed="yes" rot="R90">
+<attribute name="NAME" x="24.892" y="147.32" size="1.524" layer="95" rot="R90"/>
+</instance>
+<instance part="BYPASS" gate="-1" x="21.59" y="144.78" smashed="yes" rot="R90">
+<attribute name="NAME" x="22.352" y="147.32" size="1.524" layer="95" rot="R90"/>
+</instance>
 </instances>
 <busses>
 <bus name="I2C:SCL,SDA">
@@ -5314,6 +5321,9 @@ DIN A3, landscape with location and doc. field</description>
 <pinref part="C2" gate="G$1" pin="+"/>
 <wire x1="30.48" y1="119.38" x2="30.48" y2="130.81" width="0.1524" layer="91"/>
 <junction x="30.48" y="130.81"/>
+<pinref part="BYPASS" gate="-2" pin="S"/>
+<wire x1="24.13" y1="142.24" x2="24.13" y2="130.81" width="0.1524" layer="91"/>
+<wire x1="24.13" y1="130.81" x2="25.4" y2="130.81" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <label x="288.29" y="125.73" size="1.778" layer="95"/>
@@ -5950,6 +5960,13 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="218.44" y1="125.73" x2="218.44" y2="128.27" width="0.1524" layer="91"/>
 <junction x="218.44" y="125.73"/>
 <label x="218.44" y="128.27" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="BYPASS" gate="-1" pin="S"/>
+<wire x1="21.59" y1="142.24" x2="21.59" y2="130.81" width="0.1524" layer="91"/>
+<wire x1="21.59" y1="130.81" x2="15.24" y2="130.81" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="130.81" x2="15.24" y2="132.08" width="0.1524" layer="91"/>
+<label x="15.24" y="132.08" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="TH1" class="0">
