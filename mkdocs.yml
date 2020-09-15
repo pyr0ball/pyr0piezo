@@ -83,6 +83,8 @@ nav:
   - Extras:
     - PT100 RTD Thermal Sensor: 'tutorials/extras/pt100.md'
   - Resources:
+    - 3D Models:
+      - Fusion 360 Sources: 'models/all-f360-sources.md'
     - Sensor Datasheet:
       - I2C Integration: 'tutorials/config/pyr0piezo-i2c/pyr0piezo-i2c.md'
     - Schematics:
