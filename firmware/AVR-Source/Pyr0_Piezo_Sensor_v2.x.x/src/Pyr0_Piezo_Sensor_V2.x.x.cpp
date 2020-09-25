@@ -124,6 +124,10 @@ void setup() {
   attachInterrupt(digitalPinToInterrupt(Z_TRG), pulse, FALLING);
 
   Serial.begin(9600);
+  Serial.print("Pyr0-Piezo Z-Probe Firmware ");
+  Serial.println(PP_VERSION);
+  Serial.println("Info: https://docs.pyroballpcbs.com");
+  Serial.println("Source: https://github.com/pyr0ball/pyr0piezo");
   Serial.println("Initializing Pyr0-Piezo Sensor...");
 
   i2cInit();
