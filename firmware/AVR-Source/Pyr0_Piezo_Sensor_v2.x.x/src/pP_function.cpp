@@ -178,14 +178,14 @@ void adjustGain() {
 /*------------------------------------------------*/
 
 void adjustVcc() {
-  switch (VCCSW) {
+  switch (SIGVOL) {
   case 0:
-    pinMode(VCCSW_PIN, OUTPUT);
-    digitalWriteFast(VCCSW_PIN, LOW);
+    pinMode(SIGVOL_PIN, OUTPUT);
+    digitalWriteFast(SIGVOL_PIN, LOW);
     break;
   case 1:
   default:
-    pinMode(VCCSW_PIN, INPUT);
+    pinMode(SIGVOL_PIN, INPUT);
     break;
   }
 }

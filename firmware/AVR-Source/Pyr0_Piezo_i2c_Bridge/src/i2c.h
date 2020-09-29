@@ -15,7 +15,7 @@
 #define CMD_CONFIG 0x09
 #define CMD_ERASE 0x0a
 #define CMD_STATE 0x0b
-#define CMD_VCCSW 0x0c
+#define CMD_SIGVOL 0x0c
 #define CMD_VCCADJUST 0x0d
 
 #include "WString.h"
@@ -29,7 +29,7 @@ typedef struct {
   uint16_t Hyst;
   uint16_t LOGIC;
   uint16_t PZDET;
-  uint16_t VCCSW;
+  uint16_t SIGVOL;
   uint32_t voltMeterConstant;
   String version;
 } config_t;

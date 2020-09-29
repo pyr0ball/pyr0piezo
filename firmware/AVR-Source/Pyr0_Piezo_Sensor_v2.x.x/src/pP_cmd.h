@@ -9,7 +9,7 @@ void updateTrigDuration(int value);
 void updateHysteresis(int value);
 void updateLogic(int value);
 void updatePzDet(int value);
-void updateVccSwitch(int value);
+void updateSigVoltage(int value);
 void updateConstant(long value);
 void adjustConstant(int value);
 void updateDebug(int value);

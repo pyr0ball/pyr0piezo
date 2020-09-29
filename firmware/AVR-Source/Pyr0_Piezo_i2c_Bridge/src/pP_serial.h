@@ -90,9 +90,9 @@ void serialPrintConfig() {
   Serial.print("PZDET ");
   Serial.println(config.PZDET);
 
-  Serial.print("VCCSW ");
-  Serial.print(config.VCCSW);
-  switch (config.VCCSW) {
+  Serial.print("SIGVOL ");
+  Serial.print(config.SIGVOL);
+  switch (config.SIGVOL) {
   case 0:
     Serial.println(" 3.3v");
     break;
@@ -157,8 +157,8 @@ void updateParams() {
     write(CMD_LOGIC, (uint16_t)serialLong);
   } else if (strcmp(serialMessageIn, "PZDET") == 0) {
     write(CMD_PZDET, (uint16_t)serialLong);
-  } else if (strcmp(serialMessageIn, "VCCSW") == 0) {
-    write(CMD_VCCSW, (uint16_t)serialLong);
+  } else if (strcmp(serialMessageIn, "SIGVOL") == 0) {
+    write(CMD_SIGVOL, (uint16_t)serialLong);
   } else if (strcmp(serialMessageIn, "CONST") == 0) {
     write(CMD_CONST, serialLong);
   } else if (strcmp(serialMessageIn, "VCCADJUST") == 0) {
@@ -181,7 +181,7 @@ void updateParams() {
     Serial.println("  (0 for active low, 1 for active high)");
     Serial.println("To enable piezo plugged detection: PZDET [0|1]");
     Serial.println("  (0 for disabled, 1 for enabled)");
-    Serial.println("To change the main voltage of the circuit: VCCSW [0|1]");
+    Serial.println("To change the main voltage of the circuit: SIGVOL [0|1]");
     Serial.println("  (0 for 3.3v, 1 for 5v)");
     Serial.println("To change ADC hysteresis value: HYST [integer in millivolts]");
     Serial.println("To adjust VCC voltage readings: VCCADJUST [integer in millivolts, use value from multimeter]");

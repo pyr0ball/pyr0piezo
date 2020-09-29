@@ -33,7 +33,7 @@ Default pins (based on Rev.2.x.xPCB layout)
 #define V_FOL_PWM 3  // PWM analog output pin for voltage follower adjustment
 #define VCOMP_PWM 9  // PWM analog output pin for comparator adjustment
 #define PZDET_PIN 16 // Digital input pin for detecting piezo connection
-#define VCCSW_PIN 8  // VCC variable regulator switch pin
+#define SIGVOL_PIN 8  // VCC variable regulator switch pin
 
 #endif //__AVR_ATmega328PB__
 
@@ -55,6 +55,6 @@ Default pins (based on Rev.2.x.xPCB layout)
 #define V_FOL_PWM 3  // PD3 PWM analog output pin for voltage follower adjustment
 #define VCOMP_PWM 9  // PB1 PWM analog output pin for comparator adjustment
 #define PZDET_PIN 16 // PC2 Digital input pin for detecting piezo connection
-#define VCCSW_PIN 8  // PB0 VCC variable regulator switch pin
+#define SIGVOL_PIN 8  // PB0 VCC variable regulator switch pin
 
 #endif //__AVR_ATmega328P__

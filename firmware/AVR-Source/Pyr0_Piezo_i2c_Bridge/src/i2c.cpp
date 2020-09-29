@@ -56,7 +56,7 @@ config_t requestConfig() {
   config.Hyst = read16();
   config.LOGIC = read16();
   config.PZDET = read16();
-  config.VCCSW = read16();
+  config.SIGVOL = read16();
   config.voltMeterConstant = read32();
   config.version = Wire.readString();
 

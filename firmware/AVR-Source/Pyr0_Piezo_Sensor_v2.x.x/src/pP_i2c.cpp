@@ -38,7 +38,7 @@ void i2cReportConfig() {
   i2cWrite(buffer, 10, Hyst);
   i2cWrite(buffer, 12, LOGIC);
   i2cWrite(buffer, 14, PZDET);
-  i2cWrite(buffer, 16, VCCSW);
+  i2cWrite(buffer, 16, SIGVOL);
   i2cWrite(buffer, 18, voltMeterConstant);
   memcpy(buffer + 22, PP_VERSION, length - 22);
   #ifdef __AVR_ATmega328P__
@@ -142,8 +142,8 @@ void i2cInput(int bytesReceived) {
     break;
   case CMD_STATE:
     break;
-  case CMD_VCCSW:
-    updateVccSwitch(value);
+  case CMD_SIGVOL:
+    updateSigVoltage(value);
     break;
   case CMD_VCCADJUST:
     adjustConstant(value);

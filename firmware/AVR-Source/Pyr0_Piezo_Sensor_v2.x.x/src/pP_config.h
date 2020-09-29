@@ -41,9 +41,9 @@ extern int LOGIC; // Trigger logic scheme, Active LOW is default
 #define PZDET_ADDRESS 26
 extern int PZDET; // Enable or disable piezo connection detection, default is off
 
-#define VCCSW_DEFAULT 0
-#define VCCSW_ADDRESS 28
-extern int VCCSW; // Set the signal output to 3.3v [0] or 5v logic [1]
+#define SIGVOL_DEFAULT 1
+#define SIGVOL_ADDRESS 28
+extern int SIGVOL; // Set the signal output to 3.3v [0] or 5v logic [1]
 
 extern int Debug;
 
@@ -55,7 +55,7 @@ extern long voltMeterConstant; // For fine tuning input voltage sense
 extern uint8_t pP_i2c_address;
 
 #ifndef PP_VERSION
-    #define PP_VERSION "2.3.1"
+    #define PP_VERSION "2.3.2"
 #endif // PP_VERSION fallback if python script fails
 
 void eraseEEPROM();

@@ -10,7 +10,7 @@ int TRG_DUR = TRG_DUR_DEFAULT;
 int Hyst = HYST_DEFAULT;
 int LOGIC = LOGIC_DEFAULT;
 int PZDET = PZDET_DEFAULT;
-int VCCSW = VCCSW_DEFAULT;
+int SIGVOL = SIGVOL_DEFAULT;
 int Debug = 0;
 long voltMeterConstant = VM_CONST_DEFAULT;
 uint8_t pP_i2c_address = 0x10;
@@ -29,7 +29,7 @@ void eraseEEPROM() {
   EEPROM.put(HYST_ADDRESS, Hyst);
   EEPROM.put(PZDET_ADDRESS, PZDET);
   EEPROM.put(LOGIC_ADDRESS, LOGIC);
-  EEPROM.put(VCCSW_ADDRESS, VCCSW);
+  EEPROM.put(SIGVOL_ADDRESS, SIGVOL);
   EEPROM.put(VM_CONST_ADDRESS, voltMeterConstant);
 }
 
@@ -97,11 +97,11 @@ void restoreConfig() {
     LOGIC = temp;
   }
 
-  EEPROM.get(VCCSW_ADDRESS, temp);
+  EEPROM.get(SIGVOL_ADDRESS, temp);
   if (temp < 0 || temp > 1) {
     erase = true;
   } else {
-    VCCSW = temp;
+    SIGVOL = temp;
   }
 
   long longTemp;
@@ -131,7 +131,7 @@ void setDefaultConfig() {
   Hyst = HYST_DEFAULT;
   PZDET = PZDET_DEFAULT;
   LOGIC = LOGIC_DEFAULT;
-  VCCSW = VCCSW_DEFAULT;
+  SIGVOL = SIGVOL_DEFAULT;
   voltMeterConstant = VM_CONST_DEFAULT;
   adjustFollow();
   adjustComp();

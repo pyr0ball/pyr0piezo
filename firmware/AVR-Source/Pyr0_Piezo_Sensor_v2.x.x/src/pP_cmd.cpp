@@ -81,10 +81,10 @@ void updatePzDet(int value) {
 
 /*------------------------------------------------*/
 
-void updateVccSwitch(int value) {
+void updateSigVoltage(int value) {
   if (value >= 0) {
-    VCCSW = value;
-    EEPROM.put(VCCSW_ADDRESS, VCCSW);
+    SIGVOL = value;
+    EEPROM.put(SIGVOL_ADDRESS, SIGVOL);
   }
 }
 
