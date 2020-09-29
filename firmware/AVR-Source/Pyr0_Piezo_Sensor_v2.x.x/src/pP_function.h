@@ -19,7 +19,7 @@ long readVcc();
 void readVin();
 void adjustFollow();
 void adjustComp();
-void adjustVcc();
+void adjustSigVol();
 void calibrateAlert();
 void adjustGain();
 void pzConCheck();

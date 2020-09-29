@@ -1,6 +1,6 @@
-Eagle_Files/**/*.B\#*
-Eagle_Files/**/*.s\#*
-Eagle_Files/**/*.l\#*
-Eagle_Files/**/*.zip
+Hardware/**/*.B\#*
+Hardware/**/*.s\#*
+Hardware/**/*.l\#*
+Hardware/**/*.zip
 docs/**/*.odt\#*
 site/*

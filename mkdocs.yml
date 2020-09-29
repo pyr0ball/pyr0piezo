@@ -20,7 +20,7 @@ markdown_extensions:
   #http://pythonhosted.org/Markdown/extensions/admonition.html
   - admonition:
   - mdx_truly_sane_lists:
-  - toc:
+  - toc: 
       permalink: True
 
 nav:
@@ -30,14 +30,15 @@ nav:
   - Installation:
     - Start Here: 'installation.md'
     - Wiring Diagrams:
-      - Easy-Piezi:
+      - EasyPiezi:
+        - EasyPiezi Wiring Harness: 'tutorials/wiring/easy-piezi/harness-pinout.md'
         - Monoprice Delta Mini: 'tutorials/wiring/easy-piezi/monoprice-delta-mini.md'
-        - Creality 1284P: 'tutorials/wiring/easy-piezi/creality-1284.md'
-        - Duet Wifi: 'tutorials/wiring/easy-piezi/duet-wifi.md'
-        - MKS Family:
-          - MKS Base 1.4: 'tutorials/wiring/easy-piezi/mks-base.md'
-          - MKS Gen L: 'tutorials/wiring/easy-piezi/mks-gen-l.md'
-          - MKS SBase: 'tutorials/wiring/easy-piezi/mks-sbase.md'
+        # - Creality 1284P: 'tutorials/wiring/easy-piezi/creality-1284.md'
+        # - Duet Wifi: 'tutorials/wiring/easy-piezi/duet-wifi.md'
+        # - MKS Family:
+        #   - MKS Base 1.4: 'tutorials/wiring/easy-piezi/mks-base.md'
+        #   - MKS Gen L: 'tutorials/wiring/easy-piezi/mks-gen-l.md'
+        #   - MKS SBase: 'tutorials/wiring/easy-piezi/mks-sbase.md'
         - RAMPS 1.4: 'tutorials/wiring/easy-piezi/ramps-1.4.md'
         - Power from 3.3v/5V: 'tutorials/wiring/easy-piezi/unregulated-operation.md'
       - pP-FFC:
@@ -82,6 +83,8 @@ nav:
   - Extras:
     - PT100 RTD Thermal Sensor: 'tutorials/extras/pt100.md'
   - Resources:
+    - 3D Models:
+      - Fusion 360 Sources: 'models/all-f360-sources.md'
     - Sensor Datasheet:
       - I2C Integration: 'tutorials/config/pyr0piezo-i2c/pyr0piezo-i2c.md'
     - Schematics:
@@ -102,6 +105,7 @@ nav:
     - Changelog:
       - Version List: 'changelog.md'
       - Logs:
+        - 'v2.3.0-v2.3.1': 'changelogs/changelog_2020-09-28_v2.3.0_v2.3.1.md'
         - 'v2.2.1-v2.3.0': 'changelogs/changelog_2020-05-10_v2.2.1_v2.3.0.md'
         - 'v2.2.0-v2.2.1': 'changelogs/changelog_2020-01-16_v2.2.0_v2.2.1.md'
         - 'v2.1.5-v2.1.6': 'changelogs/changelog_2019-12-28_v2.1.5_v2.1.6.md'

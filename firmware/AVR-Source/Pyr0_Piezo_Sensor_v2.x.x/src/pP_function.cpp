@@ -177,7 +177,7 @@ void adjustGain() {
 
 /*------------------------------------------------*/
 
-void adjustVcc() {
+void adjustSigVol() {
   switch (SIGVOL) {
   case 0:
     pinMode(SIGVOL_PIN, OUTPUT);

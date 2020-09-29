@@ -7,6 +7,9 @@
 - [Monoprice Delta Mini](tutorials/wiring/easy-piezi/monoprice-delta-mini.md)
   - ![](assets/images/mp-delta-mini-ub/mpdm-product.jpg)
 
+- [Creality Ender 3/5/Pro | CR-10](mounts/creality/creality-original-head.md)
+  - ![](assets/images/stock/ender5-gantry-oem.png)
+
 ## Getting Support for your printer
 
 ### Request Support using GitHub
