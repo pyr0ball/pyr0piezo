@@ -16,7 +16,9 @@ Well, yeah a couple. The sensor requires introducing a small amount of physical 
 
 ### How do I use it?
 
-I designed the sensor to connect to a 3D Printer's controller like any other endstop or Z-Probe. Future versions will have an i2c interface that will allow the 3D Printer's controller to change parameters on the fly during a print or before a fast move.
+I designed the sensor to connect to a 3D Printer's controller like any other endstop or Z-Probe. The sensor also includes an i2c interface that allows the 3D Printer's controller to change parameters on the fly during a print or before a fast move. Marlin support is already incoming, and I'm working on getting integration through Klipper and RepRap.
+
+There's also a sketch included with the github source that can be installed on an Arduino Uno to act as a USB-I2C bridge to set parameters for now until 3d printer controller firmware adopts the new protocol.
 
 The piezo element is mounted somewhere on the 3D Printer in such a way that it undergoes mechanical stress when the nozzle touches the bed. So far there have been three distinct mounting schemes that appear to work well:
 
@@ -31,6 +33,8 @@ The piezo element is mounted somewhere on the 3D Printer in such a way that it u
 - Zero offset (The nozzle itself is the sensor!)
 - Compatible with ALL surface types
 - No plugging in removable sensors for leveling
+- 5v or 3.3v signal output
+- Can be configured for active high *or* active low signal (endstop vs probe input)
 - Tunable over UART / I2C
 
 #### FFC Cable Chain Extra Features:
