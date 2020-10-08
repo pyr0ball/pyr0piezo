@@ -64,7 +64,7 @@ The support site for this project uses a script to automatically parse git commi
 
 - Bugfix `#bugfix`: commits related to fixing something that's broken
 - Added Features `#featureadd`: Commits related to adding new functions and features
-- Changelog `#changelog`: Any other commits that should be on the changelog, but don't fall into the two categories above
+- Documentation `#docs`: Any commits that deal specifically with the [documentation site](https://docs.pyroballpcbs.com) or comments/instructions contained within the source itself but do not contribute any functional changes
 
 Simply by adding the corresponding tag to the end of the first line of your commit message, the changelog will automatically compile these for the documentation site. Please be sure to include this in any commit messages for this project.
 
