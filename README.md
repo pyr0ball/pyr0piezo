@@ -72,7 +72,7 @@ I would also request that commits remain small, adding each change/fix/feature t
 
 ---
 
-This is a complete redesign from the ground up, but was based on principles and methodologies developed by [PrecisionPiezoUK](https://precisionpiezo.co.uk/resources-osh)
+This is a complete redesign from the ground up, but was inspired by the sensor developed by [PrecisionPiezoUK](https://precisionpiezo.co.uk/resources-osh)
 
 Original FFC Cable Chain designs can be found on my Thingiverse:
 
