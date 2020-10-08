@@ -8,6 +8,8 @@ To request a mount for your printer, [open an issue on GitHub](https://github.co
 
 [![Donate to help this project continue!](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3TLQQSFCEJL8S&source=url)
 
+If you need support or help, feel free to reach out on Discord or email us at support@pyroballpcbs.com
+
 Join our discord for support and to join in realtime discussion for the project:
 
 <a href="https://discord.gg/gmjgXHw"><img src="https://discordapp.com/api/guilds/544587989536473099/widget.png?style=banner2" alt="Discord Banner 2"/></a>
