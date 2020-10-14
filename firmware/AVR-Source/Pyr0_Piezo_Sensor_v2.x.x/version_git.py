@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import subprocess
 
-major_version = "2.3.1"
+major_version = "2.3.2"
 
 git_head = str(subprocess.check_output(["git", "rev-parse", "HEAD"])[0:6])
 
