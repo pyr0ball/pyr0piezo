@@ -6,7 +6,7 @@
 - To change gain factor: `GAIN_F` [integer for gain state - see note*]
 - To change the output logic: `LOGIC [0|1]` (0 for active low, 1 for active high)
 - To enable piezo plugged detection: `PZDET [0|1]` (0 for disabled, 1 for enabled)
-- To set the sensor logic output voltage: `VCCSW [0|1]` (0 for 3.3v, 1 for 5v)
+- To set the sensor logic output voltage: `SIGVOL [0|1]` (0 for 3.3v, 1 for 5v)
 - To change ADC hysteresis value: `HYST` [integer in millivolts]
 - To change sensor input pullup vRef low threshold: `VFOL` [integer in millivolts]
 - To change comparator trigger high threshold: `VCOMP` [integer in millivolts]

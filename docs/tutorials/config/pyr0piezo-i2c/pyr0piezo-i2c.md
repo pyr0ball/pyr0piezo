@@ -20,7 +20,7 @@ see [Pyr0-Piezo Parameters Explanation](../pyr0piezo-parameters/pyr0piezo-parame
 |0x09|CONFIG|None|Output|32
 |0x0a|ERASE|None|Input|1
 |0x0b|STATE|None|Output|10
-|0x0c|VCCSW|Boolean|Input|1
+|0x0c|SIGVOL|Boolean|Input|1
 |0x0d|VCCADJUST|Millivolts|Input|2
 
 ## I2C Command Syntax
