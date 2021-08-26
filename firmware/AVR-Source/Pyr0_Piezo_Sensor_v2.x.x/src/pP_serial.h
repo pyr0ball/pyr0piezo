@@ -162,7 +162,7 @@ void updateParams() {
   } else if (strcmp(serialMessageIn, "STATE") == 0) {
     serialPrintState();
   } else if (strcmp(serialMessageIn, "HELP") == 0) {
-#if defined(ARDUINO_AVR_ATmega328PB)
+#if defined(ARDUINO_AVR_ATmega328PBA)
     Serial.println("To change gain factor: GAIN_F [integer for gain state - see note*]");
     Serial.println("To change voltage follower voltage (low threshold): VFOL [float value]");
     Serial.println("To change comparator voltage (high threshold): VCOMP [float value]");
