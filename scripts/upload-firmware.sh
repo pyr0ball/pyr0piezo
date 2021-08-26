@@ -19,16 +19,19 @@ Usage:
 EOF
 
 # Default values
-serialdevice=COM3
+serialdevice=/dev/ttyUSB0
 board=m328pb
 lowfuse=0xE2
 highfuse=0xD6
 exfuse=0xF6
-firmwarebin=Pyr0_Piezo_Sensor_m328pb_v2.x.x.hex
+firmwarebin=../firmware/Compiled-Firmware/pyr0_piezo_firmware_v2.3.2.hex
 
 # Programming functions
 program-icsp() {
-  avrdude -c avrisp -p $board -b19200 -P$serialdevice -U lfuse:w:$lowfuse:m -U hfuse:w:$highfuse:m -U efuse:w:$exfuse:m -U flash:w:$firmwarebin -v
+  #avrdude -c avrisp -p $board -b19200 -P$serialdevice -U lfuse:w:$lowfuse:m -U hfuse:w:$highfuse:m -U efuse:w:$exfuse:m -U flash:w:$firmwarebin -v
+  avrdude -Cbootloader/MiniCire-avrdude.conf -v -patmega328pb -cstk500v1 -P$serialdevice -b19200 -e -Ulock:w:0x3f:m -Uefuse:w:0b11110110:m -Uhfuse:w:0xd6:m -Ulfuse:w:0xe2:m 
+  avrdude -Cbootloader/MiniCire-avrdude.conf -v -patmega328pb -cstk500v1 -P$serialdevice -b19200 -Uflash:w:bootloader/optiboot_flash_atmega328pb_UART0_38400_8000000L.hex:i -Ulock:w:0x0f:m
+  avrdude -Cbootloader/MiniCire-avrdude.conf -v -c stk500v1 -p $board -b19200 -P$serialdevice -U flash:w:$firmwarebin
 }
 
 program-uart() {
@@ -43,11 +46,11 @@ while getopts ":b:d:f:i:u" opt
       h)  echo "$usage"
         exit
         ;;
-      b)  board="$2";
+      b)  board="$@";
         shift ;;
-      d)  serialdevice="$2";
+      d)  serialdevice="$@";
         shift ;;
-      f)  firmwarebin="$2";
+      f)  firmwarebin="$@";
         shift ;;
       i)  program-icsp
         shift ;;
