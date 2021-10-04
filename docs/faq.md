@@ -24,7 +24,7 @@
 
 **Q:** Will the sensor work if it experiences constant spring pressure?
 
-**A:** Yes assuming the polarity is correct, you can even pre-tension the piezo and pick up the "relief" motion if you hook it up backwards
+**A:** Yes! You can even pre-tension the piezo and pick up the "relief" motion if you hook it up backwards
 
 ---
 
