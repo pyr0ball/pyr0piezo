@@ -24,7 +24,7 @@ Well, yeah a couple. The sensor requires introducing a small amount of physical 
 
 ### How do I use it?
 
-I designed the sensor to connect to a 3D Printer's controller like any other endstop or Z-Probe. Future versions will have an i2c interface that will allow the 3D Printer's controller to change parameters on the fly during a print or before a fast move.
+I designed the sensor to connect to a 3D Printer's controller like any other endstop or Z-Probe. The sensor also includes an i2c interface that will allow the 3D Printer's controller to change parameters on the fly depending on the use-case.
 
 The piezo element is mounted somewhere on the 3D Printer in such a way that it undergoes mechanical stress when the nozzle touches the bed. So far there have been three distinct mounting schemes that appear to work well:
 
