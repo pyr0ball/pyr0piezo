@@ -194,7 +194,6 @@ void loop() {
   }
 
   if (lastTriggerTimestamp > 0 && millis() - lastTriggerTimestamp > TRG_DUR) {
-    Serial.println("WTF");
     digitalWriteFast(TRG_OUT, !LOGIC);
     lastTriggerTimestamp = 0;
   }

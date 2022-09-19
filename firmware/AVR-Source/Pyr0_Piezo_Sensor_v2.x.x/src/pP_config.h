@@ -58,7 +58,7 @@ extern uint8_t pP_i2c_address;
     #define PP_VERSION "2.3.2"
 #endif // PP_VERSION fallback if python script fails
 
-#define BLINK_DURATION 250
+#define BLINK_DURATION 100
 
 void eraseEEPROM();
 void setDefaultConfig();
