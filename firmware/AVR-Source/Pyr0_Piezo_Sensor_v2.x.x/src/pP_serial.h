@@ -1,6 +1,7 @@
 #include "pP_cmd.h"
 #include "pP_volatile.h"
 #include "string.h"
+#include "Arduino.h"
 
 void parseData() {
 

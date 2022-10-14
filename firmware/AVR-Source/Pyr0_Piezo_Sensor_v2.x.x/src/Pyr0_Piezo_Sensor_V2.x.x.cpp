@@ -91,13 +91,12 @@ update the voltMeterConstant variable in pP_config.h with the correct value
 
 // Headers, variables, and functions
 #include "LightChrono.h"
-#include "pP_pins.h"
-#include <Arduino.h>
-#include <EEPROM.h>
 #include "pP_function.h"
 #include "pP_i2c.hpp"
+#include "pP_pins.h"
 #include "pP_serial.h"
 #include "pP_volatile.h"
+#include <Arduino.h>
 
 void setup() {
   // Setup PWM on voltage follower (PD3)
@@ -146,13 +145,6 @@ void setup() {
 void loop() {
   if (mainLoop.hasPassed(LOOP_DUR)) {
     mainLoop.restart();
-    // Blink LED's on init
-    if (BlinkCount > 0) {
-      BlinkState = !BlinkState;
-      digitalWriteFast(ERR_LED, BlinkState);
-      // digitalWriteFast(TRG_OUT, BlinkState);
-      --BlinkCount;
-    }
 
     // Get Serial Input
     serialInput();
@@ -188,25 +180,21 @@ void loop() {
     // Check that the piezo disk is properly connected
     pzConCheck();
 
-    // Blink LED's on init
-    if (BlinkCount > 0) {
-      BlinkState = !BlinkState;
-      digitalWriteFast(ERR_LED, BlinkState);
-      //      digitalWriteFast(TRG_OUT, BlinkState);
-      --BlinkCount;
-      //    } else {
-      // Check for error state
-      //      checkError();
-    } else {
-      digitalWriteFast(ERR_LED, 0);
-    }
-
     // Print state if debug is on
     if (Debug > 0) {
       serialPrintState();
     }
-    // Sets trigger output state to false after completing loop
-    // digitalWriteFast(TRG_OUT, HIGH);
-    sensorHReading = 0;
+  }
+
+  // Blink LED
+  if (blinkLoop.hasPassed(BLINK_DURATION) && BlinkCount > 0) {
+    blinkLoop.restart();
+    BlinkCount--;
+    digitalWriteFast(ERR_LED, BlinkCount % 2);
+  }
+
+  if (lastTriggerTimestamp > 0 && millis() - lastTriggerTimestamp > TRG_DUR) {
+    digitalWriteFast(TRG_OUT, !LOGIC);
+    lastTriggerTimestamp = 0;
   }
 }

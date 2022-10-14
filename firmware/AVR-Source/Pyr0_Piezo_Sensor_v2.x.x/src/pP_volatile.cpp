@@ -3,7 +3,6 @@
 #include "stdint.h"
 
 // these variables will change on their own. Do not edit ANYTHING below this line
-volatile int sensorHReading = 0; // variable to store the value read from the sensor pin
 volatile int ADJ_FOLLOW = 0;     // Variable for Follower adjustment
 volatile int ADJ_COMP = 0;       // Variable for Comparator adjustment
 volatile int ERR_STATE = 0;
@@ -28,8 +27,7 @@ int VFol = 0;
 
 // Error blink parameters
 
-int BlinkState = 0;
-int BlinkCount = (InitCount * 2) + 1; // Multiply Blink count by 2 to handle toggle state, add one extra to make sure light is on after
+int BlinkCount = InitCount * 2; // Multiply Blink count by 2 to handle toggle state
 
 // Serial Input Parsing Variables
 char inputBuffer[buffSize];
@@ -38,4 +36,7 @@ bool serialIncoming = false;
 char serialMessageIn[buffSize] = {0};
 long serialLong = 0;
 
+long lastTriggerTimestamp = 0;
+
 LightChrono mainLoop;
+LightChrono blinkLoop;
