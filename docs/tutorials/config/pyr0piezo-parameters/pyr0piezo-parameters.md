@@ -133,7 +133,7 @@ Use case for adjusting `VCOMP`:
 
 **Trigger Duration**
 
-The Trigger duration, governed by the `TRG_D` setting, determines the length of the pulse sent to the printer's control board. Too short of a signal might not be registered by the controller, but too long can interfere with the ADC calculations of the firmware.
+The Trigger duration, governed by the `TRG_D` setting, determines the length of the pulse sent to the printer's control board. Too short of a signal might not be registered by the controller, but too long can interfere with the ADC calculations of the sensor's firmware.
 
 **Loop Duration**
 
@@ -144,6 +144,16 @@ The Loop duration, governed by the `LOOP_D` setting, determines how long the con
 The hysteresis value, governed by the `HYST` setting, is a variable used in the ADC calculation to determine whether to adjust the PWM-DAC duty cycle. The hysteresis value adds or subtracts that value from the ADC comparator calculation. It gives a buffer to the software, preventing it from making adjustments to the DAC outputs below the value defined by `HYST`.
 
 **Volt Meter Multiplier Constant**
+
+The section below is still relevant, but the process for adjusting this setting is now simplified. Simply take a voltmeter measurement from the output of the regulator (or the side of the Zener Diode with the line across it) and input the measurement with `VCCADJUST`
+
+Example:
+
+Measured input voltage is 5.12v
+
+```serial
+VCCADJUST 5120
+```
 
 The Voltage Multiplier Constant, governed by the `CONST` setting, is a value used in the software to accurately determine the microcontroller's input voltage. However, due to minor differences in each chip, this value may not be completely accurate for each individual board. Usually the amount of difference is so minor as to not make much of a difference, but if desired, the end-user can adjust this constant value by using the following:
 

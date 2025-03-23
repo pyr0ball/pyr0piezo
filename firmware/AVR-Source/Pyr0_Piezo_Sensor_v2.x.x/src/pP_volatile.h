@@ -5,9 +5,8 @@
 #include "stdint.h"
 
 // these variables will change on their own. Do not edit ANYTHING below this line
-extern volatile int sensorHReading; // variable to store the value read from the sensor pin
-extern volatile int ADJ_FOLLOW;     // Variable for Follower adjustment
-extern volatile int ADJ_COMP;       // Variable for Comparator adjustment
+extern volatile int ADJ_FOLLOW; // Variable for Follower adjustment
+extern volatile int ADJ_COMP;   // Variable for Comparator adjustment
 extern volatile int ERR_STATE;
 extern volatile int PZ_STATE;
 
@@ -30,8 +29,7 @@ extern int VFol;
 
 // Error blink parameters
 
-extern int BlinkState;
-extern int BlinkCount; // Multiply Blink count by 2 to handle toggle state, add one extra to make sure light is on after
+extern int BlinkCount; // Multiply Blink count by 2 to handle toggle state, subtract one to make sure light is on after
 
 // Serial Input Parsing Variables
 #define buffSize 40
@@ -42,10 +40,13 @@ extern bool serialIncoming;
 extern char serialMessageIn[buffSize];
 extern long serialLong;
 
+extern long lastTriggerTimestamp;
+
 //#define LOW 0
 //#define HIGH 1
 
 // Task scheduler instances
 extern LightChrono mainLoop;
+extern LightChrono blinkLoop;
 
 #endif // PP_VOLATILE_H

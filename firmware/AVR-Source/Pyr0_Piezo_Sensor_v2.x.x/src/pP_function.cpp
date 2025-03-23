@@ -38,12 +38,12 @@ void doubleFlash() {
 /*------------------------------------------------*/
 
 void pulse() {
-  digitalWriteFast(TRG_OUT, LOGIC);
-  sensorHReading = 1;
-  delay(TRG_DUR);
-  digitalWriteFast(TRG_OUT, !LOGIC);
-  Serial.println("Trig'd!");
-  doubleFlash();
+  if (lastTriggerTimestamp == 0) {
+    digitalWriteFast(TRG_OUT, LOGIC);
+    Serial.println("Trig'd!");
+    doubleFlash();
+    lastTriggerTimestamp = millis();
+  }
 }
 
 /*------------------------------------------------*/
