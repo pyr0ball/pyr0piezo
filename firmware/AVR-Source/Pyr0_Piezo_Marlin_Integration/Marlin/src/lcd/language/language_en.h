@@ -1,0 +1,12 @@
+#if ENABLED(PYR0PIEZO_SUPPORT)
+  #define MSG_PYR0PIEZO_SETTINGS              _UxGT("Pyr0-Piezo Settings")
+  #define MSG_PYR0_TRIGGER_DURATION           _UxGT("Trigger Duration")
+  #define MSG_PYR0_GAIN                       _UxGT("Gain Factor")
+  #define MSG_PYR0_LOGIC_STATE                _UxGT("Logic (1=Active High)")
+  #define MSG_PYR0_PIEZO_DETECTION            _UxGT("Piezo Detection")
+  #define MSG_PYR0_HYSTERESIS                 _UxGT("Hysteresis (mV)")
+  #define MSG_PYR0_VREF_FLOOR                 _UxGT("vRef Floor (mV)")
+  #define MSG_PYR0_VREF_COMP                  _UxGT("vRef Comp (mV)")
+  #define MSG_PYR0_LOOP_DURATION              _UxGT("Loop Duration (ms)")
+  #define MSG_PYR0_RESET_DEFAULTS             _UxGT("Reset to Defaults")
+#endif
