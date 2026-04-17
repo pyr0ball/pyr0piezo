@@ -1,0 +1,1 @@
+(function(){var s=document.createElement("script");s.defer=true;s.dataset.domain="docs.circuitforge.tech,circuitforge.tech";s.dataset.api="https://analytics.circuitforge.tech/api/event";s.src="https://analytics.circuitforge.tech/js/script.js";document.head.appendChild(s);})();
